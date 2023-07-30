@@ -1,0 +1,37 @@
+{
+  "name": "jeffabliss.com",
+  "scripts": {
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start"
+  },
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-solid": "^0.12.1",
+    "solid-start-node": "^0.2.19",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "dependencies": {
+    "@solidjs/meta": "^0.28.2",
+    "@solidjs/router": "^0.8.2",
+    "@suid/icons-material": "^0.6.9",
+    "@suid/material": "^0.14.2",
+    "@suid/system": "^0.10.4",
+    "@suid/vite-plugin": "^0.1.4",
+    "esbuild": "^0.18.17",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "postcss": "^8.4.27",
+    "solid-js": "^1.7.8",
+    "solid-start": "^0.2.29",
+    "typescript": "^5.1.6",
+    "undici": "^5.15.1",
+    "vite": "^4.4.7",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=16.8"
+  }
+}

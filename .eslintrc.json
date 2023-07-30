@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "plugins": ["solid", "jsx-a11y"],
+    "extends": [
+      "eslint:recommended",
+      "plugin:solid/recommended"
+    ],
+    //"parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+      "semi": [2, "always"]
+    },
+    "ignorePatterns": ["vite.config.js" /* other files to ginore */]
+}
