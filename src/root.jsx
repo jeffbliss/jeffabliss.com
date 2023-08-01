@@ -30,6 +30,8 @@ export default function Root() {
           <ErrorBoundary>
             <A href="/">Index</A>
             <A href="/about">About</A>
+            <A href="/japanesehandbook">JapaneseHandbook</A>
+            <A href="/popover">Popover</A>
             <Routes>
               <FileRoutes />
             </Routes>
