@@ -1,0 +1,51 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.34.10-Prizren">
+  <identifier>appa_area</identifier>
+  <parentidentifier></parentidentifier>
+  <language>EN</language>
+  <type>dataset</type>
+  <title>appa_area</title>
+  <abstract>This data set represents the most current depiction of the Appalachian National Scenic Trail area derived from the Appalachian National Scenic Trail Centerline. Locational information used to create the centerline were obtained from both Global Positioning Systems (GPS) survey data collected between 1998-2001 and information digitized from USGS topographical maps and Appalachian Trail maps. 
+
+This data set was developed to provide a depiction of the Appalachian National Scenic Trail in an usable and easily transferable format between parties so that it can correctly be represented on digital and printed maps; to assist staff members, agency partners, and trail-maintaining clubs with trail and land management duties; and to help local planning agencies, telecommunications companies, and other groups with planning activities, such as siting new developments that could have a substantial impact on the scenic quality of the Appalachian Trail.
+
+The Appalachian National Scenic Trail is a footpath of approximately 2,169 miles in length that traverses the Appalachian Mountains from Maine to Georgia. It passes through 14 states and approximately 241 jurisdictions, and links some 75 national and state parks and forests. Virtually every mile is within easy access of a major population center and some portion of the trail is within a day's drive of 2/3rds of the U.S. population. The idea for an Appalachian Trail was conceived by forester Benton MacKaye in 1921. In 1925, the Appalachian Trail Conference, a private not-for-profit organization, was founded specifically to coordinate the development of the Appalachian Trail. Its mission today is to preserve, manage, and promote the Appalachian Trail. By 1937, an Appalachian Trail footpath was considered complete and open for all to enjoy. In 1968, Congress passed the National Scenic Trails Act that created a system of national scenic trails, starting with the Appalachian Trail and Pacific Crest Trail. Though considered part of the national park system, the Appalachian Trail has largely remained managed by the Appalachian Trail Conference. This responsibility was formally delegated by the Department of the Interior in 1984. Today, the trail and its associated lands are managed by the Appalachian Trail Conference, its 31 affiliated trail clubs, and the National Park Service Appalachian Trail Park Office, in conjunction with several agency partners including the USDA Forest Service and numerous state park and state forest agencies.</abstract>
+  <keywords vocabulary="gmd:topicCategory">
+    <keyword>Appalachian National Scenic Trail</keyword>
+    <keyword></keyword>
+    <keyword></keyword>
+  </keywords>
+  <contact>
+    <name>Natural Resource GIS Program, National Park Service</name>
+    <organization>Natural Resource GIS Program, National Park Service</organization>
+    <position></position>
+    <voice></voice>
+    <fax></fax>
+    <email>waso-nrpc_nrgis@nps.gov</email>
+    <role>Point of contact</role>
+  </contact>
+  <links>
+    <link type="Local Area Network" url="file://\\INP2300FCW12252\D$\GIS\Boundaries\NPSUnits\Current\appa_area.shp" format="" size="" mimeType="" name="Shapefile" description=""/>
+  </links>
+  <dates/>
+  <fees></fees>
+  <constraints type="Access">It is asked that proper citation be used on any materials (digital or printed) in which this information appears.</constraints>
+  <rights>Although a large portion of this data is quite accurate, the information depicted in this data set is for general reference purposes only and does not represent legal survey information. The Appalachian Trail Conference, the National Park Service Appalachian Trail Park Office, agency partners (including other units of the National Park Service and the USDA Forest Service), and associated trail-maintaining clubs shall not be held responsible for use or misuse of this data. Please see the Distribution_Liability section for more detailed information.</rights>
+  <encoding></encoding>
+  <crs>
+    <spatialrefsys nativeFormat="Wkt">
+      <wkt></wkt>
+      <proj4></proj4>
+      <srsid>0</srsid>
+      <srid>0</srid>
+      <authid></authid>
+      <description></description>
+      <projectionacronym></projectionacronym>
+      <ellipsoidacronym></ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </crs>
+  <extent>
+    <spatial dimensions="2" minx="-84.20148799999999767" maxz="0" miny="34.625193000000003" maxy="45.90573100000000295" crs="EPSG:4326" minz="0" maxx="-68.91984200000000271"/>
+  </extent>
+</qgis>

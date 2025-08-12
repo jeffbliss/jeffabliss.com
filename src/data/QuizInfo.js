@@ -33,6 +33,16 @@ export const quizData = {
         { id: "d", text: "529", isCorrect: false },
       ],
     },
+    {
+      id: 4,
+      question:
+        "True or False: Jeff drank water from the French Broad River in Hot Springs, NC",
+      options: [
+        { id: "a", text: "True", isCorrect: true },
+        { id: "b", text: "False", isCorrect: false },
+        { id: "c", text: "Ew, Why?", isCorrect: true },
+      ],
+    },
   ],
 };
 
