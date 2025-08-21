@@ -43,6 +43,28 @@ export const quizData = {
         { id: "c", text: "Ew, Why?", isCorrect: true },
       ],
     },
+    {
+      id: 5,
+      question:
+        "This has nothing to do with the AT, but how many times has Greg unsubscribed himself from nemac@unca.edu?",
+      options: [
+        { id: "a", text: "Once", isCorrect: false },
+        { id: "b", text: "Twice", isCorrect: false },
+        { id: "c", text: "Three Times", isCorrect: false },
+        { id: "d", text: "Five times or more", isCorrect: true },
+      ],
+    },
+    {
+      id: 6,
+      question:
+        "Follow up to the previous question, when was the last time Greg did this?",
+      options: [
+        { id: "a", text: "July 21st, 2025", isCorrect: false },
+        { id: "b", text: "August 20th, 2025", isCorrect: true },
+        { id: "c", text: "Over a year ago", isCorrect: false },
+        { id: "d", text: "January 6th, 2025", isCorrect: false },
+      ],
+    },
   ],
 };
 

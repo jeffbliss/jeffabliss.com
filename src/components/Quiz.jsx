@@ -1,9 +1,11 @@
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Typography, Box, Container, Button } from "@mui/material";
 import Navbar from "./Navbar";
 import { quizData } from "../data/QuizInfo";
 
 const Quiz = () => {
+  const navigate = useNavigate();
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [answerSubmitted, setAnswerSubmitted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -69,6 +71,11 @@ const Quiz = () => {
     setSelectedAnswer(null);
     setAnswerSubmitted(false);
     setIsCorrect(false);
+  };
+
+  const handleBackToHome = async () => {
+    await fadeOutAudio(currentAudioRef.current);
+    navigate("/appalachiantrail");
   };
 
   const getButtonStyle = (optionId, isCorrect) => {
@@ -160,27 +167,51 @@ const Quiz = () => {
           {answerSubmitted && (
             <Box sx={{ mt: 4 }}>
               {isCorrect ? (
-                <Button
-                  variant="contained"
-                  onClick={handleNextQuestion}
-                  sx={{
-                    backgroundColor: "#228B22",
-                    color: "white",
-                    padding: "12px 24px",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                    "&:hover": {
-                      backgroundColor: "#1e7a1e",
-                    },
-                  }}
-                  disabled={
-                    currentQuestionIndex >= quizData.questions.length - 1
-                  }
-                >
-                  {currentQuestionIndex >= quizData.questions.length - 1
-                    ? "Quiz Complete!"
-                    : "Next Question"}
-                </Button>
+                currentQuestionIndex >= quizData.questions.length - 1 ? (
+                  <Box
+                    sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+                  >
+                    <Typography
+                      variant="h5"
+                      sx={{ color: "#228B22", fontWeight: "bold" }}
+                    >
+                      Quiz Complete!
+                    </Typography>
+                    <Button
+                      variant="contained"
+                      onClick={handleBackToHome}
+                      sx={{
+                        backgroundColor: "#1976d2",
+                        color: "white",
+                        padding: "12px 24px",
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        "&:hover": {
+                          backgroundColor: "#1565c0",
+                        },
+                      }}
+                    >
+                      BACK TO HOME
+                    </Button>
+                  </Box>
+                ) : (
+                  <Button
+                    variant="contained"
+                    onClick={handleNextQuestion}
+                    sx={{
+                      backgroundColor: "#228B22",
+                      color: "white",
+                      padding: "12px 24px",
+                      fontSize: "16px",
+                      fontWeight: "bold",
+                      "&:hover": {
+                        backgroundColor: "#1e7a1e",
+                      },
+                    }}
+                  >
+                    Next Question
+                  </Button>
+                )
               ) : (
                 <Button
                   variant="contained"

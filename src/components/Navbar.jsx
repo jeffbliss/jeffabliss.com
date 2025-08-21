@@ -17,6 +17,9 @@ const Navbar = () => {
         <Button color="inherit" component={Link} to="/quiz">
           Quiz
         </Button>
+        <Button color="inherit" component={Link} to="/coordinates">
+          AT Claude Coordinates
+        </Button>
       </Toolbar>
     </AppBar>
   );
