@@ -5,6 +5,7 @@ import {
   Popup,
   GeoJSON,
   useMapEvents,
+  useMap,
 } from "react-leaflet";
 import { useRef, useEffect, useState } from "react";
 import L from "leaflet";
@@ -76,6 +77,41 @@ const getPhotosForDay = (dayNumber) => {
   } catch (error) {
     return [];
   }
+};
+
+const findPointCoordinates = (dayNumber) => {
+  const dayWithPoint = appalachianTrailDetails.find((dayData) => {
+    const dayKey = Object.keys(dayData)[0];
+    const currentDayNumber = parseInt(dayKey.split(" ")[1]);
+    return currentDayNumber === dayNumber;
+  });
+
+  if (dayWithPoint) {
+    const dayKey = Object.keys(dayWithPoint)[0];
+    const day = dayWithPoint[dayKey];
+    return day.startingCoordinates;
+  }
+  return null;
+};
+
+const MapController = ({ currentDay, triggerAnimation }) => {
+  const map = useMap();
+  const [lastTrigger, setLastTrigger] = useState(null);
+
+  if (triggerAnimation && triggerAnimation !== lastTrigger) {
+    setLastTrigger(triggerAnimation);
+    const coordinates = findPointCoordinates(currentDay);
+    if (coordinates && map) {
+      setTimeout(() => {
+        map.setView(coordinates, 12, {
+          animate: true,
+          duration: 1.5
+        });
+      }, 500);
+    }
+  }
+
+  return null;
 };
 
 const AppalachianTrailMap = () => {
@@ -164,6 +200,8 @@ const AppalachianTrailMap = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+
+        <MapController currentDay={currentDay} triggerAnimation={triggerAnimation} />
 
         {/* This component captures map click events */}
 
