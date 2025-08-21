@@ -2,81 +2,110 @@ import {
   MapContainer,
   TileLayer,
   Marker,
-  useMapEvents,
+  Popup,
   GeoJSON,
+  useMapEvents,
 } from "react-leaflet";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { Box } from "@mui/material";
-import ImageInfo from "./ImageInfo";
-import { imageDetails } from "../data/imageDetails";
+import "leaflet.markercluster/dist/MarkerCluster.css";
+import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+import { Box, Typography, Button } from "@mui/material";
+import { PhotoLibrary } from "@mui/icons-material";
+import appalachianTrailDetails from "../data/AppalachianTrailDetails.js";
 import Navbar from "./Navbar.jsx";
+import PhotoGallery from "./PhotoGallery.jsx";
+import MarkerClusterGroup from "react-leaflet-markercluster";
 
-// Component to handle map events and update card position
-const MapEventHandler = ({ selectedImage, setClickPosition }) => {
-  const map = useMapEvents({
-    move: () => {
-      if (selectedImage) {
-        const markerPoint = map.latLngToContainerPoint(
-          selectedImage.coordinates,
-        );
-        setClickPosition({ x: markerPoint.x, y: markerPoint.y });
-      }
-    },
-    zoom: () => {
-      if (selectedImage) {
-        const markerPoint = map.latLngToContainerPoint(
-          selectedImage.coordinates,
-        );
-        setClickPosition({ x: markerPoint.x, y: markerPoint.y });
-      }
-    },
-    zoomend: () => {
-      if (selectedImage) {
-        const markerPoint = map.latLngToContainerPoint(
-          selectedImage.coordinates,
-        );
-        setClickPosition({ x: markerPoint.x, y: markerPoint.y });
-      }
-    },
-    moveend: () => {
-      if (selectedImage) {
-        const markerPoint = map.latLngToContainerPoint(
-          selectedImage.coordinates,
-        );
-        setClickPosition({ x: markerPoint.x, y: markerPoint.y });
-      }
-    },
+// Process trail markers data outside of component
+const processTrailMarkers = () => {
+  const markers = [];
+  appalachianTrailDetails.forEach((dayData, index) => {
+    const dayKey = Object.keys(dayData)[0];
+    const day = dayData[dayKey];
+    const dayNumber = parseInt(dayKey.split(" ")[1]);
+
+    if (dayNumber === 1) {
+      markers.push({
+        position: day.startingCoordinates,
+        label: "Amicalola Falls",
+        dayNumber: 1,
+        isStart: true,
+      });
+    } else if (dayNumber === 193) {
+      markers.push({
+        position: day.endingCoordinates,
+        label: "Mt. Katahdin",
+        dayNumber: 193,
+        isEnd: true,
+      });
+    } else {
+      console.log(day);
+      markers.push({
+        position: day.startingCoordinates,
+        label: `Day ${dayNumber}: ${day.startingLocation}`,
+        dayNumber: dayNumber,
+        location: day.startingLocation,
+        date: day.date,
+      });
+    }
   });
+  return markers;
+};
 
-  return null;
+const trailMarkers = processTrailMarkers();
+
+const allImages = import.meta.glob(
+  "/public/photos/day_*/*.{png,jpg,jpeg,gif}",
+  { eager: true },
+);
+
+const getPhotosForDay = (dayNumber) => {
+  try {
+    const dayPattern = `/public/photos/day_${dayNumber}/`;
+    const dayImages = Object.entries(allImages)
+      .filter(([path]) => path.includes(dayPattern))
+      .map(([, image]) => image.default);
+    return dayImages;
+  } catch (error) {
+    return [];
+  }
 };
 
 const AppalachianTrailMap = () => {
   const mapRef = useRef(null);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [clickPosition, setClickPosition] = useState(null);
   const [trailData, setTrailData] = useState(null);
-  const [statesData, setStatesData] = useState(null);
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [galleryPhotos, setGalleryPhotos] = useState([]);
+  const [dayPhotos, setDayPhotos] = useState({});
+
+  const handleOpenGallery = (dayNumber) => {
+    const photos = getPhotosForDay(dayNumber);
+    if (photos && photos.length > 0) {
+      setGalleryPhotos(photos);
+      setGalleryOpen(true);
+    }
+  };
+
+  const checkPhotoExists = (dayNumber) => {
+    return dayPhotos[dayNumber] && dayPhotos[dayNumber].length > 0;
+  };
 
   useEffect(() => {
-    // Load the trail centerline data
-    fetch("/centerline.geojson")
-      .then((response) => response.json())
+    const trailUrl =
+      "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/ANST_Facilities/FeatureServer/7/query?where=1%3D1&outFields=*&f=geojson";
+    fetch(trailUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => setTrailData(data))
       .catch((error) => console.error("Error loading trail data:", error));
-
-    // Load US states with names and boundaries
-    const statesUrl =
-      "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_States_Generalized/FeatureServer/0/query?where=1%3D1&outFields=STATE_NAME&outSR=4326&f=geojson";
-    fetch(statesUrl)
-      .then((response) => response.json())
-      .then((data) => setStatesData(data))
-      .catch((error) => console.error("Error loading states data:", error));
   }, []);
 
-  // Fix Leaflet default marker icon issue
   delete L.Icon.Default.prototype._getIconUrl;
   L.Icon.Default.mergeOptions({
     iconRetinaUrl:
@@ -96,74 +125,129 @@ const AppalachianTrailMap = () => {
         scrollWheelZoom={true}
         style={{ height: "100%", width: "100%" }}
         ref={mapRef}
-        maxZoom={13}
       >
-        {/* Base terrain layer with hillshade */}
-        {/*<TileLayer*/}
-        {/*  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'*/}
-        {/*  url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}"*/}
-        {/*/>*/}
-
-        {/* Enhanced hillshade overlay for mountain relief */}
         <TileLayer
-          url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}"
-          opacity={0.7}
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/* State boundaries overlay */}
-        <TileLayer
-          url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
-          opacity={1}
-        />
+        {/* This component captures map click events */}
 
-        {/* Map event handler for card positioning */}
-        <MapEventHandler
-          selectedImage={selectedImage}
-          setClickPosition={setClickPosition}
-        />
-
-        {/* Appalachian Trail centerline */}
+        {/* Appalachian Trail Centerline */}
         {trailData && (
           <GeoJSON
             data={trailData}
-            style={{
-              color: "#228B22",
-              weight: 3,
+            style={() => ({
+              color: "#387037",
+              weight: 4,
               opacity: 0.8,
-            }}
+            })}
           />
         )}
 
-        {/* Image markers */}
-        {imageDetails.map((image) => (
-          <Marker
-            key={image.id}
-            position={image.coordinates}
-            eventHandlers={{
-              click: (e) => {
-                const map = mapRef.current;
-                if (map) {
-                  const clickPoint = map.latLngToContainerPoint(e.latlng);
-                  setClickPosition({ x: clickPoint.x, y: clickPoint.y });
-                  setSelectedImage(image);
-                }
-              },
-            }}
-          />
-        ))}
+        {/* Marker Cluster Group */}
+        <MarkerClusterGroup>
+          {trailMarkers.map((marker, index) => (
+            <Marker key={index} position={marker.position}>
+              <Popup>
+                <Box sx={{ minWidth: 200 }}>
+                  {marker.isStart ? (
+                    <>
+                      <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{ fontWeight: "bold", color: "#2e7d32" }}
+                      >
+                        Day 1
+                      </Typography>
+                      <Typography
+                        variant="subtitle1"
+                        component="div"
+                        sx={{ fontWeight: "medium", mb: 0.5 }}
+                      >
+                        Amicalola Falls
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        4/1/2014
+                      </Typography>
+                      <Button
+                        startIcon={<PhotoLibrary />}
+                        onClick={() => handleOpenGallery(1)}
+                        size="small"
+                        sx={{ mt: 1 }}
+                      >
+                        View Photos
+                      </Button>
+                    </>
+                  ) : marker.isEnd ? (
+                    <>
+                      <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{ fontWeight: "bold", color: "#d32f2f" }}
+                      >
+                        Day 193
+                      </Typography>
+                      <Typography
+                        variant="subtitle1"
+                        component="div"
+                        sx={{ fontWeight: "medium", mb: 0.5 }}
+                      >
+                        Mt. Katahdin
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        10/10/2014
+                      </Typography>
+                      <Button
+                        startIcon={<PhotoLibrary />}
+                        onClick={() => handleOpenGallery(193)}
+                        size="small"
+                        sx={{ mt: 1 }}
+                      >
+                        View Photos
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <Typography
+                        variant="h6"
+                        component="div"
+                        sx={{ fontWeight: "bold" }}
+                      >
+                        Day {marker.dayNumber}
+                      </Typography>
+                      <Typography
+                        variant="subtitle1"
+                        component="div"
+                        sx={{ fontWeight: "medium", mb: 0.5 }}
+                      >
+                        {marker.location}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {marker.date}
+                      </Typography>
+                      <Button
+                        startIcon={<PhotoLibrary />}
+                        onClick={() => handleOpenGallery(marker.dayNumber)}
+                        size="small"
+                        sx={{ mt: 1 }}
+                      >
+                        View Photos
+                      </Button>
+                    </>
+                  )}
+                </Box>
+              </Popup>
+            </Marker>
+          ))}
+        </MarkerClusterGroup>
       </MapContainer>
 
-      {/* Image info card */}
-      {selectedImage && clickPosition && (
-        <ImageInfo
-          imageData={selectedImage}
-          clickPosition={clickPosition}
-          onClose={() => {
-            setSelectedImage(null);
-            setClickPosition(null);
-          }}
-        />
-      )}
+      <PhotoGallery
+        open={galleryOpen}
+        onClose={() => setGalleryOpen(false)}
+        photos={galleryPhotos}
+      />
     </Box>
   );
 };
