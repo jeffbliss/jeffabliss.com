@@ -12,11 +12,16 @@ import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import { Box, Typography, Button } from "@mui/material";
-import { PhotoLibrary } from "@mui/icons-material";
+import {
+  PhotoLibrary,
+  NavigateBefore,
+  NavigateNext,
+} from "@mui/icons-material";
 import appalachianTrailDetails from "../data/AppalachianTrailDetails.js";
 import Navbar from "./Navbar.jsx";
 import PhotoGallery from "./PhotoGallery.jsx";
 import MarkerClusterGroup from "react-leaflet-markercluster";
+import HikerJeff from "./HikerJeff.jsx";
 
 // Process trail markers data outside of component
 const processTrailMarkers = () => {
@@ -33,21 +38,21 @@ const processTrailMarkers = () => {
         dayNumber: 1,
         isStart: true,
       });
-    } else if (dayNumber === 193) {
-      markers.push({
-        position: day.endingCoordinates,
-        label: "Mt. Katahdin",
-        dayNumber: 193,
-        isEnd: true,
-      });
     } else {
-      console.log(day);
       markers.push({
         position: day.startingCoordinates,
         label: `Day ${dayNumber}: ${day.startingLocation}`,
         dayNumber: dayNumber,
         location: day.startingLocation,
         date: day.date,
+      });
+    }
+    if (dayNumber === 193) {
+      markers.push({
+        position: day.endingCoordinates,
+        label: "Mt. Katahdin",
+        dayNumber: 193,
+        isEnd: true,
       });
     }
   });
@@ -79,6 +84,9 @@ const AppalachianTrailMap = () => {
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryPhotos, setGalleryPhotos] = useState([]);
   const [dayPhotos, setDayPhotos] = useState({});
+  const [currentDay, setCurrentDay] = useState(1);
+  const [triggerAnimation, setTriggerAnimation] = useState(false);
+  const [showDayTitle, setShowDayTitle] = useState(false);
 
   const handleOpenGallery = (dayNumber) => {
     const photos = getPhotosForDay(dayNumber);
@@ -90,6 +98,32 @@ const AppalachianTrailMap = () => {
 
   const checkPhotoExists = (dayNumber) => {
     return dayPhotos[dayNumber] && dayPhotos[dayNumber].length > 0;
+  };
+
+  const showDayTitleAnimation = (dayNumber) => {
+    setCurrentDay(dayNumber);
+    setShowDayTitle(true);
+    setTimeout(() => setShowDayTitle(false), 2000);
+  };
+
+  const handlePreviousPoint = () => {
+    if (currentDay > 1) {
+      const newDay = currentDay - 1;
+      showDayTitleAnimation(newDay);
+      setTriggerAnimation(Date.now());
+    }
+  };
+
+  const handleNextPoint = () => {
+    if (currentDay < 193) {
+      const newDay = currentDay + 1;
+      showDayTitleAnimation(newDay);
+      setTriggerAnimation(Date.now());
+    }
+  };
+
+  const handlePointChange = (newDay) => {
+    setCurrentDay(newDay);
   };
 
   useEffect(() => {
@@ -117,7 +151,7 @@ const AppalachianTrailMap = () => {
   });
 
   return (
-    <Box sx={{ height: "100vh", width: "100%" }}>
+    <Box sx={{ height: "94vh", width: "100%" }}>
       <Navbar />
       <MapContainer
         center={[39.0458, -76.6413]}
@@ -144,6 +178,14 @@ const AppalachianTrailMap = () => {
             })}
           />
         )}
+
+        {/* ASCII Hiker Guy */}
+        <HikerJeff
+          currentPoint={currentDay}
+          onPointChange={handlePointChange}
+          triggerAnimation={triggerAnimation}
+          trailData={trailData}
+        />
 
         {/* Marker Cluster Group */}
         <MarkerClusterGroup>
@@ -181,13 +223,6 @@ const AppalachianTrailMap = () => {
                     </>
                   ) : marker.isEnd ? (
                     <>
-                      <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ fontWeight: "bold", color: "#d32f2f" }}
-                      >
-                        Day 193
-                      </Typography>
                       <Typography
                         variant="subtitle1"
                         component="div"
@@ -242,6 +277,93 @@ const AppalachianTrailMap = () => {
           ))}
         </MarkerClusterGroup>
       </MapContainer>
+
+      {/* Navigation Buttons */}
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: 20,
+          left: "50%",
+          transform: "translateX(-50%)",
+          display: "flex",
+          gap: 2,
+          zIndex: 1000,
+        }}
+      >
+        {currentDay > 1 && (
+          <Button
+            variant="contained"
+            startIcon={<NavigateBefore />}
+            onClick={handlePreviousPoint}
+            sx={{
+              backgroundColor: "#387037",
+              "&:hover": { backgroundColor: "#2e5d2e" },
+            }}
+          >
+            Previous Day
+          </Button>
+        )}
+        {currentDay < 193 && (
+          <Button
+            variant="contained"
+            endIcon={<NavigateNext />}
+            onClick={handleNextPoint}
+            sx={{
+              backgroundColor: "#387037",
+              "&:hover": { backgroundColor: "#2e5d2e" },
+            }}
+          >
+            Next Day
+          </Button>
+        )}
+      </Box>
+
+      {/* Cinematic Day Title Overlay */}
+      {showDayTitle && (
+        <Box
+          sx={{
+            position: "absolute",
+            top: 100,
+            left: 100,
+            right: 100,
+            bottom: 100,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 2000,
+            pointerEvents: "none",
+            animation: "dayTitleAnimation 2s ease-out",
+            "@keyframes dayTitleAnimation": {
+              "0%": {
+                opacity: 0,
+                transform: "scale(0.5)",
+              },
+              "20%": {
+                opacity: 1,
+                transform: "scale(1.2)",
+              },
+              "100%": {
+                opacity: 0,
+                transform: "scale(2.0)",
+              },
+            },
+          }}
+        >
+          <Typography
+            variant="h1"
+            sx={{
+              fontSize: { xs: "4rem", sm: "6rem", md: "8rem" },
+              fontWeight: "bold",
+              color: "#387037",
+              textShadow: "0 4px 20px rgba(0, 0, 0, 0.8)",
+              fontFamily: "monospace",
+              letterSpacing: "0.1em",
+            }}
+          >
+            Day {currentDay}
+          </Typography>
+        </Box>
+      )}
 
       <PhotoGallery
         open={galleryOpen}

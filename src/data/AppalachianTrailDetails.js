@@ -662,7 +662,7 @@ const appalachianTrailDetails = [
       startingLocation: "Harrison Ground Spring",
       endingLocation: "Glasgow, VA",
       startingCoordinates: [37.5578, -79.459],
-      endingCoordinates: [37.6337, -79.4501],
+      endingCoordinates: [37.59668328103405, -79.39140786684067],
     },
   },
   {
@@ -670,7 +670,7 @@ const appalachianTrailDetails = [
       date: "6/14/2014",
       startingLocation: "Glasgow, VA",
       endingLocation: "USFS 39",
-      startingCoordinates: [37.6337, -79.4501],
+      startingCoordinates: [37.59668328103405, -79.39140786684067],
       endingCoordinates: [37.67102191400382, -79.28352102884256],
     },
   },
