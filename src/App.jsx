@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Quiz from "./components/Quiz";
 import CopyAppTrailMap from "./components/AppalachianTrailMap.jsx";
 import AppalachianTrail from "./components/AppalachianTrail.jsx";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/map" element={<CopyAppTrailMap />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
