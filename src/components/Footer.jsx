@@ -30,7 +30,6 @@ const Footer = ({ pagePrompts = "No prompts available for this page" }) => {
 
   const open = Boolean(anchorEl);
 
-
   return (
     <Box
       component="footer"
@@ -85,7 +84,7 @@ const Footer = ({ pagePrompts = "No prompts available for this page" }) => {
             onChange={handleAccordionChange("thisPage")}
           >
             <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography>This Page</Typography>
+              <Typography>Prompts used in this page</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body2" sx={{ whiteSpace: "pre-line" }}>
@@ -95,11 +94,25 @@ const Footer = ({ pagePrompts = "No prompts available for this page" }) => {
           </Accordion>
 
           <Accordion
+            expanded={expanded === "general"}
+            onChange={handleAccordionChange("general")}
+          >
+            <AccordionSummary expandIcon={<ExpandMore />}>
+              <Typography>Prompts used for general development</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography variant="body2" sx={{ whiteSpace: "pre-line" }}>
+                {prompts.general}
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion
             expanded={expanded === "footer"}
             onChange={handleAccordionChange("footer")}
           >
             <AccordionSummary expandIcon={<ExpandMore />}>
-              <Typography>Footer</Typography>
+              <Typography>Prompts used for Footer component</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body2" sx={{ whiteSpace: "pre-line" }}>

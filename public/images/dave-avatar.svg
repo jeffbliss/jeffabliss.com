@@ -1,0 +1,42 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hair -->
+  <path d="M50 60 C30 30, 170 30, 150 60 C170 50, 180 70, 160 80 C170 90, 160 100, 140 90 C150 110, 130 120, 110 100 C90 120, 70 110, 80 90 C60 100, 50 90, 60 80 C40 70, 50 50, 50 60" fill="#2a2a2a"/>
+  
+  <!-- Face -->
+  <ellipse cx="100" cy="100" rx="60" ry="70" fill="#deb887"/>
+  
+  <!-- Forehead wrinkles -->
+  <path d="M80 75 Q100 70, 120 75" stroke="#cd9575" stroke-width="1" fill="none"/>
+  <path d="M85 80 Q100 78, 115 80" stroke="#cd9575" stroke-width="1" fill="none"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="80" cy="90" rx="15" ry="12" fill="white"/>
+  <ellipse cx="120" cy="90" rx="15" ry="12" fill="white"/>
+  <circle cx="80" cy="90" r="8" fill="#8b4513"/>
+  <circle cx="120" cy="90" r="8" fill="#8b4513"/>
+  <circle cx="82" cy="88" r="2" fill="white"/>
+  <circle cx="122" cy="88" r="2" fill="white"/>
+  
+  <!-- Eyebrows -->
+  <path d="M65 78 Q80 75, 95 78" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+  <path d="M105 78 Q120 75, 135 78" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+  
+  <!-- Nose -->
+  <ellipse cx="100" cy="105" rx="6" ry="8" fill="#cd9575"/>
+  <circle cx="98" cy="108" r="1" fill="#8b4513"/>
+  <circle cx="102" cy="108" r="1" fill="#8b4513"/>
+  
+  <!-- Mouth -->
+  <path d="M85 125 Q100 135, 115 125" stroke="#8b4513" stroke-width="3" fill="none"/>
+  <path d="M88 128 Q100 132, 112 128" fill="#8b4513"/>
+  
+  <!-- Beard -->
+  <path d="M70 130 Q100 160, 130 130 Q125 150, 100 155 Q75 150, 70 130" fill="#2a2a2a"/>
+  <path d="M75 135 C80 145, 90 150, 100 152 C110 150, 120 145, 125 135 C120 148, 110 153, 100 155 C90 153, 80 148, 75 135" fill="#1a1a1a"/>
+  
+  <!-- Additional hair curls -->
+  <circle cx="65" cy="65" r="8" fill="#2a2a2a"/>
+  <circle cx="135" cy="65" r="8" fill="#2a2a2a"/>
+  <circle cx="55" cy="80" r="6" fill="#2a2a2a"/>
+  <circle cx="145" cy="80" r="6" fill="#2a2a2a"/>
+</svg>

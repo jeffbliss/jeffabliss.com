@@ -1,4 +1,38 @@
 export const prompts = {
+  general: `I need to be able to pass prompts to the src/components/Footer.jsx component from src/prompts.js based on what page I am on. 
+
+What would you suggest I do to accomplish this?
+
+I want you to add this prompt to a new Accordion on src/components/Footer.jsx called "Prompts used for general development" and add a new object in src/prompts.js called general. I also want you to change "This Page" to "Prompts used in this page" and "Footer" to "Prompts used for Footer component"`,
+  Home: ``,
+  AppalachianTrail: ``,
+  Quiz: ``,
+  AppalachianTrailMap: ``,
+  Dave: `Let's create a new component called "src/components/Dave.jsx" and use public/design/dave_page.pdf as the template for styling it. 
+
+Please do the following on this new Dave.jsx page component:
+1. The words "DAVID" should flash on and off in black and white every 0.5 seconds while also scrolling from right to left across the page. When it reaches the end of the page it should wrap back around to the right side like this:   [AVID        D]
+2. The rectangle at the bottom of the page below the bearded emoji should use MUI typography and say "You did this to yourself David"
+3. There should be a MUI play button just below the bearded emoji that when you press it does the following:
+  - Text appears in the speech bubble that says "Hello, I'm David!"
+  - Audio plays in the browser using artifical speech that says "Hello, I'm David!"
+4. Add the Dave page to src/App.jsx and src/components/Navbar.jsx
+5. Create a new section in src/prompts.js called "Dave" and add the contents of this prompt to it
+
+UPDATE: The src/components/Dave.jsx component needs some updates.
+1. Use this pasted image instead of the generic emoji
+2. The speech bubble needs to be rendered to the up and right side of the Dave Image
+3. The speech bubble needs to disappear when the audio stops playing 
+4. The "You did this to yourself David" part of the page is being rendered below the Footer. I need everything below the scrolling DAVID to be shifted up by about 20% on the page
+5. Add this prompt to Dave in src/prompts.js
+
+UPDATE 2: Oh dear lord that generated public/images/dave-avatar.svg is absolutely horrifying! Let's make some more changes to src/components/Dave.jsx
+1. Use public/images/daveism.png instead of public/images/dave-avatar.svg
+2. Place the play button and public/images/daveism.png higher up on the page. As you can see in this pasted image the play button is being obscured by the text box
+3. Add both a import ToggleOffIcon from '@mui/icons-material/ToggleOff'; and import ToggleOnIcon from '@mui/icons-material/ToggleOn'; switch to the left of the play button that will do the following:
+  - Toggle Off will be named "Daveism" and will render public/images/daveism.png when in this state
+  - Toggle On will be named "omg lol" and will render public/images/dave-avatar.svg when in this state
+4. Add this to Dave prompts`,
   Footer: `1. Initial Footer Creation:
 I want you to add a new component in src/components/ called Footer.jsx that will be imported and present on all pages just like src/components/Navbar.jsx is
 
