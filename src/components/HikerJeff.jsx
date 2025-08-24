@@ -342,70 +342,29 @@ const HikerJeff = ({
     if (animationRef.current) {
       clearTimeout(animationRef.current);
     }
-    console.log("animate");
 
-    // If we were animating to a previous target, snap to that target first
-    if (currentTarget && currentTarget !== targetPoint) {
-      const previousTargetCoords = findPointCoordinates(currentTarget);
-      if (previousTargetCoords) {
-        setPosition(previousTargetCoords);
-      }
-    }
+    const allCoords = getAllTrailCoordinates();
+    if (allCoords.length === 0) return;
 
-    const startCoords =
-      currentTarget && currentTarget !== targetPoint
-        ? findPointCoordinates(currentTarget) || position
-        : position;
-    const endCoords = findPointCoordinates(targetPoint);
-
-    if (!endCoords) return;
-
-    setCurrentTarget(targetPoint);
     setIsAnimating(true);
     playAudioWithFadeOut();
 
-    const trailPath = getTrailPath(startCoords, endCoords);
+    let currentIndex = 0;
+    const animationSpeed = 0.01;
 
-    if (trailPath.length === 0) {
-      const steps = 10;
-      const latDiff = (endCoords[0] - startCoords[0]) / steps;
-      const lngDiff = (endCoords[1] - startCoords[1]) / steps;
-      let currentStep = 0;
-
-      const animate = () => {
-        if (currentStep <= steps) {
-          const newLat = startCoords[0] + latDiff * currentStep;
-          const newLng = startCoords[1] + lngDiff * currentStep;
-          setPosition([newLat, newLng]);
-          currentStep++;
-          animationRef.current = setTimeout(animate, 100);
-        } else {
-          setIsAnimating(false);
-          setCurrentTarget(null);
-          onPointChange(targetPoint);
-        }
-      };
-      animate();
-      return;
-    }
-
-    let currentPathIndex = 0;
-    const totalPoints = trailPath.length;
-    const animationSpeed = 1;
-
-    const animateAlongPath = () => {
-      if (currentPathIndex < totalPoints) {
-        setPosition(trailPath[currentPathIndex]);
-        currentPathIndex += 2;
-        animationRef.current = setTimeout(animateAlongPath, animationSpeed);
+    const animateAlongTrail = () => {
+      if (currentIndex < allCoords.length) {
+        console.log("currentIndex", currentIndex);
+        setPosition(allCoords[currentIndex]);
+        currentIndex += 10;
+        animationRef.current = setTimeout(animateAlongTrail, animationSpeed);
       } else {
         setIsAnimating(false);
-        setCurrentTarget(null);
         onPointChange(targetPoint);
       }
     };
 
-    animateAlongPath();
+    animateAlongTrail();
   }
 
   function playAudioWithFadeOut() {

@@ -3,11 +3,12 @@ export const prompts = {
 
 What would you suggest I do to accomplish this?
 
-I want you to add this prompt to a new Accordion on src/components/Footer.jsx called "Prompts used for general development" and add a new object in src/prompts.js called general. I also want you to change "This Page" to "Prompts used in this page" and "Footer" to "Prompts used for Footer component"`,
-  Home: ``,
-  AppalachianTrail: ``,
-  Quiz: ``,
-  AppalachianTrailMap: ``,
+I want you to add this prompt to a new Accordion on src/components/Footer.jsx called "Prompts used for general development" and add a new object in src/prompts.js called general. I also want you to change "This Page" to "Prompts used in this page" and "Footer" to "Prompts used for Footer component"
+`,
+  Home: `FULL DISCLOSURE: Not all prompts are accounted for. I started capturing prompts midway through the process.`,
+  AppalachianTrail: `FULL DISCLOSURE: Not all prompts are accounted for. I started capturing prompts midway through the process.`,
+  Quiz: `FULL DISCLOSURE: Not all prompts are accounted for. I started capturing prompts midway through the process.`,
+  AppalachianTrailMap: `FULL DISCLOSURE: Not all prompts are accounted for. I started capturing prompts midway through the process.`,
   Dave: `Let's create a new component called "src/components/Dave.jsx" and use public/design/dave_page.pdf as the template for styling it. 
 
 Please do the following on this new Dave.jsx page component:
@@ -68,5 +69,5 @@ Transfer all of the prompts that are currently in footerPrompts in src/component
 
 The structure of this new prompts.js file will be an exported const variable called prompts = [] and will be a list of objects with the keys being the page and the value being all the prompts for the respective page. So for src/components/Footer.jsx it will be prompts = [Footer: {}]
 
-Remember to import the prompts.js file in src/components/Footer.jsx and also add this prompt to the footerPrompts`
+Remember to import the prompts.js file in src/components/Footer.jsx and also add this prompt to the footerPrompts`,
 };

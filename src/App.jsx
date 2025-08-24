@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Home from "./components/Home";
 import Quiz from "./components/Quiz";
 import CopyAppTrailMap from "./components/AppalachianTrailMap.jsx";
@@ -6,10 +11,11 @@ import AppalachianTrail from "./components/AppalachianTrail.jsx";
 import Dave from "./components/Dave";
 import Footer from "./components/Footer";
 import { prompts } from "./prompts";
+import { Box } from "@mui/material";
 
 function AppContent() {
   const location = useLocation();
-  
+
   const getPagePrompts = () => {
     switch (location.pathname) {
       case "/":
@@ -28,7 +34,7 @@ function AppContent() {
   };
 
   return (
-    <>
+    <Box>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/appalachiantrail" element={<AppalachianTrail />} />
@@ -37,7 +43,7 @@ function AppContent() {
         <Route path="/dave" element={<Dave />} />
       </Routes>
       <Footer pagePrompts={getPagePrompts()} />
-    </>
+    </Box>
   );
 }
 

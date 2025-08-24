@@ -201,10 +201,10 @@ const AppalachianTrailMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        <MapController
-          currentDay={currentDay}
-          triggerAnimation={triggerAnimation}
-        />
+        {/*<MapController*/}
+        {/*  currentDay={currentDay}*/}
+        {/*  triggerAnimation={triggerAnimation}*/}
+        {/*/>*/}
 
         {/* This component captures map click events */}
 
