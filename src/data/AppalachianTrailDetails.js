@@ -6,6 +6,7 @@ const appalachianTrailDetails = [
       endingLocation: "Springer Mountain Shelter",
       startingCoordinates: [34.5607, -84.248],
       endingCoordinates: [34.62951117990281, -84.19267417323803],
+      state: "Georgia",
     },
   },
   {
@@ -15,6 +16,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hawk Mountain Shelter",
       startingCoordinates: [34.62951117990281, -84.19267417323803],
       endingCoordinates: [34.66620061252325, -84.13640405974544],
+      state: "Georgia",
     },
   },
   {
@@ -24,6 +26,7 @@ const appalachianTrailDetails = [
       endingLocation: "Gooch Gap",
       startingCoordinates: [34.66620061252325, -84.13640405974544],
       endingCoordinates: [34.6521730395017, -84.0322702502148],
+      state: "Georgia",
     },
   },
   {
@@ -33,6 +36,7 @@ const appalachianTrailDetails = [
       endingLocation: "Lance Creek",
       startingCoordinates: [34.6521730395017, -84.0322702502148],
       endingCoordinates: [34.70820668941287, -83.98491493091524],
+      state: "Georgia",
     },
   },
   {
@@ -42,6 +46,7 @@ const appalachianTrailDetails = [
       endingLocation: "Neels Gap",
       startingCoordinates: [34.70820668941287, -83.98491493091524],
       endingCoordinates: [34.73544076969417, -83.9180001007228],
+      state: "Georgia",
     },
   },
   {
@@ -51,6 +56,7 @@ const appalachianTrailDetails = [
       endingLocation: "Low Gap Shelter",
       startingCoordinates: [34.73544076969417, -83.9180001007228],
       endingCoordinates: [34.77629640515657, -83.82439623227174],
+      state: "Georgia",
     },
   },
   {
@@ -60,6 +66,7 @@ const appalachianTrailDetails = [
       endingLocation: "Blue Mountain Shelter",
       startingCoordinates: [34.77629640515657, -83.82439623227174],
       endingCoordinates: [34.81731594369318, -83.76676483090553],
+      state: "Georgia",
     },
   },
   {
@@ -69,6 +76,7 @@ const appalachianTrailDetails = [
       endingLocation: "Deep Gap Shelter",
       startingCoordinates: [34.81731594369318, -83.76676483090553],
       endingCoordinates: [34.8824, -83.6461],
+      state: "Georgia",
     },
   },
   {
@@ -78,6 +86,7 @@ const appalachianTrailDetails = [
       endingLocation: "Dicks Creek Gap",
       startingCoordinates: [34.8824, -83.6461],
       endingCoordinates: [34.91205111466465, -83.61904666848635],
+      state: "Georgia",
     },
   },
   {
@@ -87,6 +96,7 @@ const appalachianTrailDetails = [
       endingLocation: "Muskrat Creek Shelter",
       startingCoordinates: [34.91205111466465, -83.61904666848635],
       endingCoordinates: [35.02068137252565, -83.5814816513152],
+      state: "Georgia, North Carolina",
     },
   },
   {
@@ -96,6 +106,7 @@ const appalachianTrailDetails = [
       endingLocation: "Carter Gap Shelter",
       startingCoordinates: [35.02068137252565, -83.5814816513152],
       endingCoordinates: [34.999407877768725, -83.49389805358915],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -105,6 +116,7 @@ const appalachianTrailDetails = [
       endingLocation: "Rock Gap Shelter",
       startingCoordinates: [34.999407877768725, -83.49389805358915],
       endingCoordinates: [35.0915935254672, -83.52294766000716],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -114,6 +126,7 @@ const appalachianTrailDetails = [
       endingLocation: "Winding Stair Gap (Franklin, NC)",
       startingCoordinates: [35.0915935254672, -83.52294766000716],
       endingCoordinates: [35.12161950106376, -83.54475495121724],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -123,6 +136,7 @@ const appalachianTrailDetails = [
       endingLocation: "Siler Bald Shelter",
       startingCoordinates: [35.12161950106376, -83.54475495121724],
       endingCoordinates: [35.14426746041196, -83.57341471740558],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -132,6 +146,7 @@ const appalachianTrailDetails = [
       endingLocation: "Burningtown Gap",
       startingCoordinates: [35.14426746041196, -83.57341471740558],
       endingCoordinates: [35.22308887353577, -83.56237706742218],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -141,6 +156,7 @@ const appalachianTrailDetails = [
       endingLocation: "Nantahala Outdoor Center",
       startingCoordinates: [35.22308887353577, -83.56237706742218],
       endingCoordinates: [35.33139316380414, -83.59166342673153],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -150,6 +166,7 @@ const appalachianTrailDetails = [
       endingLocation: "Locust Cove Gap",
       startingCoordinates: [35.33139316380414, -83.59166342673153],
       endingCoordinates: [35.33439051589019, -83.70383529821093],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -159,6 +176,7 @@ const appalachianTrailDetails = [
       endingLocation: "Cable Gap Shelter",
       startingCoordinates: [35.33439051589019, -83.70383529821093],
       endingCoordinates: [35.41537961577501, -83.77343373089025],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -168,6 +186,7 @@ const appalachianTrailDetails = [
       endingLocation: "Fontana Village Resort",
       startingCoordinates: [35.41537961577501, -83.77343373089025],
       endingCoordinates: [35.43267640017142, -83.82137957321751],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -177,6 +196,7 @@ const appalachianTrailDetails = [
       endingLocation: "Fontana Village Resort",
       startingCoordinates: [35.43267640017142, -83.82137957321751],
       endingCoordinates: [35.43267640017142, -83.82137957321751],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -186,6 +206,7 @@ const appalachianTrailDetails = [
       endingLocation: "Birch Spring Gap",
       startingCoordinates: [35.43267640017142, -83.82137957321751],
       endingCoordinates: [35.5015124884789, -83.81323492728795],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -195,6 +216,7 @@ const appalachianTrailDetails = [
       endingLocation: "Spence Field Shelter",
       startingCoordinates: [35.5015124884789, -83.81323492728795],
       endingCoordinates: [35.56186824065446, -83.73266854300489],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -204,6 +226,7 @@ const appalachianTrailDetails = [
       endingLocation: "Double Spring Shelter",
       startingCoordinates: [35.56186824065446, -83.73266854300489],
       endingCoordinates: [35.56523880313199, -83.5424411028276],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -213,6 +236,7 @@ const appalachianTrailDetails = [
       endingLocation: "Newfound Gap (Gatlinburg, TN)",
       startingCoordinates: [35.56523880313199, -83.5424411028276],
       endingCoordinates: [35.61122424630325, -83.42529802295039],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -222,6 +246,7 @@ const appalachianTrailDetails = [
       endingLocation: "Pecks Corner Shelter",
       startingCoordinates: [35.61122424630325, -83.42529802295039],
       endingCoordinates: [35.650960579860154, -83.30856978855638],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -231,6 +256,7 @@ const appalachianTrailDetails = [
       endingLocation: "Cosby Knob Shelter",
       startingCoordinates: [35.650960579860154, -83.30856978855638],
       endingCoordinates: [35.728450535926484, -83.1820231732099],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -240,6 +266,7 @@ const appalachianTrailDetails = [
       endingLocation: "Green Corner Road (Standing Bear Farm)",
       startingCoordinates: [35.728450535926484, -83.1820231732099],
       endingCoordinates: [35.782733769401524, -83.10193043829243],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -249,6 +276,7 @@ const appalachianTrailDetails = [
       endingLocation: "Max Patch Campsite",
       startingCoordinates: [35.782733769401524, -83.10193043829243],
       endingCoordinates: [35.79717201418794, -82.95680952201006],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -258,6 +286,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hot Springs, NC",
       startingCoordinates: [35.79717201418794, -82.95680952201006],
       endingCoordinates: [35.89261027983853, -82.82774986823483],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -267,6 +296,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hot Springs, NC",
       startingCoordinates: [35.89261027983853, -82.82774986823483],
       endingCoordinates: [35.89261027983853, -82.82774986823483],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -276,6 +306,7 @@ const appalachianTrailDetails = [
       endingLocation: "Just outside Hot Springs, NC",
       startingCoordinates: [35.89261027983853, -82.82774986823483],
       endingCoordinates: [35.89109636354551, -82.82117210153348],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -285,6 +316,7 @@ const appalachianTrailDetails = [
       endingLocation: "Spring Mountain Shelter",
       startingCoordinates: [35.89109636354551, -82.82117210153348],
       endingCoordinates: [35.951881413302, -82.79009262195231],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -294,6 +326,7 @@ const appalachianTrailDetails = [
       endingLocation: "Jerry Cabin Shelter",
       startingCoordinates: [35.951881413302, -82.79009262195231],
       endingCoordinates: [36.0566, -82.6571],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -303,6 +336,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hogback Ridge Shelter",
       startingCoordinates: [36.0566, -82.6571],
       endingCoordinates: [35.9641, -82.5871],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -312,6 +346,7 @@ const appalachianTrailDetails = [
       endingLocation: "Spivey Gap",
       startingCoordinates: [35.9641, -82.5871],
       endingCoordinates: [36.0320687581757, -82.42032127974768],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -321,6 +356,7 @@ const appalachianTrailDetails = [
       endingLocation: "Erwin, TN",
       startingCoordinates: [36.0320687581757, -82.42032127974768],
       endingCoordinates: [36.1054, -82.4483],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -330,6 +366,7 @@ const appalachianTrailDetails = [
       endingLocation: "Curley Maple Gap Shelter",
       startingCoordinates: [36.1054, -82.4483],
       endingCoordinates: [36.1043, -82.3968],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -339,6 +376,7 @@ const appalachianTrailDetails = [
       endingLocation: "Campsite just after Iron Mtn Gap",
       startingCoordinates: [36.1043, -82.3968],
       endingCoordinates: [36.144543767859396, -82.23130319447864],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -348,6 +386,7 @@ const appalachianTrailDetails = [
       endingLocation: "Roan Mountain Shelter",
       startingCoordinates: [36.144543767859396, -82.23130319447864],
       endingCoordinates: [36.10512263476555, -82.12213748729592],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -357,6 +396,7 @@ const appalachianTrailDetails = [
       endingLocation: "US 19E",
       startingCoordinates: [36.10512263476555, -82.12213748729592],
       endingCoordinates: [36.17748910226034, -82.01174778866059],
+      state: "North Carolina, Tennessee",
     },
   },
   {
@@ -366,6 +406,7 @@ const appalachianTrailDetails = [
       endingLocation: "Upper Laurel Fork",
       startingCoordinates: [36.17748910226034, -82.01174778866059],
       endingCoordinates: [36.220537135425296, -82.02934671719292],
+      state: "Tennessee",
     },
   },
   {
@@ -375,6 +416,7 @@ const appalachianTrailDetails = [
       endingLocation: "Side Trail to US 321",
       startingCoordinates: [36.220537135425296, -82.02934671719292],
       endingCoordinates: [36.28285495010562, -82.14082688751832],
+      state: "Tennessee",
     },
   },
   {
@@ -384,6 +426,7 @@ const appalachianTrailDetails = [
       endingLocation: "Watauga Lake Shelter",
       startingCoordinates: [36.28285495010562, -82.14082688751832],
       endingCoordinates: [36.31412237257887, -82.12937271359424],
+      state: "Tennessee",
     },
   },
   {
@@ -393,6 +436,7 @@ const appalachianTrailDetails = [
       endingLocation: "Double Springs Shelter",
       startingCoordinates: [36.31412237257887, -82.12937271359424],
       endingCoordinates: [36.509937055732834, -81.98548873687238],
+      state: "Tennessee",
     },
   },
   {
@@ -402,6 +446,7 @@ const appalachianTrailDetails = [
       endingLocation: "Damascus, VA",
       startingCoordinates: [36.509937055732834, -81.98548873687238],
       endingCoordinates: [36.6338, -81.7914],
+      state: "Tennessee, Virginia",
     },
   },
   {
@@ -411,6 +456,7 @@ const appalachianTrailDetails = [
       endingLocation: "Damascus, VA",
       startingCoordinates: [36.6338, -81.7914],
       endingCoordinates: [36.6338, -81.7914],
+      state: "Virginia",
     },
   },
   {
@@ -420,6 +466,7 @@ const appalachianTrailDetails = [
       endingLocation: "Damascus, VA",
       startingCoordinates: [36.6338, -81.7914],
       endingCoordinates: [36.6338, -81.7914],
+      state: "Virginia",
     },
   },
   {
@@ -429,6 +476,7 @@ const appalachianTrailDetails = [
       endingLocation: "Damascus, VA",
       startingCoordinates: [36.6338, -81.7914],
       endingCoordinates: [36.6338, -81.7914],
+      state: "Virginia",
     },
   },
   {
@@ -438,6 +486,7 @@ const appalachianTrailDetails = [
       endingLocation: "Lost Mountain Shelter",
       startingCoordinates: [36.6338, -81.7914],
       endingCoordinates: [36.6442, -81.6559],
+      state: "Virginia",
     },
   },
   {
@@ -447,6 +496,7 @@ const appalachianTrailDetails = [
       endingLocation: "Thomas Knob Shelter",
       startingCoordinates: [36.6442, -81.6559],
       endingCoordinates: [36.6566, -81.5352],
+      state: "Virginia",
     },
   },
   {
@@ -456,6 +506,7 @@ const appalachianTrailDetails = [
       endingLocation: "VA 603 Fox Creek",
       startingCoordinates: [36.6566, -81.5352],
       endingCoordinates: [36.69657190552609, -81.50626263852371],
+      state: "Virginia",
     },
   },
   {
@@ -465,6 +516,7 @@ const appalachianTrailDetails = [
       endingLocation: "Marion, VA (slept across the street)",
       startingCoordinates: [36.69657190552609, -81.50626263852371],
       endingCoordinates: [36.812315966086125, -81.41792592300258],
+      state: "Virginia",
     },
   },
   {
@@ -474,6 +526,7 @@ const appalachianTrailDetails = [
       endingLocation: "Marion, VA",
       startingCoordinates: [36.812315966086125, -81.41792592300258],
       endingCoordinates: [36.835, -81.5115],
+      state: "Virginia",
     },
   },
   {
@@ -483,6 +536,7 @@ const appalachianTrailDetails = [
       endingLocation: "VA 683, US 11, I-81",
       startingCoordinates: [36.835, -81.5115],
       endingCoordinates: [36.885610181716835, -81.37313797587635],
+      state: "Virginia",
     },
   },
   {
@@ -492,6 +546,7 @@ const appalachianTrailDetails = [
       endingLocation: "Crawfish Valley along Reed Creek",
       startingCoordinates: [36.885610181716835, -81.37313797587635],
       endingCoordinates: [36.95099054606718, -81.36395982764687],
+      state: "Virginia",
     },
   },
   {
@@ -501,6 +556,7 @@ const appalachianTrailDetails = [
       endingLocation: "Chestnut Knob Shelter",
       startingCoordinates: [36.95099054606718, -81.36395982764687],
       endingCoordinates: [37.0577, -81.3993],
+      state: "Virginia",
     },
   },
   {
@@ -510,6 +566,7 @@ const appalachianTrailDetails = [
       endingLocation: "Laurel Creek",
       startingCoordinates: [37.0577, -81.3993],
       endingCoordinates: [37.10461928074985, -81.20093476139294],
+      state: "Virginia",
     },
   },
   {
@@ -519,6 +576,7 @@ const appalachianTrailDetails = [
       endingLocation: "Jenny Knob Shelter",
       startingCoordinates: [37.10461928074985, -81.20093476139294],
       endingCoordinates: [37.155, -80.9801],
+      state: "Virginia",
     },
   },
   {
@@ -528,6 +586,7 @@ const appalachianTrailDetails = [
       endingLocation: "Dismal Falls",
       startingCoordinates: [37.155, -80.9801],
       endingCoordinates: [37.1859, -80.9014],
+      state: "Virginia",
     },
   },
   {
@@ -537,6 +596,7 @@ const appalachianTrailDetails = [
       endingLocation: "Sugar Run Gap",
       startingCoordinates: [37.1859, -80.9014],
       endingCoordinates: [37.256122228472535, -80.85551443184045],
+      state: "Virginia",
     },
   },
   {
@@ -546,6 +606,7 @@ const appalachianTrailDetails = [
       endingLocation: "Pearisburg, VA",
       startingCoordinates: [37.256122228472535, -80.85551443184045],
       endingCoordinates: [37.3259, -80.734],
+      state: "Virginia",
     },
   },
   {
@@ -555,6 +616,7 @@ const appalachianTrailDetails = [
       endingLocation: "Pearisburg, VA",
       startingCoordinates: [37.3259, -80.734],
       endingCoordinates: [37.3259, -80.734],
+      state: "Virginia",
     },
   },
   {
@@ -564,6 +626,7 @@ const appalachianTrailDetails = [
       endingLocation: "Symms Gap",
       startingCoordinates: [37.3259, -80.734],
       endingCoordinates: [37.405448944487546, -80.6827025189022],
+      state: "Virginia",
     },
   },
   {
@@ -573,6 +636,7 @@ const appalachianTrailDetails = [
       endingLocation: "Bailey Gap Shelter",
       startingCoordinates: [37.405448944487546, -80.6827025189022],
       endingCoordinates: [37.401, -80.577],
+      state: "Virginia",
     },
   },
   {
@@ -582,6 +646,7 @@ const appalachianTrailDetails = [
       endingLocation: "Sarver Hollow Shelter",
       startingCoordinates: [37.401, -80.577],
       endingCoordinates: [37.3547, -80.3374],
+      state: "Virginia",
     },
   },
   {
@@ -591,6 +656,7 @@ const appalachianTrailDetails = [
       endingLocation: "Pickle Branch Shelter",
       startingCoordinates: [37.3547, -80.3374],
       endingCoordinates: [37.3802, -80.1846],
+      state: "Virginia",
     },
   },
   {
@@ -600,6 +666,7 @@ const appalachianTrailDetails = [
       endingLocation: "Johns Spring Shelter",
       startingCoordinates: [37.3802, -80.1846],
       endingCoordinates: [37.3854, -80.074],
+      state: "Virginia",
     },
   },
   {
@@ -609,6 +676,7 @@ const appalachianTrailDetails = [
       endingLocation: "Pig Farm Campsite",
       startingCoordinates: [37.3854, -80.074],
       endingCoordinates: [37.391, -80.0299],
+      state: "Virginia",
     },
   },
   {
@@ -618,6 +686,7 @@ const appalachianTrailDetails = [
       endingLocation: "Daleville, VA",
       startingCoordinates: [37.391, -80.0299],
       endingCoordinates: [37.391152246686815, -79.90647748263979],
+      state: "Virginia",
     },
   },
   {
@@ -627,6 +696,7 @@ const appalachianTrailDetails = [
       endingLocation: "Daleville, VA",
       startingCoordinates: [37.391152246686815, -79.90647748263979],
       endingCoordinates: [37.391152246686815, -79.90647748263979],
+      state: "Virginia",
     },
   },
   {
@@ -636,6 +706,7 @@ const appalachianTrailDetails = [
       endingLocation: "Random Spot between BRP 97 and BRP 95.9",
       startingCoordinates: [37.391152246686815, -79.90647748263979],
       endingCoordinates: [37.4364, -79.7405],
+      state: "Virginia",
     },
   },
   {
@@ -645,6 +716,7 @@ const appalachianTrailDetails = [
       endingLocation: "Jennings Creek",
       startingCoordinates: [37.4364, -79.7405],
       endingCoordinates: [37.529741373943054, -79.62195439096827],
+      state: "Virginia",
     },
   },
   {
@@ -654,6 +726,7 @@ const appalachianTrailDetails = [
       endingLocation: "Harrison Ground Spring",
       startingCoordinates: [37.529741373943054, -79.62195439096827],
       endingCoordinates: [37.5578, -79.459],
+      state: "Virginia",
     },
   },
   {
@@ -663,6 +736,7 @@ const appalachianTrailDetails = [
       endingLocation: "Glasgow, VA",
       startingCoordinates: [37.5578, -79.459],
       endingCoordinates: [37.59668328103405, -79.39140786684067],
+      state: "Virginia",
     },
   },
   {
@@ -672,6 +746,7 @@ const appalachianTrailDetails = [
       endingLocation: "USFS 39",
       startingCoordinates: [37.59668328103405, -79.39140786684067],
       endingCoordinates: [37.67102191400382, -79.28352102884256],
+      state: "Virginia",
     },
   },
   {
@@ -681,6 +756,7 @@ const appalachianTrailDetails = [
       endingLocation: "Seeley-Woodworth Shelter",
       startingCoordinates: [37.67102191400382, -79.28352102884256],
       endingCoordinates: [37.819011860110834, -79.15488094878918],
+      state: "Virginia",
     },
   },
   {
@@ -690,6 +766,7 @@ const appalachianTrailDetails = [
       endingLocation: "Harpers Creek Shelter",
       startingCoordinates: [37.819011860110834, -79.15488094878918],
       endingCoordinates: [37.8562, -79.0005],
+      state: "Virginia",
     },
   },
   {
@@ -699,6 +776,7 @@ const appalachianTrailDetails = [
       endingLocation: "BRP Mile 9.6 - Dripping Rock Parking Area",
       startingCoordinates: [37.8562, -79.0005],
       endingCoordinates: [37.94124271200768, -78.93662037266445],
+      state: "Virginia",
     },
   },
   {
@@ -708,6 +786,7 @@ const appalachianTrailDetails = [
       endingLocation: "Rockfish Gap - Waynesboro, VA",
       startingCoordinates: [37.94124271200768, -78.93662037266445],
       endingCoordinates: [38.03112513190231, -78.85802206469982],
+      state: "Virginia",
     },
   },
   {
@@ -717,6 +796,7 @@ const appalachianTrailDetails = [
       endingLocation: "Waynesboro, VA",
       startingCoordinates: [38.03112513190231, -78.85802206469982],
       endingCoordinates: [38.03112513190231, -78.85802206469982],
+      state: "Virginia",
     },
   },
   {
@@ -726,6 +806,7 @@ const appalachianTrailDetails = [
       endingLocation: "Turk Gap",
       startingCoordinates: [38.0682, -78.8894],
       endingCoordinates: [38.12926091836386, -78.78492752538071],
+      state: "Virginia",
     },
   },
   {
@@ -735,6 +816,7 @@ const appalachianTrailDetails = [
       endingLocation: "Loft Mountain Campground",
       startingCoordinates: [38.12926091836386, -78.78492752538071],
       endingCoordinates: [38.25347556516463, -78.66480779726169],
+      state: "Virginia",
     },
   },
   {
@@ -744,6 +826,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hightop Hut",
       startingCoordinates: [38.25347556516463, -78.66480779726169],
       endingCoordinates: [38.33323803887636, -78.55836623492401],
+      state: "Virginia",
     },
   },
   {
@@ -753,6 +836,7 @@ const appalachianTrailDetails = [
       endingLocation: "Bearfence Mountain Hut",
       startingCoordinates: [38.33323803887636, -78.55836623492401],
       endingCoordinates: [38.44419748121913, -78.47045590883663],
+      state: "Virginia",
     },
   },
   {
@@ -762,6 +846,7 @@ const appalachianTrailDetails = [
       endingLocation: "Stony Man Cliffs",
       startingCoordinates: [38.44419748121913, -78.47045590883663],
       endingCoordinates: [38.592, -78.375],
+      state: "Virginia",
     },
   },
   {
@@ -771,6 +856,7 @@ const appalachianTrailDetails = [
       endingLocation: "Thornton Gap - Luray, VA",
       startingCoordinates: [38.592, -78.375],
       endingCoordinates: [38.6561, -78.3186],
+      state: "Virginia",
     },
   },
   {
@@ -780,6 +866,7 @@ const appalachianTrailDetails = [
       endingLocation: "campsite just before Range View Cabin",
       startingCoordinates: [38.6561, -78.3186],
       endingCoordinates: [38.743702910583124, -78.29649614472517],
+      state: "Virginia",
     },
   },
   {
@@ -789,6 +876,7 @@ const appalachianTrailDetails = [
       endingLocation: "Front Royal, VA",
       startingCoordinates: [38.743702910583124, -78.29649614472517],
       endingCoordinates: [38.87831488218645, -78.15073205339598],
+      state: "Virginia",
     },
   },
   {
@@ -798,6 +886,7 @@ const appalachianTrailDetails = [
       endingLocation: "Front Royal, VA",
       startingCoordinates: [38.87831488218645, -78.15073205339598],
       endingCoordinates: [38.87831488218645, -78.15073205339598],
+      state: "Virginia",
     },
   },
   {
@@ -807,6 +896,7 @@ const appalachianTrailDetails = [
       endingLocation: "Mannasas Gap Shelter",
       startingCoordinates: [38.87831488218645, -78.15073205339598],
       endingCoordinates: [38.9307, -78.0327],
+      state: "Virginia",
     },
   },
   {
@@ -816,6 +906,7 @@ const appalachianTrailDetails = [
       endingLocation: "Bears Den Hostel",
       startingCoordinates: [38.9307, -78.0327],
       endingCoordinates: [39.1109, -77.8541],
+      state: "Virginia",
     },
   },
   {
@@ -825,6 +916,7 @@ const appalachianTrailDetails = [
       endingLocation: "campsite three miles before Harpers Ferry",
       startingCoordinates: [39.1109, -77.8541],
       endingCoordinates: [39.2864, -77.7512],
+      state: "Virginia",
     },
   },
   {
@@ -834,6 +926,7 @@ const appalachianTrailDetails = [
       endingLocation: "Harpers Ferry, WV",
       startingCoordinates: [39.2864, -77.7512],
       endingCoordinates: [39.3234, -77.7302],
+      state: "Virginia, West Virginia",
     },
   },
   {
@@ -843,6 +936,7 @@ const appalachianTrailDetails = [
       endingLocation: "Crampton Gap Shelter",
       startingCoordinates: [39.3234, -77.7302],
       endingCoordinates: [39.4126, -77.637],
+      state: "West Virginia, Maryland",
     },
   },
   {
@@ -852,6 +946,7 @@ const appalachianTrailDetails = [
       endingLocation: "The Free State Hostel - Wolfsville Rd",
       startingCoordinates: [39.4126, -77.637],
       endingCoordinates: [39.62996020425234, -77.55903664782717],
+      state: "Maryland",
     },
   },
   {
@@ -861,6 +956,7 @@ const appalachianTrailDetails = [
       endingLocation: "PA 16",
       startingCoordinates: [39.62996020425234, -77.55903664782717],
       endingCoordinates: [39.741537056001704, -77.49035635207751],
+      state: "Maryland, Pennsylvania",
     },
   },
   {
@@ -870,6 +966,7 @@ const appalachianTrailDetails = [
       endingLocation: "PA 16 (Hummelstown, PA)",
       startingCoordinates: [39.741537056001704, -77.49035635207751],
       endingCoordinates: [39.741537056001704, -77.49035635207751],
+      state: "Pennsylvania",
     },
   },
   {
@@ -879,6 +976,7 @@ const appalachianTrailDetails = [
       endingLocation: "Chimney Rocks",
       startingCoordinates: [39.741537056001704, -77.49035635207751],
       endingCoordinates: [39.8176, -77.4741],
+      state: "Pennsylvania",
     },
   },
   {
@@ -888,6 +986,7 @@ const appalachianTrailDetails = [
       endingLocation: "Birch Run Shelter",
       startingCoordinates: [39.8176, -77.4741],
       endingCoordinates: [39.9851, -77.4194],
+      state: "Pennsylvania",
     },
   },
   {
@@ -897,6 +996,7 @@ const appalachianTrailDetails = [
       endingLocation: "James Fry (Tagg Run) Shelter",
       startingCoordinates: [39.9851, -77.4194],
       endingCoordinates: [40.066220270989, -77.20710738392226],
+      state: "Pennsylvania",
     },
   },
   {
@@ -906,6 +1006,7 @@ const appalachianTrailDetails = [
       endingLocation: "Boiling Springs, PA",
       startingCoordinates: [40.066220270989, -77.20710738392226],
       endingCoordinates: [40.14910550474357, -77.12638651537524],
+      state: "Pennsylvania",
     },
   },
   {
@@ -915,6 +1016,7 @@ const appalachianTrailDetails = [
       endingLocation: "Cove Mountain Shelter",
       startingCoordinates: [40.14910550474357, -77.12638651537524],
       endingCoordinates: [40.36381626904206, -77.06740248609653],
+      state: "Pennsylvania",
     },
   },
   {
@@ -924,6 +1026,7 @@ const appalachianTrailDetails = [
       endingLocation: "Duncannon, PA",
       startingCoordinates: [40.36381626904206, -77.06740248609653],
       endingCoordinates: [40.3981, -77.023],
+      state: "Pennsylvania",
     },
   },
   {
@@ -933,6 +1036,7 @@ const appalachianTrailDetails = [
       endingLocation: "Duncannon, PA",
       startingCoordinates: [40.3981, -77.023],
       endingCoordinates: [40.3981, -77.023],
+      state: "Pennsylvania",
     },
   },
   {
@@ -942,6 +1046,7 @@ const appalachianTrailDetails = [
       endingLocation: "Peters Mountain Shelter",
       startingCoordinates: [40.3981, -77.023],
       endingCoordinates: [40.4259, -76.8793],
+      state: "Pennsylvania",
     },
   },
   {
@@ -951,6 +1056,7 @@ const appalachianTrailDetails = [
       endingLocation: "Campsite just after PA 443",
       startingCoordinates: [40.4259, -76.8793],
       endingCoordinates: [40.48102121990069, -76.55028546492744],
+      state: "Pennsylvania",
     },
   },
   {
@@ -960,6 +1066,7 @@ const appalachianTrailDetails = [
       endingLocation: "Campsite just after Shower Steps view",
       startingCoordinates: [40.48102121990069, -76.55028546492744],
       endingCoordinates: [40.5089, -76.3101],
+      state: "Pennsylvania",
     },
   },
   {
@@ -969,6 +1076,7 @@ const appalachianTrailDetails = [
       endingLocation: "Port Clinton, PA",
       startingCoordinates: [40.5089, -76.3101],
       endingCoordinates: [40.5838, -76.0264],
+      state: "Pennsylvania",
     },
   },
   {
@@ -978,6 +1086,7 @@ const appalachianTrailDetails = [
       endingLocation: "Port Clinton, PA",
       startingCoordinates: [40.5838, -76.0264],
       endingCoordinates: [40.5838, -76.0264],
+      state: "Pennsylvania",
     },
   },
   {
@@ -987,6 +1096,7 @@ const appalachianTrailDetails = [
       endingLocation: "Eckville Shelter",
       startingCoordinates: [40.5838, -76.0264],
       endingCoordinates: [40.63381310915545, -75.95787887239622],
+      state: "Pennsylvania",
     },
   },
   {
@@ -996,6 +1106,7 @@ const appalachianTrailDetails = [
       endingLocation: "campground just before Lehigh Gap",
       startingCoordinates: [40.63381310915545, -75.95787887239622],
       endingCoordinates: [40.7809, -75.6128],
+      state: "Pennsylvania",
     },
   },
   {
@@ -1005,6 +1116,7 @@ const appalachianTrailDetails = [
       endingLocation: "Leroy A Smith Shelter",
       startingCoordinates: [40.7809, -75.6128],
       endingCoordinates: [40.83938650394143, -75.35941958128082],
+      state: "Pennsylvania",
     },
   },
   {
@@ -1014,6 +1126,7 @@ const appalachianTrailDetails = [
       endingLocation: "Delaware Water Gap",
       startingCoordinates: [40.83938650394143, -75.35941958128082],
       endingCoordinates: [40.9827, -75.1408],
+      state: "Pennsylvania",
     },
   },
   {
@@ -1023,6 +1136,7 @@ const appalachianTrailDetails = [
       endingLocation: "Backpackers Campsite",
       startingCoordinates: [40.9827, -75.1408],
       endingCoordinates: [40.9996, -75.09],
+      state: "Pennsylvania, New Jersey",
     },
   },
   {
@@ -1032,6 +1146,7 @@ const appalachianTrailDetails = [
       endingLocation: "Brink Road Shelter",
       startingCoordinates: [40.9996, -75.09],
       endingCoordinates: [41.1531, -74.8384],
+      state: "New Jersey",
     },
   },
   {
@@ -1041,6 +1156,7 @@ const appalachianTrailDetails = [
       endingLocation: "High Point Shelter",
       startingCoordinates: [41.1531, -74.8384],
       endingCoordinates: [41.3158, -74.6573],
+      state: "New Jersey",
     },
   },
   {
@@ -1050,6 +1166,7 @@ const appalachianTrailDetails = [
       endingLocation: "Pochuck Mountain Shelter",
       startingCoordinates: [41.3158, -74.6573],
       endingCoordinates: [41.2713, -74.5149],
+      state: "New Jersey",
     },
   },
   {
@@ -1059,6 +1176,7 @@ const appalachianTrailDetails = [
       endingLocation: "Campsite just outside of Greenwood Lake NY",
       startingCoordinates: [41.2713, -74.5149],
       endingCoordinates: [41.2283, -74.3033],
+      state: "New Jersey, New York",
     },
   },
   {
@@ -1068,6 +1186,7 @@ const appalachianTrailDetails = [
       endingLocation: "Buchanon Mountain/East Mombasha Rd",
       startingCoordinates: [41.2283, -74.3033],
       endingCoordinates: [41.266173405322725, -74.19436345451476],
+      state: "New York",
     },
   },
   {
@@ -1077,6 +1196,7 @@ const appalachianTrailDetails = [
       endingLocation: "Black Mountain",
       startingCoordinates: [41.266173405322725, -74.19436345451476],
       endingCoordinates: [41.2842064925071, -74.03950086022245],
+      state: "New York",
     },
   },
   {
@@ -1086,6 +1206,7 @@ const appalachianTrailDetails = [
       endingLocation: "US 6 - Peekskill NY",
       startingCoordinates: [41.2842064925071, -74.03950086022245],
       endingCoordinates: [41.32, -73.9795],
+      state: "New York",
     },
   },
   {
@@ -1095,6 +1216,7 @@ const appalachianTrailDetails = [
       endingLocation: "Dennytown Road/Sunk Mine Rd",
       startingCoordinates: [41.32, -73.9795],
       endingCoordinates: [41.420516473762014, -73.86917580373566],
+      state: "New York",
     },
   },
   {
@@ -1104,6 +1226,7 @@ const appalachianTrailDetails = [
       endingLocation: "NY 52 - Albany, NY",
       startingCoordinates: [41.420516473762014, -73.86917580373566],
       endingCoordinates: [41.5405, -73.7333],
+      state: "New York",
     },
   },
   {
@@ -1113,6 +1236,7 @@ const appalachianTrailDetails = [
       endingLocation: "NY 52 - Albany, NY",
       startingCoordinates: [41.5405, -73.7333],
       endingCoordinates: [41.5405, -73.7333],
+      state: "New York",
     },
   },
   {
@@ -1122,6 +1246,7 @@ const appalachianTrailDetails = [
       endingLocation: "Morgan Stewart Shelter",
       startingCoordinates: [41.5405, -73.7333],
       endingCoordinates: [41.56457342733767, -73.69176388699702],
+      state: "New York",
     },
   },
   {
@@ -1131,6 +1256,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hurds Corner Road/Leather Hill Rd",
       startingCoordinates: [41.56457342733767, -73.69176388699702],
       endingCoordinates: [41.5941, -73.5833],
+      state: "New York",
     },
   },
   {
@@ -1140,6 +1266,7 @@ const appalachianTrailDetails = [
       endingLocation: "Kent, CT",
       startingCoordinates: [41.5941, -73.5833],
       endingCoordinates: [41.7251, -73.4761],
+      state: "New York, Connecticut",
     },
   },
   {
@@ -1149,6 +1276,7 @@ const appalachianTrailDetails = [
       endingLocation: "St Johns Ledges",
       startingCoordinates: [41.7251, -73.4761],
       endingCoordinates: [41.7591221710805, -73.45230856604915],
+      state: "Connecticut",
     },
   },
   {
@@ -1158,6 +1286,7 @@ const appalachianTrailDetails = [
       endingLocation: "Sharon Mountain Campsite",
       startingCoordinates: [41.7591221710805, -73.45230856604915],
       endingCoordinates: [41.9174, -73.3806],
+      state: "Connecticut",
     },
   },
   {
@@ -1167,6 +1296,7 @@ const appalachianTrailDetails = [
       endingLocation: "Salisbury, CT",
       startingCoordinates: [41.9174, -73.3806],
       endingCoordinates: [41.9902, -73.4208],
+      state: "Connecticut",
     },
   },
   {
@@ -1176,6 +1306,7 @@ const appalachianTrailDetails = [
       endingLocation: "The Hemlocks Lean-to",
       startingCoordinates: [41.9902, -73.4208],
       endingCoordinates: [42.109846756977284, -73.42915365682056],
+      state: "Connecticut, Massachusetts",
     },
   },
   {
@@ -1185,6 +1316,7 @@ const appalachianTrailDetails = [
       endingLocation: "US 7 (Great Barrington, MA)",
       startingCoordinates: [42.109846756977284, -73.42915365682056],
       endingCoordinates: [42.154087778657775, -73.36466389879564],
+      state: "Massachusetts",
     },
   },
   {
@@ -1194,6 +1326,7 @@ const appalachianTrailDetails = [
       endingLocation: "US 7 (Great Barrington, MA)",
       startingCoordinates: [42.154087778657775, -73.36466389879564],
       endingCoordinates: [42.154087778657775, -73.36466389879564],
+      state: "Massachusetts",
     },
   },
   {
@@ -1203,6 +1336,7 @@ const appalachianTrailDetails = [
       endingLocation: "Shaker Campsite",
       startingCoordinates: [42.154087778657775, -73.36466389879564],
       endingCoordinates: [42.2519, -73.2247],
+      state: "Massachusetts",
     },
   },
   {
@@ -1212,6 +1346,7 @@ const appalachianTrailDetails = [
       endingLocation: "US 20 Lee, MA",
       startingCoordinates: [42.2519, -73.2247],
       endingCoordinates: [42.2916, -73.1574],
+      state: "Massachusetts",
     },
   },
   {
@@ -1221,6 +1356,7 @@ const appalachianTrailDetails = [
       endingLocation: "Upper Goose Pond Cabin",
       startingCoordinates: [42.290409540212615, -73.1554403014943],
       endingCoordinates: [42.2916, -73.1574],
+      state: "Massachusetts",
     },
   },
   {
@@ -1230,6 +1366,7 @@ const appalachianTrailDetails = [
       endingLocation: "Dalton, MA",
       startingCoordinates: [42.2887, -73.1814],
       endingCoordinates: [42.4747, -73.1606],
+      state: "Massachusetts",
     },
   },
   {
@@ -1239,6 +1376,7 @@ const appalachianTrailDetails = [
       endingLocation: "Powerlines just after Cheshire, MA",
       startingCoordinates: [42.4747, -73.1606],
       endingCoordinates: [42.5765, -73.1701],
+      state: "Massachusetts",
     },
   },
   {
@@ -1248,6 +1386,7 @@ const appalachianTrailDetails = [
       endingLocation: "Wilbur Clearing Lean-to",
       startingCoordinates: [42.5765, -73.1701],
       endingCoordinates: [42.66787368122962, -73.17013861034697],
+      state: "Massachusetts",
     },
   },
   {
@@ -1257,6 +1396,7 @@ const appalachianTrailDetails = [
       endingLocation: "Seth Warner Shelter",
       startingCoordinates: [42.66787368122962, -73.17013861034697],
       endingCoordinates: [42.79816091180885, -73.11855319845006],
+      state: "Massachusetts, Vermont",
     },
   },
   {
@@ -1266,6 +1406,7 @@ const appalachianTrailDetails = [
       endingLocation: "Melville Nauheim Shelter",
       startingCoordinates: [42.79816091180885, -73.11855319845006],
       endingCoordinates: [42.8878, -73.0951],
+      state: "Vermont",
     },
   },
   {
@@ -1275,6 +1416,7 @@ const appalachianTrailDetails = [
       endingLocation: "Story Spring Shelter",
       startingCoordinates: [42.8878, -73.0951],
       endingCoordinates: [43.0504, -73.0124],
+      state: "Vermont",
     },
   },
   {
@@ -1284,6 +1426,7 @@ const appalachianTrailDetails = [
       endingLocation: "William B Douglas Shelter Side Trail",
       startingCoordinates: [43.0504, -73.0124],
       endingCoordinates: [43.14452947038904, -72.99097428592101],
+      state: "Vermont",
     },
   },
   {
@@ -1293,6 +1436,7 @@ const appalachianTrailDetails = [
       endingLocation: "Manchester Center, VT",
       startingCoordinates: [43.14452947038904, -72.99097428592101],
       endingCoordinates: [43.1895, -72.9899],
+      state: "Vermont",
     },
   },
   {
@@ -1302,6 +1446,7 @@ const appalachianTrailDetails = [
       endingLocation: "campsite just before Peru Peak Shelter",
       startingCoordinates: [43.1895, -72.9899],
       endingCoordinates: [43.3012, -72.9524],
+      state: "Vermont",
     },
   },
   {
@@ -1311,6 +1456,7 @@ const appalachianTrailDetails = [
       endingLocation: "Little Rock Pond Shelter",
       startingCoordinates: [43.3012, -72.9524],
       endingCoordinates: [43.3988, -72.9548],
+      state: "Vermont",
     },
   },
   {
@@ -1320,6 +1466,7 @@ const appalachianTrailDetails = [
       endingLocation: "Clarendon Shelter",
       startingCoordinates: [43.3988, -72.9548],
       endingCoordinates: [43.523726696736524, -72.91252711531678],
+      state: "Vermont",
     },
   },
   {
@@ -1329,6 +1476,7 @@ const appalachianTrailDetails = [
       endingLocation: "Churchill Scott Shelter",
       startingCoordinates: [43.523726696736524, -72.91252711531678],
       endingCoordinates: [43.6449, -72.8534],
+      state: "Vermont",
     },
   },
   {
@@ -1338,6 +1486,7 @@ const appalachianTrailDetails = [
       endingLocation: "Kent Pond",
       startingCoordinates: [43.6449, -72.8534],
       endingCoordinates: [43.6746, -72.8133],
+      state: "Vermont",
     },
   },
   {
@@ -1347,6 +1496,7 @@ const appalachianTrailDetails = [
       endingLocation: "Thistle Hill Shelter",
       startingCoordinates: [43.6746, -72.8133],
       endingCoordinates: [43.695, -72.4753],
+      state: "Vermont",
     },
   },
   {
@@ -1356,6 +1506,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hanover, NH",
       startingCoordinates: [43.695, -72.4753],
       endingCoordinates: [43.7025, -72.2895],
+      state: "Vermont, New Hampshire",
     },
   },
   {
@@ -1365,6 +1516,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hanover, NH",
       startingCoordinates: [43.7025, -72.2895],
       endingCoordinates: [43.7025, -72.2895],
+      state: "New Hampshire",
     },
   },
   {
@@ -1374,6 +1526,7 @@ const appalachianTrailDetails = [
       endingLocation: "Velvet Rocks Shelter",
       startingCoordinates: [43.7025, -72.2895],
       endingCoordinates: [43.7023, -72.2646],
+      state: "New Hampshire",
     },
   },
   {
@@ -1383,6 +1536,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hanover Center Road",
       startingCoordinates: [43.7023, -72.2646],
       endingCoordinates: [43.7048, -72.2119],
+      state: "New Hampshire",
     },
   },
   {
@@ -1392,6 +1546,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hanover Center Road",
       startingCoordinates: [43.7048, -72.2119],
       endingCoordinates: [43.7048, -72.2119],
+      state: "New Hampshire",
     },
   },
   {
@@ -1401,6 +1556,7 @@ const appalachianTrailDetails = [
       endingLocation: "Campsite just after Hanover Center Road",
       startingCoordinates: [43.7048, -72.2119],
       endingCoordinates: [43.7079, -72.1995],
+      state: "New Hampshire",
     },
   },
   {
@@ -1410,6 +1566,7 @@ const appalachianTrailDetails = [
       endingLocation: "Smarts Mountain Shelter",
       startingCoordinates: [43.7079, -72.1995],
       endingCoordinates: [43.8254, -72.0374],
+      state: "New Hampshire",
     },
   },
   {
@@ -1419,6 +1576,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hikers Welcome Hostel (Glencliff, NH)",
       startingCoordinates: [43.8254, -72.0374],
       endingCoordinates: [43.9899, -71.8991],
+      state: "New Hampshire",
     },
   },
   {
@@ -1428,6 +1586,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hikers Welcome Hostel (Glencliff, NH)",
       startingCoordinates: [43.9899, -71.8991],
       endingCoordinates: [43.9899, -71.8991],
+      state: "New Hampshire",
     },
   },
   {
@@ -1437,6 +1596,7 @@ const appalachianTrailDetails = [
       endingLocation: "Eliza Brook Shelter",
       startingCoordinates: [43.9899, -71.8991],
       endingCoordinates: [44.1008, -71.7422],
+      state: "New Hampshire",
     },
   },
   {
@@ -1446,6 +1606,7 @@ const appalachianTrailDetails = [
       endingLocation: "Campsite just before Little Haystack Mountain",
       startingCoordinates: [44.1008, -71.7422],
       endingCoordinates: [44.14043537145863, -71.64526919822988],
+      state: "New Hampshire",
     },
   },
   {
@@ -1455,6 +1616,7 @@ const appalachianTrailDetails = [
       endingLocation: "Zealand Falls Hut",
       startingCoordinates: [44.14043537145863, -71.64526919822988],
       endingCoordinates: [44.195, -71.4942],
+      state: "New Hampshire",
     },
   },
   {
@@ -1464,6 +1626,7 @@ const appalachianTrailDetails = [
       endingLocation: "Nauman Campsite",
       startingCoordinates: [44.195, -71.4942],
       endingCoordinates: [44.218731797321546, -71.37026487510494],
+      state: "New Hampshire",
     },
   },
   {
@@ -1473,6 +1636,7 @@ const appalachianTrailDetails = [
       endingLocation: "Lakes of the Clouds Hut",
       startingCoordinates: [44.218731797321546, -71.37026487510494],
       endingCoordinates: [44.2588, -71.319],
+      state: "New Hampshire",
     },
   },
   {
@@ -1482,6 +1646,7 @@ const appalachianTrailDetails = [
       endingLocation: "Madison Springs Hut",
       startingCoordinates: [44.2588, -71.319],
       endingCoordinates: [44.3283, -71.2835],
+      state: "New Hampshire",
     },
   },
   {
@@ -1491,6 +1656,7 @@ const appalachianTrailDetails = [
       endingLocation: "Pinkham Notch",
       startingCoordinates: [44.3283, -71.2835],
       endingCoordinates: [44.2568, -71.2529],
+      state: "New Hampshire",
     },
   },
   {
@@ -1500,6 +1666,7 @@ const appalachianTrailDetails = [
       endingLocation: "Zeta Pass",
       startingCoordinates: [44.2568, -71.2529],
       endingCoordinates: [44.28121653858644, -71.17314128707018],
+      state: "New Hampshire",
     },
   },
   {
@@ -1509,6 +1676,7 @@ const appalachianTrailDetails = [
       endingLocation: "Gorham, NH",
       startingCoordinates: [44.28121653858644, -71.17314128707018],
       endingCoordinates: [44.4004, -71.1121],
+      state: "New Hampshire",
     },
   },
   {
@@ -1518,6 +1686,7 @@ const appalachianTrailDetails = [
       endingLocation: "Gorham, NH",
       startingCoordinates: [44.4004, -71.1121],
       endingCoordinates: [44.4004, -71.1121],
+      state: "New Hampshire",
     },
   },
   {
@@ -1527,6 +1696,7 @@ const appalachianTrailDetails = [
       endingLocation: "Gentian Pond Campsite",
       startingCoordinates: [44.4004, -71.1121],
       endingCoordinates: [44.4518, -71.0694],
+      state: "New Hampshire, Maine",
     },
   },
   {
@@ -1536,6 +1706,7 @@ const appalachianTrailDetails = [
       endingLocation: "campsite just before Mahoosuc Notch",
       startingCoordinates: [44.4518, -71.0694],
       endingCoordinates: [44.5374, -70.9894],
+      state: "Maine",
     },
   },
   {
@@ -1545,6 +1716,7 @@ const appalachianTrailDetails = [
       endingLocation: "Baldpate Lean-to",
       startingCoordinates: [44.5374, -70.9894],
       endingCoordinates: [44.5984, -70.9116],
+      state: "Maine",
     },
   },
   {
@@ -1554,6 +1726,7 @@ const appalachianTrailDetails = [
       endingLocation: "Hall Mountain Lean-to",
       startingCoordinates: [44.5984, -70.9116],
       endingCoordinates: [44.7009, -70.8246],
+      state: "Maine",
     },
   },
   {
@@ -1563,6 +1736,7 @@ const appalachianTrailDetails = [
       endingLocation: "S Arm Rd - Black Brook",
       startingCoordinates: [44.7009, -70.8246],
       endingCoordinates: [44.7209, -70.7861],
+      state: "Maine",
     },
   },
   {
@@ -1572,6 +1746,7 @@ const appalachianTrailDetails = [
       endingLocation: "Bemis Stream",
       startingCoordinates: [44.7209, -70.7861],
       endingCoordinates: [44.8349, -70.7219],
+      state: "Maine",
     },
   },
   {
@@ -1581,6 +1756,7 @@ const appalachianTrailDetails = [
       endingLocation: "Rangely, ME",
       startingCoordinates: [44.8349, -70.7219],
       endingCoordinates: [44.887, -70.5404],
+      state: "Maine",
     },
   },
   {
@@ -1590,6 +1766,7 @@ const appalachianTrailDetails = [
       endingLocation: "Piazza Rock Lean-to",
       startingCoordinates: [44.887, -70.5404],
       endingCoordinates: [44.9041, -70.53],
+      state: "Maine",
     },
   },
   {
@@ -1599,6 +1776,7 @@ const appalachianTrailDetails = [
       endingLocation: "Spaulding Mountain Lean-to",
       startingCoordinates: [44.9041, -70.53],
       endingCoordinates: [44.9957, -70.3414],
+      state: "Maine",
     },
   },
   {
@@ -1608,6 +1786,7 @@ const appalachianTrailDetails = [
       endingLocation: "Stratton, ME",
       startingCoordinates: [44.9957, -70.3414],
       endingCoordinates: [45.1037, -70.3567],
+      state: "Maine",
     },
   },
   {
@@ -1617,6 +1796,7 @@ const appalachianTrailDetails = [
       endingLocation: "Horns Pond Lean-tos",
       startingCoordinates: [45.1037, -70.3567],
       endingCoordinates: [45.1441, -70.3301],
+      state: "Maine",
     },
   },
   {
@@ -1626,6 +1806,7 @@ const appalachianTrailDetails = [
       endingLocation: "Flagstaff Lake",
       startingCoordinates: [45.1441, -70.3301],
       endingCoordinates: [45.1467, -70.1712],
+      state: "Maine",
     },
   },
   {
@@ -1635,6 +1816,7 @@ const appalachianTrailDetails = [
       endingLocation: "Pierce Pond Lean-to",
       startingCoordinates: [45.1467, -70.1712],
       endingCoordinates: [45.24028170555148, -70.05547396560098],
+      state: "Maine",
     },
   },
   {
@@ -1644,6 +1826,7 @@ const appalachianTrailDetails = [
       endingLocation: "Bald Mountain Brook Lean-to",
       startingCoordinates: [45.24028170555148, -70.05547396560098],
       endingCoordinates: [45.258728456875296, -69.79943897293515],
+      state: "Maine",
     },
   },
   {
@@ -1653,6 +1836,7 @@ const appalachianTrailDetails = [
       endingLocation: "Monson, ME",
       startingCoordinates: [45.258728456875296, -69.79943897293515],
       endingCoordinates: [45.3312, -69.5358],
+      state: "Maine",
     },
   },
   {
@@ -1662,6 +1846,7 @@ const appalachianTrailDetails = [
       endingLocation: "Leeman Brook Lean-to",
       startingCoordinates: [45.3312, -69.5358],
       endingCoordinates: [45.35157262511126, -69.49875159617412],
+      state: "Maine",
     },
   },
   {
@@ -1671,6 +1856,7 @@ const appalachianTrailDetails = [
       endingLocation: "Cloud Pond Lean-to",
       startingCoordinates: [45.35157262511126, -69.49875159617412],
       endingCoordinates: [45.4185, -69.3542],
+      state: "Maine",
     },
   },
   {
@@ -1680,6 +1866,7 @@ const appalachianTrailDetails = [
       endingLocation: "Carl A Newhall Lean-to",
       startingCoordinates: [45.4185, -69.3542],
       endingCoordinates: [45.531, -69.3151],
+      state: "Maine",
     },
   },
   {
@@ -1689,6 +1876,7 @@ const appalachianTrailDetails = [
       endingLocation: "East Branch Lean-to",
       startingCoordinates: [45.531, -69.3151],
       endingCoordinates: [45.5967, -69.1982],
+      state: "Maine",
     },
   },
   {
@@ -1698,6 +1886,7 @@ const appalachianTrailDetails = [
       endingLocation: "Antlers Campground",
       startingCoordinates: [45.5967, -69.1982],
       endingCoordinates: [45.67858499625466, -69.0046940305941],
+      state: "Maine",
     },
   },
   {
@@ -1707,6 +1896,7 @@ const appalachianTrailDetails = [
       endingLocation: "Pollywog Stream",
       startingCoordinates: [45.67858499625466, -69.0046940305941],
       endingCoordinates: [45.77358881619277, -69.18449906433457],
+      state: "Maine",
     },
   },
   {
@@ -1716,6 +1906,7 @@ const appalachianTrailDetails = [
       endingLocation: "Abol Bridge Campground",
       startingCoordinates: [45.77358881619277, -69.18449906433457],
       endingCoordinates: [45.8346, -68.9648],
+      state: "Maine",
     },
   },
   {
@@ -1725,6 +1916,7 @@ const appalachianTrailDetails = [
       endingLocation: "Katahdin Stream Campground",
       startingCoordinates: [45.8346, -68.9648],
       endingCoordinates: [45.8871, -68.9988],
+      state: "Maine",
     },
   },
   {
@@ -1734,6 +1926,7 @@ const appalachianTrailDetails = [
       endingLocation: "Mt. Katahdin",
       startingCoordinates: [45.8871, -68.9988],
       endingCoordinates: [45.9044, -68.9213],
+      state: "Maine",
     },
   },
 ];

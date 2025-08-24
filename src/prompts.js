@@ -4,11 +4,95 @@ export const prompts = {
 What would you suggest I do to accomplish this?
 
 I want you to add this prompt to a new Accordion on src/components/Footer.jsx called "Prompts used for general development" and add a new object in src/prompts.js called general. I also want you to change "This Page" to "Prompts used in this page" and "Footer" to "Prompts used for Footer component"
+
+Update src/App.jsx so that every page that we decide to render is contained in a flexbox. I want my site to be navigable on both desktop and mobile
+
+Create two new components in src/pages/
+1. NemacExampleSite.jsx
+2. NemacPresentation.jsx
+
+Update src/App.jsx to remove all routes except for / and add src/pages/NemacExampleSite.jsx and src/pages/NemacPresentation.jsx as two new routes
+
+Add a new key for each Day in src/data/AppalachianTrailDetails.js called state and populate it with the following:
+Day 1 through Day 9 - state: "Georgia"
+Day 10 through Day 40 - state: "North Carolina, Tennessee"
+Day 41 to Day 44 - state: "Tennessee"
+Day 45 - state: "Tennessee, Virginia"
+Day 46 to Day 92- state: "Virginia"
+Day 93 - state: "Virginia, West Virginia"
+Day 94 - state "West Virginia, Maryland"
+Day 95 - state: "Maryland"
+Day 96 - state: "Maryland, Pennsylvania"
+Day 97 to Day 113 - state: "Pennsylvania"
+Day 114 - state "Pennsylvania, New Jersey"
+Day 115 to Day 117 - state: "New Jersey"
+Day 118 - state: "New Jersey, New York"
+Day 119 to Day 126 - state: "New York"
+Day 127 - state: "New York, Connecticut"
+Day 128 to Day 130 - state: "Connecticut"
+Day 131: state: "Connecticut, Massachusetts"
+Day 132 to Day 139 -  state: "Massachusetts"
+Day 140 -  state: "Massachusetts, Vermont"
+Day 141 to Day 150 -  state: "Vermont"
+Day 151 - state: "Vermont, New Hampshire"
+Day 152 to Day 169 - state: "New Hampshire"
+Day 170 - state: "New Hampshire, Maine"
+Day 171 to Day 193 - state: "Maine"
+
+
 `,
-  Home: `FULL DISCLOSURE: Not all prompts are accounted for. I started capturing prompts midway through the process.`,
-  AppalachianTrail: `FULL DISCLOSURE: Not all prompts are accounted for. I started capturing prompts midway through the process.`,
-  Quiz: `FULL DISCLOSURE: Not all prompts are accounted for. I started capturing prompts midway through the process.`,
-  AppalachianTrailMap: `FULL DISCLOSURE: Not all prompts are accounted for. I started capturing prompts midway through the process.`,
+  Home: `Update src/pages/Home.jsx:
+1. Add two new Box links with routes to src/pages/NemacExampleSite.jsx on the left and src/pages/NemacPresentation.jsx on the right
+2. These Box links will be formatted using Grid with md=6 breakpoint and sm=12 breakpoint
+3. Add this prompt to Home in src/prompts.js
+
+Update src/pages/Home.jsx again so that the Box links are centered horizontally on the page.`,
+  AppalachianTrail: `Let's create a new page in src/pages/ and called it AppalachianTrail.jsx. I want you to design it based off public/design/at_page.pdf with the following guidelines:
+- The black box on the right side will be where the React Leaflet Map is
+- The blue box on the left side is a MUI Select component of all of the 14 states the Appalachian Trail goes through in order from Georgia to Maine
+- The green box will also be a MUI select component and will render choices of "Day 1" sequentially to "Day 193" using data from src/data/AppalachianTrailDetails.js. You only need to read the first 20-30 lines of src/data/AppalachianTrailDetails.js to since the data remains consistent throughout
+- The black box with the React Leaflet Map should take up 75% of the available page
+- The blue and green box on the left should take up 25% of the available page
+- Using MUI Grid to accomplish this and make it so xs=12 in mobile with blue, green, black box the correct sequence
+- When a day is selected in the green box it should grab the startingCoordinates and endingCoordinates and add two markers on the React Leaflet Map: green for starting, and red for ending. When you click the marker a popup should appear with the respective startingLocation and endingLocation. This can all be found in src/data/AppalachianTrailDetails.js
+- When a state is selected in the blue box the React leaflet map should smoothly pan and zoom into the selected state
+
+You forgot to pan/zoom when selecting a state in src/pages/AppalachianTrail.jsx
+
+Add the previous prompt and additionally in src/pages/AppalachianTrail.jsx:
+- Update states coordinates to be more in line with where the Appalachian Trail is in that respective state
+- Increase the zoom level by 2 for each state
+
+Update src/pages/AppalachianTrail.jsx so that when you select a state from the MUI Select component in lines 110-122 that updates the available dayKeys for the other Select component in lines 127-142
+
+This will be accomplished by looking up the key called "state" in appalachianTrailDetails and only returning the ones where state is equal to the state selected. e.g. Georgia=Georgia
+
+You can also have two acceptable values in appalachainTrailDetails. E.g. state:"New Hampshire, Maine" - both New Hampshire and Maine should work here
+
+In src/pages/AppalachianTrail.jsx do the following:
+- add a new state variable called atCenterLine
+- fetch the data from const trailUrl =
+      "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/ANST_Facilities/FeatureServer/7/query?where=1%3D1&outFields=*&f=geojson"; using react useEffect on component load
+- Render the trail center line like so {trailData && (
+          <GeoJSON
+            data={trailData}
+            style={() => ({
+              color: "#387037",
+              weight: 4,
+              opacity: 0.8,
+            })}
+          />
+        )}
+- add this to prompts
+
+One more update in src/pages/AppalachianTrail.jsx 
+
+When selecting a Day I want you to create a function that takes in the values of the startingCoordinates and the endingCoordinates for the selected day and returns a set of coordinates that is roughly in between the two and a zoom value of 13. I then want the map to smoothly pan and zoom to the new coordinates and zoom value whenever a new day is selected
+
+`,
+  Quiz: ``,
+  NemacPresentation: `Let's work on src/pages/NemacPresentation.jsx now. I want you to create a title centered on the page that says "Inspiration" and then below it is a Button link with the text that says "Thanks Greg" and when clicked opens up a new tab that links to "https://drive.google.com/file/d/1XaS__pata90QQH-lgHaiJdydx2zgfHbO/view?usp=drive_link"`,
+  AppalachianTrailMap: ``,
   Dave: `Let's create a new component called "src/components/Dave.jsx" and use public/design/dave_page.pdf as the template for styling it. 
 
 Please do the following on this new Dave.jsx page component:

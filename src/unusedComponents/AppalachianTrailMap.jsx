@@ -19,8 +19,8 @@ import {
   NavigateNext,
 } from "@mui/icons-material";
 import appalachianTrailDetails from "../data/AppalachianTrailDetails.js";
-import Navbar from "./Navbar.jsx";
-import PhotoGallery from "./PhotoGallery.jsx";
+import Navbar from "../components/Navbar.jsx";
+import PhotoGallery from "../components/PhotoGallery.jsx";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import HikerJeff from "./HikerJeff.jsx";
 
