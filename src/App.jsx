@@ -5,12 +5,12 @@ import {
   useLocation,
 } from "react-router-dom";
 import Home from "./pages/Home.jsx";
-import NemacExampleSite from "./pages/NemacExampleSite.jsx";
 import NemacPresentation from "./pages/NemacPresentation.jsx";
 import AppalachianTrail from "./pages/AppalachianTrail.jsx";
 import Footer from "./components/Footer";
 import { prompts } from "./prompts";
 import { Box } from "@mui/material";
+import Test from "./pages/Test.jsx";
 
 function AppContent() {
   const location = useLocation();
@@ -35,9 +35,9 @@ function AppContent() {
       <Box sx={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/nemacexamplesite" element={<NemacExampleSite />} />
           <Route path="/nemacpresentation" element={<NemacPresentation />} />
           <Route path="/appalachiantrail" element={<AppalachianTrail />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
       </Box>
     </Box>

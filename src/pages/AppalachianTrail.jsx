@@ -8,6 +8,7 @@ import {
   InputLabel,
 } from "@mui/material";
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from "react-leaflet";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import appalachianTrailDetails from "../data/AppalachianTrailDetails";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -62,10 +63,59 @@ const states = [
 ];
 
 const AppalachianTrail = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [selectedState, setSelectedState] = useState("");
   const [selectedDay, setSelectedDay] = useState("");
   const [map, setMap] = useState(null);
   const [atCenterLine, setAtCenterLine] = useState(null);
+
+  useEffect(() => {
+    const stateParam = searchParams.get('state');
+    const dayParam = searchParams.get('day');
+    
+    if (stateParam && states.some(state => state.name === stateParam)) {
+      setSelectedState(stateParam);
+    }
+    
+    if (dayParam) {
+      const dayKey = `Day ${dayParam}`;
+      const dayExists = appalachianTrailDetails.some(dayObj => dayObj[dayKey]);
+      if (dayExists) {
+        setSelectedDay(dayKey);
+      }
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (map && selectedState) {
+      const state = states.find((s) => s.name === selectedState);
+      if (state) {
+        map.flyTo(state.coordinates, state.zoom, {
+          animate: true,
+          duration: 1.5,
+        });
+      }
+    }
+  }, [map, selectedState]);
+
+  useEffect(() => {
+    if (map && selectedDay) {
+      const dayData = appalachianTrailDetails.find((day) => day[selectedDay]);
+      if (dayData && dayData[selectedDay]) {
+        const { startingCoordinates, endingCoordinates } = dayData[selectedDay];
+        const midpoint = calculateMidpoint(
+          startingCoordinates,
+          endingCoordinates,
+        );
+
+        map.flyTo(midpoint, 12, {
+          animate: true,
+          duration: 1.5,
+        });
+      }
+    }
+  }, [map, selectedDay]);
 
   useEffect(() => {
     const trailUrl =
@@ -85,6 +135,15 @@ const AppalachianTrail = () => {
     const stateName = event.target.value;
     setSelectedState(stateName);
     setSelectedDay("");
+    
+    const params = new URLSearchParams(searchParams);
+    if (stateName) {
+      params.set('state', stateName);
+    } else {
+      params.delete('state');
+    }
+    params.delete('day');
+    setSearchParams(params);
 
     if (map) {
       const state = states.find((s) => s.name === stateName);
@@ -106,6 +165,15 @@ const AppalachianTrail = () => {
   const handleDayChange = (event) => {
     const dayKey = event.target.value;
     setSelectedDay(dayKey);
+    
+    const params = new URLSearchParams(searchParams);
+    if (dayKey) {
+      const dayNumber = dayKey.replace('Day ', '');
+      params.set('day', dayNumber);
+    } else {
+      params.delete('day');
+    }
+    setSearchParams(params);
 
     if (map && dayKey) {
       const dayData = appalachianTrailDetails.find((day) => day[dayKey]);
