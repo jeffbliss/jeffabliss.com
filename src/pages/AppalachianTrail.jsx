@@ -151,7 +151,7 @@ const AppalachianTrail = () => {
   const filteredDays = getFilteredDays();
 
   return (
-    <Box sx={{ p: 2, height: "calc(100vh - 100px)" }}>
+    <Box sx={{ height: "calc(100vh - 40px)" }}>
       <Grid container spacing={2} sx={{ height: "100%" }}>
         <Grid size={{ xs: 12, md: 3 }}>
           <Box
@@ -190,9 +190,21 @@ const AppalachianTrail = () => {
               >
                 {filteredDays.map((dayObj, index) => {
                   const dayKey = Object.keys(dayObj)[0];
+                  const dayData = dayObj[dayKey];
+                  const date = new Date(dayData.date);
+                  const formattedDate = date.toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                  }).replace(/(\d+),/, (match, day) => {
+                    const suffix = day % 10 === 1 && day !== 11 ? 'st' :
+                                  day % 10 === 2 && day !== 12 ? 'nd' :
+                                  day % 10 === 3 && day !== 13 ? 'rd' : 'th';
+                    return day + suffix + ',';
+                  });
                   return (
                     <MenuItem key={dayKey} value={dayKey}>
-                      {dayKey}
+                      {dayKey}: {formattedDate}
                     </MenuItem>
                   );
                 })}

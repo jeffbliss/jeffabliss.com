@@ -7,6 +7,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.5607, -84.248],
       endingCoordinates: [34.62951117990281, -84.19267417323803],
       state: "Georgia",
+      milesWalked: 0.2,
+      totalMilesWalked: 0.2,
     },
   },
   {
@@ -17,6 +19,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.62951117990281, -84.19267417323803],
       endingCoordinates: [34.66620061252325, -84.13640405974544],
       state: "Georgia",
+      milesWalked: 7.9,
+      totalMilesWalked: 8.1,
     },
   },
   {
@@ -27,6 +31,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.66620061252325, -84.13640405974544],
       endingCoordinates: [34.6521730395017, -84.0322702502148],
       state: "Georgia",
+      milesWalked: 9.2,
+      totalMilesWalked: 17.3,
     },
   },
   {
@@ -37,6 +43,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.6521730395017, -84.0322702502148],
       endingCoordinates: [34.70820668941287, -83.98491493091524],
       state: "Georgia",
+      milesWalked: 7.0,
+      totalMilesWalked: 24.3,
     },
   },
   {
@@ -47,6 +55,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.70820668941287, -83.98491493091524],
       endingCoordinates: [34.73544076969417, -83.9180001007228],
       state: "Georgia",
+      milesWalked: 7.4,
+      totalMilesWalked: 31.7,
     },
   },
   {
@@ -57,6 +67,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.73544076969417, -83.9180001007228],
       endingCoordinates: [34.77629640515657, -83.82439623227174],
       state: "Georgia",
+      milesWalked: 11.5,
+      totalMilesWalked: 43.2,
     },
   },
   {
@@ -67,6 +79,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.77629640515657, -83.82439623227174],
       endingCoordinates: [34.81731594369318, -83.76676483090553],
       state: "Georgia",
+      milesWalked: 7.3,
+      totalMilesWalked: 50.5,
     },
   },
   {
@@ -77,6 +91,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.81731594369318, -83.76676483090553],
       endingCoordinates: [34.8824, -83.6461],
       state: "Georgia",
+      milesWalked: 15.5,
+      totalMilesWalked: 66,
     },
   },
   {
@@ -87,6 +103,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.8824, -83.6461],
       endingCoordinates: [34.91205111466465, -83.61904666848635],
       state: "Georgia",
+      milesWalked: 3.6,
+      totalMilesWalked: 69.6,
     },
   },
   {
@@ -97,6 +115,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.91205111466465, -83.61904666848635],
       endingCoordinates: [35.02068137252565, -83.5814816513152],
       state: "Georgia, North Carolina",
+      milesWalked: 11.8,
+      totalMilesWalked: 81.4,
     },
   },
   {
@@ -107,6 +127,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.02068137252565, -83.5814816513152],
       endingCoordinates: [34.999407877768725, -83.49389805358915],
       state: "North Carolina, Tennessee",
+      milesWalked: 12.5,
+      totalMilesWalked: 93.9,
     },
   },
   {
@@ -117,6 +139,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [34.999407877768725, -83.49389805358915],
       endingCoordinates: [35.0915935254672, -83.52294766000716],
       state: "North Carolina, Tennessee",
+      milesWalked: 12.1,
+      totalMilesWalked: 106,
     },
   },
   {
@@ -127,6 +151,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.0915935254672, -83.52294766000716],
       endingCoordinates: [35.12161950106376, -83.54475495121724],
       state: "North Carolina, Tennessee",
+      milesWalked: 3.8,
+      totalMilesWalked: 109.8,
     },
   },
   {
@@ -137,6 +163,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.12161950106376, -83.54475495121724],
       endingCoordinates: [35.14426746041196, -83.57341471740558],
       state: "North Carolina, Tennessee",
+      milesWalked: 4.2,
+      totalMilesWalked: 114,
     },
   },
   {
@@ -147,6 +175,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.14426746041196, -83.57341471740558],
       endingCoordinates: [35.22308887353577, -83.56237706742218],
       state: "North Carolina, Tennessee",
+      milesWalked: 10.4,
+      totalMilesWalked: 124.4,
     },
   },
   {
@@ -157,6 +187,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.22308887353577, -83.56237706742218],
       endingCoordinates: [35.33139316380414, -83.59166342673153],
       state: "North Carolina, Tennessee",
+      milesWalked: 12.7,
+      totalMilesWalked: 137.1,
     },
   },
   {
@@ -167,6 +199,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.33139316380414, -83.59166342673153],
       endingCoordinates: [35.33439051589019, -83.70383529821093],
       state: "North Carolina, Tennessee",
+      milesWalked: 10.5,
+      totalMilesWalked: 147.6,
     },
   },
   {
@@ -177,6 +211,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.33439051589019, -83.70383529821093],
       endingCoordinates: [35.41537961577501, -83.77343373089025],
       state: "North Carolina, Tennessee",
+      milesWalked: 11.6,
+      totalMilesWalked: 159.2,
     },
   },
   {
@@ -187,6 +223,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.41537961577501, -83.77343373089025],
       endingCoordinates: [35.43267640017142, -83.82137957321751],
       state: "North Carolina, Tennessee",
+      milesWalked: 5.5,
+      totalMilesWalked: 164.7,
     },
   },
   {
@@ -197,6 +235,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.43267640017142, -83.82137957321751],
       endingCoordinates: [35.43267640017142, -83.82137957321751],
       state: "North Carolina, Tennessee",
+      milesWalked: 0,
+      totalMilesWalked: 164.7,
     },
   },
   {
@@ -207,6 +247,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.43267640017142, -83.82137957321751],
       endingCoordinates: [35.5015124884789, -83.81323492728795],
       state: "North Carolina, Tennessee",
+      milesWalked: 7,
+      totalMilesWalked: 171.7,
     },
   },
   {
@@ -217,6 +259,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.5015124884789, -83.81323492728795],
       endingCoordinates: [35.56186824065446, -83.73266854300489],
       state: "North Carolina, Tennessee",
+      milesWalked: 10.8,
+      totalMilesWalked: 182.5,
     },
   },
   {
@@ -227,6 +271,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.56186824065446, -83.73266854300489],
       endingCoordinates: [35.56523880313199, -83.5424411028276],
       state: "North Carolina, Tennessee",
+      milesWalked: 13.5,
+      totalMilesWalked: 196,
     },
   },
   {
@@ -237,6 +283,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.56523880313199, -83.5424411028276],
       endingCoordinates: [35.61122424630325, -83.42529802295039],
       state: "North Carolina, Tennessee",
+      milesWalked: 10.8,
+      totalMilesWalked: 206.8,
     },
   },
   {
@@ -247,6 +295,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.61122424630325, -83.42529802295039],
       endingCoordinates: [35.650960579860154, -83.30856978855638],
       state: "North Carolina, Tennessee",
+      milesWalked: 10.4,
+      totalMilesWalked: 217.2,
     },
   },
   {
@@ -257,6 +307,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.650960579860154, -83.30856978855638],
       endingCoordinates: [35.728450535926484, -83.1820231732099],
       state: "North Carolina, Tennessee",
+      milesWalked: 12.9,
+      totalMilesWalked: 230.1,
     },
   },
   {
@@ -267,6 +319,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.728450535926484, -83.1820231732099],
       endingCoordinates: [35.782733769401524, -83.10193043829243],
       state: "North Carolina, Tennessee",
+      milesWalked: 10.4,
+      totalMilesWalked: 240.5,
     },
   },
   {
@@ -277,6 +331,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.782733769401524, -83.10193043829243],
       endingCoordinates: [35.79717201418794, -82.95680952201006],
       state: "North Carolina, Tennessee",
+      milesWalked: 13.6,
+      totalMilesWalked: 254.1,
     },
   },
   {
@@ -287,6 +343,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.79717201418794, -82.95680952201006],
       endingCoordinates: [35.89261027983853, -82.82774986823483],
       state: "North Carolina, Tennessee",
+      milesWalked: 19.8,
+      totalMilesWalked: 273.9,
     },
   },
   {
@@ -297,6 +355,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.89261027983853, -82.82774986823483],
       endingCoordinates: [35.89261027983853, -82.82774986823483],
       state: "North Carolina, Tennessee",
+      milesWalked: 0,
+      totalMilesWalked: 273.9,
     },
   },
   {
@@ -307,6 +367,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.89261027983853, -82.82774986823483],
       endingCoordinates: [35.89109636354551, -82.82117210153348],
       state: "North Carolina, Tennessee",
+      milesWalked: 0.1,
+      totalMilesWalked: 274,
     },
   },
   {
@@ -317,6 +379,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.89109636354551, -82.82117210153348],
       endingCoordinates: [35.951881413302, -82.79009262195231],
       state: "North Carolina, Tennessee",
+      milesWalked: 10.9,
+      totalMilesWalked: 284.9,
     },
   },
   {
@@ -327,6 +391,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.951881413302, -82.79009262195231],
       endingCoordinates: [36.0566, -82.6571],
       state: "North Carolina, Tennessee",
+      milesWalked: 15.4,
+      totalMilesWalked: 300.3,
     },
   },
   {
@@ -337,6 +403,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.0566, -82.6571],
       endingCoordinates: [35.9641, -82.5871],
       state: "North Carolina, Tennessee",
+      milesWalked: 14.7,
+      totalMilesWalked: 315,
     },
   },
   {
@@ -347,6 +415,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [35.9641, -82.5871],
       endingCoordinates: [36.0320687581757, -82.42032127974768],
       state: "North Carolina, Tennessee",
+      milesWalked: 15.8,
+      totalMilesWalked: 330.8,
     },
   },
   {
@@ -357,6 +427,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.0320687581757, -82.42032127974768],
       endingCoordinates: [36.1054, -82.4483],
       state: "North Carolina, Tennessee",
+      milesWalked: 11.2,
+      totalMilesWalked: 342,
     },
   },
   {
@@ -367,6 +439,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.1054, -82.4483],
       endingCoordinates: [36.1043, -82.3968],
       state: "North Carolina, Tennessee",
+      milesWalked: 4.2,
+      totalMilesWalked: 346.2,
     },
   },
   {
@@ -377,6 +451,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.1043, -82.3968],
       endingCoordinates: [36.144543767859396, -82.23130319447864],
       state: "North Carolina, Tennessee",
+      milesWalked: 17.2,
+      totalMilesWalked: 363.4,
     },
   },
   {
@@ -387,6 +463,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.144543767859396, -82.23130319447864],
       endingCoordinates: [36.10512263476555, -82.12213748729592],
       state: "North Carolina, Tennessee",
+      milesWalked: 12.6,
+      totalMilesWalked: 376,
     },
   },
   {
@@ -397,6 +475,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.10512263476555, -82.12213748729592],
       endingCoordinates: [36.17748910226034, -82.01174778866059],
       state: "North Carolina, Tennessee",
+      milesWalked: 16.3,
+      totalMilesWalked: 392.3,
     },
   },
   {
@@ -407,6 +487,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.17748910226034, -82.01174778866059],
       endingCoordinates: [36.220537135425296, -82.02934671719292],
       state: "Tennessee",
+      milesWalked: 12.6,
+      totalMilesWalked: 404.9,
     },
   },
   {
@@ -417,6 +499,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.220537135425296, -82.02934671719292],
       endingCoordinates: [36.28285495010562, -82.14082688751832],
       state: "Tennessee",
+      milesWalked: 14.8,
+      totalMilesWalked: 419.7,
     },
   },
   {
@@ -427,6 +511,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.28285495010562, -82.14082688751832],
       endingCoordinates: [36.31412237257887, -82.12937271359424],
       state: "Tennessee",
+      milesWalked: 7.6,
+      totalMilesWalked: 427.3,
     },
   },
   {
@@ -437,6 +523,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.31412237257887, -82.12937271359424],
       endingCoordinates: [36.509937055732834, -81.98548873687238],
       state: "Tennessee",
+      milesWalked: 21.6,
+      totalMilesWalked: 448.9,
     },
   },
   {
@@ -447,6 +535,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.509937055732834, -81.98548873687238],
       endingCoordinates: [36.6338, -81.7914],
       state: "Tennessee, Virginia",
+      milesWalked: 18.5,
+      totalMilesWalked: 467.4,
     },
   },
   {
@@ -457,6 +547,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.6338, -81.7914],
       endingCoordinates: [36.6338, -81.7914],
       state: "Virginia",
+      milesWalked: 0,
+      totalMilesWalked: 467.4,
     },
   },
   {
@@ -467,6 +559,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.6338, -81.7914],
       endingCoordinates: [36.6338, -81.7914],
       state: "Virginia",
+      milesWalked: 0,
+      totalMilesWalked: 467.4,
     },
   },
   {
@@ -477,6 +571,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.6338, -81.7914],
       endingCoordinates: [36.6338, -81.7914],
       state: "Virginia",
+      milesWalked: 0,
+      totalMilesWalked: 467.4,
     },
   },
   {
@@ -487,6 +583,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.6338, -81.7914],
       endingCoordinates: [36.6442, -81.6559],
       state: "Virginia",
+      milesWalked: 15.8,
+      totalMilesWalked: 483.2,
     },
   },
   {
@@ -497,6 +595,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.6442, -81.6559],
       endingCoordinates: [36.6566, -81.5352],
       state: "Virginia",
+      milesWalked: 12.2,
+      totalMilesWalked: 495.4,
     },
   },
   {
@@ -507,6 +607,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.6566, -81.5352],
       endingCoordinates: [36.69657190552609, -81.50626263852371],
       state: "Virginia",
+      milesWalked: 12.7,
+      totalMilesWalked: 508.1,
     },
   },
   {
@@ -517,6 +619,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.69657190552609, -81.50626263852371],
       endingCoordinates: [36.812315966086125, -81.41792592300258],
       state: "Virginia",
+      milesWalked: 23.1,
+      totalMilesWalked: 531.2,
     },
   },
   {
@@ -527,6 +631,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.812315966086125, -81.41792592300258],
       endingCoordinates: [36.835, -81.5115],
       state: "Virginia",
+      milesWalked: 0,
+      totalMilesWalked: 531.2,
     },
   },
   {
@@ -537,6 +643,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.835, -81.5115],
       endingCoordinates: [36.885610181716835, -81.37313797587635],
       state: "Virginia",
+      milesWalked: 11.5,
+      totalMilesWalked: 542.7,
     },
   },
   {
@@ -547,6 +655,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.885610181716835, -81.37313797587635],
       endingCoordinates: [36.95099054606718, -81.36395982764687],
       state: "Virginia",
+      milesWalked: 6.3,
+      totalMilesWalked: 549,
     },
   },
   {
@@ -557,6 +667,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [36.95099054606718, -81.36395982764687],
       endingCoordinates: [37.0577, -81.3993],
       state: "Virginia",
+      milesWalked: 16.7,
+      totalMilesWalked: 565.7,
     },
   },
   {
@@ -567,6 +679,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.0577, -81.3993],
       endingCoordinates: [37.10461928074985, -81.20093476139294],
       state: "Virginia",
+      milesWalked: 14.8,
+      totalMilesWalked: 580.5,
     },
   },
   {
@@ -577,6 +691,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.10461928074985, -81.20093476139294],
       endingCoordinates: [37.155, -80.9801],
       state: "Virginia",
+      milesWalked: 19,
+      totalMilesWalked: 599.5,
     },
   },
   {
@@ -587,6 +703,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.155, -80.9801],
       endingCoordinates: [37.1859, -80.9014],
       state: "Virginia",
+      milesWalked: 8.4,
+      totalMilesWalked: 607.9,
     },
   },
   {
@@ -597,6 +715,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.1859, -80.9014],
       endingCoordinates: [37.256122228472535, -80.85551443184045],
       state: "Virginia",
+      milesWalked: 13,
+      totalMilesWalked: 620.9,
     },
   },
   {
@@ -607,6 +727,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.256122228472535, -80.85551443184045],
       endingCoordinates: [37.3259, -80.734],
       state: "Virginia",
+      milesWalked: 10.4,
+      totalMilesWalked: 631.3,
     },
   },
   {
@@ -617,6 +739,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.3259, -80.734],
       endingCoordinates: [37.3259, -80.734],
       state: "Virginia",
+      milesWalked: 0,
+      totalMilesWalked: 631.3,
     },
   },
   {
@@ -627,6 +751,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.3259, -80.734],
       endingCoordinates: [37.405448944487546, -80.6827025189022],
       state: "Virginia",
+      milesWalked: 11.9,
+      totalMilesWalked: 643.2,
     },
   },
   {
@@ -637,6 +763,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.405448944487546, -80.6827025189022],
       endingCoordinates: [37.401, -80.577],
       state: "Virginia",
+      milesWalked: 11.3,
+      totalMilesWalked: 654.5,
     },
   },
   {
@@ -647,6 +775,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.401, -80.577],
       endingCoordinates: [37.3547, -80.3374],
       state: "Virginia",
+      milesWalked: 21,
+      totalMilesWalked: 675.5,
     },
   },
   {
@@ -657,6 +787,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.3547, -80.3374],
       endingCoordinates: [37.3802, -80.1846],
       state: "Virginia",
+      milesWalked: 16.1,
+      totalMilesWalked: 691.6,
     },
   },
   {
@@ -667,6 +799,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.3802, -80.1846],
       endingCoordinates: [37.3854, -80.074],
       state: "Virginia",
+      milesWalked: 13.6,
+      totalMilesWalked: 705.2,
     },
   },
   {
@@ -677,6 +811,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.3854, -80.074],
       endingCoordinates: [37.391, -80.0299],
       state: "Virginia",
+      milesWalked: 3.3,
+      totalMilesWalked: 708.5,
     },
   },
   {
@@ -687,6 +823,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.391, -80.0299],
       endingCoordinates: [37.391152246686815, -79.90647748263979],
       state: "Virginia",
+      milesWalked: 15.5,
+      totalMilesWalked: 724,
     },
   },
   {
@@ -697,6 +835,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.391152246686815, -79.90647748263979],
       endingCoordinates: [37.391152246686815, -79.90647748263979],
       state: "Virginia",
+      milesWalked: 0,
+      totalMilesWalked: 724,
     },
   },
   {
@@ -707,6 +847,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.391152246686815, -79.90647748263979],
       endingCoordinates: [37.4364, -79.7405],
       state: "Virginia",
+      milesWalked: 15,
+      totalMilesWalked: 739,
     },
   },
   {
@@ -717,6 +859,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.4364, -79.7405],
       endingCoordinates: [37.529741373943054, -79.62195439096827],
       state: "Virginia",
+      milesWalked: 13.2,
+      totalMilesWalked: 752.2,
     },
   },
   {
@@ -727,6 +871,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.529741373943054, -79.62195439096827],
       endingCoordinates: [37.5578, -79.459],
       state: "Virginia",
+      milesWalked: 17.3,
+      totalMilesWalked: 769.5,
     },
   },
   {
@@ -737,6 +883,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.5578, -79.459],
       endingCoordinates: [37.59668328103405, -79.39140786684067],
       state: "Virginia",
+      milesWalked: 11.3,
+      totalMilesWalked: 780.8,
     },
   },
   {
@@ -747,6 +895,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.59668328103405, -79.39140786684067],
       endingCoordinates: [37.67102191400382, -79.28352102884256],
       state: "Virginia",
+      milesWalked: 15,
+      totalMilesWalked: 795.8,
     },
   },
   {
@@ -757,6 +907,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.67102191400382, -79.28352102884256],
       endingCoordinates: [37.819011860110834, -79.15488094878918],
       state: "Virginia",
+      milesWalked: 20.8,
+      totalMilesWalked: 816.6,
     },
   },
   {
@@ -767,6 +919,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.819011860110834, -79.15488094878918],
       endingCoordinates: [37.8562, -79.0005],
       state: "Virginia",
+      milesWalked: 14.2,
+      totalMilesWalked: 830.8,
     },
   },
   {
@@ -777,6 +931,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.8562, -79.0005],
       endingCoordinates: [37.94124271200768, -78.93662037266445],
       state: "Virginia",
+      milesWalked: 12.7,
+      totalMilesWalked: 843.5,
     },
   },
   {
@@ -787,6 +943,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [37.94124271200768, -78.93662037266445],
       endingCoordinates: [38.03112513190231, -78.85802206469982],
       state: "Virginia",
+      milesWalked: 14.3,
+      totalMilesWalked: 857.8,
     },
   },
   {
@@ -797,6 +955,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.03112513190231, -78.85802206469982],
       endingCoordinates: [38.03112513190231, -78.85802206469982],
       state: "Virginia",
+      milesWalked: 0,
+      totalMilesWalked: 857.8,
     },
   },
   {
@@ -807,6 +967,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.0682, -78.8894],
       endingCoordinates: [38.12926091836386, -78.78492752538071],
       state: "Virginia",
+      milesWalked: 12.1,
+      totalMilesWalked: 869.9,
     },
   },
   {
@@ -817,6 +979,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.12926091836386, -78.78492752538071],
       endingCoordinates: [38.25347556516463, -78.66480779726169],
       state: "Virginia",
+      milesWalked: 16,
+      totalMilesWalked: 885.9,
     },
   },
   {
@@ -827,6 +991,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.25347556516463, -78.66480779726169],
       endingCoordinates: [38.33323803887636, -78.55836623492401],
       state: "Virginia",
+      milesWalked: 14,
+      totalMilesWalked: 899.9,
     },
   },
   {
@@ -837,6 +1003,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.33323803887636, -78.55836623492401],
       endingCoordinates: [38.44419748121913, -78.47045590883663],
       state: "Virginia",
+      milesWalked: 12.4,
+      totalMilesWalked: 912.3,
     },
   },
   {
@@ -847,6 +1015,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.44419748121913, -78.47045590883663],
       endingCoordinates: [38.592, -78.375],
       state: "Virginia",
+      milesWalked: 17.2,
+      totalMilesWalked: 929.5,
     },
   },
   {
@@ -857,6 +1027,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.592, -78.375],
       endingCoordinates: [38.6561, -78.3186],
       state: "Virginia",
+      milesWalked: 8.4,
+      totalMilesWalked: 937.9,
     },
   },
   {
@@ -867,6 +1039,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.6561, -78.3186],
       endingCoordinates: [38.743702910583124, -78.29649614472517],
       state: "Virginia",
+      milesWalked: 9.4,
+      totalMilesWalked: 947.3,
     },
   },
   {
@@ -877,6 +1051,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.743702910583124, -78.29649614472517],
       endingCoordinates: [38.87831488218645, -78.15073205339598],
       state: "Virginia",
+      milesWalked: 18.3,
+      totalMilesWalked: 965.6,
     },
   },
   {
@@ -887,6 +1063,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.87831488218645, -78.15073205339598],
       endingCoordinates: [38.87831488218645, -78.15073205339598],
       state: "Virginia",
+      milesWalked: 0,
+      totalMilesWalked: 965.6,
     },
   },
   {
@@ -897,6 +1075,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.87831488218645, -78.15073205339598],
       endingCoordinates: [38.9307, -78.0327],
       state: "Virginia",
+      milesWalked: 10.7,
+      totalMilesWalked: 976.3,
     },
   },
   {
@@ -907,6 +1087,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [38.9307, -78.0327],
       endingCoordinates: [39.1109, -77.8541],
       state: "Virginia",
+      milesWalked: 22.8,
+      totalMilesWalked: 999.1,
     },
   },
   {
@@ -917,6 +1099,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [39.1109, -77.8541],
       endingCoordinates: [39.2864, -77.7512],
       state: "Virginia",
+      milesWalked: 16.8,
+      totalMilesWalked: 1015.9,
     },
   },
   {
@@ -927,6 +1111,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [39.2864, -77.7512],
       endingCoordinates: [39.3234, -77.7302],
       state: "Virginia, West Virginia",
+      milesWalked: 3,
+      totalMilesWalked: 1018.9,
     },
   },
   {
@@ -937,6 +1123,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [39.3234, -77.7302],
       endingCoordinates: [39.4126, -77.637],
       state: "West Virginia, Maryland",
+      milesWalked: 11.1,
+      totalMilesWalked: 1030,
     },
   },
   {
@@ -947,6 +1135,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [39.4126, -77.637],
       endingCoordinates: [39.62996020425234, -77.55903664782717],
       state: "Maryland",
+      milesWalked: 20.5,
+      totalMilesWalked: 1050.5,
     },
   },
   {
@@ -957,6 +1147,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [39.62996020425234, -77.55903664782717],
       endingCoordinates: [39.741537056001704, -77.49035635207751],
       state: "Maryland, Pennsylvania",
+      milesWalked: 12.6,
+      totalMilesWalked: 1063.1,
     },
   },
   {
@@ -967,6 +1159,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [39.741537056001704, -77.49035635207751],
       endingCoordinates: [39.741537056001704, -77.49035635207751],
       state: "Pennsylvania",
+      milesWalked: 0,
+      totalMilesWalked: 1063.1,
     },
   },
   {
@@ -977,6 +1171,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [39.741537056001704, -77.49035635207751],
       endingCoordinates: [39.8176, -77.4741],
       state: "Pennsylvania",
+      milesWalked: 7,
+      totalMilesWalked: 1070.1,
     },
   },
   {
@@ -987,6 +1183,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [39.8176, -77.4741],
       endingCoordinates: [39.9851, -77.4194],
       state: "Pennsylvania",
+      milesWalked: 18.3,
+      totalMilesWalked: 1088.4,
     },
   },
   {
@@ -997,6 +1195,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [39.9851, -77.4194],
       endingCoordinates: [40.066220270989, -77.20710738392226],
       state: "Pennsylvania",
+      milesWalked: 17.1,
+      totalMilesWalked: 1105.5,
     },
   },
   {
@@ -1007,6 +1207,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.066220270989, -77.20710738392226],
       endingCoordinates: [40.14910550474357, -77.12638651537524],
       state: "Pennsylvania",
+      milesWalked: 12,
+      totalMilesWalked: 1117.5,
     },
   },
   {
@@ -1017,6 +1219,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.14910550474357, -77.12638651537524],
       endingCoordinates: [40.36381626904206, -77.06740248609653],
       state: "Pennsylvania",
+      milesWalked: 21.6,
+      totalMilesWalked: 1139.1,
     },
   },
   {
@@ -1027,6 +1231,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.36381626904206, -77.06740248609653],
       endingCoordinates: [40.3981, -77.023],
       state: "Pennsylvania",
+      milesWalked: 4.1,
+      totalMilesWalked: 1143.2,
     },
   },
   {
@@ -1037,6 +1243,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.3981, -77.023],
       endingCoordinates: [40.3981, -77.023],
       state: "Pennsylvania",
+      milesWalked: 0,
+      totalMilesWalked: 1143.2,
     },
   },
   {
@@ -1047,6 +1255,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.3981, -77.023],
       endingCoordinates: [40.4259, -76.8793],
       state: "Pennsylvania",
+      milesWalked: 10.9,
+      totalMilesWalked: 1154.1,
     },
   },
   {
@@ -1057,6 +1267,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.4259, -76.8793],
       endingCoordinates: [40.48102121990069, -76.55028546492744],
       state: "Pennsylvania",
+      milesWalked: 22.7,
+      totalMilesWalked: 1176.8,
     },
   },
   {
@@ -1067,6 +1279,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.48102121990069, -76.55028546492744],
       endingCoordinates: [40.5089, -76.3101],
       state: "Pennsylvania",
+      milesWalked: 16.2,
+      totalMilesWalked: 1193,
     },
   },
   {
@@ -1077,6 +1291,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.5089, -76.3101],
       endingCoordinates: [40.5838, -76.0264],
       state: "Pennsylvania",
+      milesWalked: 20.3,
+      totalMilesWalked: 1213.3,
     },
   },
   {
@@ -1087,6 +1303,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.5838, -76.0264],
       endingCoordinates: [40.5838, -76.0264],
       state: "Pennsylvania",
+      milesWalked: 0,
+      totalMilesWalked: 1213.3,
     },
   },
   {
@@ -1097,6 +1315,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.5838, -76.0264],
       endingCoordinates: [40.63381310915545, -75.95787887239622],
       state: "Pennsylvania",
+      milesWalked: 15.2,
+      totalMilesWalked: 1228.5,
     },
   },
   {
@@ -1107,6 +1327,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.63381310915545, -75.95787887239622],
       endingCoordinates: [40.7809, -75.6128],
       state: "Pennsylvania",
+      milesWalked: 22.5,
+      totalMilesWalked: 1251,
     },
   },
   {
@@ -1117,6 +1339,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.7809, -75.6128],
       endingCoordinates: [40.83938650394143, -75.35941958128082],
       state: "Pennsylvania",
+      milesWalked: 18.4,
+      totalMilesWalked: 1269.4,
     },
   },
   {
@@ -1127,6 +1351,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.83938650394143, -75.35941958128082],
       endingCoordinates: [40.9827, -75.1408],
       state: "Pennsylvania",
+      milesWalked: 20.2,
+      totalMilesWalked: 1289.6,
     },
   },
   {
@@ -1137,6 +1363,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.9827, -75.1408],
       endingCoordinates: [40.9996, -75.09],
       state: "Pennsylvania, New Jersey",
+      milesWalked: 4.8,
+      totalMilesWalked: 1294.4,
     },
   },
   {
@@ -1147,6 +1375,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [40.9996, -75.09],
       endingCoordinates: [41.1531, -74.8384],
       state: "New Jersey",
+      milesWalked: 20,
+      totalMilesWalked: 1314.4,
     },
   },
   {
@@ -1157,6 +1387,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.1531, -74.8384],
       endingCoordinates: [41.3158, -74.6573],
       state: "New Jersey",
+      milesWalked: 19.6,
+      totalMilesWalked: 1334,
     },
   },
   {
@@ -1167,6 +1399,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.3158, -74.6573],
       endingCoordinates: [41.2713, -74.5149],
       state: "New Jersey",
+      milesWalked: 12.4,
+      totalMilesWalked: 1346.4,
     },
   },
   {
@@ -1177,6 +1411,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.2713, -74.5149],
       endingCoordinates: [41.2283, -74.3033],
       state: "New Jersey, New York",
+      milesWalked: 21.5,
+      totalMilesWalked: 1367.9,
     },
   },
   {
@@ -1187,6 +1423,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.2283, -74.3033],
       endingCoordinates: [41.266173405322725, -74.19436345451476],
       state: "New York",
+      milesWalked: 8.3,
+      totalMilesWalked: 1376.2,
     },
   },
   {
@@ -1197,6 +1435,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.266173405322725, -74.19436345451476],
       endingCoordinates: [41.2842064925071, -74.03950086022245],
       state: "New York",
+      milesWalked: 14.8,
+      totalMilesWalked: 1391,
     },
   },
   {
@@ -1207,6 +1447,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.2842064925071, -74.03950086022245],
       endingCoordinates: [41.32, -73.9795],
       state: "New York",
+      milesWalked: 9.4,
+      totalMilesWalked: 1400.4,
     },
   },
   {
@@ -1217,6 +1459,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.32, -73.9795],
       endingCoordinates: [41.420516473762014, -73.86917580373566],
       state: "New York",
+      milesWalked: 14.8,
+      totalMilesWalked: 1415.2,
     },
   },
   {
@@ -1227,6 +1471,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.420516473762014, -73.86917580373566],
       endingCoordinates: [41.5405, -73.7333],
       state: "New York",
+      milesWalked: 14.8,
+      totalMilesWalked: 1430,
     },
   },
   {
@@ -1237,6 +1483,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.5405, -73.7333],
       endingCoordinates: [41.5405, -73.7333],
       state: "New York",
+      milesWalked: 0,
+      totalMilesWalked: 1430,
     },
   },
   {
@@ -1247,6 +1495,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.5405, -73.7333],
       endingCoordinates: [41.56457342733767, -73.69176388699702],
       state: "New York",
+      milesWalked: 3.9,
+      totalMilesWalked: 1433.9,
     },
   },
   {
@@ -1257,6 +1507,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.56457342733767, -73.69176388699702],
       endingCoordinates: [41.5941, -73.5833],
       state: "New York",
+      milesWalked: 13.1,
+      totalMilesWalked: 1447,
     },
   },
   {
@@ -1267,6 +1519,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.5941, -73.5833],
       endingCoordinates: [41.7251, -73.4761],
       state: "New York, Connecticut",
+      milesWalked: 16.2,
+      totalMilesWalked: 1463.2,
     },
   },
   {
@@ -1277,6 +1531,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.7251, -73.4761],
       endingCoordinates: [41.7591221710805, -73.45230856604915],
       state: "Connecticut",
+      milesWalked: 4.2,
+      totalMilesWalked: 1467.4,
     },
   },
   {
@@ -1287,6 +1543,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.7591221710805, -73.45230856604915],
       endingCoordinates: [41.9174, -73.3806],
       state: "Connecticut",
+      milesWalked: 15.2,
+      totalMilesWalked: 1482.6,
     },
   },
   {
@@ -1297,6 +1555,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.9174, -73.3806],
       endingCoordinates: [41.9902, -73.4208],
       state: "Connecticut",
+      milesWalked: 13.1,
+      totalMilesWalked: 1495.7,
     },
   },
   {
@@ -1307,6 +1567,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [41.9902, -73.4208],
       endingCoordinates: [42.109846756977284, -73.42915365682056],
       state: "Connecticut, Massachusetts",
+      milesWalked: 13.4,
+      totalMilesWalked: 1509.1,
     },
   },
   {
@@ -1317,6 +1579,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.109846756977284, -73.42915365682056],
       endingCoordinates: [42.154087778657775, -73.36466389879564],
       state: "Massachusetts",
+      milesWalked: 8,
+      totalMilesWalked: 1517.1,
     },
   },
   {
@@ -1327,6 +1591,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.154087778657775, -73.36466389879564],
       endingCoordinates: [42.154087778657775, -73.36466389879564],
       state: "Massachusetts",
+      milesWalked: 0,
+      totalMilesWalked: 1517.1,
     },
   },
   {
@@ -1337,6 +1603,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.154087778657775, -73.36466389879564],
       endingCoordinates: [42.2519, -73.2247],
       state: "Massachusetts",
+      milesWalked: 17.6,
+      totalMilesWalked: 1534.7,
     },
   },
   {
@@ -1347,6 +1615,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.2519, -73.2247],
       endingCoordinates: [42.2916, -73.1574],
       state: "Massachusetts",
+      milesWalked: 11.5,
+      totalMilesWalked: 1546.2,
     },
   },
   {
@@ -1357,6 +1627,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.290409540212615, -73.1554403014943],
       endingCoordinates: [42.2916, -73.1574],
       state: "Massachusetts",
+      milesWalked: -1.6,
+      totalMilesWalked: 1544.6,
     },
   },
   {
@@ -1367,6 +1639,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.2887, -73.1814],
       endingCoordinates: [42.4747, -73.1606],
       state: "Massachusetts",
+      milesWalked: 20.6,
+      totalMilesWalked: 1565.2,
     },
   },
   {
@@ -1377,6 +1651,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.4747, -73.1606],
       endingCoordinates: [42.5765, -73.1701],
       state: "Massachusetts",
+      milesWalked: 11.3,
+      totalMilesWalked: 1576.5,
     },
   },
   {
@@ -1387,6 +1663,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.5765, -73.1701],
       endingCoordinates: [42.66787368122962, -73.17013861034697],
       state: "Massachusetts",
+      milesWalked: 9.2,
+      totalMilesWalked: 1585.7,
     },
   },
   {
@@ -1397,6 +1675,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.66787368122962, -73.17013861034697],
       endingCoordinates: [42.79816091180885, -73.11855319845006],
       state: "Massachusetts, Vermont",
+      milesWalked: 9.9,
+      totalMilesWalked: 1595.6,
     },
   },
   {
@@ -1407,6 +1687,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.79816091180885, -73.11855319845006],
       endingCoordinates: [42.8878, -73.0951],
       state: "Vermont",
+      milesWalked: 13.1,
+      totalMilesWalked: 1608.7,
     },
   },
   {
@@ -1417,6 +1699,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [42.8878, -73.0951],
       endingCoordinates: [43.0504, -73.0124],
       state: "Vermont",
+      milesWalked: 17.4,
+      totalMilesWalked: 1626.1,
     },
   },
   {
@@ -1427,6 +1711,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.0504, -73.0124],
       endingCoordinates: [43.14452947038904, -72.99097428592101],
       state: "Vermont",
+      milesWalked: 15.3,
+      totalMilesWalked: 1641.4,
     },
   },
   {
@@ -1437,6 +1723,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.14452947038904, -72.99097428592101],
       endingCoordinates: [43.1895, -72.9899],
       state: "Vermont",
+      milesWalked: 5.8,
+      totalMilesWalked: 1647.2,
     },
   },
   {
@@ -1447,6 +1735,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.1895, -72.9899],
       endingCoordinates: [43.3012, -72.9524],
       state: "Vermont",
+      milesWalked: 9.8,
+      totalMilesWalked: 1657,
     },
   },
   {
@@ -1457,6 +1747,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.3012, -72.9524],
       endingCoordinates: [43.3988, -72.9548],
       state: "Vermont",
+      milesWalked: 10,
+      totalMilesWalked: 1667,
     },
   },
   {
@@ -1467,6 +1759,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.3988, -72.9548],
       endingCoordinates: [43.523726696736524, -72.91252711531678],
       state: "Vermont",
+      milesWalked: 13.6,
+      totalMilesWalked: 1680.6,
     },
   },
   {
@@ -1477,6 +1771,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.523726696736524, -72.91252711531678],
       endingCoordinates: [43.6449, -72.8534],
       state: "Vermont",
+      milesWalked: 14.5,
+      totalMilesWalked: 1695.1,
     },
   },
   {
@@ -1487,6 +1783,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.6449, -72.8534],
       endingCoordinates: [43.6746, -72.8133],
       state: "Vermont",
+      milesWalked: 5.9,
+      totalMilesWalked: 1701,
     },
   },
   {
@@ -1497,6 +1795,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.6746, -72.8133],
       endingCoordinates: [43.695, -72.4753],
       state: "Vermont",
+      milesWalked: 27.5,
+      totalMilesWalked: 1728.5,
     },
   },
   {
@@ -1507,6 +1807,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.695, -72.4753],
       endingCoordinates: [43.7025, -72.2895],
       state: "Vermont, New Hampshire",
+      milesWalked: 14.6,
+      totalMilesWalked: 1743.1,
     },
   },
   {
@@ -1517,6 +1819,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.7025, -72.2895],
       endingCoordinates: [43.7025, -72.2895],
       state: "New Hampshire",
+      milesWalked: 0,
+      totalMilesWalked: 1743.1,
     },
   },
   {
@@ -1527,6 +1831,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.7025, -72.2895],
       endingCoordinates: [43.7023, -72.2646],
       state: "New Hampshire",
+      milesWalked: 1.5,
+      totalMilesWalked: 1744.6,
     },
   },
   {
@@ -1537,6 +1843,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.7023, -72.2646],
       endingCoordinates: [43.7048, -72.2119],
       state: "New Hampshire",
+      milesWalked: 4.4,
+      totalMilesWalked: 1749,
     },
   },
   {
@@ -1547,6 +1855,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.7048, -72.2119],
       endingCoordinates: [43.7048, -72.2119],
       state: "New Hampshire",
+      milesWalked: 0,
+      totalMilesWalked: 1749,
     },
   },
   {
@@ -1557,6 +1867,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.7048, -72.2119],
       endingCoordinates: [43.7079, -72.1995],
       state: "New Hampshire",
+      milesWalked: 2,
+      totalMilesWalked: 1751,
     },
   },
   {
@@ -1567,6 +1879,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.7079, -72.1995],
       endingCoordinates: [43.8254, -72.0374],
       state: "New Hampshire",
+      milesWalked: 15.5,
+      totalMilesWalked: 1766.5,
     },
   },
   {
@@ -1577,6 +1891,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.8254, -72.0374],
       endingCoordinates: [43.9899, -71.8991],
       state: "New Hampshire",
+      milesWalked: 19.9,
+      totalMilesWalked: 1786.4,
     },
   },
   {
@@ -1587,6 +1903,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.9899, -71.8991],
       endingCoordinates: [43.9899, -71.8991],
       state: "New Hampshire",
+      milesWalked: 0,
+      totalMilesWalked: 1786.4,
     },
   },
   {
@@ -1597,6 +1915,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [43.9899, -71.8991],
       endingCoordinates: [44.1008, -71.7422],
       state: "New Hampshire",
+      milesWalked: 17,
+      totalMilesWalked: 1803.4,
     },
   },
   {
@@ -1607,6 +1927,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.1008, -71.7422],
       endingCoordinates: [44.14043537145863, -71.64526919822988],
       state: "New Hampshire",
+      milesWalked: 13,
+      totalMilesWalked: 1816.4,
     },
   },
   {
@@ -1617,6 +1939,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.14043537145863, -71.64526919822988],
       endingCoordinates: [44.195, -71.4942],
       state: "New Hampshire",
+      milesWalked: 15.8,
+      totalMilesWalked: 1832.2,
     },
   },
   {
@@ -1627,6 +1951,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.195, -71.4942],
       endingCoordinates: [44.218731797321546, -71.37026487510494],
       state: "New Hampshire",
+      milesWalked: 14.1,
+      totalMilesWalked: 1846.3,
     },
   },
   {
@@ -1637,6 +1963,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.218731797321546, -71.37026487510494],
       endingCoordinates: [44.2588, -71.319],
       state: "New Hampshire",
+      milesWalked: 4.7,
+      totalMilesWalked: 1851,
     },
   },
   {
@@ -1647,6 +1975,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.2588, -71.319],
       endingCoordinates: [44.3283, -71.2835],
       state: "New Hampshire",
+      milesWalked: 7.1,
+      totalMilesWalked: 1858.1,
     },
   },
   {
@@ -1657,6 +1987,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.3283, -71.2835],
       endingCoordinates: [44.2568, -71.2529],
       state: "New Hampshire",
+      milesWalked: 7.8,
+      totalMilesWalked: 1865.9,
     },
   },
   {
@@ -1667,6 +1999,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.2568, -71.2529],
       endingCoordinates: [44.28121653858644, -71.17314128707018],
       state: "New Hampshire",
+      milesWalked: 8.5,
+      totalMilesWalked: 1874.4,
     },
   },
   {
@@ -1677,6 +2011,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.28121653858644, -71.17314128707018],
       endingCoordinates: [44.4004, -71.1121],
       state: "New Hampshire",
+      milesWalked: 12.6,
+      totalMilesWalked: 1887,
     },
   },
   {
@@ -1687,6 +2023,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.4004, -71.1121],
       endingCoordinates: [44.4004, -71.1121],
       state: "New Hampshire",
+      milesWalked: 0,
+      totalMilesWalked: 1887,
     },
   },
   {
@@ -1697,6 +2035,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.4004, -71.1121],
       endingCoordinates: [44.4518, -71.0694],
       state: "New Hampshire, Maine",
+      milesWalked: 11.8,
+      totalMilesWalked: 1898.8,
     },
   },
   {
@@ -1707,6 +2047,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.4518, -71.0694],
       endingCoordinates: [44.5374, -70.9894],
       state: "Maine",
+      milesWalked: 11.1,
+      totalMilesWalked: 1909.9,
     },
   },
   {
@@ -1717,6 +2059,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.5374, -70.9894],
       endingCoordinates: [44.5984, -70.9116],
       state: "Maine",
+      milesWalked: 10.5,
+      totalMilesWalked: 1920.4,
     },
   },
   {
@@ -1727,6 +2071,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.5984, -70.9116],
       endingCoordinates: [44.7009, -70.8246],
       state: "Maine",
+      milesWalked: 14,
+      totalMilesWalked: 1934.4,
     },
   },
   {
@@ -1737,6 +2083,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.7009, -70.8246],
       endingCoordinates: [44.7209, -70.7861],
       state: "Maine",
+      milesWalked: 4.1,
+      totalMilesWalked: 1938.5,
     },
   },
   {
@@ -1747,6 +2095,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.7209, -70.7861],
       endingCoordinates: [44.8349, -70.7219],
       state: "Maine",
+      milesWalked: 12.5,
+      totalMilesWalked: 1951,
     },
   },
   {
@@ -1757,6 +2107,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.8349, -70.7219],
       endingCoordinates: [44.887, -70.5404],
       state: "Maine",
+      milesWalked: 13.9,
+      totalMilesWalked: 1964.9,
     },
   },
   {
@@ -1767,6 +2119,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.887, -70.5404],
       endingCoordinates: [44.9041, -70.53],
       state: "Maine",
+      milesWalked: 1.8,
+      totalMilesWalked: 1966.7,
     },
   },
   {
@@ -1777,6 +2131,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.9041, -70.53],
       endingCoordinates: [44.9957, -70.3414],
       state: "Maine",
+      milesWalked: 16.9,
+      totalMilesWalked: 1983.6,
     },
   },
   {
@@ -1787,6 +2143,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [44.9957, -70.3414],
       endingCoordinates: [45.1037, -70.3567],
       state: "Maine",
+      milesWalked: 13.5,
+      totalMilesWalked: 1997.1,
     },
   },
   {
@@ -1797,6 +2155,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.1037, -70.3567],
       endingCoordinates: [45.1441, -70.3301],
       state: "Maine",
+      milesWalked: 5.1,
+      totalMilesWalked: 2002.2,
     },
   },
   {
@@ -1807,6 +2167,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.1441, -70.3301],
       endingCoordinates: [45.1467, -70.1712],
       state: "Maine",
+      milesWalked: 12.7,
+      totalMilesWalked: 2014.9,
     },
   },
   {
@@ -1817,6 +2179,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.1467, -70.1712],
       endingCoordinates: [45.24028170555148, -70.05547396560098],
       state: "Maine",
+      milesWalked: 15.2,
+      totalMilesWalked: 2030.1,
     },
   },
   {
@@ -1827,6 +2191,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.24028170555148, -70.05547396560098],
       endingCoordinates: [45.258728456875296, -69.79943897293515],
       state: "Maine",
+      milesWalked: 18.7,
+      totalMilesWalked: 2048.8,
     },
   },
   {
@@ -1837,6 +2203,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.258728456875296, -69.79943897293515],
       endingCoordinates: [45.3312, -69.5358],
       state: "Maine",
+      milesWalked: 22,
+      totalMilesWalked: 2070.8,
     },
   },
   {
@@ -1847,6 +2215,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.3312, -69.5358],
       endingCoordinates: [45.35157262511126, -69.49875159617412],
       state: "Maine",
+      milesWalked: 3,
+      totalMilesWalked: 2073.8,
     },
   },
   {
@@ -1857,6 +2227,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.35157262511126, -69.49875159617412],
       endingCoordinates: [45.4185, -69.3542],
       state: "Maine",
+      milesWalked: 16.1,
+      totalMilesWalked: 2089.9,
     },
   },
   {
@@ -1867,6 +2239,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.4185, -69.3542],
       endingCoordinates: [45.531, -69.3151],
       state: "Maine",
+      milesWalked: 16.8,
+      totalMilesWalked: 2106.7,
     },
   },
   {
@@ -1877,6 +2251,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.531, -69.3151],
       endingCoordinates: [45.5967, -69.1982],
       state: "Maine",
+      milesWalked: 10.8,
+      totalMilesWalked: 2117.5,
     },
   },
   {
@@ -1887,6 +2263,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.5967, -69.1982],
       endingCoordinates: [45.67858499625466, -69.0046940305941],
       state: "Maine",
+      milesWalked: 16,
+      totalMilesWalked: 2133.5,
     },
   },
   {
@@ -1897,6 +2275,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.67858499625466, -69.0046940305941],
       endingCoordinates: [45.77358881619277, -69.18449906433457],
       state: "Maine",
+      milesWalked: 19.3,
+      totalMilesWalked: 2152.8,
     },
   },
   {
@@ -1907,6 +2287,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.77358881619277, -69.18449906433457],
       endingCoordinates: [45.8346, -68.9648],
       state: "Maine",
+      milesWalked: 17.4,
+      totalMilesWalked: 2170.2,
     },
   },
   {
@@ -1917,6 +2299,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.8346, -68.9648],
       endingCoordinates: [45.8871, -68.9988],
       state: "Maine",
+      milesWalked: 9.9,
+      totalMilesWalked: 2180.1,
     },
   },
   {
@@ -1927,6 +2311,8 @@ const appalachianTrailDetails = [
       startingCoordinates: [45.8871, -68.9988],
       endingCoordinates: [45.9044, -68.9213],
       state: "Maine",
+      milesWalked: 5.2,
+      totalMilesWalked: 2185.3,
     },
   },
 ];

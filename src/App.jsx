@@ -31,7 +31,7 @@ function AppContent() {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Box sx={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -40,7 +40,6 @@ function AppContent() {
           <Route path="/appalachiantrail" element={<AppalachianTrail />} />
         </Routes>
       </Box>
-      <Footer pagePrompts={getPagePrompts()} />
     </Box>
   );
 }
