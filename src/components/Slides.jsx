@@ -929,8 +929,8 @@ pixels and be 300x300 pixels in size
                   left: "50%",
                   transform: "translateX(-50%)",
                   width: "80%",
-                  maxWidth: "800px",
-                  animation: "crawl 30s linear forwards",
+                  maxWidth: "1100px",
+                  animation: "crawl 25s linear forwards",
                   transformOrigin: "center top",
                   perspective: "400px",
                   "@keyframes crawl": {
@@ -1067,7 +1067,7 @@ pixels and be 300x300 pixels in size
         >
           <Typography variant="body1">
             {currentSlide + 1} /{" "}
-            {currentSlide <= 4 ? slidesData.length - 2 : slidesData.length}
+            {currentSlide <= 4 ? slidesData.length - 6 : slidesData.length}
           </Typography>
         </Box>
         <Button
