@@ -9,6 +9,7 @@ export const presentation = [
       state: "Georgia",
       coordinates: [34.576, -84.2367],
       milesWalked: 0,
+      zoomLevel: 7,
     },
     2: {
       photos: ["photos/day_1/spring_parents.jpg"],
@@ -20,6 +21,7 @@ export const presentation = [
       coordinates: [34.6272, -84.1939],
       milesWalked: 0.2,
       quiz: 1,
+      zoomLevel: 16,
     },
     3: {
       photos: ["photos/day_12/100_miles.jpg"],
@@ -30,6 +32,7 @@ export const presentation = [
       state: "North Carolina",
       coordinates: [35.05244, -83.47748],
       milesWalked: 106,
+      zoomLevel: 8,
     },
     4: {
       photos: ["photos/day_21/smokies.jpg"],
@@ -40,6 +43,7 @@ export const presentation = [
       state: "North Carolina, Tennessee",
       coordinates: [35.45358993159172, -83.80916804373354],
       milesWalked: 164.7,
+      zoomLevel: 15,
     },
     5: {
       photos: ["photos/day_27/cammerer.jpg"],
@@ -50,7 +54,7 @@ export const presentation = [
       state: "North Carolina, Tennessee",
       coordinates: [35.76352649328654, -83.16135890725175],
       milesWalked: 240.5,
-      zoomLevel: 13,
+      zoomLevel: 10,
     },
     6: {
       photos: ["photos/day_35/big_bald.jpg"],
@@ -61,7 +65,7 @@ export const presentation = [
       state: "North Carolina",
       coordinates: [35.989791, -82.490196],
       milesWalked: 330.8,
-      zoomLevel: 10.3,
+      zoomLevel: 9,
     },
     7: {
       photos: [
@@ -81,7 +85,7 @@ export const presentation = [
       milesWalked: 392.3,
       interrupt: true,
       interrupt_quiz_id: 5,
-      zoomLevel: 12,
+      zoomLevel: 9,
     },
     8: {
       photos: ["photos/day_51/ponies.jpg"],
@@ -104,7 +108,7 @@ export const presentation = [
       state: "Virginia",
       coordinates: [37.3929, -80.0367],
       milesWalked: 708.5,
-      zoomLevel: 12,
+      zoomLevel: 9,
     },
     10: {
       photos: ["photos/day_80/blue_ridge_parkway.jpg"],
@@ -116,7 +120,7 @@ export const presentation = [
       state: "Virginia",
       coordinates: [38.03097318379197, -78.8578659671139],
       milesWalked: 857.8,
-      zoomLevel: 12,
+      zoomLevel: 9,
     },
     11: {
       photos: ["photos/day_85/shenandoah.jpg"],
@@ -155,7 +159,7 @@ export const presentation = [
       state: "Vermont",
       coordinates: [43.71222882350752, -72.41802596450434],
       milesWalked: 1743.1,
-      zoomLevel: 14,
+      zoomLevel: 12,
     },
     14: {
       photos: ["photos/day_160/moosilauke.jpg"],
@@ -166,7 +170,7 @@ export const presentation = [
       state: "New Hampshire",
       coordinates: [44.024536148949885, -71.83091849140826],
       milesWalked: 1803.4,
-      zoomLevel: 9,
+      zoomLevel: 10,
     },
     15: {
       photos: [
@@ -181,7 +185,7 @@ export const presentation = [
       state: "New Hampshire",
       coordinates: [44.14113321168464, -71.64483928775694],
       milesWalked: 1832.2,
-      zoomLevel: 12,
+      zoomLevel: 14,
     },
     16: {
       photos: ["photos/day_164/lake_of_the_clouds.jpg"],
@@ -192,7 +196,7 @@ export const presentation = [
       state: "New Hampshire",
       coordinates: [44.258847240006226, -71.31907203193185],
       milesWalked: 1858.1,
-      zoomLevel: 12,
+      zoomLevel: 14,
     },
     17: {
       photos: [
@@ -259,7 +263,7 @@ export const presentation = [
       state: "Maine",
       coordinates: [45.83531553396666, -68.96767416068273],
       milesWalked: 2170.2,
-      zoomLevel: 11,
+      zoomLevel: 12,
     },
     21: {
       photos: [
