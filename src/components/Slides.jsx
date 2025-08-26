@@ -43,10 +43,11 @@ const slidesData = [
   },
   {
     type: "bullets",
-    title: "Lessons Learned",
+    title: "Takeaways",
     bullets: [
       "UI design and UX is hard",
-      "It was hard to come up with a good presentation",
+      "It was difficult to come up with a good presentation",
+      "Claude Code is incredible",
       "Dave thought this presentation was about him",
     ],
   },
