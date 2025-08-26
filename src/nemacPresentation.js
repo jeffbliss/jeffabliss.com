@@ -1,6 +1,7 @@
 export const presentation = [
   {
     1: {
+      photos: ["photos/day_1/amicalola.jpg"],
       heroImage: "photos/day_1/amicalola.jpg",
       title: "April 1st, 2014",
       details: "Jeff's first day on the Appalachian Trail",
@@ -10,6 +11,7 @@ export const presentation = [
       milesWalked: 0,
     },
     2: {
+      photos: ["photos/day_1/spring_parents.jpg"],
       heroImage: "photos/day_1/spring_parents.jpg",
       title: "April 1st, 2014",
       details: "My parents met me at Springer Mountain to see me off",
@@ -20,6 +22,7 @@ export const presentation = [
       quiz: 1,
     },
     3: {
+      photos: ["photos/day_12/100_miles.jpg"],
       heroImage: "photos/day_12/100_miles.jpg",
       title: "Albert Mountain fire tower in North Carolina",
       details: "Officially crossed the 100 mile mark on the AT!",
@@ -29,6 +32,7 @@ export const presentation = [
       milesWalked: 106,
     },
     4: {
+      photos: ["photos/day_21/smokies.jpg"],
       heroImage: "photos/day_21/smokies.jpg",
       title: "Smokey Mountain National Park",
       details: "First National Park on the AT!",
@@ -38,6 +42,7 @@ export const presentation = [
       milesWalked: 164.7,
     },
     5: {
+      photos: ["photos/day_27/cammerer.jpg"],
       heroImage: "photos/day_27/cammerer.jpg",
       title: "Mt. Cammerer in the Smokies",
       details: "Easily one of the best views just off the AT in The Smokies",
@@ -79,6 +84,7 @@ export const presentation = [
       zoomLevel: 12,
     },
     8: {
+      photos: ["photos/day_51/ponies.jpg"],
       heroImage: "photos/day_51/ponies.jpg",
       title: "Grayson Highlands",
       details: "PONIES!!!!",
@@ -90,6 +96,7 @@ export const presentation = [
       zoomLevel: 9,
     },
     9: {
+      photos: ["photos/day_68/mcafee_knob.jpg"],
       heroImage: "photos/day_68/mcafee_knob.jpg",
       title: "McAfee Knob",
       details: "Probably the most photographed location on the trail",
@@ -100,6 +107,7 @@ export const presentation = [
       zoomLevel: 12,
     },
     10: {
+      photos: ["photos/day_80/blue_ridge_parkway.jpg"],
       heroImage: "photos/day_80/blue_ridge_parkway.jpg",
       title: "Blue Ridge Parkway",
       details:
@@ -111,6 +119,7 @@ export const presentation = [
       zoomLevel: 12,
     },
     11: {
+      photos: ["photos/day_85/shenandoah.jpg"],
       heroImage: "photos/day_85/shenandoah.jpg",
       title: "Hawaiian Shirts!",
       details: "I still have the shirt...",
@@ -121,6 +130,7 @@ export const presentation = [
       zoomLevel: 9,
     },
     12: {
+      photos: ["photos/day_136/bob_ross.jpg"],
       heroImage: "photos/day_136/bob_ross.jpg",
       title: "Upper Goose Pond",
       details: "Gotta love the fro!",
@@ -148,6 +158,7 @@ export const presentation = [
       zoomLevel: 14,
     },
     14: {
+      photos: ["photos/day_160/moosilauke.jpg"],
       heroImage: "photos/day_160/moosilauke.jpg",
       title: "Mt. Moosilauke",
       details: "First mountain above treeline on the entire AT",
@@ -173,6 +184,7 @@ export const presentation = [
       zoomLevel: 12,
     },
     16: {
+      photos: ["photos/day_164/lake_of_the_clouds.jpg"],
       heroImage: "photos/day_164/lake_of_the_clouds.jpg",
       title: "Lake of The Clouds",
       details: "Just below the summit of Mt. Washington in New Hampshire",
@@ -217,6 +229,7 @@ export const presentation = [
       zoomLevel: 16,
     },
     18: {
+      photos: ["photos/day_181/cb_bigelow.jpg"],
       heroImage: "photos/day_181/cb_bigelow.jpg",
       title: "The Bigelows",
       details: "My favorite picture from the trail",
@@ -227,6 +240,7 @@ export const presentation = [
       zoomLevel: 9,
     },
     19: {
+      photos: ["photos/day_185/100_mile_wilderness.jpg"],
       heroImage: "photos/day_185/100_mile_wilderness.jpg",
       title: "Start of 100 mile wilderness in Maine",
       details: "Not really a wilderness...",
@@ -237,6 +251,7 @@ export const presentation = [
       zoomLevel: 10,
     },
     20: {
+      photos: ["photos/day_191/view_of_katahdin.jpg"],
       heroImage: "photos/day_191/view_of_katahdin.jpg",
       title: "Katahdin from Abol Bridge",
       details: "The end is nigh!",
