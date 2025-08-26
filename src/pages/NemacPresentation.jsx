@@ -389,17 +389,17 @@ const NemacPresentation = () => {
               ref={setMap}
             >
               <TileLayer
-                url="https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}"
-                attribution='&copy; <a href="https://www.usgs.gov/">U.S. Geological Survey</a>'
+                url="https://tile.opentopomap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://opentopomap.org/">OpenTopoMap</a>'
               />
 
               {atCenterLine && (
                 <GeoJSON
                   data={atCenterLine}
                   style={() => ({
-                    color: "#387037",
-                    weight: 4,
-                    opacity: 0.8,
+                    color: "#1a4d1a",
+                    weight: 5,
+                    opacity: 0.9,
                   })}
                 />
               )}
@@ -458,17 +458,17 @@ const NemacPresentation = () => {
             style={{ height: "100%", width: "100%" }}
           >
             <TileLayer
-              url="https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}"
-              attribution='&copy; <a href="https://www.usgs.gov/">U.S. Geological Survey</a>'
+              url="https://tile.opentopomap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://opentopomap.org/">OpenTopoMap</a>'
             />
 
             {atCenterLine && (
               <GeoJSON
                 data={atCenterLine}
                 style={() => ({
-                  color: "#387037",
-                  weight: 4,
-                  opacity: 0.8,
+                  color: "#1a4d1a",
+                  weight: 5,
+                  opacity: 0.9,
                 })}
               />
             )}
