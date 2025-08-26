@@ -199,7 +199,7 @@ const Slides = () => {
         setTimeOnSlide((prev) => {
           const newTime = prev + 0.1;
 
-          if (newTime >= 7 && animationPhase === "loading") {
+          if (newTime >= 15 && animationPhase === "loading") {
             setAnimationPhase("complete");
           }
 
