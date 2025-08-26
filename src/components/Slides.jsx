@@ -52,7 +52,7 @@ const slidesData = [
   },
   {
     type: "image",
-    title: "Just kidding I have an actual presentation",
+    title: "What Claude Code Generated For Us",
     heroImage: "aw_snap.png",
     details: "Click the image to view the presentation",
   },
@@ -199,7 +199,7 @@ const Slides = () => {
         setTimeOnSlide((prev) => {
           const newTime = prev + 0.1;
 
-          if (newTime >= 15 && animationPhase === "loading") {
+          if (newTime >= 10 && animationPhase === "loading") {
             setAnimationPhase("complete");
           }
 
