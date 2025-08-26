@@ -53,6 +53,27 @@ const NemacPresentation = () => {
   const [showInterrupt, setShowInterrupt] = useState(false);
   const counterRef = useRef(null);
 
+  useEffect(() => {
+    const style = document.createElement("style");
+    style.textContent = `
+      * {
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+      }
+      *::-webkit-scrollbar {
+        display: none !important;
+      }
+      html, body {
+        overflow: hidden !important;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   const slides = Object.values(presentation[0]);
   const totalSlides = slides.length;
 
@@ -84,7 +105,7 @@ const NemacPresentation = () => {
   const handleCardClick = () => {
     if (currentSlide === 0) {
       setIsVideoOpen(true);
-    } else {
+    } else if (currentSlideData.photos) {
       setCurrentImageIndex(0);
       setIsGalleryOpen(true);
     }
@@ -121,23 +142,29 @@ const NemacPresentation = () => {
 
   const goToNextImage = () => {
     const currentSlideData = slides[currentSlide];
-    setCurrentImageIndex((prev) => (prev + 1) % currentSlideData.images.length);
+    if (currentSlideData.photos) {
+      setCurrentImageIndex(
+        (prev) => (prev + 1) % currentSlideData.photos.length,
+      );
+    }
   };
 
   const goToPrevImage = () => {
     const currentSlideData = slides[currentSlide];
-    setCurrentImageIndex(
-      (prev) =>
-        (prev - 1 + currentSlideData.images.length) %
-        currentSlideData.images.length,
-    );
+    if (currentSlideData.photos) {
+      setCurrentImageIndex(
+        (prev) =>
+          (prev - 1 + currentSlideData.photos.length) %
+          currentSlideData.photos.length,
+      );
+    }
   };
 
   useEffect(() => {
     if (map && currentSlide >= 0) {
       const currentSlideData = slides[currentSlide];
       if (currentSlideData && currentSlideData.coordinates) {
-        const zoomLevel = currentSlideData.zoomLevel || 9;
+        const zoomLevel = currentSlideData.zoomLevel || 10;
         map.flyTo(currentSlideData.coordinates, zoomLevel, {
           animate: true,
         });
@@ -219,25 +246,51 @@ const NemacPresentation = () => {
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "98vh",
+        height: "99vh",
+        width: "99vw",
+        overflow: "hidden",
       }}
     >
-      <Grid container spacing={2} sx={{ width: "100%" }}>
-        <Grid size={{ xs: 12, md: 6.5 }}>
-          <Card sx={{ width: "100%", position: "relative" }}>
-            <CardActionArea onClick={handleCardClick}>
+      <Grid
+        container
+        sx={{
+          height: "100%",
+          width: "100%",
+        }}
+      >
+        <Grid size={{ xs: 12, md: 6 }}>
+          <Card
+            sx={{
+              width: "100%",
+              height: "100%",
+              position: "relative",
+              borderRadius: 0,
+              display: "flex",
+              flexDirection: "column",
+              overflow: "hidden",
+            }}
+          >
+            <CardActionArea
+              onClick={handleCardClick}
+              sx={{
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                maxHeight: "90%",
+              }}
+            >
               <CardMedia
                 component="img"
-                height="1000"
                 image={currentSlideData.heroImage}
                 alt={currentSlideData.title}
-                sx={{ objectFit: "contain", maxHeight: 1000 }}
+                sx={{
+                  objectFit: "contain",
+                  width: "100%",
+                  height: "70vh",
+                  maxHeight: "70vh",
+                }}
               />
-              <CardContent>
+              <CardContent sx={{ flex: "0 0 auto" }}>
                 <Typography gutterBottom variant="h4" component="div">
                   {currentSlideData.title}
                 </Typography>
@@ -269,6 +322,7 @@ const NemacPresentation = () => {
                         fontSize: "14px",
                         color: "#00ff00",
                         mb: 0.5,
+                        minWidth: "650px",
                       }}
                     >
                       MILES WALKED
@@ -307,11 +361,11 @@ const NemacPresentation = () => {
           </Card>
         </Grid>
 
-        <Grid size={{ xs: 12, md: 5.5 }}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Box
             sx={{
               height: "100%",
-              borderRadius: 1,
+              borderRadius: 0,
               overflow: "hidden",
               position: "relative",
             }}
@@ -333,13 +387,13 @@ const NemacPresentation = () => {
             </IconButton>
             <MapContainer
               center={currentSlideData.coordinates}
-              zoom={currentSlideData.zoomLevel || 9}
+              zoom={currentSlideData.zoomLevel || 12}
               style={{ height: "100%", width: "100%" }}
               ref={setMap}
             >
               <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}"
+                attribution='&copy; <a href="https://www.usgs.gov/">U.S. Geological Survey</a>'
               />
 
               {atCenterLine && (
@@ -407,8 +461,8 @@ const NemacPresentation = () => {
             style={{ height: "100%", width: "100%" }}
           >
             <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}"
+              attribution='&copy; <a href="https://www.usgs.gov/">U.S. Geological Survey</a>'
             />
 
             {atCenterLine && (
@@ -524,6 +578,122 @@ const NemacPresentation = () => {
               quizIndex={currentSlideData.quiz}
               onQuizComplete={closeQuiz}
             />
+          )}
+        </Box>
+      </Modal>
+
+      {/* Photo Gallery Modal */}
+      <Modal
+        open={isGalleryOpen}
+        onClose={handleCloseGallery}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+          sx: { backgroundColor: "rgba(0, 0, 0, 0.9)" },
+        }}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            outline: "none",
+          }}
+        >
+          {/* Close Button */}
+          <IconButton
+            onClick={handleCloseGallery}
+            sx={{
+              position: "absolute",
+              top: 16,
+              right: 16,
+              zIndex: 1001,
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              color: "white",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+              },
+            }}
+          >
+            <Close />
+          </IconButton>
+
+          {/* Previous Button */}
+          {currentSlideData.photos && currentSlideData.photos.length > 1 && (
+            <IconButton
+              onClick={goToPrevImage}
+              sx={{
+                position: "absolute",
+                left: 16,
+                zIndex: 1001,
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                color: "white",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                },
+              }}
+            >
+              <ArrowBack />
+            </IconButton>
+          )}
+
+          {/* Next Button */}
+          {currentSlideData.photos && currentSlideData.photos.length > 1 && (
+            <IconButton
+              onClick={goToNextImage}
+              sx={{
+                position: "absolute",
+                right: 16,
+                zIndex: 1001,
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                color: "white",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                },
+              }}
+            >
+              <ArrowForward />
+            </IconButton>
+          )}
+
+          {/* Photo Display */}
+          {currentSlideData.photos && (
+            <Box
+              component="img"
+              src={currentSlideData.photos[currentImageIndex]}
+              alt={`Photo ${currentImageIndex + 1}`}
+              sx={{
+                maxWidth: "95vw",
+                maxHeight: "95vh",
+                objectFit: "contain",
+                borderRadius: 1,
+              }}
+            />
+          )}
+
+          {/* Photo Counter */}
+          {currentSlideData.photos && currentSlideData.photos.length > 1 && (
+            <Typography
+              sx={{
+                position: "absolute",
+                bottom: 16,
+                left: "50%",
+                transform: "translateX(-50%)",
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+                px: 2,
+                py: 1,
+                borderRadius: 1,
+              }}
+            >
+              {currentImageIndex + 1} / {currentSlideData.photos.length}
+            </Typography>
           )}
         </Box>
       </Modal>

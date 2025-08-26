@@ -22,21 +22,7 @@ import appalachianTrailDetails from "../data/AppalachianTrailDetails.js";
 import Navbar from "../components/Navbar.jsx";
 import PhotoGallery from "../components/PhotoGallery.jsx";
 import MarkerClusterGroup from "react-leaflet-markercluster";
-import HikerJeff from "./HikerJeff.jsx";
-
-// this variable is the ORIG_FID order from Springer
-// to Katahdin from https://nps.maps.arcgis.com/apps/webappviewer/index.html?id=6298c848ba2a490588b7f6d25453e4e0
-// special exception for 28 - it goes to 27 and then back to 28
-// 28 goes back to 27
-// 30 to 7 back to 30
-// 29 goes to 0 goes to 29
-// 3 goes to 5 goes to 3
-// 4 goes to 20 goes to 4
-
-const trailClubSectionOrder = [
-  9, 13, 21, 6, 23, 12, 18, 28, 27, 28, 27, 14, 24, 16, 19, 30, 7, 30, 26, 22,
-  29, 0, 29, 17, 3, 5, 3, 15, 2, 1, 10, 8, 4, 20, 4, 11,
-];
+import HikerJeff from "../unusedComponents/HikerJeff.jsx";
 
 // Process trail markers data outside of component
 const processTrailMarkers = () => {
@@ -128,9 +114,10 @@ const MapController = ({ currentDay, triggerAnimation }) => {
   return null;
 };
 
-const AppalachianTrailMap = () => {
+const OldATMap = () => {
   const mapRef = useRef(null);
   const [trailData, setTrailData] = useState(null);
+  const [trailClubSections, setTrailClubSections] = useState(null);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryPhotos, setGalleryPhotos] = useState([]);
   const [dayPhotos, setDayPhotos] = useState({});
@@ -179,14 +166,27 @@ const AppalachianTrailMap = () => {
   useEffect(() => {
     const trailUrl =
       "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/ANST_Facilities/FeatureServer/7/query?where=1%3D1&outFields=*&f=geojson";
-    fetch(trailUrl)
-      .then((response) => {
+    const clubSectionsUrl =
+      "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/APPA_Trail_Club_Sections/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson";
+
+    Promise.all([
+      fetch(trailUrl).then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         return response.json();
+      }),
+      fetch(clubSectionsUrl).then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      }),
+    ])
+      .then(([trailData, clubSectionsData]) => {
+        setTrailData(trailData);
+        setTrailClubSections(clubSectionsData);
       })
-      .then((data) => setTrailData(data))
       .catch((error) => console.error("Error loading trail data:", error));
   }, []);
 
@@ -215,10 +215,10 @@ const AppalachianTrailMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/*<MapController*/}
-        {/*  currentDay={currentDay}*/}
-        {/*  triggerAnimation={triggerAnimation}*/}
-        {/*/>*/}
+        <MapController
+          currentDay={currentDay}
+          triggerAnimation={triggerAnimation}
+        />
 
         {/* This component captures map click events */}
 
@@ -240,6 +240,7 @@ const AppalachianTrailMap = () => {
           onPointChange={handlePointChange}
           triggerAnimation={triggerAnimation}
           trailData={trailData}
+          trailClubSections={trailClubSections}
         />
 
         {/* Marker Cluster Group */}
@@ -429,4 +430,4 @@ const AppalachianTrailMap = () => {
   );
 };
 
-export default AppalachianTrailMap;
+export default OldATMap;

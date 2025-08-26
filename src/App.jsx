@@ -7,6 +7,7 @@ import {
 import Home from "./pages/Home.jsx";
 import NemacPresentation from "./pages/NemacPresentation.jsx";
 import AppalachianTrail from "./pages/AppalachianTrail.jsx";
+import OldATMap from "./pages/OldATMap.jsx";
 import Footer from "./components/Footer";
 import { prompts } from "./prompts";
 import { Box } from "@mui/material";
@@ -38,6 +39,7 @@ function AppContent() {
           <Route path="/nemacpresentation" element={<NemacPresentation />} />
           <Route path="/appalachiantrail" element={<AppalachianTrail />} />
           <Route path="/test" element={<Test />} />
+          <Route path="/oldATMap" element={<OldATMap />} />
         </Routes>
       </Box>
     </Box>
