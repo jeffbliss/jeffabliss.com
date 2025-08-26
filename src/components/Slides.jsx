@@ -219,9 +219,7 @@ const Slides = () => {
   useEffect(() => {
     if (currentSlide === 5) {
       // Start audio and begin animation sequence
-      const audio = new Audio(
-        "public/Star Wars Theme Song By John Williams.mp3",
-      );
+      const audio = new Audio("Star Wars Theme Song By John Williams.mp3");
       setAppalachianAudio(audio);
 
       // Start with a brief delay, then show title
@@ -1080,7 +1078,9 @@ pixels and be 300x300 pixels in size
             display: currentSlide === 4 ? "none" : "flex",
           }}
         >
-          {currentSlide === slidesData.length - 1 ? "Go to NEMAC Presentation" : "Next"}
+          {currentSlide === slidesData.length - 1
+            ? "Go to NEMAC Presentation"
+            : "Next"}
         </Button>
       </Box>
 
@@ -1184,7 +1184,7 @@ pixels and be 300x300 pixels in size
             }}
           >
             <iframe
-              src="public/design/dave_page.pdf"
+              src="design/dave_page.pdf"
               width="100%"
               height="100%"
               style={{
@@ -1245,7 +1245,7 @@ pixels and be 300x300 pixels in size
             <Close />
           </IconButton>
           <iframe
-            src="public/design/claude_code_nemac.pdf"
+            src="design/claude_code_nemac.pdf"
             width="100%"
             height="100%"
             style={{

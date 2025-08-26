@@ -17,9 +17,9 @@ export const quizData = {
       question: "What state has the most miles on the Appalachian Trail?",
       options: [
         { id: "a", text: "North Carolina", isCorrect: false },
-        { id: "b", text: "Virginia", isCorrect: true },
+        { id: "b", text: "Maine", isCorrect: false },
         { id: "c", text: "Pennsylvania", isCorrect: false },
-        { id: "d", text: "Maine", isCorrect: false },
+        { id: "d", text: "Virginia", isCorrect: true },
       ],
     },
     {
