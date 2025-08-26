@@ -12,6 +12,8 @@ import Footer from "./components/Footer";
 import { prompts } from "./prompts";
 import { Box } from "@mui/material";
 import Test from "./pages/Test.jsx";
+import Slides from "./components/Slides.jsx";
+import Claude_Code_Jeff from "./pages/Claude_Code_Jeff.jsx";
 
 function AppContent() {
   const location = useLocation();
@@ -40,6 +42,8 @@ function AppContent() {
           <Route path="/appalachiantrail" element={<AppalachianTrail />} />
           <Route path="/test" element={<Test />} />
           <Route path="/oldATMap" element={<OldATMap />} />
+          <Route path="/slides" element={<Slides />} />
+          <Route path="/claudeJeff" element={<Claude_Code_Jeff />} />
         </Routes>
       </Box>
     </Box>

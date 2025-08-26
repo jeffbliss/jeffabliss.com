@@ -104,7 +104,7 @@ const NemacPresentation = () => {
 
   const handleCardClick = () => {
     if (currentSlide === 0) {
-      setIsVideoOpen(true);
+      console.log("whoops");
     } else if (currentSlideData.photos) {
       setCurrentImageIndex(0);
       setIsGalleryOpen(true);
@@ -300,63 +300,60 @@ const NemacPresentation = () => {
                 >
                   {currentSlideData.details}
                 </Typography>
-                {currentSlide !== 0 && (
-                  <Box
+
+                <Box
+                  sx={{
+                    mt: 2,
+                    p: 1,
+                    backgroundColor: "#000",
+                    border: "2px solid #333",
+                    borderRadius: 1,
+                    fontFamily: "monospace",
+                    fontSize: "18px",
+                    color: "#00ff00",
+                    textAlign: "center",
+                    letterSpacing: "2px",
+                  }}
+                >
+                  <Typography
+                    variant="body1"
                     sx={{
-                      mt: 2,
-                      p: 1,
-                      backgroundColor: "#000",
-                      border: "2px solid #333",
-                      borderRadius: 1,
                       fontFamily: "monospace",
-                      fontSize: "18px",
+                      fontSize: "14px",
                       color: "#00ff00",
-                      textAlign: "center",
-                      letterSpacing: "2px",
+                      mb: 0.5,
+                      minWidth: "650px",
                     }}
                   >
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        fontFamily: "monospace",
-                        fontSize: "14px",
-                        color: "#00ff00",
-                        mb: 0.5,
-                        minWidth: "650px",
-                      }}
-                    >
-                      MILES WALKED
-                    </Typography>
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        fontFamily: "monospace",
-                        fontSize: "20px",
-                        color: "#00ff00",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {displayedMiles.toFixed(1)}
-                    </Typography>
-                  </Box>
-                )}
+                    MILES WALKED
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "monospace",
+                      fontSize: "20px",
+                      color: "#00ff00",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {displayedMiles.toFixed(1)}
+                  </Typography>
+                </Box>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              {currentSlide !== 0 && (
-                <Button size="small" color="primary" onClick={handleSeeOnMap}>
-                  See on map
-                </Button>
-              )}
-              {currentSlideData.quiz && (
-                <Button
-                  size="small"
-                  color="secondary"
-                  onClick={handleQuizClick}
-                >
-                  Quiz
-                </Button>
-              )}
+              <Button size="small" color="primary" onClick={handleSeeOnMap}>
+                See on map
+              </Button>
+              {/*{currentSlideData.quiz && (*/}
+              {/*  <Button*/}
+              {/*    size="small"*/}
+              {/*    color="secondary"*/}
+              {/*    onClick={handleQuizClick}*/}
+              {/*  >*/}
+              {/*    Quiz*/}
+              {/*  </Button>*/}
+              {/*)}*/}
             </CardActions>
           </Card>
         </Grid>

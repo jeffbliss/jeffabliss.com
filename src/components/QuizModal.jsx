@@ -147,9 +147,6 @@ const QuizModal = ({ quizIndex, onQuizComplete }) => {
           >
             {isCorrect ? "Correct!" : "Try again next time!"}
           </Typography>
-          <Typography variant="body2" sx={{ mt: 1, color: "text.secondary" }}>
-            Closing in 7 seconds...
-          </Typography>
         </Box>
       )}
     </Box>

@@ -1,15 +1,5 @@
 export const presentation = [
   {
-    // 0: {
-    //   heroImage: "aw_snap.png",
-    //   title: "Gatlinburg, TN",
-    //   details: "Where this all started...",
-    //   day: "0",
-    //   state: "Tennessee",
-    //   coordinates: [35.7143, -83.5102],
-    //   milesWalked: 0,
-    //   zoomLevel: 10,
-    // },
     1: {
       heroImage: "photos/day_1/amicalola.jpg",
       title: "April 1st, 2014",
@@ -242,10 +232,10 @@ export const presentation = [
     },
     21: {
       photos: [
-        "photos/day_193/cover.jpg",
+        "photos/day_193/jeff_below_katahdin.jpg",
         "photos/day_193/matthew_jeff_katahdin.jpg",
         "photos/day_193/cb_yb.jpeg",
-        "photos/day_193/jeff_below_katahdin.jpg",
+        "photos/day_193/cover.jpg",
       ],
       heroImage: "photos/day_193/cover.jpg",
       title: "Mt. Katahdin",
