@@ -48,6 +48,7 @@ export const presentation = [
       zoomLevel: 13,
     },
     6: {
+      photos: ["photos/day_35/big_bald.jpg"],
       heroImage: "photos/day_35/big_bald.jpg",
       title: "Big Bald",
       details: "Roughly closest you get to Asheville",
@@ -58,7 +59,15 @@ export const presentation = [
       zoomLevel: 10.3,
     },
     7: {
-      heroImage: "photos/day_40/little_hump.jpg",
+      photos: [
+        "photos/day_40/1.jpg",
+        "photos/day_40/2.jpg",
+        "photos/day_40/3.jpg",
+        "photos/day_40/4.jpg",
+        "photos/day_40/5.jpg",
+        "photos/day_40/6.jpg",
+      ],
+      heroImage: "photos/day_40/1.jpg",
       title: "Roan Highlands",
       details: "Easily one of the best places in the Southern Appalachians",
       day: "40",
@@ -122,6 +131,13 @@ export const presentation = [
       zoomLevel: 9,
     },
     13: {
+      photos: [
+        "photos/day_151/bridge_jump.gif",
+        "photos/day_151/1.jpg",
+        "photos/day_151/2.jpg",
+        "photos/day_151/3.jpg",
+        "photos/day_151/4.jpg",
+      ],
       heroImage: "photos/day_151/bridge_jump.gif",
       title: "Bridge Jump",
       details: "This was the stupidest thing I did on the trail",

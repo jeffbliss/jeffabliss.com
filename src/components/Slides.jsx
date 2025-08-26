@@ -78,30 +78,28 @@ const slidesData = [
     type: "bullets",
     title: "AT Fun Facts",
     bullets: [
-      "2185 miles (in 2014)",
+      "2185 miles (in 2014). 2,197 miles now",
       "193 days (April 1st - October 10th)",
       "28-29 years old",
       "Met fantastic friends",
+      "Trail goes through 14 states",
+      "Trail goes through numerous towns",
+      "Maine was my favorite state",
+      "Pennsylvania was my least favorite state",
     ],
   },
   {
     type: "bullets",
     title: "AT Fun Facts Continued",
     bullets: [
-      "Trail goes through 14 states",
-      "Trail goes through numerous towns",
-    ],
-  },
-  {
-    type: "bullets",
-    title: "Jeff AT Fun Facts",
-    bullets: [
+      "Longest day was 27.5 miles",
+      "Averaged 11.6 miles a day",
+      "Took 20 zero days and several neros",
       "33 lbs backpack at heaviest",
+      "Got extremely lucky with the rain",
       "Went 2 weeks without showering",
       "Slept in a graveyard in New Hampshire",
       "Trail Name was Yellow Beard",
-      "Maine was my favorite state",
-      "Pennsylvania was my least favorite state",
     ],
   },
 ];
@@ -1067,7 +1065,7 @@ pixels and be 300x300 pixels in size
         >
           <Typography variant="body1">
             {currentSlide + 1} /{" "}
-            {currentSlide <= 4 ? slidesData.length - 6 : slidesData.length}
+            {currentSlide <= 4 ? slidesData.length - 5 : slidesData.length}
           </Typography>
         </Box>
         <Button
