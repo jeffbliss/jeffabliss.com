@@ -1,6 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useState, useRef } from "react";
 import { climateWords } from "../data/climateWords";
+import ClimateTyperMobile from "../components/ClimateTyperMobile";
 
 function ClimateTyper() {
   const [gameState, setGameState] = useState("welcome");
@@ -9,6 +10,14 @@ function ClimateTyper() {
   const [fallingWords, setFallingWords] = useState([]);
   const [flashEffect, setFlashEffect] = useState(null);
   const gameContainerRef = useRef(null);
+
+  const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+  };
+
+  if (isMobile()) {
+    return <ClimateTyperMobile />;
+  }
 
   const handleGameStart = () => {
     setGameState("instructions");
