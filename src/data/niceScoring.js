@@ -21,16 +21,10 @@ function scoreLodestoneId(id) {
   const idStr = String(id);
   const count = countSubstring(idStr, "69");
   const score = Math.min(count, 2) * 25;
-  const positions = [];
-  let pos = 0;
-  while ((pos = idStr.indexOf("69", pos)) !== -1) {
-    positions.push(pos);
-    pos += 2;
-  }
   const details =
     count > 0
-      ? `ID ${idStr} contains "69" ${count} time${count > 1 ? "s" : ""}!`
-      : `ID ${idStr} — no "69" found`;
+      ? `ID ${idStr} contains "69" ${count}x — +25 per occurrence, max 2`
+      : `ID ${idStr} — no "69" found. +25 per "69" in your ID, max 2`;
   return { score, details };
 }
 
@@ -40,8 +34,8 @@ function scoreJobsAt69(jobs) {
   const score = Math.min(count, 3) * 23;
   const details =
     count > 0
-      ? `${niceJobs.map((j) => j.name).join(", ")} FROZEN AT NICE`
-      : "No jobs frozen at nice. Disappointing.";
+      ? `${niceJobs.map((j) => j.name).join(", ")} FROZEN AT NICE — ${count}x 23pts (max 3 jobs)`
+      : "No jobs sitting at exactly Lv.69. +23 per job you leave at 69, max 3";
   return { score, details };
 }
 
@@ -50,7 +44,7 @@ function scoreMinionPercent(minionCount, totalMinions) {
   const pct = (minionCount / totalMinions) * 100;
   const distance = Math.abs(pct - 69);
   const score = Math.max(0, Math.round(30 - distance * 1.5));
-  const details = `${minionCount}/${totalMinions} = ${pct.toFixed(1)}% (target: 69%)`;
+  const details = `${minionCount}/${totalMinions} = ${pct.toFixed(1)}% — ${distance < 1 ? "right on 69%!" : `${distance.toFixed(1)}% away from 69%`}. Closer = more points`;
   return { score, details };
 }
 
@@ -59,7 +53,7 @@ function scoreMountPercent(mountCount, totalMounts) {
   const pct = (mountCount / totalMounts) * 100;
   const distance = Math.abs(pct - 69);
   const score = Math.max(0, Math.round(30 - distance * 1.5));
-  const details = `${mountCount}/${totalMounts} = ${pct.toFixed(1)}% (target: 69%)`;
+  const details = `${mountCount}/${totalMounts} = ${pct.toFixed(1)}% — ${distance < 1 ? "right on 69%!" : `${distance.toFixed(1)}% away from 69%`}. Closer = more points`;
   return { score, details };
 }
 
@@ -77,8 +71,8 @@ function scoreAchievementPoints(points) {
   const score = Math.max(0, Math.round(35 - (minDist / 500) * 35));
   const details =
     minDist === 0
-      ? `${points} points — EXACTLY ${nearest}!`
-      : `${points} points — ${minDist} away from ${nearest}`;
+      ? `${points} points — EXACTLY ${nearest}! Max points!`
+      : `${points} pts — ${minDist} away from nearest nice# (${nearest}). Within 500 = points`;
   return { score, details };
 }
 
@@ -88,8 +82,8 @@ function scoreActiveJob(activeJob) {
   const jobDisplay = activeJob.name || "unknown job";
   const details =
     activeJob.level === 69
-      ? `Currently on ${jobDisplay} at level 69!`
-      : `Currently ${jobDisplay} Lv.${activeJob.level}`;
+      ? `Currently on ${jobDisplay} at level 69! Full 42 points!`
+      : `Currently ${jobDisplay} Lv.${activeJob.level} — switch to a Lv.69 job for 42pts`;
   return { score, details };
 }
 
@@ -114,8 +108,8 @@ function scoreNameNiceometry(name) {
   score = Math.min(score, 20);
   const details =
     findings.length > 0
-      ? `"${name}" — ${findings.join(", ")}`
-      : `"${name}" (${noSpaces.length} chars) — no nice name properties`;
+      ? `"${name}" — ${findings.join(", ")}. +7 per length match, +6 for nice text`
+      : `"${name}" (${noSpaces.length} chars) — need 6 or 9 chars, or "69"/"nice" in name`;
   return { score, details };
 }
 
@@ -124,8 +118,8 @@ function scoreMaxedJobs(jobs) {
   const score = count === 6 || count === 9 ? 20 : 0;
   const details =
     score > 0
-      ? `${count} jobs at max level — that's a nice number!`
-      : `${count} jobs at max level (need exactly 6 or 9)`;
+      ? `${count} jobs at max level — exactly ${count} is a nice number! Full 20pts`
+      : `${count} jobs at max — need exactly 6 or 9 maxed jobs for 20pts`;
   return { score, details };
 }
 
@@ -135,7 +129,7 @@ function scoreAvgJobLevel(jobs) {
   const avg = leveled.reduce((sum, j) => sum + j.level, 0) / leveled.length;
   const distance = Math.abs(avg - 69);
   const score = Math.max(0, Math.round(20 - distance * 2));
-  const details = `Average job level: ${avg.toFixed(1)} (target: 69)`;
+  const details = `Avg level: ${avg.toFixed(1)} — ${distance < 1 ? "basically 69!" : `${distance.toFixed(1)} away from 69`}. Within 10 = points`;
   return { score, details };
 }
 
@@ -149,7 +143,9 @@ function scoreGearStats(gearStats) {
   }
   const score = Math.min(hits.length, 4) * 10;
   const details =
-    hits.length > 0 ? hits.join(", ") + ". nice." : "No nice stats found";
+    hits.length > 0
+      ? `${hits.join(", ")} — +10 per nice stat, max 4`
+      : "No stats equal to 69/420/6969 or containing '69'. +10 each, max 4";
   return { score, details };
 }
 
@@ -173,8 +169,8 @@ function scoreBioNiceometry(bio) {
   score = Math.min(score, 24);
   const details =
     findings.length > 0
-      ? findings.join(", ")
-      : `Bio is ${bio.length} chars — not particularly nice`;
+      ? `${findings.join(", ")}. +10 for 69 chars, +7 for nice text, +7 for 6/9 length`
+      : `Bio is ${bio.length} chars — need 69 chars, or "69"/"nice"/"420" in text, or 6/9 char length`;
   return { score, details };
 }
 
@@ -197,8 +193,8 @@ function scoreFcNiceness(fc) {
   score = Math.min(score, 25);
   const details =
     findings.length > 0
-      ? findings.join(", ")
-      : `FC "${fc.name}"${fc.tag ? ` [${fc.tag}]` : ""} — ${fc.memberCount || "?"} members`;
+      ? `${findings.join(", ")}. +10 for nice tag, +8 for 69 members, +7 for nice name`
+      : `FC "${fc.name}"${fc.tag ? ` [${fc.tag}]` : ""} — ${fc.memberCount || "?"} members. Need tag "69"/"NICE", 69 members, or "69"/"nice" in name`;
   return { score, details };
 }
 
@@ -211,21 +207,21 @@ function scoreNamedayDeity(nameday, guardianDeityId) {
     const has9 = digits.includes("9");
     if (has6 && has9) {
       score += 8;
-      findings.push(`nameday "${nameday}" has both 6 and 9`);
+      findings.push(`nameday has both 6 and 9 (+8)`);
     } else if (has6 || has9) {
       score += 4;
-      findings.push(`nameday "${nameday}" has a ${has6 ? "6" : "9"}`);
+      findings.push(`nameday has a ${has6 ? "6" : "9"} (+4)`);
     }
   }
   if (guardianDeityId === 6 || guardianDeityId === 9) {
     score += 3;
-    findings.push(`guardian deity ID is ${guardianDeityId}`);
+    findings.push(`deity ID ${guardianDeityId} (+3)`);
   }
   score = Math.min(score, 15);
   const details =
     findings.length > 0
-      ? findings.join(", ")
-      : "No nice nameday or deity alignment";
+      ? `${nameday || "?"} — ${findings.join(", ")}`
+      : `${nameday || "?"} — need 6 or 9 in nameday (+4/+8) or deity ID 6/9 (+3)`;
   return { score, details };
 }
 
