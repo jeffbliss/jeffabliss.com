@@ -154,4 +154,5 @@ Transfer all of the prompts that are currently in footerPrompts in src/component
 The structure of this new prompts.js file will be an exported const variable called prompts = [] and will be a list of objects with the keys being the page and the value being all the prompts for the respective page. So for src/components/Footer.jsx it will be prompts = [Footer: {}]
 
 Remember to import the prompts.js file in src/components/Footer.jsx and also add this prompt to the footerPrompts`,
+  NiceCheckXIV: `Nice Check XIV - FFXIV character niceness scorer at /ffxiv69. Cloudflare Worker scrapes Lodestone, React frontend scores 13 categories out of 420 points. Dark purple/pink theme. Spec: docs/superpowers/specs/2026-04-14-nice-check-xiv-design.md`,
 };

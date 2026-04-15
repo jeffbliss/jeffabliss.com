@@ -16,6 +16,7 @@ import Slides from "./components/Slides.jsx";
 import Claude_Code_Jeff from "./pages/Claude_Code_Jeff.jsx";
 import Claude_Code_Nemac from "./pages/Claude_Code_Nemac.jsx";
 import ClimateTyper from "./pages/ClimateTyper.jsx";
+import NiceCheckXIV from "./pages/NiceCheckXIV.jsx";
 
 function AppContent() {
   const location = useLocation();
@@ -30,6 +31,8 @@ function AppContent() {
         return prompts.NemacPresentation || "";
       case "/appalachiantrail":
         return prompts.AppalachianTrail || "";
+      case "/ffxiv69":
+        return prompts.NiceCheckXIV || "";
       default:
         return "No prompts available for this page";
     }
@@ -48,6 +51,7 @@ function AppContent() {
           <Route path="/claudeJeff" element={<Claude_Code_Jeff />} />
           <Route path="/claudeNemac" element={<Claude_Code_Nemac />} />
           <Route path="/climateTyper" element={<ClimateTyper />} />
+          <Route path="/ffxiv69" element={<NiceCheckXIV />} />
         </Routes>
       </Box>
     </Box>
