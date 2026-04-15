@@ -479,7 +479,7 @@ function NiceCheckXIV() {
               </Box>
             )}
 
-            <Grid container spacing={{ xs: 1.5, md: 2 }}>
+            <Grid container spacing={{ xs: 2.5, sm: 2, md: 2 }}>
               {result.scoreResult.categories.map((cat) => (
                 <Grid key={cat.id} size={{ xs: 12, sm: 6, md: 4 }}>
                   <NiceCategoryCard
