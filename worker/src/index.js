@@ -25,7 +25,7 @@ async function handleCharacterRequest(url) {
 
   try {
     const characterId = await searchCharacter(name, server);
-    const raw = await fetchAndParseCharacter(characterId);
+    const raw = await fetchAndParseCharacter(characterId, server);
     const normalized = normalizeCharacter(raw);
 
     return jsonResponse({

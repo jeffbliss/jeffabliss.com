@@ -6,37 +6,50 @@ const FETCH_HEADERS = {
   'Accept-Language': 'en-US,en;q=0.9',
 };
 
+const SERVER_TO_REGION = {};
+const REGION_DOMAINS = { NA: 'na', EU: 'eu', JP: 'jp', OCE: 'na' };
+[
+  ['NA', ['Adamantoise','Cactuar','Faerie','Gilgamesh','Jenova','Midgardsormr','Sargatanas','Siren','Balmung','Brynhildr','Coeurl','Diabolos','Goblin','Malboro','Mateus','Zalera','Behemoth','Excalibur','Exodus','Famfrit','Hyperion','Lamia','Leviathan','Ultros','Halicarnassus','Maduin','Marilith','Seraph','Rafflesia','Golem']],
+  ['EU', ['Cerberus','Louisoix','Moogle','Omega','Phantom','Ragnarok','Sagittarius','Spriggan','Alpha','Lich','Odin','Phoenix','Raiden','Shiva','Twintania','Zodiark']],
+  ['JP', ['Aegis','Atomos','Carbuncle','Garuda','Gungnir','Kujata','Tonberry','Typhon','Alexander','Bahamut','Durandal','Fenrir','Ifrit','Ridill','Tiamat','Ultima','Anima','Asura','Chocobo','Hades','Ixion','Masamune','Pandaemonium','Titan','Belias','Mandragora','Ramuh','Shinryu','Unicorn','Valefor','Yojimbo','Zeromus']],
+  ['OCE', ['Bismarck','Ravana','Sephirot','Sophia','Zurvan']],
+].forEach(([region, servers]) => servers.forEach(s => { SERVER_TO_REGION[s] = region; }));
+
+function getLodestoneBase(server) {
+  const region = SERVER_TO_REGION[server] || 'NA';
+  const domain = REGION_DOMAINS[region] || 'na';
+  return `https://${domain}.finalfantasyxiv.com`;
+}
+
 export async function searchCharacter(name, server) {
-  const url = `https://na.finalfantasyxiv.com/lodestone/character/?q=${encodeURIComponent(name)}&worldname=${server}`;
+  const base = getLodestoneBase(server);
+  const url = `${base}/lodestone/character/?q=${encodeURIComponent(name)}&worldname=${server}`;
   const response = await fetch(url, { headers: FETCH_HEADERS });
   const html = await response.text();
   const root = parse(html);
+  const targetName = name.toLowerCase().trim();
 
-  const entryLinks = root.querySelectorAll('a.entry__link');
-  for (const link of entryLinks) {
+  const entries = root.querySelectorAll('.entry');
+  for (const entry of entries) {
+    const nameEl = entry.querySelector('.entry__name');
+    if (!nameEl) continue;
+    const entryName = nameEl.text.trim().toLowerCase();
+    if (entryName !== targetName) continue;
+    const link = entry.querySelector('a.entry__link') || entry.querySelector('a[href*="/lodestone/character/"]');
+    if (!link) continue;
     const href = link.getAttribute('href') || '';
     const match = href.match(/\/lodestone\/character\/(\d+)\//);
-    if (match) {
-      return parseInt(match[1], 10);
-    }
+    if (match) return parseInt(match[1], 10);
   }
 
-  const allLinks = root.querySelectorAll('.ldst__window a');
+  const allLinks = root.querySelectorAll('a.entry__link');
   for (const link of allLinks) {
+    const linkNameEl = link.querySelector('.entry__name');
+    if (!linkNameEl) continue;
+    if (linkNameEl.text.trim().toLowerCase() !== targetName) continue;
     const href = link.getAttribute('href') || '';
     const match = href.match(/\/lodestone\/character\/(\d+)\//);
-    if (match) {
-      return parseInt(match[1], 10);
-    }
-  }
-
-  const fallbackLinks = root.querySelectorAll('a[href*="/lodestone/character/"]');
-  for (const link of fallbackLinks) {
-    const href = link.getAttribute('href') || '';
-    const match = href.match(/\/lodestone\/character\/(\d+)\//);
-    if (match) {
-      return parseInt(match[1], 10);
-    }
+    if (match) return parseInt(match[1], 10);
   }
 
   throw new Error('not_found');
@@ -350,8 +363,9 @@ function countCollection(root) {
   }
 }
 
-export async function fetchAndParseCharacter(characterId) {
-  const baseUrl = 'https://na.finalfantasyxiv.com/lodestone/character';
+export async function fetchAndParseCharacter(characterId, server) {
+  const lodestoneBase = getLodestoneBase(server);
+  const baseUrl = `${lodestoneBase}/lodestone/character`;
 
   const [charResponse, minionResponse, mountResponse] = await Promise.all([
     fetch(`${baseUrl}/${characterId}/`, { headers: FETCH_HEADERS }),
@@ -428,7 +442,7 @@ export async function fetchAndParseCharacter(characterId) {
   let fcMemberCount = null;
   if (fcId) {
     try {
-      const fcResponse = await fetch(`https://na.finalfantasyxiv.com/lodestone/freecompany/${fcId}/`, { headers: FETCH_HEADERS });
+      const fcResponse = await fetch(`${lodestoneBase}/lodestone/freecompany/${fcId}/`, { headers: FETCH_HEADERS });
       const fcHtml = await fcResponse.text();
       const fcRoot = parse(fcHtml);
       const tagEls = fcRoot.querySelectorAll('p.freecompany__text__tag, p.freecompany__text.freecompany__text__tag');
