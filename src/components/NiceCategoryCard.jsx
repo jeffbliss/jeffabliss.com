@@ -12,6 +12,8 @@ function NiceCategoryCard({ name, score, maxScore, details, tier }) {
         borderRadius: 2,
         p: 2,
         height: "100%",
+        boxSizing: "border-box",
+        overflow: "hidden",
         transition: "all 0.2s",
         "&:hover": {
           transform: "translateY(-2px)",
