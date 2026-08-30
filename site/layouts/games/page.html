@@ -24,7 +24,7 @@
       <div class="trophy-info">
         <span class="badge trophy-{{ .type }}">{{ .type }}</span>
         {{ if ne .rarityPercent nil }}<span class="rarity">{{ .rarityPercent }}% of players</span>{{ end }}
-        {{ if .earned }}
+        {{ if and .earned .earnedAt }}
         <time class="trophy-date">{{ time.Format "Jan 2, 2006" .earnedAt }}</time>
         {{ else }}
         <span class="unearned-label">Not earned</span>

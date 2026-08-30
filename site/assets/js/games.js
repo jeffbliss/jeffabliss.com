@@ -8,7 +8,13 @@ document.addEventListener("alpine:init", () => {
       const param = new URLSearchParams(window.location.search).get("platform");
       if (["psn", "steam", "xbox"].includes(param)) this.platform = param;
       const el = document.getElementById("feed-data");
-      if (el) this.feed = JSON.parse(el.textContent);
+      if (el) {
+        try {
+          this.feed = JSON.parse(el.textContent);
+        } catch {
+          this.feed = [];
+        }
+      }
     },
     setPlatform(value) {
       this.page = 1;
