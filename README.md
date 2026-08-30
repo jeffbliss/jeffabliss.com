@@ -1,7 +1,9 @@
 # jeffabliss.com
 
-This repo is for everything that goes on jeffabliss.com
+Personal site built with Hugo. `/games` is an achievement log driven by
+PlayStation trophy data synced daily by a Node script (`/sync`) via GitHub
+Actions. Hosted on Cloudflare Pages.
 
-## Description
-
-My repository for anything and everything fun that I plan on putting on my website
+- `/sync` — Node + TypeScript sync script (psn-api)
+- `/site` — Hugo site; trophy data lives in `site/data/psn/`
+- `.github/workflows/sync.yml` — daily sync + commit
