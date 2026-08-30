@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $game := .Params.game }}
+{{ $earned := 0 }}
+{{ range $game.trophies }}{{ if .earned }}{{ $earned = add $earned 1 }}{{ end }}{{ end }}
+<article class="game-detail">
+  <p><a href="/games/">← All games</a></p>
+  <h1>{{ $game.name }}</h1>
+  <p class="game-meta">
+    <span class="badge">{{ $game.titlePlatform }}</span>
+    <span>{{ $earned }}/{{ len $game.trophies }} trophies · {{ $game.progressPercent }}% complete</span>
+  </p>
+  <ul class="trophy-list">
+    {{ range $game.trophies }}
+    <li class="trophy-row{{ if not .earned }} unearned{{ end }}">
+      {{ with .iconUrl }}<img class="trophy-icon" src="{{ . }}" alt="" loading="lazy" width="40" height="40">{{ end }}
+      <div class="trophy-info">
+        {{ if and .hidden (not .earned) }}
+        <span class="trophy-name">Hidden trophy</span>
+        {{ else }}
+        <span class="trophy-name">{{ .name }}</span>
+        <span class="trophy-desc">{{ .description }}</span>
+        {{ end }}
+      </div>
+      <div class="trophy-info">
+        <span class="badge trophy-{{ .type }}">{{ .type }}</span>
+        {{ if ne .rarityPercent nil }}<span class="rarity">{{ .rarityPercent }}% of players</span>{{ end }}
+        {{ if .earned }}
+        <time class="trophy-date">{{ time.Format "Jan 2, 2006" .earnedAt }}</time>
+        {{ else }}
+        <span class="unearned-label">Not earned</span>
+        {{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</article>
+{{ end }}

@@ -1,0 +1,12 @@
+{{ range $platform := slice "psn" "steam" "xbox" }}
+  {{ range $id, $game := index hugo.Data $platform | default dict }}
+    {{ if ne $id "summary" }}
+      {{ $.AddPage (dict
+        "kind" "page"
+        "path" $game.slug
+        "title" $game.name
+        "params" (dict "game" $game)
+      ) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
