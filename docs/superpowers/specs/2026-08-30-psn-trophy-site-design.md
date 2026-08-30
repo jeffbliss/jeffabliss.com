@@ -1,0 +1,142 @@
+# PSN Trophy Site — Design
+
+**Date:** 2026-08-30
+**Status:** Approved pending user review
+
+## Goal
+
+Rebuild jeffabliss.com as a Hugo site with a game achievement log at `/games`, driven by PlayStation trophy data synced daily via GitHub Actions. Git history doubles as the trophy log (one JSON file per game, diffable commits). PlayStation only for v1; the schema, directory layout, and UI are structured so Steam and Xbox slot in later.
+
+## Stack
+
+- **Sync script:** Node + TypeScript using `psn-api`, run via `tsx` (no build step). Node exists only for sync; it never touches the site.
+- **Site:** Hugo (≥ 0.126, extended), vanilla directory layout, no JS build pipeline. Client-side interactivity via Alpine.js, vendored as a single file into `assets/js/` (no CDN).
+- **Styling:** Hand-rolled plain CSS, no framework. One stylesheet (`assets/css/main.css`) processed by Hugo Pipes (minify + fingerprint). Design tokens as CSS custom properties in `:root` (colors, spacing, type scale, trophy-type colors) with a `prefers-color-scheme: dark` override.
+- **Hosting:** Cloudflare Pages. DNS already on Cloudflare nameservers; GitHub Pages has been disabled and its DNS records removed.
+
+## Repo layout
+
+```
+/sync/                          Node + TS sync script (own package.json)
+/site/                          Hugo root — vanilla layout, no module mounts
+/site/data/psn/{npCommunicationId}.json   one file per game
+/site/data/psn/summary.json               precomputed stats
+/.github/workflows/sync.yml
+CLAUDE.md, README.md, .gitignore          rewritten for the new stack
+```
+
+Decision: sync writes directly into `site/data/psn/` (vanilla Hugo data dir) rather than a repo-level `/data` mounted via module mounts. Chosen for Hugo-convention friendliness; the only coupling is one output-path constant in the sync script. Steam later becomes `site/data/steam/`.
+
+### Teardown
+
+Everything currently in the repo is deleted: the React/Vite/MUI app (`src/`, `public/`, `index.html`, `vite.config.js`, eslint configs, `package.json`, lockfile, `node_modules`, `dist`), `worker/` (nice-check-xiv — deliberately killed; recoverable from git history), `.github/workflows/static.yml`, `.idea/`, `.DS_Store`. The project `CLAUDE.md` is rewritten for Hugo/Go templates and the sync script (carrying over the no-comments rule). GitHub Pages is already disabled in repo settings.
+
+## Part 1 — Sync script (`/sync`)
+
+### Auth
+
+- NPSSO (64 chars) from https://ca.account.sony.com/api/v1/ssocookie, stored as GitHub Actions secret `NPSSO` (env var locally).
+- `exchangeNpssoForAccessCode(npsso)` → `exchangeAccessCodeForAuthTokens(code)`.
+- NPSSO expires ~every 60 days; workflow failure opens a GitHub issue as the expiry alarm. Refresh-token persistence deliberately deferred.
+
+### Fetch flow
+
+- `getUserTitles(auth, "me")`, paginating if > 800 titles.
+- Per title: `getTitleTrophies(...)` (definitions) + `getUserTrophiesEarnedForTitle(...)` (earned status), merged by `trophyId`.
+- PS3/PS4/Vita titles require `{ npServiceName: "trophy" }`; PS5-era titles omit it. Detect via `trophyTitlePlatform`.
+- Sleep ~300ms between titles.
+
+### Module structure
+
+- `src/index.ts` — orchestrator: auth → fetch → merge → write per-game files → write summary.
+- `src/auth.ts` — NPSSO/token exchange.
+- `src/fetch.ts` — pagination, per-title fetch/merge, legacy-platform switch, throttle sleep.
+- `src/serialize.ts` — deterministic output: fixed key order, trophies sorted by `id`, 2-space indent, trailing newline. Unchanged game ⇒ byte-identical file ⇒ zero git diff.
+- `src/summary.ts` — computes `summary.json`.
+
+### Output schema
+
+Per game, `site/data/psn/{npCommunicationId}.json`:
+
+```json
+{
+  "platform": "psn",
+  "gameId": "NPWR12345_00",
+  "name": "...",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "ISO-8601",
+  "trophies": [
+    { "id": 1, "name": "...", "description": "...", "type": "bronze|silver|gold|platinum",
+      "iconUrl": "...", "earned": true, "earnedAt": "ISO-8601 or null", "rarityPercent": 12.3 }
+  ]
+}
+```
+
+Games with 0% progress still get files.
+
+`site/data/psn/summary.json`:
+
+- Totals: bronze/silver/gold/platinum earned counts, game count, average completion.
+- `recentTrophies`: the **100** most recent unlocks — game name, gameId, page slug, trophy name/type/iconUrl, earnedAt.
+- `games`: per-game rollups — name, gameId, slug, platform, titlePlatform, progressPercent, earnedCount, totalCount, lastEarnedAt (null if none). The `/games/` page renders entirely from this file.
+
+### Failure behavior
+
+Any error exits non-zero with a clear message (trips the GitHub-issue alarm). No partial writes for a failed run.
+
+## Part 2 — Hugo site (`/site`)
+
+### Pages
+
+- `/` — homepage placeholder: name, one line, link to `/games/`. Deliberately minimal.
+- `/games/` — list page (layout below).
+- `/games/{platform}-{game-slug}/` — per-game detail (e.g. `/games/psn-astro-bot/`). Generated by a content adapter (`content/games/_content.gotmpl`) that globs `site.Data.psn` (written to also try `steam`/`xbox` keys from day one), creates one page per game with the platform-prefixed slug, and stores the game's full trophy data in page params. Detail template shows the trophy list: icon (hotlinked from Sony's CDN), name, description, type badge, rarity %, earned date or unearned state, plus per-game completion.
+
+### `/games/` layout (top to bottom)
+
+1. **Platform filter dropdown** — All (default) | PlayStation | Steam | Xbox. Alpine reads `?platform=` on load, writes it via `history.replaceState` on change (shareable URLs). Steam/Xbox show a "coming soon" empty state in both columns; options are visible, not hidden or disabled. Filter applies to both columns.
+2. **Compact stats strip** — platinum/gold/silver/bronze totals, game count, average completion. Global (not platform-filtered) in v1.
+3. **Two columns** (stacking to one on mobile):
+   - **Left — game list.** Full library, one card per game (inherently deduped). Sorted by most recent earned trophy descending; zero-trophy games sink to the bottom alphabetically. Each card: game name, title platform badge, "N/M trophies" earned/total, thin completion bar, last-earned date. Card links to the game's detail page.
+   - **Right — recent trophies feed.** The 100 precomputed recent unlocks, 10 per page with Alpine pagination (prev/next + page indicator). Each row: trophy icon, name, type badge, game name (linked), earned date.
+
+### Template edge cases
+
+Zero-data build renders empty states rather than failing; games with no earned trophies; missing `earnedAt`; hidden trophies shown as "Hidden trophy" until earned.
+
+## Part 3 — Automation
+
+GitHub Actions `sync.yml`, daily cron `17 9 * * *` + `workflow_dispatch`:
+
+1. checkout → setup-node → `npm ci` in `/sync` → run sync with `NPSSO` from secrets.
+2. Commit `site/data/` if changed (`git diff --staged --quiet || git commit`).
+3. Push → Cloudflare Pages auto-builds on push.
+
+On failure, open a GitHub issue titled for NPSSO expiry with refresh instructions in the body. Daily commits keep the scheduled workflow from being auto-paused.
+
+## Part 4 — Deployment
+
+- Cloudflare Pages project connected to the GitHub repo. Build command `hugo --minify`, root directory `/site`, `HUGO_VERSION` env pinned to match local.
+- Custom domains: `jeffabliss.com` apex + `www`. DNS zone is on Cloudflare and currently empty; Pages creates the records it needs when domains are attached.
+- `*.pages.dev` URL works for testing before domains attach.
+
+## Build order
+
+1. Repo teardown + rewritten CLAUDE.md/README/.gitignore.
+2. `/sync`: psn-api script → per-game JSON + summary.json, deterministic output. Test locally with a real NPSSO.
+3. Hugo scaffold: config, base layouts, CSS tokens, homepage, content adapter, game detail pages.
+4. `/games/` list page: stats strip, two-column layout, Alpine platform filter + pagination.
+5. GitHub Actions workflow + failure-issue step.
+6. Cloudflare Pages hookup; verify, then custom domains.
+
+## Explicitly deferred
+
+- Steam + Xbox integration (schema/UI accommodate them)
+- Homepage buildout beyond a placeholder
+- HTMX fragment lazy-loading
+- Local caching of trophy icons
+- Refresh-token persistence for PSN auth
+- Per-platform stats filtering on the stats strip
+- Email/SPF/DMARC DNS records
+- Rewriting the sync in Go
