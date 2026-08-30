@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR20867_00",
+  "slug": "psn-namco-museum-archives-vol-2",
+  "name": "NAMCO MUSEUM ARCHIVES Vol 2",
+  "titlePlatform": "PS4",
+  "progressPercent": 0,
+  "lastUpdated": "2024-07-28T22:28:23Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Daddy Cool, Taizo Hori",
+      "description": "Cleared Stage 16 in Dig Dug 2.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/FB40072FF8B5D00CBDA56A120F26D323D6F2A6FD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.5
+    },
+    {
+      "id": 1,
+      "name": "Special Number 765",
+      "description": " Earned 7650 points by Artistic Bonus in Pac-Land.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/9A33D9DAC017D0655B76381822DE3C546844ECC9.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.1
+    },
+    {
+      "id": 2,
+      "name": "Last Line of Defense in the Alien Invasion",
+      "description": "Cleared Stage 19 in Galaga.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/236109B6B6AB632FA410A50D6AC4655550AA0366.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.5
+    },
+    {
+      "id": 3,
+      "name": "Dungeon Investigator",
+      "description": "Cleared Stage １ in Dragon Buster II.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/EB184F79C0EDD68515188598058B573826659438.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.1
+    },
+    {
+      "id": 4,
+      "name": "Lovely Mapico",
+      "description": "Cleared Stage 1-8 in Mappy Land.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/99BB230FAE2EBF1C10F7309AF049A34A994C1738.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.1
+    },
+    {
+      "id": 5,
+      "name": "The Extraordinary is Ordinary",
+      "description": "Cleared Stage 8 in Pac-Land.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/88B52CEE0354ADD2F93BEFF19B25834CFC32F34D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.8
+    },
+    {
+      "id": 6,
+      "name": "Combined System",
+      "description": "Entered Dual Fighter Mode in Galaga.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/E70A862F30FCA75A4F670A0AFD3CDD73C0F7A057.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.5
+    },
+    {
+      "id": 7,
+      "name": "Dreams are Fertilizer for the Brain",
+      "description": "Played all titles.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/406187A2173913CBB96C279879B478535543AF97.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.6
+    },
+    {
+      "id": 8,
+      "name": "Flag of Glory",
+      "description": "Earned the Special Flag in Dig Dug 2.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/88BED168EB3F1C08EE0AC3618E67536B8B79ABAF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.4
+    },
+    {
+      "id": 9,
+      "name": "Leila Rescue Mission Complete",
+      "description": "Cleared Rolling Thunder.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/1C5D2E164F97F6219EBD8C97765C1FDB7AE868AA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2
+    },
+    {
+      "id": 10,
+      "name": "Let's Go for a Spin Turn",
+      "description": "Cleared Stage 35 in Battle City.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/AF8B2A88859556C774FA4774BA30720E6D069402.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14
+    },
+    {
+      "id": 11,
+      "name": "Good Morning, Princess Candy",
+      "description": "Cleared HOUSE OF MOKO-MOKO 8Rounds in Mendel Palace. ",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR20867_00_003DD9A36DFEC6A3A24FAE48EAA3B433745A972FA9/0E35BC513D7D5F7D5FC778F1F1F314F901402F08.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.5
+    }
+  ]
+}

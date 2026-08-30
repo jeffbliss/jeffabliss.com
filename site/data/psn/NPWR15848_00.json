@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR15848_00",
+  "slug": "psn-apex-legends-trophies",
+  "name": "Apex Legends Trophies",
+  "titlePlatform": "PS4",
+  "progressPercent": 5,
+  "lastUpdated": "2019-02-11T01:35:48Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "The Player",
+      "description": "Reach player level 50.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/25C9D1BE51E6EB8EB8EB98F2905AA8E5B6D2477D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 20.5
+    },
+    {
+      "id": 1,
+      "name": "Decked Out",
+      "description": "Equip any 2 legendary equipment items at the same time.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/08A0E54D4047BABCFD9F4405157E1D0BF029C47C.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-11T01:35:27Z",
+      "rarityPercent": 26.3
+    },
+    {
+      "id": 2,
+      "name": "Team Player",
+      "description": "Respawn a teammate",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/765B22333D6F0043D93AA80C000AD3D429C4624C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 49.3
+    },
+    {
+      "id": 3,
+      "name": "Fully Kitted",
+      "description": "Equip a Fully Kitted weapon",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/B8F265B9D6285E004DF13D3610B3B713F065AE5D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.8
+    },
+    {
+      "id": 4,
+      "name": "Jumpmaster",
+      "description": "Be the Jumpmaster 5 times",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/A36C1900135E0568070179965219CA6507217EB3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 55.2
+    },
+    {
+      "id": 5,
+      "name": "Well-Rounded",
+      "description": "Deal 5,000 damage with 8 different Legends",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/47BED6CD270E5A642498446C505A444386ED1716.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12.4
+    },
+    {
+      "id": 6,
+      "name": "Kill Leader",
+      "description": "Become the Kill Leader",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/8C93B7B6C325A03690577F587BF2147317C27395.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 43.8
+    },
+    {
+      "id": 7,
+      "name": "Apex Assault",
+      "description": "Win a game as an assault character",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/1C9AF39BC06938F3C24BEC1F964114F794491001.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 38.1
+    },
+    {
+      "id": 8,
+      "name": "Apex Controller",
+      "description": "Win a game as a controller character",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/4B7380F3EE4F836B87C991CB9A2CC08A3B25F343.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.1
+    },
+    {
+      "id": 9,
+      "name": "Apex Support",
+      "description": "Win a game as a support character",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/6AB72E754CB05115CB2FCC912E119A7825780AFC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 31.2
+    },
+    {
+      "id": 10,
+      "name": "Apex Recon",
+      "description": "Win a game as a recon character",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/846AFE6D506217995972DA5522D4BCC147C49E3E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 34.3
+    },
+    {
+      "id": 11,
+      "name": "Apex Legend",
+      "description": "Win a game with 8 different Legends",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15848_00_008BC9A05BFCFBD29B41A5754F800C13CEFABEF9A6/E8CDD957C12582F635F43E6A177628412EAC6E1C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR18020_00",
+  "slug": "psn-the-sojourn",
+  "name": "The Sojourn",
+  "titlePlatform": "PS4",
+  "progressPercent": 31,
+  "lastUpdated": "2019-11-09T16:25:05Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Perfection",
+      "description": "Collect all trophies",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/338EDB585AA625A88333C7A23F15CE83CC880FD1.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13.8
+    },
+    {
+      "id": 1,
+      "name": "Welcome to Reality",
+      "description": "Step into the dark world",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/80A24E036A0A32FC8A96414C3F2DB794D2C62196.PNG",
+      "earned": true,
+      "earnedAt": "2019-11-07T00:06:38Z",
+      "rarityPercent": 95
+    },
+    {
+      "id": 2,
+      "name": "Step by Step",
+      "description": "Overcome the second challenge",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/3595881A8B59C32BCFA1A113C3D855B48DA277BC.PNG",
+      "earned": true,
+      "earnedAt": "2019-11-07T00:10:57Z",
+      "rarityPercent": 85.6
+    },
+    {
+      "id": 3,
+      "name": "Blindfold",
+      "description": "Witness the story behind the blindfold",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/8FCE376D395F995358379CF2FE9E36F2A0653BE8.PNG",
+      "earned": true,
+      "earnedAt": "2019-11-07T00:19:36Z",
+      "rarityPercent": 74
+    },
+    {
+      "id": 4,
+      "name": "Not a Child",
+      "description": "Experience the first chapter of life: Discovery",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/BD2688B405AB2934A98AEB598AA2B5483FBFD5E6.PNG",
+      "earned": true,
+      "earnedAt": "2019-11-07T01:47:14Z",
+      "rarityPercent": 44.7
+    },
+    {
+      "id": 5,
+      "name": "Level Up",
+      "description": "Activate the elevator",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/0BE7C84289A8B27E5C089AE94D4154AE08FDC589.PNG",
+      "earned": true,
+      "earnedAt": "2019-11-08T23:01:41Z",
+      "rarityPercent": 37.5
+    },
+    {
+      "id": 6,
+      "name": "Doubtful Mind",
+      "description": "Reach the top of the tower",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/166E6106A99B13ACE5FB9054C520A4D38C302EEC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 23.1
+    },
+    {
+      "id": 7,
+      "name": "Opened Eyes",
+      "description": "Open the frozen well",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/F4FF1D34C64884E2265FC1F154BFC63A66A178AE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.4
+    },
+    {
+      "id": 8,
+      "name": "Tree of Lies",
+      "description": "Witness the secret behind the tree",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/7CCFE5B3FF8FBC47BC55149B023EE2E88931085E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 18
+    },
+    {
+      "id": 9,
+      "name": "Unity",
+      "description": "Witness the story of the first movements",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/C22ABA379C2C37F829B1943A0C14440ECF107C08.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.7
+    },
+    {
+      "id": 10,
+      "name": "Eternity",
+      "description": "Finish your sojourn",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/CAA0E147E4086C73E3514204940BF2B6B9275B90.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 15.8
+    },
+    {
+      "id": 11,
+      "name": "Curious Mind",
+      "description": "Earn your first merit of life",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/9DAA7B8C44B12095A40AC95DCD55907692BD05BD.PNG",
+      "earned": true,
+      "earnedAt": "2019-11-07T01:40:43Z",
+      "rarityPercent": 39.4
+    },
+    {
+      "id": 12,
+      "name": "Scholar",
+      "description": "Earn 10 merits of life",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/28DEA3444786593AE4CA777CBA08E54BA496DED8.PNG",
+      "earned": true,
+      "earnedAt": "2019-11-09T16:25:01Z",
+      "rarityPercent": 25.2
+    },
+    {
+      "id": 13,
+      "name": "Adept",
+      "description": "Earn 20 merits of life",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/168AEBE1F94D9A29E9CC84B7B8B79349780AC2D9.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 18.6
+    },
+    {
+      "id": 14,
+      "name": "Expert",
+      "description": "Earn 30 merits of life",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/58DEA0463C2597A9FBE563B291EB3079F5A4307F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 15.3
+    },
+    {
+      "id": 15,
+      "name": "Master",
+      "description": "Earn 40 merits of life",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/4CD1FF2131B10D75CF73082B977C99C7D2E96E29.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.2
+    },
+    {
+      "id": 16,
+      "name": "Sage",
+      "description": "Earn all merits of life",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18020_00_00EB4A8C9C774388E492EA1F0513CBCFF71A4223F4/034228F9437F93919FF5F83EF1931E2A4C0D3E41.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13.8
+    }
+  ]
+}

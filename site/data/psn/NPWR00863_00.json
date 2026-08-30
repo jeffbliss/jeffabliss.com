@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR00863_00",
+  "slug": "psn-braid",
+  "name": "Braid",
+  "titlePlatform": "PS3",
+  "progressPercent": 36,
+  "lastUpdated": "2020-06-18T22:47:10Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Traversed Level 2",
+      "description": "Traversed Level 2",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/D7D2C60775E1A03F9EF00302F359AB5866F1BF8E.PNG",
+      "earned": true,
+      "earnedAt": "2020-06-18T04:15:18Z",
+      "rarityPercent": 80.1
+    },
+    {
+      "id": 1,
+      "name": "Traversed Level 3",
+      "description": "Traversed Level 3",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/F4F89A51072948DB2245A52DAD31EC8BFE3B62BA.PNG",
+      "earned": true,
+      "earnedAt": "2020-06-18T04:52:55Z",
+      "rarityPercent": 55.3
+    },
+    {
+      "id": 2,
+      "name": "Traversed Level 4",
+      "description": "Traversed Level 4",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/3D01B8FA07ECACB1763700DB784E6574AD9BA1A9.PNG",
+      "earned": true,
+      "earnedAt": "2020-06-18T22:46:47Z",
+      "rarityPercent": 40.8
+    },
+    {
+      "id": 3,
+      "name": "Traversed Level 5",
+      "description": "Traversed Level 5",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/DFE03C25487966F3837D6D1BBBD0CA9E7E2A40EF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 34.1
+    },
+    {
+      "id": 4,
+      "name": "Traversed Level 6",
+      "description": "Traversed Level 6",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/392A9FAAAE17E0C283217C518BFB9D669C99FB2C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 31.2
+    },
+    {
+      "id": 5,
+      "name": "Solved Level 2",
+      "description": "Solved Level 2",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/D0540306F9AC9BF354D8B8771499173652180B52.PNG",
+      "earned": true,
+      "earnedAt": "2020-06-18T04:16:53Z",
+      "rarityPercent": 47.2
+    },
+    {
+      "id": 6,
+      "name": "Solved Level 3",
+      "description": "Solved Level 3",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/571362D5DD14D8B59A90B2B293A91B38DE13E598.PNG",
+      "earned": true,
+      "earnedAt": "2020-06-18T04:55:40Z",
+      "rarityPercent": 37.4
+    },
+    {
+      "id": 7,
+      "name": "Solved Level 4",
+      "description": "Solved Level 4",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/81D6212F12CB0796F48D6CC95250F5CA521912F2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 28.7
+    },
+    {
+      "id": 8,
+      "name": "Solved Level 5",
+      "description": "Solved Level 5",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/2B2F0DF3EC59DEABE000F837E1BA4DE8091D22A3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 25.3
+    },
+    {
+      "id": 9,
+      "name": "Solved Level 6",
+      "description": "Solved Level 6",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/C6649478B4021B759CDC380CC850866406C513E6.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 23.1
+    },
+    {
+      "id": 10,
+      "name": "Solved Game",
+      "description": "Solved the entire game",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/F81B065219A30FF63B7749BD7022756A12BAD6FC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.4
+    },
+    {
+      "id": 11,
+      "name": "Full Speed Run",
+      "description": "Did some kind of speed run through the game.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00863_00_000377B39817AFDA1E75B1FA0533687A33BFFBAD19/4FBE78377D323241BBE27EB181907B3FC73D4455.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.7
+    }
+  ]
+}

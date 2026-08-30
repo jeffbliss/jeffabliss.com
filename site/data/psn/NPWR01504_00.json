@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR01504_00",
+  "slug": "psn-ico",
+  "name": "ICO™",
+  "titlePlatform": "PS3",
+  "progressPercent": 1,
+  "lastUpdated": "2012-10-13T22:43:58Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Enlightenment",
+      "description": "Acquire all trophies",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/31699CEA12E5F3C154BD753AFE687A4A9F9EDD18.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.2
+    },
+    {
+      "id": 1,
+      "name": "Rescue",
+      "description": "Rescue Yorda",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/F311FFE31254A9C9FEF07A274DCAD302238EDBF9.PNG",
+      "earned": true,
+      "earnedAt": "2012-07-10T01:01:59Z",
+      "rarityPercent": 64
+    },
+    {
+      "id": 2,
+      "name": "Failure",
+      "description": "Finish watching the demo scene confronting the Queen at the front gate stage",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/5FB60D6BDAEA3FA7C0951771EFECF5AED49A822A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 31.2
+    },
+    {
+      "id": 3,
+      "name": "Armed and Ready",
+      "description": "Acquire Sword",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/FF7D6EF30BA457946692FDE5C3C1D06715BCE7D5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.9
+    },
+    {
+      "id": 4,
+      "name": "East Gate",
+      "description": "Open East Gate",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/8F1A14904A3F48FEAF2C102D13F11E93AD66F99A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.4
+    },
+    {
+      "id": 5,
+      "name": "West Gate",
+      "description": "Open West Gate",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/1A73C8A3B776639294C235F13662055FDE07C404.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 18.2
+    },
+    {
+      "id": 6,
+      "name": "Farewell",
+      "description": "Finish watching farewell demo scene with Yorda at the front gate stage",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/64C3E5BA75D7EB889B6D40A26A6714C0BEBE0A01.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 18.2
+    },
+    {
+      "id": 7,
+      "name": "Royal Arms",
+      "description": "Acquire Queen's Sword",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/D6FD645238F45765C1099D54A8ABF240484A26CC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.8
+    },
+    {
+      "id": 8,
+      "name": "Emancipation",
+      "description": "Clear the game",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/CE0739318774BF8EDF95BE24A572AF2FCAEF7EE2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.6
+    },
+    {
+      "id": 9,
+      "name": "Split the Watermelon",
+      "description": "Bring the watermelon to Yorda upon completing 2nd time through",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/3610CAB68366FB03725FA43FB0026DF1F55CD071.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.2
+    },
+    {
+      "id": 10,
+      "name": "Spiked Club",
+      "description": "Acquire spiked club",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/E6BC3DDEEDE259AF7AF66750DEB73373A79A0767.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.2
+    },
+    {
+      "id": 11,
+      "name": "Shining Sword",
+      "description": "Acquire shining sword",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/14E64577CF677CEE98EEEBAB96C6C10FAA98B39C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.4
+    },
+    {
+      "id": 12,
+      "name": "Bench Warmer",
+      "description": "Save at all save points",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/3AC0281C2BD61A2E7D640AEFD3E164E229433571.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.3
+    },
+    {
+      "id": 13,
+      "name": "Express Journey",
+      "description": "Beat the game within 4 hours",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/2B84F23251FF4FE4F13FDE61BD691947951A6077.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.3
+    },
+    {
+      "id": 14,
+      "name": "Castle Guide",
+      "description": "Beat the game within 2 hours",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/8313C6D18501EDA020652BF05F19CDC29DA6BD08.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.3
+    },
+    {
+      "id": 15,
+      "name": "Unscathed Escape",
+      "description": "Clear the game without viewing a game over screen",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01504_00_0094B312586558EC122CFEB69EAFDFB17435D1C7B5/106390387E8B02D1ABE692EE8F42CE6B3885BCC7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.7
+    }
+  ]
+}

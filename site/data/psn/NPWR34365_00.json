@@ -1,0 +1,253 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR34365_00",
+  "slug": "psn-tchia",
+  "name": "Tchia",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "2023-04-24T01:02:37Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "New Caledonian",
+      "description": "Collect all Trophies",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/25bcf782-fd65-4a7e-a126-612deb846716.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.3
+    },
+    {
+      "id": 1,
+      "name": "Happy Camper",
+      "description": "Discover all the Campfires",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/f7b0f15b-aa8d-41d7-89bd-dcf3b4899b81.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.5
+    },
+    {
+      "id": 2,
+      "name": "Globe Trotter",
+      "description": "Discover all the Docks",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/85219915-06f6-4b7b-831b-acf1cf368de3.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.3
+    },
+    {
+      "id": 3,
+      "name": "Live Wire",
+      "description": "Upgrade your Stamina to 120",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/2bbe49b4-2cd0-44c9-a2e1-fa61af31e010.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.1
+    },
+    {
+      "id": 4,
+      "name": "Body and Soul",
+      "description": "Upgrade your Soul-Meter to 10 slots",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/f3e214c9-ed1e-4b20-a1bf-4b9cf9ae9dd6.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.8
+    },
+    {
+      "id": 5,
+      "name": "Fashion Faux-Pas",
+      "description": "Wear the Umbrella Hat",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/2c080439-1083-421d-9108-68b519fd0ffa.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.6
+    },
+    {
+      "id": 6,
+      "name": "Arrr!",
+      "description": "Wear the complete Pirate outfit and boat style",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/f1635edc-c56c-43ba-9375-0e7095aa520b.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3
+    },
+    {
+      "id": 7,
+      "name": "Snip Snip",
+      "description": "Wear the complete Crab outfit",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/0edde63e-b6a6-4c3e-a2eb-9c31de963f93.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.2
+    },
+    {
+      "id": 8,
+      "name": "In a Pinch",
+      "description": "Win something in a Claw Machine",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/45ff41a2-c50a-40b2-8d3a-063682c5226c.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.8
+    },
+    {
+      "id": 9,
+      "name": "Shredder",
+      "description": "Score 100% in any Music Sequence",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/9c1e6f2e-9b9a-433e-903f-706b3e35b520.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.8
+    },
+    {
+      "id": 10,
+      "name": "Clay Pigeon",
+      "description": "Shoot down a flying bird with the Slingshot",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/831f846c-7680-46a9-a104-764e11dca1f9.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.6
+    },
+    {
+      "id": 11,
+      "name": "Energy Saver",
+      "description": "Burn 3 enemies at once with a single object or explosion",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/a26eb7f7-e2ca-4516-a0ef-444a369d7214.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.9
+    },
+    {
+      "id": 12,
+      "name": "Soul-Cannon",
+      "description": "Soul-Jump into an object right after Soul-Throwing it",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/51f64988-4713-4ea0-8803-50279e93daf7.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.1
+    },
+    {
+      "id": 13,
+      "name": "The Journey Onwards",
+      "description": "Reach the Endgame",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/4bcf4946-6cbf-4a69-9ccd-3a45c364823c.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.7
+    },
+    {
+      "id": 14,
+      "name": "Thing",
+      "description": "Find and Soul-Jump into Pwi Dua's hand",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/b8e25dab-41af-4c32-99e6-5835349032f7.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.9
+    },
+    {
+      "id": 15,
+      "name": "Historian",
+      "description": "Find and open all the Treasure Chests",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/e573c551-d1e3-49f7-877f-dc720009b6e9.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.4
+    },
+    {
+      "id": 16,
+      "name": "Fashion Victim",
+      "description": "Unlock every cosmetic items for Tchia and Boat",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/e1d8a648-b4d1-4d37-8b32-304afa3a3446.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.7
+    },
+    {
+      "id": 17,
+      "name": "Audiophile",
+      "description": "Unlock every Soul-Melody",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/82468323-9dec-48dc-aea7-5f8c782a02c7.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4
+    },
+    {
+      "id": 18,
+      "name": "Liberator",
+      "description": "Clear all the Soldier Camps",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/12f232f3-43c0-4ce4-81bc-00b612e31e09.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.3
+    },
+    {
+      "id": 19,
+      "name": "Iconoclast",
+      "description": "Destroy every Meavora Statue",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/dc42b867-f9a8-4159-93e5-57092cefc4e5.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.7
+    },
+    {
+      "id": 20,
+      "name": "Ahem Ahem",
+      "description": "Shout from every Point Of View",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/cb67bc07-0624-4b9a-95bf-ca7b9f3b699b.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.6
+    },
+    {
+      "id": 21,
+      "name": "Ça de Wizz!",
+      "description": "Reach 100% Game Completion",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR34365_00/78528230-fb5a-4de0-bb83-01c165a6e143.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.3
+    }
+  ]
+}

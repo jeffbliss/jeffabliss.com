@@ -1,0 +1,220 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR10052_00",
+  "slug": "psn-thumper",
+  "name": "Thumper",
+  "titlePlatform": "PS4",
+  "progressPercent": 32,
+  "lastUpdated": "2017-09-24T23:26:09Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "All S Rank",
+      "description": "Get S Rank on all levels",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/2928F68C563F8A6103994A8019C6DD1EA803021A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.5
+    },
+    {
+      "id": 1,
+      "name": "Level 1 Complete",
+      "description": "Complete Level 1",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/DEFC46DA38C0E91A842CDE112225C1C918D745CD.PNG",
+      "earned": true,
+      "earnedAt": "2017-09-20T11:37:27Z",
+      "rarityPercent": 55
+    },
+    {
+      "id": 2,
+      "name": "Level 2 Complete",
+      "description": "Complete Level 2",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/9D1878590F16EE41A5233DC86031022184F75CE9.PNG",
+      "earned": true,
+      "earnedAt": "2017-09-21T01:23:07Z",
+      "rarityPercent": 29.3
+    },
+    {
+      "id": 3,
+      "name": "Level 3 Complete",
+      "description": "Complete Level 3",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/389AE79382D3D4C4543987C9A574E0CBB6EA4A38.PNG",
+      "earned": true,
+      "earnedAt": "2017-09-22T01:01:11Z",
+      "rarityPercent": 16.7
+    },
+    {
+      "id": 4,
+      "name": "Level 4 Complete",
+      "description": "Complete Level 4",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/8940D950AAAC7D38C1B61F5A250E4C83B3D86408.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8
+    },
+    {
+      "id": 5,
+      "name": "Level 5 Complete",
+      "description": "Complete Level 5",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/F95F767ED041FF0BC15172B7682EA6EAC9D2EA21.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.6
+    },
+    {
+      "id": 6,
+      "name": "Level 6 Complete",
+      "description": "Complete Level 6",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/617E3FC5BEE3A7479AC4DC2FEDC4F0812B55CAEA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.1
+    },
+    {
+      "id": 7,
+      "name": "Level 7 Complete",
+      "description": "Complete Level 7",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/DC6733DF18D9E9740A0EE51F075092709CDDB783.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.5
+    },
+    {
+      "id": 8,
+      "name": "Level 8 Complete",
+      "description": "Complete Level 8",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/E9A2493ECCE5F08890DC81D6746347BF0E3E97D7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.1
+    },
+    {
+      "id": 9,
+      "name": "Level 9 Complete",
+      "description": "Complete Level 9",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/D9E36D93FD2E88A3B71C56D8EBE02C0F1CB3F88E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.7
+    },
+    {
+      "id": 10,
+      "name": "Level 1 S Rank",
+      "description": "Get S Rank on Level 1",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/C7642641C08A740607DB3777E303A62E8675CCE3.PNG",
+      "earned": true,
+      "earnedAt": "2017-09-20T12:00:01Z",
+      "rarityPercent": 6.5
+    },
+    {
+      "id": 11,
+      "name": "Level 2 S Rank",
+      "description": "Get S Rank on Level 2",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/DBE86C50D25D5879DE6FEE8296B9722CA6184151.PNG",
+      "earned": true,
+      "earnedAt": "2017-09-22T10:50:43Z",
+      "rarityPercent": 3.9
+    },
+    {
+      "id": 12,
+      "name": "Level 3 S Rank",
+      "description": "Get S Rank on Level 3",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/D4A9C893DBF7398FBDE43F5AD4E727CF0DC82586.PNG",
+      "earned": true,
+      "earnedAt": "2017-09-24T23:26:07Z",
+      "rarityPercent": 2.6
+    },
+    {
+      "id": 13,
+      "name": "Level 4 S Rank",
+      "description": "Get S Rank on Level 4",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/436C51AC983F0BA87387DAA5BCD51D467E094760.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.4
+    },
+    {
+      "id": 14,
+      "name": "Level 5 S Rank",
+      "description": "Get S Rank on Level 5",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/D3AAA14FE26E8DFDF20C18647E9B8A4C60126E0E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.8
+    },
+    {
+      "id": 15,
+      "name": "Level 6 S Rank",
+      "description": "Get S Rank on Level 6",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/E7D81DC14636EFC4CCDE232993146A28EABE83B2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.6
+    },
+    {
+      "id": 16,
+      "name": "Level 7 S Rank",
+      "description": "Get S Rank on Level 7",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/450BEF47F60D4AE6878A3719C8B5F59A97994992.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.6
+    },
+    {
+      "id": 17,
+      "name": "Level 8 S Rank",
+      "description": "Get S Rank on Level 8",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/BBAB6F591555B29E7526913BDE02D0DF26C380E2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.6
+    },
+    {
+      "id": 18,
+      "name": "Level 9 S Rank",
+      "description": "Get S Rank on Level 9",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10052_00_00870E7DAC2800E85D47D18734EC2DC3C175A21D64/573850E5F291439AAC9C9A66B58F1C031A8334AC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.5
+    }
+  ]
+}

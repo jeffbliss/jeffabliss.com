@@ -1,0 +1,198 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR27932_00",
+  "slug": "psn-mekabolt",
+  "name": "Mekabolt+",
+  "titlePlatform": "PS5",
+  "progressPercent": 100,
+  "lastUpdated": "2022-04-04T00:00:22Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Platinum Mekabolt",
+      "description": "Get all other trophies",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/ca2e1432-d08f-4bfd-ba42-6454f5988489.png",
+      "earned": true,
+      "earnedAt": "2022-04-04T00:00:22Z",
+      "rarityPercent": 85.2
+    },
+    {
+      "id": 1,
+      "name": "Lift me up",
+      "description": "Meet the Flying Robot",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/8d5993fd-9e16-4e54-8e29-ed0fc58b3685.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:09:12Z",
+      "rarityPercent": 95.1
+    },
+    {
+      "id": 2,
+      "name": "Bouncy",
+      "description": "Meet the robot to jump",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/47377ce5-a15f-413f-9cdd-622bd5c0af12.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:09:33Z",
+      "rarityPercent": 94.9
+    },
+    {
+      "id": 3,
+      "name": "Dangerous",
+      "description": "Meet the shooter robot",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/ec23f325-40ab-45b1-97e5-9984632586b5.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:11:44Z",
+      "rarityPercent": 93.3
+    },
+    {
+      "id": 4,
+      "name": "Steping on spears",
+      "description": "Meet the spear throwing robot",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/9187bd2d-9a54-4131-93cc-c57dd1d68270.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:13:20Z",
+      "rarityPercent": 91.6
+    },
+    {
+      "id": 5,
+      "name": "Not friendly",
+      "description": "Meet the bomb dropper robot",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/b7579a82-613e-4efb-83ea-7663d6918f66.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:21:24Z",
+      "rarityPercent": 90.3
+    },
+    {
+      "id": 6,
+      "name": "What was this created for?",
+      "description": "Meet the cactus",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/4e51b49c-53a3-467d-9023-dfc07dfb86d4.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:26:16Z",
+      "rarityPercent": 89.3
+    },
+    {
+      "id": 7,
+      "name": "I can fly!",
+      "description": "Meet the wind maker robot",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/144441c0-d991-4f19-9da0-a8f02e015fe5.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:30:44Z",
+      "rarityPercent": 89
+    },
+    {
+      "id": 8,
+      "name": "Cant see any use for this one",
+      "description": "Meet the flying robot with a spike",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/c677d27a-7b39-4dae-aec7-58de3ca63537.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:34:39Z",
+      "rarityPercent": 88.2
+    },
+    {
+      "id": 9,
+      "name": "Its on fire",
+      "description": "Find a flamethrower",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/412bab9a-6091-4d3c-941c-50256fe54979.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:33:28Z",
+      "rarityPercent": 88.6
+    },
+    {
+      "id": 10,
+      "name": "Deserted",
+      "description": "Unlock desert",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/ade26912-6d51-492a-aba4-8d8ff1dd4e74.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:13:20Z",
+      "rarityPercent": 91.6
+    },
+    {
+      "id": 11,
+      "name": "Speleology",
+      "description": "Unlock caves",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/119a8ccf-0984-4d92-90a9-443d09b751fb.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:33:28Z",
+      "rarityPercent": 88.4
+    },
+    {
+      "id": 12,
+      "name": "Starting",
+      "description": "Get 12 batteries",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/1cbb6f05-3f9c-4e63-a65f-d9e97d3c1b7f.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:13:20Z",
+      "rarityPercent": 91.6
+    },
+    {
+      "id": 13,
+      "name": "A good amount",
+      "description": "Get 24 batteries",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/eb3fbe79-f279-4750-ae73-4791aaa73135.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:26:00Z",
+      "rarityPercent": 89.4
+    },
+    {
+      "id": 14,
+      "name": "Collector",
+      "description": "Get 48 batteries",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/6e7677d8-3a52-4630-9b9b-290ce73e455d.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T21:37:34Z",
+      "rarityPercent": 87.7
+    },
+    {
+      "id": 15,
+      "name": "Restoring",
+      "description": "Complete 5 challenges",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/02baec92-08d8-432e-ae5c-c4d26b01f75b.png",
+      "earned": true,
+      "earnedAt": "2022-04-03T23:51:59Z",
+      "rarityPercent": 86.9
+    },
+    {
+      "id": 16,
+      "name": "Extra Mile",
+      "description": "Complete 10 challenges",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR27932_00/1b2bd90e-b21d-4601-a17d-a68027cd2895.png",
+      "earned": true,
+      "earnedAt": "2022-04-04T00:00:22Z",
+      "rarityPercent": 85.5
+    }
+  ]
+}

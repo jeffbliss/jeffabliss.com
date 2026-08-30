@@ -1,0 +1,220 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR08350_00",
+  "slug": "psn-whispering-willows",
+  "name": "Whispering Willows",
+  "titlePlatform": "PS4",
+  "progressPercent": 9,
+  "lastUpdated": "2020-06-27T00:49:59Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "First Contact",
+      "description": "Meet Flying Hawk\n",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/91FA5CF98D1F73F3F3DC7020661566957B73599B.PNG",
+      "earned": true,
+      "earnedAt": "2020-06-27T00:39:00Z",
+      "rarityPercent": 87.2
+    },
+    {
+      "id": 1,
+      "name": "I Ain't Afraid Of No Ghost",
+      "description": "Escape the Catacombs",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/73284E97057383580E14A9BC1FAC5AE9E5CC2134.PNG",
+      "earned": true,
+      "earnedAt": "2020-06-27T00:49:56Z",
+      "rarityPercent": 60.3
+    },
+    {
+      "id": 2,
+      "name": "Give Them A Hand",
+      "description": "Escape the Basement",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/D0F3FE371D528535C94D82E496646FCB8C4DBC55.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 44.1
+    },
+    {
+      "id": 3,
+      "name": "Free Bird",
+      "description": "Set Flying Hawk Free",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/F8D741AE3021B3E411EE396D8CAB48C133556BEE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 42.5
+    },
+    {
+      "id": 4,
+      "name": "What Ghost Up Must Come Down",
+      "description": "Create a path for Elena",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/BD1DF432B4FA760111956F31B74BF098CF3E039D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 40.3
+    },
+    {
+      "id": 5,
+      "name": "Itsy Bitsy",
+      "description": "Escape the Trophy Room",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/073E396384E7064CFDC64271BDE3E87EBB63B860.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 38.4
+    },
+    {
+      "id": 6,
+      "name": "Flower Power",
+      "description": "Escape the Garden Maze",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/A88F96FE3ED74CC7D6373981701DBE12E2AEDE40.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 32.3
+    },
+    {
+      "id": 7,
+      "name": "Irish He Was Alive",
+      "description": "Set Darby Free",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/3B460FFE159682297866735271B38C9EA4FD4DA7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 32
+    },
+    {
+      "id": 8,
+      "name": "Wine Not",
+      "description": "Open the Wine Cellar Passage",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/0C1FFF221D03A2638B173B5C7413FD41A66A7846.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 28
+    },
+    {
+      "id": 9,
+      "name": "Ready Corset Ghost!",
+      "description": "Set Fleur free",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/AFBA016C1169F8060AAB265A884F157036A811CA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 28.6
+    },
+    {
+      "id": 10,
+      "name": "Family Reunion",
+      "description": "Find Your Dad",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/00F89FB2133F96BEA6A8E46EC9A9E69ABCBCE0B3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 27.8
+    },
+    {
+      "id": 11,
+      "name": "Knight Light",
+      "description": "Solve the Knight Puzzle",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/1F811C87DA2BB19DA9C28885BEBF2CE29D25EA79.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 26.3
+    },
+    {
+      "id": 12,
+      "name": "Sixth Sense",
+      "description": "Beat the Game",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/AFF285D8B9828326EDF1424F29E6A01BAF9157A7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 26.2
+    },
+    {
+      "id": 13,
+      "name": "Fantastic Amphibian",
+      "description": "Find the amazing frog",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/E026FA6DFD7B7309F81ACED8D12746BC06CCEB12.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 23.2
+    },
+    {
+      "id": 14,
+      "name": "It's a Me, Boo",
+      "description": "Find the Secret Room",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/C01802D5B813FC286F874469CEEA9DCE382E4347.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 18.6
+    },
+    {
+      "id": 15,
+      "name": "What does the Fox Say?",
+      "description": "Find the fox",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/6D3C69FFCFBF02FA4E9BE3127CB1DCEAC31EC928.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 37.8
+    },
+    {
+      "id": 16,
+      "name": "Rest Your Soul",
+      "description": "Rest at a bonfire",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/827BD11CFED38C7B138F1C7E1CE20275439F85B1.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.2
+    },
+    {
+      "id": 17,
+      "name": "This S*** is Bananas",
+      "description": "Find the Animax logo",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/9757593FC5C34127E7D144767738451653A2A155.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 16.2
+    },
+    {
+      "id": 18,
+      "name": "Light Light",
+      "description": "Find the Night Light logo",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08350_00_00B3EDA3041BE8E4F2C35D1526D332E96B08867BA9/51A46308E64B7C328ED0BB147E565C0B131884D3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.5
+    }
+  ]
+}

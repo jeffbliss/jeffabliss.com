@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR00597_00",
+  "slug": "psn-golden-axe",
+  "name": "Golden Axe",
+  "titlePlatform": "PS3",
+  "progressPercent": 15,
+  "lastUpdated": "2018-09-20T22:19:08Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Cockatrice",
+      "description": "Ride the cockatrice.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/E63ECB9F0A6FFB45C00EE4A82A7D78773C1FD876.PNG",
+      "earned": true,
+      "earnedAt": "2018-09-20T22:13:28Z",
+      "rarityPercent": 86.5
+    },
+    {
+      "id": 1,
+      "name": "Omni Character",
+      "description": "Play as every character.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/A7D5DECDD85049AEE436973F4309A133DC4F3EDD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.1
+    },
+    {
+      "id": 2,
+      "name": "Turtle Village",
+      "description": "Choose any character and reach Turtle Village (Stage 3) without dying once.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/D0C692B155931FB93FBD2C5A125355376248DC38.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 38.7
+    },
+    {
+      "id": 3,
+      "name": "Amazon Magic",
+      "description": "Perform the Level 6 magic attack with the Amazon.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/C1D09645862E45872C09A0E4143B8305C71A5282.PNG",
+      "earned": true,
+      "earnedAt": "2018-09-20T22:18:37Z",
+      "rarityPercent": 21
+    },
+    {
+      "id": 4,
+      "name": "Dwarf Magic",
+      "description": "Perform the Level 3 magic attack with the Dwarf.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/BD0A4757D08303947387BE0F2BE0616F779D80F1.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.4
+    },
+    {
+      "id": 5,
+      "name": "Barbarian Magic",
+      "description": "Perform the Level 4 magic attack with the Barbarian.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/092A72C7CAB9DC4905EE3D7FEB1A199D2360E3D8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 38.4
+    },
+    {
+      "id": 6,
+      "name": "Potion",
+      "description": "Collect three potions from a thief or party of thieves.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/15C534E9860AB23CBC0F060CD967EBE635F0EF67.PNG",
+      "earned": true,
+      "earnedAt": "2018-09-20T22:14:51Z",
+      "rarityPercent": 75.1
+    },
+    {
+      "id": 7,
+      "name": "Survivor",
+      "description": "Choose any character and reach \"Across the Sea\" (Stage 5) without dying once.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/8BB6BB2E553C67E040EB8FC5A252955E2A2CB8E7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10
+    },
+    {
+      "id": 8,
+      "name": "Co-op Win",
+      "description": "Beat the game in local Co-op mode.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/B67561EF0AB5AAD3AEBD131010AC2B74CEC254FB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.6
+    },
+    {
+      "id": 9,
+      "name": "Online Co-op",
+      "description": "Complete an online Co-op game.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/7F29A94AD5F1178FA8010508A15A47B1023E48C8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8
+    },
+    {
+      "id": 10,
+      "name": "Win",
+      "description": "Beat the game.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/A5159330E421561C89F390D97333F31E0FEECB4B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 46.9
+    },
+    {
+      "id": 11,
+      "name": "Perfect Win",
+      "description": "Beat the game without continuing.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR00597_00_00DC279AADE7252E024761472D97BBA1049E32B774/F550A1AA2CEADB1B0488FE82C9AC7EFA7D9B38EF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.4
+    }
+  ]
+}

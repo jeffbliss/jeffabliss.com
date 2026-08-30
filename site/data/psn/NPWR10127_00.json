@@ -1,0 +1,121 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR10127_00",
+  "slug": "psn-no-time-to-explain",
+  "name": "No Time To Explain",
+  "titlePlatform": "PS4",
+  "progressPercent": 5,
+  "lastUpdated": "2019-01-30T02:38:06Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Newbie",
+      "description": "Start playing",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/3D13EAAB25E47A256110C8117945F9558C948894.PNG",
+      "earned": true,
+      "earnedAt": "2019-01-30T02:38:02Z",
+      "rarityPercent": 96.8
+    },
+    {
+      "id": 1,
+      "name": "Haters Gonna Hate",
+      "description": "Dance through the first universe and don't stop for nothing",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/8B0CDD1ADBE80C2B7E140CA081614EBD4D252EDD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.6
+    },
+    {
+      "id": 2,
+      "name": "Speedrun",
+      "description": "Finish Shotgun universe in under 60 seconds",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/1CC97FAEFEDE268FE3E946DAFFDEC7DB24FF1F02.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.3
+    },
+    {
+      "id": 3,
+      "name": "Steedrun",
+      "description": "Play through Straitjacket Darkness universe without dying, with a horse head",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/C1C01A8F771CB0F3EF2B35D47BE06494D3A2D614.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.3
+    },
+    {
+      "id": 4,
+      "name": "Greedrun",
+      "description": "Play through Fat Cake universe and eat every fat cake, with a hamburger for a face",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/CA64B8A8476D47E011FF98289C6165DCC72EC8F7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.7
+    },
+    {
+      "id": 5,
+      "name": "Dinorun",
+      "description": "Beat the scrolling shooter segment without dying, as a dinosaur",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/D1F951658CF8E6C4295EEA383E62D8AB2417E27D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.4
+    },
+    {
+      "id": 6,
+      "name": "Mmyes Indeedrun",
+      "description": "Beat Rejected Green Clone universe in under a minute, wearing a monocle and a top-hat",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/7185B33597A9D30D3730F9381830C0FF7D8F052F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.2
+    },
+    {
+      "id": 7,
+      "name": "That was it",
+      "description": "Finish the whole damn game",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/4E24EDC8F7C796071F7B2B6DFC1DE7BF077FA486.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.9
+    },
+    {
+      "id": 8,
+      "name": "Hatsamingo",
+      "description": "Collect half the hats",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/8B44C59E6E6E1295CE4E5CAAC8CFB2FD9A387EB5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5
+    },
+    {
+      "id": 9,
+      "name": "Hatsamungojungo",
+      "description": "Collect all the hats",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10127_00_002FBA5B650E7AEA68088D121117B55DF618160EFF/4DCB3091AC5CE0402B1FC9BC5F1C7C2E1A3F7538.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.8
+    }
+  ]
+}

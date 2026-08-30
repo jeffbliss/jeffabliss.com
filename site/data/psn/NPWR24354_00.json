@@ -1,0 +1,154 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR24354_00",
+  "slug": "psn-rabisco",
+  "name": "Rabisco+",
+  "titlePlatform": "PS5",
+  "progressPercent": 100,
+  "lastUpdated": "2021-10-13T00:45:15Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Platinum Star",
+      "description": "Get all other trophies.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/10a103f2-6a98-4888-b63e-80b868981605.png",
+      "earned": true,
+      "earnedAt": "2021-10-13T00:45:14Z",
+      "rarityPercent": 77.7
+    },
+    {
+      "id": 1,
+      "name": "How to walk",
+      "description": "You gave your first steps!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/3d72ab2d-fa03-4fdf-a478-43dd86b090ca.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:24:34Z",
+      "rarityPercent": 96.1
+    },
+    {
+      "id": 2,
+      "name": "Grey world 50%",
+      "description": "You're halfway through the Grey World!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/3d55e60c-481f-489e-8b7e-724c6f1b76f4.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:26:47Z",
+      "rarityPercent": 93.1
+    },
+    {
+      "id": 3,
+      "name": "Grey world 100%",
+      "description": "You've finished the Grey World!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/3b6263ae-d461-4873-a65f-205ed1fb9dd4.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:29:56Z",
+      "rarityPercent": 90.8
+    },
+    {
+      "id": 4,
+      "name": "Blue world 50%",
+      "description": "You're halfway through the Blue World!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/6cd5a36f-52c4-4d7f-afbe-252e1ab46c72.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:32:04Z",
+      "rarityPercent": 87.2
+    },
+    {
+      "id": 5,
+      "name": "Blue world 100%",
+      "description": "You've finished the Blue World!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/42b1fd14-bc42-4071-a93b-dd628c49d9c1.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:36:43Z",
+      "rarityPercent": 82.6
+    },
+    {
+      "id": 6,
+      "name": "Green world 50%",
+      "description": "You're halfway through the Green World!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/11750a02-1d81-469d-8ce7-7357139bb25e.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:40:45Z",
+      "rarityPercent": 80.5
+    },
+    {
+      "id": 7,
+      "name": "Green world 100%",
+      "description": "You've finished the Green World!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/f7539cc0-0e04-4b8c-8e08-18f7e288c6eb.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:45:10Z",
+      "rarityPercent": 79.4
+    },
+    {
+      "id": 8,
+      "name": "Beige world 50%",
+      "description": "You're halfway through the Beige World!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/794a8283-b6ef-44be-ac95-ae0601a0af53.png",
+      "earned": true,
+      "earnedAt": "2021-10-13T00:37:24Z",
+      "rarityPercent": 78.9
+    },
+    {
+      "id": 9,
+      "name": "Beige world 100%",
+      "description": "You've finished the Beige World!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/a3d4d87b-8588-4a65-b77e-a90c2d611941.png",
+      "earned": true,
+      "earnedAt": "2021-10-13T00:45:14Z",
+      "rarityPercent": 78.4
+    },
+    {
+      "id": 10,
+      "name": "Colorful",
+      "description": "You've found at least three paint buckets!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/ca542bae-2b92-4819-b9d2-8c7f93b03580.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:43:47Z",
+      "rarityPercent": 78.5
+    },
+    {
+      "id": 11,
+      "name": "They shine",
+      "description": "You've found at least three gems!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/22c9f231-9e7e-4657-84a1-af7fe873d500.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:40:02Z",
+      "rarityPercent": 78.6
+    },
+    {
+      "id": 12,
+      "name": "A sky full of stars",
+      "description": "You've found all the moon's stars from at least 20 levels!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24354_00/aadc5db0-8a31-415c-bed7-5865973591d1.png",
+      "earned": true,
+      "earnedAt": "2021-10-09T02:36:43Z",
+      "rarityPercent": 81.6
+    }
+  ]
+}

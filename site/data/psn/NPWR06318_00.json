@@ -1,0 +1,165 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR06318_00",
+  "slug": "psn-the-witness",
+  "name": "The Witness",
+  "titlePlatform": "PS4",
+  "progressPercent": 100,
+  "lastUpdated": "2017-07-27T20:33:48Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Platinum",
+      "description": "Get every trophy.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/47F8507C68A9229CDF9279F5B668619BF70789C7.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-27T20:33:43Z",
+      "rarityPercent": 2.2
+    },
+    {
+      "id": 1,
+      "name": "Shady Trees",
+      "description": "Activate the Shady Trees laser.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/58F2741DA16B9A97039BAAA21A138CE2119E03CE.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-23T13:38:12Z",
+      "rarityPercent": 16
+    },
+    {
+      "id": 2,
+      "name": "Symmetry",
+      "description": "Activate the Symmetry laser.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/523BD9FB7D863CBCC79704DDA3F8A64C0057D69F.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-19T00:01:02Z",
+      "rarityPercent": 35.2
+    },
+    {
+      "id": 3,
+      "name": "Desert Ruin",
+      "description": "Activate the Desert Ruin laser.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/FC93D103301149708FC1284D6DA98E6CEECA3B43.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-22T16:18:43Z",
+      "rarityPercent": 19.3
+    },
+    {
+      "id": 4,
+      "name": "Treehouses",
+      "description": "Activate the Treehouse laser.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/19F820DF9F1B743645E7EBEBA54ACFB5C14CE960.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-22T13:58:47Z",
+      "rarityPercent": 12.2
+    },
+    {
+      "id": 5,
+      "name": "Keep",
+      "description": "Activate the Keep laser.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/C7018D6636721730DB6BF6E1CD208CC6762AC414.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-22T14:32:42Z",
+      "rarityPercent": 17.3
+    },
+    {
+      "id": 6,
+      "name": "Quarry",
+      "description": "Activate the Quarry laser.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/8CD9D584318F2B043540AFC6E94B3266C3554301.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-23T18:05:42Z",
+      "rarityPercent": 12.9
+    },
+    {
+      "id": 7,
+      "name": "Marsh",
+      "description": "Activate the Marsh laser.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/9029B9A3F58D505AD1324BCE1D36E7563321A0C4.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-22T21:38:44Z",
+      "rarityPercent": 13.4
+    },
+    {
+      "id": 8,
+      "name": "Jungle",
+      "description": "Activate the Jungle laser.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/F5A34E320ABC525B5F891C793DCD6E5CB0AEEEA7.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-24T00:20:34Z",
+      "rarityPercent": 11.6
+    },
+    {
+      "id": 9,
+      "name": "Monastery",
+      "description": "Activate the Monastery laser.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/F87CDAB49A4AE3FAADD5868006B4F1F3A8FE91D4.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-23T18:26:39Z",
+      "rarityPercent": 14.8
+    },
+    {
+      "id": 10,
+      "name": "Bunker",
+      "description": "Activate the Bunker laser.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/155F19812EF1EFDEFC03C9FFBCFC1A2A68CEDE97.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-20T21:16:21Z",
+      "rarityPercent": 14.9
+    },
+    {
+      "id": 11,
+      "name": "Town",
+      "description": "Activate the Town laser.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/7030681302E5CFC1A2ABDAB91CCE5808052863C8.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-24T23:24:17Z",
+      "rarityPercent": 11.5
+    },
+    {
+      "id": 12,
+      "name": "Endgame",
+      "description": "Reach the end.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/4475383E6C5D681B9D06AB3207A0B8879C433F71.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-27T00:21:06Z",
+      "rarityPercent": 8.7
+    },
+    {
+      "id": 13,
+      "name": "Challenge",
+      "description": "Complete a certain challenge.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06318_00_000670AD6BE430E8F4881EE0A6CD9507BC91B7DD78/510983B9ABE84CADB3ACA2CFFC6CD70889F5A363.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-27T20:33:43Z",
+      "rarityPercent": 2.2
+    }
+  ]
+}

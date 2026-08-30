@@ -1,0 +1,165 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR24743_00",
+  "slug": "psn-puzzle-bobble-3d-vacation-odyssey",
+  "name": "Puzzle Bobble 3D: Vacation Odyssey ",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "2024-03-07T23:35:33Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Extended Vacation",
+      "description": "Earn all Tophies.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/1a0d3d44-2185-4652-8034-7edbddb0d144.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.5
+    },
+    {
+      "id": 1,
+      "name": "Tourist Trapped",
+      "description": "Complete Story Mode Stages 1-10 to confront Bonner.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/312d8b83-84a4-4cfc-bdab-4e4ace701d31.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 31.7
+    },
+    {
+      "id": 2,
+      "name": "Lost the Map",
+      "description": "Complete Story Mode Stages 11-20 to meet the helpful Chack'n.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/9eb6137b-ec0f-4998-8a88-4b9b1b7c4a9a.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.7
+    },
+    {
+      "id": 3,
+      "name": "Chack'n Pop",
+      "description": "Complete Story Mode Stages 21-30 to free some Chack'n.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/d382099e-ac4a-49d0-9794-db29d2c9ba42.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.3
+    },
+    {
+      "id": 4,
+      "name": "Trouble in Paradise",
+      "description": "Complete Story Mode Stages 31-40 to explore more islands.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/392cbd13-328e-4847-ad05-ee6185bd3f32.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.6
+    },
+    {
+      "id": 5,
+      "name": "Summer Solstice",
+      "description": "Complete Story Mode Stages 41-50 to reach the halfway point.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/3e40356d-eb6a-4996-b92c-2e673a747047.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.3
+    },
+    {
+      "id": 6,
+      "name": "Pab's Party",
+      "description": "Complete Story Mode Stages 51-60 to save Pab.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/1df1afd8-ec30-417d-acff-494de3878ded.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.5
+    },
+    {
+      "id": 7,
+      "name": "Big League Beach Buff",
+      "description": "Complete Story Mode Stages 61-70 to find more clues.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/e664a471-ad1f-4850-b883-20cdfcc96bc7.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.3
+    },
+    {
+      "id": 8,
+      "name": "Peb's Picnic",
+      "description": "Complete Story Mode Stages 71-80 to save Peb.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/c81f26db-e451-4bf6-8af1-489147b7a046.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.9
+    },
+    {
+      "id": 9,
+      "name": "Last Days of Vacation",
+      "description": "Complete Story Mode Stages 81-90 to chase Bonner.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/76c8e083-8ba6-425a-85a8-2e6ca775bda6.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.9
+    },
+    {
+      "id": 10,
+      "name": "Bon(ner) Voyage!",
+      "description": "Complete All Story Mode Stages to defeat Bonner.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/faeb0b5f-61f6-49bd-8fb8-000ac0aaad62.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.6
+    },
+    {
+      "id": 11,
+      "name": "Overpowered Up",
+      "description": "Use All 3 Powerups in a single attempt at a level. ",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/1a432136-b2ef-425e-ba01-3c79e24a2dcf.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.4
+    },
+    {
+      "id": 12,
+      "name": "Bubble Bob-ble",
+      "description": "Shoot Bob with any color bubble.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/c8743c1b-c114-414e-b594-7bc26018698f.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13.3
+    },
+    {
+      "id": 13,
+      "name": "Symphony of Bubbles",
+      "description": "Get a Stupendous Match (100 bubbles).",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24743_00/5a4d8b23-b38f-432c-84a4-e3a93a736240.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 24.1
+    }
+  ]
+}

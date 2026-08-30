@@ -1,0 +1,242 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR13118_00",
+  "slug": "psn-megaman-legacy-collection-2",
+  "name": "Megaman Legacy Collection 2",
+  "titlePlatform": "PS4",
+  "progressPercent": 9,
+  "lastUpdated": "2018-09-15T16:51:53Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "The Fateful Showdown!",
+      "description": "Prove yourself stronger than Bass and complete Mega Man 7.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/447B4F71B3B10C7FDF16C8222E4B24AB5330F90E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.7
+    },
+    {
+      "id": 1,
+      "name": "Metal Heroes",
+      "description": "Eliminate the Evil Energy and complete Mega Man 8.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/D9BF46C1B671F1024AE2BDE747728F5F22A315B3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.3
+    },
+    {
+      "id": 2,
+      "name": "The Ambition Resurges!",
+      "description": "Liberate Dr. Light and complete Mega Man 9.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/8237BFD0318C79AB8A8506A9A5717B43F7905791.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.3
+    },
+    {
+      "id": 3,
+      "name": "The Ambition Resurges! Proto Man",
+      "description": "Use Proto Man to liberate Dr. Light and complete Mega Man 9.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/8651C7DEE9E39BA981C774E986508F874FC80A10.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.7
+    },
+    {
+      "id": 4,
+      "name": "The Threat from Space!",
+      "description": "Cure the Roboenza and complete Mega Man 10.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/04BE82A8085F216972C190C3FE1C6371046E4734.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.5
+    },
+    {
+      "id": 5,
+      "name": "The Threat from Space! Proto Man",
+      "description": "Use Proto Man to cure the Roboenza and complete Mega Man 10.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/40C9B9D5E4928F6F9789729C645BCA0308EB6333.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.7
+    },
+    {
+      "id": 6,
+      "name": "The Threat from Space! Bass",
+      "description": "Use Bass to cure the Roboenza and complete Mega Man 10.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/EBCB022BB4A2E74B00B980C3A9A2B223E1EBC892.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3
+    },
+    {
+      "id": 7,
+      "name": "Bronze x1",
+      "description": "Earn 1 bronze medal by completing a challenge.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/E4F3900F6833CE810D736B6ACA08062F874F6984.PNG",
+      "earned": true,
+      "earnedAt": "2018-09-15T16:51:51Z",
+      "rarityPercent": 7.7
+    },
+    {
+      "id": 8,
+      "name": "Bronze x10",
+      "description": "Earn 10 bronze medals by completing challenges.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/70A4AD61FC82E502641064EBC5FD2D6F2250539D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.8
+    },
+    {
+      "id": 9,
+      "name": "Bronze x25",
+      "description": "Earn 25 bronze medals by completing challenges.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/98A7A219849461F38981C9DDB1D41AB4D38704AC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.5
+    },
+    {
+      "id": 10,
+      "name": "Silver x1",
+      "description": "Earn 1 silver medal by completing a challenge.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/8966F44EC069BC35C9507BC154DEEB35978428F6.PNG",
+      "earned": true,
+      "earnedAt": "2018-09-15T16:51:51Z",
+      "rarityPercent": 7.3
+    },
+    {
+      "id": 11,
+      "name": "Silver x10",
+      "description": "Earn 10 silver medals by completing challenges.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/FB653B9857EFC5FEADDA4ECDE0DF54492E13E256.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.6
+    },
+    {
+      "id": 12,
+      "name": "Silver x25",
+      "description": "Earn 25 silver medals by completing challenges.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/79F3B4A080A647E5E7F2E017542CCE3603BAB670.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.4
+    },
+    {
+      "id": 13,
+      "name": "Gold x1",
+      "description": "Earn 1 gold medal by completing a challenge.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/7BA97FED3402A995D0E688B9FC28FBA4E6B10CBD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.3
+    },
+    {
+      "id": 14,
+      "name": "Gold x10",
+      "description": "Earn 10 gold medals by completing challenges.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/0D52F385DA2C1438383C74914A5CE17BAADA9259.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2
+    },
+    {
+      "id": 15,
+      "name": "Gold x25",
+      "description": "Earn 25 gold medals by completing challenges.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/E4B8FBCE16FD3F2E6C88D1D582A28264059E7A41.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.2
+    },
+    {
+      "id": 16,
+      "name": "Gold x50",
+      "description": "Earn 50 gold medals by completing challenges.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/BE0DCDD9BCD8F0138F6072C50D0BC47DD4E8DE65.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.9
+    },
+    {
+      "id": 17,
+      "name": "Bring Them All On! (Mega Man 7)",
+      "description": "Complete the \"BOSS RUSH\" challenge (Mega Man 7).",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/03867F17941F02C6DAE33BE955286E754B9BFE73.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.2
+    },
+    {
+      "id": 18,
+      "name": "Bring Them All On! (Mega Man 8)",
+      "description": "Complete the \"BOSS RUSH\" challenge (Mega Man 8).",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/51837F3743B88773B95F1433A7C95CAFB3D092E4.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.1
+    },
+    {
+      "id": 19,
+      "name": "Bring Them All On! (Mega Man 9)",
+      "description": "Complete the \"BOSS RUSH\" challenge (Mega Man 9).",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/970B4BED57259ECA911A588CD5E265CD4DAC7821.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2
+    },
+    {
+      "id": 20,
+      "name": "Bring Them All On! (Mega Man 10)",
+      "description": "Complete the \"BOSS RUSH\" challenge (Mega Man 10).",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13118_00_0001B9AAE5C9041168E69A5479B44DDE8025F75354/9D7DFD9F563DB64AB18760349080EE0EF44EC3DC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.9
+    }
+  ]
+}

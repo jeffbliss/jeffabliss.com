@@ -1,0 +1,121 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR10996_00",
+  "slug": "psn-steredenn",
+  "name": "Steredenn",
+  "titlePlatform": "PS4",
+  "progressPercent": 10,
+  "lastUpdated": "2017-08-11T00:17:25Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "One Small Step",
+      "description": "Destroy a Bomber boss\n",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/12058EDD60F6233B8EC3E8F441B4900B3222A709.PNG",
+      "earned": true,
+      "earnedAt": "2017-08-11T00:14:35Z",
+      "rarityPercent": 81.4
+    },
+    {
+      "id": 1,
+      "name": "Giant Leap",
+      "description": "Destroy a Frigate boss",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/879D64B2C0122E4BEEFB4EECC47DE187A16550B4.PNG",
+      "earned": true,
+      "earnedAt": "2017-08-11T00:17:22Z",
+      "rarityPercent": 59.6
+    },
+    {
+      "id": 2,
+      "name": "LASER!$",
+      "description": "Destroy a Destroyer boss",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/C4FFDEB590749869B695DC38D660204409C7F654.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 31.5
+    },
+    {
+      "id": 3,
+      "name": "A bit close to heaven",
+      "description": "Destroy a Cruiser boss",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/D5D52EE62016977EAB36DC5FA41467961E19C835.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 19.9
+    },
+    {
+      "id": 4,
+      "name": "They're everywhere",
+      "description": "Destroy a Carrier boss",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/7D2A776FD471D2E2E811434660123D32F84C3D32.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 15.2
+    },
+    {
+      "id": 5,
+      "name": "The Bullets before The Storm",
+      "description": "Destroy a Battleship boss",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/5B3FF8000298376F5EB9D7A7138B96EDBA3D8817.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.4
+    },
+    {
+      "id": 6,
+      "name": "The Beginning and The End",
+      "description": "Destroy the Mothership",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/D0F033B6D00C96F3170E100B6E36EA4C9C39EDFE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.3
+    },
+    {
+      "id": 7,
+      "name": "Rebel",
+      "description": "Destroy the Nemesis",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/A110386609886548013A89011FD3561C9E509ABC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5
+    },
+    {
+      "id": 8,
+      "name": "Navigator",
+      "description": "Finish the game once",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/58320EDB77F8DE5BBA8FD7CB7C97AD31431B1F5C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5
+    },
+    {
+      "id": 9,
+      "name": "Ultrawarrior",
+      "description": "Beat the game using the Blaster only",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10996_00_000FC398CE9793E1957859886D44A071F43395ED0F/A7C763DA4DD170EB740CA58A0D47A50663E49483.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.6
+    }
+  ]
+}

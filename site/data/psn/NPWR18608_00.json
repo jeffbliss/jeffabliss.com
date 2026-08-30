@@ -1,0 +1,231 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR18608_00",
+  "slug": "psn-cat-quest-ii",
+  "name": "Cat Quest II",
+  "titlePlatform": "PS4",
+  "progressPercent": 1,
+  "lastUpdated": "2021-02-22T00:03:54Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Pawlatinum",
+      "description": "You are pawsome!",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/00AEE903922296B2A4733BFD3829A668C1DA13DE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12.1
+    },
+    {
+      "id": 1,
+      "name": "Kinghood I",
+      "description": "Reached level 10!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/68A44DABEF4F6074350841D5FC9DD7D59D0A77A8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 61.2
+    },
+    {
+      "id": 2,
+      "name": "Kinghood II",
+      "description": "Reached level 50!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/897226F7D56A404D16924B8696C3999FFDF0BAFD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 30.1
+    },
+    {
+      "id": 3,
+      "name": "Kinghood III",
+      "description": "Reached level 99!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/04C045664892B9F0C4CF26D848ED8CC2D995F1C0.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 19.6
+    },
+    {
+      "id": 4,
+      "name": "Dungeon Master I",
+      "description": "Cleared 8 dungeons!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/0597B8836C1A5EB1D53027DBBE8A2961C6219F19.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 46.5
+    },
+    {
+      "id": 5,
+      "name": "Dungeon Master II",
+      "description": "Cleared 38 dungeons!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/A9D92E549E1D225849F7D638F78A6A2B22798E4D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 20.8
+    },
+    {
+      "id": 6,
+      "name": "Dungeon Master III",
+      "description": "Cleared all 73 dungeons!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/40B77499E38214B6DA32EDBC8DBBDE86E6FED001.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12.6
+    },
+    {
+      "id": 7,
+      "name": "Furriend of the People I",
+      "description": "Completed 7 Side Quests!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/C36595A5D5DF7D86ED4A675C8F70EB54663070F1.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.9
+    },
+    {
+      "id": 8,
+      "name": "Furriend of the People II",
+      "description": "Completed 37 Side Quests!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/4E1BF440BF5CA38C2F2464B8D641DA10CADA6CBF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.2
+    },
+    {
+      "id": 9,
+      "name": "Furriend of the People III",
+      "description": "Completed all 67 Side Quests!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/463A6B3449333A4ED093514DE6A6D3CC4B44C53C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 15.3
+    },
+    {
+      "id": 10,
+      "name": "Paws Together",
+      "description": "Completed the Main Quest!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/180D3470FA758BF5033F095EA6FEEC027DEFE137.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 20.8
+    },
+    {
+      "id": 11,
+      "name": "Arcane Paws I",
+      "description": "Obtained 4 spells!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/575AE5B11F8E1B5A2C7C5C5739CEEFA9186F4353.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 57.3
+    },
+    {
+      "id": 12,
+      "name": "Arcane Paws II",
+      "description": "Obtained 8 spells!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/835FFC778D1CFC9BBCB00BA6664F6D36D9542DCB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 25.2
+    },
+    {
+      "id": 13,
+      "name": "Arcane Paws III",
+      "description": "Obtained all 12 spells!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/1F0A413C21CE9F8DB68AA7428E1EFE9442912A99.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 15.9
+    },
+    {
+      "id": 14,
+      "name": "Fashionista Tails I",
+      "description": "Obtained 34 pieces of equipment!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/7275313702ADBB0696D1B45C694F3E250088244B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 34
+    },
+    {
+      "id": 15,
+      "name": "Fashionista Tails II",
+      "description": "Obtained 67 pieces of equipment!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/04BAAB5148A0D8A7DD8E7692418FA92858DAC697.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 19.7
+    },
+    {
+      "id": 16,
+      "name": "Fashionista Tails III",
+      "description": "Obtained all 101 pieces of equipment!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/C20914BE405E46268BDDD0C91052B1DE91C899DE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12.6
+    },
+    {
+      "id": 17,
+      "name": "The Lupus Empire",
+      "description": "Entered the new continent!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/E0B6A0C139AD94726B3A0C6874F8FA1E53734353.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 43.8
+    },
+    {
+      "id": 18,
+      "name": "Catventure Begins",
+      "description": "Completed the first quest!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/AD90FBE670C0A9A28DCF9E4F3A5066398FF9500C.PNG",
+      "earned": true,
+      "earnedAt": "2021-02-22T00:03:47Z",
+      "rarityPercent": 85.3
+    },
+    {
+      "id": 19,
+      "name": "Royal Fur",
+      "description": "Unlocked 3 Royal Arts!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18608_00_0042787A792D62DA9277FD303FDF5C91581E33A707/B034B8397DD79965C4B16D3D3F5B0DB1340AEDDF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 27.6
+    }
+  ]
+}

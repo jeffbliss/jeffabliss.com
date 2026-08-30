@@ -1,0 +1,121 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR29919_00",
+  "slug": "psn-hourglass",
+  "name": "Hourglass",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "2022-07-31T18:49:19Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Your journey begins",
+      "description": "Path to the first seal",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/e6bf3189-f710-4906-8642-b0cfdf3277ff.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 62.8
+    },
+    {
+      "id": 1,
+      "name": "One of many",
+      "description": "Obtain the first crystal",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/448e017b-a8e3-468c-bfbc-3a96eca1103c.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 52.7
+    },
+    {
+      "id": 2,
+      "name": "The Scarab",
+      "description": "Insert the first seal",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/6b5368f7-0c6f-4aaf-b72f-75e2f358e2d2.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 46.6
+    },
+    {
+      "id": 3,
+      "name": "Hourglass",
+      "description": "Obtain the Hourglass",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/c6ebdfec-c997-4bb4-ac79-0b5cc62d7eac.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 43.4
+    },
+    {
+      "id": 4,
+      "name": "The fifth crystal",
+      "description": "You could need this one...",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/80dff8e8-9281-48b5-bc82-b726eb26807d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 44.6
+    },
+    {
+      "id": 5,
+      "name": "The Crocodile",
+      "description": "Insert the second seal",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/33255f04-8a45-4ab5-ab42-e7ed532ab750.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 37.9
+    },
+    {
+      "id": 6,
+      "name": "Arthur",
+      "description": "Find Arthur",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/e88d9e36-1255-45a0-9352-a837b464bf2b.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 35.3
+    },
+    {
+      "id": 7,
+      "name": "The Snake",
+      "description": "Insert the last seal and open the gate",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/f44aef4c-72f9-4fb7-a6e2-d20a4bbf4481.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 31.5
+    },
+    {
+      "id": 8,
+      "name": "Secret cave",
+      "description": "Deep under the pyramid",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/1a21f97a-8125-4fe9-aad7-2ffad9bcb349.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 26.9
+    },
+    {
+      "id": 9,
+      "name": "Prophecy",
+      "description": "Solve all puzzles",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29919_00/f5e8660d-e43a-4474-b32d-6182f3fb07d1.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 26.6
+    }
+  ]
+}

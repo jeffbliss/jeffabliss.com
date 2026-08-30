@@ -1,0 +1,253 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR14113_00",
+  "slug": "psn-aquatic-adventures-trophy-set",
+  "name": "Aquatic Adventure's trophy set",
+  "titlePlatform": "PS4",
+  "progressPercent": 2,
+  "lastUpdated": "2019-03-02T22:30:55Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Ultimate Survivor",
+      "description": "Unlock All trophies",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/F56848F96B442D232F61C38944EB0EF916C78F08.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.2
+    },
+    {
+      "id": 1,
+      "name": "The Worm",
+      "description": "Kill the worm",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/1DF5F08F71D06681E5A304A9DE4D257FE88C088A.PNG",
+      "earned": true,
+      "earnedAt": "2019-03-02T22:30:52Z",
+      "rarityPercent": 67.8
+    },
+    {
+      "id": 2,
+      "name": "The Fathers",
+      "description": "Kill the seahorses",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/60B414C64BA3618279F0B09306DCAA990D03A8FB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39
+    },
+    {
+      "id": 3,
+      "name": "The Forgotten One",
+      "description": "Kill the zombie fish",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/DB672A7ECE35C4EC7DA503AE226F34044F2EFFB1.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 26.8
+    },
+    {
+      "id": 4,
+      "name": "The Tranquil",
+      "description": "Kill the octopus",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/F1ADA383E045D7A9FC72992DDD2A377217BD699A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 27.8
+    },
+    {
+      "id": 5,
+      "name": "The False Light",
+      "description": "Kill the anglerfish",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/790254D757B2D0F77D95FDE8BA13A517962DE4FA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 25.2
+    },
+    {
+      "id": 6,
+      "name": "The Chain Gang",
+      "description": "Kill the Hammerheads",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/8589C56C0A4C20ECBD49BA051A5A376ECF2DDE09.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 24.3
+    },
+    {
+      "id": 7,
+      "name": "The Parasite",
+      "description": "Kill the gross parasite",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/B9363243047B6EC0DF810E78CF44FF5FAFD6BFAB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 24
+    },
+    {
+      "id": 8,
+      "name": "The Defiler",
+      "description": "Kill the lobster",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/9BB48A1395503FE0E68986F395EE924A628CBC19.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 23.2
+    },
+    {
+      "id": 9,
+      "name": "The Experiment",
+      "description": "Kill the bloodray",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/3605C0CB0AD0954B76D2E440475E1597FFB3D76D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.8
+    },
+    {
+      "id": 10,
+      "name": "The Heart Of The City",
+      "description": "Kill the flower",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/88E608ABF71DAB401E04B49696BB25BF570B473C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 20.1
+    },
+    {
+      "id": 11,
+      "name": "...And the rest is lost",
+      "description": "Complete the game",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/32589D477F8A3E6044907296AA85F6D04BFD85A8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 16.3
+    },
+    {
+      "id": 12,
+      "name": "The Guardian",
+      "description": "Kill the ironjelly",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/44B56988E1C5E71CDC3521930EB942913482647F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 16.3
+    },
+    {
+      "id": 13,
+      "name": "Hunter",
+      "description": "Kill 100 fish",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/6CB4C58E46D44A1E555C1AABA32B58FB229ABDB5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 16.9
+    },
+    {
+      "id": 14,
+      "name": "Readit",
+      "description": "Read all holotapes",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/6937BEBBDCA200D75A6D3E480C66D4466B03F887.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.3
+    },
+    {
+      "id": 15,
+      "name": "Modern Times",
+      "description": "Find all the upgrades",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/EA7414AB81281D9F091AE4133F05D906E990F72A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13
+    },
+    {
+      "id": 16,
+      "name": "Hardcore",
+      "description": "Unlock hardcore mode",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/34A0BC8A4F105998A12C8D2D65DE697198141F7E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.4
+    },
+    {
+      "id": 17,
+      "name": "Sadist",
+      "description": "Incapacitate the Tranquil",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/CA896E83119B4B563FC8A5F977F92A7E420C14D8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.4
+    },
+    {
+      "id": 18,
+      "name": "Play To Kill",
+      "description": "Complete Boss-rush Mode",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/91ADFEFE6183F9109D26A3FD36CEA5B31CCEEAFD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.2
+    },
+    {
+      "id": 19,
+      "name": "Possimpible",
+      "description": "Complete the game without any upgrade crates",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/23D962A163357170D8E52F9A9EFE438E75C53076.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.4
+    },
+    {
+      "id": 20,
+      "name": "The Last Human",
+      "description": "Complete Hardcore mode",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/581C6648082019C1D27E8BB1EBE53CF23193CAD9.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.4
+    },
+    {
+      "id": 21,
+      "name": "Human Race Extinct",
+      "description": "You're the last human. Extinguish the human race.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR14113_00_00077152F096F1F7FFFC9B0B0F749D7745ACE7EAD9/FAB164551EDB32BEF0E028E9B4D0FEB4F4240F51.PNG",
+      "earned": true,
+      "earnedAt": "2019-03-02T22:25:05Z",
+      "rarityPercent": 92
+    }
+  ]
+}

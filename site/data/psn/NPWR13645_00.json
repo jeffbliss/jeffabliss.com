@@ -1,0 +1,121 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR13645_00",
+  "slug": "psn-pankapu",
+  "name": "Pankapu",
+  "titlePlatform": "PS4",
+  "progressPercent": 5,
+  "lastUpdated": "2019-10-26T18:58:22Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "The Soulgate",
+      "description": "Complete the game",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/498BA0753F0A319F2B66CBCE09E3FFB273F87051.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10
+    },
+    {
+      "id": 1,
+      "name": "Peppu",
+      "description": "Leave Peppu",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/029873410E9AFCC33F15C367C4996224355E0D77.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 21.4
+    },
+    {
+      "id": 2,
+      "name": "Oä and Omnia",
+      "description": "Find all 200 Mudjins in Peppu",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/BCD5ABFEB4F2FF25AFF42FFF9256EB0FEC9DC005.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.6
+    },
+    {
+      "id": 3,
+      "name": "Itopian Forge",
+      "description": "Find all 7 Forges in Peppu",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/EB6157074C4AC88B8DB75001D0DFD1860C2D525F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13
+    },
+    {
+      "id": 4,
+      "name": "Ferem",
+      "description": "Find a Ferem’s Tear",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/5B2DF9BEE1271CDC1EB5FFF8EC038EFCFA12B8EC.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-26T18:58:19Z",
+      "rarityPercent": 84.7
+    },
+    {
+      "id": 5,
+      "name": "Sadhil",
+      "description": "Discover a Sadhil Seed",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/6742E3AD58FE98D49845A41482FBBEE8D8EE5196.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 49
+    },
+    {
+      "id": 6,
+      "name": "Mudjins",
+      "description": "Find a Mudjin",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/D3BA0683F677833F0EB1E322941E7D8476F5E0BC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 62.1
+    },
+    {
+      "id": 7,
+      "name": "Ohiti, Ohoko and Ohala",
+      "description": "Seal the bond between Pankapu and his friends.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/8CEBC9F9E183A06B0623E870ECAD4E90F97A5CF8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.3
+    },
+    {
+      "id": 8,
+      "name": "Nebula",
+      "description": "Obtain a Nebula",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/06F708DAE5D87B5EC342805920FF1FBBEC6BCECD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 32.8
+    },
+    {
+      "id": 9,
+      "name": "Aegises",
+      "description": "Obtain the Ardor Aegis",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13645_00_00523680554DD3FE13CD1B2C71891D58C643570A73/F1638FBD66ABD285FD68168935CB1BF89A303E5E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 26.7
+    }
+  ]
+}

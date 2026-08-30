@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR18271_00",
+  "slug": "psn-contra-anniversary-collection",
+  "name": "Contra Anniversary Collection",
+  "titlePlatform": "PS4",
+  "progressPercent": 0,
+  "lastUpdated": "2022-05-02T21:59:34Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "True Contra Warrior",
+      "description": "Complete all games",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/7745ABD6167F1E2C5305748C48C07FDDF237B23E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1
+    },
+    {
+      "id": 1,
+      "name": "Run N' Gun Specialist",
+      "description": "Play each game",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/3D703636E0DD7ACB0E0C33A9A8330526544652D5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7
+    },
+    {
+      "id": 2,
+      "name": "Irresistible Force",
+      "description": "Complete Contra (Arcade)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/AE1131B65E14765F463634E17342E7DD5B2E71B7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.8
+    },
+    {
+      "id": 3,
+      "name": "The Quest for Freedom Continues!",
+      "description": "Complete Super Contra",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/4DE64843DAFFB97E5688D3916870A9D819D48DD8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.7
+    },
+    {
+      "id": 4,
+      "name": "First Flag on the Chopper",
+      "description": "Complete Contra (JP)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/540F3D5091115D2817415FA96BDB31B368DD6542.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5
+    },
+    {
+      "id": 5,
+      "name": "Is this 1987?",
+      "description": "Complete Contra (NA)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/FB0E897523A24A9F1B435030DFDF45FE29032CDC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 16.7
+    },
+    {
+      "id": 6,
+      "name": "Still Sharp After One Year",
+      "description": "Complete Super C",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/C98C699BEAF284B8E3FBFE95E25683A1B2BA43BD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.5
+    },
+    {
+      "id": 7,
+      "name": "Your Efforts Will Not be Forgotten",
+      "description": "Complete Contra III: The Alien Wars",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/08AF69D47E82B246484BF506C17B32AEFE82CCE8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.4
+    },
+    {
+      "id": 8,
+      "name": "Best Island Vacation Ever",
+      "description": "Complete Operation C",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/8971A8CE407F0D517706C93EE35936170474B82F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.8
+    },
+    {
+      "id": 9,
+      "name": "Victory Lap",
+      "description": "Clear Route A in Contra: Hard Corps",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/19126FBF8414E7E8F3DD55DDE74A6E6D48CD15DE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.4
+    },
+    {
+      "id": 10,
+      "name": "Good Job!",
+      "description": "Clear Route B in Contra: Hard Corps",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/902AC47F97FD02BEDEB9F344E6478F8D8E2BC503.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.6
+    },
+    {
+      "id": 11,
+      "name": "Better Luck Next Time",
+      "description": "Clear Route C in Contra: Hard Corps",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/A928F9054ABF0D21F3C98EAAC52B654AC1C1784E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.6
+    },
+    {
+      "id": 12,
+      "name": "A Step Away From Becoming God",
+      "description": "Clear Route D in Contra: Hard Corps",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/5C3C38A4F2185F8097D8B49CFBAE8CD5F4A4147A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.4
+    },
+    {
+      "id": 13,
+      "name": "Monkey Business",
+      "description": "Clear Route E in Contra: Hard Corps",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/13844ABC0DC4E74EA4F89438FE7AEFF19F4AA9BF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.6
+    },
+    {
+      "id": 14,
+      "name": "A Peaceful Time Will Come!",
+      "description": "Complete Super Probotector: Alien Rebels",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/77C4B38495584BB5BF64D30D58E655539B68603B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.3
+    },
+    {
+      "id": 15,
+      "name": "See You Next Mission!",
+      "description": "Complete Probotector",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR18271_00_002DE0C45B78F826DA5310766289BEAC5EA848DD35/C3DD1F8ED2F9142413504DCA0C8038F84BCDB548.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.5
+    }
+  ]
+}

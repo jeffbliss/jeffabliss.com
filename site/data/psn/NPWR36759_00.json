@@ -1,0 +1,242 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR36759_00",
+  "slug": "psn-animal-well",
+  "name": "ANIMAL WELL",
+  "titlePlatform": "PS5",
+  "progressPercent": 100,
+  "lastUpdated": "2024-05-22T01:12:23Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "PLATINUM WELL",
+      "description": "Earn every trophy",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/5ea58237-fff9-4875-a82b-6510fac1ea27.png",
+      "earned": true,
+      "earnedAt": "2024-05-22T01:12:23Z",
+      "rarityPercent": 5.1
+    },
+    {
+      "id": 1,
+      "name": "EXPLORER",
+      "description": "Find the map",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/bdc46465-a913-46c2-8632-7802ace1862b.png",
+      "earned": true,
+      "earnedAt": "2024-05-09T23:04:28Z",
+      "rarityPercent": 71.3
+    },
+    {
+      "id": 2,
+      "name": "SECRET EGG",
+      "description": "Find a secret egg",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/59886898-1f9f-43c1-a0f5-46c7bfec574c.png",
+      "earned": true,
+      "earnedAt": "2024-05-09T22:47:32Z",
+      "rarityPercent": 76.2
+    },
+    {
+      "id": 3,
+      "name": "EGG ENJOYER",
+      "description": "Find 8 secret eggs",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/533b877f-fd67-403a-af92-ff89b9facb22.png",
+      "earned": true,
+      "earnedAt": "2024-05-11T23:24:52Z",
+      "rarityPercent": 26.1
+    },
+    {
+      "id": 4,
+      "name": "EGG HOBBYIST",
+      "description": "Find 16 secret eggs",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/11cc4a17-5b5b-46b9-a6c9-045469ef8d9e.png",
+      "earned": true,
+      "earnedAt": "2024-05-12T22:00:00Z",
+      "rarityPercent": 21.1
+    },
+    {
+      "id": 5,
+      "name": "EGG LORD",
+      "description": "Find 32 secret eggs",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/7ec4b93e-e367-47ee-ac31-11212fcab7a9.png",
+      "earned": true,
+      "earnedAt": "2024-05-19T01:40:38Z",
+      "rarityPercent": 13
+    },
+    {
+      "id": 6,
+      "name": "EGG WELL",
+      "description": "Find all secret eggs",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/8f045852-14c0-44b6-85b6-c6d44babb823.png",
+      "earned": true,
+      "earnedAt": "2024-05-22T00:39:41Z",
+      "rarityPercent": 7.1
+    },
+    {
+      "id": 7,
+      "name": "SECRET RABBIT",
+      "description": "Find a secret rabbit",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/e721b89e-1d28-465b-8813-2c6b69f35be1.png",
+      "earned": true,
+      "earnedAt": "2024-05-20T00:31:01Z",
+      "rarityPercent": 13.5
+    },
+    {
+      "id": 8,
+      "name": "CHAMELEON",
+      "description": "Find the V. flame",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/151deb45-7a6e-4a9c-8578-a995ab1043f4.png",
+      "earned": true,
+      "earnedAt": "2024-05-13T23:47:20Z",
+      "rarityPercent": 20.1
+    },
+    {
+      "id": 9,
+      "name": "GHOST",
+      "description": "Find the P. flame",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/87997ba2-a24a-4cfa-9ad2-795469b0d219.png",
+      "earned": true,
+      "earnedAt": "2024-05-17T23:18:59Z",
+      "rarityPercent": 18.2
+    },
+    {
+      "id": 10,
+      "name": "SEAHORSE",
+      "description": "Find the B. flame",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/af9a6fda-91a1-42ef-a43d-8bb55457428f.png",
+      "earned": true,
+      "earnedAt": "2024-05-12T21:47:45Z",
+      "rarityPercent": 19.9
+    },
+    {
+      "id": 11,
+      "name": "OSTRICH",
+      "description": "Find the G. flame",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/839f910b-eef8-483d-849c-e4b0d62aa087.png",
+      "earned": true,
+      "earnedAt": "2024-05-14T00:46:23Z",
+      "rarityPercent": 20.2
+    },
+    {
+      "id": 12,
+      "name": "CANDLE BRIGHT",
+      "description": "Light all candles",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/ccf33eb6-be96-41f7-abef-c177a8a11122.png",
+      "earned": true,
+      "earnedAt": "2024-05-21T22:12:38Z",
+      "rarityPercent": 8.8
+    },
+    {
+      "id": 13,
+      "name": "MANTICORE",
+      "description": "Release the Manticore",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/5eac61ac-d50c-4e03-92ee-ff326235a311.png",
+      "earned": true,
+      "earnedAt": "2024-05-19T01:09:54Z",
+      "rarityPercent": 16.5
+    },
+    {
+      "id": 14,
+      "name": "SNEAK",
+      "description": "Sneak up on a squirrel",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/eaf47175-2c1c-4b1a-ab8f-b62b92c18a1a.png",
+      "earned": true,
+      "earnedAt": "2024-05-22T01:12:23Z",
+      "rarityPercent": 6
+    },
+    {
+      "id": 15,
+      "name": "GOOD ENDING",
+      "description": "Get crushed by a chinchilla",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/28f535e3-d195-443e-a1e7-2fbec0073ddc.png",
+      "earned": true,
+      "earnedAt": "2024-05-22T01:03:31Z",
+      "rarityPercent": 12.8
+    },
+    {
+      "id": 16,
+      "name": "BACK AND FORTH FOREVER",
+      "description": "Find a new way to get around",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/723d2442-ccb4-411a-bb81-a372ed13f8d4.png",
+      "earned": true,
+      "earnedAt": "2024-05-11T17:23:21Z",
+      "rarityPercent": 29.8
+    },
+    {
+      "id": 17,
+      "name": "BUBBLE ECSTASY",
+      "description": "Pop 1000 bubbles",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/6fb2d5ed-d026-47fb-8712-cf76df138322.png",
+      "earned": true,
+      "earnedAt": "2024-05-20T22:09:08Z",
+      "rarityPercent": 13
+    },
+    {
+      "id": 18,
+      "name": "TRAVEL FLUTE",
+      "description": "Find a new way to get around",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/41ccbaa2-04b1-4538-b18b-0002d2144161.png",
+      "earned": true,
+      "earnedAt": "2024-05-21T21:37:46Z",
+      "rarityPercent": 17
+    },
+    {
+      "id": 19,
+      "name": "WALK THE DOG",
+      "description": "Find a new way to get around",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/9056b33e-99cb-471b-a3f1-0fcc80fc4809.png",
+      "earned": true,
+      "earnedAt": "2024-05-11T23:48:52Z",
+      "rarityPercent": 21.6
+    },
+    {
+      "id": 20,
+      "name": "EXIT",
+      "description": "Leave the well",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36759_00/c7e45f56-331f-4a85-a42c-79abbd999d2f.png",
+      "earned": true,
+      "earnedAt": "2024-05-22T00:55:37Z",
+      "rarityPercent": 6.8
+    }
+  ]
+}

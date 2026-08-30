@@ -1,0 +1,165 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR05628_00",
+  "slug": "psn-abyss-odyssey",
+  "name": "Abyss Odyssey",
+  "titlePlatform": "PS3",
+  "progressPercent": 4,
+  "lastUpdated": "2017-07-28T19:47:13Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Once Upon a Time...",
+      "description": "Finish the prologue.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/EE1EA6C0A86FDD741CCAE2A981ABFDA46EC0AB15.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-28T00:49:39Z",
+      "rarityPercent": 68.9
+    },
+    {
+      "id": 1,
+      "name": "Thief",
+      "description": "Defeat the shopkeeper.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/E1B0D966D6CAA2B35E18A751B087AC17A8D8C5DD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 29.1
+    },
+    {
+      "id": 2,
+      "name": "Dance with the Devil",
+      "description": "Defeat Paganini, the Demon Violinist.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/46A6A08B9E2231F7F0C24BD904FE5CCE91D0987A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 19.9
+    },
+    {
+      "id": 3,
+      "name": "Assassin of Kings",
+      "description": "Defeat Verbum Dei.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/D87445258A711042E3915F874060384C8265A742.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.3
+    },
+    {
+      "id": 4,
+      "name": "Lion Tamer",
+      "description": "Defeat the Living Creature.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/3E8504E5817144081762FD6AB35D07B1FA6A0DDF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.9
+    },
+    {
+      "id": 5,
+      "name": "Lord of Sleep",
+      "description": "Defeat the Warlock.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/64894D381AC32809768681A4519CB99AE535678F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.9
+    },
+    {
+      "id": 6,
+      "name": "Wishing Well",
+      "description": "Unlock the Pincoya.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/8CFA9C9EA3B0F9212BAB35BDD97734C8D42A2A69.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12.4
+    },
+    {
+      "id": 7,
+      "name": "Dream Catcher",
+      "description": "Capture a level 10 enemy.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/BF4F0214AD4EA42CBB6554FA911827F7A7189110.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 20.5
+    },
+    {
+      "id": 8,
+      "name": "Dream Hunter",
+      "description": "Capture a level 25 enemy.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/2FF87932A69FE594B153871ABABF706CBE028F46.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.6
+    },
+    {
+      "id": 9,
+      "name": "Dream Master",
+      "description": "Capture a level 40 enemy.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/C3AFB1680153203596D51651BD10B8E6267E5891.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.6
+    },
+    {
+      "id": 10,
+      "name": "Persistent Adventurer",
+      "description": "Uncover the Warlock's secret.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/3C6987E0075EE0C0EA774D93915BB837C520A980.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 19.5
+    },
+    {
+      "id": 11,
+      "name": "Ultimate Katrien",
+      "description": "Equip Katrien with 3 fully upgraded special attacks.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/3B6DC612D16CC29344ED1F49E02670E7226AFC26.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10
+    },
+    {
+      "id": 12,
+      "name": "Ultimate Monk",
+      "description": "Equip the Ghost Monk with 3 fully upgraded special attacks.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/B1B299A633D275706A4518EAE47FB8051F1526EB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.3
+    },
+    {
+      "id": 13,
+      "name": "Ultimate Pincoya",
+      "description": "Equip the Pincoya with 3 fully upgraded special attacks.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05628_00_005AD043E9170464660219375D1F8C859D10BD4E85/EEABE643034817B859AE2613CC42085172B02D3C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.2
+    }
+  ]
+}

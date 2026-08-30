@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR05906_00",
+  "slug": "psn-ultratron",
+  "name": "Ultratron",
+  "titlePlatform": "PS3,PSVITA,PS4",
+  "progressPercent": 4,
+  "lastUpdated": "2017-07-27T00:45:14Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Ieiunitas",
+      "description": "Defeated Ieiunitas",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/5DC6DFFB333654048747A00AE11C3CA76B221536.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-27T00:45:10Z",
+      "rarityPercent": 50.2
+    },
+    {
+      "id": 1,
+      "name": "Healthy Diet",
+      "description": "Consumed 10 consecutive fruits",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/681E0195EE789ED3A1E6C273B4909539EA391CD2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 47.8
+    },
+    {
+      "id": 2,
+      "name": "Bellum",
+      "description": "Defeated Bellum",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/A17E1016C85452C6E0491D65B885F577D2C82DF2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 28.8
+    },
+    {
+      "id": 3,
+      "name": "Challenge Perfect",
+      "description": "Got 100% on a challenge stage",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/655440F7B14C43F6127B88F0526A7787CF0B8939.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 33.7
+    },
+    {
+      "id": 4,
+      "name": "The Artful Dodger",
+      "description": "Got 100% on a dodge stage",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/A8AA49B6F40E927DF7BC6AACCC8285657C86FA39.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 21.1
+    },
+    {
+      "id": 5,
+      "name": "Lues",
+      "description": "Defeated Lues",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/380C96364EA9CBBD6B1FAFCCB87FBA341FB88499.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.7
+    },
+    {
+      "id": 6,
+      "name": "Double Dose",
+      "description": "Defeated two bosses",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/0A5F284D1B1A73B4FDDA1AA62C51513309B404D8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.1
+    },
+    {
+      "id": 7,
+      "name": "Unexpected Item In Bagging Area",
+      "description": "Quantum-shifted through a boss",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/DDE152D88E2AA68646ACF010FBC14E28786A5198.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.5
+    },
+    {
+      "id": 8,
+      "name": "Max Pet Upgrades",
+      "description": "Pets can level up, and have maxed Scan Range, Rocket, Laser and Shooty Pet upgrades ",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/F0AE29476F418C22396168B0F61748657812BB75.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.7
+    },
+    {
+      "id": 9,
+      "name": "Crufts",
+      "description": "Didn't let any pets take damage for 10 levels",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/8447A7C7E5CD18A75605BF4D996F1A6BA5FCAB75.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.3
+    },
+    {
+      "id": 10,
+      "name": "Supervisory Position",
+      "description": "Beat a level without firing a single shot",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/C7352F1050A9943A411171311F1BF49AE8B42615.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.5
+    },
+    {
+      "id": 11,
+      "name": "Letum",
+      "description": "Defeated Letum",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05906_00_0048C858FE212798250AA493FEAFA8C4636F1BDE2F/919DE04BF7F60ACE6B114124CF838C4CD609F778.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.6
+    }
+  ]
+}

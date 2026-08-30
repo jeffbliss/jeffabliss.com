@@ -1,0 +1,242 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR09962_00",
+  "slug": "psn-arcade-game-series-galaga",
+  "name": "ARCADE GAME SERIES: GALAGA",
+  "titlePlatform": "PS4",
+  "progressPercent": 21,
+  "lastUpdated": "2024-11-17T17:31:53Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Retro Gamer",
+      "description": "Earn all other trophies!",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/2EE226CFD1812CFE448E78B100D2DB0F7215FD1C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.8
+    },
+    {
+      "id": 1,
+      "name": "Dragonfly",
+      "description": "Find the Dragonfly that appears in battle!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/3445792C72EF9CC912CB07E9A6AFC9B2C0E3BA95.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-08T23:22:35Z",
+      "rarityPercent": 16.8
+    },
+    {
+      "id": 2,
+      "name": "Scorpion",
+      "description": "Find the Scorpion that appears in battle!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/DA4E992B3B9BE3596A82A39B8F412E50EE4C3741.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-08T23:18:00Z",
+      "rarityPercent": 66
+    },
+    {
+      "id": 3,
+      "name": "Mosquito",
+      "description": "Find the Mosquito that appears in battle!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/A0D547FA3DA0684D66AA6063862BEFD088D18710.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4
+    },
+    {
+      "id": 4,
+      "name": "Stingray",
+      "description": "Find the Stingray that appears in battle!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/C12FEDBE306FC2B6F1B61AECF489393789B05B4B.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-08T23:20:33Z",
+      "rarityPercent": 37.2
+    },
+    {
+      "id": 5,
+      "name": "Galboss",
+      "description": "Find the Galboss that appears in battle!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/A874DE165F5300BEA67200DBBF9BEBB85EDA735A.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-08T23:23:26Z",
+      "rarityPercent": 15.3
+    },
+    {
+      "id": 6,
+      "name": "Blue Spaceship",
+      "description": "Find the Blue Spaceship that appears in battle!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/B580A9B1A8B20E94A2C9F02D88A647347A1BE242.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.9
+    },
+    {
+      "id": 7,
+      "name": "Dual Fighter",
+      "description": "Form a Dual Fighter!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/FA9A05D2FB8804FDDE1EE0FAD4F506136C620164.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-08T23:16:42Z",
+      "rarityPercent": 55.4
+    },
+    {
+      "id": 8,
+      "name": "Enemy Fighter",
+      "description": "Shoot down a red captured Fighter!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/7865D4BDFB14D80D9791B16C29A50D21E7F1BF2F.PNG",
+      "earned": true,
+      "earnedAt": "2024-11-17T17:31:50Z",
+      "rarityPercent": 43.2
+    },
+    {
+      "id": 9,
+      "name": "Escape Artist",
+      "description": "Escape from a Boss Galaga's tractor beam!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/0932296BA38364311B6AE8EAF0CD8AFC1DFCF5EB.PNG",
+      "earned": true,
+      "earnedAt": "2024-11-16T01:28:01Z",
+      "rarityPercent": 15.7
+    },
+    {
+      "id": 10,
+      "name": "Ace Pilot",
+      "description": "Get a 70% or higher hit rate on Stage 10 or above!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/6FF743033467197503E4F3B6141F2E3A2B96108F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.8
+    },
+    {
+      "id": 11,
+      "name": "Stage 11 Perfect",
+      "description": "Get a Perfect Bonus on the Stage 11 Challenging Stage!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/4D188F84DE5E55B3CB92F4A6D1F208CD6363ADF2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.6
+    },
+    {
+      "id": 12,
+      "name": "Stage 15 Perfect",
+      "description": "Get a Perfect Bonus on the Stage 15 Challenging Stage!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/7FED921652D1BD37FE0786372A5175F1832FD4D3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.9
+    },
+    {
+      "id": 13,
+      "name": "Stage 19 Perfect",
+      "description": "Get a Perfect Bonus on the Stage 19 Challenging Stage!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/2005B391A24FA2A8C778B090312709F44E2DADAE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.5
+    },
+    {
+      "id": 14,
+      "name": "Stage 23 Perfect",
+      "description": "Get a Perfect Bonus on the Stage 23 Challenging Stage!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/CC1FF82B70779C5C513B9EAC165F06700C62E3E2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.9
+    },
+    {
+      "id": 15,
+      "name": "Stage 27 Perfect",
+      "description": "Get a Perfect Bonus on the Stage 27 Challenging Stage!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/8FAEEE3A55D55AFF3963B9078AC1756E77BB424B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.8
+    },
+    {
+      "id": 16,
+      "name": "Stage 31 Perfect",
+      "description": "Get a Perfect Bonus on the Stage 31 Challenging Stage!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/6783062D4ECA3BFD5CCCD05EEDAB7687FD14FD00.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.8
+    },
+    {
+      "id": 17,
+      "name": "Single Perfect",
+      "description": "Without forming a Dual Fighter, get a Perfect Bonus on a certain Challenging Stage!",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/E256D32182538C7416B6DC76C329528D08E3E014.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.1
+    },
+    {
+      "id": 18,
+      "name": "Stage 10 Reached",
+      "description": "Reach Stage 10 and view the stage emblem!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/99A0EA921C18DEBD7E023CCCC73612CDE87CD571.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-08T23:22:08Z",
+      "rarityPercent": 22.5
+    },
+    {
+      "id": 19,
+      "name": "Stage 20 Reached",
+      "description": "Reach Stage 20 and view the stage emblem!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/E75A72E127463C32719BA60A6C173C995AF9ACB5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4
+    },
+    {
+      "id": 20,
+      "name": "Stage 30 Reached",
+      "description": "Reach Stage 30 and view the stage emblem!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09962_00_00D9139D1ABFDC0A3FA5F533266753D1AFF3525042/22D2D9DB44E8082127358F3BA0759E35B5E79EC4.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2
+    }
+  ]
+}

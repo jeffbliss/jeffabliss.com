@@ -1,0 +1,132 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR11718_00",
+  "slug": "psn-four-sided-fantasy",
+  "name": "Four Sided Fantasy",
+  "titlePlatform": "PS4",
+  "progressPercent": 57,
+  "lastUpdated": "2018-04-02T01:11:42Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Just the Beginning",
+      "description": "Beat World 1",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/824CB9FB72158F3A60A7A20686BB0D3B05AF53B9.PNG",
+      "earned": true,
+      "earnedAt": "2017-06-25T22:38:08Z",
+      "rarityPercent": 57.1
+    },
+    {
+      "id": 1,
+      "name": "444444",
+      "description": "Beat World 2",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/5893E49A2F17F6296A75B4245E100F86BCA35304.PNG",
+      "earned": true,
+      "earnedAt": "2017-06-25T23:00:58Z",
+      "rarityPercent": 47.2
+    },
+    {
+      "id": 2,
+      "name": "Background and Four-ground",
+      "description": "Beat World 3",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/937A89A25CE9EC72AE473D1810836A06CF787E12.PNG",
+      "earned": true,
+      "earnedAt": "2017-06-27T00:31:10Z",
+      "rarityPercent": 42.7
+    },
+    {
+      "id": 3,
+      "name": "Gotta split!",
+      "description": "Beat World 4",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/0CC94962F395BDE053E14ED92FB83919DFC17947.PNG",
+      "earned": true,
+      "earnedAt": "2017-06-27T00:43:15Z",
+      "rarityPercent": 36.2
+    },
+    {
+      "id": 4,
+      "name": "A Full Year",
+      "description": "Beat World 5",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/816C2EA2D23027E4B7C5AF82114D9AD69962E943.PNG",
+      "earned": true,
+      "earnedAt": "2018-04-02T01:09:20Z",
+      "rarityPercent": 31.5
+    },
+    {
+      "id": 5,
+      "name": "That's a Wrap!",
+      "description": "Beat the game",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/BA46D35CBAC7D5057F165AA735C94D13DE4F647C.PNG",
+      "earned": true,
+      "earnedAt": "2018-04-02T01:11:38Z",
+      "rarityPercent": 31.4
+    },
+    {
+      "id": 6,
+      "name": "That's a Wrap Plus!",
+      "description": "Beat new game+",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/CA9F7E7AC3DF099A148151B6A45C82842DA8349D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11
+    },
+    {
+      "id": 7,
+      "name": "Friendly Faces",
+      "description": "Found secret area 1",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/760E69FC2239A74CD8FDA43B759D3D7C8EC47A52.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10
+    },
+    {
+      "id": 8,
+      "name": "Fantastic",
+      "description": "Wrap through all four sides of the screen without touching the ground",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/08E93377E80A4DE10D3D9CD1168145B34DE7CBC9.PNG",
+      "earned": true,
+      "earnedAt": "2017-06-25T22:58:05Z",
+      "rarityPercent": 63.7
+    },
+    {
+      "id": 9,
+      "name": "234 Sided Fantasy",
+      "description": "Beat the game performing 234 screen wraps or less. Screen wraps of non-player objects don't count towards the amount.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/24C50B692D2304CB508BE41F121EBCC2C34B527E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.3
+    },
+    {
+      "id": 10,
+      "name": "Freeze Frame",
+      "description": "Beat the game with 169 screen locks or less. A screen lock is one instance of the camera being manually locked in place",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11718_00_00643E5BD8C6C6861D69899348885B164B707B254C/7B16654A32320A951166D900BAE605D5241E385F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.3
+    }
+  ]
+}

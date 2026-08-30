@@ -1,0 +1,242 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR13919_00",
+  "slug": "psn-chasm",
+  "name": "Chasm",
+  "titlePlatform": "PSVITA,PS4",
+  "progressPercent": 100,
+  "lastUpdated": "2019-02-20T02:03:45Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Lightbringer",
+      "description": "You have fulfilled the prophecy of the Watchers.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/F4A0668D7F8B90452943A4D1D7475519F6B8A1A9.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-20T02:03:43Z",
+      "rarityPercent": 16
+    },
+    {
+      "id": 1,
+      "name": "Warrior",
+      "description": "Defeat 100 enemies.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/40378666D79E894C075C07B316C4A3D7C1C096AB.PNG",
+      "earned": true,
+      "earnedAt": "2018-08-08T23:17:11Z",
+      "rarityPercent": 75.3
+    },
+    {
+      "id": 2,
+      "name": "Wendigo",
+      "description": "Defeat the Wendigo.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/FB84FB43FB412102588D69C0080A1FA2AE4BFE56.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-11T22:44:16Z",
+      "rarityPercent": 63.4
+    },
+    {
+      "id": 3,
+      "name": "Catakiller",
+      "description": "Defeat the Catakiller.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/AE8A557312874AD00D9B151EFF95F03BCF0080CF.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-17T00:17:46Z",
+      "rarityPercent": 52.5
+    },
+    {
+      "id": 4,
+      "name": "Golem",
+      "description": "Defeat the Golem.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/554236CCDDF7545643135F4D4AE517CC7D43716B.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-17T16:59:51Z",
+      "rarityPercent": 44.3
+    },
+    {
+      "id": 5,
+      "name": "King Trell",
+      "description": "Defeat King Trell.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/6E173BE17B3BEA28E4B492E5FB4B963E52A7D7EA.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-17T22:34:12Z",
+      "rarityPercent": 39
+    },
+    {
+      "id": 6,
+      "name": "Shaman",
+      "description": "Defeat the Shaman.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/5213774A9B9AB05AF97767941B7841F589AA9F72.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-18T15:10:45Z",
+      "rarityPercent": 35
+    },
+    {
+      "id": 7,
+      "name": "Ulak",
+      "description": "Defeat Ulak.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/AB05164AC71296218FA73DFEB4EBF14FE7D1B72C.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-19T00:57:21Z",
+      "rarityPercent": 31.7
+    },
+    {
+      "id": 8,
+      "name": "Monster Slayer",
+      "description": "Defeat 1,000 enemies.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/3FB044A34C0BF200176DE93416E3519C5489C7A0.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-17T16:00:07Z",
+      "rarityPercent": 47.8
+    },
+    {
+      "id": 9,
+      "name": "Big Spender",
+      "description": "Spend 5,000 gold.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/25BDD83446151C4ACA8FB219169C40A2ACC67FCD.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-18T00:25:28Z",
+      "rarityPercent": 38.9
+    },
+    {
+      "id": 10,
+      "name": "Bookworm",
+      "description": "Find all the Journal Entries in the game.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/28C35A66EE3E7A543E939F6416F7A948FC266F3D.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-18T22:34:15Z",
+      "rarityPercent": 30.4
+    },
+    {
+      "id": 11,
+      "name": "Superhero",
+      "description": "Find all the Powerups in the game.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/8BFC6341DCD83C14E81E8CF543B3329C77D26F33.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-18T00:29:33Z",
+      "rarityPercent": 34.5
+    },
+    {
+      "id": 12,
+      "name": "Crate Buster",
+      "description": "Break all the crates in the game.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/37B6A72214B315C29A16B3E5962B514DE28641FF.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-18T22:51:14Z",
+      "rarityPercent": 29.2
+    },
+    {
+      "id": 13,
+      "name": "Guildean Knight",
+      "description": "Complete the game on Hard difficulty.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/EEB122CFD757F00ECD3842318B7DDAD8E1021F1A.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-19T00:57:43Z",
+      "rarityPercent": 17.2
+    },
+    {
+      "id": 14,
+      "name": "Mere Mortal",
+      "description": "Complete the game as a Mortal.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/401377194CEB43DFC9DE6E733361C767517D848F.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-20T02:03:43Z",
+      "rarityPercent": 16.3
+    },
+    {
+      "id": 15,
+      "name": "Gladiator",
+      "description": "Become the Arena champion.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/075F4933B13F2B3EE51114530F09D12B43D8624F.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-18T00:29:23Z",
+      "rarityPercent": 35.6
+    },
+    {
+      "id": 16,
+      "name": "Socialite",
+      "description": "Rescue all the missing villagers.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/CAB40CA25882C2CBEA3071DCD3467F355D38E526.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-18T00:35:58Z",
+      "rarityPercent": 33.9
+    },
+    {
+      "id": 17,
+      "name": "Good Samaritan",
+      "description": "Complete all villager sidequests.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/9084605262512DA409C23A4A87F208959E1F882F.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-19T00:42:17Z",
+      "rarityPercent": 22.3
+    },
+    {
+      "id": 18,
+      "name": "Explorer",
+      "description": "Explore 100% of the map.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/15355E69258C943B1BA43796B601134B51469AF5.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-19T00:54:54Z",
+      "rarityPercent": 24
+    },
+    {
+      "id": 19,
+      "name": "Zoologist",
+      "description": "Unlock all the Bestiary entries.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/715291544EAA34E51B3AC84447C46375A833806F.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-19T00:57:21Z",
+      "rarityPercent": 19
+    },
+    {
+      "id": 20,
+      "name": "Prizefighter",
+      "description": "Defeat a boss without getting hit.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13919_00_00D9D2936F1479857C1F64176A69C3D2080D214186/0F1E36AA58F59EECB8874BEF4C3E962BF324D713.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-17T00:24:21Z",
+      "rarityPercent": 20.5
+    }
+  ]
+}
