@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR07476_00",
+  "slug": "psn-nidhogg",
+  "name": "Nidhogg",
+  "titlePlatform": "PSVITA,PS4",
+  "progressPercent": 23,
+  "lastUpdated": "2019-10-27T14:44:52Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "COMEBACK KID",
+      "description": "Get eaten by the nidhogg after nearly allowing your opponent to do the same",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/445F3F58313EA3658CF01D2EEE3157774B0D32AF.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-27T14:44:50Z",
+      "rarityPercent": 51.5
+    },
+    {
+      "id": 1,
+      "name": "MEMORIES",
+      "description": "Trap your opponent on your sword for a long time",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/27B6DF08041E794985E797AC26255710792DA73F.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-27T14:33:44Z",
+      "rarityPercent": 35.3
+    },
+    {
+      "id": 2,
+      "name": "FLESH AND BLOOD",
+      "description": "Beat the singleplayer game",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/C70AF40297C43DAD34F146353BD525AFBE84560A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13.9
+    },
+    {
+      "id": 3,
+      "name": "PERFECT STRIDE",
+      "description": "Win the faceoff and never lose the arrow in a singleplayer match",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/DC281AE5A2FCB1024442DC054D6B003C39B3F567.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.4
+    },
+    {
+      "id": 4,
+      "name": "BLOODLUST",
+      "description": "100 total kills in one match",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/CD74C20D2C4F52A562FFFCA626C2792EA465B54A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 16.7
+    },
+    {
+      "id": 5,
+      "name": "PROMETHEUS",
+      "description": "Run across your final screen in the castle with your sword cocked the whole time",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/86E5B92D9098DA92679B5662D962B4C66DF41072.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-27T14:34:21Z",
+      "rarityPercent": 4.5
+    },
+    {
+      "id": 6,
+      "name": "GTD",
+      "description": "Finish an 8 player tournament",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/E385CAA7982FE4FC70FA56BC81197C21F7F59AE7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.4
+    },
+    {
+      "id": 7,
+      "name": "SLOW PLAYED",
+      "description": "Let the timer run out in your opponent's last screen and win in sudden death",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/DD07C9B96CC383FD37719442FB89D3F2B33BB4C9.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.1
+    },
+    {
+      "id": 8,
+      "name": "VALKYRIE",
+      "description": "Win 100 games through matchmaking",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/6DD6101B2D3F95F4D236ADE68DE2729C96AF15EB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.3
+    },
+    {
+      "id": 9,
+      "name": "TRAPPED IN DONKEYSPACE",
+      "description": "Play a match lasting longer than 20 minutes",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/002F4AF232EA1C7B416A869CCE2DAB6C75D45117.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.9
+    },
+    {
+      "id": 10,
+      "name": "NSA",
+      "description": "Intelligence gathered",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/DC53D2D9D093FE90D494453C13F18471D5EF563C.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-27T14:20:28Z",
+      "rarityPercent": 10.9
+    },
+    {
+      "id": 11,
+      "name": "HOGGLIKE",
+      "description": "Dominate every level in one singleplayer game",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07476_00_00931B980D3111E580A96D0C808F271A4CCC2A8F0A/DCE277298317E651694D17E3793EB810A34E90C5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.3
+    }
+  ]
+}

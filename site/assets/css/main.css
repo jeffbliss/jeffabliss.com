@@ -1,0 +1,347 @@
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --fg: #1a1d21;
+  --muted: #5c6470;
+  --border: #dcdfe4;
+  --accent: #2f6fed;
+  --accent-fg: #ffffff;
+  --bronze: #a5673f;
+  --silver: #7c8794;
+  --gold: #c2921c;
+  --platinum: #4aa3b8;
+  --radius: 8px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161a;
+    --surface: #1e2126;
+    --fg: #e8eaed;
+    --muted: #9aa3af;
+    --border: #32363d;
+    --accent: #6b9aff;
+    --accent-fg: #101318;
+    --bronze: #c8895e;
+    --silver: #9aa5b1;
+    --gold: #d9ab3a;
+    --platinum: #6fc3d8;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: var(--space-3);
+}
+
+.site-name {
+  color: var(--fg);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  color: var(--fg);
+}
+
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-3) var(--space-5);
+}
+
+.hero {
+  padding: var(--space-5) 0;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-fg);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.games-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.platform-filter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--muted);
+}
+
+.platform-filter select {
+  background: var(--surface);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-2);
+  font: inherit;
+}
+
+.stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: var(--space-3) 0;
+  padding: 0;
+}
+
+.stats-strip li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.stat-value {
+  display: block;
+  color: var(--fg);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.columns h2 {
+  font-size: 1.1rem;
+  margin: 0 0 var(--space-3);
+}
+
+.game-list ul,
+.trophy-feed ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.game-card a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-1) var(--space-2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.game-card a:hover {
+  border-color: var(--accent);
+}
+
+.game-name {
+  font-weight: 600;
+}
+
+.trophy-count {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.last-earned {
+  color: var(--muted);
+  font-size: 0.8rem;
+  grid-column: 2;
+  text-align: right;
+}
+
+.badge {
+  align-self: start;
+  justify-self: end;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0 var(--space-2);
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.trophy-bronze {
+  color: var(--bronze);
+  border-color: var(--bronze);
+}
+
+.trophy-silver {
+  color: var(--silver);
+  border-color: var(--silver);
+}
+
+.trophy-gold {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.trophy-platinum {
+  color: var(--platinum);
+  border-color: var(--platinum);
+}
+
+.progress-bar {
+  grid-column: 1 / -1;
+  display: block;
+  height: 6px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.trophy-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-1) var(--space-3);
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+}
+
+.trophy-icon {
+  grid-row: span 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.trophy-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.trophy-name {
+  font-weight: 600;
+}
+
+.trophy-desc,
+.trophy-game,
+.trophy-date,
+.rarity,
+.unearned-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.trophy-row.unearned {
+  opacity: 0.6;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.pagination button {
+  background: var(--surface);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-3);
+  font: inherit;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.empty-state {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  color: var(--muted);
+  text-align: center;
+}
+
+.game-detail .game-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--muted);
+}
+
+.trophy-list {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}

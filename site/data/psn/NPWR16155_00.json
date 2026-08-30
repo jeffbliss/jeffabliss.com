@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR16155_00",
+  "slug": "psn-alwas-awakening",
+  "name": "Alwa's Awakening",
+  "titlePlatform": "PS4",
+  "progressPercent": 81,
+  "lastUpdated": "2019-09-29T14:26:22Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Culmination",
+      "description": "Earn all other trophies",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/5FAF8E4086CC26CEFF8F8693FD3A9415B126A129.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.8
+    },
+    {
+      "id": 1,
+      "name": "Just Like Dana",
+      "description": "Discover the potential of the magic staff",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/1D5D95981D7D593AE97BB63FA1B043899AF86C82.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-26T21:11:32Z",
+      "rarityPercent": 73.9
+    },
+    {
+      "id": 2,
+      "name": "Vicious Keeper",
+      "description": "Defeat Vicious Keeper",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/5779B38DBFB608D117525293C40CCF0C65C265F2.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-26T21:22:05Z",
+      "rarityPercent": 64.6
+    },
+    {
+      "id": 3,
+      "name": "Sea Monk",
+      "description": "Defeat Sea Monk",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/632FE500279716286EB93DF8D43B359C48769274.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-27T00:20:55Z",
+      "rarityPercent": 45.6
+    },
+    {
+      "id": 4,
+      "name": "Crimson Guardian",
+      "description": "Defeat the Crimson Guardian",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/12B21161CD480528A078A3F7DD84A46FA5109541.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-27T01:13:40Z",
+      "rarityPercent": 37.8
+    },
+    {
+      "id": 5,
+      "name": "The Beholder",
+      "description": "Defeat The Beholder",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/6463B69DFF8ABB7444D3924777670CB7D12C632B.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-28T22:06:45Z",
+      "rarityPercent": 30.5
+    },
+    {
+      "id": 6,
+      "name": "A Helping Hand",
+      "description": "Rescue someone who needs your help",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/A0C35358073998E9A1B913BE5FCF264B7026AD7A.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-27T00:14:19Z",
+      "rarityPercent": 34.9
+    },
+    {
+      "id": 7,
+      "name": "Got To Go Fast",
+      "description": "Finish the game in less than 120 minutes and with less than 5 deaths",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/88364C57FB12946202524E26897CFB2D6A2A7497.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.8
+    },
+    {
+      "id": 8,
+      "name": "Alwa's Awakening?",
+      "description": "Complete the game",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/D65B23B37CBEF1A85B9F558CD16C19718C56E426.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-29T13:39:40Z",
+      "rarityPercent": 27.4
+    },
+    {
+      "id": 9,
+      "name": "What Lies Beneath",
+      "description": "Find the hidden tomb",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/5EA87883873CD3F3647D78D0EEBD5555672411CE.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-28T19:49:16Z",
+      "rarityPercent": 27.9
+    },
+    {
+      "id": 10,
+      "name": "In The Mouth of Madness",
+      "description": "Find the book of Sutter",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/6D7811EE349AF2F41FA96EF0CBC5BFF67B9F9B9A.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-28T18:06:49Z",
+      "rarityPercent": 34.5
+    },
+    {
+      "id": 11,
+      "name": "Go Your Own Way",
+      "description": "Defeat Crimson Guardian before any other bosses",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/D7BE05966EF26E20E65C1D8D584AE25686F04B58.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-29T14:26:18Z",
+      "rarityPercent": 11.8
+    },
+    {
+      "id": 12,
+      "name": "As Cool as Bell",
+      "description": "Find all the items",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/EEF8FF5BDDB0FF6846B991C6842663666B47CBF5.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-29T13:26:40Z",
+      "rarityPercent": 22.2
+    },
+    {
+      "id": 13,
+      "name": "In a Hurry",
+      "description": "Defeat Vicious Keeper in less than 10 seconds",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/53DD4D830882CBD43DC6B9E39ACFDBAD8A825C5A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.8
+    },
+    {
+      "id": 14,
+      "name": "Missing Pieces",
+      "description": "Find all the pieces of the broken tablet",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/7531FFE6F424C716FC7A79AB9EC6667BB1A7B313.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-29T13:26:39Z",
+      "rarityPercent": 22.6
+    },
+    {
+      "id": 15,
+      "name": "Serious Collector",
+      "description": "Gather all the blue orbs",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/EE18D4485C97A6AA26D9373F049DECB09B857C31.PNG",
+      "earned": true,
+      "earnedAt": "2019-09-28T23:03:11Z",
+      "rarityPercent": 19.9
+    }
+  ]
+}

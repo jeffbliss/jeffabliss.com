@@ -1,0 +1,209 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR28217_00",
+  "slug": "psn-hot-shots-golf",
+  "name": "Hot Shots Golf",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "2022-07-24T18:24:38Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Pro-Golfer Extraordinaire",
+      "description": "Unlock all trophies in Hot Shots Golf.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/911c0cc2-9c0c-43a2-90d2-d15f920a5e14.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.5
+    },
+    {
+      "id": 1,
+      "name": "Spinmeister Yuki",
+      "description": "Unlock Yuki by beating Yuki.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/01d227f9-2a28-4763-86e9-b3b54fd28855.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.8
+    },
+    {
+      "id": 2,
+      "name": "Way to go Golfer! The More the Merrier",
+      "description": "Unlock Sam by beating Sam.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/ac9d1ac6-03f0-48e1-b5a6-7b520364c764.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.3
+    },
+    {
+      "id": 3,
+      "name": "Always Eagles Ralf",
+      "description": "Unlock Ralf by beating Ralf.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/97206621-5687-4a4f-b783-5cec32bbf5a3.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.9
+    },
+    {
+      "id": 4,
+      "name": "Pro Tip! Use Your Driver for All of the Par 5s",
+      "description": "Unlock Susan by beating Susan.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/bfa89752-1f8f-44f1-8cea-02df34341bc2.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.7
+    },
+    {
+      "id": 5,
+      "name": "Wow! Another One for Brunch!",
+      "description": "Unlock Buzz by beating Buzz.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/cc07c512-90f1-435f-9a84-4bc692504bce.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.5
+    },
+    {
+      "id": 6,
+      "name": "Daryl the Dapper",
+      "description": "Unlock Daryl by beating Daryl.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/03057a7c-bbf5-4ac9-80d7-97077bf6c988.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.4
+    },
+    {
+      "id": 7,
+      "name": "Pro Tip! Use Your Putter to Chip Onto the Green",
+      "description": "Unlock Raul by beating Raul.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/7aa7c1c7-3a1a-40ec-adc9-b210d028c5e0.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.2
+    },
+    {
+      "id": 8,
+      "name": "Is He Cold, or What?",
+      "description": "Unlock Iceman by beating Iceman.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/209a3f6d-2d2b-40b0-9113-a06c89b4da2d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.2
+    },
+    {
+      "id": 9,
+      "name": "Nothing Can Stop Me",
+      "description": "Get a hole in one in the mini golf game.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/869880af-2299-4e2a-95d8-f83446a88d6b.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5
+    },
+    {
+      "id": 10,
+      "name": "Was It a Crow or a Raven?",
+      "description": "Get a birdie.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/06f9ee7b-cb3d-4937-9d09-eea4dc08da14.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.4
+    },
+    {
+      "id": 11,
+      "name": "Hopefully It Wasn’t a Bald Eagle",
+      "description": "Get an eagle.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/851035d5-8978-48ac-91e8-32e967f24dbc.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.4
+    },
+    {
+      "id": 12,
+      "name": "I Thought Albatross Were Only in the Ocean",
+      "description": "Get an albatross.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/ad0fb989-8928-4ea3-b702-464c813c343a.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.5
+    },
+    {
+      "id": 13,
+      "name": "Holey Smokes!",
+      "description": "Get a hole in one on a regular course.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/59450c55-fe75-4d7d-9b1a-ba29d59efebc.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.8
+    },
+    {
+      "id": 14,
+      "name": "A Little Surf, a Lotta Golf!",
+      "description": "Unlock Hawaiian Resort.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/2cc2fca9-b79a-435d-be2a-13ebe306cd36.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.3
+    },
+    {
+      "id": 15,
+      "name": "Can We Go Hiking After This?",
+      "description": "Unlock Fujiyama Country Club.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/6622d602-0aef-4939-b0e8-7d431f6a15cd.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.2
+    },
+    {
+      "id": 16,
+      "name": "United We Play Golf, Divided We Play Frisbee Golf",
+      "description": "Unlock United Country.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/ed660218-0109-414d-b6e3-708b6bb5dc59.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.4
+    },
+    {
+      "id": 17,
+      "name": "A Country Club in the Desert?",
+      "description": "Unlock Vegas Desert Country Club.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28217_00/150b240d-c2d0-439b-9455-dd502efffbb2.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.1
+    }
+  ]
+}

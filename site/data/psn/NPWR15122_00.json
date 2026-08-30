@@ -1,0 +1,154 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR15122_00",
+  "slug": "psn-tacoma",
+  "name": "Tacoma",
+  "titlePlatform": "PS4",
+  "progressPercent": 3,
+  "lastUpdated": "2018-11-12T23:17:01Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Perfectionist",
+      "description": "Left no stone unturned during your time on Tacoma Station.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/096EAFF70FEF86AE2E1F91CB5023A06C68AC31D2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 35.2
+    },
+    {
+      "id": 1,
+      "name": "Liberated",
+      "description": "Escaped Lunar Transfer Station Tacoma with ODIN.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/7020FC7BE0828F4E5AB396256724BC2BE7E0B49C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 55.2
+    },
+    {
+      "id": 2,
+      "name": "ARdcore",
+      "description": "Escaped Lunar Transfer Station Tacoma having recovered every AR Crew Record and AR Desktop item. ",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/42E24AEB12FC1A3375E1F059E462FC1C6E7A0100.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 40.7
+    },
+    {
+      "id": 3,
+      "name": "From Downtown",
+      "description": "Made a 3-point shot in micro-G basketball.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/2A76FE7B41CECAAAB2F23289A64BEE1EF181C8A9.PNG",
+      "earned": true,
+      "earnedAt": "2018-11-12T23:16:59Z",
+      "rarityPercent": 52.5
+    },
+    {
+      "id": 4,
+      "name": "Therefore Art Thou",
+      "description": "Activate Juliet and reunite her with Romeo in zero-G.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/D9B04FCF92528804CB1C33B14D425488752D0989.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 40.9
+    },
+    {
+      "id": 5,
+      "name": "Ringbearer",
+      "description": "Retrieved Bert’s wedding ring from the Station.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/0F5A379003E51BB1B145BF04BF414EB505B65896.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 37.2
+    },
+    {
+      "id": 6,
+      "name": "Punch-Out!!",
+      "description": "Go a full round with the punching bag in the Gym.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/FCA46FA7BF6B3739F344F46F6474E8D3B20758DF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.6
+    },
+    {
+      "id": 7,
+      "name": "Employee of the Month",
+      "description": "Escaped Tacoma having read all incoming messages from Venturis.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/BF762EB3B3DFAC025ED6950371436EBF9884FA41.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 51.2
+    },
+    {
+      "id": 8,
+      "name": "Catsitter",
+      "description": "Found the AR cat in every recovered Crew Record on the Station.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/3BDDF2D84649F37ACF36AB07A771F53582511D0B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 36.9
+    },
+    {
+      "id": 9,
+      "name": "Spellcheck",
+      "description": "Restored the Obsolescence Day sign.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/FDE6F826CBFE151F0565D0B2ABFDF9F70E7DA9D2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 44.2
+    },
+    {
+      "id": 10,
+      "name": "Master of Unlocking",
+      "description": "Escaped Lunar Transfer Station Tacoma having correctly opened every keycode lock on the Station.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/B1DE7ACAC9E298AFE554B2FDC1597CA99508654C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 41.8
+    },
+    {
+      "id": 11,
+      "name": "Skeletina",
+      "description": "Gave Tina back her hat (and her head…).",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/DB55D900CA918B7966ACD593D2EB3046A5170614.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 37.5
+    },
+    {
+      "id": 12,
+      "name": "Casketball",
+      "description": "Worked together with Tina to make a particularly spooky basket.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15122_00_0035FAFFE4AF1124B90A300B23D58F7A4F30850A8F/21A101A720C05B2D0ADE9928B3F3DC84A65FE653.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 36.8
+    }
+  ]
+}

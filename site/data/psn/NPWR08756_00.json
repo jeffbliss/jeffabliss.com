@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR08756_00",
+  "slug": "psn-type-rider",
+  "name": "Type:Rider",
+  "titlePlatform": "PS4",
+  "progressPercent": 14,
+  "lastUpdated": "2017-07-25T23:50:14Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Collector",
+      "description": "Retrieve all 6 asterisks in a chapter",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/7AA5B99A3ADDE64FB69F080B2A4B6E0D61118717.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-25T23:40:58Z",
+      "rarityPercent": 84.3
+    },
+    {
+      "id": 1,
+      "name": "Explorer",
+      "description": "Find an ampersand (&)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/C6D4CDA386B99D7372FCC5AED97FBF123126E0ED.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-25T23:50:12Z",
+      "rarityPercent": 43.3
+    },
+    {
+      "id": 2,
+      "name": "A to Z",
+      "description": "Collect all letters",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/9010133EF1F7EA0BD2EB686FC35D5689F276EBF0.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4
+    },
+    {
+      "id": 3,
+      "name": "Legend",
+      "description": "Retrieve all asterisks",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/46EEC70EA9857FF18CB98CDCF3C1AF1727CFBA6C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.4
+    },
+    {
+      "id": 4,
+      "name": "Ampersand",
+      "description": "Find the 8 hidden ampersands (&)",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/5636E63FD0F9B7B1745145E44D61BE11B660BD0E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.5
+    },
+    {
+      "id": 5,
+      "name": "The End",
+      "description": "Complete the game",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/ABE273DCBCAFBFE25E14D9FCA8CC02FD71FE8457.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.1
+    },
+    {
+      "id": 6,
+      "name": "360°",
+      "description": "Make a 360° in the air",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/AD88C96173AE42ECEC62F87CA91050ED118EE8C9.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-25T23:42:28Z",
+      "rarityPercent": 67.6
+    },
+    {
+      "id": 7,
+      "name": "Wall Rider",
+      "description": "Make 7 wall jumps in a row",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/C9D3FF94D584F4ACA7997679E3BFC4C3B99FE6A5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 25
+    },
+    {
+      "id": 8,
+      "name": "Time Attack",
+      "description": "Complete the Gothic level in less than 3 minutes",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/5F3D2972F67CCFCDCAC09263D898259AA05FE90D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.9
+    },
+    {
+      "id": 9,
+      "name": "Thirst For Knowledge",
+      "description": "Read all the books",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/381E19DF64CBE2F69130743A2C62D0894DF436A4.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.3
+    },
+    {
+      "id": 10,
+      "name": "Desperado",
+      "description": "Complete the Clarendon level without dying",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/9AF720CECFC3F683D86FF1F93CC299B50DB0E280.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.5
+    },
+    {
+      "id": 11,
+      "name": "Lol",
+      "description": "Complete the secret level",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08756_00_00FFB2F51470B25BFC6EBCCE3280B812994986B2E8/549E6F3B77D8FCB5F0941D35613979435D345F62.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.7
+    }
+  ]
+}

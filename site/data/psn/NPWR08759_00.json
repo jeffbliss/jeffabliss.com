@@ -1,0 +1,165 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR08759_00",
+  "slug": "psn-ape-escape-2",
+  "name": "Ape Escape™ 2",
+  "titlePlatform": "PS4",
+  "progressPercent": 4,
+  "lastUpdated": "2019-08-24T01:11:07Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Got One!",
+      "description": "Capture your first monkey.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/6B3FB4628CE538C61E7D62C335FA02ACD6823671.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-24T01:11:04Z",
+      "rarityPercent": 80.4
+    },
+    {
+      "id": 1,
+      "name": "Perfect Score",
+      "description": "Earn a score of 50 in the dancing mini-game.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/3647F04DEE579305733B5F7948F721C997130799.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.3
+    },
+    {
+      "id": 2,
+      "name": "Hat-trick",
+      "description": "Score three goals in one match of the soccer mini-game.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/54B4A20C248352459CA8E7BF9F83B5D52B0BEB70.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.8
+    },
+    {
+      "id": 3,
+      "name": "Top Ape",
+      "description": "Earn your first Gold Medal Time during a Time Trial.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/F5326E4E68DF8D6A4DB9960BBD83BEEDC408ED19.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.1
+    },
+    {
+      "id": 4,
+      "name": "Only Way is Up",
+      "description": "Unlock the climbing mini-game.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/52A9B490B91C8FDD837F29E370FFB1084A59050A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.6
+    },
+    {
+      "id": 5,
+      "name": "Jungle Tunes",
+      "description": "Listen to the Theme Tune soundtrack.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/C18A366EF234326DADF4FA0E0A91B9C9D9E47566.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.9
+    },
+    {
+      "id": 6,
+      "name": "Look Both Ways",
+      "description": "Defeat Monkey Blue.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/DA2DF08E823C81FFA0A33B9013BF76E91FDDC5F9.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 26.9
+    },
+    {
+      "id": 7,
+      "name": "Encore!",
+      "description": "Defeat Monkey Pink.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/B9F968243C26B8857AC2353F3394D90B08903509.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.5
+    },
+    {
+      "id": 8,
+      "name": "Robo Jimmy",
+      "description": "Defeat Monkey White.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/2E5FED1C45D657E3DE0C9962103635639FF6D5D4.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.3
+    },
+    {
+      "id": 9,
+      "name": "Tapped Out",
+      "description": "Defeat Monkey Red.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/136FC579FF0973C92BFF4A6D43658E7A8074A2A8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.5
+    },
+    {
+      "id": 10,
+      "name": "Sumo-Sized",
+      "description": "Defeat the Giant Monkey Yellow.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/F58BB745AEAD293BE786AB001F367062F4E3AF59.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.5
+    },
+    {
+      "id": 11,
+      "name": "Back For More",
+      "description": "Complete the game playing as Spike.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/ABF9C1392A0BA1E68A41170F4DE306D3FE197058.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.9
+    },
+    {
+      "id": 12,
+      "name": "End to the Madness",
+      "description": "Complete the Showdown with Specter.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/AC472791CA0CA1160A5790D823936B8DFDFBA3C3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5
+    },
+    {
+      "id": 13,
+      "name": "One Last Time",
+      "description": "Complete the Final Showdown with Specter.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08759_00_003F0D62A434075593C1A98D872FFD211C940A9085/BE51D345086F9069E90DD7B887B32B52F4CD2F4D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.9
+    }
+  ]
+}

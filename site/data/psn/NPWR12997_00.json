@@ -1,0 +1,209 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR12997_00",
+  "slug": "psn-sonic-mania",
+  "name": "Sonic Mania",
+  "titlePlatform": "PS4",
+  "progressPercent": 4,
+  "lastUpdated": "2017-08-23T01:27:40Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "No Way? No Way",
+      "description": "Collect gold medallions in Blue Spheres Bonus stage",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/A983F13388A80E4A0DA84393A48F1CC40227B063.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.3
+    },
+    {
+      "id": 1,
+      "name": "Full Medal Jacket",
+      "description": "Collect silver medallions in Blue Spheres Bonus stage",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/74470022323B9571B4D0AB9F4D0C9BF60D584628.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.6
+    },
+    {
+      "id": 2,
+      "name": "Magnificent Seven",
+      "description": "Collect all seven Chaos Emeralds",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/CE43DE165234404AA6364A9B8DFA4D5681E6D61A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.8
+    },
+    {
+      "id": 3,
+      "name": "See You Next Game",
+      "description": "Achieve any ending",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/726581CAF8625B717EF1B10A454334951064FA08.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.2
+    },
+    {
+      "id": 4,
+      "name": "Superstar",
+      "description": "Spin the Star Post!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/4C4D80B9075C331F001E8FE878C672B4A9530034.PNG",
+      "earned": true,
+      "earnedAt": "2017-08-23T01:27:38Z",
+      "rarityPercent": 43.7
+    },
+    {
+      "id": 5,
+      "name": "That's a Two-fer",
+      "description": "Find the hidden item boxes at the end of the Zone",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/29DE96D6099FF20B06FF5E9D189F3DB5FE0347D6.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6
+    },
+    {
+      "id": 6,
+      "name": "Now It Can't Hurt You Anymore",
+      "description": "What would happen if you cross a bridge with a fire shield?\n\n",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/4CF98E3839613D5310F5ECA5DC49620C2B8622CA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 57.3
+    },
+    {
+      "id": 7,
+      "name": "Triple Trouble",
+      "description": "Try for a 3 chain combo!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/273AD15C228BE80A0B395F723D98E92D1CED88FF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.6
+    },
+    {
+      "id": 8,
+      "name": "The Most Famous Hedgehog in the World",
+      "description": "Have your photos taken in Studiopolis Zone",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/7A9EC0EF07C59E4DD91A48197635D76564760DD1.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.6
+    },
+    {
+      "id": 9,
+      "name": "Window Shopping",
+      "description": "Let the wind take you through",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/A0E244E644F585FEA8AAE10C1CD748E0656CF9F6.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.5
+    },
+    {
+      "id": 10,
+      "name": "Crate Expectations",
+      "description": "Wreak havoc at the propaganda factory",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/4FD35098F78B6862BFE4C05560348E998E4A5E6D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.8
+    },
+    {
+      "id": 11,
+      "name": "King of Speed",
+      "description": "Get through Stardust Speedway Zone as quickly as possible",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/6F28561CFAE65EDBD459A9DAFCC7359A4B4EAE29.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.4
+    },
+    {
+      "id": 12,
+      "name": "Boat Enthusiast",
+      "description": "We really like boats",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/44910E5F47BECBF11BFFD62F710580A8A1CD1D1A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.3
+    },
+    {
+      "id": 13,
+      "name": "The Password is \"Special Stage\"",
+      "description": "Try pushing a barrel to see how far it goes",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/0C685C96AABC2F9E41111CFF9ECEC14763D0805B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.3
+    },
+    {
+      "id": 14,
+      "name": "Secret Sub",
+      "description": "You might have to submerge to find it",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/412C4DB6583259E8FF6AA4E98100230F490EB366.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.7
+    },
+    {
+      "id": 15,
+      "name": "Without a Trace",
+      "description": "Barrel through the lava, don't let anything stop you",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/51C748D1E1032291978F1A9DCB11AB12B80CA132.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.8
+    },
+    {
+      "id": 16,
+      "name": "Collect 'Em All",
+      "description": "Gotta gacha 'em all",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/4D09A4DE3C41625BEC1F6DB6639E10537FAC3E27.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.5
+    },
+    {
+      "id": 17,
+      "name": "Professional Hedgehog",
+      "description": "That elusive perfect run, only a professional can achieve",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12997_00_00C4E5173121EAB218130CCDEAC7D274842CA7D522/58B9F1921CE69B0450AA2DD0AEB2648E5AB2E4E0.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.5
+    }
+  ]
+}

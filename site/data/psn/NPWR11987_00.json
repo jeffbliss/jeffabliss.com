@@ -1,0 +1,209 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR11987_00",
+  "slug": "psn-lara-croft-go",
+  "name": "Lara Croft GO",
+  "titlePlatform": "PSVITA,PS4",
+  "progressPercent": 100,
+  "lastUpdated": "2021-04-10T01:35:45Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "A true adventurer",
+      "description": "Collect all trophies",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/ED48B22A12BE38ED69979E20CE73C6190AF9C3BE.PNG",
+      "earned": true,
+      "earnedAt": "2021-04-10T01:35:39Z",
+      "rarityPercent": 47.8
+    },
+    {
+      "id": 1,
+      "name": "Key of Snakes",
+      "description": "Collected the Key of Snakes",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/EB0046058949AC24076BE656E7559562FD985891.PNG",
+      "earned": true,
+      "earnedAt": "2018-05-02T11:37:40Z",
+      "rarityPercent": 87
+    },
+    {
+      "id": 2,
+      "name": "Key of Stones",
+      "description": "Collected the Key of Stones",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/ACECF6B364664CEED4FCF67DA475A4A72F26B526.PNG",
+      "earned": true,
+      "earnedAt": "2018-05-03T01:58:24Z",
+      "rarityPercent": 75.8
+    },
+    {
+      "id": 3,
+      "name": "Key of Spirits",
+      "description": "Collect the Key of Spirits",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/486D8FB5ABA4D86E1221E37910D58BB8D01590F1.PNG",
+      "earned": true,
+      "earnedAt": "2018-10-13T18:34:37Z",
+      "rarityPercent": 65.7
+    },
+    {
+      "id": 4,
+      "name": "Atlas of Beyond",
+      "description": "Discovered the Atlas of Beyond",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/631A9103938B79D47D683F76D1FDA4DFBEB6A1EE.PNG",
+      "earned": true,
+      "earnedAt": "2018-10-14T15:52:41Z",
+      "rarityPercent": 59.2
+    },
+    {
+      "id": 5,
+      "name": "Archaeologist",
+      "description": "Find a Relic Fragment",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/05C3C012FB72540CDC6FA7C043867BF731A497A2.PNG",
+      "earned": true,
+      "earnedAt": "2018-05-01T22:00:32Z",
+      "rarityPercent": 93
+    },
+    {
+      "id": 6,
+      "name": "Historian",
+      "description": "Complete a Relic",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/450C78B254A576E25EA7A399F54BA40CF26DDA8F.PNG",
+      "earned": true,
+      "earnedAt": "2018-05-02T12:03:58Z",
+      "rarityPercent": 65.3
+    },
+    {
+      "id": 7,
+      "name": "Preservation Society",
+      "description": "Destroy all Vases",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/10C22C066F32262079A662310DE3216AA2ED49DD.PNG",
+      "earned": true,
+      "earnedAt": "2021-04-10T01:27:20Z",
+      "rarityPercent": 48.6
+    },
+    {
+      "id": 8,
+      "name": "Curator",
+      "description": "Complete all Relics",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/53617A7947AE62BD46A1083BC6971422179C16DE.PNG",
+      "earned": true,
+      "earnedAt": "2021-04-10T01:27:16Z",
+      "rarityPercent": 48.7
+    },
+    {
+      "id": 9,
+      "name": "Ophidiophobia",
+      "description": "Kill the Queen",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/62C48136F6AE64B87E9E07601DB75F855C71D990.PNG",
+      "earned": true,
+      "earnedAt": "2018-10-14T15:51:32Z",
+      "rarityPercent": 59.2
+    },
+    {
+      "id": 10,
+      "name": "Getting crafty",
+      "description": "Stack two Pillars",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/89BE46FE6C388B4491F5B19298887F0E6862B249.PNG",
+      "earned": true,
+      "earnedAt": "2018-10-03T00:57:34Z",
+      "rarityPercent": 68.4
+    },
+    {
+      "id": 11,
+      "name": "Master Builder",
+      "description": "Stack three Pillars",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/D9B89A6C3A156C87F47B823C6331FEF8095843AD.PNG",
+      "earned": true,
+      "earnedAt": "2021-04-09T17:51:47Z",
+      "rarityPercent": 50.4
+    },
+    {
+      "id": 12,
+      "name": "Gathering moss",
+      "description": "Get crushed by a Boulder",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/99B80C58430BF997DCDA37FE931BE16FFCD0B95A.PNG",
+      "earned": true,
+      "earnedAt": "2018-10-13T18:22:53Z",
+      "rarityPercent": 66.3
+    },
+    {
+      "id": 13,
+      "name": "Into the abyss",
+      "description": "Kill a creature by making it fall to its death",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/8E890EE874B12EFC9DC36BB581B945DB6EAF316B.PNG",
+      "earned": true,
+      "earnedAt": "2018-05-02T12:01:19Z",
+      "rarityPercent": 77.3
+    },
+    {
+      "id": 14,
+      "name": "Put this apple on your head",
+      "description": "Throw a spear six nodes or farther",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/3E3F781AA69F93EDDE4A638A0D6C2957A16A11E5.PNG",
+      "earned": true,
+      "earnedAt": "2018-10-13T18:46:34Z",
+      "rarityPercent": 53.5
+    },
+    {
+      "id": 15,
+      "name": "Immortal no more",
+      "description": "Unearth the Shard of Life",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/9AEFB7C869959DA88E56EBF244A557BB8B7572FB.PNG",
+      "earned": true,
+      "earnedAt": "2021-04-09T23:27:07Z",
+      "rarityPercent": 51.7
+    },
+    {
+      "id": 16,
+      "name": "Déjà-vu",
+      "description": "Slay the same creature four times in a row",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/FCE4B6E19E53946E9AB9DC72AEF481A6D479D101.PNG",
+      "earned": true,
+      "earnedAt": "2018-10-14T23:08:36Z",
+      "rarityPercent": 56.2
+    },
+    {
+      "id": 17,
+      "name": "Back to reality",
+      "description": "Return from the Mirror of Spirits",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11987_00_00BB5A4D22C1B2938A65354EA462361C7691962994/A0F38A951CE88A443F1E1226824DD638DADDECAC.PNG",
+      "earned": true,
+      "earnedAt": "2021-04-10T01:35:39Z",
+      "rarityPercent": 51.1
+    }
+  ]
+}

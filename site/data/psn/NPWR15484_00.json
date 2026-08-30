@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR15484_00",
+  "slug": "psn-gorogoa",
+  "name": "Gorogoa",
+  "titlePlatform": "PS4",
+  "progressPercent": 27,
+  "lastUpdated": "2022-05-28T22:27:33Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "All Done",
+      "description": "Unlock all trophies.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/6FF00A88D4472E2FBD079C11E8E23F3618312557.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.5
+    },
+    {
+      "id": 1,
+      "name": "First Fruit",
+      "description": "Complete Chapter One.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/9E868EC579AF6F251E66A2D98F5DCF481B81F0E1.PNG",
+      "earned": true,
+      "earnedAt": "2018-11-08T01:08:06Z",
+      "rarityPercent": 95.5
+    },
+    {
+      "id": 2,
+      "name": "Second Fruit",
+      "description": "Complete Chapter Two.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/A0BC2085376E613F20ADC34D3AFA542B599DB136.PNG",
+      "earned": true,
+      "earnedAt": "2018-11-08T01:12:52Z",
+      "rarityPercent": 91.7
+    },
+    {
+      "id": 3,
+      "name": "Third Fruit",
+      "description": "Complete Chapter Three.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/65E95B38956D7F1F6807976824EBAF3E777AA8B5.PNG",
+      "earned": true,
+      "earnedAt": "2022-05-28T22:27:32Z",
+      "rarityPercent": 80.3
+    },
+    {
+      "id": 4,
+      "name": "Fourth Fruit",
+      "description": "Complete Chapter Four.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/5D0D725A7BA1376106C79355AC4A7BB5B8660C58.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 72.1
+    },
+    {
+      "id": 5,
+      "name": "Fifth Fruit",
+      "description": "Complete Chapter Five.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/F9C493C7C7930B61F89499D8AC53C18EA4D690EA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 69.6
+    },
+    {
+      "id": 6,
+      "name": "Right Wrong",
+      "description": "Set the clock tower to the right wrong time.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/F403A721F4525E0E2351185F4B014355973BCA09.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 24
+    },
+    {
+      "id": 7,
+      "name": "First Try",
+      "description": "Complete the falling rock puzzle on the first try.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/8570F55077206B296EDA35EF6E01110F70951C72.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 24.2
+    },
+    {
+      "id": 8,
+      "name": "Devotion",
+      "description": "Finish the game.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/792F3F0E18DE8B5D8042D4708F6BDE34BF5EE610.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 69
+    },
+    {
+      "id": 9,
+      "name": "Dexterity",
+      "description": "Complete the game in under 500 moves.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/27185535781E40AFD443F7397D56D3A232CB475E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.9
+    },
+    {
+      "id": 10,
+      "name": "But Why?",
+      "description": "Complete the game in under 30 minutes.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/A04FCC36516304E6912E788C347615941DE85CBC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 15.9
+    },
+    {
+      "id": 11,
+      "name": "Old is New",
+      "description": "Complete the original 2012 demo.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15484_00_005FB1BF99D30A249B79549C14A6E967DE0DD094BA/5AFA979F5CCC2C3BA14466EA8DA782703FA205FF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 32.2
+    }
+  ]
+}

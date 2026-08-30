@@ -1,0 +1,220 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR28219_00",
+  "slug": "psn-i-q-intelligent-qube",
+  "name": "I.Q Intelligent Qube ",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "2022-07-28T00:52:19Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Great Success",
+      "description": "Unlock all trophies in I.Q Intelligent Qube.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/515e8b89-b42c-4de4-8fb0-e00b3ab32ca5.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.5
+    },
+    {
+      "id": 1,
+      "name": "Grey Matter Engaged",
+      "description": "Clear Stage 1.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/5a0bc91c-c059-448a-b56b-19de90058481.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 34
+    },
+    {
+      "id": 2,
+      "name": "Go: On Green",
+      "description": "Clear Stage 2.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/a798075d-a973-4782-a716-ad4dd6b7e7fe.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 20.4
+    },
+    {
+      "id": 3,
+      "name": "The Great White Way",
+      "description": "Clear Stage 3.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/15a37faf-2dba-4a69-8ea0-544ee41a60cc.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.2
+    },
+    {
+      "id": 4,
+      "name": "You Are True Blue",
+      "description": "Clear Stage 4.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/650a95f2-17b3-416e-a0e4-0293df90967a.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.9
+    },
+    {
+      "id": 5,
+      "name": "Werewolves Aren't a Fan!",
+      "description": "Clear Stage 5.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/78714f93-7f1a-4209-92d1-f7b3b6d0457d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.5
+    },
+    {
+      "id": 6,
+      "name": "Orange You Excited You Finished That Level?",
+      "description": "Clear Stage 6.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/c9d60d52-ce3e-41ed-b49b-10fb66cad90f.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.6
+    },
+    {
+      "id": 7,
+      "name": "Tougher Than Granite",
+      "description": "Clear Stage 7.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/141f4fdb-a52b-4d99-bcbc-973ce01812d8.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.8
+    },
+    {
+      "id": 8,
+      "name": "Danger: Red Alert",
+      "description": "Clear Stage 8.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/ae8510df-8193-4e54-a76d-3f0cd1d13378.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.4
+    },
+    {
+      "id": 9,
+      "name": "Final Stage Cleared... Finally!",
+      "description": "Clear the final Stage.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/1d6be353-8054-40b6-9427-ab86845efa1d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.1
+    },
+    {
+      "id": 10,
+      "name": "Perfecto-Mundo!",
+      "description": "Get a perfect on Stage 1.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/4e48e5ba-f037-46e9-8b39-51432f70e52b.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 46.6
+    },
+    {
+      "id": 11,
+      "name": "You Sure Don't Dilly-Dally",
+      "description": "Get a perfect on Stage 2.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/093b113e-3576-4f46-8eb3-620a89a47d3a.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 28.4
+    },
+    {
+      "id": 12,
+      "name": "Isn't This Music a Bit \"Too Epic\" for This Game?",
+      "description": "Get a perfect on Stage 3.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/1b03704e-e758-49fa-8446-9f3f60900c04.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 18.7
+    },
+    {
+      "id": 13,
+      "name": "You Have Perfect Pitch!",
+      "description": "Get a perfect on Stage 4.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/b3690539-ba5b-473a-a0f0-72fe9f032241.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13.2
+    },
+    {
+      "id": 14,
+      "name": "Pentamerous Perfection",
+      "description": "Get a perfect on Stage 5.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/930613d9-2dd7-4f39-8f65-2182129799aa.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.1
+    },
+    {
+      "id": 15,
+      "name": "Six Shots Straight",
+      "description": "Get a perfect on Stage 6.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/0a7e28d2-84d5-4947-a5bd-678523c5de2d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.1
+    },
+    {
+      "id": 16,
+      "name": "It's My Lucky Day",
+      "description": "Get a perfect on Stage 7.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/8fad7939-e440-41dc-a847-8f607dde8563.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.2
+    },
+    {
+      "id": 17,
+      "name": "8 Great Apes",
+      "description": "Get a perfect on Stage 8.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/3a871704-492a-4162-86c2-b1ead95d9891.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.6
+    },
+    {
+      "id": 18,
+      "name": "Final Countdown",
+      "description": "Get a perfect on the final Stage.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28219_00/ee90e4d4-30b7-4839-8138-14da3bc64b89.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.6
+    }
+  ]
+}

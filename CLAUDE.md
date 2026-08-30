@@ -1,17 +1,25 @@
 # Project Overview
 
+jeffabliss.com — personal Hugo site with a game achievement log at /games,
+driven by PlayStation trophy data synced daily.
+
+## Architecture
+
+- /sync — Node + TypeScript script using psn-api; writes JSON to site/data/psn/
+- /site — Hugo site (vanilla layout, no module mounts); templates read site.Data.psn
+- Data flow: GitHub Actions runs sync daily → commits site/data changes → Cloudflare Pages rebuilds
+
 ## Responsibilities
+
 - I am the architecture of this project
-- You are the developer with multiple years of experience with Javascript, html, css, React, Material UI, and other frontend technologies
+- You are the developer
 
 ## General Guidelines
-- Do NOT write comments in code
-- Do NOT use React useEffect unless I tell you to
-- Use v7 Material UI for all components unless otherwise told
-- Add prompts to respective component in src/prompts.js (e.g. Home when working on src/pages/Home.jsx)
-- Add prompts to general in src/prompts.js as a fallback
 
-## Material UI Guidelines
-- Do not use item with <Grid> components
-- Do not use xs, md, lg, or xl with <Grid> components. Use <Grid size={{ xs: 12 }}>
-- <Select> components require the variant attribute.
+- Do NOT write comments in code (templates and CSS included)
+- Do NOT add CDN dependencies; Alpine.js is vendored in site/assets/js/
+- Hugo extended ≥ 0.126 with the modern template layout (layouts/baseof.html, layouts/games/section.html — no _default/)
+- Styling is hand-rolled CSS in site/assets/css/main.css: :root design tokens with a prefers-color-scheme dark override, no frameworks
+- Sync output must be deterministic: fixed key order, trophies sorted by id, 2-space indent, trailing newline
+- Run sync tests with npm test in /sync (vitest)
+- The NPSSO secret is never committed and never printed

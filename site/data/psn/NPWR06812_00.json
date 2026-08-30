@@ -1,0 +1,165 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR06812_00",
+  "slug": "psn-journey-ps4",
+  "name": "Journey",
+  "titlePlatform": "PS4",
+  "progressPercent": 19,
+  "lastUpdated": "2017-04-21T12:02:53Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Threshold",
+      "description": "Cross the broken bridge without completely rebuilding it.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/4BE0908BAD0BF37F622EA22B5BF15AD586530ABD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.7
+    },
+    {
+      "id": 1,
+      "name": "Mirage",
+      "description": "Find the hidden desert flower.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/2DDF53214B495344F42323D9FDAE316422538E79.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.8
+    },
+    {
+      "id": 2,
+      "name": "Explore",
+      "description": "Discover all cloth creatures in the desert.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/ADF39E987B62B316B8576E1B337FCD2AD0CCAD62.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.4
+    },
+    {
+      "id": 3,
+      "name": "Adventure",
+      "description": "Pass through 15 gates while surfing through the sunken city.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/ECC454C8227FA35E62EBAB5E88B33901769CF017.PNG",
+      "earned": true,
+      "earnedAt": "2017-04-21T11:56:43Z",
+      "rarityPercent": 3.6
+    },
+    {
+      "id": 4,
+      "name": "Trials",
+      "description": "Sneak through the underground passage without tearing your scarf.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/100BF58E3F35AF13910AAEC9C48306CA69BD8983.PNG",
+      "earned": true,
+      "earnedAt": "2017-04-21T01:08:10Z",
+      "rarityPercent": 26.1
+    },
+    {
+      "id": 5,
+      "name": "Ancestors",
+      "description": "Find a mysterious creature hidden in the temple.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/53F02F5020895FC0B6B7DF60454E454E13632673.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.3
+    },
+    {
+      "id": 6,
+      "name": "History",
+      "description": "Uncover all 10 ancient glyphs.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/4695A9D9D6DB37D781B0B25883CAEEB2455E184A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.8
+    },
+    {
+      "id": 7,
+      "name": "Crossing",
+      "description": "Reach the summit with a companion and return to the beginning.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/4BDEA937D562DC16D6F9FF56899082F4DBBB954A.PNG",
+      "earned": true,
+      "earnedAt": "2017-04-21T01:55:23Z",
+      "rarityPercent": 16
+    },
+    {
+      "id": 8,
+      "name": "Rebirth",
+      "description": "Finish the game and return to the beginning.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/DF12E2DCD106E7B10FAA878E78511F02B1B3BC40.PNG",
+      "earned": true,
+      "earnedAt": "2017-04-21T01:55:26Z",
+      "rarityPercent": 37
+    },
+    {
+      "id": 9,
+      "name": "Companion",
+      "description": "Finish the game with the same partner for the majority of the journey and return to the beginning.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/06BA640A202CACD4FDC193B4A0A5445C6DCBF22E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.6
+    },
+    {
+      "id": 10,
+      "name": "Reflection",
+      "description": "Sit and meditate with another player for more than 20 seconds.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/037FBBC850C34F2557A7283FB15DBE4C52942A41.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.4
+    },
+    {
+      "id": 11,
+      "name": "Wonder",
+      "description": "Meet 10 or more unique travelers.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/DF77F5E982C564B494C898AC13E246AC3CC73966.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.1
+    },
+    {
+      "id": 12,
+      "name": "Return",
+      "description": "Start the journey again after a week long break.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/05E2FB060FE32BA902372990875C9C9CEF77FAAA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 28.8
+    },
+    {
+      "id": 13,
+      "name": "Transcendence",
+      "description": "Collect all unique glowing symbols across one or more journeys.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR06812_00_003FEBD0B0438CBF4F60428AB1ADC9D484A0E26D79/46351E01E64E2AF5307500290A48F07994AB74D7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.6
+    }
+  ]
+}

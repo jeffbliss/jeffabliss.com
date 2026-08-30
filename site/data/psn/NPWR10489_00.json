@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR10489_00",
+  "slug": "psn-machinarium",
+  "name": "Machinarium",
+  "titlePlatform": "PS4",
+  "progressPercent": 9,
+  "lastUpdated": "2019-12-22T02:09:24Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Survivor",
+      "description": "Escape the scrapyard",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/B347E97AABDA69B768BA4C7BF36205404DC8DA01.PNG",
+      "earned": true,
+      "earnedAt": "2019-12-22T01:56:18Z",
+      "rarityPercent": 88
+    },
+    {
+      "id": 1,
+      "name": "Back in town",
+      "description": "Enter Machinarium",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/D263154FF656EE3B736A1690D88DE86A28C8D3ED.PNG",
+      "earned": true,
+      "earnedAt": "2019-12-22T02:09:21Z",
+      "rarityPercent": 75
+    },
+    {
+      "id": 2,
+      "name": "Jail breaker",
+      "description": "Free self and jail mates",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/7C9E88CBFFA4C3EA6D04336FAB4C285C63657186.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 59.2
+    },
+    {
+      "id": 3,
+      "name": "Pet catcher",
+      "description": "Bring the dog to the lady",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/BD8F262C5D1BE5F7F1E56F06C843D5BE4854FC65.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 49.5
+    },
+    {
+      "id": 4,
+      "name": "Board game master",
+      "description": "Win the Tic-tac-toe game",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/160A9CEE6B5E411C9F53DB8640954F5A9FB6A06E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 45.6
+    },
+    {
+      "id": 5,
+      "name": "Music lover",
+      "description": "Help the musicians",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/2055DA99DB1016A3541C2599A99CAB0EF0F8D7A4.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.9
+    },
+    {
+      "id": 6,
+      "name": "Video gamer",
+      "description": "Win all console games",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/CB753F38829DF5F87E8AC22708E8DB8C4FADE60C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 35.6
+    },
+    {
+      "id": 7,
+      "name": "Plumber",
+      "description": "Flood the Blackhats",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/2844C91A48810301D18150A178E6AECA100297FB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.1
+    },
+    {
+      "id": 8,
+      "name": "Deactivator",
+      "description": "Disable the bomb",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/4D3323B5E5BF9A0ECC97B8BCD4B54105A53E422B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 34.4
+    },
+    {
+      "id": 9,
+      "name": "Debugger",
+      "description": "Repair the brain",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/E4C377ABBEA8EFB06D047A76B1E5ABD55F62744A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 32.7
+    },
+    {
+      "id": 10,
+      "name": "Rescuer",
+      "description": "Rescue the girl",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/9B12AE21175A9ABDC0366D122371B5DA834E4197.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 32.4
+    },
+    {
+      "id": 11,
+      "name": "Escaper",
+      "description": "Escape Machinarium",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10489_00_004403D65089A31F95EF898B801E7E29523FB9F92D/BEFA6C7155E0938FB77D39B5605A68AC31AAEB5F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 32.2
+    }
+  ]
+}

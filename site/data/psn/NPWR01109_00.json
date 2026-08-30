@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR01109_00",
+  "slug": "psn-pixeljunk-racers-2nd-lap",
+  "name": "PixelJunk™ Racers 2nd Lap",
+  "titlePlatform": "PS3",
+  "progressPercent": 4,
+  "lastUpdated": "2020-06-16T02:31:33Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Bronzed Beauty",
+      "description": "Collect ten bronze cups (or higher) in Solo Tournament.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/7734A4BA05B85AA41A8B2C286FAD645228999989.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.9
+    },
+    {
+      "id": 1,
+      "name": "Silver Streak",
+      "description": "Collect fifteen silver cups (or higher) in Solo Tournament.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/3890443E8B6CD0735D87F81B7C7616C811588BF0.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5
+    },
+    {
+      "id": 2,
+      "name": "Golden Glory",
+      "description": "Collect twenty or more gold cups in Solo Tournament.\n\n",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/CB76D272A8E3D7AA1FDDFCE41B0CB9AF9F0D0344.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.9
+    },
+    {
+      "id": 3,
+      "name": "Learner Driver",
+      "description": "Combo Racers: Pass ten cars without colliding, on the Oval Express.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/B6D53E1B3C6215E368F0BB9CD1B7C47A6276219D.PNG",
+      "earned": true,
+      "earnedAt": "2020-06-16T02:25:28Z",
+      "rarityPercent": 40.2
+    },
+    {
+      "id": 4,
+      "name": "Contender",
+      "description": "Pass thirty cars without colliding in Hot Rods\n",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/ED5EC0369FB3309FD453ECB2441A7B811C16DF21.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.2
+    },
+    {
+      "id": 5,
+      "name": "Oh, I get it!",
+      "description": "Absorb 25 cars without crashing in Bipolar or Bust.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/0F5884136C95A8096108F50BB55A6955A948FB4E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.8
+    },
+    {
+      "id": 6,
+      "name": "Untouchable",
+      "description": "Hot Rods: Get gold with NO crashes, on the Split Courseway\n",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/165C2B18B42AAEE3706F98BCA5110BE89749E640.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.6
+    },
+    {
+      "id": 7,
+      "name": "Untouchable +",
+      "description": "Sunday Drivers: Get gold with NO crashes, on any course.\n",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/9749FCA99C88238E3428450FE0BFAA8887ECFAA4.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.9
+    },
+    {
+      "id": 8,
+      "name": "Monkey Magic",
+      "description": "Use whatever tricks you can to achieve a Speed Monkey combo of 120 or more!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/E1FFC4BC00399953C79E418ECC2DAC9BCB64CF9F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3
+    },
+    {
+      "id": 9,
+      "name": "SO HUNGRY!",
+      "description": "The Munchies: Keep yourself alive for over ninety seconds at the Desert Speedway.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/A6B7034F10DE8ECA0115B73EEECA01F7ECB34686.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.7
+    },
+    {
+      "id": 10,
+      "name": "Ghost Rider",
+      "description": "Race against 100 ghosts in Ghost Attack.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/2AA9E246A1E31D32128A6155EA0707645AC8B211.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.7
+    },
+    {
+      "id": 11,
+      "name": "Tournament Titan",
+      "description": "Complete Solo Tournament Mode\n",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/34CC48745B490ED3F6F4A78B77C22C094BA4657D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.1
+    },
+    {
+      "id": 12,
+      "name": "Speed Limit",
+      "description": "Clear In The Zone with a gold medal, without going faster than 70!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/7AC3C4AE5DD20152AC0F5C0A9BB57C55A746B23E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.6
+    },
+    {
+      "id": 13,
+      "name": "Freewheelin'",
+      "description": "Win Combo Racers without touching the throttle after the first lap, at Redwood Lakes.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/5956A83075FBB909EBC63CE33FDBA067E9CA553B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.1
+    },
+    {
+      "id": 14,
+      "name": "Flamer",
+      "description": "Fireball Frenzy: Destroy 10 cars in a single fireball, at the Snow Spiral",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/32ED3D1498DAF98951F2BC1392B3E951E120B1C7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.2
+    },
+    {
+      "id": 15,
+      "name": "Total Destruction",
+      "description": "Death Race: wipe out every last car on The Knot.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR01109_00_0024727128EADE2A13CDBAD2E1D82E296E1F57700A/088623C080BAEA9BC9A22CD49531168A1C70D5A0.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.6
+    }
+  ]
+}

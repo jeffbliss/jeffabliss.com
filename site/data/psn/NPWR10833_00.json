@@ -1,0 +1,143 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR10833_00",
+  "slug": "psn-10-second-ninja-x",
+  "name": "10 SECOND NINJA X",
+  "titlePlatform": "PSVITA,PS4",
+  "progressPercent": 42,
+  "lastUpdated": "2024-03-14T02:14:29Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Think of the children",
+      "description": "Won't somebody PLEASE think of the children!?!",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/37CBE59106DB974242087C1DDC370C6EACF1481F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.4
+    },
+    {
+      "id": 1,
+      "name": "STOP - HE'S ALREADY DEAD!",
+      "description": "Score 15,000 points playing TOTC",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/012C2E781B407C61A2F97950CBDF8B0F3EE99219.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.9
+    },
+    {
+      "id": 2,
+      "name": "AHHHHHHHHHHHHHHHH",
+      "description": "Jump off the ship",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/7C98BBAA6F9CE0A39DCBBF8AB2159B79D0ACCAD6.PNG",
+      "earned": true,
+      "earnedAt": "2017-04-09T00:07:22Z",
+      "rarityPercent": 16.6
+    },
+    {
+      "id": 3,
+      "name": "Just Getting Started",
+      "description": "Earn 25 Stars",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/D38BD98E26675C17606546C17A3436D75F97B93B.PNG",
+      "earned": true,
+      "earnedAt": "2017-04-09T00:03:09Z",
+      "rarityPercent": 18.2
+    },
+    {
+      "id": 4,
+      "name": "Smashing",
+      "description": "Earn 75 Stars",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/DEA96AFC7886071B22B4F38399B2CFE359A21BE6.PNG",
+      "earned": true,
+      "earnedAt": "2024-03-09T00:52:47Z",
+      "rarityPercent": 8.2
+    },
+    {
+      "id": 5,
+      "name": "Wooooooooooooooah - Half way there",
+      "description": "Earn 150 Stars",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/B8C7C9A9FDD803BCF98C5AD9DA7B7A43141AD7EC.PNG",
+      "earned": true,
+      "earnedAt": "2024-03-14T02:14:27Z",
+      "rarityPercent": 5.2
+    },
+    {
+      "id": 6,
+      "name": "Wooooooooooooooah - Livin' on a prayer",
+      "description": "Earn 300 stars & X rank all marathon modes",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/CD8285E92F00A51349C72FB70B97ACBDFBC3A546.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.5
+    },
+    {
+      "id": 7,
+      "name": "Yay - I'm a llama again!",
+      "description": "Equip a new character skin",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/CF47C9BB4FDB28D66D587BBBE9D8696559B93E7A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.1
+    },
+    {
+      "id": 8,
+      "name": "No one else can do the things you do",
+      "description": "Complete Marathon Mode in every zone",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/2A7E59CD97DD87E5C8B22AD241096D498E96CF33.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.6
+    },
+    {
+      "id": 9,
+      "name": "... & BENJI",
+      "description": "Let Benji join your adventure",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/D4B84943F9BED26A1BAB8D94EB46F43A58DC3556.PNG",
+      "earned": true,
+      "earnedAt": "2017-04-09T00:08:29Z",
+      "rarityPercent": 14.9
+    },
+    {
+      "id": 10,
+      "name": "Greatbeard & Benji",
+      "description": "Help Greatbeard & Benji on their way",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/C2DFABE92A4607034B1F733C81FF022980930CF9.PNG",
+      "earned": true,
+      "earnedAt": "2024-03-14T02:04:29Z",
+      "rarityPercent": 6.7
+    },
+    {
+      "id": 11,
+      "name": "SO CLOSE",
+      "description": "Finish a level with less than 0.03 seconds to the next star rating",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10833_00_003E97550F2273E2BDCA66B78AD8050E0E5A0556D3/EDD97A0F7D8D39FD4B2D4E6634C22B4565FC81BA.PNG",
+      "earned": true,
+      "earnedAt": "2017-04-08T23:48:11Z",
+      "rarityPercent": 18.1
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR13786_00",
+  "slug": "psn-aer-trophy-set",
+  "name": "Aer Trophy Set",
+  "titlePlatform": "PS4",
+  "progressPercent": 18,
+  "lastUpdated": "2017-11-20T02:52:00Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Pilgrim",
+      "description": "Explore the Land of Gods.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/98DB43BDBBA315C8F2A3149AE5B48342FA371C1B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 25
+    },
+    {
+      "id": 1,
+      "name": "Light at the end of the tunnel",
+      "description": "Escape the collapsing cave.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/7D3EE884A395F4FEC12121FCE8021DEDBE645C4D.PNG",
+      "earned": true,
+      "earnedAt": "2017-11-20T02:27:25Z",
+      "rarityPercent": 92.2
+    },
+    {
+      "id": 2,
+      "name": "People's Haven",
+      "description": "Complete the Eventide Sanctuary.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/FE5C47467D594A5114CD337D3954E1C06FA28012.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 49.2
+    },
+    {
+      "id": 3,
+      "name": "Knowledge for Power",
+      "description": "Complete the The Archives.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/B627CA0655E24CDBA83CBCD693E781377689F95A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 43.3
+    },
+    {
+      "id": 4,
+      "name": "Mausoleum of Ice",
+      "description": "Complete the The Monastery.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/799C7908A93CEBE6BBBC742EF2FDC0B3F0EB72D2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 42.2
+    },
+    {
+      "id": 5,
+      "name": "Equilibrium",
+      "description": "Complete the game.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/EF1167A919CEF834A8BC5AF399753566D6B1ADDA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 40.4
+    },
+    {
+      "id": 6,
+      "name": "Attuned to the spirits",
+      "description": "Speak to all of the spirit animals.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/76A979742B76C16612A2A234AA4112FCAB7F4441.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 32.9
+    },
+    {
+      "id": 7,
+      "name": "Cartographer",
+      "description": "Discover all areas of the map.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/F6B2F499220FBBED5C5D3A1375D47EA766DEB5D6.PNG",
+      "earned": true,
+      "earnedAt": "2017-11-20T02:51:59Z",
+      "rarityPercent": 45.1
+    },
+    {
+      "id": 8,
+      "name": "Mama?",
+      "description": "Get some Lambaby love.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/AB685C7810734074EB026AB4F0874F75D6AECB18.PNG",
+      "earned": true,
+      "earnedAt": "2017-11-20T02:38:51Z",
+      "rarityPercent": 61.3
+    },
+    {
+      "id": 9,
+      "name": "Hide and Seek",
+      "description": "Find Erin when she's gone.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/29FD4418ECDF3A9E2C88AC62A6DBD0500F70AAC6.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 25.3
+    },
+    {
+      "id": 10,
+      "name": "Baa from the past",
+      "description": "Find the Ancient Llamba.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/7074F1FF23C7A51CD647F92518469EF1043E16DE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 31.5
+    },
+    {
+      "id": 11,
+      "name": "An uninvited guest",
+      "description": "Find the Crab Island.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/688BCCEB35F1C3405989AB18AA262810BFEF6858.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 35.7
+    },
+    {
+      "id": 12,
+      "name": "In the belly of the beast",
+      "description": "Find the bones of an old beast.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/73D9460EE481F40AE03F77219C4915EC335B78AF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 40.8
+    },
+    {
+      "id": 13,
+      "name": "Gaze into the abyss",
+      "description": "Find the dwellings of the rift cult.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/A58EA15BA69A7439402C0999A68DC433394BB89D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 41.5
+    },
+    {
+      "id": 14,
+      "name": "Memorial",
+      "description": "Find the ancient battlefield.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/6947789583E9F714A9BAECAB341FB4F1E3CA7483.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 37.2
+    },
+    {
+      "id": 15,
+      "name": "Written in stone",
+      "description": "Find the chiseled stone map.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/FDCD8A8C0271FE4C939909F65347E5C51BAA7625.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 33.3
+    },
+    {
+      "id": 16,
+      "name": "Condor condo",
+      "description": "Find the giant birdshrine.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/1D9B1EDC7C6E5C017735D97C1BF6C9005DD65388.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.2
+    },
+    {
+      "id": 17,
+      "name": "Tails of Stone",
+      "description": "Find the statue of the fox.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/E748A3C89F27982DD6E5CB6D4C86156649A53976.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 34.4
+    },
+    {
+      "id": 18,
+      "name": "Antlers of Stone",
+      "description": "Find the statue of the deer.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/2D3C28A7D1A50AE8EF7C9A78B69DA2B2135A3F9E.PNG",
+      "earned": true,
+      "earnedAt": "2017-11-20T02:30:43Z",
+      "rarityPercent": 44.3
+    },
+    {
+      "id": 19,
+      "name": "Wings of Stone",
+      "description": "Find the statue of the crane.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/8F93F21D8849C2E190DB6316DC503FDE6F8AB185.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 41.2
+    },
+    {
+      "id": 20,
+      "name": "Ripples on the surface",
+      "description": "Step into the well.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13786_00_008A83CF84D121A461788E8F2DF65AF611DB457DD7/F2938DDAF7FB4209EE8B662A8F46A513F86E3D5B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 33.8
+    }
+  ]
+}

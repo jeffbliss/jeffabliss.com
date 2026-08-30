@@ -1,0 +1,242 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR16175_00",
+  "slug": "psn-realm-royale",
+  "name": "Realm Royale",
+  "titlePlatform": "PS4",
+  "progressPercent": 46,
+  "lastUpdated": "2019-02-01T01:48:57Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Your Royal Eggsellence",
+      "description": "Earn all trophies in the game.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/00A7CBA9DCE66E30AF2FD479753E8091C1EA6593.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.7
+    },
+    {
+      "id": 1,
+      "name": "Novice Warrior",
+      "description": "Eliminate an enemy player as a Warrior.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/9D79B441184EA3E30BC1708443E819DC1FBE7B9E.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:35:39Z",
+      "rarityPercent": 40.4
+    },
+    {
+      "id": 2,
+      "name": "Novice Assassin",
+      "description": "Eliminate an enemy player as an Assassin.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/6375388FC3C2A3860E8E286205ECC6D20B413563.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:35:49Z",
+      "rarityPercent": 50.6
+    },
+    {
+      "id": 3,
+      "name": "Novice Mage",
+      "description": "Eliminate an enemy player as a Mage.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/5564802BA2504E4D8928C71FBFF4725EAB91185D.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:48:54Z",
+      "rarityPercent": 35.9
+    },
+    {
+      "id": 4,
+      "name": "Novice Hunter",
+      "description": "Eliminate an enemy player as a Hunter.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/9ADA2A5BA4A14E50AE5C772E3F0A52BC669B8831.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:35:51Z",
+      "rarityPercent": 29.2
+    },
+    {
+      "id": 5,
+      "name": "Novice Smith",
+      "description": "Forge your first Legendary Weapon.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/832C6A6506D858BF0E11003FC0103FB4A1E14567.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:35:53Z",
+      "rarityPercent": 37.5
+    },
+    {
+      "id": 6,
+      "name": "Great Eggscape",
+      "description": "Survive after becoming a chicken.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/8E634D3DD96C68B531F5D36371247213F4D8A33A.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:35:55Z",
+      "rarityPercent": 72.5
+    },
+    {
+      "id": 7,
+      "name": "20-Piece",
+      "description": "Collect Armor Potions 20 times.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/2A80C4789DFA72A3B784A861A1006DFE346A3BE7.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:35:59Z",
+      "rarityPercent": 30.9
+    },
+    {
+      "id": 8,
+      "name": "Realm Royalty",
+      "description": "Get a Crown Royale.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/E073908AF9AD957074C869FDB9AD51456674A974.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:36:01Z",
+      "rarityPercent": 25.5
+    },
+    {
+      "id": 9,
+      "name": "Master Warrior",
+      "description": "Get 50 eliminations as a Warrior.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/10F9678C8D8FA538CD54619FD99C70A9F95D037B.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:35:47Z",
+      "rarityPercent": 3.3
+    },
+    {
+      "id": 10,
+      "name": "Master Assassin",
+      "description": "Get 50 eliminations as an Assassin.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/BD108CC4A4F551D9DC44B7313CDF4904171EEF23.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.3
+    },
+    {
+      "id": 11,
+      "name": "Master Mage",
+      "description": "Get 50 eliminations as a Mage.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/C5DC0EE67714F2E5481CCC582AC87FC7DB898B2E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.4
+    },
+    {
+      "id": 12,
+      "name": "Master Hunter",
+      "description": "Get 50 eliminations as a Hunter.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/F0DF5E9AC3F974E7686FC70822D0B6CA7AAB66B6.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.7
+    },
+    {
+      "id": 13,
+      "name": "Master Smith",
+      "description": "Forge 100 items.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/98767F57EC5A6C333E645A992B4FA8EDBB69233B.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:36:03Z",
+      "rarityPercent": 6.8
+    },
+    {
+      "id": 14,
+      "name": "Geared Out",
+      "description": "Get a legendary item in every slot.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/59EFB956D5699E474776E4B4FF8536FDDC09C619.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:48:42Z",
+      "rarityPercent": 27.9
+    },
+    {
+      "id": 15,
+      "name": "Knife Edge Death Match",
+      "description": "Eliminate an enemy player with your dagger.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/3608D4524A1F02B99114FC80D3F42C676763DC55.PNG",
+      "earned": true,
+      "earnedAt": "2019-02-01T01:36:05Z",
+      "rarityPercent": 13.8
+    },
+    {
+      "id": 16,
+      "name": "Jack of All Trades",
+      "description": "Get a Crown Royale with 3 different classes.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/D19431B29FFB1CAD0CC8DAC29405B500F5D7E5F5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4
+    },
+    {
+      "id": 17,
+      "name": "Royale Master",
+      "description": "Get 10 Crown Royales",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/F57103D6FCF24FAE4AA4F9D6A6FC15090A6E26AC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4
+    },
+    {
+      "id": 18,
+      "name": "Longshot Foghorn",
+      "description": "Chicken a player from more than 800 feet away.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/60FFCD47E6FB390EE13752AD8D6B6D0B8DFFCDDE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8
+    },
+    {
+      "id": 19,
+      "name": "Decimation",
+      "description": "Eliminate more than 10 players in a single match.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/B705B6FF300C69AAC0A64F008D2E540B10F72B6B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4
+    },
+    {
+      "id": 20,
+      "name": "Absolute Unit",
+      "description": "Win a match as a team of 4 without losing a single player.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16175_00_0063525B2C6918282E89322C18BE494F463EF388B1/25A085DB29318C6253FBC23D8A3BE0F536AF28B8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.1
+    }
+  ]
+}

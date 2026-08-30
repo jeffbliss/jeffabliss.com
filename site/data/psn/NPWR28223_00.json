@@ -1,0 +1,176 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR28223_00",
+  "slug": "psn-jumping-flash",
+  "name": "Jumping Flash!",
+  "titlePlatform": "PS5",
+  "progressPercent": 2,
+  "lastUpdated": "2023-02-12T00:26:16Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Perfect Rabitteer",
+      "description": "Unlock all trophies in Jumping Flash!.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/fabd337d-e461-4013-9155-193e51234b08.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.3
+    },
+    {
+      "id": 1,
+      "name": "Aloha, Aloha",
+      "description": "Acquire all Jetpods and defeat Baron Aloha. No cheating!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/77357f61-a7f2-4feb-9584-22bebc4cd0a4.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.8
+    },
+    {
+      "id": 2,
+      "name": "No Balloon Was Safe",
+      "description": "Find and complete all bonus stages.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/983e6ed7-9757-4d4d-abc4-a49572b78bce.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.4
+    },
+    {
+      "id": 3,
+      "name": "Millionaire Hare",
+      "description": "Earn a seven-digit score.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/f08e4ac0-084d-42c3-8946-37261ba5042a.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.8
+    },
+    {
+      "id": 4,
+      "name": "Bounce on the Baron",
+      "description": "Defeat Baron Aloha without firing any special weapons.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/37c411b2-e8fe-42ad-bb0d-07b00adc7550.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.8
+    },
+    {
+      "id": 5,
+      "name": "Bonanza bonus",
+      "description": "Find a bonus stage.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/b22b6775-8f98-42d5-90d9-4dfaae04b5ae.PNG",
+      "earned": true,
+      "earnedAt": "2023-02-12T00:26:15Z",
+      "rarityPercent": 30.7
+    },
+    {
+      "id": 6,
+      "name": "Airtime",
+      "description": "Bounce on enemies at least five times before touching the ground.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/2175e1ef-98b7-4a40-9eac-1b29989aac05.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 24.4
+    },
+    {
+      "id": 7,
+      "name": "I'll Face Myself",
+      "description": "Bounce on Dark Robbit's bunny companions 15 times.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/be279e21-dc31-4b61-93ca-c4890ff264a9.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.2
+    },
+    {
+      "id": 8,
+      "name": "Safety's Always On",
+      "description": "Complete a stage without firing ANY projectiles.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/de8e621b-c0dc-4738-8983-6f6c1bc334b5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.5
+    },
+    {
+      "id": 9,
+      "name": "Can't Hop, Won't Hop",
+      "description": "Defeat a boss without jumping once.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/1c0490b1-1a62-48fe-9f64-60b0d3ac4d2c.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.6
+    },
+    {
+      "id": 10,
+      "name": "Don't Rust!",
+      "description": "Take a breather at a hot spring in World 1.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/5a706cc8-ecae-4acd-9cee-104f99f7b5ac.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13
+    },
+    {
+      "id": 11,
+      "name": "Doom Rooms",
+      "description": "Find the three hidden passages in World 2.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/00bb1c25-0158-4729-b91a-d6f7d6420fef.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.8
+    },
+    {
+      "id": 12,
+      "name": "Falling with Style",
+      "description": "Be in the air for 6 seconds or more.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/661da681-2ecc-43bd-b620-f153e5e00ccf.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 20.9
+    },
+    {
+      "id": 13,
+      "name": "Stomping Flash ",
+      "description": "Defeat a boss without firing ANY projectiles.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/fce95062-67cf-46f0-9b88-46b71eea961c.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.9
+    },
+    {
+      "id": 14,
+      "name": "More Cat, Than Rabbit",
+      "description": "Have 9 lives.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28223_00/a8e5dac1-dc08-4ccf-bb41-a9c908e537ea.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.2
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR17697_00",
+  "slug": "psn-toki",
+  "name": "TOKI",
+  "titlePlatform": "PS4",
+  "progressPercent": 10,
+  "lastUpdated": "2021-02-27T01:25:52Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "I saw red",
+      "description": "You defeated Boloragog!",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/ECA285CDB428F05FA269C1C6FC57B532692F595D.PNG",
+      "earned": true,
+      "earnedAt": "2021-02-27T01:25:45Z",
+      "rarityPercent": 64.8
+    },
+    {
+      "id": 1,
+      "name": "You really knocked the air out of him!",
+      "description": "You defeated Rambacha!",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/261C4B91CC53D08DB4FCF214EFAE6A73832CB75F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 47.6
+    },
+    {
+      "id": 2,
+      "name": "BURP !",
+      "description": "You defeated Mogulvor!",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/4862D1A1A95C61AAD7B7875834FE39AD983FA4B0.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 23
+    },
+    {
+      "id": 3,
+      "name": "Ice Age",
+      "description": "You defeated Zarzamoth!",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/6D32CB7A97487152F2C1E3DBCAA0BA0BFA90E124.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 20.5
+    },
+    {
+      "id": 4,
+      "name": "You got to the heart of the matter!",
+      "description": "Good work! You defeated Bashtar!",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/6CF721F41164295C66C0B427388EF4EF8BFF4434.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.4
+    },
+    {
+      "id": 5,
+      "name": "No feet no sweets",
+      "description": "You defeated Vookimedlo! (You broke his heart, sniff...)",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/8AA08BA6D87A7329C2E0DA8B872FBE23BFA5A7BE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.3
+    },
+    {
+      "id": 6,
+      "name": "No one can make a monkey out of you!",
+      "description": "Complete arcade mode on difficulty level: hardest",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/D6887526623BEC21E9F6C2B15AE64575D83BE516.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1
+    },
+    {
+      "id": 7,
+      "name": "TOKI",
+      "description": "Complete arcade mode without using continues (normal difficulty or higher)",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/CB37F30A2E20256EEFC15BE0E70CD402ADD38A5A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.4
+    },
+    {
+      "id": 8,
+      "name": "You have an appetite for life!",
+      "description": "Collect all the 1UP bonuses in a session",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/EF99A3114AB1DC0BDD5D5DA2EF51F5B82B8CED20.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.2
+    },
+    {
+      "id": 9,
+      "name": "You really brought your game to a head!",
+      "description": "Eliminate an enemy by jumping on his head",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/B24A24C2D27E448932B3F42F9AA559AB6F10A3AA.PNG",
+      "earned": true,
+      "earnedAt": "2021-02-27T01:16:03Z",
+      "rarityPercent": 90.7
+    },
+    {
+      "id": 10,
+      "name": "I guess life really IS all about the money!",
+      "description": "Collect 50 coins to earn an extra life! (arcade mode)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/856B437B84FC5784FEC92D1F080D962518434D4E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 15
+    },
+    {
+      "id": 11,
+      "name": "You really get the point(s)!",
+      "description": "Reach a score of 70,000 points to earn an extra life! (arcade mode)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/6DD0C7DC523DC7CC659018BDEA175BF50B21FB3A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 53.1
+    },
+    {
+      "id": 12,
+      "name": "TOsKIll",
+      "description": "Beat the total score of 350000 points (arcade mode)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR17697_00_00ACC03A90308413899E2EDB6107EBB1426D3DBCE9/5BC53BBE2101D3470CFFB8D686814233E55C653F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1
+    }
+  ]
+}

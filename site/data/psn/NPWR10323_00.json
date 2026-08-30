@@ -1,0 +1,176 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR10323_00",
+  "slug": "psn-tetrobot-and-co",
+  "name": "Tetrobot and Co.",
+  "titlePlatform": "PS4",
+  "progressPercent": 14,
+  "lastUpdated": "2017-07-29T22:15:01Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Where's the lock?",
+      "description": "Collect your very first Key",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/AE1997ACC21DFEC2C53EBC2F7DB53A5E0A201094.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-29T22:14:58Z",
+      "rarityPercent": 59.3
+    },
+    {
+      "id": 1,
+      "name": "Do-it-yourselfer",
+      "description": "Repair Tetrobot (by collecting all Memory blocks)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/F29C2CEAF641D8F398CD7F83FEC0B85751E7C4D0.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-29T22:07:44Z",
+      "rarityPercent": 50.9
+    },
+    {
+      "id": 2,
+      "name": "Divemaster",
+      "description": "Repair Watabot (by collecting all Memory blocks)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/2EECBCDC16CF1E46FA4E279E6E4EDE601622FF19.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 45
+    },
+    {
+      "id": 3,
+      "name": "Confectioner",
+      "description": "Repair Puddinbot (by collecting all Memory Blocks)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/1BC8E7FFB670B34109C061F6C4E036C1220AFD5B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 42.3
+    },
+    {
+      "id": 4,
+      "name": "Enlightener",
+      "description": "Repair Lumibot (by collecting all Memory blocks)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/00031B3C5262214BA9B69678E74973D4D34ADD06.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.5
+    },
+    {
+      "id": 5,
+      "name": "Prestidigitator",
+      "description": "Repair Powerbot (by collecting all Memory blocks)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/1A69F55C34A70F70A3F5E9CFB050865CF298D382.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 38
+    },
+    {
+      "id": 6,
+      "name": "Minesweeper",
+      "description": "Repair Turbot (by collecting all Memory blocks)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/6470C6B58D23C7ED6FCC7549CEB41F46134CF59F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 37.7
+    },
+    {
+      "id": 7,
+      "name": "Aeolus",
+      "description": "Repair Steambot (by collecting all Memory blocks)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/82CE8C8486E93DAB5D02784DA51B04B749D41F9A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 35.4
+    },
+    {
+      "id": 8,
+      "name": "You Monster",
+      "description": "Repair Spacebot (by collecting all Memory blocks)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/B231B9BD837524D730110464DFAFC296DAB7E31B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 34.7
+    },
+    {
+      "id": 9,
+      "name": "Three of a kind",
+      "description": "Collect 3 Memory blocks in a level and merge them into a Memory bar",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/9A36022EAFE6C97C7678F2B95FD7CA8DC2E95BB8.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-29T01:17:50Z",
+      "rarityPercent": 71.4
+    },
+    {
+      "id": 10,
+      "name": "Faceblox addict",
+      "description": "Unlock all Faceblox pages created by the most social blocks",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/102EC6E605C1D0DF25BF54E3D13CE80E89006C61.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.6
+    },
+    {
+      "id": 11,
+      "name": "Blocks That Matter, 15 years after",
+      "description": "Unlock all the highlights of Maya’s early career",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/62D55EF4588D60BCE78F999AE2E8371D59226C2B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.1
+    },
+    {
+      "id": 12,
+      "name": "Sniper",
+      "description": "Kill Big Mamarina with Psychobot",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/66A6991C983FC3A7214E60F4E791431EFA356493.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 29.5
+    },
+    {
+      "id": 13,
+      "name": "Bunch of keys",
+      "description": "Collect all Keys",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/61523340946D8D1054E29B3E2FD642222699CD3B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 34.2
+    },
+    {
+      "id": 14,
+      "name": "You've got mail!",
+      "description": "Complete the game with 100%",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10323_00_0058F2FDDBBAF5C5246E3A8AECD04EB15242FFF271/7A06CBFAB76ABCE79AB631B565C1075682C2B197.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 33.5
+    }
+  ]
+}

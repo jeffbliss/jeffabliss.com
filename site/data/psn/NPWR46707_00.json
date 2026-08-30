@@ -1,0 +1,198 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR46707_00",
+  "slug": "psn-blue-prince",
+  "name": "Blue Prince",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "2025-12-23T21:53:03Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Case Closed",
+      "description": "Complete the Trophy Case",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/8ee99c14-8917-472a-8eb5-a90134d94e8f.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.3
+    },
+    {
+      "id": 1,
+      "name": "Full House Trophy",
+      "description": "Draft a room in each open slot of your house.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/23c2674a-1ed5-4d39-8dc9-6fac969f479e.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.9
+    },
+    {
+      "id": 2,
+      "name": "Bullseye Trophy",
+      "description": "Solve 40 Dartboard Puzzles",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/e984eee9-6439-4310-b132-4593bcc6657a.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.3
+    },
+    {
+      "id": 3,
+      "name": "A Logical Trophy",
+      "description": "Win 40 Parlor Games",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/a2818799-9249-4937-a51f-397f9aa2d9a5.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.8
+    },
+    {
+      "id": 4,
+      "name": "Trophy of Invention",
+      "description": "Create all 8 Workshop Contraptions",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/521c605d-7e72-4fee-a6e6-bd8271bb775b.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.5
+    },
+    {
+      "id": 5,
+      "name": "Trophy of Drafting",
+      "description": "Win the Drafting Strategy Sweepstakes",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/d6707e07-52d7-4849-8bf7-100d4ba5a7ca.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.8
+    },
+    {
+      "id": 6,
+      "name": "Trophy 8",
+      "description": "Solve the enigma of Room 8 on Rank 8",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/240b647f-fa3f-44bd-9dcf-07aa790e2ed0.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.1
+    },
+    {
+      "id": 7,
+      "name": "Inheritance Trophy",
+      "description": "Reach Room 46",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/15ac40ad-acae-40f4-8e6d-8b2ef79c90db.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.2
+    },
+    {
+      "id": 8,
+      "name": "Trophy of Wealth",
+      "description": "Buy Out the entire Showroom",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/b33f3407-8ab4-43fa-9164-847ae09d8540.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.3
+    },
+    {
+      "id": 9,
+      "name": "Explorer's Trophy",
+      "description": "Complete the Mount Holly Directory",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/94afff19-dfb4-4c65-87f7-12952a1659f8.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.5
+    },
+    {
+      "id": 10,
+      "name": "Dare Bird Trophy",
+      "description": "Reach Room 46 in Dare Mode",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/5dcf0f00-ffcd-4aa8-b4ae-8325a517ce1e.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.6
+    },
+    {
+      "id": 11,
+      "name": "Cursed Trophy",
+      "description": "Reach Room 46 in Curse Mode",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/d292fdc3-717c-4acc-b010-b1abbcc8f28e.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.4
+    },
+    {
+      "id": 12,
+      "name": "Day One Trophy",
+      "description": "Reach Room 46 in one day",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/ff4f305a-f6ee-4e3d-9691-3e84cd9fb870.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.4
+    },
+    {
+      "id": 13,
+      "name": "Trophy of Speed",
+      "description": "Reach Room 46 in under an hour",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/1eeeed9a-1a5b-4f64-aacf-ac6174945182.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.5
+    },
+    {
+      "id": 14,
+      "name": "Trophy of Sigils",
+      "description": "Unlock all 8 Realm Sigils",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/9193cca3-13ac-4f57-876e-fc655c96e936.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.6
+    },
+    {
+      "id": 15,
+      "name": "Diploma Trophy",
+      "description": "Ace the Classroom Final Exam",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/6e5e0d7e-3046-46e1-b3f6-735e68b2b33b.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3
+    },
+    {
+      "id": 16,
+      "name": "Trophy of Trophies",
+      "description": "Collect all 16 trophies",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR46707_00/48a6dc35-e246-4006-a315-b666be037782.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.3
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR08986_00",
+  "slug": "psn-back-to-bed",
+  "name": "Back to Bed",
+  "titlePlatform": "PS3,PSVITA,PS4",
+  "progressPercent": 10,
+  "lastUpdated": "2019-12-21T00:08:54Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Understanding the Basics",
+      "description": "Complete the first 3 levels to learn the basics of the game.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/6200A2AFA9AEA81302C669334AF07DD8FD0D42BB.PNG",
+      "earned": true,
+      "earnedAt": "2019-12-21T00:07:21Z",
+      "rarityPercent": 71.7
+    },
+    {
+      "id": 1,
+      "name": "Deeper Into the Dream",
+      "description": "Help Bob through the first dream world.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/5D2566A5D9ACD1C5385A48EA8A2A2A5A7CD2E81A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 19.1
+    },
+    {
+      "id": 2,
+      "name": "Back to Bed",
+      "description": "Get Bob safely to the end of the last level.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/F666813B337D0A60BB2C9DAE153469E7AB9A31B1.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.2
+    },
+    {
+      "id": 3,
+      "name": "Déjà vu",
+      "description": "Complete the first dream world in nightmare mode.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/E8F200C848505D6B7A05530C7DAF0D83CD7ACEF4.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.1
+    },
+    {
+      "id": 4,
+      "name": "So Much Easier the First Time",
+      "description": "Complete the game in nightmare mode.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/900D8F3135E979819796708AFB8AC45736497C8C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.8
+    },
+    {
+      "id": 5,
+      "name": "No Time to Explain!",
+      "description": "Skip five cut scenes.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/D3EEF07925C6003D18D2306A2C43C01EA40440F8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.3
+    },
+    {
+      "id": 6,
+      "name": "Open Sesame",
+      "description": "Open a door in nightmare mode.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/2937DD2F0572A7192B962B2763352ABF2C029D88.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.7
+    },
+    {
+      "id": 7,
+      "name": "Grown Attached",
+      "description": "Spend 10 minutes in one level.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/121C15366C4F3C83CEE516E7A5419D039F56DE95.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 21.7
+    },
+    {
+      "id": 8,
+      "name": "If at First You Don't Succeed",
+      "description": "Retry a single level 5 times.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/92ED282A9FCE068AE4975B31CA53087986C07355.PNG",
+      "earned": true,
+      "earnedAt": "2019-12-21T00:08:50Z",
+      "rarityPercent": 11.2
+    },
+    {
+      "id": 9,
+      "name": "A Dog, a Whale and a Clock Walks Into a Hole…",
+      "description": "Allow Bob to be woken by a dog, an alarm clock, a whale train and a manhole.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/4A56B2249E70D6E6B46454C32F30567C411FAECE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.8
+    },
+    {
+      "id": 10,
+      "name": "Groundhog Night",
+      "description": "Make Bob walk over the edge 10 times in a single level.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/4A1941489E05F86C1FAFC61758270A5E148E3515.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 31.5
+    },
+    {
+      "id": 11,
+      "name": "Speed Runner",
+      "description": "Complete levels 1 - 30 in under 45 minutes.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/CD52DE3F079ECDE8D0A32895DE6B64823351564E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.6
+    },
+    {
+      "id": 12,
+      "name": "The Button is Stuck!",
+      "description": "Use the fast forward function for a combined 5 minutes.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/2FAA58F9C91BF3D424F97270674492E061834F4B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.7
+    },
+    {
+      "id": 13,
+      "name": "Checkmate",
+      "description": "Scare five chess pieces.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/B123817583D7BF6AE2A22247BCE8BB81E356CD16.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.4
+    },
+    {
+      "id": 14,
+      "name": "Just Five More Minutes",
+      "description": "Send 10 wheel clocks over the edge.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/7561F1F2E05B12A2F2589AFAD45315847EF22CB1.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.3
+    },
+    {
+      "id": 15,
+      "name": "Now You are Thinking With…",
+      "description": "Walk through portals 30 times.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR08986_00_006E46D3EE39BA6AE75E0E48DF65AF65EFBE739879/A0CE2375B637C38ADF8781D5BF914BFE97F1EFE9.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.6
+    }
+  ]
+}

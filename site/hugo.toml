@@ -1,0 +1,3 @@
+baseURL = "https://jeffabliss.com/"
+title = "Jeff Bliss"
+disableKinds = ["taxonomy", "term", "rss"]

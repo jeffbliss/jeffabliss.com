@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR11517_00",
+  "slug": "psn-anodyne",
+  "name": "Anodyne",
+  "titlePlatform": "PS4",
+  "progressPercent": 71,
+  "lastUpdated": "2019-10-22T01:40:45Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "A Tool",
+      "description": "You found the broom!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/F54B9C07CC154782130DB24866FA41702E8CB5FD.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-12T15:23:30Z",
+      "rarityPercent": 99.9
+    },
+    {
+      "id": 1,
+      "name": "Temple Seer",
+      "description": "You defeated the Temple Seer.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/80A00A9A3E44463959B0DBFA39047D7750275B61.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.1
+    },
+    {
+      "id": 2,
+      "name": "Grotto Rogue",
+      "description": "You defeated the Grotto Rogue.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/28CA369C0C36094AB8F9EE1B5F59ECDDB895BAEB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.4
+    },
+    {
+      "id": 3,
+      "name": "Cavern Wall",
+      "description": "You defeated the Cavern Wall.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/106CC739B532422EA1364AC282996F0434DDDCBF.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-20T20:57:28Z",
+      "rarityPercent": 6
+    },
+    {
+      "id": 4,
+      "name": "Change",
+      "description": "You activated the windmill!",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/C174B124077E8E514E947D21258701EB17DC2135.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-20T21:05:29Z",
+      "rarityPercent": 6
+    },
+    {
+      "id": 5,
+      "name": "Hotel Manager",
+      "description": "You defeated the Hotel Manager.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/205B248FF1BE602DE8CA8DD44BAD1E21A519699A.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-20T23:42:01Z",
+      "rarityPercent": 6.2
+    },
+    {
+      "id": 6,
+      "name": "Apartment Watcher",
+      "description": "You defeated the Apartment Watcher.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/3FC4E0EDC8DFE1044307F0D3F081E8355B551281.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-22T00:28:00Z",
+      "rarityPercent": 6.2
+    },
+    {
+      "id": 7,
+      "name": "Circus Servants",
+      "description": "You defeated the Circus Servants.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/DB0687BC239AEF163CA0854CBCB9A529BC11D9C6.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-21T00:12:40Z",
+      "rarityPercent": 6.1
+    },
+    {
+      "id": 8,
+      "name": "Sage's Challenge",
+      "description": "You defeated Sage.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/06A31CDC7202B3D9DAE7890D807CD8D830EBE689.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-22T00:38:30Z",
+      "rarityPercent": 5.6
+    },
+    {
+      "id": 9,
+      "name": "A Meeting",
+      "description": "You defeated Briar!",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/268A93063EC4AA52BE519834F15F3CA73B15F6EE.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-22T01:30:56Z",
+      "rarityPercent": 3.2
+    },
+    {
+      "id": 10,
+      "name": "36 Cards",
+      "description": "You collected 36 cards!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/43145C15407662A6B9A1AE221CEEEF3AE3813561.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-22T00:33:43Z",
+      "rarityPercent": 5.7
+    },
+    {
+      "id": 11,
+      "name": "All Broom",
+      "description": "You found all the broom upgrades!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/1EFDF495DF8BBC3FEA30458074A7D6944183E6C0.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-22T00:47:10Z",
+      "rarityPercent": 3.3
+    },
+    {
+      "id": 12,
+      "name": "All Health",
+      "description": "You maxed out the health bar!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/B778881B84D893AC6B0B8947449CD1C60703E780.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-22T00:28:50Z",
+      "rarityPercent": 4.3
+    },
+    {
+      "id": 13,
+      "name": "100% Clear",
+      "description": "You finished the game with over 37 cards, all the health and broom upgrades!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/AC8CA8C6406F9DD5C39DC628F70692F4A7F78EC8.PNG",
+      "earned": true,
+      "earnedAt": "2019-10-22T01:40:42Z",
+      "rarityPercent": 3.4
+    },
+    {
+      "id": 14,
+      "name": "Fast 100% Clear",
+      "description": "You 100%'d and finished the game in under 3 hours!\n",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/A521162BB00A60C0807783CDE0CE2266BC63B9EA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.5
+    },
+    {
+      "id": 15,
+      "name": "Lots of Cards",
+      "description": "You found all 48 Cards!",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11517_00_003D0BB4056B56B75B36A2787C0BB48D7EBCB71E62/CC56183BE49847521785E50A80A8D27FC345A840.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.5
+    }
+  ]
+}

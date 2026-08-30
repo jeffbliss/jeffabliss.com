@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR10560_00",
+  "slug": "psn-claire",
+  "name": "Claire",
+  "titlePlatform": "PS4",
+  "progressPercent": 3,
+  "lastUpdated": "2018-11-03T01:00:35Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Completionist",
+      "description": "Acquire all trophies.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/DB647FDC642AC4BC8AC601AA25221AF7F416384C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.4
+    },
+    {
+      "id": 1,
+      "name": "The Truth",
+      "description": "Reach the end of the Apartment level.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/8505EEA1B980007090998353117B8CA5E560C899.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.4
+    },
+    {
+      "id": 2,
+      "name": "Wake Up",
+      "description": "Finish the game on Nightmare difficulty.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/4B5958556DFE90062085801E50B1B78DCBAC4E9C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.7
+    },
+    {
+      "id": 3,
+      "name": "The Good One",
+      "description": "Get the 'A' ending.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/807A2AF9C22851491B536DC1B1E79B0E8BEA513E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.5
+    },
+    {
+      "id": 4,
+      "name": "Boogeyman",
+      "description": "Defeat the glower.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/C190E4E8EB666D2A2425E3FB62EE98CD759528D6.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.2
+    },
+    {
+      "id": 5,
+      "name": "But Who Was Phone?",
+      "description": "Answer the phone.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/7F5ACFA2BE1A83D7443A989602C458353A951970.PNG",
+      "earned": true,
+      "earnedAt": "2018-11-03T01:00:32Z",
+      "rarityPercent": 71.4
+    },
+    {
+      "id": 6,
+      "name": "Troublemaker",
+      "description": "Become a delinquent.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/9F2C87687AE0665978B536932F437EA131AAFA3D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.1
+    },
+    {
+      "id": 7,
+      "name": "Butterfly Collector",
+      "description": "Collect some butterfies.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/425141474A9E55F0C2BC1F0F8C29C62E6C4C72FB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.8
+    },
+    {
+      "id": 8,
+      "name": "Butterfly Expert",
+      "description": "Collect MORE butterflies.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/3ABB82F4EB60BD6630BEBB320A7D7BFDF2D54C09.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.6
+    },
+    {
+      "id": 9,
+      "name": "Note Collector",
+      "description": "Find some notes.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/8656464282D9595D1A607E3D8B8F947E377A977E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 21.3
+    },
+    {
+      "id": 10,
+      "name": "Note Expert",
+      "description": "Find ALL notes.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/86D9EC80BA1F09D9FE69E3953DB1CDA635329CAA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.1
+    },
+    {
+      "id": 11,
+      "name": "Released",
+      "description": "Reach the end of the Hospital.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/E8563469A8CBB6B62D1B74E4EDAFB4B873907348.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.7
+    },
+    {
+      "id": 12,
+      "name": "Survival",
+      "description": "Survive.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/3532265B30052E1723E2C7D30F4617D8F698E303.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 26.9
+    },
+    {
+      "id": 13,
+      "name": "Item Hoarder",
+      "description": "Find tons of items.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/523D6BA1220040376BB6C2486C0CCCCBA79D5626.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.8
+    },
+    {
+      "id": 14,
+      "name": "Otherworld",
+      "description": "Reach the other side.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/5546B0C6F63118A57836FFB1556D83B97A866E9C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.8
+    },
+    {
+      "id": 15,
+      "name": "School's Out",
+      "description": "Reach the end of the School.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR10560_00_00F10F06D890EAE648950C419EF93781DD92829802/C22FA2B5561E90E1F062183AC8AFFB972370DFC8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.9
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR11304_00",
+  "slug": "psn-small-radios-big-televisions",
+  "name": "Small Radios Big Televisions",
+  "titlePlatform": "PS4",
+  "progressPercent": 23,
+  "lastUpdated": "2018-07-14T00:31:51Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "SQUARE",
+      "description": "Complete the first factory.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11304_00_006AB2AEC7CAC4A3B1B9D50854B1295D8005CE5109/A4E22FA72D85316EDE3984E57E3CA6E0432EA8B6.PNG",
+      "earned": true,
+      "earnedAt": "2018-07-13T23:28:17Z",
+      "rarityPercent": 81
+    },
+    {
+      "id": 1,
+      "name": "TRIANGLE",
+      "description": "Complete the second factory.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11304_00_006AB2AEC7CAC4A3B1B9D50854B1295D8005CE5109/CB1731999C096EB456D4D9073CC79B40BCC5B6A7.PNG",
+      "earned": true,
+      "earnedAt": "2018-07-13T23:50:51Z",
+      "rarityPercent": 52
+    },
+    {
+      "id": 2,
+      "name": "HEXAGON",
+      "description": "Complete the third factory.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11304_00_006AB2AEC7CAC4A3B1B9D50854B1295D8005CE5109/1B94E4CE4B193A40A07E3EDD37BC2FFD3925B2A0.PNG",
+      "earned": true,
+      "earnedAt": "2018-07-14T00:31:50Z",
+      "rarityPercent": 43.7
+    },
+    {
+      "id": 3,
+      "name": "CIRCLE",
+      "description": "Complete the fourth factory.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11304_00_006AB2AEC7CAC4A3B1B9D50854B1295D8005CE5109/32E2CEE607094B7FF01E17F46AC405A840D33279.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 39.2
+    },
+    {
+      "id": 4,
+      "name": "VERTICAL",
+      "description": "Complete the fifth factory.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11304_00_006AB2AEC7CAC4A3B1B9D50854B1295D8005CE5109/780EDB3B2B77E0B794C205F13F7F3EFFF1CE2205.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 38.6
+    },
+    {
+      "id": 5,
+      "name": "OPTICS",
+      "description": "Find a lens.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11304_00_006AB2AEC7CAC4A3B1B9D50854B1295D8005CE5109/9F300FCF9C94707A98303577F3692C840275F30F.PNG",
+      "earned": true,
+      "earnedAt": "2018-07-14T00:30:38Z",
+      "rarityPercent": 51.4
+    },
+    {
+      "id": 6,
+      "name": "REWIND",
+      "description": "Travel through time and space.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11304_00_006AB2AEC7CAC4A3B1B9D50854B1295D8005CE5109/D358F1CB3B28A0692EBDF864C072E640A3F8DDAF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 38.5
+    },
+    {
+      "id": 7,
+      "name": "CONSTRUCT",
+      "description": "Build your own key.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11304_00_006AB2AEC7CAC4A3B1B9D50854B1295D8005CE5109/95FCD4FD264A2EDD725225623E03DEE140E0BA10.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 28.2
+    },
+    {
+      "id": 8,
+      "name": "SEE IT ALL",
+      "description": "Visit every tape.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11304_00_006AB2AEC7CAC4A3B1B9D50854B1295D8005CE5109/A2BA25E7337C2D2167DCCFD9317BECEA00CDC97D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 23.1
+    }
+  ]
+}

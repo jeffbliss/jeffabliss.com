@@ -1,0 +1,154 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR07379_00",
+  "slug": "psn-dont-die-mr-robot",
+  "name": "Don't Die, Mr. Robot!",
+  "titlePlatform": "PSVITA,PS4",
+  "progressPercent": 4,
+  "lastUpdated": "2017-07-04T23:14:49Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Starting Out",
+      "description": "Complete the tutorial",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/F253B40384D0B3E797261FFFFF397B3125F6DF02.PNG",
+      "earned": true,
+      "earnedAt": "2017-07-04T23:14:46Z",
+      "rarityPercent": 74.6
+    },
+    {
+      "id": 1,
+      "name": "Miser",
+      "description": "Last 20 seconds without collecting a fruit in Arcade Mode",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/DA4573B44F23E6F024201F84660E4F02FE16AB3A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13.5
+    },
+    {
+      "id": 2,
+      "name": "Dicey",
+      "description": "Get a 10000 point danger bonus",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/00FC07E736068BCACA4D08F2B564A21BE0F1B4AA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.1
+    },
+    {
+      "id": 3,
+      "name": "Fruity",
+      "description": "Get a x30 fruit chain",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/D6F98D1B953AD37059F2AF09B1046FBE92F003CA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.1
+    },
+    {
+      "id": 4,
+      "name": "Martyr",
+      "description": "Die with zero score and at least 10 fruits on screen in Arcade Mode",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/05AD7082E545E48A50D70C707A2BCE2C211F21EC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11
+    },
+    {
+      "id": 5,
+      "name": "Cameo Master",
+      "description": "Unlock all special guests",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/1D1F678BFAD3FB7ABF33737E5C309E804C4EDFA8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.1
+    },
+    {
+      "id": 6,
+      "name": "My First Livery",
+      "description": "Purchase your first livery",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/FA0E04B645332D3002B06D28C4A283B078204614.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.4
+    },
+    {
+      "id": 7,
+      "name": "Remix Master",
+      "description": "Complete all 50 Remix missions",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/98D73982C58DEDD64BD109EC100844536A0432B5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.8
+    },
+    {
+      "id": 8,
+      "name": "Silver Fox",
+      "description": "Get all silver medals",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/D963D33F7E27C8187C5A2EBB2D453833A95014B0.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.3
+    },
+    {
+      "id": 9,
+      "name": "Gold Run",
+      "description": "Get all gold medals",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/1BF2EDD7D2BBB8B70552A422CE8840ACF2B7ABC2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5
+    },
+    {
+      "id": 10,
+      "name": "Going Platinum",
+      "description": "Get all platinum medals",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/F17E5AAAE677FA33AA604F2AC15413419185FAE5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.8
+    },
+    {
+      "id": 11,
+      "name": "Time Lord",
+      "description": "Survive Time Attack without dying",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/24E695AFB2DB7003515453106DE5AF28AC4A0AA3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.8
+    },
+    {
+      "id": 12,
+      "name": "Zen Master",
+      "description": "Survive 5 minutes in Chill Out Mode",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07379_00_0062B31F63720BD59CE4DBAAD859AB92492EF88FC9/FEAA16B5D8D871B196E009943BCC44B93C496984.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.7
+    }
+  ]
+}

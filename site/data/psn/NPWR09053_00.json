@@ -1,0 +1,231 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR09053_00",
+  "slug": "psn-adventures-of-pip",
+  "name": "Adventures of Pip\n",
+  "titlePlatform": "PS4",
+  "progressPercent": 100,
+  "lastUpdated": "2019-08-20T00:51:53Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Forest Folk Found",
+      "description": "Rescued all the villagers in the Scarab Forest.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/70443B64DAF748821162352396A8D210AF674A7F.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-17T14:16:32Z",
+      "rarityPercent": 29.1
+    },
+    {
+      "id": 1,
+      "name": "Swamp Squatters Saved",
+      "description": "Rescued all the villagers in the Maddening Marsh.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/7390157CCFB507E868A5C376A958D4A8CD9519BB.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-19T23:17:27Z",
+      "rarityPercent": 18.1
+    },
+    {
+      "id": 2,
+      "name": "Caves Captives Captured",
+      "description": "Rescued all the villagers in the Galena Caverns.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/8CD37CA2549740C9A787DB9B11207D887933E693.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-18T14:55:45Z",
+      "rarityPercent": 15.6
+    },
+    {
+      "id": 3,
+      "name": "Lava Lodgers Located",
+      "description": "Rescued all the villagers in the Lava Labyrinth.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/0D9770B2ACFFCA3E6053D88490F702194C013588.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-19T23:36:43Z",
+      "rarityPercent": 14.6
+    },
+    {
+      "id": 4,
+      "name": "DeRezzia's Prisoners Released",
+      "description": "Rescued all the villagers in Queen DeRezzia's Castle.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/1ABA1E9FE884689B9CA11325B5E4E0B388FBAEA3.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-20T00:40:24Z",
+      "rarityPercent": 14.9
+    },
+    {
+      "id": 5,
+      "name": "Queen Grub Squashed",
+      "description": "Defeated the Queen Grub in the Scarab Forest.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/57402C1E0FAFE661BB560DBA97D6B94E75B4AE39.PNG",
+      "earned": true,
+      "earnedAt": "2019-06-17T02:27:50Z",
+      "rarityPercent": 43.8
+    },
+    {
+      "id": 6,
+      "name": "Temple Heart Broken",
+      "description": "Defeated the Temple Heart in the Maddening Marsh.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/C1164B02042EA12862036B864CD6FCCA3F133E26.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-17T14:51:40Z",
+      "rarityPercent": 28.8
+    },
+    {
+      "id": 7,
+      "name": "Cragken Cracked",
+      "description": "Defeated Cragken in the Galena Caverns.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/9CCB341811179586C68D27A043CC3E134B81F041.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-18T14:54:51Z",
+      "rarityPercent": 23
+    },
+    {
+      "id": 8,
+      "name": "Lord Magmalith Mastered",
+      "description": "Defeated Lord Magmalith in Lava Labyrinth.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/468FFE71951979F3E90366F59F7758E9A8592257.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-19T01:08:45Z",
+      "rarityPercent": 20.5
+    },
+    {
+      "id": 9,
+      "name": "Queen DeRezzed",
+      "description": "Defeated Queen DeRezzia in her Castle.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/91A63B2D31D859B99CF65F01588FBC610B1E4EA0.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-20T00:36:50Z",
+      "rarityPercent": 19.3
+    },
+    {
+      "id": 10,
+      "name": "Pip, the Pixel Picker Upper",
+      "description": "Collected 11,240 pixels in total.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/C5C089006DFD5D5813A6C8F3C0B0185D3D4838B0.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-18T14:09:27Z",
+      "rarityPercent": 23.2
+    },
+    {
+      "id": 11,
+      "name": "Thank You! Come Again!",
+      "description": "Purchased an Item in the Item Shop.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/1CE232AB285AF331D44F3D882E7A49093DA5E483.PNG",
+      "earned": true,
+      "earnedAt": "2019-06-17T02:21:51Z",
+      "rarityPercent": 48.4
+    },
+    {
+      "id": 12,
+      "name": "Power Up",
+      "description": "Purchased an Upgrade in the Weapon Shop.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/D53833D33DA5ACBB91CA4692F840AB085B8ACA28.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-17T14:42:02Z",
+      "rarityPercent": 27
+    },
+    {
+      "id": 13,
+      "name": "Get A Life",
+      "description": "Purchased a Heart Container in the Item Shop.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/B6F3FF7E126F8B9314C7FF14F7AAD5B5653001B7.PNG",
+      "earned": true,
+      "earnedAt": "2019-06-17T02:21:51Z",
+      "rarityPercent": 36.2
+    },
+    {
+      "id": 14,
+      "name": "The More, The Better",
+      "description": "Purchased all available Upgrades in the Weapon Shop.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/22B5CE90B9A39D460B03CDC04E71BF520892A113.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-19T23:18:03Z",
+      "rarityPercent": 16.1
+    },
+    {
+      "id": 15,
+      "name": "Pip, the Heartthrob",
+      "description": "Purchased all Heart Containers in the Item Shop.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/815CA47F109EE15D02DC7FB23B7349F7B28D6F9B.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-20T00:51:49Z",
+      "rarityPercent": 17.5
+    },
+    {
+      "id": 16,
+      "name": "Hide-N-Seek",
+      "description": "Rescued all villagers in a single level and received a PERFECT rating.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/6F02314E62451585F5ABAFD3D7E8B8D0D321481A.PNG",
+      "earned": true,
+      "earnedAt": "2019-06-11T23:00:25Z",
+      "rarityPercent": 87.1
+    },
+    {
+      "id": 17,
+      "name": "Lost & Found",
+      "description": "Completed 50% of levels with a PERFECT rating.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/F42D0678AE38090C3381F994E1BEA83CEEFB3515.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-18T14:13:40Z",
+      "rarityPercent": 20.2
+    },
+    {
+      "id": 18,
+      "name": "Found 'em All",
+      "description": "Completed all levels with a PERFECT rating.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/9ADFE72197AC1BE0C58FD341D4981BED4CA12C78.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-20T00:40:24Z",
+      "rarityPercent": 14.3
+    },
+    {
+      "id": 19,
+      "name": "All Pixels Have Been Restored",
+      "description": "Completed the game. ",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09053_00_0090C2AD34B61725A8AB31D52E0152E0F17AF04381/E2BCEB7D0BBA8E39559E886A0E8308E993F96B75.PNG",
+      "earned": true,
+      "earnedAt": "2019-08-20T00:41:00Z",
+      "rarityPercent": 19.2
+    }
+  ]
+}

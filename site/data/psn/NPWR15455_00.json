@@ -1,0 +1,253 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR15455_00",
+  "slug": "psn-rooms-the-unsolvable-puzzle",
+  "name": "Rooms: The Unsolvable Puzzle",
+  "titlePlatform": "PS4",
+  "progressPercent": 3,
+  "lastUpdated": "2019-01-30T02:27:16Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "The Toymaker's Mansion",
+      "description": "Earn all trophies.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/0B95A20C343D66FD91DCFFD0F6900CDD2C3F7498.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6
+    },
+    {
+      "id": 1,
+      "name": "A Puzzle Piece",
+      "description": "Earn 30 puzzle pieces.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/41AC9EA98DCFA16119A0937A4BE55FB903A3B1E3.PNG",
+      "earned": true,
+      "earnedAt": "2019-01-30T02:27:13Z",
+      "rarityPercent": 68
+    },
+    {
+      "id": 2,
+      "name": "Wall of Puzzles",
+      "description": "Earn 80 puzzle pieces.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/F77FD3FA86CC47C927DBAA5B4DE59423F453DB78.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 22.7
+    },
+    {
+      "id": 3,
+      "name": "Wheel of Puzzles",
+      "description": "Earn 130 puzzle pieces.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/50AD217CB193705E5141A4E95DF6C5BA426460B6.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13.5
+    },
+    {
+      "id": 4,
+      "name": "Mysterious Puzzle Piece",
+      "description": "Earn 216 puzzle pieces.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/76E2BC4E5AF629CAD364417918483B3B5A358E65.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.1
+    },
+    {
+      "id": 5,
+      "name": "Tiara of Puzzle",
+      "description": "Earn 288 puzzle pieces.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/0988BE3B6FECA6E96997BDCF9B38510ACBB1D820.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.8
+    },
+    {
+      "id": 6,
+      "name": "Crown of Puzzle",
+      "description": "Earn 432 puzzle pieces.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/018B792E81A7A9E3FD5A78898C772D47A8C73BC5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.1
+    },
+    {
+      "id": 7,
+      "name": "Blinking Mansion",
+      "description": "Clear all levels in Mansion 1.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/978A8A551A99B824EDCFEF913A17BF8B484CA6EC.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 28.1
+    },
+    {
+      "id": 8,
+      "name": "Adventurous Mansion",
+      "description": "Clear all levels in Mansion 2.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/51EEE76ED1FC4CE030BBCD00148CD7DF5E0B16A3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12.7
+    },
+    {
+      "id": 9,
+      "name": "Mimicking Mansion",
+      "description": "Clear all levels in Mansion 3.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/45ABA9B56000B807011451560AB3784041D044FE.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.9
+    },
+    {
+      "id": 10,
+      "name": "Dizzy Mansion",
+      "description": "Clear all levels in Mansion 4.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/21F479DA09A242AAD069FDF1812EBE6278E74BEA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.4
+    },
+    {
+      "id": 11,
+      "name": "The Frustrated",
+      "description": "Don't worry about failing.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/37465A0E52B897B7E2E60AD27B664CB73C62F13A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.8
+    },
+    {
+      "id": 12,
+      "name": "Antique Lantern",
+      "description": "Use the lamp often.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/8723D01CDE18B26DA5426F0AE0A50874AA6F9BED.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.9
+    },
+    {
+      "id": 13,
+      "name": "Puppet Destroyer",
+      "description": "Destroy as many puppets as you can.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/1ED8C30A6BDE4D1D45CB369586FA5C074F2A85C4.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.2
+    },
+    {
+      "id": 14,
+      "name": "Sliding Master",
+      "description": "Move rooms often. ",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/DB0CBFEB8699AD6DBB24DB96E75EA4849C422B23.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 38.8
+    },
+    {
+      "id": 15,
+      "name": "Twirling Master",
+      "description": "Rotate rooms often.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/CF9C28919758D302A3C55FA0BAFF4D2F1D7D3437.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.2
+    },
+    {
+      "id": 16,
+      "name": "Master Caller",
+      "description": "Clear all underground levels in Mansion 1.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/957B1609089A1CB81B39A502573813F944AB3618.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7
+    },
+    {
+      "id": 17,
+      "name": "Veteran Saboteur",
+      "description": "Clear all underground levels in Mansion 2.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/DCB1F3A1242EF7022387E1CEE9DB50F8C6347A12.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.7
+    },
+    {
+      "id": 18,
+      "name": "Lead Engineer",
+      "description": "Clear all underground levels in Mansion 3.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/B7CB5D15FC114899AA4205137F44EB5D0964FFC7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.8
+    },
+    {
+      "id": 19,
+      "name": "Great Scientist",
+      "description": "Clear all underground levels in Mansion 4.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/8FF57ACDBA897889A0A2059882AC547AFC3F6D3D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7
+    },
+    {
+      "id": 20,
+      "name": "The Butler of The Mansion",
+      "description": "Make the toymaker's dream come true.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/BAA72043282525DF3647A6AE8E529EE9EA079144.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.2
+    },
+    {
+      "id": 21,
+      "name": "The Legend of The Mansion",
+      "description": "Escape the toymaker's mansion.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15455_00_002CD90A4C355D3DE16C73468E8A00DF53C825AE74/DE11952DDC796731D492A794A693FDE7F08A6DC1.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.3
+    }
+  ]
+}

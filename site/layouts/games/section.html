@@ -1,0 +1,76 @@
+{{ define "main" }}
+{{ $summary := "" }}
+{{ with hugo.Data.psn }}{{ $summary = index . "summary" }}{{ end }}
+<div class="games-page" x-data="gamesPage">
+  <div class="games-header">
+    <h1>Games</h1>
+    <label class="platform-filter">
+      <span>Platform</span>
+      <select x-model="platform" @change="setPlatform(platform)">
+        <option value="all">All</option>
+        <option value="psn">PlayStation</option>
+        <option value="steam">Steam</option>
+        <option value="xbox">Xbox</option>
+      </select>
+    </label>
+  </div>
+  {{ with $summary }}
+  <ul class="stats-strip">
+    <li><span class="stat-value">{{ .totals.platinum }}</span>Platinum</li>
+    <li><span class="stat-value">{{ .totals.gold }}</span>Gold</li>
+    <li><span class="stat-value">{{ .totals.silver }}</span>Silver</li>
+    <li><span class="stat-value">{{ .totals.bronze }}</span>Bronze</li>
+    <li><span class="stat-value">{{ .gameCount }}</span>Games</li>
+    <li><span class="stat-value">{{ .averageCompletion }}%</span>Avg completion</li>
+  </ul>
+  <div class="columns">
+    <section class="game-list">
+      <h2>Library</h2>
+      <div class="empty-state" x-show="platform === 'steam' || platform === 'xbox'" x-cloak>Coming soon</div>
+      <ul>
+        {{ range .games }}
+        <li class="game-card" data-platform="{{ .platform }}" x-show="matches($el.dataset.platform)">
+          <a href="/games/{{ .slug }}/">
+            <span class="game-name">{{ .name }}</span>
+            <span class="badge">{{ .titlePlatform }}</span>
+            <span class="trophy-count">{{ .earnedCount }}/{{ .totalCount }} trophies</span>
+            {{ with .lastEarnedAt }}<span class="last-earned">Last trophy {{ time.Format "Jan 2, 2006" . }}</span>{{ end }}
+            <span class="progress-bar"><span class="progress-fill" style="width: {{ .progressPercent }}%"></span></span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+    <section class="trophy-feed">
+      <h2>Recent trophies</h2>
+      <div class="empty-state" x-show="filteredFeed.length === 0" x-cloak>Coming soon</div>
+      <ul>
+        <template x-for="t in pagedFeed" :key="t.slug + t.trophyName + t.earnedAt">
+          <li class="trophy-row">
+            <template x-if="t.iconUrl">
+              <img class="trophy-icon" :src="t.iconUrl" alt="" loading="lazy" width="40" height="40">
+            </template>
+            <div class="trophy-info">
+              <span class="trophy-name" x-text="t.trophyName"></span>
+              <a class="trophy-game" :href="`/games/${t.slug}/`" x-text="t.gameName"></a>
+            </div>
+            <div class="trophy-info">
+              <span class="badge" :class="`trophy-${t.trophyType}`" x-text="t.trophyType"></span>
+              <time class="trophy-date" x-text="formatDate(t.earnedAt)"></time>
+            </div>
+          </li>
+        </template>
+      </ul>
+      <nav class="pagination" x-show="pageCount > 1" x-cloak>
+        <button @click="prev" :disabled="page === 1">Previous</button>
+        <span x-text="`${page} / ${pageCount}`"></span>
+        <button @click="next" :disabled="page === pageCount">Next</button>
+      </nav>
+    </section>
+  </div>
+  {{ else }}
+  <p class="empty-state">No trophy data yet.</p>
+  {{ end }}
+  <script type="application/json" id="feed-data">{{ with $summary }}{{ .recentTrophies | jsonify | safeJS }}{{ else }}[]{{ end }}</script>
+</div>
+{{ end }}

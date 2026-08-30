@@ -1,0 +1,165 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR05426_00",
+  "slug": "psn-flower",
+  "name": " Flower",
+  "titlePlatform": "PS4",
+  "progressPercent": 14,
+  "lastUpdated": "2018-10-17T02:28:16Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": " Dream",
+      "description": "Beyond all flowers lies another room.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/78C80510D32C5CD2CD9A0DD3F54EA2427BD77977.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.1
+    },
+    {
+      "id": 1,
+      "name": " Nature",
+      "description": "Bloom 10,000 flowers.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/19C4B21485D4BA75CBA8C670352BCF713A24D2CF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.4
+    },
+    {
+      "id": 2,
+      "name": " Urban",
+      "description": "Completely awaken the city.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/E5A45D147E5CB2B6036B59E3ECA8E6D7FA6E1E27.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9
+    },
+    {
+      "id": 3,
+      "name": " Memories",
+      "description": "Reminisce for three minutes before returning to the room.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/FBEA7F911C71CB13E4D98F93D86B2E05DD9EE0D2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 26.8
+    },
+    {
+      "id": 4,
+      "name": " Palette",
+      "description": "Use the grass as your canvas and paint the ground with three different colors.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/1A5D2DE4AE3C2F85A59EFEE0AFF710B368D715FA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.2
+    },
+    {
+      "id": 5,
+      "name": " Wind",
+      "description": "Play with the windmills and ride the wind seven times.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/FF9112EA4B9F54BCC3529D62E2035D87C2735C1C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 10.8
+    },
+    {
+      "id": 6,
+      "name": " Illumination",
+      "description": "Light a darkened pool.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/8E8B4E7FF4C614A6D5A8C24981072534F20C1FD7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 13.5
+    },
+    {
+      "id": 7,
+      "name": " Pure",
+      "description": "Journey to the city unscathed.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/945F8CF8515B07321A26E43EEF517A4142A4D29C.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 2.8
+    },
+    {
+      "id": 8,
+      "name": " Stars",
+      "description": "Release all of the names to the sky.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/0963C83C6DEBC93B8F0C7D45665EE0CA9D7C9044.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.2
+    },
+    {
+      "id": 9,
+      "name": " flOw",
+      "description": "Life could be simple...",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/ECE69E5CEC9170F8AEBE57A3798063B4B8998FD2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.8
+    },
+    {
+      "id": 10,
+      "name": " Welcome Back",
+      "description": "Play the game after a week long break.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/0ABFCE88F2B6A66C6DFA06B3BE321BD83DFF6DE0.PNG",
+      "earned": true,
+      "earnedAt": "2018-10-17T02:28:14Z",
+      "rarityPercent": 40.6
+    },
+    {
+      "id": 11,
+      "name": " Healthy Play",
+      "description": "Take a ten minute break between any dreams.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/09CEF27E2F8CE8CD02CCE07054CD63B719789813.PNG",
+      "earned": true,
+      "earnedAt": "2018-01-18T01:37:08Z",
+      "rarityPercent": 27.9
+    },
+    {
+      "id": 12,
+      "name": " Beginning",
+      "description": "The dream has just started...",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/50AE2CB44159AD87442556A61D75B5BF8F6F9EA8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.4
+    },
+    {
+      "id": 13,
+      "name": " Discovery",
+      "description": "Find and bloom a secret flower.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR05426_00_00C86582C4A78AB2A7C3A93D85A0D4188D5758E9C5/541BF094947ADBB1A19E1885E87988D060611DB6.PNG",
+      "earned": true,
+      "earnedAt": "2018-01-18T01:08:49Z",
+      "rarityPercent": 74.3
+    }
+  ]
+}

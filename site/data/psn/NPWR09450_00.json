@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR09450_00",
+  "slug": "psn-jumpjet-rex",
+  "name": "JumpJet Rex",
+  "titlePlatform": "PSVITA,PS4",
+  "progressPercent": 9,
+  "lastUpdated": "2021-04-12T00:07:22Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Basic Training",
+      "description": "Complete Boot Camp.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/F349014EC618796DF013ED6218AA46DEAFFE6C1C.PNG",
+      "earned": true,
+      "earnedAt": "2021-04-12T00:07:14Z",
+      "rarityPercent": 66
+    },
+    {
+      "id": 1,
+      "name": "Snowhere to Run",
+      "description": "Defeat the first boss.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/77C29EFD8DF9A747ED3DE5DF65E25697650605E3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 21.6
+    },
+    {
+      "id": 2,
+      "name": "Brobot",
+      "description": "Defeat the second boss.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/1F5B37AA28B6D1C003175BF1F8C2DC3AF55382E3.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 19.2
+    },
+    {
+      "id": 3,
+      "name": "Planted",
+      "description": "Defeat the third boss.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/038C55FA9A960FD1BCCA70592205E443F06A0DE2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 18.2
+    },
+    {
+      "id": 4,
+      "name": "NegaRekt",
+      "description": "Defeat the fourth boss.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/478D950D4162C6257832D3509C64A69BBBFBE6CB.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.7
+    },
+    {
+      "id": 5,
+      "name": "Filthy Casual",
+      "description": "Complete adventure mode on easy.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/9CB15CD346A99219E48E0AFF2EF747171E89A360.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.4
+    },
+    {
+      "id": 6,
+      "name": "Beat the Game",
+      "description": "Complete adventure mode on normal.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/E24ADA784C6488F3EC892015E2EB5A5CC6466DDF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.3
+    },
+    {
+      "id": 7,
+      "name": "Beat the Game (Properly)",
+      "description": "Live to Fly another day.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/47C1B6125C1992E2434DEE902525356302D21F97.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.3
+    },
+    {
+      "id": 8,
+      "name": "Rex in Peace",
+      "description": "Pay the ultimate price.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/0147D42AE42EB098FACC1694284C69915E1EDB7A.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.3
+    },
+    {
+      "id": 9,
+      "name": "Coinosaur",
+      "description": "Collect every coin in a level (excluding bonus area coins)",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/3D7642C23DDFDF1E78F80461D1156183848A6F08.PNG",
+      "earned": true,
+      "earnedAt": "2021-04-12T00:05:36Z",
+      "rarityPercent": 56
+    },
+    {
+      "id": 10,
+      "name": "OCDinosaur",
+      "description": "Collect every coin in every level (excluding bonus area coins)",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/15EFA7C07509E46AD34A3E747D362ADB178A8692.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.2
+    },
+    {
+      "id": 11,
+      "name": "Turbosaur",
+      "description": "Complete the SpeedRun mode and post a time to the leaderboard.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/53DE0539704931A9BEF2D5E12A9FB7149BBBBDF7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.2
+    },
+    {
+      "id": 12,
+      "name": "RexBox",
+      "description": "Collect all the hidden items.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/694E7AD328FDC236653FF84F1136A28DBF493870.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.2
+    },
+    {
+      "id": 13,
+      "name": "Masteradon",
+      "description": "Master one level.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/E82EC7178B4ACD1D6420CBDC481135668153864F.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 18.8
+    },
+    {
+      "id": 14,
+      "name": "Masteralladon",
+      "description": "Master all levels.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/850422522C05A9CB73EAA14F9A6CAA924FFE3DC0.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.1
+    },
+    {
+      "id": 15,
+      "name": "Ragequit Rex",
+      "description": "Complete the RageQuit Rex mode.",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR09450_00_00419CA468B2CC79C1F2D8BB2F200237DD4D2A197B/D761BD05F7BC0262F77E63E6072527F1543F6BC2.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.1
+    }
+  ]
+}

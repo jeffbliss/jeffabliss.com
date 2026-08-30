@@ -1,0 +1,220 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR25581_00",
+  "slug": "psn-ea-sports-pga-tour",
+  "name": "EA SPORTS PGA TOUR",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "2023-06-14T00:13:35Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "G.O.A.T.",
+      "description": "Earn all Trophies",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/c043ff0a-eed4-4635-b672-081f86c74c18.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.8
+    },
+    {
+      "id": 1,
+      "name": "The Ultimate Prize",
+      "description": "Win the FedExCup",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/c043ff0a-eed4-4635-b672-081f86c74c18.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.2
+    },
+    {
+      "id": 2,
+      "name": "A Tradition Unlike Any Other",
+      "description": "Win the Masters",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/8e37f6dd-9ec5-48f5-ae99-ac068dfc7c96.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.5
+    },
+    {
+      "id": 3,
+      "name": "A Passion for Excellence",
+      "description": "Win the PGA Championship",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/8fd676d3-c368-471d-ace4-c6b5b5d2a777.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.6
+    },
+    {
+      "id": 4,
+      "name": "From Many, One",
+      "description": "Win the U.S. Open",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/06b38df8-4910-4071-864c-b72f8a87551a.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.8
+    },
+    {
+      "id": 5,
+      "name": "Golf's Original Championship",
+      "description": "Win the Open Championship",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/c6b5c494-cd9b-4e32-bdf4-03c76387f35f.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.4
+    },
+    {
+      "id": 6,
+      "name": "The Strongest Field in Golf",
+      "description": "Win THE PLAYERS Championship",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/fb25a3a8-2b9d-4163-9ff3-53e19933a138.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9
+    },
+    {
+      "id": 7,
+      "name": "Makin' the Cut",
+      "description": "Make the cut in a PGA TOUR event",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/9df09cc8-7a04-4e79-ae33-71c16df6a605.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 19.3
+    },
+    {
+      "id": 8,
+      "name": "Winner's Circle",
+      "description": "Win a PGA TOUR event",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/38344ff1-6b5e-4067-a1f4-80d05d816f2d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 16
+    },
+    {
+      "id": 9,
+      "name": "Ace in the Hole",
+      "description": "Record a hole-in-one",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/8017c213-8514-48e6-a719-b3fae43309f1.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.8
+    },
+    {
+      "id": 10,
+      "name": "Holey Moley",
+      "description": "Hole out from at least 100 yards away",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/fdca142d-5474-4b89-89b6-d7f5f673d56d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14.8
+    },
+    {
+      "id": 11,
+      "name": "Bomb's Away",
+      "description": "Hit a drive over 400 yards",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/41d03d1c-57c8-4e9d-aacd-b1f53d5ce295.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.5
+    },
+    {
+      "id": 12,
+      "name": "From Way Downtown",
+      "description": "Make a putt over 50 ft.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/93133f8d-a140-413f-9ccc-fe33235fab6d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 21.2
+    },
+    {
+      "id": 13,
+      "name": "Competitor's Spirit",
+      "description": "Complete an Online Tournament",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/0f79e0f7-e6a5-446e-a331-0ad4f806b219.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.7
+    },
+    {
+      "id": 14,
+      "name": "Golfer Versus Golfer",
+      "description": "Complete an Online H2H game",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/e36bc3ac-dff4-40e7-b6f8-659f926ad941.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.9
+    },
+    {
+      "id": 15,
+      "name": "Victory Lap",
+      "description": "Get a win in an Online H2H game",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/e913fe85-b770-4c61-a65b-61a718bb1aaa.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.1
+    },
+    {
+      "id": 16,
+      "name": "Star Power",
+      "description": "Complete a Challenge",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/1d62431c-b9bc-43f0-80ae-6f0f15dc36f6.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 29.3
+    },
+    {
+      "id": 17,
+      "name": "Clean Sheet",
+      "description": "Complete an 18-hole round of Stroke Play without recording a bogey",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/66bea44d-57dd-4de8-9000-e6f91d11b76e.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 18
+    },
+    {
+      "id": 18,
+      "name": "Perfect Round",
+      "description": "Shoot 59 or better in an 18-hole round of Stroke Play",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25581_00/c649f069-8212-425f-b4ba-2c9a37ecfe0b.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 11.8
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR12304_00",
+  "slug": "psn-statik",
+  "name": "Statik",
+  "titlePlatform": "PS4",
+  "progressPercent": 4,
+  "lastUpdated": "2018-10-16T00:13:52Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Impressive!",
+      "description": "You solved the first puzzle. Pride is not the word.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/C56DE25191E49B21F1D45EEB9032204CFE383462.PNG",
+      "earned": true,
+      "earnedAt": "2018-10-16T00:13:51Z",
+      "rarityPercent": 96.1
+    },
+    {
+      "id": 1,
+      "name": "Played The Demo?",
+      "description": "You've seen this one before haven't you. Come on, be honest!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/CBC71885646B65FCECF79A675BE43693C006B7EF.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 67.9
+    },
+    {
+      "id": 2,
+      "name": "I, The Test Subject...",
+      "description": "You signed the contract. Now there's a paper trail at least.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/F4E80518B3C330E6497761723CC3ED58C76CE948.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 83.2
+    },
+    {
+      "id": 3,
+      "name": "Smarter Than A Toaster",
+      "description": "You won the battle against a simple piece of technology.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/9DF87816627233F59B955E4A1A43E007D5EC9F21.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 67.1
+    },
+    {
+      "id": 4,
+      "name": "Stanza Delivered",
+      "description": "You found the hidden depths in 4 lines of meaningless verse",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/5BCDD4BEB4C1252BF23F380ADC2F067AAB5481C7.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 53.7
+    },
+    {
+      "id": 5,
+      "name": "Test Your Meta",
+      "description": "You took an out-of-body experience, and spent it in a toy car",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/5C3AD5179DA1A9EE4E6840C3990ADFE4F93EFF9D.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 54.7
+    },
+    {
+      "id": 6,
+      "name": "Insecurity Cameras",
+      "description": "You learned the true value of CCTV voyeurism",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/AF2D6CD898AC69AA34A8C0BB6F0F2247FA775597.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 46.1
+    },
+    {
+      "id": 7,
+      "name": "Waves & Signals",
+      "description": "You picked up on all sorts of signals and exploited them",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/943A213446DEABD05BE08D3398D20E5A90FF3CCD.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 46.2
+    },
+    {
+      "id": 8,
+      "name": "You Built A Cube",
+      "description": "You built a cube",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/B98F57FDBCA83A7A47A9DBBF501136269947172E.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 42.4
+    },
+    {
+      "id": 9,
+      "name": "Thanks For Your Retention",
+      "description": "You have been retained. Did it make you feel?",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/3C04A9F80A48EDDB7A9020C913AF6B87368D0920.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 40.3
+    },
+    {
+      "id": 10,
+      "name": "Smileyface",
+      "description": "You are unbearably positive",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/C7E3182D37E8B9217FBDB8B83E350A9C035AF968.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 14
+    },
+    {
+      "id": 11,
+      "name": "You're a Machine!",
+      "description": "You humiliated a machine in record time. Well done.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/B64C5229C332416D0C88040DA8DEEF1ECDCFDDCA.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3
+    },
+    {
+      "id": 12,
+      "name": "Pointless Behaviour",
+      "description": "What did you think you'd achieve calling for help? Help?",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/21126093802F44FC6100A2E1CBEDAEBF70585FE8.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.7
+    },
+    {
+      "id": 13,
+      "name": "Trophy",
+      "description": "You liked the trophy. We thought you might like to keep it.",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/5016A76D32D700D53FB2EF3B3AEBB579173E3925.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 71.8
+    },
+    {
+      "id": 14,
+      "name": "Rude Word",
+      "description": "You elevated yourself above the filth and took us literally. Bravo!",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/5B0BB2BAD1E141B0A670EC8C9987C4F3C10693D9.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.7
+    },
+    {
+      "id": 15,
+      "name": "Hidden Secretions",
+      "description": "You found a new way out. Aunt Emily would be proud.",
+      "type": "bronze",
+      "hidden": true,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12304_00_0013801EECC262AB8C75520EE6CC80725FFC7A8902/DF43CF9E11D332D201F3986D87D9F85C11B44B17.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.7
+    }
+  ]
+}

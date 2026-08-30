@@ -1,0 +1,187 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR28226_00",
+  "slug": "psn-syphon-filter",
+  "name": "Syphon Filter",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "2025-05-05T11:15:17Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Excellent work, Agent!",
+      "description": "Unlock all other Syphon Filter trophies.",
+      "type": "platinum",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/47401ef6-3779-4866-b9a4-c8a89f3ebc7d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 3.8
+    },
+    {
+      "id": 1,
+      "name": "An Explosive Start",
+      "description": "Survive the subway explosion.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/2c9e71c3-cc77-4436-9aa2-e790adb9fd68.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 17.9
+    },
+    {
+      "id": 2,
+      "name": "Rescue Phagan",
+      "description": "Rescue Phagan from Aramov.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/ef9457a1-bca3-4dc2-b8ab-146740fff1e8.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 8.2
+    },
+    {
+      "id": 3,
+      "name": "Droppin' Choppers",
+      "description": "Destroy the KI-33 attack helicopter.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/3088a875-5a38-40ce-888b-0b0496d20602.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 7.3
+    },
+    {
+      "id": 4,
+      "name": "No Way Out!",
+      "description": "Escape the catacombs with Lian.",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/7f7fdedf-c10f-4283-b35f-3885064f3363.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.4
+    },
+    {
+      "id": 5,
+      "name": "No Way In!",
+      "description": "Descend into the silo access tunnel.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/a7330500-8436-408c-a839-996fd926846f.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.8
+    },
+    {
+      "id": 6,
+      "name": "No Way!",
+      "description": "Complete all missions.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/84aefbdd-373d-452d-bdfa-b2244a2c85ab.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.6
+    },
+    {
+      "id": 7,
+      "name": "Eliminate Rhoemer",
+      "description": "Eliminate Rhoemer.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/73419c56-2eaf-4f8b-83f7-bc0888c2c917.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.6
+    },
+    {
+      "id": 8,
+      "name": "Moar Guns Plz",
+      "description": "Find the armory in the base bunker.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/23867b26-1efe-4e1a-bff9-98075c1bb7e5.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.8
+    },
+    {
+      "id": 9,
+      "name": "Run, Logan, Run!",
+      "description": "Escape the base without killing any guards.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/b6c7db81-a9f0-45eb-99e2-68178e69f893.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.1
+    },
+    {
+      "id": 10,
+      "name": "Aaaannd… Gotcha!",
+      "description": "Drop a chandelier on an enemy.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/bd135048-1246-411e-b369-68f09aac929e.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.6
+    },
+    {
+      "id": 11,
+      "name": "Hey Man, Nice Shot",
+      "description": "Get 20 headshots using the 9mm silencer.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/9b5334bd-311a-4b6a-bdba-57e548c00efe.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.1
+    },
+    {
+      "id": 12,
+      "name": "Heartless!",
+      "description": "Eliminate poor, defenseless Erikson. How cruel.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/d4fc3caf-e279-46f4-ae7a-a70b0b37d9a2.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.9
+    },
+    {
+      "id": 13,
+      "name": "Hold Your Nose",
+      "description": "Shatter a test tube containing toxic gas.",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/6a6dd87a-b838-423f-9a18-ff07f20a19d8.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 5.5
+    },
+    {
+      "id": 14,
+      "name": "Window of Opportunity",
+      "description": "Shatter 30 glass windows.",
+      "type": "gold",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/c34de7c3-d326-471e-b868-93c8d70975c4.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.2
+    },
+    {
+      "id": 15,
+      "name": "What Does This One Do?",
+      "description": "Eliminate enemies using all 12 bullet-firing weapons at least once (doesn’t include taser or explosives).",
+      "type": "silver",
+      "hidden": true,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR28226_00/95be2eaa-9810-459c-88d3-8877a437e782.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6
+    }
+  ]
+}
