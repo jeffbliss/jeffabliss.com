@@ -50,7 +50,7 @@
   </g>
   <g id="door-target" data-x="292" data-y="126"/>
   <rect id="floor" x="12" y="116" width="296" height="56" fill="none"/>
-  <rect class="obstacle" x="14" y="118" width="46" height="26" fill="none"/>
+  <rect class="obstacle" x="14" y="118" width="46" height="36" fill="none"/>
   <rect class="obstacle" x="84" y="120" width="20" height="20" fill="none"/>
   <g id="hero" transform="translate(64 96)">
     <g id="hero-body">
