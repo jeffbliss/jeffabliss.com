@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="play-page game-page">
+  <h1>{{ .Title }}</h1>
+  <div class="game-intro">{{ .Content }}</div>
+  {{ with .Params.entry }}
+  <div class="game-stage">
+    {{ with resources.Get (printf "js/games/%s/scene.svg" .) }}{{ .Content | safeHTML }}{{ end }}
+    <div class="game-ui"></div>
+  </div>
+  {{ with resources.Get (printf "js/games/%s/main.ts" .) }}
+  {{ with . | js.Build (dict "minify" true "target" "es2020") | fingerprint }}
+  <script defer src="{{ .RelPermalink }}"></script>
+  {{ end }}{{ end }}
+  {{ end }}
+</div>
+{{ end }}

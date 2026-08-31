@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="play-page">
+  <h1>{{ .Title }}</h1>
+  <ul class="play-grid">
+    {{ range .Pages }}
+    <li class="play-card">
+      <a href="{{ .RelPermalink }}">
+        <span class="play-title">{{ .Title }}</span>
+        <span class="play-summary">{{ .Params.summary }}</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
