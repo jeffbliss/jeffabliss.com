@@ -1,13 +1,63 @@
 {
   "totals": {
-    "bronze": 2338,
-    "silver": 664,
+    "bronze": 2341,
+    "silver": 666,
     "gold": 268,
     "platinum": 28
   },
   "gameCount": 412,
   "averageCompletion": 18.6,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Equilibrious Beast",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/3814d4f9-0ae7-4746-b10e-726c9f97bd8a.png",
+      "earnedAt": "2026-08-31T01:22:48Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Night Begins",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/40bba9fb-e514-41bd-87cc-29f073df165f.png",
+      "earnedAt": "2026-08-30T23:44:51Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Augur",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/30108dbc-e9ec-42cb-98df-f792bbfdb8f7.png",
+      "earnedAt": "2026-08-30T23:42:51Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "Valfaris trophies\n",
+      "gameId": "NPWR19246_00",
+      "slug": "psn-valfaris-trophies",
+      "trophyName": "Trash Compactor",
+      "trophyType": "bronze",
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR19246_00_00B70D3FB6D58A51649859236698769108C15C121C/643FDA87A846530BFE6A1ECAEA2F6B1FC7619260.PNG",
+      "earnedAt": "2026-08-30T21:19:59Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "Valfaris trophies\n",
+      "gameId": "NPWR19246_00",
+      "slug": "psn-valfaris-trophies",
+      "trophyName": "Take Them Down",
+      "trophyType": "bronze",
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR19246_00_00B70D3FB6D58A51649859236698769108C15C121C/63BBC4929ED0F7658A9EAC959C44C0D47865F413.PNG",
+      "earnedAt": "2026-08-30T21:19:17Z"
+    },
     {
       "platform": "psn",
       "gameName": "ELDEN RING NIGHTREIGN",
@@ -957,56 +1007,6 @@
       "trophyType": "bronze",
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR04915_00_00D958EB781996F7F036DF4C258A0F92D02038F6D4/E4046F4A02D312BB148DE3EA0043E5D04612E445.PNG",
       "earnedAt": "2026-01-11T15:50:26Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY X HD Remaster",
-      "gameId": "NPWR04915_00",
-      "slug": "psn-final-fantasy-x-hd-remaster",
-      "trophyName": "Speaking in Tongues",
-      "trophyType": "bronze",
-      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR04915_00_00D958EB781996F7F036DF4C258A0F92D02038F6D4/57A1CCAAFA86BAADE6980797BF2D1249759C1B43.PNG",
-      "earnedAt": "2026-01-10T21:52:06Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "Tetris® Effect",
-      "gameId": "NPWR29874_00",
-      "slug": "psn-tetris-effect-ps5",
-      "trophyName": "Make a Wish",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29874_00/6305e22f-9ae3-4582-b969-2b52abddb113.png",
-      "earnedAt": "2025-12-23T22:30:15Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "Tetris® Effect",
-      "gameId": "NPWR29874_00",
-      "slug": "psn-tetris-effect-ps5",
-      "trophyName": "Weekend Warrior",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29874_00/1ba5324f-8f0f-445b-9d88-88be8bd2121f.png",
-      "earnedAt": "2025-12-23T22:30:15Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "Tetris® Effect",
-      "gameId": "NPWR29874_00",
-      "slug": "psn-tetris-effect-ps5",
-      "trophyName": "The Classics",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29874_00/cc2325c1-aa59-4cb0-96d4-5d97b536e5b3.png",
-      "earnedAt": "2025-12-23T22:30:14Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "Tetris® Effect",
-      "gameId": "NPWR29874_00",
-      "slug": "psn-tetris-effect-ps5",
-      "trophyName": "Dodecatrist",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR29874_00/4076f5a9-7271-4f72-ac93-b801b6b8c8e5.png",
-      "earnedAt": "2025-12-23T22:30:13Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,10 @@
       "slug": "psn-elden-ring-nightreign",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 31,
-      "earnedCount": 17,
+      "progressPercent": 38,
+      "earnedCount": 20,
       "totalCount": 37,
-      "lastEarnedAt": "2026-08-30T00:42:51Z"
+      "lastEarnedAt": "2026-08-31T01:22:48Z"
     },
     {
       "name": "Valfaris trophies\n",
@@ -1027,10 +1027,10 @@
       "slug": "psn-valfaris-trophies",
       "platform": "psn",
       "titlePlatform": "PS4",
-      "progressPercent": 5,
-      "earnedCount": 3,
+      "progressPercent": 8,
+      "earnedCount": 5,
       "totalCount": 35,
-      "lastEarnedAt": "2026-08-29T16:36:02Z"
+      "lastEarnedAt": "2026-08-30T21:19:59Z"
     },
     {
       "name": "Death's Gambit",

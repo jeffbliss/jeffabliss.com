@@ -4,8 +4,8 @@
   "slug": "psn-valfaris-trophies",
   "name": "Valfaris trophies\n",
   "titlePlatform": "PS4",
-  "progressPercent": 5,
-  "lastUpdated": "2026-08-29T16:36:04Z",
+  "progressPercent": 8,
+  "lastUpdated": "2026-08-30T21:20:01Z",
   "trophies": [
     {
       "id": 0,
@@ -25,9 +25,9 @@
       "type": "bronze",
       "hidden": false,
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR19246_00_00B70D3FB6D58A51649859236698769108C15C121C/643FDA87A846530BFE6A1ECAEA2F6B1FC7619260.PNG",
-      "earned": false,
-      "earnedAt": null,
-      "rarityPercent": 58.8
+      "earned": true,
+      "earnedAt": "2026-08-30T21:19:59Z",
+      "rarityPercent": 58.9
     },
     {
       "id": 2,
@@ -157,8 +157,8 @@
       "type": "bronze",
       "hidden": false,
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR19246_00_00B70D3FB6D58A51649859236698769108C15C121C/63BBC4929ED0F7658A9EAC959C44C0D47865F413.PNG",
-      "earned": false,
-      "earnedAt": null,
+      "earned": true,
+      "earnedAt": "2026-08-30T21:19:17Z",
       "rarityPercent": 48.8
     },
     {
