@@ -17,7 +17,7 @@ const floorEl = svg?.querySelector<SVGRectElement>("#floor")
 const doorEl = svg?.querySelector<SVGGElement>("#door-target")
 
 if (stage && ui && svg && hero && floorEl && doorEl) {
-  start(stage, ui, svg, hero, floorEl, doorEl)
+  start(ui, svg, hero, floorEl, doorEl)
 }
 
 function rectFrom(el: SVGRectElement): Rect {
@@ -61,7 +61,6 @@ function makeUi(ui: HTMLElement) {
 }
 
 function start(
-  stage: HTMLElement,
   ui: HTMLElement,
   svg: SVGSVGElement,
   hero: SVGGElement,
@@ -95,7 +94,10 @@ function start(
     const before = phase
     phase = nextPhase(phase, event)
     if (phase === before) return
-    if (phase === "dialogue") dialogue.hidden = false
+    if (phase === "dialogue") {
+      dialogue.hidden = false
+      hint.hidden = true
+    }
     if (phase === "ending") {
       dialogue.hidden = true
       playEnding()
@@ -105,6 +107,7 @@ function start(
   const keys = new Set<string>()
   const GAME_KEYS = ["arrowup", "arrowdown", "arrowleft", "arrowright", "w", "a", "s", "d", " ", "e"]
   window.addEventListener("keydown", (ev) => {
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return
     const key = ev.key.toLowerCase()
     if (!GAME_KEYS.includes(key)) return
     ev.preventDefault()
@@ -117,6 +120,9 @@ function start(
   })
   window.addEventListener("keyup", (ev) => {
     keys.delete(ev.key.toLowerCase())
+  })
+  window.addEventListener("blur", () => {
+    keys.clear()
   })
 
   let last = performance.now()
