@@ -7,6 +7,7 @@ driven by PlayStation trophy data synced daily.
 
 - /sync — Node + TypeScript script using psn-api; writes JSON to site/data/psn/
 - /site — Hugo site (vanilla layout, no module mounts); templates read site.Data.psn
+- /play — browser games section: one Hugo page per game, TypeScript entries in site/assets/js/games/<game>/ bundled by js.Build, pure logic in site/assets/js/games/lib/ tested with vitest (npm test in /site), GSAP vendored via site/package.json
 - Data flow: GitHub Actions runs sync daily → commits site/data changes → Cloudflare Pages rebuilds
 
 ## Responsibilities
