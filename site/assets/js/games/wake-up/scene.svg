@@ -1,0 +1,83 @@
+<svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" role="img" aria-label="A pixel-art bedroom in morning light">
+  <rect width="320" height="180" fill="#2b2635"/>
+  <rect x="8" y="8" width="304" height="104" fill="#4a4458"/>
+  <rect x="8" y="104" width="304" height="8" fill="#3a3448"/>
+  <rect x="8" y="112" width="304" height="60" fill="#8a6244"/>
+  <rect x="8" y="112" width="304" height="4" fill="#6f4e36"/>
+  <rect x="12" y="116" width="296" height="4" fill="#7a5638"/>
+  <rect x="58" y="112" width="36" height="16" fill="#c99a68"/>
+  <rect x="50" y="128" width="52" height="24" fill="#c99a68"/>
+  <rect x="12" y="132" width="296" height="2" fill="#7a5638"/>
+  <rect x="12" y="152" width="296" height="2" fill="#7a5638"/>
+  <g id="window">
+    <rect x="48" y="24" width="56" height="44" fill="#2b2635"/>
+    <rect x="52" y="28" width="48" height="36" fill="#ffd98a"/>
+    <rect x="74" y="28" width="4" height="36" fill="#2b2635"/>
+    <rect x="52" y="44" width="48" height="4" fill="#2b2635"/>
+    <rect x="60" y="32" width="12" height="8" fill="#ffe9b8"/>
+    <rect x="44" y="20" width="64" height="4" fill="#3a3448"/>
+    <rect x="44" y="68" width="64" height="4" fill="#3a3448"/>
+  </g>
+  <g id="bed">
+    <rect x="14" y="118" width="46" height="34" fill="#5a3d2b"/>
+    <rect x="16" y="112" width="42" height="30" fill="#d9d3c7"/>
+    <rect x="18" y="114" width="14" height="12" fill="#f2ede2"/>
+    <rect x="16" y="128" width="42" height="14" fill="#7a4b8f"/>
+    <rect x="16" y="128" width="42" height="4" fill="#8f5ba6"/>
+    <rect x="24" y="134" width="16" height="2" fill="#6b3f83"/>
+    <rect x="14" y="150" width="46" height="4" fill="#4a3020"/>
+  </g>
+  <g id="nightstand">
+    <rect x="84" y="120" width="20" height="20" fill="#5a3d2b"/>
+    <rect x="86" y="114" width="16" height="8" fill="#6f4e36"/>
+    <rect x="88" y="100" width="12" height="12" fill="#ffd98a"/>
+    <rect x="88" y="109" width="12" height="3" fill="#e8b062"/>
+    <rect x="91" y="102" width="6" height="4" fill="#ffe9b8"/>
+    <rect x="91" y="112" width="6" height="2" fill="#6f4e36"/>
+    <rect x="84" y="138" width="20" height="2" fill="#4a3020"/>
+  </g>
+  <g id="rug">
+    <rect x="130" y="132" width="104" height="28" fill="#3f6f5a"/>
+    <rect x="134" y="136" width="96" height="20" fill="#4d8a6f"/>
+    <rect x="134" y="144" width="96" height="4" fill="#3f6f5a"/>
+  </g>
+  <g id="door">
+    <rect x="276" y="40" width="34" height="72" fill="#5a3d2b"/>
+    <rect x="280" y="44" width="26" height="68" fill="#8a6244"/>
+    <rect x="282" y="48" width="22" height="26" fill="#7a563c"/>
+    <rect x="282" y="80" width="22" height="28" fill="#7a563c"/>
+    <rect x="284" y="76" width="4" height="4" fill="#ffd98a"/>
+  </g>
+  <g id="door-target" data-x="292" data-y="126"/>
+  <rect id="floor" x="12" y="116" width="296" height="56" fill="none"/>
+  <rect class="obstacle" x="14" y="118" width="46" height="26" fill="none"/>
+  <rect class="obstacle" x="84" y="120" width="20" height="20" fill="none"/>
+  <g id="hero" transform="translate(64 96)">
+    <g id="hero-body">
+      <rect x="1" y="0" width="14" height="5" fill="#4a3524"/>
+      <rect x="0" y="2" width="16" height="4" fill="#4a3524"/>
+      <rect x="0" y="6" width="3" height="4" fill="#4a3524"/>
+      <rect x="13" y="6" width="3" height="4" fill="#4a3524"/>
+      <rect x="2" y="1" width="3" height="3" fill="#5c4430"/>
+      <rect x="7" y="0" width="3" height="3" fill="#5c4430"/>
+      <rect x="12" y="2" width="3" height="3" fill="#5c4430"/>
+      <rect x="3" y="5" width="10" height="8" fill="#e8b88a"/>
+      <g id="hero-eyes">
+        <rect x="5" y="8" width="2" height="2" fill="#2b2b2b"/>
+        <rect x="9" y="8" width="2" height="2" fill="#2b2b2b"/>
+      </g>
+      <rect x="3" y="12" width="10" height="5" fill="#4a3524"/>
+      <rect x="6" y="13" width="4" height="2" fill="#5c4430"/>
+      <rect x="2" y="17" width="12" height="13" fill="#3f6f8e"/>
+      <rect x="2" y="17" width="12" height="3" fill="#4d82a3"/>
+      <rect x="0" y="18" width="3" height="10" fill="#3f6f8e"/>
+      <rect x="13" y="18" width="3" height="10" fill="#3f6f8e"/>
+      <rect x="0" y="28" width="3" height="3" fill="#e8b88a"/>
+      <rect x="13" y="28" width="3" height="3" fill="#e8b88a"/>
+      <rect x="3" y="30" width="4" height="11" fill="#4a4a5a"/>
+      <rect x="9" y="30" width="4" height="11" fill="#4a4a5a"/>
+      <rect x="2" y="41" width="6" height="3" fill="#2b2b2b"/>
+      <rect x="8" y="41" width="6" height="3" fill="#2b2b2b"/>
+    </g>
+  </g>
+</svg>
