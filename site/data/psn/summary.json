@@ -1,13 +1,73 @@
 {
   "totals": {
     "bronze": 2341,
-    "silver": 666,
+    "silver": 672,
     "gold": 268,
     "platinum": 28
   },
   "gameCount": 412,
   "averageCompletion": 18.6,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Nightlord Slayer",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/515ca832-10b7-45f4-b6b2-95c0506d4dad.png",
+      "earnedAt": "2026-08-31T22:00:44Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Sentient Pest",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/ed9a6108-1f3e-4625-a980-f311150301f6.png",
+      "earnedAt": "2026-08-31T22:00:29Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "The Crater",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/c71e1d4e-6bb6-4a07-a9db-a53d309ff3ec.png",
+      "earnedAt": "2026-08-31T21:48:22Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Night Aspect",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/3cf85c24-3757-4ca6-97e9-a1457686740e.png",
+      "earnedAt": "2026-08-31T21:08:03Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Set and Steadfast",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/ba2f3ebe-8e22-4157-b530-e7b2316616ab.png",
+      "earnedAt": "2026-08-31T20:01:53Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Rotted Woods",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/65c83d64-2d2c-49e0-8c29-fc4a556ace34.png",
+      "earnedAt": "2026-08-31T19:54:41Z"
+    },
     {
       "platform": "psn",
       "gameName": "ELDEN RING NIGHTREIGN",
@@ -947,66 +1007,6 @@
       "trophyType": "bronze",
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/12d7ba73-b2f1-4789-9e07-5deb01967951.png",
       "earnedAt": "2026-04-11T23:33:39Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "Thrillville",
-      "gameId": "NPWR36567_00",
-      "slug": "psn-thrillville",
-      "trophyName": "Adrenaline Rush",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR36567_00/01c118a3-48e2-430c-aaa8-6ba925fa57dd.png",
-      "earnedAt": "2026-03-25T01:49:35Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "Hollow Knight",
-      "gameId": "NPWR58037_00",
-      "slug": "psn-hollow-knight-ps5",
-      "trophyName": "The Hollow Knight",
-      "trophyType": "gold",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR58037_00/33d65579-8ee1-48c7-87c3-eaf9b06c0a90.png",
-      "earnedAt": "2026-02-28T02:41:30Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY X HD Remaster",
-      "gameId": "NPWR04915_00",
-      "slug": "psn-final-fantasy-x-hd-remaster",
-      "trophyName": "All Together",
-      "trophyType": "bronze",
-      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR04915_00_00D958EB781996F7F036DF4C258A0F92D02038F6D4/4C64FE5F9507843C789091636C8D81B25C5A4A5A.PNG",
-      "earnedAt": "2026-01-17T22:21:08Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY X HD Remaster",
-      "gameId": "NPWR04915_00",
-      "slug": "psn-final-fantasy-x-hd-remaster",
-      "trophyName": "Teamwork!",
-      "trophyType": "bronze",
-      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR04915_00_00D958EB781996F7F036DF4C258A0F92D02038F6D4/30B281F8AE75F8DC0F26B2F58066E5EF5371FDAF.PNG",
-      "earnedAt": "2026-01-14T12:09:13Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY X HD Remaster",
-      "gameId": "NPWR04915_00",
-      "slug": "psn-final-fantasy-x-hd-remaster",
-      "trophyName": "Striker",
-      "trophyType": "bronze",
-      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR04915_00_00D958EB781996F7F036DF4C258A0F92D02038F6D4/471691485297A70E965C5ADD80A2EE38CB49D2CA.PNG",
-      "earnedAt": "2026-01-13T02:11:36Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY X HD Remaster",
-      "gameId": "NPWR04915_00",
-      "slug": "psn-final-fantasy-x-hd-remaster",
-      "trophyName": "The Right Thing",
-      "trophyType": "bronze",
-      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR04915_00_00D958EB781996F7F036DF4C258A0F92D02038F6D4/E4046F4A02D312BB148DE3EA0043E5D04612E445.PNG",
-      "earnedAt": "2026-01-11T15:50:26Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,10 @@
       "slug": "psn-elden-ring-nightreign",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 38,
-      "earnedCount": 20,
+      "progressPercent": 56,
+      "earnedCount": 26,
       "totalCount": 37,
-      "lastEarnedAt": "2026-08-31T01:22:48Z"
+      "lastEarnedAt": "2026-08-31T22:00:44Z"
     },
     {
       "name": "Valfaris trophies\n",
