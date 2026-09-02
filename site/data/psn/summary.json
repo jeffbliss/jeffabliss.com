@@ -1,13 +1,43 @@
 {
   "totals": {
     "bronze": 2341,
-    "silver": 672,
-    "gold": 268,
+    "silver": 674,
+    "gold": 269,
     "platinum": 28
   },
   "gameCount": 412,
-  "averageCompletion": 18.6,
+  "averageCompletion": 18.7,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Fissure in the Fog",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/a8632caa-87fc-421c-bbf7-04b3bf9f6815.png",
+      "earnedAt": "2026-09-01T22:13:03Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Nightlord Conqueror",
+      "trophyType": "gold",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/72ebc5d5-a236-49f1-8f30-18ddaa0e2f7a.png",
+      "earnedAt": "2026-09-01T22:13:03Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Noklateo, the Shrouded City",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/ec2db6de-bec1-46c0-bf5c-3c8c88d2dff2.png",
+      "earnedAt": "2026-09-01T18:40:18Z"
+    },
     {
       "platform": "psn",
       "gameName": "ELDEN RING NIGHTREIGN",
@@ -977,36 +1007,6 @@
       "trophyType": "bronze",
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/66bebbdb-79ed-42da-b87a-bd03c92f6141.png",
       "earnedAt": "2026-04-26T23:43:10Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY XIV Online",
-      "gameId": "NPWR23141_00",
-      "slug": "psn-final-fantasy-xiv-online",
-      "trophyName": "The Promise of Tomorrow",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/67211b12-4c88-4b12-aecd-7c415292a2ac.png",
-      "earnedAt": "2026-04-26T12:07:49Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY XIV Online",
-      "gameId": "NPWR23141_00",
-      "slug": "psn-final-fantasy-xiv-online",
-      "trophyName": "Seekers of Eternity",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/b6873347-7890-4530-8427-2f171eb29127.png",
-      "earnedAt": "2026-04-15T23:42:21Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY XIV Online",
-      "gameId": "NPWR23141_00",
-      "slug": "psn-final-fantasy-xiv-online",
-      "trophyName": "Crossroads",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/12d7ba73-b2f1-4789-9e07-5deb01967951.png",
-      "earnedAt": "2026-04-11T23:33:39Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,10 @@
       "slug": "psn-elden-ring-nightreign",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 56,
-      "earnedCount": 26,
+      "progressPercent": 71,
+      "earnedCount": 29,
       "totalCount": 37,
-      "lastEarnedAt": "2026-08-31T22:00:44Z"
+      "lastEarnedAt": "2026-09-01T22:13:03Z"
     },
     {
       "name": "Valfaris trophies\n",

@@ -4,8 +4,8 @@
   "slug": "psn-elden-ring-nightreign",
   "name": "ELDEN RING NIGHTREIGN",
   "titlePlatform": "PS5",
-  "progressPercent": 56,
-  "lastUpdated": "2026-08-31T22:00:45Z",
+  "progressPercent": 71,
+  "lastUpdated": "2026-09-01T22:13:04Z",
   "trophies": [
     {
       "id": 0,
@@ -71,7 +71,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/3c993e99-e6e0-4993-b54e-3154a5aba350.png",
       "earned": true,
       "earnedAt": "2026-07-29T11:48:06Z",
-      "rarityPercent": 56
+      "rarityPercent": 55.9
     },
     {
       "id": 6,
@@ -137,7 +137,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/3814d4f9-0ae7-4746-b10e-726c9f97bd8a.png",
       "earned": true,
       "earnedAt": "2026-08-31T01:22:48Z",
-      "rarityPercent": 51.8
+      "rarityPercent": 51.7
     },
     {
       "id": 12,
@@ -157,8 +157,8 @@
       "type": "silver",
       "hidden": true,
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/a8632caa-87fc-421c-bbf7-04b3bf9f6815.png",
-      "earned": false,
-      "earnedAt": null,
+      "earned": true,
+      "earnedAt": "2026-09-01T22:13:03Z",
       "rarityPercent": 51.7
     },
     {
@@ -179,8 +179,8 @@
       "type": "gold",
       "hidden": false,
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/72ebc5d5-a236-49f1-8f30-18ddaa0e2f7a.png",
-      "earned": false,
-      "earnedAt": null,
+      "earned": true,
+      "earnedAt": "2026-09-01T22:13:03Z",
       "rarityPercent": 45.3
     },
     {
@@ -225,7 +225,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/28b1eb30-8e65-4a53-8a05-32e554fa70f2.png",
       "earned": true,
       "earnedAt": "2026-07-29T12:23:06Z",
-      "rarityPercent": 69
+      "rarityPercent": 68.9
     },
     {
       "id": 20,
@@ -267,8 +267,8 @@
       "type": "silver",
       "hidden": true,
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/ec2db6de-bec1-46c0-bf5c-3c8c88d2dff2.png",
-      "earned": false,
-      "earnedAt": null,
+      "earned": true,
+      "earnedAt": "2026-09-01T18:40:18Z",
       "rarityPercent": 43
     },
     {
@@ -390,7 +390,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/99dd41b9-2d4c-4c8b-8b3e-74528eeeb0b6.png",
       "earned": true,
       "earnedAt": "2026-08-30T00:42:51Z",
-      "rarityPercent": 53.5
+      "rarityPercent": 53.4
     },
     {
       "id": 35,
