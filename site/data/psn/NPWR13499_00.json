@@ -225,7 +225,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13499_00_00A57C13A00E9D11A9F2C82B85FDE81649244C17BD/E3E64F17EA0E47BC1547787472F0554929B17273.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 9.2
+      "rarityPercent": 9.3
     },
     {
       "id": 20,
@@ -236,7 +236,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13499_00_00A57C13A00E9D11A9F2C82B85FDE81649244C17BD/41F3B5B9ADD76516FD7C5AE17952BC494BC8C720.PNG",
       "earned": true,
       "earnedAt": "2019-09-08T16:02:35Z",
-      "rarityPercent": 11.6
+      "rarityPercent": 11.7
     },
     {
       "id": 21,
@@ -324,7 +324,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13499_00_00A57C13A00E9D11A9F2C82B85FDE81649244C17BD/33EBAF19B83E1A8170E60004BDC40A660694D895.PNG",
       "earned": true,
       "earnedAt": "2019-09-08T15:54:17Z",
-      "rarityPercent": 11.4
+      "rarityPercent": 11.5
     },
     {
       "id": 29,

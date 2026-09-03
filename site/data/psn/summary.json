@@ -1,6 +1,6 @@
 {
   "totals": {
-    "bronze": 2341,
+    "bronze": 2343,
     "silver": 674,
     "gold": 269,
     "platinum": 28
@@ -8,6 +8,26 @@
   "gameCount": 412,
   "averageCompletion": 18.7,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Obtained Vessels",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/29c44fbb-5054-4e82-99c0-d6db0d4bb491.png",
+      "earnedAt": "2026-09-03T10:21:57Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Dresser",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/d2e44a04-45ae-4bc2-9067-8a2467ec58f9.png",
+      "earnedAt": "2026-09-03T10:20:38Z"
+    },
     {
       "platform": "psn",
       "gameName": "ELDEN RING NIGHTREIGN",
@@ -987,26 +1007,6 @@
       "trophyType": "bronze",
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/d6ff8acd-69eb-4b7e-ba78-dc63e9d76af5.png",
       "earnedAt": "2026-05-12T21:04:42Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY XIV Online",
-      "gameId": "NPWR23141_00",
-      "slug": "psn-final-fantasy-xiv-online",
-      "trophyName": "Satisfaction Guaranteed: Anden",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/d6ff8acd-69eb-4b7e-ba78-dc63e9d76af5.png",
-      "earnedAt": "2026-05-11T16:14:09Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY XIV Online",
-      "gameId": "NPWR23141_00",
-      "slug": "psn-final-fantasy-xiv-online",
-      "trophyName": "Into the Mist",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/66bebbdb-79ed-42da-b87a-bd03c92f6141.png",
-      "earnedAt": "2026-04-26T23:43:10Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,10 @@
       "slug": "psn-elden-ring-nightreign",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 71,
-      "earnedCount": 29,
+      "progressPercent": 74,
+      "earnedCount": 31,
       "totalCount": 37,
-      "lastEarnedAt": "2026-09-01T22:13:03Z"
+      "lastEarnedAt": "2026-09-03T10:21:57Z"
     },
     {
       "name": "Valfaris trophies\n",
