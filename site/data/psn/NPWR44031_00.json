@@ -4,8 +4,8 @@
   "slug": "psn-elden-ring-nightreign",
   "name": "ELDEN RING NIGHTREIGN",
   "titlePlatform": "PS5",
-  "progressPercent": 74,
-  "lastUpdated": "2026-09-03T10:21:57Z",
+  "progressPercent": 95,
+  "lastUpdated": "2026-09-03T20:21:02Z",
   "trophies": [
     {
       "id": 0,
@@ -80,8 +80,8 @@
       "type": "gold",
       "hidden": true,
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/c0b8d6d8-f2e3-4ece-a9e8-e5321c80f0e9.png",
-      "earned": false,
-      "earnedAt": null,
+      "earned": true,
+      "earnedAt": "2026-09-03T16:53:43Z",
       "rarityPercent": 45.3
     },
     {
@@ -234,8 +234,8 @@
       "type": "silver",
       "hidden": true,
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/b8ad5d43-6ec9-415e-87ab-ef22d02f1a58.png",
-      "earned": false,
-      "earnedAt": null,
+      "earned": true,
+      "earnedAt": "2026-09-03T20:21:02Z",
       "rarityPercent": 50
     },
     {
@@ -278,8 +278,8 @@
       "type": "gold",
       "hidden": false,
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/5a2f8789-b161-4e70-a57e-e3088c5f9da9.png",
-      "earned": false,
-      "earnedAt": null,
+      "earned": true,
+      "earnedAt": "2026-09-03T20:21:02Z",
       "rarityPercent": 36.6
     },
     {

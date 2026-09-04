@@ -1,13 +1,43 @@
 {
   "totals": {
     "bronze": 2343,
-    "silver": 674,
-    "gold": 269,
+    "silver": 675,
+    "gold": 271,
     "platinum": 28
   },
   "gameCount": 412,
   "averageCompletion": 18.7,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Mountaintop",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/b8ad5d43-6ec9-415e-87ab-ef22d02f1a58.png",
+      "earnedAt": "2026-09-03T20:21:02Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Shifting Earth",
+      "trophyType": "gold",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/5a2f8789-b161-4e70-a57e-e3088c5f9da9.png",
+      "earnedAt": "2026-09-03T20:21:02Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Dawn",
+      "trophyType": "gold",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/c0b8d6d8-f2e3-4ece-a9e8-e5321c80f0e9.png",
+      "earnedAt": "2026-09-03T16:53:43Z"
+    },
     {
       "platform": "psn",
       "gameName": "ELDEN RING NIGHTREIGN",
@@ -977,36 +1007,6 @@
       "trophyType": "bronze",
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/c7041c1a-2b39-4e25-8cb2-7f316f6efa2c.png",
       "earnedAt": "2026-07-28T21:40:29Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "Relic",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/59f85222-0e0d-4567-810e-1ed9100d5d75.png",
-      "earnedAt": "2026-07-26T19:48:50Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "The Shrouded Roundtable Hold",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/b80ec555-cff2-4c16-8640-60e78c740854.png",
-      "earnedAt": "2026-07-26T19:18:36Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "FINAL FANTASY XIV Online",
-      "gameId": "NPWR23141_00",
-      "slug": "psn-final-fantasy-xiv-online",
-      "trophyName": "Satisfaction Guaranteed: Nitowikwe",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/d6ff8acd-69eb-4b7e-ba78-dc63e9d76af5.png",
-      "earnedAt": "2026-05-12T21:04:42Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,10 @@
       "slug": "psn-elden-ring-nightreign",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 74,
-      "earnedCount": 31,
+      "progressPercent": 95,
+      "earnedCount": 34,
       "totalCount": 37,
-      "lastEarnedAt": "2026-09-03T10:21:57Z"
+      "lastEarnedAt": "2026-09-03T20:21:02Z"
     },
     {
       "name": "Valfaris trophies\n",
