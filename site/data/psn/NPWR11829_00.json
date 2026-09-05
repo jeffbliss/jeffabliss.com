@@ -16,7 +16,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11829_00_00C470F6B88FBDDB981045FAD8001268DC6379CFF9/B7E5E5E304950400D44155979FF9E624FACE8FAF.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 53.4
+      "rarityPercent": 53.5
     },
     {
       "id": 1,
@@ -60,7 +60,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11829_00_00C470F6B88FBDDB981045FAD8001268DC6379CFF9/024E7B1ED6B271A43313AAEB9965E56FC4369E55.PNG",
       "earned": true,
       "earnedAt": "2022-02-08T23:12:11Z",
-      "rarityPercent": 88.8
+      "rarityPercent": 88.9
     },
     {
       "id": 5,
@@ -71,7 +71,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11829_00_00C470F6B88FBDDB981045FAD8001268DC6379CFF9/7DA378842B7A4191E1E571A301983AA51DE39F56.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 62.6
+      "rarityPercent": 62.7
     },
     {
       "id": 6,
@@ -115,7 +115,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11829_00_00C470F6B88FBDDB981045FAD8001268DC6379CFF9/5F5A7ECB528E32483ABE268A1C643174BAD6B91C.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 53.7
+      "rarityPercent": 53.8
     },
     {
       "id": 10,
@@ -192,7 +192,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11829_00_00C470F6B88FBDDB981045FAD8001268DC6379CFF9/D2B86BEF82312CFDF1EEE39C2D39683453022E31.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 61.4
+      "rarityPercent": 61.5
     },
     {
       "id": 17,
@@ -247,7 +247,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11829_00_00C470F6B88FBDDB981045FAD8001268DC6379CFF9/DC85526ED7BBCFD8D2BB96EE67594DA5AAABDFA8.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 53.7
+      "rarityPercent": 53.8
     },
     {
       "id": 22,
@@ -269,7 +269,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR11829_00_00C470F6B88FBDDB981045FAD8001268DC6379CFF9/0CE31D8E732CFEBA04491A2B92D2E90418151B45.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 53.7
+      "rarityPercent": 53.8
     }
   ]
 }
