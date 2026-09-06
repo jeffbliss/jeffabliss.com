@@ -104,7 +104,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07545_00_0081CD590C9B2A1A34BE25117AA438309A28EEF306/586CBFE2EDE62DFD5FAFB69F8CFE8ACF33CDBA7A.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 33.9
+      "rarityPercent": 34
     },
     {
       "id": 9,
@@ -247,7 +247,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR07545_00_0081CD590C9B2A1A34BE25117AA438309A28EEF306/978DBA61B3A4C819DDDE35F18182AAB40268A437.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 11.6
+      "rarityPercent": 11.7
     },
     {
       "id": 22,

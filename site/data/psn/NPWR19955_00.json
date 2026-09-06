@@ -27,7 +27,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR19955_00/f14bf8f0-a47f-4909-9924-fa032f32db07.png",
       "earned": true,
       "earnedAt": "2023-06-25T00:24:47Z",
-      "rarityPercent": 85
+      "rarityPercent": 84.9
     },
     {
       "id": 2,
@@ -38,7 +38,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR19955_00/f14bf8f0-a47f-4909-9924-fa032f32db07.png",
       "earned": true,
       "earnedAt": "2023-07-02T02:12:53Z",
-      "rarityPercent": 75.3
+      "rarityPercent": 75.2
     },
     {
       "id": 3,
@@ -60,7 +60,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR19955_00/f14bf8f0-a47f-4909-9924-fa032f32db07.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 64.4
+      "rarityPercent": 64.3
     },
     {
       "id": 5,
@@ -93,7 +93,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR19955_00/f14bf8f0-a47f-4909-9924-fa032f32db07.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 55.1
+      "rarityPercent": 55
     },
     {
       "id": 8,
@@ -181,7 +181,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR19955_00/82756f70-086c-4b32-b593-adde5faaf389.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 42.4
+      "rarityPercent": 42.3
     },
     {
       "id": 16,
@@ -192,7 +192,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR19955_00/228d919e-8cfd-4925-8ad7-b93af0bbe306.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 44.4
+      "rarityPercent": 44.3
     },
     {
       "id": 17,
@@ -379,7 +379,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR19955_00/5c945645-4b46-4939-8acf-f4fac7f0920d.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 38.8
+      "rarityPercent": 38.7
     },
     {
       "id": 34,
@@ -467,7 +467,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR19955_00/289e9611-a9d5-435d-aa18-1a302101d329.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 44.9
+      "rarityPercent": 44.8
     },
     {
       "id": 42,
