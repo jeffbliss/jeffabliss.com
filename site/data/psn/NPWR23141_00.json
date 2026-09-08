@@ -82,7 +82,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/26cd2258-ce3a-4484-adec-a4231830fda5.png",
       "earned": true,
       "earnedAt": "2021-05-05T00:12:29Z",
-      "rarityPercent": 37
+      "rarityPercent": 37.1
     },
     {
       "id": 7,
@@ -1952,7 +1952,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/12d7ba73-b2f1-4789-9e07-5deb01967951.png",
       "earned": true,
       "earnedAt": "2026-04-11T23:33:39Z",
-      "rarityPercent": 11.7
+      "rarityPercent": 11.8
     },
     {
       "id": 177,
@@ -2436,7 +2436,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/a8d73bb3-a2e0-41a5-8324-50aba4ad2b29.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 3.6
+      "rarityPercent": 3.7
     },
     {
       "id": 221,
@@ -2502,7 +2502,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/a8d102f4-c36d-496f-a221-43e9df356b25.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 6.3
+      "rarityPercent": 6.4
     },
     {
       "id": 227,
@@ -2634,7 +2634,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/a322a289-682d-4e51-904a-f16f5dba354a.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 3
+      "rarityPercent": 3.1
     },
     {
       "id": 239,
@@ -2671,55 +2671,55 @@
     },
     {
       "id": 242,
-      "name": "Unreleased Trophy 1",
-      "description": "This trophy will be released in a future update.",
+      "name": "Windborne",
+      "description": "Complete the main scenario quest \"Windborne.\"",
       "type": "bronze",
       "hidden": true,
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/b78b6923-44f3-4f71-b124-92702630e757.png",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/e3dd2617-9a8a-4e44-a235-eefb5c65d544.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 0.1
+      "rarityPercent": 0.6
     },
     {
       "id": 243,
-      "name": "Unreleased Trophy 2",
-      "description": "This trophy will be released in a future update.",
+      "name": "Wild Child",
+      "description": "Achieve beastmaster level 50.",
       "type": "bronze",
       "hidden": false,
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/b78b6923-44f3-4f71-b124-92702630e757.png",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/02fbb097-2b6d-476b-a3bd-0bfe05a38a8d.png",
       "earned": false,
       "earnedAt": null,
       "rarityPercent": 0.1
     },
     {
       "id": 244,
-      "name": "Unreleased Trophy 3",
-      "description": "This trophy will be released in a future update.",
+      "name": "A Beast in the Hand",
+      "description": "Befriend 10 unique beasts.",
       "type": "bronze",
       "hidden": false,
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/b78b6923-44f3-4f71-b124-92702630e757.png",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/02fbb097-2b6d-476b-a3bd-0bfe05a38a8d.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 0.1
+      "rarityPercent": 0.6
     },
     {
       "id": 245,
-      "name": "Unreleased Trophy 4",
-      "description": "This trophy will be released in a future update.",
+      "name": "Friend to the Fierce",
+      "description": "Achieve rank 25 or higher with 10 beasts.",
       "type": "bronze",
       "hidden": false,
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/b78b6923-44f3-4f71-b124-92702630e757.png",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/02fbb097-2b6d-476b-a3bd-0bfe05a38a8d.png",
       "earned": false,
       "earnedAt": null,
       "rarityPercent": 0.1
     },
     {
       "id": 246,
-      "name": "Unreleased Trophy 5",
-      "description": "This trophy will be released in a future update.",
+      "name": "Freeing the Beast",
+      "description": "Achieve Apex rank or above on the Crucible's first three boards and two master's boards.",
       "type": "bronze",
       "hidden": false,
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/b78b6923-44f3-4f71-b124-92702630e757.png",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR23141_00/02fbb097-2b6d-476b-a3bd-0bfe05a38a8d.png",
       "earned": false,
       "earnedAt": null,
       "rarityPercent": 0.1
