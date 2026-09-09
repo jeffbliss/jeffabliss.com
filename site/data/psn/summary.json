@@ -1,13 +1,33 @@
 {
   "totals": {
-    "bronze": 2343,
+    "bronze": 2345,
     "silver": 675,
     "gold": 271,
     "platinum": 28
   },
-  "gameCount": 412,
+  "gameCount": 413,
   "averageCompletion": 18.7,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "ELDEN RING NIGHTREIGN",
+      "gameId": "NPWR44031_00",
+      "slug": "psn-elden-ring-nightreign",
+      "trophyName": "Plague of Locusts",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/4c1bba0f-35a3-42d0-97a0-83bd5479f449.png",
+      "earnedAt": "2026-09-08T23:03:54Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "Grand Theft Auto: San Andreas – The Definitive Edition",
+      "gameId": "NPWR24059_00",
+      "slug": "psn-grand-theft-auto-san-andreas-the-definitive-edition",
+      "trophyName": "Getting Started",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR24059_00/29b47390-39d9-4826-b711-4e0862efb06a.png",
+      "earnedAt": "2026-09-08T18:13:04Z"
+    },
     {
       "platform": "psn",
       "gameName": "ELDEN RING NIGHTREIGN",
@@ -987,26 +1007,6 @@
       "trophyType": "silver",
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/98d85703-906d-4599-b7a5-aff2360361c4.png",
       "earnedAt": "2026-07-29T01:35:36Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "The Duchess Joins the Fray",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/e1faa84f-c132-485e-86bc-9d87f3b90997.png",
-      "earnedAt": "2026-07-28T23:31:52Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "Replenished Sacred Flasks",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/c7041c1a-2b39-4e25-8cb2-7f316f6efa2c.png",
-      "earnedAt": "2026-07-28T21:40:29Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,21 @@
       "slug": "psn-elden-ring-nightreign",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 95,
-      "earnedCount": 34,
+      "progressPercent": 97,
+      "earnedCount": 35,
       "totalCount": 37,
-      "lastEarnedAt": "2026-09-03T20:21:02Z"
+      "lastEarnedAt": "2026-09-08T23:03:54Z"
+    },
+    {
+      "name": "Grand Theft Auto: San Andreas – The Definitive Edition",
+      "gameId": "NPWR24059_00",
+      "slug": "psn-grand-theft-auto-san-andreas-the-definitive-edition",
+      "platform": "psn",
+      "titlePlatform": "PS5",
+      "progressPercent": 1,
+      "earnedCount": 1,
+      "totalCount": 35,
+      "lastEarnedAt": "2026-09-08T18:13:04Z"
     },
     {
       "name": "Valfaris trophies\n",
