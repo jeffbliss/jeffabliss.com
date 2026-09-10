@@ -5,8 +5,8 @@
     "gold": 271,
     "platinum": 28
   },
-  "gameCount": 413,
-  "averageCompletion": 18.7,
+  "gameCount": 414,
+  "averageCompletion": 18.6,
   "recentTrophies": [
     {
       "platform": "psn",
@@ -5507,6 +5507,17 @@
       "progressPercent": 0,
       "earnedCount": 0,
       "totalCount": 37,
+      "lastEarnedAt": null
+    },
+    {
+      "name": "Turok",
+      "gameId": "NPWR45499_00",
+      "slug": "psn-turok",
+      "platform": "psn",
+      "titlePlatform": "PS5",
+      "progressPercent": 0,
+      "earnedCount": 0,
+      "totalCount": 10,
       "lastEarnedAt": null
     },
     {

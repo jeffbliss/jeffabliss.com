@@ -1,0 +1,121 @@
+{
+  "platform": "psn",
+  "gameId": "NPWR45499_00",
+  "slug": "psn-turok",
+  "name": "Turok",
+  "titlePlatform": "PS5",
+  "progressPercent": 0,
+  "lastUpdated": "2026-09-10T00:44:32Z",
+  "trophies": [
+    {
+      "id": 0,
+      "name": "Legendary Weapon",
+      "description": "Assemble the Chronoscepter",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/4d56d654-e362-4c07-a9e2-dc15c5342fb4.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 6.8
+    },
+    {
+      "id": 1,
+      "name": "Turok: Treasure Hunter",
+      "description": "Discover all secret areas",
+      "type": "gold",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/bd6a6e90-3595-4c3a-a631-64f666be41a0.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 1.8
+    },
+    {
+      "id": 2,
+      "name": "You Call That A Knife?",
+      "description": "Defeat the Longhunter",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/ea8fe035-e023-424a-9658-828730ab2646.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 19.5
+    },
+    {
+      "id": 3,
+      "name": "Ancient Exterminator",
+      "description": "Defeat the Mantis",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/e84c22db-383b-4b8c-a4a6-43aa296a92ff.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12.6
+    },
+    {
+      "id": 4,
+      "name": "T-Rekt",
+      "description": "Defeat the T-Rex",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/7852c44a-7a1f-41a6-9f33-048bfec9daef.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.4
+    },
+    {
+      "id": 5,
+      "name": "Swift and Deadly",
+      "description": "Kill 3 enemies simultaneously with the Knife",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/4a13712a-17d5-4aac-9b77-8009151c4518.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12.7
+    },
+    {
+      "id": 6,
+      "name": "Practice Makes Perfect",
+      "description": "Complete the training course",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/82a0862a-9698-40be-bae8-e6ce75de5ab4.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 20.5
+    },
+    {
+      "id": 7,
+      "name": "Crushing Conclusion",
+      "description": "Defeat the Campaigner",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/b91c9512-8503-49bb-9c5a-871418ad588d.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 9.3
+    },
+    {
+      "id": 8,
+      "name": "Speedrunner",
+      "description": "Complete the time trial mode in under 2:45",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/7a0624a6-e995-44b5-aa31-92e8d10f9790.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 4.3
+    },
+    {
+      "id": 9,
+      "name": "Not Quite Mortal",
+      "description": "Obtain maximum HP from collecting Mortal Wounds",
+      "type": "silver",
+      "hidden": false,
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR45499_00/07d7b07b-d1e6-4298-ae88-898c567d2602.png",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 12.1
+    }
+  ]
+}
