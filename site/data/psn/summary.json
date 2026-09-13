@@ -1,13 +1,53 @@
 {
   "totals": {
-    "bronze": 2345,
-    "silver": 675,
+    "bronze": 2348,
+    "silver": 676,
     "gold": 271,
     "platinum": 28
   },
-  "gameCount": 414,
+  "gameCount": 416,
   "averageCompletion": 18.6,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "DOOM + DOOM II",
+      "gameId": "NPWR42669_00",
+      "slug": "psn-doom-doom-ii",
+      "trophyName": "Not So Friendly Fire",
+      "trophyType": "silver",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR42669_00/edbac508-6f8b-4036-be98-be746eeb5708.png",
+      "earnedAt": "2026-09-12T20:23:13Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "DOOM + DOOM II",
+      "gameId": "NPWR42669_00",
+      "slug": "psn-doom-doom-ii",
+      "trophyName": "Clean Slate",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR42669_00/53863d90-f9a8-41d8-a5db-75a384ee7e8f.png",
+      "earnedAt": "2026-09-12T20:19:34Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "DOOM + DOOM II",
+      "gameId": "NPWR42669_00",
+      "slug": "psn-doom-doom-ii",
+      "trophyName": "Doormat",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR42669_00/927230a6-0d13-49d7-84ff-3ca248da6880.png",
+      "earnedAt": "2026-09-12T20:18:44Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "DOOM + DOOM II",
+      "gameId": "NPWR42669_00",
+      "slug": "psn-doom-doom-ii",
+      "trophyName": "An Important Looking Door",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR42669_00/eb0c241f-2a81-4724-8a99-7bd58d747c73.png",
+      "earnedAt": "2026-09-12T20:18:03Z"
+    },
     {
       "platform": "psn",
       "gameName": "ELDEN RING NIGHTREIGN",
@@ -967,49 +1007,20 @@
       "trophyType": "bronze",
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/15725ad6-b911-4b69-bdaa-0fcf48a9a285.png",
       "earnedAt": "2026-07-29T12:27:01Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "Legendary Armament",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/28b1eb30-8e65-4a53-8a05-32e554fa70f2.png",
-      "earnedAt": "2026-07-29T12:23:06Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "Untold Power",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/93023041-985b-4565-8b48-f9bd1c766a69.png",
-      "earnedAt": "2026-07-29T12:20:36Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "The Revenant Joins the Fray",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/3c993e99-e6e0-4993-b54e-3154a5aba350.png",
-      "earnedAt": "2026-07-29T11:48:06Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "Old Gaol",
-      "trophyType": "silver",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/98d85703-906d-4599-b7a5-aff2360361c4.png",
-      "earnedAt": "2026-07-29T01:35:36Z"
     }
   ],
   "games": [
+    {
+      "name": "DOOM + DOOM II",
+      "gameId": "NPWR42669_00",
+      "slug": "psn-doom-doom-ii",
+      "platform": "psn",
+      "titlePlatform": "PS5",
+      "progressPercent": 7,
+      "earnedCount": 4,
+      "totalCount": 34,
+      "lastEarnedAt": "2026-09-12T20:23:13Z"
+    },
     {
       "name": "ELDEN RING NIGHTREIGN",
       "gameId": "NPWR44031_00",
@@ -5397,6 +5408,17 @@
       "progressPercent": 0,
       "earnedCount": 0,
       "totalCount": 25,
+      "lastEarnedAt": null
+    },
+    {
+      "name": "Super Meat Boy 3D Trophies",
+      "gameId": "NPWR58211_00",
+      "slug": "psn-super-meat-boy-3d-trophies",
+      "platform": "psn",
+      "titlePlatform": "PS5",
+      "progressPercent": 0,
+      "earnedCount": 0,
+      "totalCount": 26,
       "lastEarnedAt": null
     },
     {
