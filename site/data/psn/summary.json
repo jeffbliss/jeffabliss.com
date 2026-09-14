@@ -5,8 +5,8 @@
     "gold": 271,
     "platinum": 28
   },
-  "gameCount": 416,
-  "averageCompletion": 18.6,
+  "gameCount": 417,
+  "averageCompletion": 18.5,
   "recentTrophies": [
     {
       "platform": "psn",
@@ -5155,6 +5155,17 @@
       "progressPercent": 0,
       "earnedCount": 0,
       "totalCount": 59,
+      "lastEarnedAt": null
+    },
+    {
+      "name": "Diablo® II: Resurrected™",
+      "gameId": "NPWR22606_00",
+      "slug": "psn-diablo-ii-resurrected",
+      "platform": "psn",
+      "titlePlatform": "PS5",
+      "progressPercent": 0,
+      "earnedCount": 0,
+      "totalCount": 44,
       "lastEarnedAt": null
     },
     {
