@@ -5,7 +5,7 @@
   "name": "Diablo® II: Resurrected™",
   "titlePlatform": "PS5",
   "progressPercent": 0,
-  "lastUpdated": "2026-09-14T00:47:29Z",
+  "lastUpdated": "2026-09-14T23:39:54Z",
   "trophies": [
     {
       "id": 0,
@@ -115,7 +115,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR22606_00/d4615a63-f496-4b25-b366-c0a28e0897c8.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 31
+      "rarityPercent": 30.9
     },
     {
       "id": 10,

@@ -1,13 +1,33 @@
 {
   "totals": {
-    "bronze": 2348,
+    "bronze": 2350,
     "silver": 676,
     "gold": 271,
     "platinum": 28
   },
-  "gameCount": 417,
+  "gameCount": 418,
   "averageCompletion": 18.5,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "The First of Many",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/cb42516d-247d-4a10-a008-f3b5b02db4a2.png",
+      "earnedAt": "2026-09-15T11:49:22Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "I Have Arrived!",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/6f28d54e-cc45-44cb-9208-aeb1b6abdae7.png",
+      "earnedAt": "2026-09-14T22:39:55Z"
+    },
     {
       "platform": "psn",
       "gameName": "DOOM + DOOM II",
@@ -987,29 +1007,20 @@
       "trophyType": "bronze",
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/1bb2eec1-12b5-499d-8d58-a7ebe7ac89b6.png",
       "earnedAt": "2026-07-29T12:33:17Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "Tricephalos",
-      "trophyType": "silver",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/cc69f82a-599a-4448-b700-29a73a84e00b.png",
-      "earnedAt": "2026-07-29T12:30:43Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "Mastery",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/15725ad6-b911-4b69-bdaa-0fcf48a9a285.png",
-      "earnedAt": "2026-07-29T12:27:01Z"
     }
   ],
   "games": [
+    {
+      "name": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "platform": "psn",
+      "titlePlatform": "PS5",
+      "progressPercent": 3,
+      "earnedCount": 2,
+      "totalCount": 54,
+      "lastEarnedAt": "2026-09-15T11:49:22Z"
+    },
     {
       "name": "DOOM + DOOM II",
       "gameId": "NPWR42669_00",
