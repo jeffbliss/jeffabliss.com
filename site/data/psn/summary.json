@@ -1,6 +1,6 @@
 {
   "totals": {
-    "bronze": 2350,
+    "bronze": 2353,
     "silver": 676,
     "gold": 271,
     "platinum": 28
@@ -8,6 +8,36 @@
   "gameCount": 418,
   "averageCompletion": 18.5,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "The Homesteader",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/faf5efb6-d8fa-4fa6-aac3-dd438bb6826f.png",
+      "earnedAt": "2026-09-15T18:09:14Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "Lone Wolf",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/139d6257-fd4a-496c-83d0-2d717a0e4d73.png",
+      "earnedAt": "2026-09-15T16:34:49Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "Eikthyr",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/ef1fe620-3739-4ee2-bf87-1990e167a8f7.png",
+      "earnedAt": "2026-09-15T16:34:48Z"
+    },
     {
       "platform": "psn",
       "gameName": "Valheim",
@@ -977,36 +1007,6 @@
       "trophyType": "bronze",
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25067_00/8eedc4c4-0fc2-4878-9b34-8dca028bf11a.png",
       "earnedAt": "2026-08-03T23:22:38Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING™",
-      "gameId": "NPWR25067_00",
-      "slug": "psn-elden-ring",
-      "trophyName": "Elemer of the Briar",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25067_00/640e30c4-3e34-4db2-86b3-d44860315ac6.png",
-      "earnedAt": "2026-08-02T00:23:00Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "Vessel",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/2758db22-9827-431a-a57d-29509f96a84b.png",
-      "earnedAt": "2026-07-30T23:52:33Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING NIGHTREIGN",
-      "gameId": "NPWR44031_00",
-      "slug": "psn-elden-ring-nightreign",
-      "trophyName": "The Nightlords",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR44031_00/1bb2eec1-12b5-499d-8d58-a7ebe7ac89b6.png",
-      "earnedAt": "2026-07-29T12:33:17Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,10 @@
       "slug": "psn-valheim",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 3,
-      "earnedCount": 2,
+      "progressPercent": 7,
+      "earnedCount": 5,
       "totalCount": 54,
-      "lastEarnedAt": "2026-09-15T11:49:22Z"
+      "lastEarnedAt": "2026-09-15T18:09:14Z"
     },
     {
       "name": "DOOM + DOOM II",
