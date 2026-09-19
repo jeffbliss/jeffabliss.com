@@ -1,13 +1,43 @@
 {
   "totals": {
-    "bronze": 2353,
+    "bronze": 2356,
     "silver": 676,
     "gold": 271,
     "platinum": 28
   },
-  "gameCount": 418,
-  "averageCompletion": 18.5,
+  "gameCount": 420,
+  "averageCompletion": 18.4,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "The Architect",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/7bbeb6fc-2a74-4c84-8356-4798d8d8b356.png",
+      "earnedAt": "2026-09-17T22:02:40Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "The Builder",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/8132a7e1-2fc0-45a6-8e23-75404338e5d0.png",
+      "earnedAt": "2026-09-17T21:26:24Z"
+    },
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "Stronger Together",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/7d9dcaf5-2641-4610-aeb1-519bec59802c.png",
+      "earnedAt": "2026-09-17T16:42:22Z"
+    },
     {
       "platform": "psn",
       "gameName": "Valheim",
@@ -977,36 +1007,6 @@
       "trophyType": "gold",
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13281_00_00A03E8F7ED2727FADE2548E45F2781D32F5D048F6/739965374A577B2A7D0BFA39CC511AFB4F5DA568.PNG",
       "earnedAt": "2026-08-07T11:12:48Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING™",
-      "gameId": "NPWR25067_00",
-      "slug": "psn-elden-ring",
-      "trophyName": "Shardbearer Rykard",
-      "trophyType": "silver",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25067_00/82db0c44-9fd2-4299-89b4-c2fb4072420f.png",
-      "earnedAt": "2026-08-06T17:22:26Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING™",
-      "gameId": "NPWR25067_00",
-      "slug": "psn-elden-ring",
-      "trophyName": "Mohg, the Omen",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25067_00/375c6dd8-16bb-45a5-9919-2750ea2c60d6.png",
-      "earnedAt": "2026-08-04T18:49:34Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "ELDEN RING™",
-      "gameId": "NPWR25067_00",
-      "slug": "psn-elden-ring",
-      "trophyName": "Godskin Noble",
-      "trophyType": "bronze",
-      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR25067_00/8eedc4c4-0fc2-4878-9b34-8dca028bf11a.png",
-      "earnedAt": "2026-08-03T23:22:38Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,10 @@
       "slug": "psn-valheim",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 7,
-      "earnedCount": 5,
+      "progressPercent": 12,
+      "earnedCount": 8,
       "totalCount": 54,
-      "lastEarnedAt": "2026-09-15T18:09:14Z"
+      "lastEarnedAt": "2026-09-17T22:02:40Z"
     },
     {
       "name": "DOOM + DOOM II",
@@ -5257,6 +5257,17 @@
       "lastEarnedAt": null
     },
     {
+      "name": "Grounded",
+      "gameId": "NPWR38640_00",
+      "slug": "psn-grounded",
+      "platform": "psn",
+      "titlePlatform": "PS5",
+      "progressPercent": 0,
+      "earnedCount": 0,
+      "totalCount": 46,
+      "lastEarnedAt": null
+    },
+    {
       "name": "Hot Shots Golf",
       "gameId": "NPWR28217_00",
       "slug": "psn-hot-shots-golf",
@@ -5408,6 +5419,17 @@
       "progressPercent": 0,
       "earnedCount": 0,
       "totalCount": 14,
+      "lastEarnedAt": null
+    },
+    {
+      "name": "RuneScape: Dragonwilds",
+      "gameId": "NPWR57157_00",
+      "slug": "psn-runescape-dragonwilds",
+      "platform": "psn",
+      "titlePlatform": "PS5",
+      "progressPercent": 0,
+      "earnedCount": 0,
+      "totalCount": 51,
       "lastEarnedAt": null
     },
     {
