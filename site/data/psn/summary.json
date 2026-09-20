@@ -1,6 +1,6 @@
 {
   "totals": {
-    "bronze": 2356,
+    "bronze": 2357,
     "silver": 676,
     "gold": 271,
     "platinum": 28
@@ -8,6 +8,16 @@
   "gameCount": 420,
   "averageCompletion": 18.4,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "The Elder",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/2def5bc9-3ae0-4627-baf4-1038a1b76f9e.png",
+      "earnedAt": "2026-09-20T00:12:18Z"
+    },
     {
       "platform": "psn",
       "gameName": "Valheim",
@@ -997,16 +1007,6 @@
       "trophyType": "bronze",
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13281_00_00A03E8F7ED2727FADE2548E45F2781D32F5D048F6/8EDB4AFC698AC3C18817B5CB83B7C92767CC4B12.PNG",
       "earnedAt": "2026-08-09T16:47:29Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "DARK SOULS™: REMASTERED",
-      "gameId": "NPWR13281_00",
-      "slug": "psn-dark-souls-remastered",
-      "trophyName": "To Link the Fire",
-      "trophyType": "gold",
-      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13281_00_00A03E8F7ED2727FADE2548E45F2781D32F5D048F6/739965374A577B2A7D0BFA39CC511AFB4F5DA568.PNG",
-      "earnedAt": "2026-08-07T11:12:48Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,10 @@
       "slug": "psn-valheim",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 12,
-      "earnedCount": 8,
+      "progressPercent": 13,
+      "earnedCount": 9,
       "totalCount": 54,
-      "lastEarnedAt": "2026-09-17T22:02:40Z"
+      "lastEarnedAt": "2026-09-20T00:12:18Z"
     },
     {
       "name": "DOOM + DOOM II",
