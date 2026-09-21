@@ -30,7 +30,7 @@ test('zoomAt keeps the world point under the cursor fixed', () => {
 
 test('zoomAt clamps to min/max scale', () => {
   const v = createView({ scale: 1 });
-  v.zoomAt(0, 0, 1e9, W, H); near(v.scale, v.maxScale);
+  v.zoomAt(0, 0, 1e9, W, H); near(v.scale, Math.max(W, H) / 64);   // one zone fills the view
   v.zoomAt(0, 0, 1e-9, W, H); near(v.scale, v.minScale);
 });
 

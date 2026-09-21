@@ -42,7 +42,7 @@ export function requestRender() {
 
 const app = { canvas, ctx, view: createView(), layers: createLayers(), history: createHistory(), requestRender, size, setStatus, dpr };
 app.presence = createPresence(() => app.you);
-const scaleBar = createScaleBar(document.getElementById('scale'), () => app.view.scale / dpr());   // CSS px per metre
+const scaleBar = createScaleBar(document.getElementById('scale'), () => [app.view.scale / dpr(), app.view.scale]);   // CSS px/m, device px/m
 
 // Per-browser preferences (layer visibility/opacity, camera). The map itself lives on the server.
 const SETTINGS_KEY = 'valheim-mapper:settings';

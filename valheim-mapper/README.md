@@ -22,7 +22,7 @@ operations (logs, allow-list rotation, backup, storage reset): see
 - Tools: `H` pan, `B` paint, `I` ink, `P` pin, `V` select · `[` `]` step the paint brush through 8 / 16 / 32 / 64 / 128 m, or the ink width through 2 / 4 / 8 / 16 / 32 m while inking
 - Paint: left drag paints the chosen biome, right or Alt drag erases. Painting and inking clear the fog where you draw. The **Fog** swatch in the palette re-fogs an area (right drag with it reveals).
 - Ink: right or Alt drag across a line erases that stroke. Eight quick colours plus a colour-wheel button for anything else.
-- Scale bar (bottom-left) shows a round distance for the current zoom and how long it takes to jog it; hover it for walk, sprint and swim times.
+- Scale bar (bottom-left) spans whole grid squares (zones) at the current zoom, with the jog time for that distance; hover it for walk, sprint and swim times. Zoomed right in, one 64 m zone fills the view.
 - Pins: click to place. A selected pin shows a popup to rename, check or delete it, and can be dragged; `X` and Delete also work as shortcuts
 - Undo/redo: Cmd/Ctrl+Z, Shift+Cmd/Ctrl+Z
 
