@@ -46,3 +46,24 @@ test('painting also reveals fog under the brush, as one undoable command', () =>
   tool.down({ button: 2, altKey: false }, 0.5, 0.5); tool.up(ev);
   assert.equal(terrain.get(0.5, 0.5), 0); assert.equal(fog.get(0.5, 0.5), 255);
 });
+
+import { paintTool } from '../web/tools.js';
+import { refogFn } from '../web/fog.js';
+
+test('paint tool: the Fog swatch re-fogs without touching terrain; right drag with it reveals', () => {
+  const terrain = createRaster({ cells: 20, cellM: 1 }), fog = createRaster({ cells: 20, cellM: 1 });
+  const app = { history: createHistory(), tools: { options: { brush: 2, biome: 1 } }, markDirty: () => {} };
+  const terrainBrush = rasterBrushTool(app, terrain, 'paint', () => () => app.tools.options.biome, () => () => 0, { raster: fog, fn: revealFn });
+  const fogBrush = rasterBrushTool(app, fog, 'fog', () => refogFn, () => revealFn);
+  const tool = paintTool(app, terrainBrush, fogBrush);
+  const left = { button: 0, altKey: false }, right = { button: 2, altKey: false };
+  tool.down(left, 0.5, 0.5); tool.up(left);                       // meadows: paints + reveals
+  assert.equal(terrain.get(0.5, 0.5), 1); assert.equal(fog.get(0.5, 0.5), 255);
+  app.tools.options.biome = 'fog';
+  tool.down(left, 0.5, 0.5); tool.up(left);                       // fog swatch: re-fogs, terrain untouched
+  assert.equal(fog.get(0.5, 0.5), 0); assert.equal(terrain.get(0.5, 0.5), 1);
+  app.history.undo(); assert.equal(fog.get(0.5, 0.5), 255);
+  app.history.redo(); assert.equal(fog.get(0.5, 0.5), 0);
+  tool.down(right, 0.5, 0.5); tool.up(right);                     // right drag with fog swatch reveals again
+  assert.equal(fog.get(0.5, 0.5), 255);
+});

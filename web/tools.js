@@ -53,6 +53,20 @@ export function createTools(app) {
   return tools;
 }
 
+/**
+ * The Paint tool: routes each stroke to the terrain brush, or to the fog brush when the
+ * palette's Fog swatch is selected (options.biome === 'fog'). Fog paints over terrain without erasing it.
+ */
+export function paintTool(app, terrainBrush, fogBrush) {
+  let active = null;
+  return {
+    down(...a) { active = app.tools.options.biome === 'fog' ? fogBrush : terrainBrush; active.down(...a); },
+    move(...a) { active?.move(...a); },
+    up(...a) { active?.up(...a); active = null; },
+    cursor: drawBrushCursor,
+  };
+}
+
 /** Circle brush cursor in world units. */
 export function drawBrushCursor(ctx, view, w, h, tools) {
   if (!tools.pointer) return;

@@ -5,9 +5,9 @@ import { createStoreClient, createState, serialize, emptyDoc } from './store.js'
 import { createBase } from './base.js';
 import { createGrid } from './grid.js';
 import { createTerrain } from './terrain.js';
-import { createFog, revealFn } from './fog.js';
+import { createFog, revealFn, refogFn } from './fog.js';
 import { createInk, inkTool } from './ink.js';
-import { createTools, rasterBrushTool, isTypingTarget } from './tools.js';
+import { createTools, rasterBrushTool, paintTool, isTypingTarget } from './tools.js';
 import { createPins, pinTool, selectTool } from './pins.js';
 import { PIN_TYPES } from './world.js';
 import { createUI, wireTools, wirePinEditor } from './ui.js';
@@ -87,7 +87,9 @@ app.rebuild = function rebuild(state) {
   Object.assign(app, { fogLayer: fog, inkLayer: ink, pinsLayer: pins });
 
   const revealFog = { raster: state.fog, fn: revealFn };          // drawing explores: paint and ink clear fog where they land
-  app.tools.register('paint', rasterBrushTool(app, state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0, revealFog));
+  const terrainBrush = rasterBrushTool(app, state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0, revealFog);
+  const fogBrush = rasterBrushTool(app, state.fog, 'fog', () => refogFn, () => revealFn);   // the palette's Fog swatch
+  app.tools.register('paint', paintTool(app, terrainBrush, fogBrush));
   app.tools.register('ink', inkTool(app, ink, revealFog));
   app.tools.register('pin', pinTool(app, pins, app.openEditor));
   app.tools.register('select', selectTool(app, pins, app.openEditor));

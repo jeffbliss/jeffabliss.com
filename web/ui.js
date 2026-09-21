@@ -105,7 +105,7 @@ export function syncGridInputs(app) {
 /** Wires the toolbar, biome/pin-type palettes, grid controls and tool option UI. Reads layer objects via app.* so it stays valid across app.rebuild. */
 const TOOL_HINTS = {
   pan: 'Drag to pan. Wheel zooms, double-click recentres, 0 fits the world.',
-  paint: 'Left drag paints the biome and clears fog. Right or Alt drag erases terrain. [ ] change brush size.',
+  paint: 'Left drag paints the biome and clears fog. Right or Alt drag erases terrain. The Fog swatch re-fogs an area (right drag reveals). [ ] change brush size.',
   ink: 'Left drag draws and clears fog along the line. Right or Alt drag erases whole strokes.',
   pin: 'Click to place a pin and name it. Click a pin to select or drag it; Enter renames, X checks, Delete removes.',
   select: 'Click to select pins, drag to move, double-click to rename. Enter renames, X checks, Delete removes.',
@@ -131,7 +131,9 @@ export function wireTools(app) {
   inkWidth.oninput = () => app.tools.setOption('inkWidth', Number(inkWidth.value));
 
   const biomesEl = document.getElementById('biomes');
-  for (const b of BIOMES) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => { app.tools.setOption('biome', b.id); btn.blur(); }; biomesEl.append(btn); }
+  // Palette: None, Fog (re-fogs an area, keeping the terrain under it), then the biomes.
+  const swatches = [BIOMES[0], { id: 'fog', name: 'Fog' }, ...BIOMES.slice(1)];
+  for (const b of swatches) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => { app.tools.setOption('biome', b.id); btn.blur(); }; biomesEl.append(btn); }
 
   const brush = document.getElementById('brush'), brushLabel = document.getElementById('brush-label');
   brush.oninput = () => app.tools.setOption('brush', Number(brush.value));
@@ -141,7 +143,7 @@ export function wireTools(app) {
 
   app.tools.onChange = () => {
     for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.classList.toggle('active', btn.dataset.tool === app.tools.current);
-    for (const btn of biomesEl.children) btn.classList.toggle('active', Number(btn.dataset.biome) === app.tools.options.biome);
+    for (const btn of biomesEl.children) btn.classList.toggle('active', btn.dataset.biome === String(app.tools.options.biome));
     brush.value = app.tools.options.brush; brushLabel.textContent = `${app.tools.options.brush} m`;
     biomesEl.hidden = app.tools.current !== 'paint';
     document.getElementById('tool-hint').textContent = TOOL_HINTS[app.tools.current] ?? '';
