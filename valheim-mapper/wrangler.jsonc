@@ -10,5 +10,7 @@
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["MapRoom"] }],
   // ACCESS_TEAM / ACCESS_AUD are Worker *secrets* and must NOT appear here:
   // a `vars` entry of the same name replaces the remote secret on every deploy.
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+  // wrangler dev only: keep local request URLs on localhost so the DEV_IDENTITY guard in worker/access.js applies.
+  "dev": { "host": "localhost", "port": 8787 }
 }
