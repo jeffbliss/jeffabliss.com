@@ -854,9 +854,9 @@ export async function writeMap(dataFile, text) {
 
 function readBody(req, maxBody) {
   return new Promise((resolve, reject) => {
-    const chunks = []; let n = 0;
-    req.on('data', c => { n += c.length; if (n > maxBody) { reject(Object.assign(new Error('too large'), { status: 413 })); req.destroy(); } else chunks.push(c); });
-    req.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
+    const chunks = []; let n = 0, tooBig = false;
+    req.on('data', c => { n += c.length; if (n > maxBody) { tooBig = true; chunks.length = 0; } else chunks.push(c); });   // keep draining so we can still reply
+    req.on('end', () => tooBig ? reject(Object.assign(new Error('too large'), { status: 413 })) : resolve(Buffer.concat(chunks).toString('utf8')));
     req.on('error', reject);
   });
 }
@@ -895,7 +895,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     .listen(port, () => console.log(`valheim-mapper on http://localhost:${port}`));
 }
 ```
-Note on 413: Node may have already buffered the whole body; `readBody` still rejects once `n > maxBody`. The `/../package.json` test relies on `new URL` normalising `..` away → `/package.json` → not in `web/` → 404.
+Note on 413: the body is drained rather than the socket destroyed, so the client reliably receives the 413 status. The `/../package.json` test relies on `new URL` normalising `..` away → `/package.json` → not in `web/` → 404.
 
 - [ ] **Step 4: Run, expect pass.**
 
