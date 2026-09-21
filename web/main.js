@@ -9,7 +9,7 @@ import { createInk, inkTool } from './ink.js';
 import { createTools, rasterBrushTool, paintTool, isTypingTarget } from './tools.js';
 import { createPins, pinTool, selectTool } from './pins.js';
 import { PIN_TYPES } from './world.js';
-import { createUI, wireTools, wirePinEditor } from './ui.js';
+import { createUI, wireTools, wirePinPopup } from './ui.js';
 
 export const loadImage = url => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(url)); i.src = url; });
 
@@ -43,6 +43,7 @@ function render() {
   const [w, h] = size();
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, w, h);
   app.layers.draw(ctx, app.view, w, h);
+  app.updatePinPopup?.();
 }
 
 function cameraControls() {
@@ -106,7 +107,7 @@ async function boot() {
   catch (e) { setStatus(`could not load save (${e.message}); starting empty — press Save to overwrite, or Import a map`, 'error'); state = await createState(emptyDoc()); app.loadFailed = true; }
 
   app.tools = createTools(app);
-  wirePinEditor(app);                       // sets app.openEditor before pin/select tools are registered by rebuild()
+  wirePinPopup(app);                        // sets app.openEditor before pin/select tools are registered by rebuild()
   app.rebuild(state);
   cameraControls();
   createUI(app);

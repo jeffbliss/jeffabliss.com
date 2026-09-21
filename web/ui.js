@@ -72,28 +72,44 @@ export function renameCommand(pin, before, after) {
   return { label: 'rename', undo: () => { pin.name = before; }, redo: () => { pin.name = after; } };
 }
 
-/** Sets up pin-name editing and keyboard shortcuts on the selected pin. Layer-object-free: reads app.pinsLayer live. */
-export function wirePinEditor(app) {
-  const editor = document.getElementById('pin-editor');
-  app.openEditor = function openEditor(pin) {
+/**
+ * Leaflet-style popup anchored above the selected pin: rename, toggle checked, delete, deselect.
+ * Follows the pin every frame via app.updatePinPopup(), so it tracks pans, zooms and drags.
+ * Reads app.pinsLayer live so it stays valid across app.rebuild.
+ */
+export function wirePinPopup(app) {
+  const popup = document.getElementById('pin-popup'), name = document.getElementById('pin-name');
+  const check = document.getElementById('pin-check'), del = document.getElementById('pin-delete'), close = document.getElementById('pin-close');
+  const selectedPin = () => { const id = app.pinsLayer?.selected; return id ? app.state.pins.find(p => p.id === id) : null; };
+  let shownFor = null, before = '';
+
+  app.updatePinPopup = () => {
+    const pin = selectedPin();
+    if (!pin) { if (!popup.hidden) { popup.hidden = true; shownFor = null; } return; }
     const [sx, sy] = app.view.worldToScreen(pin.x, pin.z, ...app.size());
-    editor.hidden = false; editor.value = pin.name; editor.style.left = `${sx / app.dpr() - 60}px`; editor.style.top = `${sy / app.dpr() + 20}px`; editor.style.width = '120px';
-    editor.focus(); editor.select();
-    const before = pin.name;
-    let closed = false;
-    const done = commit => {
-      if (closed) return; closed = true;
-      editor.onblur = editor.onkeydown = null;
-      editor.hidden = true;
-      if (!commit || editor.value === before) return;
-      const cmd = renameCommand(pin, before, editor.value);
-      if (cmd) { app.history.push(cmd); app.markDirty(); }
-    };
-    editor.onkeydown = e => { if (e.key === 'Enter') done(true); if (e.key === 'Escape') done(false); e.stopPropagation(); };
-    editor.onblur = () => done(true);
+    popup.style.left = `${sx / app.dpr()}px`; popup.style.top = `${sy / app.dpr()}px`;
+    check.textContent = pin.checked ? 'Uncheck' : 'Check'; check.classList.toggle('active', pin.checked);
+    if (shownFor !== pin.id) { shownFor = pin.id; before = pin.name; name.value = pin.name; }
+    popup.hidden = false;
   };
+
+  const commitName = () => { const pin = selectedPin(); if (!pin) return;
+    const cmd = renameCommand(pin, before, name.value); before = name.value;
+    if (cmd) { app.history.push(cmd); app.markDirty(); } };
+  name.onkeydown = e => { e.stopPropagation(); if (e.key === 'Enter') { commitName(); name.blur(); } if (e.key === 'Escape') { name.value = before; name.blur(); } };
+  name.onblur = commitName;
+  check.onclick = () => { const pin = selectedPin(); if (!pin) return;
+    pin.checked = !pin.checked;
+    app.history.push({ label: 'check', undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } }); app.markDirty(); };
+  del.onclick = () => { const pin = selectedPin(); if (!pin) return;
+    const idx = app.state.pins.indexOf(pin); app.pinsLayer.remove(pin.id);
+    app.history.push({ label: 'remove pin', undo: () => app.state.pins.splice(idx, 0, pin), redo: () => app.pinsLayer.remove(pin.id) }); app.markDirty(); };
+  close.onclick = () => { app.pinsLayer.selected = null; app.requestRender(); };
+
+  /** Selects a pin and focuses the name field (used right after placing a pin, on double-click, and on Enter). */
+  app.openEditor = pin => { app.pinsLayer.selected = pin.id; app.updatePinPopup(); name.focus(); name.select(); };
   const pinsProxy = { get selected() { return app.pinsLayer?.selected; }, remove(id) { app.pinsLayer.remove(id); } };
-  pinKeys(app, pinsProxy, pin => app.openEditor(pin));
+  pinKeys(app, pinsProxy, app.openEditor);
 }
 
 /** Re-syncs the grid checkbox/spacing inputs from app.state.settings.grid (initial wiring and after Import). */
@@ -107,8 +123,6 @@ const TOOL_HINTS = {
   pan: 'Drag to pan. Wheel zooms, double-click recentres, 0 fits the world.',
   paint: 'Left drag paints the biome and clears fog. Right or Alt drag erases terrain. The Fog swatch re-fogs an area (right drag reveals). [ ] change brush size.',
   ink: 'Left drag draws and clears fog along the line. Right or Alt drag erases whole strokes.',
-  pin: 'Click to place a pin and name it. Click a pin to select or drag it; Enter renames, X checks, Delete removes.',
-  select: 'Click to select pins, drag to move, double-click to rename. Enter renames, X checks, Delete removes.',
 };
 
 export function wireTools(app) {

@@ -21,7 +21,7 @@ export const BIOMES = [
 ];
 
 export const PIN_TYPES = ['pin', 'fire', 'house', 'hammer', 'portal', 'bed', 'boss', 'trader',
-  'death', 'eventarea', 'upgradestation', 'memorialplace', 'start'];
+  'death', 'eventarea', 'memorialplace', 'start'];   // upgradestation omitted: same art as memorialplace
 
 // Metres covered by one repeat of each texture tile.
 export const TILE_M = { background: 512, space: 2048, forest: 256, mountain: 256, water: 128, fog: 512 };

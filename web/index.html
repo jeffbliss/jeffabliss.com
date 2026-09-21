@@ -39,7 +39,14 @@
   </section>
   <section><h3>Layers</h3><div id="layers"></div></section>
 </aside>
-<input id="pin-editor" type="text" hidden maxlength="40">
+<div id="pin-popup" hidden>
+  <input id="pin-name" type="text" maxlength="40" placeholder="Pin name" autocomplete="off">
+  <div class="row">
+    <button id="pin-check" title="Toggle checked (X)">Check</button>
+    <button id="pin-delete" title="Delete pin (Delete)">Delete</button>
+    <button id="pin-close" title="Deselect">&times;</button>
+  </div>
+</div>
 <script type="module" src="main.js"></script>
 </body>
 </html>

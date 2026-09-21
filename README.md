@@ -12,7 +12,7 @@ Hand-draw a Valheim world map outside the game, in the in-game style, for no-map
 - Tools: `H` pan, `B` paint, `I` ink, `P` pin, `V` select · `[` `]` brush size
 - Paint: left drag paints the chosen biome, right or Alt drag erases. Painting and inking clear the fog where you draw. The **Fog** swatch in the palette re-fogs an area (right drag with it reveals).
 - Ink: right or Alt drag across a line erases that stroke.
-- Pins: click to place; selected pin → Enter rename, `X` toggle checked, Delete remove; drag to move
+- Pins: click to place. A selected pin shows a popup to rename, check or delete it, and can be dragged; `X` and Delete also work as shortcuts
 - Undo/redo: Cmd/Ctrl+Z, Shift+Cmd/Ctrl+Z
 
 Map autosaves to `data/map.json` (with `.bak`). Export/Import produce a portable JSON file. **New map** resets everything to an empty map with only the start pin (export first if you want to keep the current one).
