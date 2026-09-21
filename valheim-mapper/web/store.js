@@ -1,13 +1,13 @@
 import { encodeGray, decodeGray, toBase64, fromBase64 } from './png.js';
 import { createRaster } from './raster.js';
-import { CELLS, ZONE_M } from './world.js';
+import { CELLS } from './world.js';
 
 export const SAVE_VERSION = 1;
 
 export function emptyDoc() {
   return {
     version: SAVE_VERSION, terrain: null, fog: null, ink: [], pins: [],
-    settings: { grid: { visible: true, spacing: ZONE_M }, layers: {}, camera: { x: 0, z: 0, scale: 0.04 } },
+    settings: { layers: {}, camera: { x: 0, z: 0, scale: 0.04 } },
   };
 }
 
@@ -35,7 +35,7 @@ export async function createState(doc = emptyDoc()) {
     fog: await rasterFrom(doc.fog),
     ink: structuredClone(doc.ink ?? []),
     pins: ensureStartPin(structuredClone(doc.pins ?? [])),
-    settings: { ...base.settings, ...doc.settings, grid: { ...base.settings.grid, ...doc.settings?.grid } },
+    settings: { ...base.settings, ...doc.settings },
   };
 }
 

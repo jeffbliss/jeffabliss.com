@@ -9,7 +9,7 @@ import { createInk, inkTool } from './ink.js';
 import { createTools, rasterBrushTool, paintTool, isTypingTarget } from './tools.js';
 import { createPins, pinTool, selectTool } from './pins.js';
 import { PIN_TYPES } from './world.js';
-import { createUI, wireTools, wirePinPopup, syncGridInputs } from './ui.js';
+import { createUI, wireTools, wirePinPopup } from './ui.js';
 import { createSync } from './sync.js';
 import { createPresence } from './presence.js';
 
@@ -42,22 +42,20 @@ export function requestRender() {
 const app = { canvas, ctx, view: createView(), layers: createLayers(), history: createHistory(), requestRender, size, setStatus, dpr };
 app.presence = createPresence(() => app.you);
 
-// Per-browser preferences (grid, layer visibility/opacity, camera). The map itself lives on the server.
+// Per-browser preferences (layer visibility/opacity, camera). The map itself lives on the server.
 const SETTINGS_KEY = 'valheim-mapper:settings';
 export function loadSettings() {
   try { return JSON.parse(localStorage.getItem(SETTINGS_KEY)) || null; } catch { return null; }
 }
 export function saveSettings(settings) {
-  try { localStorage.setItem(SETTINGS_KEY, JSON.stringify({ grid: settings.grid, layers: settings.layers, camera: settings.camera })); } catch { /* private mode / full quota: preferences are disposable */ }
+  try { localStorage.setItem(SETTINGS_KEY, JSON.stringify({ layers: settings.layers, camera: settings.camera })); } catch { /* private mode / full quota: preferences are disposable */ }
 }
 
 /** Lays the saved preferences over the snapshot's defaults; fits the world when there is no saved camera. */
 function applyLocalSettings() {
   const saved = loadSettings();
-  if (saved?.grid) Object.assign(app.state.settings.grid, saved.grid);
   if (saved?.layers) { app.state.settings.layers = saved.layers; app.layers.applySettings(saved.layers); }
   if (saved?.camera) Object.assign(app.view, saved.camera); else app.view.fitWorld(...size());
-  syncGridInputs(app);
   requestRender();
 }
 
@@ -103,7 +101,7 @@ app.rebuild = function rebuild(state) {
   for (const l of app.layers.list) l.dispose?.();                 // free GPU textures of the previous map
   app.layers.list.length = 0;
   app.layers.add(createTerrainLayer(state.terrain, app.textures));   // parchment, space and painted biomes (WebGL)
-  app.layers.add(createGrid(state.settings));
+  app.layers.add(createGrid());
   app.layers.add(app.tools.cursorLayer);                         // stays last
   const fog = app.layers.insertBefore('cursor', createFogLayer(state.fog, app.textures));
   const ink = app.layers.insertBefore('fog', createInk(state.ink));

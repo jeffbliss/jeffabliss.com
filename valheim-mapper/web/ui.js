@@ -16,7 +16,7 @@ export function createUI(app, sync) {
   function refreshLayers() {
     layersEl.replaceChildren();
     for (const l of app.layers.list) {
-      if (l.id === 'cursor') continue;
+      if (l.id === 'cursor' || l.id === 'grid') continue;   // the grid is always on
       const row = document.createElement('div'); row.className = 'layer';
       const eye = Object.assign(document.createElement('input'), { type: 'checkbox', checked: l.visible, title: 'visible' });
       eye.onchange = () => { l.visible = eye.checked; app.markDirty(); };
@@ -103,18 +103,12 @@ export function wirePinPopup(app) {
   pinKeys(app, pinsProxy, app.openEditor);
 }
 
-/** Re-syncs the grid checkbox/spacing inputs from app.state.settings.grid (initial wiring and after Import). */
-export function syncGridInputs(app) {
-  const gridVisible = document.getElementById('grid-visible'), gridSpacing = document.getElementById('grid-spacing');
-  gridVisible.checked = app.state.settings.grid.visible; gridSpacing.value = app.state.settings.grid.spacing;
-}
-
-/** Wires the toolbar, biome/pin-type palettes, grid controls and tool option UI. Reads layer objects via app.* so it stays valid across app.rebuild. */
+/** Wires the toolbar, biome/pin-type palettes and tool option UI. Reads layer objects via app.* so it stays valid across app.rebuild. */
 export function wireTools(app) {
-  const gridVisible = document.getElementById('grid-visible'), gridSpacing = document.getElementById('grid-spacing');
-  syncGridInputs(app);
-  gridVisible.onchange = () => { app.state.settings.grid.visible = gridVisible.checked; app.markDirty(); };
-  gridSpacing.onchange = () => { app.state.settings.grid.spacing = Math.max(8, Number(gridSpacing.value) || 64); app.markDirty(); };
+  // The Layers legend collapses with its caret; the open/closed state is a per-browser preference.
+  const legend = document.getElementById('legend'), LEGEND_KEY = 'valheim-mapper:legend';
+  try { if (localStorage.getItem(LEGEND_KEY) === 'closed') legend.open = false; } catch { /* preference only */ }
+  legend.ontoggle = () => { try { localStorage.setItem(LEGEND_KEY, legend.open ? 'open' : 'closed'); } catch { /* preference only */ } };
 
   const typesEl = document.getElementById('pin-types');
   // The start pin is fixed at spawn and never placed by hand, so it is not offered in the palette.

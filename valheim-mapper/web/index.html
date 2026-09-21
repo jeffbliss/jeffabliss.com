@@ -42,12 +42,7 @@
     <label>Colour <input id="ink-color" type="color" value="#2b1d0e"></label>
     <label>Width <input id="ink-width" type="range" min="2" max="64" value="8"></label>
   </section>
-  <section>
-    <h3>Grid</h3>
-    <label><input id="grid-visible" type="checkbox" checked> Visible</label>
-    <label>Spacing <input id="grid-spacing" type="number" min="8" step="8" value="64"> m</label>
-  </section>
-  <section><h3>Layers</h3><div id="layers"></div></section>
+  <details id="legend" open><summary><h3>Layers</h3></summary><div id="layers"></div></details>
 </aside>
 <div id="pin-popup" hidden>
   <button id="pin-close" title="Deselect">&times;</button>

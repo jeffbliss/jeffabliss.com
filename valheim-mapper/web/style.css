@@ -19,7 +19,12 @@ button.active { background: #8a6a3a; }
 .palette { display: flex; flex-wrap: wrap; gap: 6px; }
 .palette button { padding: 4px 8px; font-size: 12px; }
 .palette img { width: 22px; height: 22px; vertical-align: middle; }
-#layers { display: grid; gap: 6px; }
+#legend summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; user-select: none; }
+#legend summary::-webkit-details-marker { display: none; }
+#legend summary::before { content: ''; width: 8px; height: 8px; border: solid #e8dcc4; border-width: 0 2px 2px 0; transform: rotate(45deg); margin: 0 4px 3px 2px; transition: transform .15s; }
+#legend:not([open]) summary::before { transform: rotate(-45deg); margin-bottom: 0; }
+#legend summary h3 { margin: 6px 0; }
+#layers { display: grid; gap: 6px; margin-top: 4px; }
 #layers .layer { display: grid; grid-template-columns: 20px 1fr 120px; gap: 10px; align-items: center; min-height: 28px; }
 #layers .layer input[type=range] { width: 100%; min-width: 0; margin: 0; }
 .hint { margin: 2px 0 0; font-size: 12px; opacity: .75; line-height: 1.35; }

@@ -1,4 +1,4 @@
-import { WORLD_HALF } from './world.js';
+import { WORLD_HALF, ZONE_M } from './world.js';
 
 export function chooseSpacing(baseM, scale, minPx = 6) {
   if (baseM * scale >= minPx) return baseM;
@@ -6,12 +6,13 @@ export function chooseSpacing(baseM, scale, minPx = 6) {
   return Math.max(baseM, coarse);
 }
 
-export function createGrid(settings) {
+export function createGrid() {
   const layer = {
     id: 'grid', name: 'Grid',
-    get visible() { return settings.grid.visible; }, set visible(v) { settings.grid.visible = v; },
+    // The grid is part of the base map: always drawn, never listed in the legend or saved preferences.
+    get visible() { return true; }, set visible(_) {}, get opacity() { return 1; }, set opacity(_) {},
     draw(ctx, view, w, h) {
-      const s = chooseSpacing(settings.grid.spacing, view.scale);
+      const s = chooseSpacing(ZONE_M, view.scale);
       const b = view.visibleBounds(w, h);
       const x0 = Math.max(-WORLD_HALF, Math.floor(b.x0 / s) * s), x1 = Math.min(WORLD_HALF, b.x1);
       const z0 = Math.max(-WORLD_HALF, Math.floor(b.z0 / s) * s), z1 = Math.min(WORLD_HALF, b.z1);
