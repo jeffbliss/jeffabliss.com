@@ -145,10 +145,10 @@ export function wireTools(app) {
     for (const btn of biomesEl.children) btn.classList.toggle('active', btn.dataset.biome === String(app.tools.options.biome));
     for (const b of brush.children) b.classList.toggle('active', Number(b.dataset.brush) === app.tools.options.brush);
     brushLabel.textContent = `${app.tools.options.brush} m radius`;
-    biomesEl.hidden = app.tools.current !== 'paint';
+    document.getElementById('paint-opts').hidden = app.tools.current !== 'paint';
     app.canvas.style.cursor = app.tools.current === 'pan' ? 'grab' : 'crosshair';
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
-    typesEl.hidden = app.tools.current !== 'pin';
+    document.getElementById('pin-opts').hidden = app.tools.current !== 'pin';
     for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);
   };
   app.tools.onChange(); app.tools.set('pan');   // start in Pan: no accidental edits on load

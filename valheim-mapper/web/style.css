@@ -12,6 +12,8 @@ button, .btn { background: #3a2f22; color: #e8dcc4; border: 1px solid #6b563c; b
 button.active { background: #8a6a3a; }
 #sidebar { position: fixed; top: 8px; right: 8px; width: 320px; max-height: calc(100vh - 16px); overflow-y: auto; box-sizing: border-box; background: #1b1610cc; padding: 14px; border-radius: 6px; display: grid; gap: 14px; }
 #sidebar h3 { margin: 6px 0; font-family: 'Norse', serif; font-size: 18px; }
+#sidebar h3 .sub { font: 13px 'Averia Serif', serif; opacity: .8; margin-left: 8px; }
+.tool-group { display: grid; gap: 8px; }
 #sidebar label { display: flex; gap: 8px; align-items: center; min-height: 26px; }
 .row-label { display: flex; gap: 8px; align-items: center; min-height: 26px; }
 .palette { display: flex; flex-wrap: wrap; gap: 6px; }

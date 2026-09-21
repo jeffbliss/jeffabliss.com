@@ -27,12 +27,20 @@
 </div>
 <aside id="sidebar">
   <div id="presence" class="palette"></div>
-  <section id="tool-options">
-    <div class="row-label">Brush <span id="brush-label">32 m</span></div>
+  <section id="paint-opts" class="tool-group">
+    <h3>Brush <span id="brush-label" class="sub">32 m radius</span></h3>
     <div id="brush" class="palette"></div>
+    <h3>Biome</h3>
     <div id="biomes" class="palette"></div>
+  </section>
+  <section id="pin-opts" class="tool-group">
+    <h3>Pin type</h3>
     <div id="pin-types" class="palette"></div>
-    <label id="ink-opts">Ink <input id="ink-color" type="color" value="#2b1d0e"> <input id="ink-width" type="range" min="2" max="64" value="8"></label>
+  </section>
+  <section id="ink-opts" class="tool-group">
+    <h3>Ink</h3>
+    <label>Colour <input id="ink-color" type="color" value="#2b1d0e"></label>
+    <label>Width <input id="ink-width" type="range" min="2" max="64" value="8"></label>
   </section>
   <section>
     <h3>Grid</h3>
