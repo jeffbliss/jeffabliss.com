@@ -1,6 +1,6 @@
 import { createView } from './view.js';
 import { createLayers } from './layers.js';
-import { createHistory, createStrokeRecorder } from './history.js';
+import { createHistory } from './history.js';
 import { createStoreClient, createState, serialize, emptyDoc } from './store.js';
 import { createBase } from './base.js';
 import { createGrid } from './grid.js';
@@ -8,8 +8,9 @@ import { createTerrain } from './terrain.js';
 import { createFog, revealFn, refogFn } from './fog.js';
 import { createInk, inkTool } from './ink.js';
 import { createTools, rasterBrushTool, isTypingTarget } from './tools.js';
-import { createPins, pinTool, selectTool, pinKeys } from './pins.js';
-import { PIN_TYPES, BIOMES, EXPLORE_RADIUS } from './world.js';
+import { createPins, pinTool, selectTool } from './pins.js';
+import { PIN_TYPES } from './world.js';
+import { createUI, wireTools, wirePinEditor } from './ui.js';
 
 export const loadImage = url => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(url)); i.src = url; });
 
@@ -60,78 +61,50 @@ function cameraControls() {
   document.getElementById('fit').onclick = () => { view.fitWorld(...size()); requestRender(); };
 }
 
+app.markDirty = () => { app.state.settings.camera = app.view.toJSON(); app.state.settings.layers = app.layers.settings(); app.store.schedule(() => serialize(app.state)); requestRender(); };
+
+/** Rebuilds the layer stack and tools for `state`, replacing whatever was loaded before (used on boot and on Import). */
+app.rebuild = function rebuild(state) {
+  app.state = state;
+  app.layers.list.length = 0;
+  app.layers.add(createBase(app.textures));
+  app.layers.add(createTerrain(state.terrain, app.textures));
+  app.layers.add(createGrid(state.settings));
+  app.layers.add(app.tools.cursorLayer);                         // stays last
+  const fog = app.layers.insertBefore('cursor', createFog(state.fog, app.textures));
+  const ink = app.layers.insertBefore('fog', createInk(state.ink));
+  const pins = app.layers.insertBefore('cursor', createPins(state, app.icons));
+  app.layers.applySettings(state.settings.layers);
+  Object.assign(app.view, state.settings.camera);
+  Object.assign(app, { fogLayer: fog, inkLayer: ink, pinsLayer: pins });
+
+  app.tools.register('paint', rasterBrushTool(app, state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0));
+  app.tools.register('fog', rasterBrushTool(app, state.fog, 'fog', () => revealFn, () => refogFn));
+  app.tools.register('ink', inkTool(app, ink));
+  app.tools.register('pin', pinTool(app, pins, app.openEditor));
+  app.tools.register('select', selectTool(app, pins, app.openEditor));
+  app.requestRender();
+};
+
 async function boot() {
   setStatus('loading…');
   const { textures, icons } = await loadAssets();
   Object.assign(app, { textures, icons });
   app.store = createStoreClient({ onStatus: s => setStatus({ dirty: 'unsaved', saving: 'saving…', saved: 'saved', error: 'save failed, retrying' }[s], s === 'error' ? 'error' : '') });
-  app.markDirty = () => { app.state.settings.camera = app.view.toJSON(); app.state.settings.layers = app.layers.settings(); app.store.schedule(() => serialize(app.state)); requestRender(); };
-  let doc = await app.store.load();
-  try { app.state = await createState(doc); } catch (e) { setStatus(`could not load save (${e.message}); starting empty`, 'error'); app.state = await createState(emptyDoc()); app.loadFailed = true; }
-  Object.assign(app.view, app.state.settings.camera);
-  app.layers.add(createBase(textures));
-  const terrain = app.layers.add(createTerrain(app.state.terrain, textures));
-  app.layers.add(createGrid(app.state.settings));
-  const gridVisible = document.getElementById('grid-visible'), gridSpacing = document.getElementById('grid-spacing');
-  gridVisible.checked = app.state.settings.grid.visible; gridSpacing.value = app.state.settings.grid.spacing;
-  gridVisible.onchange = () => { app.state.settings.grid.visible = gridVisible.checked; app.markDirty(); };
-  gridSpacing.onchange = () => { app.state.settings.grid.spacing = Math.max(8, Number(gridSpacing.value) || 64); app.markDirty(); };
-  app.layers.applySettings(app.state.settings.layers);
-  cameraControls();
+  const doc = await app.store.load();
+  let state;
+  try { state = await createState(doc); }
+  catch (e) { setStatus(`could not load save (${e.message}); starting empty — refusing to autosave until you make a change`, 'error'); state = await createState(emptyDoc()); app.loadFailed = true; }
+
   app.tools = createTools(app);
-  app.tools.register('paint', rasterBrushTool(app, app.state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0));
-  app.layers.add(app.tools.cursorLayer);     // stays last; later tasks insert their layers before it with insertBefore
-  const fog = app.layers.insertBefore('cursor', createFog(app.state.fog, textures));
-  app.tools.register('fog', rasterBrushTool(app, app.state.fog, 'fog', () => revealFn, () => refogFn));
-  const ink = app.layers.insertBefore('fog', createInk(app.state.ink));
-  app.tools.register('ink', inkTool(app, ink));
-  const pins = app.layers.insertBefore('cursor', createPins(app.state, icons));
-  const editor = document.getElementById('pin-editor');
-  function openEditor(pin) {
-    const [sx, sy] = app.view.worldToScreen(pin.x, pin.z, ...size());
-    editor.hidden = false; editor.value = pin.name; editor.style.left = `${sx / dpr() - 60}px`; editor.style.top = `${sy / dpr() + 20}px`; editor.style.width = '120px';
-    editor.focus(); editor.select();
-    const before = pin.name;
-    const done = commit => { editor.hidden = true; editor.onblur = editor.onkeydown = null; if (!commit || editor.value === before) return;
-      const after = editor.value; pin.name = after;
-      app.history.push({ label: 'rename', undo: () => { pin.name = before; }, redo: () => { pin.name = after; } }); app.markDirty(); };
-    editor.onkeydown = e => { if (e.key === 'Enter') done(true); if (e.key === 'Escape') done(false); e.stopPropagation(); };
-    editor.onblur = () => done(true);
-  }
-  app.tools.register('pin', pinTool(app, pins, openEditor));
-  app.tools.register('select', selectTool(app, pins, openEditor));
-  pinKeys(app, pins, openEditor);
-  const typesEl = document.getElementById('pin-types');
-  for (const t of PIN_TYPES) { const b = document.createElement('button'); b.title = t; b.dataset.type = t; const img = document.createElement('img'); img.src = `assets/map/mapicon_${t}.png`; b.append(img); b.onclick = () => app.tools.setOption('pinType', t); typesEl.append(b); }
-  canvas.addEventListener('pointermove', e => { const hit = pins.hitTest(e.offsetX * dpr(), e.offsetY * dpr(), app.view, ...size()); canvas.title = hit && hit !== 'player' ? `${hit.name || hit.type} (${Math.round(hit.x)}, ${Math.round(hit.z)})` : hit === 'player' ? `player (${Math.round(app.state.player.x)}, ${Math.round(app.state.player.z)})` : ''; });
-  const inkColor = document.getElementById('ink-color'), inkWidth = document.getElementById('ink-width');
-  inkColor.oninput = () => app.tools.setOption('inkColor', inkColor.value);
-  inkWidth.oninput = () => app.tools.setOption('inkWidth', Number(inkWidth.value));
-  document.getElementById('reveal-player').onclick = () => {
-    const rec = createStrokeRecorder(app.state.fog); rec.begin();
-    fog.reveal(app.state.player.x, app.state.player.z, EXPLORE_RADIUS);
-    const cmd = rec.end('reveal'); if (cmd) { app.history.push(cmd); app.markDirty(); }
-  };
-  const biomesEl = document.getElementById('biomes');
-  for (const b of BIOMES) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => { app.tools.setOption('biome', b.id); btn.blur(); }; biomesEl.append(btn); }
-  const brush = document.getElementById('brush'), brushLabel = document.getElementById('brush-label');
-  brush.oninput = () => app.tools.setOption('brush', Number(brush.value));
-  for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.onclick = () => { app.tools.set(btn.dataset.tool); btn.blur(); };
-  document.getElementById('undo').onclick = () => { app.history.undo(); app.markDirty(); };
-  document.getElementById('redo').onclick = () => { app.history.redo(); app.markDirty(); };
-  app.tools.onChange = () => {
-    for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.classList.toggle('active', btn.dataset.tool === app.tools.current);
-    for (const btn of biomesEl.children) btn.classList.toggle('active', Number(btn.dataset.biome) === app.tools.options.biome);
-    brush.value = app.tools.options.brush; brushLabel.textContent = `${app.tools.options.brush} m`;
-    document.getElementById('biomes').hidden = app.tools.current !== 'paint';
-    document.getElementById('reveal-player').hidden = app.tools.current !== 'fog';
-    document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
-    typesEl.hidden = app.tools.current !== 'pin';
-    for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);
-  };
-  app.tools.onChange(); app.tools.set('paint');
+  wirePinEditor(app);                       // sets app.openEditor before pin/select tools are registered by rebuild()
+  app.rebuild(state);
+  cameraControls();
+  createUI(app);
+  wireTools(app);
+
   addEventListener('resize', resize); resize();
-  if (!doc.terrain && !doc.pins?.length) app.view.fitWorld(...size());
+  if (app.loadFailed || (!doc.terrain && !doc.pins?.length)) app.view.fitWorld(...size());
   if (!app.loadFailed) setStatus('ready');
   requestRender();
 }
