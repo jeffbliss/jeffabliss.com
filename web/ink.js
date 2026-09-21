@@ -1,0 +1,83 @@
+export function distToSegment(px, pz, ax, az, bx, bz) {
+  const dx = bx - ax, dz = bz - az, len2 = dx * dx + dz * dz;
+  const t = len2 ? Math.max(0, Math.min(1, ((px - ax) * dx + (pz - az) * dz) / len2)) : 0;
+  return Math.hypot(px - (ax + t * dx), pz - (az + t * dz));
+}
+
+export function hitStroke(strokes, x, z, tol) {
+  let best = -1, bestD = Infinity;
+  strokes.forEach((s, i) => {
+    const limit = s.width / 2 + tol;
+    for (let k = 0; k < s.points.length - 1 || (k === 0 && s.points.length === 1); k++) {
+      const a = s.points[k], b = s.points[k + 1] ?? a;
+      const d = distToSegment(x, z, a[0], a[1], b[0], b[1]);
+      if (d <= limit && d < bestD) { bestD = d; best = i; }
+    }
+  });
+  return best;
+}
+
+export function simplify(points, eps) {
+  if (points.length < 3) return points.slice();
+  const out = [points[0]];
+  for (let i = 1; i < points.length - 1; i++) { const l = out[out.length - 1]; if (Math.hypot(points[i][0] - l[0], points[i][1] - l[1]) >= eps) out.push(points[i]); }
+  out.push(points[points.length - 1]);
+  return out;
+}
+
+export function createInk(strokes) {
+  let cur = null;
+  const drawStroke = (ctx, s) => {
+    ctx.beginPath(); ctx.lineWidth = s.width; ctx.strokeStyle = s.color; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    s.points.forEach(([x, z], i) => i ? ctx.lineTo(x, z) : ctx.moveTo(x, z));
+    if (s.points.length === 1) ctx.lineTo(s.points[0][0] + 0.01, s.points[0][1]);
+    ctx.stroke();
+  };
+  return {
+    id: 'ink', name: 'Ink', strokes,
+    begin(color, width) { cur = { color, width, points: [] }; },
+    add(x, z) { cur?.points.push([x, z]); },
+    end() { const s = cur; cur = null; if (!s) return null; s.points = simplify(s.points, s.width / 4); return s.points.length >= 1 ? s : null; },
+    draw(ctx, view, w, h) {
+      view.applyTo(ctx, w, h);
+      for (const s of strokes) drawStroke(ctx, s);
+      if (cur?.points.length) drawStroke(ctx, cur);
+    },
+  };
+}
+
+/** Ink tool: left drag draws, right/alt drag erases strokes. */
+export function inkTool(app, ink) {
+  let erasing = false, erased = null;
+  const tolPx = 6;
+  return {
+    down(e, wx, wz) {
+      erasing = e.button === 2 || e.altKey;
+      if (erasing) { erased = []; this.move(e, wx, wz); }
+      else ink.begin(app.tools.options.inkColor, app.tools.options.inkWidth);
+    },
+    move(e, wx, wz) {
+      if (!erasing) { ink.add(wx, wz); return; }
+      const i = hitStroke(ink.strokes, wx, wz, tolPx / app.view.scale);
+      if (i >= 0) erased.push({ index: i, stroke: ink.strokes.splice(i, 1)[0] });
+    },
+    up() {
+      if (erasing) {
+        const removed = erased; erased = null; erasing = false;
+        if (!removed.length) return;
+        app.history.push({ label: 'erase ink',
+          undo: () => { for (const r of [...removed].reverse()) ink.strokes.splice(r.index, 0, r.stroke); },
+          redo: () => { for (const r of removed) ink.strokes.splice(r.index, 1); } });
+        app.markDirty(); return;
+      }
+      const s = ink.end(); if (!s) return;
+      ink.strokes.push(s);
+      app.history.push({ label: 'ink', undo: () => { const i = ink.strokes.indexOf(s); if (i >= 0) ink.strokes.splice(i, 1); }, redo: () => ink.strokes.push(s) });
+      app.markDirty();
+    },
+    cursor(ctx, view, w, h, tools) {
+      if (!tools.pointer) return; const [sx, sy] = tools.pointer;
+      ctx.beginPath(); ctx.arc(sx, sy, Math.max(2, tools.options.inkWidth * view.scale / 2), 0, Math.PI * 2); ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.stroke();
+    },
+  };
+}

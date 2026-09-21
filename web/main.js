@@ -6,6 +6,7 @@ import { createBase } from './base.js';
 import { createGrid } from './grid.js';
 import { createTerrain } from './terrain.js';
 import { createFog, revealFn, refogFn } from './fog.js';
+import { createInk, inkTool } from './ink.js';
 import { createTools, rasterBrushTool, isTypingTarget } from './tools.js';
 import { PIN_TYPES, BIOMES, EXPLORE_RADIUS } from './world.js';
 
@@ -81,6 +82,11 @@ async function boot() {
   app.layers.add(app.tools.cursorLayer);     // stays last; later tasks insert their layers before it with insertBefore
   const fog = app.layers.insertBefore('cursor', createFog(app.state.fog, textures));
   app.tools.register('fog', rasterBrushTool(app, app.state.fog, 'fog', () => revealFn, () => refogFn));
+  const ink = app.layers.insertBefore('fog', createInk(app.state.ink));
+  app.tools.register('ink', inkTool(app, ink));
+  const inkColor = document.getElementById('ink-color'), inkWidth = document.getElementById('ink-width');
+  inkColor.oninput = () => app.tools.setOption('inkColor', inkColor.value);
+  inkWidth.oninput = () => app.tools.setOption('inkWidth', Number(inkWidth.value));
   document.getElementById('reveal-player').onclick = () => {
     const rec = createStrokeRecorder(app.state.fog); rec.begin();
     fog.reveal(app.state.player.x, app.state.player.z, EXPLORE_RADIUS);
@@ -99,6 +105,7 @@ async function boot() {
     brush.value = app.tools.options.brush; brushLabel.textContent = `${app.tools.options.brush} m`;
     document.getElementById('biomes').hidden = app.tools.current !== 'paint';
     document.getElementById('reveal-player').hidden = app.tools.current !== 'fog';
+    document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
   };
   app.tools.onChange(); app.tools.set('paint');
   addEventListener('resize', resize); resize();
