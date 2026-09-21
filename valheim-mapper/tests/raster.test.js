@@ -58,3 +58,9 @@ test('touched accumulates independently of the render dirty rect', () => {
   assert.equal(r.takeTouched(), null);
   assert.deepEqual(r.takeDirty(), { x0: 9, z0: 9, x1: 9, z1: 9 });
 });
+
+test('restore with touch:false does not enter the touched accumulator', () => {
+  const r = createRaster({ cells: 4, cellM: 1 }); r.takeTouched();
+  r.restore({ x0: 0, z0: 0, x1: 0, z1: 0 }, new Uint8Array([5]), { touch: false });
+  assert.equal(r.takeTouched(), null); assert.deepEqual(r.takeDirty(), { x0: 0, z0: 0, x1: 0, z1: 0 }); assert.equal(r.data[0], 5);
+});

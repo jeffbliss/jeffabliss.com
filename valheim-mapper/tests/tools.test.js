@@ -32,9 +32,11 @@ test('painting also reveals fog under the brush, as one undoable command', () =>
   const terrain = createRaster({ cells: 20, cellM: 1 }), fog = createRaster({ cells: 20, cellM: 1 });
   let dirty = 0;
   const app = { history: createHistory(), tools: { options: { brush: 2 } }, markDirty: () => dirty++ };
-  const tool = rasterBrushTool(app, terrain, 'paint', () => () => 3, () => () => 0, { raster: fog, fn: revealFn });
+  const tool = rasterBrushTool(app, terrain, 'terrain', () => () => 3, () => () => 0, { raster: fog, fn: revealFn, layerName: 'fog' });
   const ev = { button: 0, altKey: false };
+  let last = null; app.history.onApply = ops => (last = ops);
   tool.down(ev, 0.5, 0.5); tool.move(ev, 3.5, 0.5); tool.up(ev);
+  assert.deepEqual(last.map(o => o.layer), ['terrain', 'fog']); assert.equal(last[0].type, 'raster');
   assert.equal(terrain.get(0.5, 0.5), 3); assert.equal(fog.get(0.5, 0.5), 255);
   assert.equal(fog.get(3.5, 0.5), 255); assert.equal(fog.get(-8.5, -8.5), 0);
   assert.equal(dirty, 1); assert.ok(app.history.canUndo());
@@ -53,7 +55,7 @@ import { refogFn } from '../web/fog.js';
 test('paint tool: the Fog swatch re-fogs without touching terrain; right drag with it reveals', () => {
   const terrain = createRaster({ cells: 20, cellM: 1 }), fog = createRaster({ cells: 20, cellM: 1 });
   const app = { history: createHistory(), tools: { options: { brush: 2, biome: 1 } }, markDirty: () => {} };
-  const terrainBrush = rasterBrushTool(app, terrain, 'paint', () => () => app.tools.options.biome, () => () => 0, { raster: fog, fn: revealFn });
+  const terrainBrush = rasterBrushTool(app, terrain, 'terrain', () => () => app.tools.options.biome, () => () => 0, { raster: fog, fn: revealFn, layerName: 'fog' });
   const fogBrush = rasterBrushTool(app, fog, 'fog', () => refogFn, () => revealFn);
   const tool = paintTool(app, terrainBrush, fogBrush);
   const left = { button: 0, altKey: false }, right = { button: 2, altKey: false };

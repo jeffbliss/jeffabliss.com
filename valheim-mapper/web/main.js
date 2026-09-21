@@ -86,8 +86,8 @@ app.rebuild = function rebuild(state) {
   Object.assign(app.view, state.settings.camera);
   Object.assign(app, { fogLayer: fog, inkLayer: ink, pinsLayer: pins });
 
-  const revealFog = { raster: state.fog, fn: revealFn };          // drawing explores: paint and ink clear fog where they land
-  const terrainBrush = rasterBrushTool(app, state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0, revealFog);
+  const revealFog = { raster: state.fog, fn: revealFn, layerName: 'fog' };   // drawing explores: paint and ink clear fog where they land
+  const terrainBrush = rasterBrushTool(app, state.terrain, 'terrain', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0, revealFog);
   const fogBrush = rasterBrushTool(app, state.fog, 'fog', () => refogFn, () => revealFn);   // the palette's Fog swatch
   app.tools.register('paint', paintTool(app, terrainBrush, fogBrush));
   app.tools.register('ink', inkTool(app, ink, revealFog));

@@ -27,9 +27,9 @@ export function createRaster({ cells = CELLS, cellM = CELL_M, fill = 0, data } =
   };
 
   const union = (a, b) => a ? { x0: Math.min(a.x0, b.x0), z0: Math.min(a.z0, b.z0), x1: Math.max(a.x1, b.x1), z1: Math.max(a.z1, b.z1) } : { ...b };
-  r.markDirty = rect => {
+  r.markDirty = (rect, touch = true) => {
     r.dirty = union(r.dirty, rect);
-    r.touched = union(r.touched, rect);
+    if (touch) r.touched = union(r.touched, rect);
     r.version++;
   };
   r.takeDirty = () => { const d = r.dirty; r.dirty = null; return d; };
@@ -40,10 +40,10 @@ export function createRaster({ cells = CELLS, cellM = CELL_M, fill = 0, data } =
     for (let z = 0; z < h; z++) { const o = (rect.z0 + z) * cells + rect.x0; out.set(r.data.subarray(o, o + w), z * w); }
     return out;
   };
-  r.restore = (rect, snap) => {
+  r.restore = (rect, snap, { touch = true } = {}) => {
     const w = rect.x1 - rect.x0 + 1, h = rect.z1 - rect.z0 + 1;
     for (let z = 0; z < h; z++) r.data.set(snap.subarray(z * w, (z + 1) * w), (rect.z0 + z) * cells + rect.x0);
-    r.markDirty(rect);
+    r.markDirty(rect, touch);
   };
   return r;
 }

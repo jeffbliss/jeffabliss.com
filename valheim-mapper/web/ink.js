@@ -27,6 +27,7 @@ export function simplify(points, eps) {
 
 export function createInk(strokes) {
   let cur = null;
+  for (const s of strokes) s.id ??= crypto.randomUUID();
   const drawStroke = (ctx, s) => {
     ctx.beginPath(); ctx.lineWidth = s.width; ctx.strokeStyle = s.color; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
     s.points.forEach(([x, z], i) => i ? ctx.lineTo(x, z) : ctx.moveTo(x, z));
@@ -35,7 +36,7 @@ export function createInk(strokes) {
   };
   return {
     id: 'ink', name: 'Ink', strokes,
-    begin(color, width) { cur = { color, width, points: [] }; },
+    begin(color, width) { cur = { id: crypto.randomUUID(), color, width, points: [] }; },
     add(x, z) { cur?.points.push([x, z]); },
     end() { const s = cur; cur = null; if (!s) return null; s.points = simplify(s.points, s.width / 4); return s.points.length >= 1 ? s : null; },
     draw(ctx, view, w, h) {
@@ -53,7 +54,7 @@ export const INK_REVEAL_MIN_M = 24;   // fog cleared along an ink stroke: at lea
 
 /** Ink tool: left drag draws, right/alt drag erases strokes. `reveal` = { raster, fn } clears fog along new strokes. */
 export function inkTool(app, ink, reveal = null) {
-  const revealRec = reveal && createStrokeRecorder(reveal.raster);
+  const revealRec = reveal && createStrokeRecorder(reveal.raster, reveal.layerName ?? 'fog');
   let erasing = false, erased = null;
   const tolPx = 6;
   return {
@@ -72,13 +73,16 @@ export function inkTool(app, ink, reveal = null) {
         const removed = erased; erased = null; erasing = false;
         if (!removed.length) return;
         app.history.push({ label: 'erase ink',
+          ops: removed.map(r => ({ type: 'ink.remove', id: r.stroke.id })),
+          inverseOps: removed.map(r => ({ type: 'ink.add', stroke: r.stroke })),
           undo: () => { for (const r of [...removed].reverse()) ink.strokes.splice(r.index, 0, r.stroke); },
           redo: () => { for (const r of removed) ink.strokes.splice(r.index, 1); } });
         app.markDirty(); return;
       }
       const s = ink.end(); if (!s) return;
       ink.strokes.push(s);
-      const add = { undo: () => { const i = ink.strokes.indexOf(s); if (i >= 0) ink.strokes.splice(i, 1); }, redo: () => ink.strokes.push(s) };
+      const add = { ops: [{ type: 'ink.add', stroke: s }], inverseOps: [{ type: 'ink.remove', id: s.id }],
+        undo: () => { const i = ink.strokes.indexOf(s); if (i >= 0) ink.strokes.splice(i, 1); }, redo: () => ink.strokes.push(s) };
       let revealCmd = null;
       if (revealRec) {
         revealRec.begin();

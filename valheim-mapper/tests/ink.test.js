@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { distToSegment, hitStroke, simplify } from '../web/ink.js';
+import { distToSegment, hitStroke, simplify, createInk } from '../web/ink.js';
 
 test('distToSegment handles interior and endpoint cases', () => {
   assert.equal(distToSegment(0, 1, -1, 0, 1, 0), 1);
@@ -23,4 +23,10 @@ test('simplify drops points closer than eps to the last kept point, keeps ends',
   const pts = [[0, 0], [0.1, 0], [0.2, 0], [5, 0], [5.1, 0], [10, 0], [10.05, 0]];
   assert.deepEqual(simplify(pts, 1), [[0, 0], [5, 0], [10, 0], [10.05, 0]]);
   assert.deepEqual(simplify([[1, 1]], 1), [[1, 1]]);
+});
+
+test('strokes get ids, including ones loaded without', () => {
+  const strokes = [{ color: '#000000', width: 2, points: [[0, 0]] }];
+  const ink = createInk(strokes); assert.match(strokes[0].id, /^[0-9a-f-]{36}$/);
+  ink.begin('#000000', 4); ink.add(0, 0); ink.add(10, 0); const s = ink.end(); assert.match(s.id, /^[0-9a-f-]{36}$/);
 });

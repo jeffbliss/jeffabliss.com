@@ -6,6 +6,15 @@ export function nearestPin(pins, x, z, maxDist) {
   return best;
 }
 
+/** Plain copy of a pin without transient/local-only fields (e.g. `fixed`), for sync ops. */
+function plainPin(p) { return { id: p.id, x: p.x, z: p.z, type: p.type, name: p.name, checked: p.checked }; }
+
+export const pinOps = {
+  add: pin => ({ ops: [{ type: 'pin.add', pin: plainPin(pin) }], inverseOps: [{ type: 'pin.remove', id: pin.id }] }),
+  remove: pin => ({ ops: [{ type: 'pin.remove', id: pin.id }], inverseOps: [{ type: 'pin.add', pin: plainPin(pin) }] }),
+  update: (pin, patch, before) => ({ ops: [{ type: 'pin.update', id: pin.id, patch }], inverseOps: [{ type: 'pin.update', id: pin.id, patch: before }] }),
+};
+
 export function createPins(state, icons) {
   const ICON = 32, HIT = 14;
   const layer = {
@@ -51,7 +60,7 @@ function dragHandler(app, pins) {
     end() {
       if (!target) return; const o = target, after = { x: o.x, z: o.z }, before = { x: orig.x, z: orig.z };
       if (after.x !== before.x || after.z !== before.z) {
-        app.history.push({ label: 'move', undo: () => Object.assign(o, before), redo: () => Object.assign(o, after) }); app.markDirty();
+        app.history.push({ label: 'move', ...pinOps.update(o, after, before), undo: () => Object.assign(o, before), redo: () => Object.assign(o, after) }); app.markDirty();
       }
       target = null;
     },
@@ -76,7 +85,7 @@ export function pinTool(app, pins, openEditor) {
       if (e.button === 2) return;
       const pin = pins.add({ x: wx, z: wz, type: app.tools.options.pinType });
       pins.selected = pin.id;
-      app.history.push({ label: 'add pin', undo: () => pins.remove(pin.id), redo: () => { app.state.pins.push(pin); } });
+      app.history.push({ label: 'add pin', ...pinOps.add(pin), undo: () => pins.remove(pin.id), redo: () => { app.state.pins.push(pin); } });
       app.markDirty(); openEditor(pin);
     },
     move(e, wx, wz) { drag.move(wx, wz); },
@@ -90,10 +99,14 @@ export function pinKeys(app, pins, openEditor) {
     if (isTypingTarget(e) || !pins.selected) return;
     const pin = app.state.pins.find(p => p.id === pins.selected); if (!pin) return;
     if (e.key === 'Enter') openEditor(pin);
-    else if (e.key.toLowerCase() === 'x') { pin.checked = !pin.checked; app.history.push({ label: 'check', undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } }); app.markDirty(); }
+    else if (e.key.toLowerCase() === 'x') {
+      pin.checked = !pin.checked;
+      app.history.push({ label: 'check', ...pinOps.update(pin, { checked: pin.checked }, { checked: !pin.checked }), undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } });
+      app.markDirty();
+    }
     else if (e.key === 'Delete' || e.key === 'Backspace') {
       const idx = app.state.pins.indexOf(pin); pins.remove(pin.id);
-      app.history.push({ label: 'remove pin', undo: () => app.state.pins.splice(idx, 0, pin), redo: () => pins.remove(pin.id) }); app.markDirty();
+      app.history.push({ label: 'remove pin', ...pinOps.remove(pin), undo: () => app.state.pins.splice(idx, 0, pin), redo: () => pins.remove(pin.id) }); app.markDirty();
     } else return;
     e.preventDefault();
   });

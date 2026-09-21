@@ -1,5 +1,5 @@
 import { serialize } from './store.js';
-import { pinKeys } from './pins.js';
+import { pinKeys, pinOps } from './pins.js';
 import { PIN_TYPES, BIOMES } from './world.js';
 
 export function createUI(app) {
@@ -36,7 +36,7 @@ export function createUI(app) {
 export function renameCommand(pin, before, after) {
   if (after === before) return null;
   pin.name = after;
-  return { label: 'rename', undo: () => { pin.name = before; }, redo: () => { pin.name = after; } };
+  return { label: 'rename', ...pinOps.update(pin, { name: after }, { name: before }), undo: () => { pin.name = before; }, redo: () => { pin.name = after; } };
 }
 
 /**
@@ -67,10 +67,10 @@ export function wirePinPopup(app) {
   name.onblur = commitName;
   check.onclick = () => { const pin = selectedPin(); if (!pin) return;
     pin.checked = !pin.checked;
-    app.history.push({ label: 'check', undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } }); app.markDirty(); };
+    app.history.push({ label: 'check', ...pinOps.update(pin, { checked: pin.checked }, { checked: !pin.checked }), undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } }); app.markDirty(); };
   del.onclick = () => { const pin = selectedPin(); if (!pin) return;
     const idx = app.state.pins.indexOf(pin); app.pinsLayer.remove(pin.id);
-    app.history.push({ label: 'remove pin', undo: () => app.state.pins.splice(idx, 0, pin), redo: () => app.pinsLayer.remove(pin.id) }); app.markDirty(); };
+    app.history.push({ label: 'remove pin', ...pinOps.remove(pin), undo: () => app.state.pins.splice(idx, 0, pin), redo: () => app.pinsLayer.remove(pin.id) }); app.markDirty(); };
   close.onclick = () => { app.pinsLayer.selected = null; app.requestRender(); };
 
   /** Selects a pin and focuses the name field (used right after placing a pin, on double-click, and on Enter). */

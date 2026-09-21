@@ -80,8 +80,8 @@ export function drawBrushCursor(ctx, view, w, h, tools) {
  * `reveal` = { raster, fn }: when given, every stamp also clears fog under the brush (exploring by drawing),
  * recorded into the same undo command. Erasing (secondary) leaves the fog as it is.
  */
-export function rasterBrushTool(app, raster, label, fnPrimary, fnSecondary, reveal = null) {
-  const rec = createStrokeRecorder(raster), revealRec = reveal && createStrokeRecorder(reveal.raster);
+export function rasterBrushTool(app, raster, layerName, fnPrimary, fnSecondary, reveal = null) {
+  const rec = createStrokeRecorder(raster, layerName), revealRec = reveal && createStrokeRecorder(reveal.raster, reveal.layerName ?? 'fog');
   let fn = null, revealing = false;
   let last = null;
   const stamp = (wx, wz) => {
@@ -99,7 +99,7 @@ export function rasterBrushTool(app, raster, label, fnPrimary, fnSecondary, reve
       for (const [x, z] of interpolate(last[0], last[1], wx, wz, Math.max(4, app.tools.options.brush * 0.35))) stamp(x, z);
       last = [wx, wz];
     },
-    up() { fn = null; last = null; const cmd = combine(label, rec.end(label), revealRec?.end(label)); if (cmd) { app.history.push(cmd); app.markDirty(); } },
+    up() { fn = null; last = null; const cmd = combine(layerName, rec.end(layerName), revealRec?.end(layerName)); if (cmd) { app.history.push(cmd); app.markDirty(); } },
     cursor: drawBrushCursor,
   };
 }
