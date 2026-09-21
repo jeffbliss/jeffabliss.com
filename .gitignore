@@ -4,3 +4,5 @@
 out/
 data/
 node_modules/
+.superpowers/
+web/assets/
