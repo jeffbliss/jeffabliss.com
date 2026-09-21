@@ -45,6 +45,13 @@ export function createUI(app) {
   return { refreshLayers };
 }
 
+/** Returns the rename command for a pin name edit, or null when nothing changed. */
+export function renameCommand(pin, before, after) {
+  if (after === before) return null;
+  pin.name = after;
+  return { label: 'rename', undo: () => { pin.name = before; }, redo: () => { pin.name = after; } };
+}
+
 /** Sets up pin-name editing and keyboard shortcuts on the selected pin. Layer-object-free: reads app.pinsLayer live. */
 export function wirePinEditor(app) {
   const editor = document.getElementById('pin-editor');
@@ -53,11 +60,14 @@ export function wirePinEditor(app) {
     editor.hidden = false; editor.value = pin.name; editor.style.left = `${sx / app.dpr() - 60}px`; editor.style.top = `${sy / app.dpr() + 20}px`; editor.style.width = '120px';
     editor.focus(); editor.select();
     const before = pin.name;
+    let closed = false;
     const done = commit => {
-      editor.hidden = true; editor.onblur = editor.onkeydown = null;
+      if (closed) return; closed = true;
+      editor.onblur = editor.onkeydown = null;
+      editor.hidden = true;
       if (!commit || editor.value === before) return;
-      const after = editor.value; pin.name = after;
-      app.history.push({ label: 'rename', undo: () => { pin.name = before; }, redo: () => { pin.name = after; } }); app.markDirty();
+      const cmd = renameCommand(pin, before, editor.value);
+      if (cmd) { app.history.push(cmd); app.markDirty(); }
     };
     editor.onkeydown = e => { if (e.key === 'Enter') done(true); if (e.key === 'Escape') done(false); e.stopPropagation(); };
     editor.onblur = () => done(true);
