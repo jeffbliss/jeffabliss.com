@@ -7,7 +7,7 @@ export const statusText = (status, you) => ({
   connecting: 'connecting…',
   connected: `connected as ${you?.name || you?.email || 'you'}`,
   reconnecting: 'reconnecting…',
-  offline: 'offline',
+  offline: 'offline — reload to sign in again',
 }[status] ?? status);
 
 export function createUI(app, sync) {
@@ -47,8 +47,8 @@ export function createUI(app, sync) {
     }
   }
 
-  sync.onStatus = s => app.setStatus(statusText(s, sync.you), s === 'reconnecting' ? 'error' : '');
-  sync.onPresence = users => { app.presence.set(users); refreshPresence(); app.requestRender(); };
+  sync.onStatus = s => app.setStatus(statusText(s, sync.you), s === 'reconnecting' || s === 'offline' ? 'error' : '');
+  sync.onPresence = (users, full) => { app.presence.set(users, { full: !!full }); refreshPresence(); app.requestRender(); };
   app.setStatus(statusText(sync.status, sync.you));
 
   refreshLayers(); refreshPresence();

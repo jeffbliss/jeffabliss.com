@@ -36,9 +36,13 @@ test('rejects wrong aud, wrong iss, expired, bad signature, bad alg, missing', a
 });
 test('identityFromRequest: dev identity with ?as override, else header required', async () => {
   const env = { DEV_IDENTITY: 'dev@localhost' };
-  assert.deepEqual(await identityFromRequest(new Request('http://x/valheim-mapper/'), env), { email: 'dev@localhost' });
-  assert.deepEqual(await identityFromRequest(new Request('http://x/valheim-mapper/?as=b@x'), env), { email: 'b@x' });
-  await assert.rejects(identityFromRequest(new Request('http://x/'), { ACCESS_TEAM: 't', ACCESS_AUD: 'a' }), /token/);
+  assert.deepEqual(await identityFromRequest(new Request('http://localhost/valheim-mapper/'), env), { email: 'dev@localhost' });
+  assert.deepEqual(await identityFromRequest(new Request('http://127.0.0.1/valheim-mapper/?as=b@x'), env), { email: 'b@x' });
+  await assert.rejects(identityFromRequest(new Request('http://localhost/'), { ACCESS_TEAM: 't', ACCESS_AUD: 'a' }), /token/);
+});
+test('DEV_IDENTITY is ignored off localhost, and missing team/aud denies', async () => {
+  await assert.rejects(identityFromRequest(new Request('https://jeffabliss.com/valheim-mapper/'), { DEV_IDENTITY: 'dev@localhost', ACCESS_TEAM: 't', ACCESS_AUD: 'a' }), /token/);
+  await assert.rejects(identityFromRequest(new Request('https://jeffabliss.com/valheim-mapper/'), { DEV_IDENTITY: 'dev@localhost' }), /access not configured/);
 });
 test('unknown kids do not trigger a JWKS refetch per request', async () => {
   resetJwksCache(); const { sign, fetchFn, fetches } = await setup();
@@ -50,6 +54,24 @@ test('unknown kids do not trigger a JWKS refetch per request', async () => {
   assert.equal(fetches(), 1);
   await assert.rejects(verifyAccessJwt(await sign(claims, { alg: 'RS256', kid: 'x3' }), { ...opts, now: now + 61_000 }), /unknown signing key/);
   assert.equal(fetches(), 2);                                          // ... but after 60 s one more refetch is allowed
+});
+test('concurrent cold-start callers share one JWKS fetch', async () => {
+  resetJwksCache(); const { sign, fetchFn, fetches } = await setup();
+  const slow = async url => { await new Promise(r => setTimeout(r, 20)); return fetchFn(url); };
+  const opts = { team: 'team1', aud: 'aud-1', fetchFn: slow, now };
+  const token = await sign(claims);
+  const results = await Promise.all([verifyAccessJwt(token, opts), verifyAccessJwt(token, opts)]);
+  assert.deepEqual(results, [{ email: 'a@example.com' }, { email: 'a@example.com' }]);
+  assert.equal(fetches(), 1);
+});
+test('a failed JWKS fetch is retried immediately, not cached for 60 s', async () => {
+  resetJwksCache(); const { sign, fetchFn, fetches } = await setup();
+  let fail = true;
+  const flaky = async url => { if (fail) { fail = false; throw new Error('network down'); } return fetchFn(url); };
+  const opts = { team: 'team1', aud: 'aud-1', fetchFn: flaky, now };
+  await assert.rejects(verifyAccessJwt(await sign(claims), opts), /network down/);
+  assert.deepEqual(await verifyAccessJwt(await sign(claims), opts), { email: 'a@example.com' });   // same instant, no poisoning
+  assert.equal(fetches(), 1);                                                                     // the failing attempt never reached fetchFn's counter
 });
 test('ignores JWKS entries that are not signing keys', async () => {
   resetJwksCache(); const { sign } = await setup();

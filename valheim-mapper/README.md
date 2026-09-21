@@ -9,9 +9,11 @@ Hand-draw a Valheim world map outside the game, in the in-game style, for no-map
 4. Local dev: `npm run dev` → http://localhost:8787/valheim-mapper/ . Open a second tab with `?as=friend@x` to simulate another user.
 
 ## Deploy
-`npm run deploy` from a machine with `web/assets/` populated, then set the Access secrets
-(`npx wrangler secret put ACCESS_TEAM` and `ACCESS_AUD` — the Worker must exist first, so
-deploy before setting secrets). Full Zero Trust/Access setup, verification steps and
+`npm run deploy` from a machine with `web/assets/` populated, then — once, after that first
+deploy — set the Access secrets: `npx wrangler secret put ACCESS_TEAM` and the same for
+`ACCESS_AUD`. The Worker must exist before secrets can be attached to it, and the two names
+must never appear in `wrangler.jsonc` (a `vars` entry there replaces the remote secret on
+every deploy). Once set, the secrets survive all later deploys. Full Zero Trust/Access setup, verification steps and
 operations (logs, allow-list rotation, backup, storage reset): see
 `docs/superpowers/runbook-cloudflare.md`.
 

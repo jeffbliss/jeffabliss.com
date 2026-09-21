@@ -105,6 +105,7 @@ export function pinKeys(app, pins, openEditor) {
       app.markDirty();
     }
     else if (e.key === 'Delete' || e.key === 'Backspace') {
+      if (pin.fixed) return;                                    // the start pin cannot be removed; don't record an undo step for a no-op
       const idx = app.state.pins.indexOf(pin); pins.remove(pin.id);
       app.history.push({ label: 'remove pin', ...pinOps.remove(pin), undo: () => app.state.pins.splice(idx, 0, pin), redo: () => pins.remove(pin.id) }); app.markDirty();
     } else return;

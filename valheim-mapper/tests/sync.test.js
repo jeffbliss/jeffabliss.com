@@ -4,7 +4,7 @@ import { createSync, applyRemoteOp } from '../web/sync.js';
 import { createState, emptyDoc } from '../web/store.js';
 import { encodeRasterOp, wrapServerRaster, decodeRasterOp } from '../web/proto.js';
 
-class FakeWS { constructor(url) { this.url = url; this.sent = []; this.readyState = 0; FakeWS.last = this; } send(d) { this.sent.push(d); } close() { this.onclose?.({}); }
+class FakeWS { constructor(url) { this.url = url; this.sent = []; this.readyState = 0; this.closes = 0; FakeWS.last = this; } send(d) { this.sent.push(d); } close() { this.closes++; this.onclose?.({}); }
   open() { this.readyState = 1; this.onopen?.(); } msg(d) { this.onmessage?.({ data: d }); } }
 async function fakeApp() {
   const state = await createState(emptyDoc()); const statuses = [], renders = { n: 0 };
@@ -66,10 +66,46 @@ test('incoming messages are serialised: an op arriving mid-snapshot waits for th
   assert.ok(app.state.pins.find(p => p.id === 'r'));                    // and the queued op applied to the NEW state
 });
 
+test('an over-cap raster op is split into server-sized frames before sending', async () => {
+  const { app } = await fakeApp(); const sync = createSync(app, { WebSocketImpl: FakeWS, url: 'ws://x' }); sync.connect(); FakeWS.last.open();
+  const rect = { x0: 100, z0: 100, x1: 612, z1: 612 };
+  app.history.onApply([{ type: 'raster', layer: 'terrain', rect, bytes: new Uint8Array(513 * 513) }]);
+  assert.equal(FakeWS.last.sent.length, 25);
+  for (const frame of FakeWS.last.sent) { const d = decodeRasterOp(frame); assert.ok((d.rect.x1 - d.rect.x0 + 1) * (d.rect.z1 - d.rect.z0 + 1) <= 512 * 512); }
+});
+test('a server error closes the socket so the reconnect resyncs', async () => {
+  const { app } = await fakeApp(); const timers = []; const texts = [];
+  app.setStatus = t => texts.push(t);
+  const sync = createSync(app, { WebSocketImpl: FakeWS, url: 'ws://x', setTimeoutFn: (fn, ms) => timers.push({ fn, ms }) });
+  sync.connect(); const ws = FakeWS.last; ws.open();
+  await sync.handleMessage(JSON.stringify({ t: 'hello', you: { name: 'a' }, seq: 1, doc: emptyDoc() }));
+  await sync.handleMessage(JSON.stringify({ t: 'error', message: 'rect too large' }));
+  assert.match(texts.at(-1), /rejected: rect too large — resyncing…/);
+  assert.equal(ws.closes, 1); assert.equal(sync.status, 'reconnecting');       // onclose ran and scheduled a retry
+  assert.equal(timers.length, 1);
+});
+test('five connection attempts without a hello report offline', async () => {
+  const { app } = await fakeApp(); const timers = [];
+  const sync = createSync(app, { WebSocketImpl: FakeWS, url: 'ws://x', setTimeoutFn: (fn, ms) => timers.push({ fn, ms }) });
+  sync.connect();
+  for (let i = 0; i < 4; i++) { FakeWS.last.close(); assert.equal(sync.status, 'reconnecting'); timers.shift().fn(); }
+  FakeWS.last.close();
+  assert.equal(sync.status, 'offline');
+  assert.equal(timers[0].ms, 16_000);                                          // still retrying, backoff capped at 30 s
+  timers.shift().fn(); FakeWS.last.open();
+  await sync.handleMessage(JSON.stringify({ t: 'hello', you: { name: 'a' }, seq: 1, doc: emptyDoc() }));
+  assert.equal(sync.status, 'connected');
+  FakeWS.last.close(); assert.equal(sync.status, 'reconnecting');              // the counter reset on hello
+});
+
 test('applyRemoteOp on arrays', () => {
   const state = { ink: [], pins: [] };
   applyRemoteOp(state, { type: 'ink.add', stroke: { id: 's', color: '#000000', width: 1, points: [[0, 0]] } }); assert.equal(state.ink.length, 1);
+  applyRemoteOp(state, { type: 'ink.add', stroke: { id: 's', color: '#ffffff', width: 2, points: [[1, 1]] } });   // same id replaces, no duplicate
+  assert.equal(state.ink.length, 1); assert.equal(state.ink[0].color, '#ffffff');
   applyRemoteOp(state, { type: 'pin.add', pin: { id: 'p', x: 0, z: 0, type: 'fire', name: '', checked: false } });
+  applyRemoteOp(state, { type: 'pin.add', pin: { id: 'p', x: 9, z: 9, type: 'fire', name: 'again', checked: false } });
+  assert.equal(state.pins.length, 1); assert.equal(state.pins[0].x, 9);
   applyRemoteOp(state, { type: 'pin.update', id: 'p', patch: { name: 'N' } }); assert.equal(state.pins[0].name, 'N');
   applyRemoteOp(state, { type: 'pin.update', id: 'zzz', patch: { name: 'N' } });
   applyRemoteOp(state, { type: 'pin.remove', id: 'p' }); applyRemoteOp(state, { type: 'ink.remove', id: 's' });

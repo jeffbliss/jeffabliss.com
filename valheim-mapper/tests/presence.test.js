@@ -4,13 +4,22 @@ import { createPresence } from '../web/presence.js';
 
 test('presence merges single-user updates, replaces on full lists, hides stale and self', () => {
   const p = createPresence(() => ({ email: 'me@x' }));
-  p.set([{ email: 'me@x', name: 'me', x: 0, z: 0, at: 1000 }, { email: 'a@x', name: 'a', x: 1, z: 1, at: 1000 }, { email: 'b@x', name: 'b', x: null, at: 0 }]);
+  p.set([{ email: 'me@x', name: 'me', x: 0, z: 0, at: 1000 }, { email: 'a@x', name: 'a', x: 1, z: 1, at: 1000 }, { email: 'b@x', name: 'b', x: null, at: 0 }], { full: true });
   assert.deepEqual(p.visible(2000).map(u => u.name), ['a']);                 // self and no-position users hidden
-  p.set([{ email: 'a@x', name: 'a', x: 5, z: 5, at: 3000 }]);                 // merge
+  p.set([{ email: 'a@x', name: 'a', x: 5, z: 5, at: 3000 }]);                 // cursor update: merge
   assert.equal(p.users().find(u => u.email === 'a@x').x, 5); assert.equal(p.users().length, 3);
   assert.deepEqual(p.visible(14000).map(u => u.name), []);                    // stale after 10 s
-  p.set([{ email: 'a@x', name: 'a', x: 5, z: 5, at: 3000 }, { email: 'me@x', name: 'me' }]);   // full list: b left
+  p.set([{ email: 'a@x', name: 'a', x: 5, z: 5, at: 3000 }, { email: 'me@x', name: 'me' }], { full: true });   // full list: b left
   assert.deepEqual(p.users().map(u => u.email).sort(), ['a@x', 'me@x']);
+});
+
+test('a full roster of one replaces; a single-user merge does not', () => {
+  const p = createPresence(() => ({ email: 'me@x' }));
+  p.set([{ email: 'me@x', name: 'me' }, { email: 'a@x', name: 'a' }], { full: true });
+  p.set([{ email: 'a@x', name: 'a', x: 1, z: 1, at: 1 }]);                    // cursor from a: merges, nobody leaves
+  assert.deepEqual(p.users().map(u => u.email).sort(), ['a@x', 'me@x']);
+  p.set([{ email: 'me@x', name: 'me' }], { full: true });                     // a left: a one-user full roster drops them
+  assert.deepEqual(p.users().map(u => u.email), ['me@x']);
 });
 
 test('presence layer draws a dot, a name and a brush circle for painting users', () => {

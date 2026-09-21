@@ -3,13 +3,13 @@ const STALE_MS = 10_000;
 
 /**
  * `getYou()` returns your own identity ({ email, ... }) so you are never drawn or chipped.
- * The server sends full user lists on join/leave and single-user lists on cursor updates,
- * so a list of one is a merge and anything else replaces the roster.
+ * The server marks full rosters (join/leave) with `full: true`; cursor updates carry one
+ * user and merge. The flag is explicit because a full roster can legitimately hold one user.
  */
 export function createPresence(getYou) {
   const users = new Map();
   const p = {
-    set(list, { full = list.length !== 1 } = {}) {
+    set(list, { full = false } = {}) {
       if (full) users.clear();
       for (const u of list) users.set(u.email, { ...users.get(u.email), ...u });
     },

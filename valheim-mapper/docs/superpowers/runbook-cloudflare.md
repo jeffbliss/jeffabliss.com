@@ -48,27 +48,34 @@ npx wrangler deploy --dry-run --outdir /tmp/vm-dry
 ```
 
 This builds the Worker bundle and lists the static assets without touching
-the account. Last run: 60 files read from `web/`, total upload 25.03 KiB
-(7.79 KiB gzip), bindings resolved (`MAP` Durable Object, `ASSETS`,
-`ACCESS_TEAM`/`ACCESS_AUD` environment variables — both empty, since the
-real values are set as secrets, not `vars`). Works offline / without
-`wrangler login`.
+the account. It resolves the bindings declared in `wrangler.jsonc` (`MAP`
+Durable Object, `ASSETS`); `ACCESS_TEAM`/`ACCESS_AUD` are secrets and are
+deliberately absent from the config, so they are not listed. Works offline /
+without `wrangler login`.
 
 ## 4. Real deploy and secrets
 
-`wrangler.jsonc` ships with `vars: { ACCESS_TEAM: "", ACCESS_AUD: "" }` as
-placeholders. The real values are set as **Worker secrets**, which override
-the empty `vars` at runtime. The Worker must exist before you can attach
-secrets to it, so the order matters:
+`ACCESS_TEAM` and `ACCESS_AUD` are **Worker secrets**, and their names must
+**not** appear in `wrangler.jsonc` — not even as empty `vars` placeholders.
+A `vars` entry does not get "overridden" by a secret of the same name: it
+*replaces* that secret on every `wrangler deploy` (wrangler warns
+"Configuration values … conflict with existing remote secrets"), which would
+silently unset Access verification on each deploy and — because
+`worker/access.js` treats a missing team or aud as deny — lock everyone out.
+
+The Worker must exist before you can attach secrets to it, so the first
+deploy comes first; after that the secrets are set once and survive every
+later deploy:
 
 ```
 npm run deploy                       # 1. creates/updates the Worker first
-npx wrangler secret put ACCESS_TEAM  # 2. paste: jeffabliss
-npx wrangler secret put ACCESS_AUD   # 3. paste the AUD tag from §2
+npx wrangler secret put ACCESS_TEAM  # 2. paste: jeffabliss   (once)
+npx wrangler secret put ACCESS_AUD   # 3. paste the AUD tag from §2  (once)
 ```
 
 Each `secret put` triggers its own redeploy, so the Worker ends up running
-with both secrets set after step 3. Run `npm run deploy` from a machine
+with both secrets set after step 3. Later `npm run deploy` runs keep them —
+re-run `secret put` only to rotate a value. Run `npm run deploy` from a machine
 that has `web/assets/` populated (extracted game assets — see the top-level
 README's Setup section; these are gitignored and not redistributed).
 

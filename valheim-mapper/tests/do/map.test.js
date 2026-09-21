@@ -63,6 +63,28 @@ describe('MapRoom', () => {
     expect(pres.users.find(u => u.name === 'alice').tool).toBe('paint');
     a.ws.close(); b.ws.close();
   });
+  it('rejects an over-cap raster frame and a malformed one', async () => {
+    const stub = room('over-cap');
+    const a = await connect(stub, 'alice@example.com'); await a.until(m => m.t === 'hello');
+    const rect = { x0: 100, z0: 100, x1: 612, z1: 612 };                 // 513 x 513: what an unsplit 2048 m brush would send
+    a.ws.send(encodeRasterOp({ layer: 0, rect, bytes: new Uint8Array(513 * 513) }));
+    expect((await a.until(m => m.t === 'error')).message).toBe('rect too large');
+    a.ws.send(new Uint8Array([0, 1, 2]).buffer);                         // too short to be a frame
+    expect((await a.until(m => m.t === 'error')).message).toBe('bad message');
+    expect(await metaSeq(stub)).toBe(undefined);                         // neither bumped seq
+    a.ws.close();
+  });
+  it('marks full presence rosters and leaves cursor updates as merges', async () => {
+    const stub = room('presence-full');
+    const a = await connect(stub, 'alice@example.com'), b = await connect(stub, 'bob@example.com');
+    await a.until(m => m.t === 'hello'); await b.until(m => m.t === 'hello');
+    const roster = await a.until(m => m.t === 'presence' && m.users.length === 2);
+    expect(roster.full).toBe(true);
+    b.ws.send(JSON.stringify({ t: 'cursor', x: 1, z: 2, tool: 'paint', brush: 64 }));
+    const merge = await a.until(m => m.t === 'presence' && m.users.length === 1);
+    expect(merge.full).toBe(undefined);
+    a.ws.close(); b.ws.close();
+  });
   it('flushes pending tiles when the last session closes', async () => {
     const stub = room('flush-on-close');
     const a = await connect(stub, 'alice@example.com'); await a.until(m => m.t === 'hello');

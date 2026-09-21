@@ -45,7 +45,9 @@ export class MapRoom extends DurableObject {
     try {
       if (typeof message !== 'string') {
         const frame = new Uint8Array(message);
-        const op = decodeRasterOp(frame); const err = validateRaster(op); if (err) return this.reply(ws, err);
+        // A malformed frame is a client bug or a probe, not a server fault: answer it, don't log it.
+        let op; try { op = decodeRasterOp(frame); } catch { return this.reply(ws, 'bad message'); }
+        const err = validateRaster(op); if (err) return this.reply(ws, err);
         for (const k of applyRaster(this.state, op)) this.dirty.add(k);
         this.seq++; await this.scheduleFlush();
         this.broadcast(wrapServerRaster(this.seq, s.name, frame), ws);
@@ -63,9 +65,8 @@ export class MapRoom extends DurableObject {
         this.broadcast(JSON.stringify({ t: 'op', seq: this.seq, by: { name: s.name, color: s.color }, op: msg.op }), ws);
       }
     } catch (e) {
-      const detail = e?.message ?? String(e);
-      if (e instanceof SyntaxError) return this.reply(ws, 'bad message');
-      console.error('MapRoom message failed:', detail);
+      if (e instanceof SyntaxError) return this.reply(ws, 'bad message');   // unparseable JSON: same, not worth a log line
+      console.error('MapRoom message failed:', e?.message ?? String(e));
       this.reply(ws, 'internal error');
     }
   }
@@ -73,11 +74,10 @@ export class MapRoom extends DurableObject {
   /** All rows for one op plus the new seq, in a single synchronous unit of work. */
   writeRows(persist, nextSeq) {
     const sql = this.ctx.storage.sql;
-    const write = () => {
+    this.ctx.storage.transactionSync(() => {
       for (const row of persist) row.json === null ? sql.exec(`DELETE FROM ${row.table} WHERE id = ?`, row.id) : sql.exec(`INSERT OR REPLACE INTO ${row.table}(id, json) VALUES (?, ?)`, row.id, row.json);
       sql.exec("INSERT OR REPLACE INTO meta(key, value) VALUES ('seq', ?)", String(nextSeq));
-    };
-    this.ctx.storage.transactionSync ? this.ctx.storage.transactionSync(write) : write();
+    });
   }
 
   async webSocketClose(ws) { await this.dropSession(ws); }
@@ -97,7 +97,7 @@ export class MapRoom extends DurableObject {
   presenceOf(s) { return { email: s.email, name: s.name, color: s.color, x: s.x, z: s.z, tool: s.tool, brush: s.brush, at: s.at }; }
   broadcastPresence() {
     this.inPresence = true;                      // a send failure inside this broadcast must not re-enter broadcastPresence
-    try { this.broadcast(JSON.stringify({ t: 'presence', users: [...this.sessions.values()].map(s => this.presenceOf(s)) }), null); } finally { this.inPresence = false; }
+    try { this.broadcast(JSON.stringify({ t: 'presence', full: true, users: [...this.sessions.values()].map(s => this.presenceOf(s)) }), null); } finally { this.inPresence = false; }
   }
 
   async scheduleFlush() { if ((await this.ctx.storage.getAlarm()) === null) await this.ctx.storage.setAlarm(Date.now() + FLUSH_MS); }

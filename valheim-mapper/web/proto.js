@@ -8,6 +8,34 @@ const HEADER = 9;
 export const rectArea = r => (r.x1 - r.x0 + 1) * (r.z1 - r.z0 + 1);
 export const rectValid = (r, cells = CELLS) => [r.x0, r.z0, r.x1, r.z1].every(n => Number.isInteger(n) && n >= 0 && n < cells) && r.x1 >= r.x0 && r.z1 >= r.z0;
 
+/** Biggest raster rect the server accepts in one frame. Shared so the client can split before it sends. */
+export const MAX_RECT_AREA = 512 * 512;
+const SPLIT_TILE = 128;
+
+/**
+ * Splits a raster op into tile-aligned pieces small enough for the server to accept.
+ * A 2048 m brush paints a 513x513 rect, which is over the cap; without this the server
+ * would reject the frame while the client kept the stroke. Pieces cover the original
+ * exactly (row-major byte copy), so reassembling them reproduces `op.bytes`.
+ */
+export function splitRasterOp(op, maxArea = MAX_RECT_AREA) {
+  const { rect, bytes } = op;
+  if (rectArea(rect) <= maxArea) return [op];
+  const width = rect.x1 - rect.x0 + 1, out = [];
+  for (let z0 = rect.z0; z0 <= rect.z1; ) {
+    const z1 = Math.min(rect.z1, (Math.floor(z0 / SPLIT_TILE) + 1) * SPLIT_TILE - 1);
+    for (let x0 = rect.x0; x0 <= rect.x1; ) {
+      const x1 = Math.min(rect.x1, (Math.floor(x0 / SPLIT_TILE) + 1) * SPLIT_TILE - 1);
+      const w = x1 - x0 + 1, h = z1 - z0 + 1, sub = new Uint8Array(w * h);
+      for (let r = 0; r < h; r++) { const from = (z0 - rect.z0 + r) * width + (x0 - rect.x0); sub.set(bytes.subarray(from, from + w), r * w); }
+      out.push({ ...op, rect: { x0, z0, x1, z1 }, bytes: sub });
+      x0 = x1 + 1;
+    }
+    z0 = z1 + 1;
+  }
+  return out;
+}
+
 export function encodeRasterOp({ layer, rect, bytes }) {
   const code = typeof layer === 'string' ? LAYER[layer] : layer;
   const out = new Uint8Array(HEADER + bytes.length), dv = new DataView(out.buffer);

@@ -10,7 +10,8 @@ export default {
     if (url.pathname === PREFIX) return Response.redirect(`${url.origin}${PREFIX}/${url.search}`, 301);
     if (!url.pathname.startsWith(PREFIX + '/')) return new Response('not found', { status: 404 });
     let email;
-    try { ({ email } = await identityFromRequest(request, env)); } catch (e) { return new Response(`forbidden: ${e.message}`, { status: 403 }); }
+    // The reason stays in the logs: telling an unauthenticated caller why their token failed only helps them forge one.
+    try { ({ email } = await identityFromRequest(request, env)); } catch (e) { console.warn('access denied:', e?.message ?? String(e)); return new Response('forbidden', { status: 403 }); }
     if (url.pathname === `${PREFIX}/api/ws`) {
       if ((request.headers.get('upgrade') ?? '').toLowerCase() !== 'websocket') return new Response('expected websocket', { status: 426 });
       // Only the handshake headers plus the identity we just verified: cookies and the Access token stay out of the DO.

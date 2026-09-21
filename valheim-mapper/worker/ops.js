@@ -3,7 +3,7 @@ import { createRaster } from '../web/raster.js';
 import { CELLS, PIN_TYPES, BIOMES } from '../web/world.js';
 import { encodeGray, toBase64 } from '../web/png.js';
 import { ensureStartPin, SAVE_VERSION } from '../web/store.js';
-import { rectValid, rectArea } from '../web/proto.js';
+import { rectValid, rectArea, MAX_RECT_AREA } from '../web/proto.js';
 
 export const TILE = 128, TILES = CELLS / TILE;
 export const tileKey = (layer, tx, tz) => `${layer}:${tx}:${tz}`;
@@ -27,7 +27,7 @@ const isId = v => typeof v === 'string' && v.length > 0 && v.length <= 64;
 const isNum = v => typeof v === 'number' && Number.isFinite(v);
 const isColor = v => typeof v === 'string' && /^#[0-9a-f]{6}$/i.test(v);
 
-export const MAX_RECT_AREA = 512 * 512;
+export { MAX_RECT_AREA };                        // the cap lives in proto.js: the client splits against the same number
 
 export function validateRaster({ layer, rect, bytes }) {
   if (!(layer === 0 || layer === 1)) return 'bad layer';
