@@ -17,6 +17,7 @@ button.active { background: #8a6a3a; }
 #layers { display: grid; gap: 6px; }
 #layers .layer { display: grid; grid-template-columns: 20px 1fr 120px; gap: 10px; align-items: center; min-height: 28px; }
 #layers .layer input[type=range] { width: 100%; min-width: 0; margin: 0; }
+.hint { margin: 2px 0 0; font-size: 12px; opacity: .75; line-height: 1.35; }
 #status { margin-left: 8px; opacity: .8; }
 #status.error { color: #ff7b6b; }
 #pin-editor { position: fixed; background: #1b1610; color: #fff; border: 1px solid #8a6a3a; font: bold 14px 'Norse', serif; padding: 2px 4px; }

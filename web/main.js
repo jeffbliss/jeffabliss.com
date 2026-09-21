@@ -5,7 +5,7 @@ import { createStoreClient, createState, serialize, emptyDoc } from './store.js'
 import { createBase } from './base.js';
 import { createGrid } from './grid.js';
 import { createTerrain } from './terrain.js';
-import { createFog, revealFn, refogFn } from './fog.js';
+import { createFog, revealFn } from './fog.js';
 import { createInk, inkTool } from './ink.js';
 import { createTools, rasterBrushTool, isTypingTarget } from './tools.js';
 import { createPins, pinTool, selectTool } from './pins.js';
@@ -17,7 +17,7 @@ export const loadImage = url => new Promise((res, rej) => { const i = new Image(
 async function loadAssets() {
   const names = ['background', 'space', 'forest', 'mountain', 'water', 'fog_layer', 'clouds'];
   const textures = Object.fromEntries(await Promise.all(names.map(async n => [n === 'fog_layer' ? 'fog' : n, await loadImage(`assets/map/${n}.png`)])));
-  const iconNames = [...PIN_TYPES, 'checked', 'player_32'];
+  const iconNames = [...PIN_TYPES, 'checked'];
   const icons = Object.fromEntries(await Promise.all(iconNames.map(async n => [n, await loadImage(`assets/map/mapicon_${n}.png`)])));
   await Promise.all([document.fonts.load('bold 14px Norse'), document.fonts.load('12px "Averia Serif"')]);
   return { textures, icons };
@@ -52,9 +52,9 @@ function cameraControls() {
   canvas.addEventListener('wheel', e => { e.preventDefault(); const [sx, sy] = pos(e); view.zoomAt(sx, sy, Math.exp(-e.deltaY * 0.0015), ...size()); requestRender(); }, { passive: false });
   let panning = null;
   app.isPanGesture = e => e.button === 1 || app.spaceDown || app.tool === 'pan';
-  canvas.addEventListener('pointerdown', e => { if (app.isPanGesture(e)) { panning = pos(e); canvas.setPointerCapture(e.pointerId); } });
+  canvas.addEventListener('pointerdown', e => { if (app.isPanGesture(e)) { panning = pos(e); canvas.setPointerCapture(e.pointerId); canvas.style.cursor = 'grabbing'; } });
   canvas.addEventListener('pointermove', e => { if (!panning) return; const p = pos(e); view.panBy(p[0] - panning[0], p[1] - panning[1]); panning = p; requestRender(); });
-  canvas.addEventListener('pointerup', () => { panning = null; });
+  canvas.addEventListener('pointerup', () => { if (panning) canvas.style.cursor = app.tool === 'pan' ? 'grab' : 'crosshair'; panning = null; });
   canvas.addEventListener('dblclick', e => {
     const [sx, sy] = pos(e);
     if (app.pinsLayer?.hitTest(sx, sy, view, ...size())) return;
@@ -86,9 +86,9 @@ app.rebuild = function rebuild(state) {
   Object.assign(app.view, state.settings.camera);
   Object.assign(app, { fogLayer: fog, inkLayer: ink, pinsLayer: pins });
 
-  app.tools.register('paint', rasterBrushTool(app, state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0));
-  app.tools.register('fog', rasterBrushTool(app, state.fog, 'fog', () => revealFn, () => refogFn));
-  app.tools.register('ink', inkTool(app, ink));
+  const revealFog = { raster: state.fog, fn: revealFn };          // drawing explores: paint and ink clear fog where they land
+  app.tools.register('paint', rasterBrushTool(app, state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0, revealFog));
+  app.tools.register('ink', inkTool(app, ink, revealFog));
   app.tools.register('pin', pinTool(app, pins, app.openEditor));
   app.tools.register('select', selectTool(app, pins, app.openEditor));
   app.requestRender();

@@ -11,6 +11,14 @@ export function createHistory({ limit = 200 } = {}) {
   return h;
 }
 
+/** One command that applies several sub-commands together (undo runs them in reverse). */
+export function combine(label, ...cmds) {
+  const list = cmds.filter(Boolean);
+  if (!list.length) return null;
+  if (list.length === 1) return { ...list[0], label };
+  return { label, undo: () => { for (const c of [...list].reverse()) c.undo(); }, redo: () => { for (const c of list) c.redo(); } };
+}
+
 /** Records one brush stroke on a raster as a single command. */
 export function createStrokeRecorder(raster) {
   let copy = null, startVersion = 0;

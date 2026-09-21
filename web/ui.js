@@ -1,7 +1,6 @@
 import { serialize, createState, emptyDoc } from './store.js';
-import { createStrokeRecorder } from './history.js';
 import { pinKeys } from './pins.js';
-import { PIN_TYPES, BIOMES, EXPLORE_RADIUS } from './world.js';
+import { PIN_TYPES, BIOMES } from './world.js';
 
 export function createUI(app) {
   const layersEl = document.getElementById('layers');
@@ -104,6 +103,14 @@ export function syncGridInputs(app) {
 }
 
 /** Wires the toolbar, biome/pin-type palettes, grid controls and tool option UI. Reads layer objects via app.* so it stays valid across app.rebuild. */
+const TOOL_HINTS = {
+  pan: 'Drag to pan. Wheel zooms, double-click recentres, 0 fits the world.',
+  paint: 'Left drag paints the biome and clears fog. Right or Alt drag erases terrain. [ ] change brush size.',
+  ink: 'Left drag draws and clears fog along the line. Right or Alt drag erases whole strokes.',
+  pin: 'Click to place a pin and name it. Click a pin to select or drag it; Enter renames, X checks, Delete removes.',
+  select: 'Click to select pins, drag to move, double-click to rename. Enter renames, X checks, Delete removes.',
+};
+
 export function wireTools(app) {
   const gridVisible = document.getElementById('grid-visible'), gridSpacing = document.getElementById('grid-spacing');
   syncGridInputs(app);
@@ -116,18 +123,12 @@ export function wireTools(app) {
 
   app.canvas.addEventListener('pointermove', e => {
     const hit = app.pinsLayer.hitTest(e.offsetX * app.dpr(), e.offsetY * app.dpr(), app.view, ...app.size());
-    app.canvas.title = hit && hit !== 'player' ? `${hit.name || hit.type} (${Math.round(hit.x)}, ${Math.round(hit.z)})` : hit === 'player' ? `player (${Math.round(app.state.player.x)}, ${Math.round(app.state.player.z)})` : '';
+    app.canvas.title = hit ? `${hit.name || hit.type} (${Math.round(hit.x)}, ${Math.round(hit.z)})` : '';
   });
 
   const inkColor = document.getElementById('ink-color'), inkWidth = document.getElementById('ink-width');
   inkColor.oninput = () => app.tools.setOption('inkColor', inkColor.value);
   inkWidth.oninput = () => app.tools.setOption('inkWidth', Number(inkWidth.value));
-
-  document.getElementById('reveal-player').onclick = () => {
-    const rec = createStrokeRecorder(app.state.fog); rec.begin();
-    app.fogLayer.reveal(app.state.player.x, app.state.player.z, EXPLORE_RADIUS);
-    const cmd = rec.end('reveal'); if (cmd) { app.history.push(cmd); app.markDirty(); }
-  };
 
   const biomesEl = document.getElementById('biomes');
   for (const b of BIOMES) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => { app.tools.setOption('biome', b.id); btn.blur(); }; biomesEl.append(btn); }
@@ -143,7 +144,8 @@ export function wireTools(app) {
     for (const btn of biomesEl.children) btn.classList.toggle('active', Number(btn.dataset.biome) === app.tools.options.biome);
     brush.value = app.tools.options.brush; brushLabel.textContent = `${app.tools.options.brush} m`;
     biomesEl.hidden = app.tools.current !== 'paint';
-    document.getElementById('reveal-player').hidden = app.tools.current !== 'fog';
+    document.getElementById('tool-hint').textContent = TOOL_HINTS[app.tools.current] ?? '';
+    app.canvas.style.cursor = app.tools.current === 'pan' ? 'grab' : 'crosshair';
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
     typesEl.hidden = app.tools.current !== 'pin';
     for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);

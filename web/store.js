@@ -8,7 +8,6 @@ const LS_KEY = 'valheim-mapper:map';
 export function emptyDoc() {
   return {
     version: SAVE_VERSION, terrain: null, fog: null, ink: [], pins: [],
-    player: { x: 0, z: 0, angle: 0 },
     settings: { grid: { visible: true, spacing: ZONE_M }, layers: {}, camera: { x: 0, z: 0, scale: 0.04 } },
   };
 }
@@ -37,7 +36,6 @@ export async function createState(doc = emptyDoc()) {
     fog: await rasterFrom(doc.fog),
     ink: structuredClone(doc.ink ?? []),
     pins: ensureStartPin(structuredClone(doc.pins ?? [])),
-    player: { ...base.player, ...doc.player },
     settings: { ...base.settings, ...doc.settings, grid: { ...base.settings.grid, ...doc.settings?.grid } },
   };
 }
@@ -46,7 +44,7 @@ export async function serialize(state) {
   return {
     version: SAVE_VERSION,
     terrain: await rasterTo(state.terrain), fog: await rasterTo(state.fog),
-    ink: state.ink, pins: state.pins, player: state.player, settings: state.settings,
+    ink: state.ink, pins: state.pins, settings: state.settings,
   };
 }
 

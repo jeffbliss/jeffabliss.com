@@ -46,8 +46,14 @@ export function createInk(strokes) {
   };
 }
 
-/** Ink tool: left drag draws, right/alt drag erases strokes. */
-export function inkTool(app, ink) {
+import { createStrokeRecorder, combine } from './history.js';
+import { interpolate } from './tools.js';
+
+export const INK_REVEAL_MIN_M = 24;   // fog cleared along an ink stroke: at least this radius, or the stroke width
+
+/** Ink tool: left drag draws, right/alt drag erases strokes. `reveal` = { raster, fn } clears fog along new strokes. */
+export function inkTool(app, ink, reveal = null) {
+  const revealRec = reveal && createStrokeRecorder(reveal.raster);
   let erasing = false, erased = null;
   const tolPx = 6;
   return {
@@ -72,7 +78,18 @@ export function inkTool(app, ink) {
       }
       const s = ink.end(); if (!s) return;
       ink.strokes.push(s);
-      app.history.push({ label: 'ink', undo: () => { const i = ink.strokes.indexOf(s); if (i >= 0) ink.strokes.splice(i, 1); }, redo: () => ink.strokes.push(s) });
+      const add = { undo: () => { const i = ink.strokes.indexOf(s); if (i >= 0) ink.strokes.splice(i, 1); }, redo: () => ink.strokes.push(s) };
+      let revealCmd = null;
+      if (revealRec) {
+        revealRec.begin();
+        const r = Math.max(INK_REVEAL_MIN_M, s.width);
+        for (let i = 0; i < s.points.length; i++) {
+          const [ax, az] = s.points[i], [bx, bz] = s.points[i + 1] ?? s.points[i];
+          for (const [x, z] of interpolate(ax, az, bx, bz, r * 0.5)) reveal.raster.stamp(x, z, r, reveal.fn);
+        }
+        revealCmd = revealRec.end('ink');
+      }
+      app.history.push(combine('ink', add, revealCmd));
       app.markDirty();
     },
     cursor(ctx, view, w, h, tools) {

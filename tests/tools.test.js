@@ -22,3 +22,27 @@ test('isTypingTarget only blocks text-entry elements', () => {
   assert.equal(isTypingTarget(ev('DIV', { isContentEditable: true })), true);
   assert.equal(isTypingTarget({ target: null }), false);
 });
+
+import { rasterBrushTool } from '../web/tools.js';
+import { createRaster } from '../web/raster.js';
+import { createHistory } from '../web/history.js';
+import { revealFn } from '../web/fog.js';
+
+test('painting also reveals fog under the brush, as one undoable command', () => {
+  const terrain = createRaster({ cells: 20, cellM: 1 }), fog = createRaster({ cells: 20, cellM: 1 });
+  let dirty = 0;
+  const app = { history: createHistory(), tools: { options: { brush: 2 } }, markDirty: () => dirty++ };
+  const tool = rasterBrushTool(app, terrain, 'paint', () => () => 3, () => () => 0, { raster: fog, fn: revealFn });
+  const ev = { button: 0, altKey: false };
+  tool.down(ev, 0.5, 0.5); tool.move(ev, 3.5, 0.5); tool.up(ev);
+  assert.equal(terrain.get(0.5, 0.5), 3); assert.equal(fog.get(0.5, 0.5), 255);
+  assert.equal(fog.get(3.5, 0.5), 255); assert.equal(fog.get(-8.5, -8.5), 0);
+  assert.equal(dirty, 1); assert.ok(app.history.canUndo());
+  app.history.undo();
+  assert.equal(terrain.get(0.5, 0.5), 0); assert.equal(fog.get(0.5, 0.5), 0);
+  app.history.redo();
+  assert.equal(terrain.get(0.5, 0.5), 3); assert.equal(fog.get(0.5, 0.5), 255);
+  // erasing terrain (right button) does not re-fog
+  tool.down({ button: 2, altKey: false }, 0.5, 0.5); tool.up(ev);
+  assert.equal(terrain.get(0.5, 0.5), 0); assert.equal(fog.get(0.5, 0.5), 255);
+});

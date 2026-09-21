@@ -15,8 +15,6 @@ export function createPins(state, icons) {
     update(id, patch) { const p = state.pins.find(p => p.id === id); if (p) Object.assign(p, patch); return p; },
     hitTest(sx, sy, view, w, h) {
       const dpr = window.devicePixelRatio || 1, r = HIT * dpr;
-      const [px, py] = view.worldToScreen(state.player.x, state.player.z, w, h);
-      if (Math.hypot(px - sx, py - sy) <= r) return 'player';
       const [wx, wz] = view.screenToWorld(sx, sy, w, h);
       return nearestPin(state.pins, wx, wz, r / view.scale);
     },
@@ -37,25 +35,21 @@ export function createPins(state, icons) {
         if (label) { ctx.strokeText(label, sx, sy + s / 2); ctx.fillText(label, sx, sy + s / 2); }
       }
       ctx.globalAlpha = base;
-      const [px, py] = view.worldToScreen(state.player.x, state.player.z, w, h);
-      ctx.save(); ctx.translate(px, py); ctx.rotate(state.player.angle);
-      ctx.drawImage(icons.player_32, -s / 2, -s / 2, s, s); ctx.restore();
-      if (layer.selected === 'player') { ctx.beginPath(); ctx.arc(px, py, s * 0.6, 0, Math.PI * 2); ctx.strokeStyle = '#ffd77a'; ctx.lineWidth = 2 * dpr; ctx.stroke(); }
     },
   };
   return layer;
 }
 
-function dragHandler(app, pins, state) {
+function dragHandler(app, pins) {
   let target = null, start = null, orig = null;
   return {
-    begin(hit, wx, wz) { target = hit; start = [wx, wz]; orig = hit === 'player' ? { ...state.player } : { x: hit.x, z: hit.z }; pins.selected = hit === 'player' ? 'player' : hit.id; },
+    begin(hit, wx, wz) { target = hit; start = [wx, wz]; orig = { x: hit.x, z: hit.z }; pins.selected = hit.id; },
     move(wx, wz) {
       if (!target) return; const dx = wx - start[0], dz = wz - start[1];
-      const o = target === 'player' ? state.player : target; o.x = orig.x + dx; o.z = orig.z + dz;
+      target.x = orig.x + dx; target.z = orig.z + dz;
     },
     end() {
-      if (!target) return; const o = target === 'player' ? state.player : target, after = { x: o.x, z: o.z }, before = { x: orig.x, z: orig.z };
+      if (!target) return; const o = target, after = { x: o.x, z: o.z }, before = { x: orig.x, z: orig.z };
       if (after.x !== before.x || after.z !== before.z) {
         app.history.push({ label: 'move', undo: () => Object.assign(o, before), redo: () => Object.assign(o, after) }); app.markDirty();
       }
@@ -65,16 +59,16 @@ function dragHandler(app, pins, state) {
 }
 
 export function selectTool(app, pins, openEditor) {
-  const drag = dragHandler(app, pins, app.state);
+  const drag = dragHandler(app, pins);
   return {
     down(e, wx, wz, sx, sy) { const hit = pins.hitTest(sx, sy, app.view, ...app.size()); if (hit && !hit.fixed) drag.begin(hit, wx, wz); else pins.selected = null; },
     move(e, wx, wz) { drag.move(wx, wz); },
-    up(e) { drag.end(); if (e.detail === 2 && pins.selected && pins.selected !== 'player') openEditor(app.state.pins.find(p => p.id === pins.selected)); },
+    up(e) { drag.end(); if (e.detail === 2 && pins.selected) openEditor(app.state.pins.find(p => p.id === pins.selected)); },
   };
 }
 
 export function pinTool(app, pins, openEditor) {
-  const drag = dragHandler(app, pins, app.state);
+  const drag = dragHandler(app, pins);
   return {
     down(e, wx, wz, sx, sy) {
       const hit = pins.hitTest(sx, sy, app.view, ...app.size());
@@ -93,7 +87,7 @@ export function pinTool(app, pins, openEditor) {
 /** Keyboard actions on the selected pin: Enter rename, X toggle checked, Delete/Backspace remove. */
 export function pinKeys(app, pins, openEditor) {
   addEventListener('keydown', e => {
-    if (isTypingTarget(e) || !pins.selected || pins.selected === 'player') return;
+    if (isTypingTarget(e) || !pins.selected) return;
     const pin = app.state.pins.find(p => p.id === pins.selected); if (!pin) return;
     if (e.key === 'Enter') openEditor(pin);
     else if (e.key.toLowerCase() === 'x') { pin.checked = !pin.checked; app.history.push({ label: 'check', undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } }); app.markDirty(); }

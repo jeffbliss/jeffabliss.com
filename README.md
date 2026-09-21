@@ -9,8 +9,9 @@ Hand-draw a Valheim world map outside the game, in the in-game style, for no-map
 
 ## Controls
 - Wheel: zoom · Middle-drag / Space+drag: pan · Double-click: recentre · `0`: fit world
-- Tools: `H` pan, `B` paint, `I` ink, `F` fog, `P` pin, `V` select · `[` `]` brush size
-- Paint/Fog: left drag applies, right or Alt drag erases/re-fogs
+- Tools: `H` pan, `B` paint, `I` ink, `P` pin, `V` select · `[` `]` brush size
+- Paint: left drag paints the chosen biome, right or Alt drag erases. Painting and inking clear the fog where you draw; there is no separate fog tool.
+- Ink: right or Alt drag across a line erases that stroke.
 - Pins: click to place; selected pin → Enter rename, `X` toggle checked, Delete remove; drag to move
 - Undo/redo: Cmd/Ctrl+Z, Shift+Cmd/Ctrl+Z
 

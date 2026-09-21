@@ -1,6 +1,6 @@
-import { createStrokeRecorder } from './history.js';
+import { createStrokeRecorder, combine } from './history.js';
 
-const HOTKEYS = { h: 'pan', b: 'paint', i: 'ink', f: 'fog', p: 'pin', v: 'select' };
+const HOTKEYS = { h: 'pan', b: 'paint', i: 'ink', p: 'pin', v: 'select' };
 
 /** True when the key event is aimed at a text field, so app hotkeys must not fire. */
 export const isTypingTarget = e => { const t = e.target; return !!t && (t.tagName === 'INPUT' && !['range', 'checkbox', 'color', 'file', 'button'].includes(t.type) || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable); };
@@ -61,20 +61,31 @@ export function drawBrushCursor(ctx, view, w, h, tools) {
   ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.lineWidth = 1; ctx.stroke();
 }
 
-/** Shared raster brush tool: left = fnPrimary, right/alt = fnSecondary. */
-export function rasterBrushTool(app, raster, label, fnPrimary, fnSecondary) {
-  const rec = createStrokeRecorder(raster);
-  let fn = null;
+/**
+ * Shared raster brush tool: left = fnPrimary, right/alt = fnSecondary.
+ * `reveal` = { raster, fn }: when given, every stamp also clears fog under the brush (exploring by drawing),
+ * recorded into the same undo command. Erasing (secondary) leaves the fog as it is.
+ */
+export function rasterBrushTool(app, raster, label, fnPrimary, fnSecondary, reveal = null) {
+  const rec = createStrokeRecorder(raster), revealRec = reveal && createStrokeRecorder(reveal.raster);
+  let fn = null, revealing = false;
   let last = null;
-  const stamp = (wx, wz) => raster.stamp(wx, wz, app.tools.options.brush, fn);
+  const stamp = (wx, wz) => {
+    raster.stamp(wx, wz, app.tools.options.brush, fn);
+    if (revealing) reveal.raster.stamp(wx, wz, app.tools.options.brush, reveal.fn);
+  };
   return {
-    down(e, wx, wz) { fn = (e.button === 2 || e.altKey) ? fnSecondary() : fnPrimary(); rec.begin(); stamp(wx, wz); last = [wx, wz]; },
+    down(e, wx, wz) {
+      const secondary = e.button === 2 || e.altKey;
+      fn = secondary ? fnSecondary() : fnPrimary(); revealing = !!reveal && !secondary;
+      rec.begin(); revealRec?.begin(); stamp(wx, wz); last = [wx, wz];
+    },
     move(e, wx, wz) {
       if (!fn) return;
       for (const [x, z] of interpolate(last[0], last[1], wx, wz, Math.max(4, app.tools.options.brush * 0.35))) stamp(x, z);
       last = [wx, wz];
     },
-    up() { fn = null; last = null; const cmd = rec.end(label); if (cmd) { app.history.push(cmd); app.markDirty(); } },
+    up() { fn = null; last = null; const cmd = combine(label, rec.end(label), revealRec?.end(label)); if (cmd) { app.history.push(cmd); app.markDirty(); } },
     cursor: drawBrushCursor,
   };
 }

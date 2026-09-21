@@ -9,14 +9,13 @@ test('empty doc -> state -> doc round trip', async () => {
   s.fog.stamp(0, 0, 200, () => 255);
   s.ink.push({ color: '#000', width: 5, points: [[0, 0], [10, 10]] });
   s.pins.push({ id: 'a', x: 1, z: 2, type: 'fire', name: 'Camp', checked: false });
-  s.player = { x: 5, z: 6, angle: 1 };
   const doc = await serialize(s);
   assert.equal(doc.version, SAVE_VERSION);
   assert.equal(typeof doc.terrain, 'string');
   const s2 = await createState(JSON.parse(JSON.stringify(doc)));
   assert.deepEqual(s2.terrain.data, s.terrain.data);
   assert.deepEqual(s2.fog.data, s.fog.data);
-  assert.deepEqual(s2.ink, s.ink); assert.deepEqual(s2.pins, s.pins); assert.deepEqual(s2.player, s.player);
+  assert.deepEqual(s2.ink, s.ink); assert.deepEqual(s2.pins, s.pins);
 });
 
 test('createState rejects unknown versions', async () => {
