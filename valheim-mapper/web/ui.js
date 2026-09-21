@@ -131,7 +131,9 @@ export function wireTools(app) {
   for (const b of swatches) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => { app.tools.setOption('biome', b.id); btn.blur(); }; biomesEl.append(btn); }
 
   const brush = document.getElementById('brush'), brushLabel = document.getElementById('brush-label');
-  for (const m of BRUSH_SIZES) { const b = document.createElement('button'); b.textContent = `${m} m`; b.dataset.brush = m; b.onclick = () => { app.tools.setOption('brush', m); b.blur(); }; brush.append(b); }
+  for (const m of BRUSH_SIZES) { const b = document.createElement('button'); b.textContent = `${m} m`; b.dataset.brush = m; b.onclick = () => { app.tools.setOption('brush', m); app.tools.setOption('fill', false); b.blur(); }; brush.append(b); }
+  const fillBtn = Object.assign(document.createElement('button'), { textContent: 'Fill', title: 'Fill an enclosed area (G)' }); fillBtn.dataset.brush = 'fill';
+  fillBtn.onclick = () => { app.tools.setOption('fill', true); fillBtn.blur(); }; brush.append(fillBtn);
   for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.onclick = () => { app.tools.set(btn.dataset.tool); btn.blur(); };
   document.getElementById('undo').onclick = () => { if (app.history.undo()) app.markDirty(); };
   document.getElementById('redo').onclick = () => { if (app.history.redo()) app.markDirty(); };
@@ -139,8 +141,9 @@ export function wireTools(app) {
   app.tools.onChange = () => {
     for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.classList.toggle('active', btn.dataset.tool === app.tools.current);
     for (const btn of biomesEl.children) btn.classList.toggle('active', btn.dataset.biome === String(app.tools.options.biome));
-    for (const b of brush.children) b.classList.toggle('active', Number(b.dataset.brush) === app.tools.options.brush);
-    brushLabel.textContent = `${app.tools.options.brush} m radius`;
+    const { fill } = app.tools.options;
+    for (const b of brush.children) b.classList.toggle('active', b.dataset.brush === 'fill' ? fill : !fill && Number(b.dataset.brush) === app.tools.options.brush);
+    brushLabel.textContent = fill ? 'click inside an enclosed area' : `${app.tools.options.brush} m radius`;
     for (const b of inkWidth.children) b.classList.toggle('active', Number(b.dataset.width) === app.tools.options.inkWidth);
     inkLabel.textContent = `${app.tools.options.inkWidth} m`;
     const color = app.tools.options.inkColor; let preset = false;

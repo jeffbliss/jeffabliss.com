@@ -67,12 +67,21 @@ function dragHandler(app, pins) {
   };
 }
 
+/** Select tool: drags pins; dragging on empty map draws a marquee, kept in app.selection (world rect) for copy. */
 export function selectTool(app, pins, openEditor) {
   const drag = dragHandler(app, pins);
+  let box = null;
+  const rect = () => ({ x0: Math.min(box[0], box[2]), z0: Math.min(box[1], box[3]), x1: Math.max(box[0], box[2]), z1: Math.max(box[1], box[3]) });
   return {
-    down(e, wx, wz, sx, sy) { const hit = pins.hitTest(sx, sy, app.view, ...app.size()); if (hit && !hit.fixed) drag.begin(hit, wx, wz); else pins.selected = null; },
-    move(e, wx, wz) { drag.move(wx, wz); },
-    up(e) { drag.end(); if (e.detail === 2 && pins.selected) openEditor(app.state.pins.find(p => p.id === pins.selected)); },
+    down(e, wx, wz, sx, sy) {
+      const hit = pins.hitTest(sx, sy, app.view, ...app.size());
+      if (hit && !hit.fixed) drag.begin(hit, wx, wz); else { pins.selected = null; box = [wx, wz, wx, wz]; app.selection = null; }
+    },
+    move(e, wx, wz) { if (box) { box[2] = wx; box[3] = wz; app.selection = rect(); } else drag.move(wx, wz); },
+    up(e) {
+      if (box) { const r = rect(); if ((r.x1 - r.x0) * app.view.scale < 4 || (r.z1 - r.z0) * app.view.scale < 4) app.selection = null; box = null; }
+      drag.end(); if (e.detail === 2 && pins.selected) openEditor(app.state.pins.find(p => p.id === pins.selected));
+    },
   };
 }
 

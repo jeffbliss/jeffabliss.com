@@ -21,6 +21,8 @@ operations (logs, allow-list rotation, backup, storage reset): see
 - Wheel or the + / − buttons (also `+` `-` keys): zoom · Middle-drag / Space+drag: pan · Double-click: recentre · `0`: fit world
 - Tools: `H` pan, `B` paint, `I` ink, `P` pin, `V` select · `[` `]` step the paint brush through 8 / 16 / 32 / 64 / 128 m, or the ink width through 2 / 4 / 8 / 16 / 32 m while inking
 - Paint: left drag paints the chosen biome, right or Alt drag erases. Painting and inking clear the fog where you draw. The **Fog** swatch in the palette re-fogs an area (right drag with it reveals).
+- Fill (`G`, or the Fill button in the brush row): click inside an enclosed area to fill it with the chosen biome. Painted biome boundaries and ink strokes both contain the fill; it is refused, and nothing changes, if the area reaches the edge of the world or is bigger than 4 km × 4 km.
+- Copy and paste: in Select mode drag a box, `Cmd/Ctrl+C` copies the terrain, fog, ink and pins inside it, `Cmd/Ctrl+V` then click places the copy centred on the click (blank cells are transparent; `Esc` cancels). The copy goes through the system clipboard as text, so it can be pasted into a friend's tab.
 - Ink: right or Alt drag across a line erases that stroke. Eight quick colours plus a colour-wheel button for anything else.
 - Scale bar (bottom-left) spans whole grid squares (zones) at the current zoom, with the jog time for that distance; hover it for walk, sprint and swim times. Zoomed right in, one 64 m zone fills the view.
 - Pins: click to place. A selected pin shows a popup to rename, check or delete it, and can be dragged; `X` and Delete also work as shortcuts

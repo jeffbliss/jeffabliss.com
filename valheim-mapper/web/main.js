@@ -11,6 +11,8 @@ import { createPins, pinTool, selectTool } from './pins.js';
 import { PIN_TYPES } from './world.js';
 import { createUI, wireTools, wirePinPopup } from './ui.js';
 import { createScaleBar } from './scale.js';
+import { fillAt } from './fill.js';
+import { createClipboard } from './clipboard.js';
 import { createSync } from './sync.js';
 import { createPresence } from './presence.js';
 
@@ -27,6 +29,9 @@ async function loadAssets() {
 
 const status = document.getElementById('status');
 const setStatus = (s, cls = '') => { status.textContent = s; status.className = cls; };
+/** Short on-map notice (fill refusals, paste hints); replaces the previous one. */
+const toastEl = document.getElementById('toast'); let toastTimer = 0;
+const toast = (msg, ms = 3000) => { toastEl.textContent = msg; toastEl.hidden = !msg; clearTimeout(toastTimer); if (msg && ms) toastTimer = setTimeout(() => { toastEl.hidden = true; }, ms); };
 
 const canvas = document.getElementById('map');
 const ctx = canvas.getContext('2d');
@@ -40,7 +45,7 @@ export function requestRender() {
   requestAnimationFrame(() => { needsRender = false; render(); });
 }
 
-const app = { canvas, ctx, view: createView(), layers: createLayers(), history: createHistory(), requestRender, size, setStatus, dpr };
+const app = { canvas, ctx, view: createView(), layers: createLayers(), history: createHistory(), requestRender, size, setStatus, toast, dpr };
 app.presence = createPresence(() => app.you);
 const scaleBar = createScaleBar(document.getElementById('scale'), () => [app.view.scale / dpr(), app.view.scale]);   // CSS px/m, device px/m
 
@@ -117,7 +122,12 @@ app.rebuild = function rebuild(state) {
   const revealFog = { raster: state.fog, fn: revealFn, layerName: 'fog' };   // drawing explores: paint and ink clear fog where they land
   const terrainBrush = rasterBrushTool(app, state.terrain, 'terrain', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0, revealFog);
   const fogBrush = rasterBrushTool(app, state.fog, 'fog', () => refogFn, () => revealFn);   // the palette's Fog swatch
-  app.tools.register('paint', paintTool(app, terrainBrush, fogBrush));
+  const fill = (wx, wz) => {
+    const cmd = fillAt(state, wx, wz, app.tools.options.biome);
+    if (cmd.error) { app.toast(cmd.error); return; }
+    app.history.push(cmd); app.markDirty();
+  };
+  app.tools.register('paint', paintTool(app, terrainBrush, fogBrush, fill));
   app.tools.register('ink', inkTool(app, ink, revealFog));
   app.tools.register('pin', pinTool(app, pins, app.openEditor));
   app.tools.register('select', selectTool(app, pins, app.openEditor));
@@ -133,6 +143,7 @@ async function boot() {
   wirePinPopup(app);                        // sets app.openEditor before pin/select tools are registered by rebuild()
   app.rebuild(await createState(emptyDoc()));   // an empty map to draw until the server's snapshot arrives
   cameraControls();
+  createClipboard(app);                     // marquee selection, copy, paste (after cameraControls: it wraps isPanGesture)
   const sync = createSync(app);             // after createTools: it takes over app.history.onApply
   app.sync = sync;
   const ui = createUI(app, sync);

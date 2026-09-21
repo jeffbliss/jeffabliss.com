@@ -1,4 +1,5 @@
 import { createStrokeRecorder, combine } from './history.js';
+import { CELL_M } from './world.js';
 
 /** Brush radii in metres. 8 m is one raster cell; 128 m is a whole biome patch. */
 export const BRUSH_SIZES = [8, 16, 32, 64, 128];
@@ -23,7 +24,7 @@ export function interpolate(ax, az, bx, bz, step) {
 
 export function createTools(app) {
   const handlers = {};
-  const tools = { current: 'pan', options: { biome: 1, brush: DEFAULT_BRUSH, inkColor: '#2b1d0e', inkWidth: DEFAULT_INK_WIDTH, pinType: 'pin' }, onChange: null };
+  const tools = { current: 'pan', options: { biome: 1, brush: DEFAULT_BRUSH, fill: false, inkColor: '#2b1d0e', inkWidth: DEFAULT_INK_WIDTH, pinType: 'pin' }, onChange: null };
   tools.register = (name, handler) => { handlers[name] = handler; };
   tools.set = name => { if (!handlers[name] && name !== 'pan') return; tools.current = name; app.tool = name; tools.onChange?.(); app.requestRender(); };
   tools.setOption = (k, v) => { tools.options[k] = v; tools.onChange?.(); app.requestRender(); };
@@ -33,6 +34,7 @@ export function createTools(app) {
   let active = null;
   tools.pointer = null;                                     // last [sx, sy, wx, wz] for cursor overlays
   canvas.addEventListener('pointerdown', e => {
+    if (tools.intercept) { const [, , wx, wz] = pos(e); if (tools.intercept(e, wx, wz)) { e.preventDefault(); return; } }   // e.g. placing a paste
     if (app.isPanGesture(e)) return;
     const h = handlers[tools.current]; if (!h) return;
     e.preventDefault(); canvas.setPointerCapture(e.pointerId); active = h;
@@ -54,6 +56,8 @@ export function createTools(app) {
     if (mod && e.key.toLowerCase() === 'z') { e.preventDefault(); if (e.shiftKey ? app.history.redo() : app.history.undo()) app.markDirty(); return; }
     if (mod && e.key.toLowerCase() === 'y') { e.preventDefault(); if (app.history.redo()) app.markDirty(); return; }
     if (HOTKEYS[e.key.toLowerCase()] && !mod) tools.set(HOTKEYS[e.key.toLowerCase()]);
+    if (e.key.toLowerCase() === 'g' && !mod) { tools.set('paint'); tools.setOption('fill', true); }
+    if (tools.current === 'paint' && tools.options.fill && (e.key === '[' || e.key === ']')) tools.setOption('fill', false);
     // [ and ] step the size of whichever tool is active: ink width in Ink, brush radius otherwise.
     const [key, sizes] = tools.current === 'ink' ? ['inkWidth', INK_WIDTHS] : ['brush', BRUSH_SIZES];
     const i = sizes.indexOf(tools.options[key]);
@@ -62,7 +66,7 @@ export function createTools(app) {
   });
 
   /** Overlay layer drawing the brush cursor for the active tool. */
-  tools.cursorLayer = { id: 'cursor', name: 'Cursor', draw(ctx, v, w, h) { handlers[tools.current]?.cursor?.(ctx, v, w, h, tools); } };
+  tools.cursorLayer = { id: 'cursor', name: 'Cursor', draw(ctx, v, w, h) { tools.overlay?.(ctx, v, w, h); handlers[tools.current]?.cursor?.(ctx, v, w, h, tools); } };
   return tools;
 }
 
@@ -70,13 +74,20 @@ export function createTools(app) {
  * The Paint tool: routes each stroke to the terrain brush, or to the fog brush when the
  * palette's Fog swatch is selected (options.biome === 'fog'). Fog paints over terrain without erasing it.
  */
-export function paintTool(app, terrainBrush, fogBrush) {
+export function paintTool(app, terrainBrush, fogBrush, fill = null) {
   let active = null;
   return {
-    down(...a) { active = app.tools.options.biome === 'fog' ? fogBrush : terrainBrush; active.down(...a); },
+    down(e, wx, wz, ...a) {
+      if (app.tools.options.fill && fill) { fill(wx, wz); return; }        // one click fills an enclosed area
+      active = app.tools.options.biome === 'fog' ? fogBrush : terrainBrush; active.down(e, wx, wz, ...a);
+    },
     move(...a) { active?.move(...a); },
     up(...a) { active?.up(...a); active = null; },
-    cursor: drawBrushCursor,
+    cursor(ctx, view, w, h, tools) {
+      if (!tools.options.fill) return drawBrushCursor(ctx, view, w, h, tools);
+      if (!tools.pointer) return; const [sx, sy] = tools.pointer, s = Math.max(6, CELL_M * view.scale);
+      ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.lineWidth = 1; ctx.strokeRect(sx - s / 2, sy - s / 2, s, s);
+    },
   };
 }
 
