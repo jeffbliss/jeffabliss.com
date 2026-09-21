@@ -48,3 +48,13 @@ test('snapshot/restore round-trip a rect', () => {
   assert.equal(r.get(-2.5, -2.5), 5);   // outside rect: untouched
   assert.deepEqual(r.takeDirty(), { x0: 0, z0: 0, x1: 5, z1: 5 });
 });
+
+test('touched accumulates independently of the render dirty rect', () => {
+  const r = createRaster({ cells: 10, cellM: 1 });
+  r.stamp(-4.5, -4.5, 0.5, () => 1);
+  assert.deepEqual(r.takeDirty(), { x0: 0, z0: 0, x1: 1, z1: 1 });   // renderer consumes
+  r.stamp(4.5, 4.5, 0.5, () => 1);
+  assert.deepEqual(r.takeTouched(), { x0: 0, z0: 0, x1: 9, z1: 9 }); // recorder still sees both
+  assert.equal(r.takeTouched(), null);
+  assert.deepEqual(r.takeDirty(), { x0: 9, z0: 9, x1: 9, z1: 9 });
+});

@@ -15,9 +15,9 @@ export function createHistory({ limit = 200 } = {}) {
 export function createStrokeRecorder(raster) {
   let copy = null, startVersion = 0;
   return {
-    begin() { copy = raster.data.slice(); startVersion = raster.version; raster.dirty = null; },
+    begin() { copy = raster.data.slice(); startVersion = raster.version; raster.takeTouched(); },
     end(label) {
-      const rect = raster.dirty;
+      const rect = raster.takeTouched();
       if (!copy || !rect || raster.version === startVersion) { copy = null; return null; }
       const after = raster.snapshot(rect);
       const before = createRasterLike(raster, copy).snapshot(rect);

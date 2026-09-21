@@ -2,7 +2,7 @@ import { CELLS, CELL_M } from './world.js';
 
 export function createRaster({ cells = CELLS, cellM = CELL_M, fill = 0, data } = {}) {
   const half = (cells * cellM) / 2;
-  const r = { cells, cellM, data: data ?? new Uint8Array(cells * cells).fill(fill), dirty: null, version: 0 };
+  const r = { cells, cellM, data: data ?? new Uint8Array(cells * cells).fill(fill), dirty: null, touched: null, version: 0 };
   const inBounds = (cx, cz) => cx >= 0 && cz >= 0 && cx < cells && cz < cells;
   const clamp = n => Math.max(0, Math.min(cells - 1, n));
 
@@ -26,12 +26,14 @@ export function createRaster({ cells = CELLS, cellM = CELL_M, fill = 0, data } =
     return rect;
   };
 
+  const union = (a, b) => a ? { x0: Math.min(a.x0, b.x0), z0: Math.min(a.z0, b.z0), x1: Math.max(a.x1, b.x1), z1: Math.max(a.z1, b.z1) } : { ...b };
   r.markDirty = rect => {
-    const d = r.dirty;
-    r.dirty = d ? { x0: Math.min(d.x0, rect.x0), z0: Math.min(d.z0, rect.z0), x1: Math.max(d.x1, rect.x1), z1: Math.max(d.z1, rect.z1) } : { ...rect };
+    r.dirty = union(r.dirty, rect);
+    r.touched = union(r.touched, rect);
     r.version++;
   };
   r.takeDirty = () => { const d = r.dirty; r.dirty = null; return d; };
+  r.takeTouched = () => { const t = r.touched; r.touched = null; return t; };
 
   r.snapshot = rect => {
     const w = rect.x1 - rect.x0 + 1, h = rect.z1 - rect.z0 + 1, out = new Uint8Array(w * h);

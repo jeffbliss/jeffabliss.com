@@ -33,3 +33,17 @@ test('stroke recorder captures a raster edit as an undoable command', () => {
   c.redo(); assert.equal(r.get(0.5, 0.5), 3);
   rec.begin(); assert.equal(rec.end('noop'), null);   // nothing changed -> no command
 });
+
+test('stroke recorder survives a render (takeDirty) between stamps and end', () => {
+  const r = createRaster({ cells: 8, cellM: 1 }), rec = createStrokeRecorder(r);
+  rec.begin();
+  r.stamp(0.5, 0.5, 1.6, () => 3);
+  r.takeDirty();                                   // renderer runs mid-stroke
+  r.stamp(-2.5, -2.5, 0.5, () => 4);
+  r.takeDirty();                                   // and again before pointer-up
+  const c = rec.end('paint');
+  assert.ok(c, 'stroke must still produce a command');
+  c.undo(); assert.equal(r.get(0.5, 0.5), 0); assert.equal(r.get(-2.5, -2.5), 0);
+  c.redo(); assert.equal(r.get(0.5, 0.5), 3); assert.equal(r.get(-2.5, -2.5), 4);
+  assert.ok(r.takeDirty(), 'undo/redo still mark the renderer dirty');
+});
