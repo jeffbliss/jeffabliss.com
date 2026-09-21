@@ -31,6 +31,7 @@ export function createTools(app) {
   });
   canvas.addEventListener('pointermove', e => {
     const p = pos(e); tools.pointer = p;
+    app.onPointer?.(p[2], p[3], tools.current, tools.options.brush);   // shares this cursor with the room
     if (active) active.move?.(e, p[2], p[3], p[0], p[1]);
     if (active || handlers[tools.current]?.cursor) app.requestRender();
   });

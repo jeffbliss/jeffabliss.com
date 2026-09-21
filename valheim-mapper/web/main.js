@@ -1,7 +1,7 @@
 import { createView } from './view.js';
 import { createLayers } from './layers.js';
 import { createHistory } from './history.js';
-import { createStoreClient, createState, serialize, emptyDoc } from './store.js';
+import { createState, emptyDoc } from './store.js';
 import { createGrid } from './grid.js';
 import { createTerrainLayer, createFogLayer } from './gl.js';
 import { revealFn, refogFn } from './fog.js';
@@ -9,7 +9,9 @@ import { createInk, inkTool } from './ink.js';
 import { createTools, rasterBrushTool, paintTool, isTypingTarget } from './tools.js';
 import { createPins, pinTool, selectTool } from './pins.js';
 import { PIN_TYPES } from './world.js';
-import { createUI, wireTools, wirePinPopup } from './ui.js';
+import { createUI, wireTools, wirePinPopup, syncGridInputs } from './ui.js';
+import { createSync } from './sync.js';
+import { createPresence } from './presence.js';
 
 export const loadImage = url => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(url)); i.src = url; });
 
@@ -38,6 +40,26 @@ export function requestRender() {
 }
 
 const app = { canvas, ctx, view: createView(), layers: createLayers(), history: createHistory(), requestRender, size, setStatus, dpr };
+app.presence = createPresence(() => app.you);
+
+// Per-browser preferences (grid, layer visibility/opacity, camera). The map itself lives on the server.
+const SETTINGS_KEY = 'valheim-mapper:settings';
+export function loadSettings() {
+  try { return JSON.parse(localStorage.getItem(SETTINGS_KEY)) || null; } catch { return null; }
+}
+export function saveSettings(settings) {
+  try { localStorage.setItem(SETTINGS_KEY, JSON.stringify({ grid: settings.grid, layers: settings.layers, camera: settings.camera })); } catch { /* private mode / full quota: preferences are disposable */ }
+}
+
+/** Lays the saved preferences over the snapshot's defaults; fits the world when there is no saved camera. */
+function applyLocalSettings() {
+  const saved = loadSettings();
+  if (saved?.grid) Object.assign(app.state.settings.grid, saved.grid);
+  if (saved?.layers) { app.state.settings.layers = saved.layers; app.layers.applySettings(saved.layers); }
+  if (saved?.camera) Object.assign(app.view, saved.camera); else app.view.fitWorld(...size());
+  syncGridInputs(app);
+  requestRender();
+}
 
 function render() {
   const [w, h] = size();
@@ -67,8 +89,7 @@ function cameraControls() {
 
 app.markDirty = () => {
   app.state.settings.camera = app.view.toJSON(); app.state.settings.layers = app.layers.settings();
-  if (app.loadFailed) { requestRender(); return; }
-  app.store.schedule(() => serialize(app.state)); requestRender();
+  saveSettings(app.state.settings); requestRender();
 };
 
 /** Rebuilds the layer stack and tools for `state`, replacing whatever was loaded before (used on boot and on Import). */
@@ -82,6 +103,7 @@ app.rebuild = function rebuild(state) {
   const fog = app.layers.insertBefore('cursor', createFogLayer(state.fog, app.textures));
   const ink = app.layers.insertBefore('fog', createInk(state.ink));
   const pins = app.layers.insertBefore('cursor', createPins(state, app.icons));
+  app.layers.insertBefore('cursor', app.presence.layer);          // friends' cursors ride above the pins
   app.layers.applySettings(state.settings.layers);
   Object.assign(app.view, state.settings.camera);
   Object.assign(app, { fogLayer: fog, inkLayer: ink, pinsLayer: pins });
@@ -100,22 +122,29 @@ async function boot() {
   setStatus('loading…');
   const { textures, icons } = await loadAssets();
   Object.assign(app, { textures, icons });
-  app.store = createStoreClient({ onStatus: s => setStatus({ dirty: 'unsaved', saving: 'saving…', saved: 'saved', error: 'save failed, retrying' }[s], s === 'error' ? 'error' : '') });
-  const doc = await app.store.load();
-  let state;
-  try { state = await createState(doc); }
-  catch (e) { setStatus(`could not load save (${e.message}); starting empty — press Save to overwrite, or Import a map`, 'error'); state = await createState(emptyDoc()); app.loadFailed = true; }
 
   app.tools = createTools(app);
   wirePinPopup(app);                        // sets app.openEditor before pin/select tools are registered by rebuild()
-  app.rebuild(state);
+  app.rebuild(await createState(emptyDoc()));   // an empty map to draw until the server's snapshot arrives
   cameraControls();
-  createUI(app);
+  const sync = createSync(app);             // after createTools: it takes over app.history.onApply
+  app.sync = sync;
+  const ui = createUI(app, sync);
   wireTools(app);
 
+  // The server owns the document; every (re)connection replaces the local state wholesale.
+  app.onSnapshot = async (doc, you) => {
+    app.you = you;
+    app.rebuild(await createState(doc));
+    applyLocalSettings();
+    ui.refreshLayers(); ui.refreshPresence();
+  };
+  app.onPointer = (x, z, tool, brush) => sync.cursor(x, z, tool, brush);
+
   addEventListener('resize', resize); resize();
-  if (app.loadFailed || (!doc.terrain && !doc.pins?.length)) app.view.fitWorld(...size());
-  if (!app.loadFailed) setStatus('ready');
+  app.view.fitWorld(...size());
+  sync.connect();
+  setInterval(() => { if (app.presence.visible().length) requestRender(); }, 1000);   // so idle cursors fade away
   requestRender();
 }
 boot().catch(e => setStatus(`failed to start: ${e.message}`, 'error'));

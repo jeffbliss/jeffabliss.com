@@ -2,7 +2,15 @@ import { serialize } from './store.js';
 import { pinKeys, pinOps } from './pins.js';
 import { PIN_TYPES, BIOMES } from './world.js';
 
-export function createUI(app) {
+/** Connection status line, in the words the toolbar shows. */
+export const statusText = (status, you) => ({
+  connecting: 'connecting…',
+  connected: `connected as ${you?.name || you?.email || 'you'}`,
+  reconnecting: 'reconnecting…',
+  offline: 'offline',
+}[status] ?? status);
+
+export function createUI(app, sync) {
   const layersEl = document.getElementById('layers');
   function refreshLayers() {
     layersEl.replaceChildren();
@@ -27,9 +35,24 @@ export function createUI(app) {
     const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: `valheim-map-${new Date().toISOString().slice(0, 10)}.json` });
     a.click(); URL.revokeObjectURL(a.href);
   };
-  addEventListener('beforeunload', () => { app.store.flush(); });
-  refreshLayers();
-  return { refreshLayers };
+  const presenceEl = document.getElementById('presence');
+  /** One coloured chip per other person in the room (you are never listed). */
+  function refreshPresence() {
+    presenceEl.replaceChildren();
+    for (const u of app.presence.others()) {
+      const chip = document.createElement('span');
+      chip.className = 'chip'; chip.textContent = u.name || u.email;
+      chip.title = u.email ?? ''; chip.style.background = u.color ?? '#8a6a3a';
+      presenceEl.append(chip);
+    }
+  }
+
+  sync.onStatus = s => app.setStatus(statusText(s, sync.you), s === 'reconnecting' ? 'error' : '');
+  sync.onPresence = users => { app.presence.set(users); refreshPresence(); app.requestRender(); };
+  app.setStatus(statusText(sync.status, sync.you));
+
+  refreshLayers(); refreshPresence();
+  return { refreshLayers, refreshPresence };
 }
 
 /** Returns the rename command for a pin name edit, or null when nothing changed. */

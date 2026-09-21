@@ -15,13 +15,17 @@ export function createSync(app, { WebSocketImpl = globalThis.WebSocket, url = ne
   let ws = null, backoff = 1000, lastCursor = -Infinity, pendingCursor = null, cursorTimer = false, hadHello = false;
   const sync = { status: 'connecting', onStatus: null, onPresence: null, you: null };
   const setStatus = s => { sync.status = s; sync.onStatus?.(s); };
+  // Silently dropped while disconnected, by design: reconnecting reloads the snapshot, so a queued op would be stale.
   const send = data => { if (ws && ws.readyState === 1) ws.send(data); };
 
   sync.connect = () => {
     setStatus(hadHello ? 'reconnecting' : 'connecting');
     ws = new WebSocketImpl(String(url)); ws.binaryType = 'arraybuffer';
     ws.onopen = () => { backoff = 1000; };
-    ws.onmessage = e => { sync.handleMessage(e.data); };
+    // handleMessage is async (a hello decodes rasters), so messages are chained per connection:
+    // an op arriving mid-decode must wait, or it lands on the state the snapshot is about to replace.
+    let chain = Promise.resolve();
+    ws.onmessage = e => { chain = chain.then(() => sync.handleMessage(e.data)).catch(err => console.error('sync', err)); };
     ws.onclose = () => { ws = null; setStatus('reconnecting'); setTimeoutFn(sync.connect, backoff); backoff = Math.min(backoff * 2, 30_000); };
     ws.onerror = () => {};
   };

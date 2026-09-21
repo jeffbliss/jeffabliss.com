@@ -48,6 +48,24 @@ test('reconnects with backoff and clears history on the new hello', async () => 
   await sync.handleMessage(JSON.stringify({ t: 'hello', you: { name: 'a' }, seq: 9, doc: emptyDoc() }));
   assert.equal(app.history.cleared, 1); assert.equal(sync.status, 'connected');
 });
+test('incoming messages are serialised: an op arriving mid-snapshot waits for the new state', async () => {
+  const { app } = await fakeApp();
+  let release; const gate = new Promise(r => (release = r));
+  app.onSnapshot = async doc => { await gate; app.state = await createState(doc); };
+  const sync = createSync(app, { WebSocketImpl: FakeWS, url: 'ws://x' });
+  sync.connect(); const ws = FakeWS.last; ws.open();
+  const doc = emptyDoc(); doc.pins = [{ id: 'q', x: 0, z: 0, type: 'fire', name: 'Q', checked: false }];
+  ws.msg(JSON.stringify({ t: 'hello', you: { email: 'a@x', name: 'a' }, seq: 1, doc }));
+  ws.msg(JSON.stringify({ t: 'op', seq: 2, op: { type: 'pin.add', pin: { id: 'r', x: 1, z: 1, type: 'fire', name: 'R', checked: false } } }));
+  await Promise.resolve(); await Promise.resolve();
+  assert.equal(app.state.pins.find(p => p.id === 'r'), undefined);      // not applied to the OLD state
+  assert.equal(app.state.pins.find(p => p.id === 'q'), undefined);      // snapshot still decoding
+  release();
+  await new Promise(r => setTimeout(r, 10));
+  assert.ok(app.state.pins.find(p => p.id === 'q'));                    // snapshot landed
+  assert.ok(app.state.pins.find(p => p.id === 'r'));                    // and the queued op applied to the NEW state
+});
+
 test('applyRemoteOp on arrays', () => {
   const state = { ink: [], pins: [] };
   applyRemoteOp(state, { type: 'ink.add', stroke: { id: 's', color: '#000000', width: 1, points: [[0, 0]] } }); assert.equal(state.ink.length, 1);
