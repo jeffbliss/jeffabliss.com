@@ -40,6 +40,11 @@ test('panBy moves the camera opposite to the drag in world units', () => {
   near(v.x, -10); near(v.z, -5);
 });
 
+test('fitHome centres on spawn with 16 zones across the shorter side', () => {
+  const v = createView(); v.fitHome(W, H);
+  near(v.scale, Math.min(W, H) / 1024); near(v.x, 0); near(v.z, 0);
+});
+
 test('fitWorld shows the whole world', () => {
   const v = createView(); v.fitWorld(W, H);
   near(v.scale, H / WORLD_SIZE); near(v.x, 0); near(v.z, 0);

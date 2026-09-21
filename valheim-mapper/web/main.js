@@ -57,7 +57,7 @@ export function saveSettings(settings) {
 function applyLocalSettings() {
   const saved = loadSettings();
   if (saved?.layers) { app.state.settings.layers = saved.layers; app.layers.applySettings(saved.layers); }
-  if (saved?.camera) Object.assign(app.view, saved.camera); else app.view.fitWorld(...size());
+  if (saved?.camera) Object.assign(app.view, saved.camera); else app.view.fitHome(...size());
   requestRender();
 }
 
@@ -148,7 +148,7 @@ async function boot() {
   app.onPointer = (x, z, tool, brush) => sync.cursor(x, z, tool, brush);
 
   addEventListener('resize', resize); resize();
-  app.view.fitWorld(...size());
+  app.view.fitHome(...size());
   sync.connect();
   setInterval(() => { if (app.presence.visible().length) requestRender(); }, 1000);   // so idle cursors fade away
   requestRender();

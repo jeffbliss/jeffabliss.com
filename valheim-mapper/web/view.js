@@ -13,6 +13,8 @@ export function createView({ x = 0, z = 0, scale = 0.04 } = {}) {
   };
   v.panBy = (dx, dy) => { v.x -= dx / v.scale; v.z += dy / v.scale; };
   v.fitWorld = (w, h) => { v.x = 0; v.z = 0; v.scale = Math.min(w, h) / WORLD_SIZE; };
+  /** First-visit view: spawn at the centre with 16 zones (1 km) across the shorter side, so the 64 m grid is legible. */
+  v.fitHome = (w, h) => { v.x = 0; v.z = 0; v.scale = Math.min(w, h) / (ZONE_M * 16); };
   v.applyTo = (ctx, w, h) => ctx.setTransform(v.scale, 0, 0, -v.scale, w / 2 - v.x * v.scale, h / 2 + v.z * v.scale);
   v.visibleBounds = (w, h) => {
     const [x0, z1] = v.screenToWorld(0, 0, w, h);
