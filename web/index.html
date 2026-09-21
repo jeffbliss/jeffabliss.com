@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Valheim Mapper</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="map"></canvas>
+<div id="toolbar">
+  <button data-tool="pan" title="Pan (H)">Pan</button>
+  <button data-tool="paint" title="Paint terrain (B)">Paint</button>
+  <button data-tool="ink" title="Ink (I)">Ink</button>
+  <button data-tool="fog" title="Fog (F)">Fog</button>
+  <button data-tool="pin" title="Pin (P)">Pin</button>
+  <button data-tool="select" title="Select (V)">Select</button>
+  <span class="sep"></span>
+  <button id="undo" title="Undo (Cmd/Ctrl+Z)">Undo</button>
+  <button id="redo" title="Redo (Shift+Cmd/Ctrl+Z)">Redo</button>
+  <button id="fit" title="Fit world (0)">Fit</button>
+  <span class="sep"></span>
+  <button id="save">Save</button>
+  <button id="export">Export</button>
+  <label class="btn">Import<input id="import" type="file" accept="application/json" hidden></label>
+  <span id="status">loading…</span>
+</div>
+<aside id="sidebar">
+  <section id="tool-options">
+    <label>Brush <input id="brush" type="range" min="8" max="1024" step="8" value="64"> <span id="brush-label">64 m</span></label>
+    <div id="biomes" class="palette"></div>
+    <div id="pin-types" class="palette"></div>
+    <label id="ink-opts">Ink <input id="ink-color" type="color" value="#2b1d0e"> <input id="ink-width" type="range" min="2" max="64" value="8"></label>
+    <button id="reveal-player" title="Reveal 100 m around the player marker">Reveal around player</button>
+  </section>
+  <section>
+    <h3>Grid</h3>
+    <label><input id="grid-visible" type="checkbox" checked> Visible</label>
+    <label>Spacing <input id="grid-spacing" type="number" min="8" step="8" value="64"> m</label>
+  </section>
+  <section><h3>Layers</h3><div id="layers"></div></section>
+</aside>
+<input id="pin-editor" type="text" hidden maxlength="40">
+<script type="module" src="main.js"></script>
+</body>
+</html>
