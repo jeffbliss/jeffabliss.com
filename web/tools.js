@@ -2,6 +2,16 @@ import { createStrokeRecorder } from './history.js';
 
 const HOTKEYS = { h: 'pan', b: 'paint', i: 'ink', f: 'fog', p: 'pin', v: 'select' };
 
+/** True when the key event is aimed at a text field, so app hotkeys must not fire. */
+export const isTypingTarget = e => { const t = e.target; return !!t && (t.tagName === 'INPUT' && !['range', 'checkbox', 'color', 'file', 'button'].includes(t.type) || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable); };
+
+/** Points from a (exclusive) to b (inclusive) spaced at most `step` metres apart. */
+export function interpolate(ax, az, bx, bz, step) {
+  const d = Math.hypot(bx - ax, bz - az), n = Math.max(1, Math.ceil(d / step)), out = [];
+  for (let i = 1; i <= n; i++) out.push([ax + (bx - ax) * i / n, az + (bz - az) * i / n]);
+  return out;
+}
+
 export function createTools(app) {
   const handlers = {};
   const tools = { current: 'pan', options: { biome: 1, brush: 64, inkColor: '#2b1d0e', inkWidth: 8, pinType: 'pin' }, onChange: null };
@@ -29,7 +39,7 @@ export function createTools(app) {
   canvas.addEventListener('contextmenu', e => e.preventDefault());
 
   addEventListener('keydown', e => {
-    if (e.target !== document.body) return;
+    if (isTypingTarget(e)) return;
     const mod = e.metaKey || e.ctrlKey;
     if (mod && e.key.toLowerCase() === 'z') { e.preventDefault(); (e.shiftKey ? app.history.redo() : app.history.undo()); app.markDirty(); return; }
     if (mod && e.key.toLowerCase() === 'y') { e.preventDefault(); app.history.redo(); app.markDirty(); return; }
@@ -55,11 +65,16 @@ export function drawBrushCursor(ctx, view, w, h, tools) {
 export function rasterBrushTool(app, raster, label, fnPrimary, fnSecondary) {
   const rec = createStrokeRecorder(raster);
   let fn = null;
+  let last = null;
   const stamp = (wx, wz) => raster.stamp(wx, wz, app.tools.options.brush, fn);
   return {
-    down(e, wx, wz) { fn = (e.button === 2 || e.altKey) ? fnSecondary() : fnPrimary(); rec.begin(); stamp(wx, wz); },
-    move(e, wx, wz) { if (fn) stamp(wx, wz); },
-    up() { fn = null; const cmd = rec.end(label); if (cmd) { app.history.push(cmd); app.markDirty(); } },
+    down(e, wx, wz) { fn = (e.button === 2 || e.altKey) ? fnSecondary() : fnPrimary(); rec.begin(); stamp(wx, wz); last = [wx, wz]; },
+    move(e, wx, wz) {
+      if (!fn) return;
+      for (const [x, z] of interpolate(last[0], last[1], wx, wz, Math.max(4, app.tools.options.brush * 0.35))) stamp(x, z);
+      last = [wx, wz];
+    },
+    up() { fn = null; last = null; const cmd = rec.end(label); if (cmd) { app.history.push(cmd); app.markDirty(); } },
     cursor: drawBrushCursor,
   };
 }

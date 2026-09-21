@@ -5,7 +5,7 @@ import { createStoreClient, createState, serialize, emptyDoc } from './store.js'
 import { createBase } from './base.js';
 import { createGrid } from './grid.js';
 import { createTerrain } from './terrain.js';
-import { createTools, rasterBrushTool } from './tools.js';
+import { createTools, rasterBrushTool, isTypingTarget } from './tools.js';
 import { PIN_TYPES, BIOMES } from './world.js';
 
 export const loadImage = url => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(url)); i.src = url; });
@@ -52,7 +52,7 @@ function cameraControls() {
   canvas.addEventListener('pointermove', e => { if (!panning) return; const p = pos(e); view.panBy(p[0] - panning[0], p[1] - panning[1]); panning = p; requestRender(); });
   canvas.addEventListener('pointerup', () => { panning = null; });
   canvas.addEventListener('dblclick', e => { const [sx, sy] = pos(e); const [wx, wz] = view.screenToWorld(sx, sy, ...size()); view.x = wx; view.z = wz; requestRender(); });
-  addEventListener('keydown', e => { if (e.code === 'Space' && e.target === document.body) { app.spaceDown = true; e.preventDefault(); } if (e.key === '0' && e.target === document.body) { view.fitWorld(...size()); requestRender(); } });
+  addEventListener('keydown', e => { if (e.code === 'Space' && !isTypingTarget(e)) { app.spaceDown = true; e.preventDefault(); } if (e.key === '0' && !isTypingTarget(e)) { view.fitWorld(...size()); requestRender(); } });
   addEventListener('keyup', e => { if (e.code === 'Space') app.spaceDown = false; });
   document.getElementById('fit').onclick = () => { view.fitWorld(...size()); requestRender(); };
 }
@@ -79,10 +79,10 @@ async function boot() {
   app.tools.register('paint', rasterBrushTool(app, app.state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0));
   app.layers.add(app.tools.cursorLayer);     // stays last; later tasks insert their layers before it with insertBefore
   const biomesEl = document.getElementById('biomes');
-  for (const b of BIOMES) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => app.tools.setOption('biome', b.id); biomesEl.append(btn); }
+  for (const b of BIOMES) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => { app.tools.setOption('biome', b.id); btn.blur(); }; biomesEl.append(btn); }
   const brush = document.getElementById('brush'), brushLabel = document.getElementById('brush-label');
   brush.oninput = () => app.tools.setOption('brush', Number(brush.value));
-  for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.onclick = () => app.tools.set(btn.dataset.tool);
+  for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.onclick = () => { app.tools.set(btn.dataset.tool); btn.blur(); };
   document.getElementById('undo').onclick = () => { app.history.undo(); app.markDirty(); };
   document.getElementById('redo').onclick = () => { app.history.redo(); app.markDirty(); };
   app.tools.onChange = () => {
