@@ -4,7 +4,9 @@ import { createHistory } from './history.js';
 import { createStoreClient, createState, serialize, emptyDoc } from './store.js';
 import { createBase } from './base.js';
 import { createGrid } from './grid.js';
-import { PIN_TYPES } from './world.js';
+import { createTerrain } from './terrain.js';
+import { createTools, rasterBrushTool } from './tools.js';
+import { PIN_TYPES, BIOMES } from './world.js';
 
 export const loadImage = url => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(url)); i.src = url; });
 
@@ -65,6 +67,7 @@ async function boot() {
   try { app.state = await createState(doc); } catch (e) { setStatus(`could not load save (${e.message}); starting empty`, 'error'); app.state = await createState(emptyDoc()); app.loadFailed = true; }
   Object.assign(app.view, app.state.settings.camera);
   app.layers.add(createBase(textures));
+  const terrain = app.layers.add(createTerrain(app.state.terrain, textures));
   app.layers.add(createGrid(app.state.settings));
   const gridVisible = document.getElementById('grid-visible'), gridSpacing = document.getElementById('grid-spacing');
   gridVisible.checked = app.state.settings.grid.visible; gridSpacing.value = app.state.settings.grid.spacing;
@@ -72,6 +75,23 @@ async function boot() {
   gridSpacing.onchange = () => { app.state.settings.grid.spacing = Math.max(8, Number(gridSpacing.value) || 64); app.markDirty(); };
   app.layers.applySettings(app.state.settings.layers);
   cameraControls();
+  app.tools = createTools(app);
+  app.tools.register('paint', rasterBrushTool(app, app.state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0));
+  app.layers.add(app.tools.cursorLayer);     // stays last; later tasks insert their layers before it with insertBefore
+  const biomesEl = document.getElementById('biomes');
+  for (const b of BIOMES) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => app.tools.setOption('biome', b.id); biomesEl.append(btn); }
+  const brush = document.getElementById('brush'), brushLabel = document.getElementById('brush-label');
+  brush.oninput = () => app.tools.setOption('brush', Number(brush.value));
+  for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.onclick = () => app.tools.set(btn.dataset.tool);
+  document.getElementById('undo').onclick = () => { app.history.undo(); app.markDirty(); };
+  document.getElementById('redo').onclick = () => { app.history.redo(); app.markDirty(); };
+  app.tools.onChange = () => {
+    for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.classList.toggle('active', btn.dataset.tool === app.tools.current);
+    for (const btn of biomesEl.children) btn.classList.toggle('active', Number(btn.dataset.biome) === app.tools.options.biome);
+    brush.value = app.tools.options.brush; brushLabel.textContent = `${app.tools.options.brush} m`;
+    document.getElementById('biomes').hidden = app.tools.current !== 'paint';
+  };
+  app.tools.onChange(); app.tools.set('paint');
   addEventListener('resize', resize); resize();
   if (!doc.terrain && !doc.pins?.length) app.view.fitWorld(...size());
   if (!app.loadFailed) setStatus('ready');
