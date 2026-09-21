@@ -8,13 +8,15 @@ html, body { margin: 0; height: 100%; overflow: hidden; background: #111; font: 
 #toolbar .sep { width: 1px; height: 20px; background: #555; margin: 0 4px; }
 button, .btn { background: #3a2f22; color: #e8dcc4; border: 1px solid #6b563c; border-radius: 4px; padding: 4px 8px; cursor: pointer; font: inherit; }
 button.active { background: #8a6a3a; }
-#sidebar { position: fixed; top: 8px; right: 8px; width: 240px; background: #1b1610cc; padding: 8px; border-radius: 6px; display: grid; gap: 8px; }
-#sidebar h3 { margin: 4px 0; font-family: 'Norse', serif; font-size: 16px; }
-#sidebar label { display: flex; gap: 6px; align-items: center; }
-.palette { display: flex; flex-wrap: wrap; gap: 4px; }
-.palette button { padding: 3px 6px; font-size: 12px; }
-.palette img { width: 20px; height: 20px; vertical-align: middle; }
-#layers .layer { display: grid; grid-template-columns: auto 1fr auto; gap: 6px; align-items: center; }
+#sidebar { position: fixed; top: 8px; right: 8px; width: 320px; max-height: calc(100vh - 16px); overflow-y: auto; box-sizing: border-box; background: #1b1610cc; padding: 14px; border-radius: 6px; display: grid; gap: 14px; }
+#sidebar h3 { margin: 6px 0; font-family: 'Norse', serif; font-size: 18px; }
+#sidebar label { display: flex; gap: 8px; align-items: center; min-height: 26px; }
+.palette { display: flex; flex-wrap: wrap; gap: 6px; }
+.palette button { padding: 4px 8px; font-size: 12px; }
+.palette img { width: 22px; height: 22px; vertical-align: middle; }
+#layers { display: grid; gap: 6px; }
+#layers .layer { display: grid; grid-template-columns: 20px 1fr 120px; gap: 10px; align-items: center; min-height: 28px; }
+#layers .layer input[type=range] { width: 100%; min-width: 0; margin: 0; }
 #status { margin-left: 8px; opacity: .8; }
 #status.error { color: #ff7b6b; }
 #pin-editor { position: fixed; background: #1b1610; color: #fff; border: 1px solid #8a6a3a; font: bold 14px 'Norse', serif; padding: 2px 4px; }

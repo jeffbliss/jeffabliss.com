@@ -14,7 +14,7 @@ export function createUI(app) {
       eye.onchange = () => { l.visible = eye.checked; app.markDirty(); };
       const name = document.createElement('span'); name.textContent = l.name;
       const op = Object.assign(document.createElement('input'), { type: 'range', min: 0, max: 1, step: 0.05, value: l.opacity, title: 'opacity' });
-      op.style.width = '70px'; op.oninput = () => { l.opacity = Number(op.value); app.markDirty(); };
+      op.oninput = () => { l.opacity = Number(op.value); app.markDirty(); };
       row.append(eye, name, op); layersEl.append(row);
     }
   }
@@ -99,7 +99,8 @@ export function wireTools(app) {
   gridSpacing.onchange = () => { app.state.settings.grid.spacing = Math.max(8, Number(gridSpacing.value) || 64); app.markDirty(); };
 
   const typesEl = document.getElementById('pin-types');
-  for (const t of PIN_TYPES) { const b = document.createElement('button'); b.title = t; b.dataset.type = t; const img = document.createElement('img'); img.src = `assets/map/mapicon_${t}.png`; b.append(img); b.onclick = () => app.tools.setOption('pinType', t); typesEl.append(b); }
+  // The start pin is fixed at spawn and never placed by hand, so it is not offered in the palette.
+  for (const t of PIN_TYPES.filter(t => t !== 'start')) { const b = document.createElement('button'); b.title = t; b.dataset.type = t; const img = document.createElement('img'); img.src = `assets/map/mapicon_${t}.png`; b.append(img); b.onclick = () => app.tools.setOption('pinType', t); typesEl.append(b); }
 
   app.canvas.addEventListener('pointermove', e => {
     const hit = app.pinsLayer.hitTest(e.offsetX * app.dpr(), e.offsetY * app.dpr(), app.view, ...app.size());

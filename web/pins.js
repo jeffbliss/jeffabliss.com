@@ -11,7 +11,7 @@ export function createPins(state, icons) {
   const layer = {
     id: 'pins', name: 'Pins', selected: null,
     add({ x, z, type, name = '' }) { const pin = { id: crypto.randomUUID(), x, z, type, name, checked: false }; state.pins.push(pin); return pin; },
-    remove(id) { const i = state.pins.findIndex(p => p.id === id); if (i >= 0) state.pins.splice(i, 1); if (layer.selected === id) layer.selected = null; },
+    remove(id) { const i = state.pins.findIndex(p => p.id === id && !p.fixed); if (i >= 0) state.pins.splice(i, 1); if (layer.selected === id) layer.selected = null; },
     update(id, patch) { const p = state.pins.find(p => p.id === id); if (p) Object.assign(p, patch); return p; },
     hitTest(sx, sy, view, w, h) {
       const dpr = window.devicePixelRatio || 1, r = HIT * dpr;
@@ -33,7 +33,8 @@ export function createPins(state, icons) {
         ctx.drawImage(icon, sx - s / 2, sy - s / 2, s, s);
         if (p.checked) ctx.drawImage(icons.checked, sx - s / 2, sy - s / 2, s, s);
         if (p.id === layer.selected) { ctx.beginPath(); ctx.arc(sx, sy, s * 0.6, 0, Math.PI * 2); ctx.strokeStyle = '#ffd77a'; ctx.lineWidth = 2 * dpr; ctx.stroke(); ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.lineWidth = 3 * dpr; }
-        if (p.name) { ctx.strokeText(p.name, sx, sy + s / 2); ctx.fillText(p.name, sx, sy + s / 2); }
+        const label = p.name || (p.fixed ? 'Start' : '');
+        if (label) { ctx.strokeText(label, sx, sy + s / 2); ctx.fillText(label, sx, sy + s / 2); }
       }
       ctx.globalAlpha = base;
       const [px, py] = view.worldToScreen(state.player.x, state.player.z, w, h);
@@ -66,7 +67,7 @@ function dragHandler(app, pins, state) {
 export function selectTool(app, pins, openEditor) {
   const drag = dragHandler(app, pins, app.state);
   return {
-    down(e, wx, wz, sx, sy) { const hit = pins.hitTest(sx, sy, app.view, ...app.size()); if (hit) drag.begin(hit, wx, wz); else pins.selected = null; },
+    down(e, wx, wz, sx, sy) { const hit = pins.hitTest(sx, sy, app.view, ...app.size()); if (hit && !hit.fixed) drag.begin(hit, wx, wz); else pins.selected = null; },
     move(e, wx, wz) { drag.move(wx, wz); },
     up(e) { drag.end(); if (e.detail === 2 && pins.selected && pins.selected !== 'player') openEditor(app.state.pins.find(p => p.id === pins.selected)); },
   };
@@ -77,7 +78,7 @@ export function pinTool(app, pins, openEditor) {
   return {
     down(e, wx, wz, sx, sy) {
       const hit = pins.hitTest(sx, sy, app.view, ...app.size());
-      if (hit) { drag.begin(hit, wx, wz); return; }
+      if (hit) { if (!hit.fixed) drag.begin(hit, wx, wz); return; }   // fixed pins (start) are not draggable and block placement
       if (e.button === 2) return;
       const pin = pins.add({ x: wx, z: wz, type: app.tools.options.pinType });
       pins.selected = pin.id;

@@ -63,3 +63,17 @@ test('load returns an empty doc on 204, not the localStorage copy', async () => 
   const c = createStoreClient({ fetchFn: async () => ({ ok: true, status: 204, json: async () => { throw new Error('no body'); } }), storage });
   assert.equal((await c.load()).pins.length, 0);
 });
+
+test('every state has exactly one fixed start pin at spawn', async () => {
+  const s = await createState(emptyDoc());
+  const starts = s.pins.filter(p => p.type === 'start');
+  assert.equal(starts.length, 1);
+  assert.deepEqual([starts[0].x, starts[0].z, starts[0].fixed], [0, 0, true]);
+  // an older save without a start pin gets one added first; a save with one is left alone
+  const doc = { ...emptyDoc(), pins: [{ id: 'a', x: 5, z: 5, type: 'fire', name: '', checked: false }, { id: 'b', x: 99, z: 99, type: 'start', name: 'moved', checked: false }] };
+  const s2 = await createState(doc);
+  assert.equal(s2.pins[0].type, 'start'); assert.equal(s2.pins.length, 2);   // stray start pin replaced by the canonical one
+  assert.deepEqual([s2.pins[0].x, s2.pins[0].z], [0, 0]);
+  const s3 = await createState(await serialize(s2));
+  assert.equal(s3.pins.filter(p => p.type === 'start').length, 1);
+});

@@ -21,6 +21,14 @@ async function rasterFrom(b64) {
 }
 const rasterTo = async r => toBase64(await encodeGray(r.data, r.cells, r.cells));
 
+/** The spawn marker: fixed at the world centre like the in-game start pin. Added to any pin list that lacks one. */
+export function ensureStartPin(pins) {
+  const rest = pins.filter(p => p.type !== 'start');           // drop any hand-placed or moved start pins
+  pins.length = 0;
+  pins.push({ id: 'start', x: 0, z: 0, type: 'start', name: '', checked: false, fixed: true }, ...rest);
+  return pins;
+}
+
 export async function createState(doc = emptyDoc()) {
   if (doc.version !== SAVE_VERSION) throw new Error(`unsupported save version ${doc.version}`);
   const base = emptyDoc();
@@ -28,7 +36,7 @@ export async function createState(doc = emptyDoc()) {
     terrain: await rasterFrom(doc.terrain),
     fog: await rasterFrom(doc.fog),
     ink: structuredClone(doc.ink ?? []),
-    pins: structuredClone(doc.pins ?? []),
+    pins: ensureStartPin(structuredClone(doc.pins ?? [])),
     player: { ...base.player, ...doc.player },
     settings: { ...base.settings, ...doc.settings, grid: { ...base.settings.grid, ...doc.settings?.grid } },
   };
