@@ -1,4 +1,4 @@
-import { BRUSH_SIZES } from './tools.js';
+import { BRUSH_SIZES, INK_WIDTHS } from './tools.js';
 import { serialize } from './store.js';
 import { pinKeys, pinOps } from './pins.js';
 import { PIN_TYPES, BIOMES } from './world.js';
@@ -119,9 +119,9 @@ export function wireTools(app) {
     app.canvas.title = hit ? `${hit.name || hit.type} (${Math.round(hit.x)}, ${Math.round(hit.z)})` : '';
   });
 
-  const inkColor = document.getElementById('ink-color'), inkWidth = document.getElementById('ink-width');
+  const inkColor = document.getElementById('ink-color'), inkWidth = document.getElementById('ink-width'), inkLabel = document.getElementById('ink-label');
   inkColor.oninput = () => app.tools.setOption('inkColor', inkColor.value);
-  inkWidth.oninput = () => app.tools.setOption('inkWidth', Number(inkWidth.value));
+  for (const m of INK_WIDTHS) { const b = document.createElement('button'); b.textContent = `${m} m`; b.dataset.width = m; b.onclick = () => { app.tools.setOption('inkWidth', m); b.blur(); }; inkWidth.append(b); }
 
   const biomesEl = document.getElementById('biomes');
   // Palette: None, Fog (re-fogs an area, keeping the terrain under it), then the biomes.
@@ -139,6 +139,8 @@ export function wireTools(app) {
     for (const btn of biomesEl.children) btn.classList.toggle('active', btn.dataset.biome === String(app.tools.options.biome));
     for (const b of brush.children) b.classList.toggle('active', Number(b.dataset.brush) === app.tools.options.brush);
     brushLabel.textContent = `${app.tools.options.brush} m radius`;
+    for (const b of inkWidth.children) b.classList.toggle('active', Number(b.dataset.width) === app.tools.options.inkWidth);
+    inkLabel.textContent = `${app.tools.options.inkWidth} m`;
     document.getElementById('paint-opts').hidden = app.tools.current !== 'paint';
     app.canvas.style.cursor = app.tools.current === 'pan' ? 'grab' : 'crosshair';
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';

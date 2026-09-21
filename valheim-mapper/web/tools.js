@@ -3,6 +3,9 @@ import { createStrokeRecorder, combine } from './history.js';
 /** Brush radii in metres. 8 m is one raster cell; 128 m is a whole biome patch. */
 export const BRUSH_SIZES = [8, 16, 32, 64, 128];
 export const DEFAULT_BRUSH = 32;
+/** Ink stroke widths in metres. 2 m is a hairline for cliffs and inlets; 4 m (half a raster cell) suits coastlines; 32 m is a bold region border. */
+export const INK_WIDTHS = [2, 4, 8, 16, 32];
+export const DEFAULT_INK_WIDTH = 4;
 
 const HOTKEYS = { h: 'pan', b: 'paint', i: 'ink', p: 'pin', v: 'select' };
 
@@ -18,7 +21,7 @@ export function interpolate(ax, az, bx, bz, step) {
 
 export function createTools(app) {
   const handlers = {};
-  const tools = { current: 'pan', options: { biome: 1, brush: DEFAULT_BRUSH, inkColor: '#2b1d0e', inkWidth: 8, pinType: 'pin' }, onChange: null };
+  const tools = { current: 'pan', options: { biome: 1, brush: DEFAULT_BRUSH, inkColor: '#2b1d0e', inkWidth: DEFAULT_INK_WIDTH, pinType: 'pin' }, onChange: null };
   tools.register = (name, handler) => { handlers[name] = handler; };
   tools.set = name => { if (!handlers[name] && name !== 'pan') return; tools.current = name; app.tool = name; tools.onChange?.(); app.requestRender(); };
   tools.setOption = (k, v) => { tools.options[k] = v; tools.onChange?.(); app.requestRender(); };
@@ -49,9 +52,11 @@ export function createTools(app) {
     if (mod && e.key.toLowerCase() === 'z') { e.preventDefault(); if (e.shiftKey ? app.history.redo() : app.history.undo()) app.markDirty(); return; }
     if (mod && e.key.toLowerCase() === 'y') { e.preventDefault(); if (app.history.redo()) app.markDirty(); return; }
     if (HOTKEYS[e.key.toLowerCase()] && !mod) tools.set(HOTKEYS[e.key.toLowerCase()]);
-    const bi = BRUSH_SIZES.indexOf(tools.options.brush);
-    if (e.key === '[') tools.setOption('brush', BRUSH_SIZES[Math.max(0, bi - 1)]);
-    if (e.key === ']') tools.setOption('brush', BRUSH_SIZES[Math.min(BRUSH_SIZES.length - 1, bi + 1)]);
+    // [ and ] step the size of whichever tool is active: ink width in Ink, brush radius otherwise.
+    const [key, sizes] = tools.current === 'ink' ? ['inkWidth', INK_WIDTHS] : ['brush', BRUSH_SIZES];
+    const i = sizes.indexOf(tools.options[key]);
+    if (e.key === '[') tools.setOption(key, sizes[Math.max(0, i - 1)]);
+    if (e.key === ']') tools.setOption(key, sizes[Math.min(sizes.length - 1, i + 1)]);
   });
 
   /** Overlay layer drawing the brush cursor for the active tool. */
