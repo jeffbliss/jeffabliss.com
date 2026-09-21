@@ -1,9 +1,10 @@
 export function createLayers() {
   const list = [];
   const L = { list };
-  L.add = layer => { const l = Object.assign({ visible: true, opacity: 1 }, layer); list.push(l); return l; };
+  const wrap = layer => Object.defineProperties({ visible: true, opacity: 1 }, Object.getOwnPropertyDescriptors(layer));
+  L.add = layer => { const l = wrap(layer); list.push(l); return l; };
   L.get = id => list.find(l => l.id === id);
-  L.insertBefore = (id, layer) => { const l = Object.assign({ visible: true, opacity: 1 }, layer); const i = list.findIndex(x => x.id === id); list.splice(i < 0 ? list.length : i, 0, l); return l; };
+  L.insertBefore = (id, layer) => { const l = wrap(layer); const i = list.findIndex(x => x.id === id); list.splice(i < 0 ? list.length : i, 0, l); return l; };
   L.draw = (ctx, view, w, h) => {
     for (const l of list) {
       if (!l.visible || l.opacity <= 0) continue;
