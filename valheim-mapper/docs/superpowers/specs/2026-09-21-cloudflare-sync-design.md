@@ -139,7 +139,7 @@ base64) and cached until the next op.
 2. Zero Trust: create team domain if none; Access → Applications → Add self-hosted:
    domain `jeffabliss.com`, path `valheim-mapper`; session 1 month; policy Allow, Include Emails
    (the four addresses); login method One-time PIN. Copy the AUD tag.
-3. `wrangler secret put ACCESS_AUD` (or var) and set `ACCESS_TEAM` var; redeploy.
+3. `wrangler secret put ACCESS_TEAM` and `wrangler secret put ACCESS_AUD` (secrets only; the names must not appear as `vars` in wrangler.jsonc or a deploy would overwrite them).
 4. Workers → valheim-mapper → Settings → Domains & Routes: disable `workers.dev`.
 5. Verify: incognito visit prompts for email OTP; `curl` without token → 403.
 
