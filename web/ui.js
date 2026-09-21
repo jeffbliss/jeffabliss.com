@@ -1,4 +1,4 @@
-import { serialize, createState } from './store.js';
+import { serialize, createState, emptyDoc } from './store.js';
 import { createStrokeRecorder } from './history.js';
 import { pinKeys } from './pins.js';
 import { PIN_TYPES, BIOMES, EXPLORE_RADIUS } from './world.js';
@@ -23,6 +23,24 @@ export function createUI(app) {
   app.history.onChange = () => { undo.disabled = !app.history.canUndo(); redo.disabled = !app.history.canRedo(); };
   app.history.onChange();
 
+  /** Swap in a fresh state (Import / New map): save the old one first, rebuild layers, reset history and UI. */
+  async function replaceState(state, statusText) {
+    const savedOk = await app.store.flush({ maxAttempts: 2 });
+    if (!savedOk) app.setStatus('previous map could not be saved to the server; kept a local copy', 'error');
+    app.rebuild(state); app.history.clear(); app.loadFailed = false;
+    syncGridInputs(app); app.tools.onChange();
+    app.markDirty(); refreshLayers();
+    app.setStatus(statusText);
+  }
+
+  document.getElementById('new-map').onclick = async () => {
+    if (!confirm('Start a new map? This clears terrain, fog, ink and pins and overwrites the saved map. Export first if you want to keep the current one.')) return;
+    try {
+      await replaceState(await createState(emptyDoc()), 'new map');
+      app.view.fitWorld(...app.size()); app.markDirty();
+    } catch (err) { app.setStatus(`reset failed: ${err.message}`, 'error'); }
+  };
+
   document.getElementById('save').onclick = () => {
     if (app.loadFailed) {
       if (!confirm('The saved map could not be read. Overwrite it with the current (empty) map?')) return;
@@ -39,13 +57,7 @@ export function createUI(app) {
     const file = e.target.files[0]; if (!file) return;
     if (!confirm(`Replace the current map with ${file.name}? The current map is saved first.`)) { e.target.value = ''; return; }
     try {
-      const savedOk = await app.store.flush({ maxAttempts: 2 });
-      if (!savedOk) app.setStatus('previous map could not be saved to the server; kept a local copy', 'error');
-      const state = await createState(JSON.parse(await file.text()));
-      app.rebuild(state); app.history.clear(); app.loadFailed = false;
-      syncGridInputs(app); app.tools.onChange();
-      app.markDirty(); refreshLayers();
-      app.setStatus(`imported ${file.name}`);
+      await replaceState(await createState(JSON.parse(await file.text())), `imported ${file.name}`);
     } catch (err) { app.setStatus(`import failed: ${err.message}`, 'error'); }
     finally { e.target.value = ''; }
   };

@@ -14,7 +14,7 @@ Hand-draw a Valheim world map outside the game, in the in-game style, for no-map
 - Pins: click to place; selected pin → Enter rename, `X` toggle checked, Delete remove; drag to move
 - Undo/redo: Cmd/Ctrl+Z, Shift+Cmd/Ctrl+Z
 
-Map autosaves to `data/map.json` (with `.bak`). Export/Import produce a portable JSON file.
+Map autosaves to `data/map.json` (with `.bak`). Export/Import produce a portable JSON file. **New map** resets everything to an empty map with only the start pin (export first if you want to keep the current one).
 
 ## Development
 `npm test` runs the unit tests (Node ≥ 20, no dependencies).
