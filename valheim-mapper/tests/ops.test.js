@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { makeState, validateOp, validateRaster, applyOp, applyRaster, tilesForRect, tileBytes, putTile, snapshotDoc, TILE } from '../worker/ops.js';
+import { makeState, validateOp, validateRaster, planOp, applyOp, applyRaster, tilesForRect, tileBytes, putTile, snapshotDoc, TILE } from '../worker/ops.js';
 import { createState } from '../web/store.js';
 
 test('makeState has the fixed start pin and empty rasters', () => {
@@ -20,6 +20,8 @@ test('raster op validation and apply', () => {
   assert.match(validateRaster({ layer: 0, rect: { x0: 0, z0: 0, x1: 1, z1: 0 }, bytes: new Uint8Array(3) }), /length/);
   assert.match(validateRaster({ layer: 2, rect: { x0: 0, z0: 0, x1: 0, z1: 0 }, bytes: new Uint8Array(1) }), /layer/);
   assert.match(validateRaster({ layer: 0, rect: { x0: 0, z0: 0, x1: 0, z1: 0 }, bytes: new Uint8Array([10]) }), /biome/);   // terrain ids ≤ 9
+  assert.equal(validateRaster({ layer: 1, rect: { x0: 0, z0: 0, x1: 511, z1: 511 }, bytes: new Uint8Array(512 * 512) }), null);
+  assert.match(validateRaster({ layer: 1, rect: { x0: 0, z0: 0, x1: 512, z1: 511 }, bytes: new Uint8Array(513 * 512) }), /too large/);
   const touched = applyRaster(s, { layer: 1, rect: { x0: 126, z0: 0, x1: 129, z1: 0 }, bytes: new Uint8Array([255, 255, 255, 255]) });
   assert.deepEqual([...touched].sort(), ['1:0:0', '1:1:0']); assert.equal(s.fog.data[128], 255);
 });
@@ -54,4 +56,28 @@ test('snapshotDoc round-trips through the client state factory', async () => {
   assert.equal(doc.version, 1); assert.equal(doc.ink.length, 1); assert.equal(doc.pins[0].type, 'start');
   const c = await createState(JSON.parse(JSON.stringify(doc)));
   assert.equal(c.terrain.get(-10240 + 5 * 8 + 4, -10240 + 5 * 8 + 4), 3); assert.equal(c.ink[0].id, 's1');
+});
+test('planOp returns applyOp\'s rows without mutating the state', () => {
+  const base = makeState();
+  applyOp(base, { type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: 'Camp', checked: false } });
+  const ops = [
+    { type: 'pin.add', pin: { id: 'p2', x: 3, z: 4, type: 'fire', name: 'Other', checked: true } },
+    { type: 'pin.update', id: 'p1', patch: { checked: true, name: 'Camp 2' } },
+    { type: 'pin.update', id: 'missing', patch: { checked: true } },
+    { type: 'pin.remove', id: 'p1' },
+    { type: 'pin.remove', id: 'nope' },
+    { type: 'ink.add', stroke: { id: 's1', color: '#123456', width: 4, points: [[0, 0], [1, 1]] } },
+    { type: 'ink.remove', id: 's1' },
+    { type: 'ink.remove', id: 'gone' },
+  ];
+  for (const op of ops) {
+    const s = makeState();
+    applyOp(s, { type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: 'Camp', checked: false } });
+    applyOp(s, { type: 'ink.add', stroke: { id: 's1', color: '#123456', width: 4, points: [[0, 0], [1, 1]] } });
+    const pins = s.pins.size, ink = s.ink.size, before = JSON.stringify([...s.pins.values()]);
+    const planned = planOp(s, op);
+    assert.equal(s.pins.size, pins, op.type); assert.equal(s.ink.size, ink, op.type);
+    assert.equal(JSON.stringify([...s.pins.values()]), before, op.type);
+    assert.deepEqual(planned.persist, applyOp(s, op).persist, op.type);
+  }
 });

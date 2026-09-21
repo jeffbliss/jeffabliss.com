@@ -27,9 +27,12 @@ const isId = v => typeof v === 'string' && v.length > 0 && v.length <= 64;
 const isNum = v => typeof v === 'number' && Number.isFinite(v);
 const isColor = v => typeof v === 'string' && /^#[0-9a-f]{6}$/i.test(v);
 
+export const MAX_RECT_AREA = 512 * 512;
+
 export function validateRaster({ layer, rect, bytes }) {
   if (!(layer === 0 || layer === 1)) return 'bad layer';
   if (!rect || !rectValid(rect)) return 'bad rect';
+  if (rectArea(rect) > MAX_RECT_AREA) return 'rect too large';
   if (!(bytes instanceof Uint8Array) || bytes.length !== rectArea(rect)) return 'bad length';
   if (layer === 0) for (let i = 0; i < bytes.length; i++) if (bytes[i] > MAX_BIOME) return 'bad biome id';
   return null;
@@ -64,14 +67,26 @@ export function applyRaster(state, { layer, rect, bytes }) {
   raster.restore(rect, bytes);
   return new Set(tilesForRect(rect).map(({ tx, tz }) => tileKey(layer, tx, tz)));
 }
-export function applyOp(state, op) {
+/** The rows `applyOp` would write, computed without touching `state`. Lets the caller persist before mutating memory. */
+export function planOp(state, op) {
   const persist = [];
   switch (op.type) {
-    case 'ink.add': { const s = { id: op.stroke.id, color: op.stroke.color, width: op.stroke.width, points: op.stroke.points }; state.ink.set(s.id, s); persist.push({ table: 'ink', id: s.id, json: JSON.stringify(s) }); break; }
-    case 'ink.remove': if (state.ink.delete(op.id)) persist.push({ table: 'ink', id: op.id, json: null }); break;
-    case 'pin.add': { const p = { id: op.pin.id, x: op.pin.x, z: op.pin.z, type: op.pin.type, name: op.pin.name, checked: op.pin.checked }; state.pins.set(p.id, p); persist.push({ table: 'pins', id: p.id, json: JSON.stringify(p) }); break; }
-    case 'pin.update': { const p = state.pins.get(op.id); if (!p) break; Object.assign(p, op.patch); persist.push({ table: 'pins', id: p.id, json: JSON.stringify(p) }); break; }
-    case 'pin.remove': if (state.pins.delete(op.id)) persist.push({ table: 'pins', id: op.id, json: null }); break;
+    case 'ink.add': { const s = { id: op.stroke.id, color: op.stroke.color, width: op.stroke.width, points: op.stroke.points }; persist.push({ table: 'ink', id: s.id, json: JSON.stringify(s) }); break; }
+    case 'ink.remove': if (state.ink.has(op.id)) persist.push({ table: 'ink', id: op.id, json: null }); break;
+    case 'pin.add': { const p = { id: op.pin.id, x: op.pin.x, z: op.pin.z, type: op.pin.type, name: op.pin.name, checked: op.pin.checked }; persist.push({ table: 'pins', id: p.id, json: JSON.stringify(p) }); break; }
+    case 'pin.update': { const p = state.pins.get(op.id); if (p) persist.push({ table: 'pins', id: p.id, json: JSON.stringify({ ...p, ...op.patch }) }); break; }
+    case 'pin.remove': if (state.pins.has(op.id)) persist.push({ table: 'pins', id: op.id, json: null }); break;
+  }
+  return { persist };
+}
+export function applyOp(state, op) {
+  const { persist } = planOp(state, op);
+  switch (op.type) {
+    case 'ink.add': { const s = { id: op.stroke.id, color: op.stroke.color, width: op.stroke.width, points: op.stroke.points }; state.ink.set(s.id, s); break; }
+    case 'ink.remove': state.ink.delete(op.id); break;
+    case 'pin.add': { const p = { id: op.pin.id, x: op.pin.x, z: op.pin.z, type: op.pin.type, name: op.pin.name, checked: op.pin.checked }; state.pins.set(p.id, p); break; }
+    case 'pin.update': { const p = state.pins.get(op.id); if (p) Object.assign(p, op.patch); break; }
+    case 'pin.remove': state.pins.delete(op.id); break;
   }
   return { persist };
 }

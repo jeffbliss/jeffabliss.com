@@ -5,7 +5,8 @@ Hand-draw a Valheim world map outside the game, in the in-game style, for no-map
 ## Setup
 1. Extract game assets once (needs the Steam install): `source activate.sh && python scripts/extract_assets.py out/assets && npm run assets`
 2. `npm install`
-3. Local dev: `npm run dev` → http://localhost:8787/valheim-mapper/ . Open a second tab with `?as=friend@x` to simulate another user.
+3. Create `.dev.vars` with `DEV_IDENTITY=dev@localhost` for local dev (gitignored; it bypasses Cloudflare Access on your machine).
+4. Local dev: `npm run dev` → http://localhost:8787/valheim-mapper/ . Open a second tab with `?as=friend@x` to simulate another user.
 
 ## Deploy
 `npm run deploy` from a machine with `web/assets/` populated. Access setup: see `docs/superpowers/runbook-cloudflare.md`.

@@ -1,18 +1,23 @@
 // Cloudflare Access JWT verification with WebCrypto. Works in Workers and Node ≥ 20.
-const cache = new Map();                       // team → { keys: Map<kid, CryptoKey>, fetchedAt }
+const cache = new Map();                       // team → { keys: Map<kid, CryptoKey>, fetchedAt, lastFetch }
 export const resetJwksCache = () => cache.clear();
+const MAX_AGE_MS = 3_600_000, REFETCH_MS = 60_000;
 
 const b64uToBytes = s => { s = s.replace(/-/g, '+').replace(/_/g, '/'); const bin = atob(s + '='.repeat((4 - s.length % 4) % 4)); return Uint8Array.from(bin, c => c.charCodeAt(0)); };
 const decodeJson = s => JSON.parse(new TextDecoder().decode(b64uToBytes(s)));
 
 async function keysFor(team, kid, fetchFn, now) {
   let entry = cache.get(team);
-  if (!entry || !entry.keys.has(kid) || now - entry.fetchedAt > 3_600_000) {
+  const expired = !entry || now - entry.fetchedAt > MAX_AGE_MS;
+  if (expired || !entry.keys.has(kid)) {
+    // An unknown kid is the one thing an attacker can pick freely: don't let it drive one origin fetch per request.
+    if (!expired && now - entry.lastFetch < REFETCH_MS) throw new Error('unknown signing key');
+    cache.set(team, { keys: entry?.keys ?? new Map(), fetchedAt: entry?.fetchedAt ?? now, lastFetch: now });
     const res = await fetchFn(`https://${team}.cloudflareaccess.com/cdn-cgi/access/certs`);
     if (!res.ok) throw new Error('jwks fetch failed');
     const { keys } = await res.json(); const map = new Map();
-    for (const k of keys) if (k.kty === 'RSA' && (k.alg ?? 'RS256') === 'RS256') map.set(k.kid, await crypto.subtle.importKey('jwk', { kty: k.kty, n: k.n, e: k.e, alg: 'RS256', ext: true }, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']));
-    entry = { keys: map, fetchedAt: now }; cache.set(team, entry);
+    for (const k of keys) if (k.kty === 'RSA' && (k.alg ?? 'RS256') === 'RS256' && (k.use ?? 'sig') === 'sig') map.set(k.kid, await crypto.subtle.importKey('jwk', { kty: k.kty, n: k.n, e: k.e, alg: 'RS256', ext: true }, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']));
+    entry = { keys: map, fetchedAt: now, lastFetch: now }; cache.set(team, entry);
   }
   const key = entry.keys.get(kid); if (!key) throw new Error('unknown signing key');
   return key;

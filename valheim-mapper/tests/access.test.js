@@ -40,3 +40,21 @@ test('identityFromRequest: dev identity with ?as override, else header required'
   assert.deepEqual(await identityFromRequest(new Request('http://x/valheim-mapper/?as=b@x'), env), { email: 'b@x' });
   await assert.rejects(identityFromRequest(new Request('http://x/'), { ACCESS_TEAM: 't', ACCESS_AUD: 'a' }), /token/);
 });
+test('unknown kids do not trigger a JWKS refetch per request', async () => {
+  resetJwksCache(); const { sign, fetchFn, fetches } = await setup();
+  const opts = { team: 'team1', aud: 'aud-1', fetchFn, now };
+  await assert.rejects(verifyAccessJwt(await sign(claims, { alg: 'RS256', kid: 'x1' }), opts), /unknown signing key/);
+  await assert.rejects(verifyAccessJwt(await sign(claims, { alg: 'RS256', kid: 'x2' }), opts), /unknown signing key/);
+  assert.equal(fetches(), 1);
+  await verifyAccessJwt(await sign(claims), opts);                      // the good kid was in that one fetch
+  assert.equal(fetches(), 1);
+  await assert.rejects(verifyAccessJwt(await sign(claims, { alg: 'RS256', kid: 'x3' }), { ...opts, now: now + 61_000 }), /unknown signing key/);
+  assert.equal(fetches(), 2);                                          // ... but after 60 s one more refetch is allowed
+});
+test('ignores JWKS entries that are not signing keys', async () => {
+  resetJwksCache(); const { sign } = await setup();
+  const { publicKey } = await crypto.subtle.generateKey({ name: 'RSASSA-PKCS1-v1_5', modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: 'SHA-256' }, true, ['sign', 'verify']);
+  const jwk = await crypto.subtle.exportKey('jwk', publicKey);
+  const fetchFn = async () => ({ ok: true, json: async () => ({ keys: [{ ...jwk, kid: 'k1', alg: 'RS256', use: 'enc' }] }) });
+  await assert.rejects(verifyAccessJwt(await sign(claims), { team: 'team1', aud: 'aud-1', fetchFn, now }), /unknown signing key/);
+});
