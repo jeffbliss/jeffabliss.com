@@ -11,7 +11,7 @@ export function applyRemoteOp(state, op) {
   }
 }
 
-export function createSync(app, { WebSocketImpl = globalThis.WebSocket, url = new URL('api/ws', location.href).href.replace(/^http/, 'ws'), now = Date.now, setTimeoutFn = setTimeout } = {}) {
+export function createSync(app, { WebSocketImpl = globalThis.WebSocket, url = new URL('api/ws' + location.search, location.href).href.replace(/^http/, 'ws'), now = Date.now, setTimeoutFn = setTimeout } = {}) {
   let ws = null, backoff = 1000, lastCursor = -Infinity, pendingCursor = null, cursorTimer = false, hadHello = false;
   const sync = { status: 'connecting', onStatus: null, onPresence: null, you: null };
   const setStatus = s => { sync.status = s; sync.onStatus?.(s); };
