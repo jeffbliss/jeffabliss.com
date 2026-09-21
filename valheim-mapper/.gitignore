@@ -6,3 +6,5 @@ data/
 node_modules/
 .superpowers/
 web/assets/
+.wrangler/
+node_modules/
