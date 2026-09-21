@@ -13,6 +13,7 @@ button.active { background: #8a6a3a; }
 #sidebar { position: fixed; top: 8px; right: 8px; width: 320px; max-height: calc(100vh - 16px); overflow-y: auto; box-sizing: border-box; background: #1b1610cc; padding: 14px; border-radius: 6px; display: grid; gap: 14px; }
 #sidebar h3 { margin: 6px 0; font-family: 'Norse', serif; font-size: 18px; }
 #sidebar label { display: flex; gap: 8px; align-items: center; min-height: 26px; }
+.row-label { display: flex; gap: 8px; align-items: center; min-height: 26px; }
 .palette { display: flex; flex-wrap: wrap; gap: 6px; }
 .palette button { padding: 4px 8px; font-size: 12px; }
 .palette img { width: 22px; height: 22px; vertical-align: middle; }

@@ -22,7 +22,7 @@ export function createPresence(getYou) {
       id: 'presence', name: 'Friends',
       draw(ctx, view, w, h) {
         const dpr = globalThis.devicePixelRatio || 1;
-        ctx.font = `bold ${Math.round(12 * dpr)}px Norse`;
+        ctx.font = `bold ${Math.round(14 * dpr)}px Norse`;
         ctx.textBaseline = 'middle'; ctx.textAlign = 'left'; ctx.lineWidth = 3 * dpr;
         for (const u of p.visible()) {
           const [sx, sy] = view.worldToScreen(u.x, u.z, w, h);

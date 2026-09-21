@@ -1,3 +1,4 @@
+import { BRUSH_SIZES } from './tools.js';
 import { serialize } from './store.js';
 import { pinKeys, pinOps } from './pins.js';
 import { PIN_TYPES, BIOMES } from './world.js';
@@ -109,12 +110,6 @@ export function syncGridInputs(app) {
 }
 
 /** Wires the toolbar, biome/pin-type palettes, grid controls and tool option UI. Reads layer objects via app.* so it stays valid across app.rebuild. */
-const TOOL_HINTS = {
-  pan: 'Drag to pan. Wheel zooms, double-click recentres, 0 fits the world.',
-  paint: 'Left drag paints the biome and clears fog. Right or Alt drag erases terrain. The Fog swatch re-fogs an area (right drag reveals). [ ] change brush size.',
-  ink: 'Left drag draws and clears fog along the line. Right or Alt drag erases whole strokes.',
-};
-
 export function wireTools(app) {
   const gridVisible = document.getElementById('grid-visible'), gridSpacing = document.getElementById('grid-spacing');
   syncGridInputs(app);
@@ -140,7 +135,7 @@ export function wireTools(app) {
   for (const b of swatches) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => { app.tools.setOption('biome', b.id); btn.blur(); }; biomesEl.append(btn); }
 
   const brush = document.getElementById('brush'), brushLabel = document.getElementById('brush-label');
-  brush.oninput = () => app.tools.setOption('brush', Number(brush.value));
+  for (const m of BRUSH_SIZES) { const b = document.createElement('button'); b.textContent = `${m} m`; b.dataset.brush = m; b.onclick = () => { app.tools.setOption('brush', m); b.blur(); }; brush.append(b); }
   for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.onclick = () => { app.tools.set(btn.dataset.tool); btn.blur(); };
   document.getElementById('undo').onclick = () => { if (app.history.undo()) app.markDirty(); };
   document.getElementById('redo').onclick = () => { if (app.history.redo()) app.markDirty(); };
@@ -148,9 +143,9 @@ export function wireTools(app) {
   app.tools.onChange = () => {
     for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.classList.toggle('active', btn.dataset.tool === app.tools.current);
     for (const btn of biomesEl.children) btn.classList.toggle('active', btn.dataset.biome === String(app.tools.options.biome));
-    brush.value = app.tools.options.brush; brushLabel.textContent = `${app.tools.options.brush} m`;
+    for (const b of brush.children) b.classList.toggle('active', Number(b.dataset.brush) === app.tools.options.brush);
+    brushLabel.textContent = `${app.tools.options.brush} m radius`;
     biomesEl.hidden = app.tools.current !== 'paint';
-    document.getElementById('tool-hint').textContent = TOOL_HINTS[app.tools.current] ?? '';
     app.canvas.style.cursor = app.tools.current === 'pan' ? 'grab' : 'crosshair';
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
     typesEl.hidden = app.tools.current !== 'pin';

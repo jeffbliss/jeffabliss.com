@@ -1,5 +1,9 @@
 import { createStrokeRecorder, combine } from './history.js';
 
+/** Brush radii in metres. 8 m is one raster cell; 128 m is a whole biome patch. */
+export const BRUSH_SIZES = [8, 16, 32, 64, 128];
+export const DEFAULT_BRUSH = 32;
+
 const HOTKEYS = { h: 'pan', b: 'paint', i: 'ink', p: 'pin', v: 'select' };
 
 /** True when the key event is aimed at a text field, so app hotkeys must not fire. */
@@ -14,7 +18,7 @@ export function interpolate(ax, az, bx, bz, step) {
 
 export function createTools(app) {
   const handlers = {};
-  const tools = { current: 'pan', options: { biome: 1, brush: 64, inkColor: '#2b1d0e', inkWidth: 8, pinType: 'pin' }, onChange: null };
+  const tools = { current: 'pan', options: { biome: 1, brush: DEFAULT_BRUSH, inkColor: '#2b1d0e', inkWidth: 8, pinType: 'pin' }, onChange: null };
   tools.register = (name, handler) => { handlers[name] = handler; };
   tools.set = name => { if (!handlers[name] && name !== 'pan') return; tools.current = name; app.tool = name; tools.onChange?.(); app.requestRender(); };
   tools.setOption = (k, v) => { tools.options[k] = v; tools.onChange?.(); app.requestRender(); };
@@ -45,8 +49,9 @@ export function createTools(app) {
     if (mod && e.key.toLowerCase() === 'z') { e.preventDefault(); if (e.shiftKey ? app.history.redo() : app.history.undo()) app.markDirty(); return; }
     if (mod && e.key.toLowerCase() === 'y') { e.preventDefault(); if (app.history.redo()) app.markDirty(); return; }
     if (HOTKEYS[e.key.toLowerCase()] && !mod) tools.set(HOTKEYS[e.key.toLowerCase()]);
-    if (e.key === '[') tools.setOption('brush', Math.max(8, tools.options.brush / 2));
-    if (e.key === ']') tools.setOption('brush', Math.min(2048, tools.options.brush * 2));
+    const bi = BRUSH_SIZES.indexOf(tools.options.brush);
+    if (e.key === '[') tools.setOption('brush', BRUSH_SIZES[Math.max(0, bi - 1)]);
+    if (e.key === ']') tools.setOption('brush', BRUSH_SIZES[Math.min(BRUSH_SIZES.length - 1, bi + 1)]);
   });
 
   /** Overlay layer drawing the brush cursor for the active tool. */

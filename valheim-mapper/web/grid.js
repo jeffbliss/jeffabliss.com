@@ -25,7 +25,7 @@ export function createGrid(settings) {
       // Labels on 1 km lines (or every line when spacing >= 1 km)
       const labelEvery = Math.max(s, 1000);
       ctx.setTransform(1, 0, 0, 1, 0, 0);
-      ctx.font = `${Math.round(11 * (window.devicePixelRatio || 1))}px "Averia Serif"`;
+      ctx.font = `${Math.round(13 * (window.devicePixelRatio || 1))}px "Averia Serif"`;
       ctx.fillStyle = 'rgba(40, 25, 10, 0.7)'; ctx.textBaseline = 'top';
       for (let x = Math.ceil(x0 / labelEvery) * labelEvery; x <= x1; x += labelEvery) { const [sx] = view.worldToScreen(x, 0, w, h); ctx.fillText(`${x}`, sx + 3, 3); }
       for (let z = Math.ceil(z0 / labelEvery) * labelEvery; z <= z1; z += labelEvery) { const [, sy] = view.worldToScreen(0, z, w, h); ctx.fillText(`${z}`, 3, sy + 3); }
