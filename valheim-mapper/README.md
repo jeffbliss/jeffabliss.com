@@ -9,7 +9,11 @@ Hand-draw a Valheim world map outside the game, in the in-game style, for no-map
 4. Local dev: `npm run dev` → http://localhost:8787/valheim-mapper/ . Open a second tab with `?as=friend@x` to simulate another user.
 
 ## Deploy
-`npm run deploy` from a machine with `web/assets/` populated. Access setup: see `docs/superpowers/runbook-cloudflare.md`.
+`npm run deploy` from a machine with `web/assets/` populated, then set the Access secrets
+(`npx wrangler secret put ACCESS_TEAM` and `ACCESS_AUD` — the Worker must exist first, so
+deploy before setting secrets). Full Zero Trust/Access setup, verification steps and
+operations (logs, allow-list rotation, backup, storage reset): see
+`docs/superpowers/runbook-cloudflare.md`.
 
 ## Controls
 - Wheel: zoom · Middle-drag / Space+drag: pan · Double-click: recentre · `0`: fit world
