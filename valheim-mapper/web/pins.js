@@ -30,7 +30,7 @@ export function createPins(state, icons) {
     draw(ctx, view, w, h) {
       const base = ctx.globalAlpha;
       const dpr = window.devicePixelRatio || 1, s = ICON * dpr;
-      ctx.font = `bold ${Math.round(15 * dpr)}px Norse`; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+      ctx.font = `bold ${Math.round(17 * dpr)}px Norse`; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
       ctx.lineWidth = 3 * dpr; ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.fillStyle = '#f3e9d2';
       for (const p of state.pins) {
         const [sx, sy] = view.worldToScreen(p.x, p.z, w, h);
