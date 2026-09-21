@@ -40,9 +40,13 @@ void main() {
   vec3 tint = mix(mix(t00, t10, f.x), mix(t01, t11, f.x), f.y);          // one-cell soft blend between biomes
   vec3 d = mix(mix(d00, d10, f.x), mix(d01, d11, f.x), f.y);
   vec3 col = texture2D(u_bg, v_world / u_tiles.x).rgb * tint;
+  // Sea: the game's water colour stands on its own (not parchment tinted); water.png is an ink wave pattern
+  // whose alpha carries the strokes, so it is laid over the sea rather than mixed in as a flat colour.
+  col = mix(col, tint, d.b);
   col = mix(col, texture2D(u_forest, v_world / u_tiles.z).rgb, u_detail.x * d.r);
   col = mix(col, texture2D(u_mountain, v_world / u_tiles.z).rgb, u_detail.y * d.g);
-  col = mix(col, texture2D(u_water, v_world / u_tiles.w).rgb, u_detail.z * d.b);
+  vec4 waves = texture2D(u_water, v_world / u_tiles.w);
+  col = mix(col, waves.rgb, waves.a * u_detail.z * d.b);
   vec3 space = texture2D(u_space, v_world / u_tiles.y).rgb;
   gl_FragColor = vec4(mix(space, col, step(length(v_world), u_radius)), 1.0);
 }`;

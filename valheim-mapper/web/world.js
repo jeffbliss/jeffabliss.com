@@ -11,7 +11,7 @@ export const SPEEDS = [
 ];
 export const JOG_MPS = 4;
 
-// Colours from decompiled Minimap.cs (m_*Color). Ocean uses _WaterColorDeep from the minimap material (minimap.mat).
+// Colours from decompiled Minimap.cs (m_*Color). Ocean uses _WaterColorDeep from the minimap material (minimap.mat); Minimap.cs paints ocean white and the map shader lays the water colour over it.
 export const BIOMES = [
   { id: 0, key: 'none',        name: 'None',         color: null,              detail: null },
   { id: 1, key: 'meadows',     name: 'Meadows',      color: [0.45, 1, 0.43],   detail: null },
