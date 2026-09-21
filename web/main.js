@@ -8,6 +8,7 @@ import { createTerrain } from './terrain.js';
 import { createFog, revealFn, refogFn } from './fog.js';
 import { createInk, inkTool } from './ink.js';
 import { createTools, rasterBrushTool, isTypingTarget } from './tools.js';
+import { createPins, pinTool, selectTool, pinKeys } from './pins.js';
 import { PIN_TYPES, BIOMES, EXPLORE_RADIUS } from './world.js';
 
 export const loadImage = url => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(url)); i.src = url; });
@@ -84,6 +85,25 @@ async function boot() {
   app.tools.register('fog', rasterBrushTool(app, app.state.fog, 'fog', () => revealFn, () => refogFn));
   const ink = app.layers.insertBefore('fog', createInk(app.state.ink));
   app.tools.register('ink', inkTool(app, ink));
+  const pins = app.layers.insertBefore('cursor', createPins(app.state, icons));
+  const editor = document.getElementById('pin-editor');
+  function openEditor(pin) {
+    const [sx, sy] = app.view.worldToScreen(pin.x, pin.z, ...size());
+    editor.hidden = false; editor.value = pin.name; editor.style.left = `${sx / dpr() - 60}px`; editor.style.top = `${sy / dpr() + 20}px`; editor.style.width = '120px';
+    editor.focus(); editor.select();
+    const before = pin.name;
+    const done = commit => { editor.hidden = true; editor.onblur = editor.onkeydown = null; if (!commit || editor.value === before) return;
+      const after = editor.value; pin.name = after;
+      app.history.push({ label: 'rename', undo: () => { pin.name = before; }, redo: () => { pin.name = after; } }); app.markDirty(); };
+    editor.onkeydown = e => { if (e.key === 'Enter') done(true); if (e.key === 'Escape') done(false); e.stopPropagation(); };
+    editor.onblur = () => done(true);
+  }
+  app.tools.register('pin', pinTool(app, pins, openEditor));
+  app.tools.register('select', selectTool(app, pins, openEditor));
+  pinKeys(app, pins, openEditor);
+  const typesEl = document.getElementById('pin-types');
+  for (const t of PIN_TYPES) { const b = document.createElement('button'); b.title = t; b.dataset.type = t; const img = document.createElement('img'); img.src = `assets/map/mapicon_${t}.png`; b.append(img); b.onclick = () => app.tools.setOption('pinType', t); typesEl.append(b); }
+  canvas.addEventListener('pointermove', e => { const hit = pins.hitTest(e.offsetX * dpr(), e.offsetY * dpr(), app.view, ...size()); canvas.title = hit && hit !== 'player' ? `${hit.name || hit.type} (${Math.round(hit.x)}, ${Math.round(hit.z)})` : hit === 'player' ? `player (${Math.round(app.state.player.x)}, ${Math.round(app.state.player.z)})` : ''; });
   const inkColor = document.getElementById('ink-color'), inkWidth = document.getElementById('ink-width');
   inkColor.oninput = () => app.tools.setOption('inkColor', inkColor.value);
   inkWidth.oninput = () => app.tools.setOption('inkWidth', Number(inkWidth.value));
@@ -106,6 +126,8 @@ async function boot() {
     document.getElementById('biomes').hidden = app.tools.current !== 'paint';
     document.getElementById('reveal-player').hidden = app.tools.current !== 'fog';
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
+    typesEl.hidden = app.tools.current !== 'pin';
+    for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);
   };
   app.tools.onChange(); app.tools.set('paint');
   addEventListener('resize', resize); resize();
