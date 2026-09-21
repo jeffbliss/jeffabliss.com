@@ -5,6 +5,11 @@ export const CELL_M = 8;                      // raster cell size in metres
 export const CELLS = WORLD_SIZE / CELL_M;     // 2560
 export const ZONE_M = 64;                     // game zone size, default grid spacing
 export const EXPLORE_RADIUS = 100;            // in-game map reveal radius
+// Player movement, metres per second (Player prefab: walk 1.6, jog 4 = default gait, sprint 7, swim 2).
+export const SPEEDS = [
+  { name: 'Walk', mps: 1.6 }, { name: 'Jog', mps: 4 }, { name: 'Sprint', mps: 7 }, { name: 'Swim', mps: 2 },
+];
+export const JOG_MPS = 4;
 
 // Colours from decompiled Minimap.cs (m_*Color). Ocean uses _WaterColorDeep from the minimap material (minimap.mat).
 export const BIOMES = [

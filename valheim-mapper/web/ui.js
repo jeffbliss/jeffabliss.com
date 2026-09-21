@@ -1,4 +1,4 @@
-import { BRUSH_SIZES, INK_WIDTHS } from './tools.js';
+import { BRUSH_SIZES, INK_WIDTHS, INK_COLORS } from './tools.js';
 import { serialize } from './store.js';
 import { pinKeys, pinOps } from './pins.js';
 import { PIN_TYPES, BIOMES } from './world.js';
@@ -120,7 +120,9 @@ export function wireTools(app) {
   });
 
   const inkColor = document.getElementById('ink-color'), inkWidth = document.getElementById('ink-width'), inkLabel = document.getElementById('ink-label');
+  const inkColors = document.getElementById('ink-colors');
   inkColor.oninput = () => app.tools.setOption('inkColor', inkColor.value);
+  for (const c of INK_COLORS) { const b = document.createElement('button'); b.className = 'swatch'; b.style.background = c; b.dataset.color = c; b.title = c; b.onclick = () => { app.tools.setOption('inkColor', c); b.blur(); }; inkColors.insertBefore(b, inkColors.lastElementChild); }
   for (const m of INK_WIDTHS) { const b = document.createElement('button'); b.textContent = `${m} m`; b.dataset.width = m; b.onclick = () => { app.tools.setOption('inkWidth', m); b.blur(); }; inkWidth.append(b); }
 
   const biomesEl = document.getElementById('biomes');
@@ -141,6 +143,9 @@ export function wireTools(app) {
     brushLabel.textContent = `${app.tools.options.brush} m radius`;
     for (const b of inkWidth.children) b.classList.toggle('active', Number(b.dataset.width) === app.tools.options.inkWidth);
     inkLabel.textContent = `${app.tools.options.inkWidth} m`;
+    const color = app.tools.options.inkColor; let preset = false;
+    for (const b of inkColors.querySelectorAll('.swatch')) { const on = b.dataset.color === color; b.classList.toggle('active', on); preset ||= on; }
+    inkColors.lastElementChild.classList.toggle('active', !preset); inkColor.value = color;
     document.getElementById('paint-opts').hidden = app.tools.current !== 'paint';
     app.canvas.style.cursor = app.tools.current === 'pan' ? 'grab' : 'crosshair';
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';

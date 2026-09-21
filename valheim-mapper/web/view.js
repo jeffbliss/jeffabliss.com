@@ -1,7 +1,7 @@
 import { WORLD_SIZE } from './world.js';
 
 export function createView({ x = 0, z = 0, scale = 0.04 } = {}) {
-  const v = { x, z, scale, minScale: 0.02, maxScale: 2 };
+  const v = { x, z, scale, minScale: 0.02, maxScale: 4.5 };   // 4.5 px/m: two ×1.5 steps past the old 2 px/m
   v.worldToScreen = (wx, wz, w, h) => [w / 2 + (wx - v.x) * v.scale, h / 2 - (wz - v.z) * v.scale];
   v.screenToWorld = (sx, sy, w, h) => [v.x + (sx - w / 2) / v.scale, v.z - (sy - h / 2) / v.scale];
   v.zoomAt = (sx, sy, factor, w, h) => {

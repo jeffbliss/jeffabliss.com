@@ -10,6 +10,7 @@ import { createTools, rasterBrushTool, paintTool, isTypingTarget } from './tools
 import { createPins, pinTool, selectTool } from './pins.js';
 import { PIN_TYPES } from './world.js';
 import { createUI, wireTools, wirePinPopup } from './ui.js';
+import { createScaleBar } from './scale.js';
 import { createSync } from './sync.js';
 import { createPresence } from './presence.js';
 
@@ -41,6 +42,7 @@ export function requestRender() {
 
 const app = { canvas, ctx, view: createView(), layers: createLayers(), history: createHistory(), requestRender, size, setStatus, dpr };
 app.presence = createPresence(() => app.you);
+const scaleBar = createScaleBar(document.getElementById('scale'), () => app.view.scale / dpr());   // CSS px per metre
 
 // Per-browser preferences (layer visibility/opacity, camera). The map itself lives on the server.
 const SETTINGS_KEY = 'valheim-mapper:settings';
@@ -64,6 +66,7 @@ function render() {
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, w, h);
   app.layers.draw(ctx, app.view, w, h);
   app.updatePinPopup?.();
+  scaleBar.update();
 }
 
 function cameraControls() {

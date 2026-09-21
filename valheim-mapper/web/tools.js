@@ -6,6 +6,8 @@ export const DEFAULT_BRUSH = 32;
 /** Ink stroke widths in metres. 2 m is a hairline for cliffs and inlets; 4 m (half a raster cell) suits coastlines; 32 m is a bold region border. */
 export const INK_WIDTHS = [2, 4, 8, 16, 32];
 export const DEFAULT_INK_WIDTH = 4;
+/** Quick ink colours: dark ink, white, then the six colour-wheel primaries and secondaries. */
+export const INK_COLORS = ['#2b1d0e', '#f4ecd8', '#d62828', '#f77f00', '#f2c014', '#2a9d3f', '#1d6fd6', '#7b3fbf'];
 
 const HOTKEYS = { h: 'pan', b: 'paint', i: 'ink', p: 'pin', v: 'select' };
 
