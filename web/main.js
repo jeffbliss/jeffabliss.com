@@ -1,12 +1,13 @@
 import { createView } from './view.js';
 import { createLayers } from './layers.js';
-import { createHistory } from './history.js';
+import { createHistory, createStrokeRecorder } from './history.js';
 import { createStoreClient, createState, serialize, emptyDoc } from './store.js';
 import { createBase } from './base.js';
 import { createGrid } from './grid.js';
 import { createTerrain } from './terrain.js';
+import { createFog, revealFn, refogFn } from './fog.js';
 import { createTools, rasterBrushTool, isTypingTarget } from './tools.js';
-import { PIN_TYPES, BIOMES } from './world.js';
+import { PIN_TYPES, BIOMES, EXPLORE_RADIUS } from './world.js';
 
 export const loadImage = url => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(url)); i.src = url; });
 
@@ -78,6 +79,13 @@ async function boot() {
   app.tools = createTools(app);
   app.tools.register('paint', rasterBrushTool(app, app.state.terrain, 'paint', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0));
   app.layers.add(app.tools.cursorLayer);     // stays last; later tasks insert their layers before it with insertBefore
+  const fog = app.layers.insertBefore('cursor', createFog(app.state.fog, textures));
+  app.tools.register('fog', rasterBrushTool(app, app.state.fog, 'fog', () => revealFn, () => refogFn));
+  document.getElementById('reveal-player').onclick = () => {
+    const rec = createStrokeRecorder(app.state.fog); rec.begin();
+    fog.reveal(app.state.player.x, app.state.player.z, EXPLORE_RADIUS);
+    const cmd = rec.end('reveal'); if (cmd) { app.history.push(cmd); app.markDirty(); }
+  };
   const biomesEl = document.getElementById('biomes');
   for (const b of BIOMES) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => { app.tools.setOption('biome', b.id); btn.blur(); }; biomesEl.append(btn); }
   const brush = document.getElementById('brush'), brushLabel = document.getElementById('brush-label');
@@ -90,6 +98,7 @@ async function boot() {
     for (const btn of biomesEl.children) btn.classList.toggle('active', Number(btn.dataset.biome) === app.tools.options.biome);
     brush.value = app.tools.options.brush; brushLabel.textContent = `${app.tools.options.brush} m`;
     document.getElementById('biomes').hidden = app.tools.current !== 'paint';
+    document.getElementById('reveal-player').hidden = app.tools.current !== 'fog';
   };
   app.tools.onChange(); app.tools.set('paint');
   addEventListener('resize', resize); resize();
