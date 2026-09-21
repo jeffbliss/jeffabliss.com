@@ -6,8 +6,7 @@ export const CELLS = WORLD_SIZE / CELL_M;     // 2560
 export const ZONE_M = 64;                     // game zone size, default grid spacing
 export const EXPLORE_RADIUS = 100;            // in-game map reveal radius
 
-// Colours from decompiled Minimap.cs (m_*Color). Ocean uses the minimap material's water colour:
-// check `_WaterColor` in out/assets/Assets/UI/map/minimap.mat.Material.*.json and replace if different.
+// Colours from decompiled Minimap.cs (m_*Color). Ocean uses _WaterColorDeep from the minimap material (minimap.mat).
 export const BIOMES = [
   { id: 0, key: 'none',        name: 'None',         color: null,              detail: null },
   { id: 1, key: 'meadows',     name: 'Meadows',      color: [0.45, 1, 0.43],   detail: null },
@@ -18,7 +17,7 @@ export const BIOMES = [
   { id: 6, key: 'mistlands',   name: 'Mistlands',    color: [0.2, 0.2, 0.2],   detail: 'forest' },
   { id: 7, key: 'ashlands',    name: 'Ashlands',     color: [1, 0.2, 0.2],     detail: null },
   { id: 8, key: 'deepnorth',   name: 'Deep North',   color: [1, 1, 1],         detail: 'mountain' },
-  { id: 9, key: 'ocean',       name: 'Ocean',        color: [0.25, 0.36, 0.55], detail: 'water' },
+  { id: 9, key: 'ocean',       name: 'Ocean',        color: [0.343, 0.534, 0.765], detail: 'water' },
 ];
 
 export const PIN_TYPES = ['pin', 'fire', 'house', 'hammer', 'portal', 'bed', 'boss', 'trader',
