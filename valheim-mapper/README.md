@@ -18,7 +18,7 @@ operations (logs, allow-list rotation, backup, storage reset): see
 `docs/superpowers/runbook-cloudflare.md`.
 
 ## Controls
-- Wheel: zoom · Middle-drag / Space+drag: pan · Double-click: recentre · `0`: fit world
+- Wheel or the + / − buttons (also `+` `-` keys): zoom · Middle-drag / Space+drag: pan · Double-click: recentre · `0`: fit world
 - Tools: `H` pan, `B` paint, `I` ink, `P` pin, `V` select · `[` `]` brush size
 - Paint: left drag paints the chosen biome, right or Alt drag erases. Painting and inking clear the fog where you draw. The **Fog** swatch in the palette re-fogs an area (right drag with it reveals).
 - Ink: right or Alt drag across a line erases that stroke.
