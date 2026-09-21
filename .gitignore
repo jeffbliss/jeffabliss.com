@@ -1,0 +1,6 @@
+.venv/
+.dotnet/
+.DS_Store
+out/
+data/
+node_modules/
