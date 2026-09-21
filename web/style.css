@@ -20,11 +20,11 @@ button.active { background: #8a6a3a; }
 .hint { margin: 2px 0 0; font-size: 12px; opacity: .75; line-height: 1.35; }
 #status { margin-left: 8px; opacity: .8; }
 #status.error { color: #ff7b6b; }
-#pin-popup { position: fixed; transform: translate(-50%, calc(-100% - 26px)); background: #1b1610f0; border: 1px solid #8a6a3a; border-radius: 6px; padding: 8px; display: grid; gap: 6px; min-width: 180px; box-shadow: 0 4px 14px #0008; }
+#pin-popup { position: fixed; padding-top: 10px; transform: translate(-50%, calc(-100% - 26px)); background: #1b1610f0; border: 1px solid #8a6a3a; border-radius: 6px; padding: 8px; display: grid; gap: 6px; min-width: 180px; box-shadow: 0 4px 14px #0008; }
 #pin-popup::after { content: ''; position: absolute; left: 50%; bottom: -8px; margin-left: -8px; border: 8px solid transparent; border-bottom: 0; border-top-color: #8a6a3a; }
 #pin-popup input { background: #2a2118; color: #fff; border: 1px solid #6b563c; border-radius: 4px; font: bold 15px 'Norse', serif; padding: 3px 6px; width: 100%; box-sizing: border-box; }
 #pin-popup .row { display: flex; gap: 6px; }
 #pin-popup .row button { flex: 1; }
-#pin-popup .row #pin-close { flex: 0; padding: 4px 8px; }
+#pin-popup #pin-close { position: absolute; top: -10px; right: -10px; width: 22px; height: 22px; padding: 0; line-height: 20px; border-radius: 50%; font-size: 14px; }
 #pin-popup button.active { background: #8a6a3a; }
 [hidden] { display: none !important; }
