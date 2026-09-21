@@ -3,6 +3,7 @@ import { createLayers } from './layers.js';
 import { createHistory } from './history.js';
 import { createStoreClient, createState, serialize, emptyDoc } from './store.js';
 import { createBase } from './base.js';
+import { createGrid } from './grid.js';
 import { PIN_TYPES } from './world.js';
 
 export const loadImage = url => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(url)); i.src = url; });
@@ -59,10 +60,16 @@ async function boot() {
   const { textures, icons } = await loadAssets();
   Object.assign(app, { textures, icons });
   app.store = createStoreClient({ onStatus: s => setStatus({ dirty: 'unsaved', saving: 'saving…', saved: 'saved', error: 'save failed, retrying' }[s], s === 'error' ? 'error' : '') });
+  app.markDirty = () => { app.state.settings.camera = app.view.toJSON(); app.state.settings.layers = app.layers.settings(); app.store.schedule(() => serialize(app.state)); requestRender(); };
   let doc = await app.store.load();
   try { app.state = await createState(doc); } catch (e) { setStatus(`could not load save (${e.message}); starting empty`, 'error'); app.state = await createState(emptyDoc()); app.loadFailed = true; }
   Object.assign(app.view, app.state.settings.camera);
   app.layers.add(createBase(textures));
+  app.layers.add(createGrid(app.state.settings));
+  const gridVisible = document.getElementById('grid-visible'), gridSpacing = document.getElementById('grid-spacing');
+  gridVisible.checked = app.state.settings.grid.visible; gridSpacing.value = app.state.settings.grid.spacing;
+  gridVisible.onchange = () => { app.state.settings.grid.visible = gridVisible.checked; app.markDirty(); };
+  gridSpacing.onchange = () => { app.state.settings.grid.spacing = Math.max(8, Number(gridSpacing.value) || 64); app.markDirty(); };
   app.layers.applySettings(app.state.settings.layers);
   cameraControls();
   addEventListener('resize', resize); resize();
