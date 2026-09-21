@@ -47,3 +47,19 @@ test('client load falls back to localStorage when server unreachable', async () 
   const c = createStoreClient({ fetchFn: async () => { throw new Error('down'); }, storage });
   assert.equal((await c.load()).pins[0].id, 'local');
 });
+
+test('flush with maxAttempts gives up and reports false', async () => {
+  const statuses = [];
+  const storage = { getItem: () => null, setItem: () => {} };
+  const c = createStoreClient({ fetchFn: async (u, o = {}) => { if (o.method === 'PUT') throw new Error('down'); return { ok: true, json: async () => emptyDoc() }; }, storage, debounceMs: 1, retryMs: 1, onStatus: s => statuses.push(s) });
+  c.schedule(() => emptyDoc());
+  assert.equal(await c.flush({ maxAttempts: 2 }), false);
+  assert.deepEqual(statuses, ['dirty', 'saving', 'error', 'saving', 'error']);
+});
+
+test('load returns an empty doc on 204, not the localStorage copy', async () => {
+  const mem = new Map([['valheim-mapper:map', JSON.stringify({ ...emptyDoc(), pins: [{ id: 'local' }] })]]);
+  const storage = { getItem: k => mem.get(k) ?? null, setItem: (k, v) => mem.set(k, v) };
+  const c = createStoreClient({ fetchFn: async () => ({ ok: true, status: 204, json: async () => { throw new Error('no body'); } }), storage });
+  assert.equal((await c.load()).pins.length, 0);
+});

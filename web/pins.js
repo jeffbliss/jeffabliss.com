@@ -21,6 +21,7 @@ export function createPins(state, icons) {
       return nearestPin(state.pins, wx, wz, r / view.scale);
     },
     draw(ctx, view, w, h) {
+      const base = ctx.globalAlpha;
       const dpr = window.devicePixelRatio || 1, s = ICON * dpr;
       ctx.font = `bold ${Math.round(13 * dpr)}px Norse`; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
       ctx.lineWidth = 3 * dpr; ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.fillStyle = '#f3e9d2';
@@ -28,13 +29,13 @@ export function createPins(state, icons) {
         const [sx, sy] = view.worldToScreen(p.x, p.z, w, h);
         if (sx < -s || sy < -s || sx > w + s || sy > h + s) continue;
         const icon = icons[p.type] ?? icons.pin;
-        ctx.globalAlpha = p.checked ? 0.6 : 1;
+        ctx.globalAlpha = base * (p.checked ? 0.6 : 1);
         ctx.drawImage(icon, sx - s / 2, sy - s / 2, s, s);
         if (p.checked) ctx.drawImage(icons.checked, sx - s / 2, sy - s / 2, s, s);
-        ctx.globalAlpha = 1;
         if (p.id === layer.selected) { ctx.beginPath(); ctx.arc(sx, sy, s * 0.6, 0, Math.PI * 2); ctx.strokeStyle = '#ffd77a'; ctx.lineWidth = 2 * dpr; ctx.stroke(); ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.lineWidth = 3 * dpr; }
         if (p.name) { ctx.strokeText(p.name, sx, sy + s / 2); ctx.fillText(p.name, sx, sy + s / 2); }
       }
+      ctx.globalAlpha = base;
       const [px, py] = view.worldToScreen(state.player.x, state.player.z, w, h);
       ctx.save(); ctx.translate(px, py); ctx.rotate(state.player.angle);
       ctx.drawImage(icons.player_32, -s / 2, -s / 2, s, s); ctx.restore();

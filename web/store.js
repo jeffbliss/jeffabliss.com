@@ -51,37 +51,42 @@ export function createStoreClient({ url = '/api/map', fetchFn = globalThis.fetch
   async function load() {
     try {
       const res = await fetchFn(url); if (!res.ok) throw new Error(res.status);
+      if (res.status === 204) return emptyDoc();
       const doc = await res.json(); return doc?.version ? doc : emptyDoc();
     } catch { return local.get() ?? emptyDoc(); }
   }
 
-  async function save(doc) {
+  async function save(doc, { maxAttempts = Infinity } = {}) {
     local.set(doc);
-    for (let attempt = 0; ; attempt++) {
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
       onStatus('saving');
       try {
         const res = await fetchFn(url, { method: 'PUT', headers: { 'content-type': 'application/json' }, body: JSON.stringify(doc) });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        onStatus('saved'); return;
+        onStatus('saved'); return true;
       } catch {
         onStatus('error');
+        if (attempt + 1 >= maxAttempts) return false;
         await new Promise(r => setTimeout(r, Math.min(retryMs * 2 ** attempt, 60_000)));
       }
     }
+    return false;
   }
 
   function schedule(getDoc) {
     pending = getDoc; onStatus('dirty');
     clearTimeout(timer); timer = setTimeout(flush, debounceMs);
   }
-  async function flush() {
+  async function flush({ maxAttempts } = {}) {
     clearTimeout(timer);
     if (inflight) await inflight;
-    if (!pending) return;
+    if (!pending) return true;
     const getDoc = pending; pending = null;
-    inflight = (async () => save(await getDoc()))();
+    let ok;
+    inflight = (async () => { ok = await save(await getDoc(), { maxAttempts }); })();
     await inflight; inflight = null;
-    if (pending) await flush();
+    if (pending) return flush({ maxAttempts });
+    return ok;
   }
   return { load, save, schedule, flush };
 }

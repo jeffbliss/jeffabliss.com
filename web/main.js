@@ -55,13 +55,21 @@ function cameraControls() {
   canvas.addEventListener('pointerdown', e => { if (app.isPanGesture(e)) { panning = pos(e); canvas.setPointerCapture(e.pointerId); } });
   canvas.addEventListener('pointermove', e => { if (!panning) return; const p = pos(e); view.panBy(p[0] - panning[0], p[1] - panning[1]); panning = p; requestRender(); });
   canvas.addEventListener('pointerup', () => { panning = null; });
-  canvas.addEventListener('dblclick', e => { const [sx, sy] = pos(e); const [wx, wz] = view.screenToWorld(sx, sy, ...size()); view.x = wx; view.z = wz; requestRender(); });
+  canvas.addEventListener('dblclick', e => {
+    const [sx, sy] = pos(e);
+    if (app.pinsLayer?.hitTest(sx, sy, view, ...size())) return;
+    const [wx, wz] = view.screenToWorld(sx, sy, ...size()); view.x = wx; view.z = wz; requestRender();
+  });
   addEventListener('keydown', e => { if (e.code === 'Space' && !isTypingTarget(e)) { app.spaceDown = true; e.preventDefault(); } if (e.key === '0' && !isTypingTarget(e)) { view.fitWorld(...size()); requestRender(); } });
   addEventListener('keyup', e => { if (e.code === 'Space') app.spaceDown = false; });
   document.getElementById('fit').onclick = () => { view.fitWorld(...size()); requestRender(); };
 }
 
-app.markDirty = () => { app.state.settings.camera = app.view.toJSON(); app.state.settings.layers = app.layers.settings(); app.store.schedule(() => serialize(app.state)); requestRender(); };
+app.markDirty = () => {
+  app.state.settings.camera = app.view.toJSON(); app.state.settings.layers = app.layers.settings();
+  if (app.loadFailed) { requestRender(); return; }
+  app.store.schedule(() => serialize(app.state)); requestRender();
+};
 
 /** Rebuilds the layer stack and tools for `state`, replacing whatever was loaded before (used on boot and on Import). */
 app.rebuild = function rebuild(state) {
@@ -94,7 +102,7 @@ async function boot() {
   const doc = await app.store.load();
   let state;
   try { state = await createState(doc); }
-  catch (e) { setStatus(`could not load save (${e.message}); starting empty — refusing to autosave until you make a change`, 'error'); state = await createState(emptyDoc()); app.loadFailed = true; }
+  catch (e) { setStatus(`could not load save (${e.message}); starting empty — press Save to overwrite, or Import a map`, 'error'); state = await createState(emptyDoc()); app.loadFailed = true; }
 
   app.tools = createTools(app);
   wirePinEditor(app);                       // sets app.openEditor before pin/select tools are registered by rebuild()

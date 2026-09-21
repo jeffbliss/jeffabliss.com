@@ -23,7 +23,13 @@ export function createUI(app) {
   app.history.onChange = () => { undo.disabled = !app.history.canUndo(); redo.disabled = !app.history.canRedo(); };
   app.history.onChange();
 
-  document.getElementById('save').onclick = () => { app.markDirty(); app.store.flush(); };
+  document.getElementById('save').onclick = () => {
+    if (app.loadFailed) {
+      if (!confirm('The saved map could not be read. Overwrite it with the current (empty) map?')) return;
+      app.loadFailed = false;
+    }
+    app.markDirty(); app.store.flush({ maxAttempts: 3 });
+  };
   document.getElementById('export').onclick = async () => {
     const blob = new Blob([JSON.stringify(await serialize(app.state))], { type: 'application/json' });
     const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: `valheim-map-${new Date().toISOString().slice(0, 10)}.json` });
@@ -31,14 +37,17 @@ export function createUI(app) {
   };
   document.getElementById('import').onchange = async e => {
     const file = e.target.files[0]; if (!file) return;
-    if (!confirm(`Replace the current map with ${file.name}? The current map is saved first.`)) return;
+    if (!confirm(`Replace the current map with ${file.name}? The current map is saved first.`)) { e.target.value = ''; return; }
     try {
-      await app.store.flush();
+      const savedOk = await app.store.flush({ maxAttempts: 2 });
+      if (!savedOk) app.setStatus('previous map could not be saved to the server; kept a local copy', 'error');
       const state = await createState(JSON.parse(await file.text()));
-      app.rebuild(state); app.history.clear(); app.markDirty(); refreshLayers();
+      app.rebuild(state); app.history.clear(); app.loadFailed = false;
+      syncGridInputs(app); app.tools.onChange();
+      app.markDirty(); refreshLayers();
       app.setStatus(`imported ${file.name}`);
     } catch (err) { app.setStatus(`import failed: ${err.message}`, 'error'); }
-    e.target.value = '';
+    finally { e.target.value = ''; }
   };
   addEventListener('beforeunload', () => { app.store.flush(); });
   refreshLayers();
@@ -76,10 +85,16 @@ export function wirePinEditor(app) {
   pinKeys(app, pinsProxy, pin => app.openEditor(pin));
 }
 
+/** Re-syncs the grid checkbox/spacing inputs from app.state.settings.grid (initial wiring and after Import). */
+export function syncGridInputs(app) {
+  const gridVisible = document.getElementById('grid-visible'), gridSpacing = document.getElementById('grid-spacing');
+  gridVisible.checked = app.state.settings.grid.visible; gridSpacing.value = app.state.settings.grid.spacing;
+}
+
 /** Wires the toolbar, biome/pin-type palettes, grid controls and tool option UI. Reads layer objects via app.* so it stays valid across app.rebuild. */
 export function wireTools(app) {
   const gridVisible = document.getElementById('grid-visible'), gridSpacing = document.getElementById('grid-spacing');
-  gridVisible.checked = app.state.settings.grid.visible; gridSpacing.value = app.state.settings.grid.spacing;
+  syncGridInputs(app);
   gridVisible.onchange = () => { app.state.settings.grid.visible = gridVisible.checked; app.markDirty(); };
   gridSpacing.onchange = () => { app.state.settings.grid.spacing = Math.max(8, Number(gridSpacing.value) || 64); app.markDirty(); };
 
@@ -107,8 +122,8 @@ export function wireTools(app) {
   const brush = document.getElementById('brush'), brushLabel = document.getElementById('brush-label');
   brush.oninput = () => app.tools.setOption('brush', Number(brush.value));
   for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.onclick = () => { app.tools.set(btn.dataset.tool); btn.blur(); };
-  document.getElementById('undo').onclick = () => { app.history.undo(); app.markDirty(); };
-  document.getElementById('redo').onclick = () => { app.history.redo(); app.markDirty(); };
+  document.getElementById('undo').onclick = () => { if (app.history.undo()) app.markDirty(); };
+  document.getElementById('redo').onclick = () => { if (app.history.redo()) app.markDirty(); };
 
   app.tools.onChange = () => {
     for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.classList.toggle('active', btn.dataset.tool === app.tools.current);

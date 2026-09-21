@@ -2,7 +2,8 @@ import { WORLD_HALF } from './world.js';
 
 export function chooseSpacing(baseM, scale, minPx = 6) {
   if (baseM * scale >= minPx) return baseM;
-  return 1000 * scale >= minPx ? 1000 : 5000;
+  const coarse = 1000 * scale >= minPx ? 1000 : 5000;
+  return Math.max(baseM, coarse);
 }
 
 export function createGrid(settings) {

@@ -32,7 +32,7 @@ export function createTools(app) {
   canvas.addEventListener('pointermove', e => {
     const p = pos(e); tools.pointer = p;
     if (active) active.move?.(e, p[2], p[3], p[0], p[1]);
-    app.requestRender();
+    if (active || handlers[tools.current]?.cursor) app.requestRender();
   });
   const finish = e => { if (!active) return; const [sx, sy, wx, wz] = pos(e); active.up?.(e, wx, wz, sx, sy); active = null; app.requestRender(); };
   canvas.addEventListener('pointerup', finish); canvas.addEventListener('pointercancel', finish);
@@ -41,8 +41,8 @@ export function createTools(app) {
   addEventListener('keydown', e => {
     if (isTypingTarget(e)) return;
     const mod = e.metaKey || e.ctrlKey;
-    if (mod && e.key.toLowerCase() === 'z') { e.preventDefault(); (e.shiftKey ? app.history.redo() : app.history.undo()); app.markDirty(); return; }
-    if (mod && e.key.toLowerCase() === 'y') { e.preventDefault(); app.history.redo(); app.markDirty(); return; }
+    if (mod && e.key.toLowerCase() === 'z') { e.preventDefault(); if (e.shiftKey ? app.history.redo() : app.history.undo()) app.markDirty(); return; }
+    if (mod && e.key.toLowerCase() === 'y') { e.preventDefault(); if (app.history.redo()) app.markDirty(); return; }
     if (HOTKEYS[e.key.toLowerCase()] && !mod) tools.set(HOTKEYS[e.key.toLowerCase()]);
     if (e.key === '[') tools.setOption('brush', Math.max(8, tools.options.brush / 2));
     if (e.key === ']') tools.setOption('brush', Math.min(2048, tools.options.brush * 2));

@@ -32,6 +32,7 @@ export async function encodeGray(data, width, height) {
 const paeth = (a, b, c) => { const p = a + b - c, pa = Math.abs(p - a), pb = Math.abs(p - b), pc = Math.abs(p - c); return pa <= pb && pa <= pc ? a : pb <= pc ? b : c; };
 
 export async function decodeGray(png) {
+  if (png.length < 8 || !SIG.every((b, i) => png[i] === b)) throw new Error('png: bad signature');
   let pos = 8, width = 0, height = 0; const idats = [];
   while (pos + 12 <= png.length) {
     const dv = new DataView(png.buffer, png.byteOffset + pos);
@@ -40,6 +41,7 @@ export async function decodeGray(png) {
     if (type === 'IHDR') {
       width = dv.getUint32(8); height = dv.getUint32(12);
       if (data[8] !== 8 || data[9] !== 0) throw new Error('png: expected 8-bit grayscale');
+      if (width * height > 64 * 1024 * 1024) throw new Error('png: image too large');
     } else if (type === 'IDAT') idats.push(data);
     pos += 12 + len;
   }
