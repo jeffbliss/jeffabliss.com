@@ -17,6 +17,9 @@ Hand-draw a Valheim world map outside the game, in the in-game style, for no-map
 
 Map autosaves to `data/map.json` (with `.bak`). Export/Import produce a portable JSON file. **New map** resets everything to an empty map with only the start pin (export first if you want to keep the current one).
 
+## Rendering
+Terrain (parchment, biomes, textures) and fog are drawn by a small WebGL renderer in `web/gl.js`: the 8 m biome raster and the fog raster live on the GPU as single-channel textures and one fragment shader composites them per frame, so panning stays smooth in every browser. Grid, ink and pins are plain Canvas 2D layers on top.
+
 ## Development
 `npm test` runs the unit tests (Node ≥ 20, no dependencies).
 Game assets under `out/`, `web/assets/` and saves under `data/` are gitignored and must not be redistributed.

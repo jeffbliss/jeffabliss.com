@@ -2,10 +2,9 @@ import { createView } from './view.js';
 import { createLayers } from './layers.js';
 import { createHistory } from './history.js';
 import { createStoreClient, createState, serialize, emptyDoc } from './store.js';
-import { createBase } from './base.js';
 import { createGrid } from './grid.js';
-import { createTerrain } from './terrain.js';
-import { createFog, revealFn, refogFn } from './fog.js';
+import { createTerrainLayer, createFogLayer } from './gl.js';
+import { revealFn, refogFn } from './fog.js';
 import { createInk, inkTool } from './ink.js';
 import { createTools, rasterBrushTool, paintTool, isTypingTarget } from './tools.js';
 import { createPins, pinTool, selectTool } from './pins.js';
@@ -74,12 +73,12 @@ app.markDirty = () => {
 /** Rebuilds the layer stack and tools for `state`, replacing whatever was loaded before (used on boot and on Import). */
 app.rebuild = function rebuild(state) {
   app.state = state;
+  for (const l of app.layers.list) l.dispose?.();                 // free GPU textures of the previous map
   app.layers.list.length = 0;
-  app.layers.add(createBase(app.textures));
-  app.layers.add(createTerrain(state.terrain, app.textures));
+  app.layers.add(createTerrainLayer(state.terrain, app.textures));   // parchment, space and painted biomes (WebGL)
   app.layers.add(createGrid(state.settings));
   app.layers.add(app.tools.cursorLayer);                         // stays last
-  const fog = app.layers.insertBefore('cursor', createFog(state.fog, app.textures));
+  const fog = app.layers.insertBefore('cursor', createFogLayer(state.fog, app.textures));
   const ink = app.layers.insertBefore('fog', createInk(state.ink));
   const pins = app.layers.insertBefore('cursor', createPins(state, app.icons));
   app.layers.applySettings(state.settings.layers);

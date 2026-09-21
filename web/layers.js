@@ -17,19 +17,3 @@ export function createLayers() {
   L.applySettings = s => { for (const l of list) if (s?.[l.id]) Object.assign(l, s[l.id]); };
   return L;
 }
-
-const scratch = new Map();
-/** Screen-sized offscreen canvas, cached by key. */
-export function scratchCanvas(key, w, h) {
-  let c = scratch.get(key);
-  if (!c) { c = document.createElement('canvas'); scratch.set(key, c); }
-  if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
-  return c;
-}
-
-/** Pattern whose tile spans tileM metres when filled under a world transform. */
-export function worldPattern(ctx, image, tileM) {
-  const p = ctx.createPattern(image, 'repeat');
-  p.setTransform(new DOMMatrix().scale(tileM / image.width));
-  return p;
-}
