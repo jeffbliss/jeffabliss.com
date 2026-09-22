@@ -45,3 +45,4 @@ Terrain (parchment, biomes, textures) and fog are drawn by a small WebGL rendere
 ## To do
 
 - Rotate a selection on copy/paste: while the paste ghost is shown, `R` turns it 90° (terrain and fog cells transposed, ink points and pin positions rotated about the centre), and the placed copy is the rotated one.
+- Move the Fill option: it sits at the end of the brush-size row, where it reads as a sixth size and is easy to miss. Give it its own place, for example a Fill tool button in the toolbar next to Paint, or a Brush / Fill mode switch above the sizes.
