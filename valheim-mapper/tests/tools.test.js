@@ -67,3 +67,16 @@ test('paint tool: the Fog swatch re-fogs without touching terrain; None erases t
   tool.down(left, 0.5, 0.5); tool.up(left);                       // None: erases terrain and reveals
   assert.equal(terrain.get(0.5, 0.5), 0); assert.equal(fog.get(0.5, 0.5), 255);
 });
+
+import { panGesture } from '../web/tools.js';
+
+test('panGesture: every drag pans in View; only right, middle and Space drag pan in Edit', () => {
+  const left = { button: 0 }, middle = { button: 1 }, right = { button: 2 };
+  const view = { editing: false, tool: 'view', spaceDown: false };
+  assert.ok(panGesture(left, view)); assert.ok(panGesture(right, view)); assert.ok(panGesture(middle, view));
+  assert.ok(!panGesture(left, { ...view, tool: 'measure' }));            // Measure works in View
+  assert.ok(panGesture(right, { ...view, tool: 'measure' }));
+  const edit = { editing: true, tool: 'paint', spaceDown: false };
+  assert.ok(!panGesture(left, edit)); assert.ok(panGesture(right, edit)); assert.ok(panGesture(middle, edit));
+  assert.ok(panGesture(left, { ...edit, spaceDown: true }));
+});

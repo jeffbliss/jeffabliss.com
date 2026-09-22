@@ -80,11 +80,12 @@ export function wirePinPopup(app) {
     const [sx, sy] = app.view.worldToScreen(pin.x, pin.z, ...app.size());
     popup.style.left = `${sx / app.dpr()}px`; popup.style.top = `${sy / app.dpr()}px`;
     check.textContent = pin.checked ? 'Uncheck' : 'Check'; check.classList.toggle('active', pin.checked);
+    name.readOnly = !app.tools.editing; del.hidden = !app.tools.editing;
     if (shownFor !== pin.id) { shownFor = pin.id; before = pin.name; name.value = pin.name; }
     popup.hidden = false;
   };
 
-  const commitName = () => { const pin = selectedPin(); if (!pin) return;
+  const commitName = () => { const pin = selectedPin(); if (!pin || !app.tools.editing) return;
     const cmd = renameCommand(pin, before, name.value); before = name.value;
     if (cmd) { app.history.push(cmd); app.markDirty(); } };
   name.onkeydown = e => { e.stopPropagation(); if (e.key === 'Enter') { commitName(); name.blur(); } if (e.key === 'Escape') { name.value = before; name.blur(); } };
@@ -92,13 +93,13 @@ export function wirePinPopup(app) {
   check.onclick = () => { const pin = selectedPin(); if (!pin) return;
     pin.checked = !pin.checked;
     app.history.push({ label: 'check', ...pinOps.update(pin, { checked: pin.checked }, { checked: !pin.checked }), undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } }); app.markDirty(); };
-  del.onclick = () => { const pin = selectedPin(); if (!pin) return;
+  del.onclick = () => { const pin = selectedPin(); if (!pin || !app.tools.editing) return;
     const idx = app.state.pins.indexOf(pin); app.pinsLayer.remove(pin.id);
     app.history.push({ label: 'remove pin', ...pinOps.remove(pin), undo: () => app.state.pins.splice(idx, 0, pin), redo: () => app.pinsLayer.remove(pin.id) }); app.markDirty(); };
   close.onclick = () => { app.pinsLayer.selected = null; app.requestRender(); };
 
   /** Selects a pin and focuses the name field (used right after placing a pin, on double-click, and on Enter). */
-  app.openEditor = pin => { app.pinsLayer.selected = pin.id; app.updatePinPopup(); name.focus(); name.select(); };
+  app.openEditor = pin => { app.pinsLayer.selected = pin.id; app.updatePinPopup(); if (app.tools.editing) { name.focus(); name.select(); } };
   const pinsProxy = { get selected() { return app.pinsLayer?.selected; }, remove(id) { app.pinsLayer.remove(id); } };
   pinKeys(app, pinsProxy, app.openEditor);
 }
@@ -138,10 +139,16 @@ export function wireTools(app) {
   const fillBtn = Object.assign(document.createElement('button'), { textContent: 'Fill', title: 'Fill an enclosed area (G)' }); fillBtn.dataset.brush = 'fill';
   fillBtn.onclick = () => { app.tools.setOption('fill', true); fillBtn.blur(); }; brush.append(fillBtn);
   for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.onclick = () => { app.tools.set(btn.dataset.tool); btn.blur(); };
+  const editBtn = document.getElementById('edit');
+  editBtn.onclick = () => { app.tools.setEditing(!app.tools.editing); editBtn.blur(); };
   document.getElementById('undo').onclick = () => { if (app.history.undo()) app.markDirty(); };
   document.getElementById('redo').onclick = () => { if (app.history.redo()) app.markDirty(); };
 
   app.tools.onChange = () => {
+    const { editing } = app.tools;
+    editBtn.classList.toggle('active', editing); editBtn.textContent = editing ? 'Done' : 'Edit';
+    document.body.classList.toggle('editing', editing);
+    for (const el of document.querySelectorAll('#toolbar [data-edit]')) el.hidden = !editing;
     for (const btn of document.querySelectorAll('#toolbar [data-tool]')) btn.classList.toggle('active', btn.dataset.tool === app.tools.current);
     for (const btn of biomesEl.children) btn.classList.toggle('active', btn.dataset.biome === String(app.tools.options.biome));
     const { fill } = app.tools.options;
@@ -154,7 +161,7 @@ export function wireTools(app) {
     inkColors.querySelector('.custom').classList.toggle('active', !erase && !preset); inkColor.value = color;
     eraseBtn.classList.toggle('active', erase);
     document.getElementById('paint-opts').hidden = app.tools.current !== 'paint';
-    app.canvas.style.cursor = app.tools.current === 'pan' ? 'grab' : 'crosshair';
+    app.restCursor?.();
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
     document.getElementById('pin-opts').hidden = app.tools.current !== 'pin';
     document.getElementById('log-opts').hidden = app.tools.current !== 'log';
@@ -162,7 +169,7 @@ export function wireTools(app) {
     if (app.tools.current === 'log') app.logTool?.update();   // refresh the start/summary when the tool is picked
     for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);
   };
-  app.tools.onChange(); app.tools.set('pan');   // start in Pan: no accidental edits on load
+  app.tools.setEditing(false);   // open read-only: editing is a deliberate step
 }
 
 /** The Measure sidebar: distance heading plus a time-per-gait table. Returns the panel object measureTool() expects. */

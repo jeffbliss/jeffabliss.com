@@ -6,7 +6,7 @@ import { createGrid } from './grid.js';
 import { createTerrainLayer, createFogLayer } from './gl.js';
 import { revealFn, refogFn } from './fog.js';
 import { createInk, inkTool, INK_REVEAL_MIN_M } from './ink.js';
-import { createTools, rasterBrushTool, paintTool, isTypingTarget, interpolate } from './tools.js';
+import { createTools, rasterBrushTool, paintTool, isTypingTarget, interpolate, panGesture } from './tools.js';
 import { createPins, pinTool, selectTool } from './pins.js';
 import { PIN_TYPES } from './world.js';
 import { createUI, wireTools, wirePinPopup, wireLogPanel, wireMeasurePanel } from './ui.js';
@@ -80,11 +80,17 @@ function cameraControls() {
   const { view } = app;
   const pos = e => [e.offsetX * dpr(), e.offsetY * dpr()];
   canvas.addEventListener('wheel', e => { e.preventDefault(); const [sx, sy] = pos(e); view.zoomAt(sx, sy, Math.exp(-e.deltaY * 0.0015), ...size()); requestRender(); }, { passive: false });
-  let panning = null;
-  app.isPanGesture = e => e.button === 1 || e.button === 2 || app.spaceDown || app.tool === 'pan';
-  canvas.addEventListener('pointerdown', e => { if (app.isPanGesture(e)) { panning = pos(e); canvas.setPointerCapture(e.pointerId); canvas.style.cursor = 'grabbing'; } });
+  let panning = null, pressed = null;
+  app.isPanGesture = e => panGesture(e, { editing: app.tools.editing, tool: app.tools.current, spaceDown: app.spaceDown });
+  app.restCursor = () => { canvas.style.cursor = app.tools.editing || app.tools.current === 'measure' ? 'crosshair' : 'grab'; };
+  canvas.addEventListener('pointerdown', e => { if (app.isPanGesture(e)) { panning = pressed = pos(e); canvas.setPointerCapture(e.pointerId); canvas.style.cursor = 'grabbing'; } });
   canvas.addEventListener('pointermove', e => { if (!panning) return; const p = pos(e); view.panBy(p[0] - panning[0], p[1] - panning[1]); panning = p; requestRender(); });
-  canvas.addEventListener('pointerup', () => { if (panning) canvas.style.cursor = app.tool === 'pan' ? 'grab' : 'crosshair'; panning = null; });
+  canvas.addEventListener('pointerup', e => {
+    if (!panning) return; panning = null; app.restCursor();
+    const [sx, sy] = pos(e), moved = Math.hypot(sx - pressed[0], sy - pressed[1]) > 4 * dpr();
+    // A click (no drag) in View selects the pin under it, or clears the selection.
+    if (!moved && e.button === 0 && !app.tools.editing && app.pinsLayer) { app.pinsLayer.selected = app.pinsLayer.hitTest(sx, sy, view, ...size())?.id ?? null; requestRender(); }
+  });
   canvas.addEventListener('dblclick', e => {
     const [sx, sy] = pos(e);
     if (app.pinsLayer?.hitTest(sx, sy, view, ...size())) return;

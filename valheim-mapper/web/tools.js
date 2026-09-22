@@ -10,7 +10,11 @@ export const DEFAULT_INK_WIDTH = 4;
 /** Quick ink colours: dark ink, white, then the six colour-wheel primaries and secondaries. */
 export const INK_COLORS = ['#2b1d0e', '#f4ecd8', '#d62828', '#f77f00', '#f2c014', '#2a9d3f', '#1d6fd6', '#7b3fbf'];
 
-const HOTKEYS = { h: 'pan', b: 'paint', i: 'ink', p: 'pin', v: 'select', l: 'log', m: 'measure' };
+const HOTKEYS = { b: 'paint', i: 'ink', p: 'pin', v: 'select', l: 'log', m: 'measure' };
+const EDIT_TOOLS = ['paint', 'ink', 'pin', 'select', 'log'];
+
+/** True when this press should pan the camera: any button in View (except while measuring), right/middle/Space+drag in Edit. */
+export const panGesture = (e, { editing, tool, spaceDown }) => e.button === 1 || e.button === 2 || !!spaceDown || (!editing && tool !== 'measure');
 
 /** True when the key event is aimed at a text field, so app hotkeys must not fire. */
 export const isTypingTarget = e => { const t = e.target; return !!t && (t.tagName === 'INPUT' && !['range', 'checkbox', 'color', 'file', 'button'].includes(t.type) || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable); };
@@ -24,9 +28,17 @@ export function interpolate(ax, az, bx, bz, step) {
 
 export function createTools(app) {
   const handlers = {};
-  const tools = { current: 'pan', options: { biome: 1, brush: DEFAULT_BRUSH, fill: false, inkColor: '#2b1d0e', inkWidth: DEFAULT_INK_WIDTH, inkErase: false, pinType: 'pin' }, onChange: null };
+  const tools = { current: 'view', editing: false, options: { biome: 1, brush: DEFAULT_BRUSH, fill: false, inkColor: '#2b1d0e', inkWidth: DEFAULT_INK_WIDTH, inkErase: false, pinType: 'pin' }, onChange: null };
+  let lastEdit = 'paint';
   tools.register = (name, handler) => { handlers[name] = handler; };
-  tools.set = name => { if (!handlers[name] && name !== 'pan') return; tools.current = name; app.tool = name; tools.onChange?.(); app.requestRender(); };
+  const resting = () => tools.editing ? lastEdit : 'view';
+  tools.set = name => {
+    if (name === 'measure' && tools.current === 'measure') name = resting();
+    else if (EDIT_TOOLS.includes(name)) { if (!tools.editing || !handlers[name]) return; lastEdit = name; }
+    else if (name !== 'measure' && name !== 'view') return;
+    tools.current = name; app.tool = name; tools.onChange?.(); app.requestRender();
+  };
+  tools.setEditing = on => { tools.editing = !!on; if (tools.current !== 'measure') tools.set(resting()); else tools.onChange?.(); };
   tools.setOption = (k, v) => { tools.options[k] = v; tools.onChange?.(); app.requestRender(); };
 
   const { canvas, view } = app;
@@ -56,7 +68,9 @@ export function createTools(app) {
     if (mod && e.key.toLowerCase() === 'z') { e.preventDefault(); if (e.shiftKey ? app.history.redo() : app.history.undo()) app.markDirty(); return; }
     if (mod && e.key.toLowerCase() === 'y') { e.preventDefault(); if (app.history.redo()) app.markDirty(); return; }
     if (HOTKEYS[e.key.toLowerCase()] && !mod) tools.set(HOTKEYS[e.key.toLowerCase()]);
-    if (e.key.toLowerCase() === 'g' && !mod) { tools.set('paint'); tools.setOption('fill', true); }
+    if (e.key.toLowerCase() === 'e' && !mod) tools.setEditing(!tools.editing);
+    if (e.key === 'Escape' && tools.editing && !tools.intercept && tools.current !== 'measure') tools.setEditing(false);
+    if (e.key.toLowerCase() === 'g' && !mod && tools.editing) { tools.set('paint'); tools.setOption('fill', true); }
     if (tools.current === 'paint' && tools.options.fill && (e.key === '[' || e.key === ']')) tools.setOption('fill', false);
     // [ and ] step the size of whichever tool is active: ink width in Ink, brush radius otherwise.
     const [key, sizes] = tools.current === 'ink' ? ['inkWidth', INK_WIDTHS] : ['brush', BRUSH_SIZES];

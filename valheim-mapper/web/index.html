@@ -8,16 +8,18 @@
 <body>
 <canvas id="map"></canvas>
 <div id="toolbar">
-  <button data-tool="pan" title="Pan (H)">Pan</button>
-  <button data-tool="paint" title="Paint terrain (B)">Paint</button>
-  <button data-tool="ink" title="Ink (I)">Ink</button>
-  <button data-tool="pin" title="Pin (P)">Pin</button>
-  <button data-tool="select" title="Select (V)">Select</button>
-  <button data-tool="log" title="Leg log: dead reckoning from a known point (L)">Log</button>
-  <button data-tool="measure" title="Measure a route (M)">Measure</button>
+  <button id="edit" title="Edit the map (E) · Esc when done">Edit</button>
+  <span class="sep" data-edit hidden></span>
+  <button data-tool="paint" data-edit hidden title="Paint terrain (B)">Paint</button>
+  <button data-tool="ink" data-edit hidden title="Ink (I)">Ink</button>
+  <button data-tool="pin" data-edit hidden title="Pin (P)">Pin</button>
+  <button data-tool="select" data-edit hidden title="Select (V)">Select</button>
+  <button data-tool="log" data-edit hidden title="Leg log: dead reckoning from a known point (L)">Log</button>
+  <span class="sep" data-edit hidden></span>
+  <button id="undo" data-edit hidden title="Undo (Cmd/Ctrl+Z)">Undo</button>
+  <button id="redo" data-edit hidden title="Redo (Shift+Cmd/Ctrl+Z)">Redo</button>
   <span class="sep"></span>
-  <button id="undo" title="Undo (Cmd/Ctrl+Z)">Undo</button>
-  <button id="redo" title="Redo (Shift+Cmd/Ctrl+Z)">Redo</button>
+  <button data-tool="measure" title="Measure a route (M)">Measure</button>
   <button id="fit" title="Fit world (0)">Fit</button>
   <span class="sep"></span>
   <button id="export">Export</button>

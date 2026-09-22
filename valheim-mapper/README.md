@@ -18,8 +18,9 @@ operations (logs, allow-list rotation, backup, storage reset): see
 `docs/superpowers/runbook-cloudflare.md`.
 
 ## Controls
-- Wheel or the + / − buttons (also `+` `-` keys): zoom · Right-drag, middle-drag or Space+drag: pan (in any tool) · Double-click: recentre · `0`: fit world
-- Tools: `H` pan, `B` paint, `I` ink, `P` pin, `V` select · `[` `]` step the paint brush through 8 / 16 / 32 / 64 / 128 m, or the ink width through 2 / 4 / 8 / 16 / 32 m while inking
+- The map opens read-only. Drag to pan, wheel or the + / − buttons (also `+` `-` keys) to zoom, double-click to recentre, `0` fits the world. Click a pin to read it; Check (or `X`) still works here.
+- **Edit** (`E`) reveals the drawing tools and Undo / Redo; Done or `Esc` returns to read-only. While editing, right-drag, middle-drag or Space+drag pan.
+- Tools: `B` paint, `I` ink, `P` pin, `V` select, `L` log, `M` measure (Measure also works without Edit) · `[` `]` step the paint brush through 8 / 16 / 32 / 64 / 128 m, or the ink width through 2 / 4 / 8 / 16 / 32 m while inking
 - Paint: drag to paint the chosen biome; the **None** swatch erases. Painting and inking clear the fog where you draw. The **Fog** swatch in the palette re-fogs an area.
 - Fill (`G`, or the Fill button in the brush row): click inside an enclosed area to fill it with the chosen biome. Painted biome boundaries and ink strokes both contain the fill; it is refused, and nothing changes, if the area reaches the edge of the world or is bigger than 4 km × 4 km.
 - Copy and paste: in Select mode drag a box, `Cmd/Ctrl+C` copies the terrain, fog, ink and pins inside it, `Cmd/Ctrl+V` then click places the copy centred on the click (blank cells are transparent; `Esc` cancels). The copy goes through the system clipboard as text, so it can be pasted into a friend's tab.

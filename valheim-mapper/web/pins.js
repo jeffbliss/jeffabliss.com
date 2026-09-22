@@ -106,14 +106,14 @@ export function pinKeys(app, pins, openEditor) {
   addEventListener('keydown', e => {
     if (isTypingTarget(e) || !pins.selected) return;
     const pin = app.state.pins.find(p => p.id === pins.selected); if (!pin) return;
-    if (e.key === 'Enter') openEditor(pin);
+    if (e.key === 'Enter') { if (!app.tools.editing) return; openEditor(pin); }
     else if (e.key.toLowerCase() === 'x') {
       pin.checked = !pin.checked;
       app.history.push({ label: 'check', ...pinOps.update(pin, { checked: pin.checked }, { checked: !pin.checked }), undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } });
       app.markDirty();
     }
     else if (e.key === 'Delete' || e.key === 'Backspace') {
-      if (pin.fixed) return;                                    // the start pin cannot be removed; don't record an undo step for a no-op
+      if (pin.fixed || !app.tools.editing) return;              // the start pin cannot be removed; don't record an undo step for a no-op
       const idx = app.state.pins.indexOf(pin); pins.remove(pin.id);
       app.history.push({ label: 'remove pin', ...pinOps.remove(pin), undo: () => app.state.pins.splice(idx, 0, pin), redo: () => pins.remove(pin.id) }); app.markDirty();
     } else return;

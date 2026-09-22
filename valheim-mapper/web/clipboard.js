@@ -112,7 +112,7 @@ export function createClipboard(app) {
     if (isTypingTarget(e)) return;
     const mod = e.metaKey || e.ctrlKey, k = e.key.toLowerCase();
     if (mod && k === 'c' && app.selection) { const text = copy(); if (text) navigator.clipboard?.writeText(text).catch(() => {}); }
-    if (mod && k === 'v' && clip && !pasting) beginPaste(clip);
+    if (mod && k === 'v' && clip && !pasting && app.tools.editing) beginPaste(clip);
     if (e.key !== 'Escape') return;
     if (pasting) { pasting = null; app.tools.intercept = null; app.toast(''); }
     app.selection = null; app.requestRender();
