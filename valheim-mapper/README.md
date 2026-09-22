@@ -46,3 +46,4 @@ Terrain (parchment, biomes, textures) and fog are drawn by a small WebGL rendere
 
 - Rotate a selection on copy/paste: while the paste ghost is shown, `R` turns it 90° (terrain and fog cells transposed, ink points and pin positions rotated about the centre), and the placed copy is the rotated one.
 - Move the Fill option: it sits at the end of the brush-size row, where it reads as a sixth size and is easy to miss. Give it its own place, for example a Fill tool button in the toolbar next to Paint, or a Brush / Fill mode switch above the sizes.
+- Scale a selection up or down: resize what is already drawn (terrain and fog cells resampled to the new size, ink points and pin positions scaled about the centre). Likely as a paste-ghost adjustment alongside rotate, or as drag handles on the selection box in Select mode; the result should be one undo step and sync like any other edit.
