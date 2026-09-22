@@ -1,6 +1,6 @@
 {
   "totals": {
-    "bronze": 2358,
+    "bronze": 2359,
     "silver": 676,
     "gold": 271,
     "platinum": 28
@@ -8,6 +8,16 @@
   "gameCount": 420,
   "averageCompletion": 18.4,
   "recentTrophies": [
+    {
+      "platform": "psn",
+      "gameName": "Valheim",
+      "gameId": "NPWR50370_00",
+      "slug": "psn-valheim",
+      "trophyName": "The Cook",
+      "trophyType": "bronze",
+      "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR50370_00/114e6ddc-af39-4b40-aa67-a04f40fae160.png",
+      "earnedAt": "2026-09-22T01:41:01Z"
+    },
     {
       "platform": "psn",
       "gameName": "Valheim",
@@ -997,16 +1007,6 @@
       "trophyType": "silver",
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13281_00_00A03E8F7ED2727FADE2548E45F2781D32F5D048F6/E45AC2A9800BFCD3942B5AB8E2A3C76A33B35554.PNG",
       "earnedAt": "2026-08-10T19:31:46Z"
-    },
-    {
-      "platform": "psn",
-      "gameName": "DARK SOULS™: REMASTERED",
-      "gameId": "NPWR13281_00",
-      "slug": "psn-dark-souls-remastered",
-      "trophyName": "Crystal Weapon",
-      "trophyType": "bronze",
-      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR13281_00_00A03E8F7ED2727FADE2548E45F2781D32F5D048F6/ADC51D4C3809F6AEDE63FC0A5350A54ADAE5C8E4.PNG",
-      "earnedAt": "2026-08-09T21:33:54Z"
     }
   ],
   "games": [
@@ -1016,10 +1016,10 @@
       "slug": "psn-valheim",
       "platform": "psn",
       "titlePlatform": "PS5",
-      "progressPercent": 15,
-      "earnedCount": 10,
+      "progressPercent": 16,
+      "earnedCount": 11,
       "totalCount": 54,
-      "lastEarnedAt": "2026-09-20T19:57:33Z"
+      "lastEarnedAt": "2026-09-22T01:41:01Z"
     },
     {
       "name": "DOOM + DOOM II",
