@@ -154,10 +154,24 @@ export function wireTools(app) {
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
     document.getElementById('pin-opts').hidden = app.tools.current !== 'pin';
     document.getElementById('log-opts').hidden = app.tools.current !== 'log';
+    document.getElementById('measure-opts').hidden = app.tools.current !== 'measure';
     if (app.tools.current === 'log') app.logTool?.update();   // refresh the start/summary when the tool is picked
     for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);
   };
   app.tools.onChange(); app.tools.set('pan');   // start in Pan: no accidental edits on load
+}
+
+/** The Measure sidebar: distance heading plus a time-per-gait table. Returns the panel object measureTool() expects. */
+export function wireMeasurePanel(app) {
+  const label = document.getElementById('measure-label'), body = document.querySelector('#measure-table tbody');
+  const panel = { setSummary(s) {
+    label.textContent = s ? s.label : 'click two or more points';
+    body.replaceChildren(...(s?.rows ?? []).map(r => { const tr = document.createElement('tr'); for (const t of [r.note ? `${r.name} (${r.note})` : r.name, `${r.mps} m/s`, r.time]) { const td = document.createElement('td'); td.textContent = t; tr.append(td); } return tr; }));
+  } };
+  document.getElementById('measure-clear').onclick = e => { app.measureTool?.clear(); e.currentTarget.blur(); };
+  addEventListener('keydown', e => { if (e.key === 'Escape' && app.tools.current === 'measure') app.measureTool?.clear(); });
+  panel.setSummary(null);
+  return panel;
 }
 
 /** The Leg log sidebar: text in, live summary out. Returns the panel object logTool() expects. */

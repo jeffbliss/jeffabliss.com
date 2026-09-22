@@ -14,6 +14,7 @@
   <button data-tool="pin" title="Pin (P)">Pin</button>
   <button data-tool="select" title="Select (V)">Select</button>
   <button data-tool="log" title="Leg log: dead reckoning from a known point (L)">Log</button>
+  <button data-tool="measure" title="Measure a route (M)">Measure</button>
   <span class="sep"></span>
   <button id="undo" title="Undo (Cmd/Ctrl+Z)">Undo</button>
   <button id="redo" title="Redo (Shift+Cmd/Ctrl+Z)">Redo</button>
@@ -42,6 +43,12 @@
   <section id="pin-opts" class="tool-group">
     <h3>Pin type</h3>
     <div id="pin-types" class="palette"></div>
+  </section>
+  <section id="measure-opts" class="tool-group">
+    <h3>Measure <span id="measure-label" class="sub"></span></h3>
+    <table id="measure-table" class="gaits"><thead><tr><th>Gait</th><th>Speed</th><th>Time</th></tr></thead><tbody></tbody></table>
+    <div class="row"><button id="measure-clear">Clear</button></div>
+    <p class="hint">Click points along a route (pins snap). The last segment follows the cursor. Esc or Clear starts over. Nothing is saved.</p>
   </section>
   <section id="log-opts" class="tool-group">
     <h3>Leg log <span id="log-start" class="sub">—</span></h3>

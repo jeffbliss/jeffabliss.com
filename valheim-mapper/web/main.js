@@ -9,11 +9,12 @@ import { createInk, inkTool, INK_REVEAL_MIN_M } from './ink.js';
 import { createTools, rasterBrushTool, paintTool, isTypingTarget, interpolate } from './tools.js';
 import { createPins, pinTool, selectTool } from './pins.js';
 import { PIN_TYPES } from './world.js';
-import { createUI, wireTools, wirePinPopup, wireLogPanel } from './ui.js';
+import { createUI, wireTools, wirePinPopup, wireLogPanel, wireMeasurePanel } from './ui.js';
 import { createScaleBar } from './scale.js';
 import { fillAt } from './fill.js';
 import { createClipboard } from './clipboard.js';
 import { logTool } from './leglog.js';
+import { measureTool } from './measure.js';
 import { createSync } from './sync.js';
 import { createPresence } from './presence.js';
 
@@ -144,6 +145,8 @@ app.rebuild = function rebuild(state) {
   };
   app.logTool = logTool(app, app.logPanel, { revealInk });
   app.tools.register('log', app.logTool);
+  app.measureTool = measureTool(app, app.measurePanel);
+  app.tools.register('measure', app.measureTool);
   app.requestRender();
 };
 
@@ -155,6 +158,7 @@ async function boot() {
   app.tools = createTools(app);
   wirePinPopup(app);                        // sets app.openEditor before pin/select tools are registered by rebuild()
   app.logPanel = wireLogPanel(app);         // likewise for the Log tool
+  app.measurePanel = wireMeasurePanel(app);
   app.rebuild(await createState(emptyDoc()));   // an empty map to draw until the server's snapshot arrives
   cameraControls();
   createClipboard(app);                     // marquee selection, copy, paste (after cameraControls: it wraps isPanGesture)
