@@ -10,7 +10,7 @@ export const DEFAULT_INK_WIDTH = 4;
 /** Quick ink colours: dark ink, white, then the six colour-wheel primaries and secondaries. */
 export const INK_COLORS = ['#2b1d0e', '#f4ecd8', '#d62828', '#f77f00', '#f2c014', '#2a9d3f', '#1d6fd6', '#7b3fbf'];
 
-const HOTKEYS = { h: 'pan', b: 'paint', i: 'ink', p: 'pin', v: 'select' };
+const HOTKEYS = { h: 'pan', b: 'paint', i: 'ink', p: 'pin', v: 'select', l: 'log' };
 
 /** True when the key event is aimed at a text field, so app hotkeys must not fire. */
 export const isTypingTarget = e => { const t = e.target; return !!t && (t.tagName === 'INPUT' && !['range', 'checkbox', 'color', 'file', 'button'].includes(t.type) || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable); };

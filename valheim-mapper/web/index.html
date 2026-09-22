@@ -13,6 +13,7 @@
   <button data-tool="ink" title="Ink (I)">Ink</button>
   <button data-tool="pin" title="Pin (P)">Pin</button>
   <button data-tool="select" title="Select (V)">Select</button>
+  <button data-tool="log" title="Leg log: dead reckoning from a known point (L)">Log</button>
   <span class="sep"></span>
   <button id="undo" title="Undo (Cmd/Ctrl+Z)">Undo</button>
   <button id="redo" title="Redo (Shift+Cmd/Ctrl+Z)">Redo</button>
@@ -41,6 +42,13 @@
   <section id="pin-opts" class="tool-group">
     <h3>Pin type</h3>
     <div id="pin-types" class="palette"></div>
+  </section>
+  <section id="log-opts" class="tool-group">
+    <h3>Leg log <span id="log-start" class="sub">—</span></h3>
+    <textarea id="log-text" rows="6" spellcheck="false" placeholder="NE 40 jog&#10;E 25&#10;120 1m30 sprint"></textarea>
+    <pre id="log-summary" class="hint"></pre>
+    <div class="row"><button id="log-place" disabled>Place</button><button id="log-clear">Clear</button></div>
+    <p class="hint">Bearing (N, NE, ENE… or degrees), seconds (or 2m, 1m30), gait (walk 1.6 · jog 4 · sprint 7 · swim 2 m/s, or a number). Path and end pin use the ink colour.</p>
   </section>
   <section id="ink-opts" class="tool-group">
     <h3>Width <span id="ink-label" class="sub">4 m</span></h3>

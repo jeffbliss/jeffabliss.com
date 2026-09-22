@@ -1,18 +1,19 @@
 import { createView } from './view.js';
 import { createLayers } from './layers.js';
-import { createHistory } from './history.js';
+import { createHistory, createStrokeRecorder } from './history.js';
 import { createState, emptyDoc } from './store.js';
 import { createGrid } from './grid.js';
 import { createTerrainLayer, createFogLayer } from './gl.js';
 import { revealFn, refogFn } from './fog.js';
-import { createInk, inkTool } from './ink.js';
-import { createTools, rasterBrushTool, paintTool, isTypingTarget } from './tools.js';
+import { createInk, inkTool, INK_REVEAL_MIN_M } from './ink.js';
+import { createTools, rasterBrushTool, paintTool, isTypingTarget, interpolate } from './tools.js';
 import { createPins, pinTool, selectTool } from './pins.js';
 import { PIN_TYPES } from './world.js';
-import { createUI, wireTools, wirePinPopup } from './ui.js';
+import { createUI, wireTools, wirePinPopup, wireLogPanel } from './ui.js';
 import { createScaleBar } from './scale.js';
 import { fillAt } from './fill.js';
 import { createClipboard } from './clipboard.js';
+import { logTool } from './leglog.js';
 import { createSync } from './sync.js';
 import { createPresence } from './presence.js';
 
@@ -131,6 +132,18 @@ app.rebuild = function rebuild(state) {
   app.tools.register('ink', inkTool(app, ink, revealFog));
   app.tools.register('pin', pinTool(app, pins, app.openEditor));
   app.tools.register('select', selectTool(app, pins, app.openEditor));
+  // Walking a logged path explores it: reveal fog along the stroke, as the ink tool does.
+  const revealInk = stroke => {
+    const rec = createStrokeRecorder(state.fog, 'fog'); rec.begin();
+    const r = Math.max(INK_REVEAL_MIN_M, stroke.width);
+    for (let i = 0; i < stroke.points.length; i++) {
+      const [ax, az] = stroke.points[i], [bx, bz] = stroke.points[i + 1] ?? stroke.points[i];
+      for (const [x, z] of interpolate(ax, az, bx, bz, r * 0.5)) state.fog.stamp(x, z, r, revealFn);
+    }
+    return rec.end('leg log');
+  };
+  app.logTool = logTool(app, app.logPanel, { revealInk });
+  app.tools.register('log', app.logTool);
   app.requestRender();
 };
 
@@ -141,6 +154,7 @@ async function boot() {
 
   app.tools = createTools(app);
   wirePinPopup(app);                        // sets app.openEditor before pin/select tools are registered by rebuild()
+  app.logPanel = wireLogPanel(app);         // likewise for the Log tool
   app.rebuild(await createState(emptyDoc()));   // an empty map to draw until the server's snapshot arrives
   cameraControls();
   createClipboard(app);                     // marquee selection, copy, paste (after cameraControls: it wraps isPanGesture)

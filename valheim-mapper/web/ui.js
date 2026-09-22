@@ -153,7 +153,24 @@ export function wireTools(app) {
     app.canvas.style.cursor = app.tools.current === 'pan' ? 'grab' : 'crosshair';
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
     document.getElementById('pin-opts').hidden = app.tools.current !== 'pin';
+    document.getElementById('log-opts').hidden = app.tools.current !== 'log';
     for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);
   };
   app.tools.onChange(); app.tools.set('pan');   // start in Pan: no accidental edits on load
+}
+
+/** The Leg log sidebar: text in, live summary out. Returns the panel object logTool() expects. */
+export function wireLogPanel(app) {
+  const text = document.getElementById('log-text'), summary = document.getElementById('log-summary'), start = document.getElementById('log-start'), place = document.getElementById('log-place');
+  const panel = {
+    text: () => text.value,
+    setSummary: s => { summary.textContent = s; place.disabled = !app.logTool?.walk || app.logTool.errors.length > 0; },
+    setStart: s => { start.textContent = s; },
+    clear: () => { text.value = ''; },
+  };
+  text.oninput = () => app.logTool?.update();
+  place.onclick = () => { app.logTool?.place(); place.blur(); };
+  document.getElementById('log-clear').onclick = () => { panel.clear(); app.logTool?.update(); };
+  text.addEventListener('keydown', e => { if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') { e.preventDefault(); app.logTool?.place(); } });
+  return panel;
 }
