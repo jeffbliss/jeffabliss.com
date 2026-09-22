@@ -86,11 +86,12 @@ export function logTool(app, panel, { revealInk = null } = {}) {
   const tool = { start: null, walk: null, errors: [] };
   const snapTo = (wx, wz) => nearestPin(app.state.pins, wx, wz, 14 * app.dpr() / app.view.scale);
   tool.update = () => {
+    if (!tool.start) { const sp = app.state.pins.find(p => p.type === 'start'); if (sp) tool.start = { x: sp.x, z: sp.z, name: 'Start' }; }   // spawn until you click elsewhere
     const { legs, errors } = parseLegs(panel.text());
     tool.errors = errors; tool.walk = tool.start && legs.length ? walkLegs(tool.start.x, tool.start.z, legs) : null;
     const w = tool.walk, gait = m => m >= 1000 ? `${(m / 1000).toFixed(1)} km` : `${Math.round(m)} m`;
     panel.setSummary(!tool.start ? 'Click the map (or a pin) to set the start.' : errors.length ? errors.join('\n')
-      : !w ? 'One leg per line: bearing, seconds, gait — e.g. NE 40 jog' : `${legs.length} leg${legs.length === 1 ? '' : 's'}, ${gait(w.metres)} in ${Math.round(w.seconds)} s · end ±${w.error} m`);
+      : !w ? 'One leg per line: bearing, seconds, gait — e.g. NE 40 jog. Click the map or a pin to move the start.' : `${legs.length} leg${legs.length === 1 ? '' : 's'}, ${gait(w.metres)} in ${Math.round(w.seconds)} s · end ±${w.error} m`);
     panel.setStart(tool.start ? (tool.start.name || `${Math.round(tool.start.x)}, ${Math.round(tool.start.z)}`) : '—');
     app.requestRender();
   };

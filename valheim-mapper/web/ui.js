@@ -154,6 +154,7 @@ export function wireTools(app) {
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
     document.getElementById('pin-opts').hidden = app.tools.current !== 'pin';
     document.getElementById('log-opts').hidden = app.tools.current !== 'log';
+    if (app.tools.current === 'log') app.logTool?.update();   // refresh the start/summary when the tool is picked
     for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);
   };
   app.tools.onChange(); app.tools.set('pan');   // start in Pan: no accidental edits on load
