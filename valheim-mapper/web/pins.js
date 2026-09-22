@@ -7,7 +7,7 @@ export function nearestPin(pins, x, z, maxDist) {
 }
 
 /** Plain copy of a pin without transient/local-only fields (e.g. `fixed`), for sync ops. */
-function plainPin(p) { return { id: p.id, x: p.x, z: p.z, type: p.type, name: p.name, checked: p.checked }; }
+function plainPin(p) { return { id: p.id, x: p.x, z: p.z, type: p.type, name: p.name, checked: p.checked, ...(p.log ? { log: p.log } : {}) }; }
 
 export const pinOps = {
   add: pin => ({ ops: [{ type: 'pin.add', pin: plainPin(pin) }], inverseOps: [{ type: 'pin.remove', id: pin.id }] }),

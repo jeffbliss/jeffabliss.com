@@ -37,7 +37,7 @@ describe('MapRoom', () => {
     const bin = await b.until(m => m instanceof Uint8Array);
     const { seq, name, payload } = unwrapServerRaster(bin); expect(name).toBe('alice'); expect(seq).toBeGreaterThan(0);
     expect([...decodeRasterOp(payload).bytes]).toEqual([2, 2]);
-    a.ws.send(JSON.stringify({ t: 'op', op: { type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: 'Camp', checked: false } } }));
+    a.ws.send(JSON.stringify({ t: 'op', op: { type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: 'Camp', checked: false, log: { from: 'start', start: [0, 0], legs: 'N 70 jog', ink: 's1' } } } }));
     const op = await b.until(m => m.t === 'op'); expect(op.op.pin.name).toBe('Camp'); expect(op.by.name).toBe('alice');
 
     expect(await runDurableObjectAlarm(stub)).toBe(true);                 // the flush alarm was scheduled and ran
@@ -47,6 +47,7 @@ describe('MapRoom', () => {
     const c = await connect(stub, 'carol@example.com'); const hello = await c.until(m => m.t === 'hello');
     expect(hello.seq).toBe(op.seq);
     expect(hello.doc.pins.find(p => p.id === 'p1').name).toBe('Camp');
+    expect(hello.doc.pins.find(p => p.id === 'p1').log).toEqual({ from: 'start', start: [0, 0], legs: 'N 70 jog', ink: 's1' });
     expect(hello.doc.terrain).not.toBe(null);
     a.ws.close(); b.ws.close(); c.ws.close();
   });

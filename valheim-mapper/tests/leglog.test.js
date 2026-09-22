@@ -43,3 +43,17 @@ test('logCommand adds the path and an end pin as one undoable step', () => {
   assert.equal(app.state.ink.length, 0); assert.equal(app.state.pins.length, 0);
   h.redo(); assert.equal(app.state.ink.length, 1);
 });
+
+test('logCommand stores the log on its end pin so the chain can be rebuilt', () => {
+  const app = { state: { ink: [], pins: [] } };
+  const w = walkLegs(0, 0, parseLegs('N 10\nE 10').legs);
+  logCommand(app, w, { color: '#ff0000', start: { id: 'start', x: 0, z: 0 }, legs: 'N 10\nE 10\n' });
+  const pin = app.state.pins[0];
+  assert.deepEqual(pin.log, { from: 'start', start: [0, 0], legs: 'N 10\nE 10', ink: app.state.ink[0].id });
+  const bare = { state: { ink: [], pins: [] } };
+  logCommand(bare, walkLegs(3, 4, parseLegs('S 5').legs), { color: '#ff0000', start: { x: 3, z: 4 }, legs: 'S 5' });
+  assert.equal(bare.state.pins[0].log.from, null); assert.deepEqual(bare.state.pins[0].log.start, [3, 4]);
+  const none = { state: { ink: [], pins: [] } };
+  logCommand(none, w, { color: '#ff0000' });
+  assert.equal('log' in none.state.pins[0], false);
+});

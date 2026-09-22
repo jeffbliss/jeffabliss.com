@@ -37,6 +37,17 @@ export function validateRaster({ layer, rect, bytes }) {
   if (layer === 0) for (let i = 0; i < bytes.length; i++) if (bytes[i] > MAX_BIOME) return 'bad biome id';
   return null;
 }
+/** A leg log stored on its end pin: where it started, the legs as typed, and the ink stroke it drew. */
+function validateLog(l) {
+  if (!l || typeof l !== 'object') return 'bad log';
+  for (const k of Object.keys(l)) if (!['from', 'start', 'legs', 'ink'].includes(k)) return 'bad log key';
+  if (l.from !== null && !isId(l.from)) return 'bad log from';
+  if (!Array.isArray(l.start) || l.start.length !== 2 || !l.start.every(isNum)) return 'bad log start';
+  if (typeof l.legs !== 'string' || l.legs.length === 0 || l.legs.length > 1000) return 'bad log legs';
+  if (!isId(l.ink)) return 'bad log ink';
+  return null;
+}
+
 export function validateOp(op) {
   if (!op || typeof op !== 'object') return 'bad op';
   switch (op.type) {
@@ -50,7 +61,8 @@ export function validateOp(op) {
     case 'pin.add': { const p = op.pin;
       if (!p || !isId(p.id) || p.id === 'start') return 'bad id'; if (!USER_PIN_TYPES.has(p.type)) return 'bad type';
       if (!isNum(p.x) || !isNum(p.z)) return 'bad position'; if (typeof p.name !== 'string' || p.name.length > 40) return 'bad name';
-      if (typeof p.checked !== 'boolean') return 'bad checked'; return null; }
+      if (typeof p.checked !== 'boolean') return 'bad checked';
+      if ('log' in p && p.log !== undefined) return validateLog(p.log); return null; }
     case 'pin.update': { if (!isId(op.id)) return 'bad id'; if (op.id === 'start') return 'start pin is fixed';
       const p = op.patch; if (!p || typeof p !== 'object') return 'bad patch';
       for (const k of Object.keys(p)) if (!['name', 'checked', 'x', 'z'].includes(k)) return 'bad patch key';
@@ -73,7 +85,7 @@ export function planOp(state, op) {
   switch (op.type) {
     case 'ink.add': { const s = { id: op.stroke.id, color: op.stroke.color, width: op.stroke.width, points: op.stroke.points }; persist.push({ table: 'ink', id: s.id, json: JSON.stringify(s) }); break; }
     case 'ink.remove': if (state.ink.has(op.id)) persist.push({ table: 'ink', id: op.id, json: null }); break;
-    case 'pin.add': { const p = { id: op.pin.id, x: op.pin.x, z: op.pin.z, type: op.pin.type, name: op.pin.name, checked: op.pin.checked }; persist.push({ table: 'pins', id: p.id, json: JSON.stringify(p) }); break; }
+    case 'pin.add': { const p = { id: op.pin.id, x: op.pin.x, z: op.pin.z, type: op.pin.type, name: op.pin.name, checked: op.pin.checked, ...(op.pin.log ? { log: op.pin.log } : {}) }; persist.push({ table: 'pins', id: p.id, json: JSON.stringify(p) }); break; }
     case 'pin.update': { const p = state.pins.get(op.id); if (p) persist.push({ table: 'pins', id: p.id, json: JSON.stringify({ ...p, ...op.patch }) }); break; }
     case 'pin.remove': if (state.pins.has(op.id)) persist.push({ table: 'pins', id: op.id, json: null }); break;
   }
@@ -84,7 +96,7 @@ export function applyOp(state, op) {
   switch (op.type) {
     case 'ink.add': { const s = { id: op.stroke.id, color: op.stroke.color, width: op.stroke.width, points: op.stroke.points }; state.ink.set(s.id, s); break; }
     case 'ink.remove': state.ink.delete(op.id); break;
-    case 'pin.add': { const p = { id: op.pin.id, x: op.pin.x, z: op.pin.z, type: op.pin.type, name: op.pin.name, checked: op.pin.checked }; state.pins.set(p.id, p); break; }
+    case 'pin.add': { const p = { id: op.pin.id, x: op.pin.x, z: op.pin.z, type: op.pin.type, name: op.pin.name, checked: op.pin.checked, ...(op.pin.log ? { log: op.pin.log } : {}) }; state.pins.set(p.id, p); break; }
     case 'pin.update': { const p = state.pins.get(op.id); if (p) Object.assign(p, op.patch); break; }
     case 'pin.remove': state.pins.delete(op.id); break;
   }

@@ -61,14 +61,17 @@ export function walkLegs(x, z, legs) {
 }
 
 /**
- * Commits a walked log: the path as ink, a pin at the end named with the error, fog revealed along the path.
+ * Commits a walked log: the path as ink, a pin at the end named with the error and carrying the log
+ * (start pin, leg text, ink id) so the chain can be rebuilt later, fog revealed along the path.
  * (The uncertainty circle is preview-only: ink renders under the fog, so a persisted ring would be hidden anyway.)
  * One undo step; syncs as ordinary ops.
  */
-export function logCommand(app, walk, { color, revealInk }) {
+export function logCommand(app, walk, { color, revealInk, start = null, legs = '' }) {
   const { state } = app;
   const path = { id: crypto.randomUUID(), color, width: 4, points: walk.points.map(([x, z]) => [+x.toFixed(1), +z.toFixed(1)]) };
-  const pin = { id: crypto.randomUUID(), x: +walk.end[0].toFixed(1), z: +walk.end[1].toFixed(1), type: 'pin', name: `log end ±${walk.error} m`, checked: false };
+  const [sx, sz] = walk.points[0];
+  const log = { from: start?.id ?? null, start: [+sx.toFixed(1), +sz.toFixed(1)], legs: legs.trim().slice(0, 1000), ink: path.id };
+  const pin = { id: crypto.randomUUID(), x: +walk.end[0].toFixed(1), z: +walk.end[1].toFixed(1), type: 'pin', name: `log end ±${walk.error} m`, checked: false, ...(log.legs ? { log } : {}) };
   const strokes = [path];
   const ink = { ops: strokes.map(s => ({ type: 'ink.add', stroke: s })), inverseOps: strokes.map(s => ({ type: 'ink.remove', id: s.id })),
     undo: () => { for (const s of strokes) { const i = state.ink.indexOf(s); if (i >= 0) state.ink.splice(i, 1); } }, redo: () => state.ink.push(...strokes) };
@@ -86,7 +89,7 @@ export function logTool(app, panel, { revealInk = null } = {}) {
   const tool = { start: null, walk: null, errors: [] };
   const snapTo = (wx, wz) => nearestPin(app.state.pins, wx, wz, 14 * app.dpr() / app.view.scale);
   tool.update = () => {
-    if (!tool.start) { const sp = app.state.pins.find(p => p.type === 'start'); if (sp) tool.start = { x: sp.x, z: sp.z, name: 'Start' }; }   // spawn until you click elsewhere
+    if (!tool.start) { const sp = app.state.pins.find(p => p.type === 'start'); if (sp) tool.start = { id: sp.id, x: sp.x, z: sp.z, name: 'Start' }; }   // spawn until you click elsewhere
     const { legs, errors } = parseLegs(panel.text());
     tool.errors = errors; tool.walk = tool.start && legs.length ? walkLegs(tool.start.x, tool.start.z, legs) : null;
     const w = tool.walk, gait = m => m >= 1000 ? `${(m / 1000).toFixed(1)} km` : `${Math.round(m)} m`;
@@ -97,13 +100,14 @@ export function logTool(app, panel, { revealInk = null } = {}) {
   };
   tool.place = () => {
     if (!tool.walk || tool.errors.length) return false;
-    const cmd = logCommand(app, tool.walk, { color: app.tools.options.inkColor, revealInk });
+    const cmd = logCommand(app, tool.walk, { color: app.tools.options.inkColor, revealInk, start: tool.start, legs: panel.text() });
     app.history.push(cmd); app.markDirty();
-    tool.start = { x: tool.walk.end[0], z: tool.walk.end[1], name: `log end ±${tool.walk.error} m` };   // chain the next log from here
+    const end = cmd.ops.find(o => o.type === 'pin.add').pin;
+    tool.start = { id: end.id, x: end.x, z: end.z, name: end.name };   // chain the next log from here
     panel.clear?.(); tool.update();
     return true;
   };
-  tool.down = (e, wx, wz) => { const hit = snapTo(wx, wz); tool.start = hit ? { x: hit.x, z: hit.z, name: hit.name || hit.type } : { x: wx, z: wz, name: '' }; tool.update(); };
+  tool.down = (e, wx, wz) => { const hit = snapTo(wx, wz); tool.start = hit ? { id: hit.id, x: hit.x, z: hit.z, name: hit.name || hit.type } : { x: wx, z: wz, name: '' }; tool.update(); };
   tool.cursor = (ctx, view, w, h) => {
     if (!tool.start) return;
     const dpr = app.dpr(), P = (x, z) => view.worldToScreen(x, z, w, h);

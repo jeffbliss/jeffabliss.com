@@ -28,6 +28,15 @@ test('raster op validation and apply', () => {
 test('json op validation', () => {
   assert.equal(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: 'Camp', checked: false } }), null);
   assert.match(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'start', name: '', checked: false } }), /type/);
+  const logged = log => ({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: 'log end', checked: false, log } });
+  assert.equal(validateOp(logged({ from: 'start', start: [0, 0], legs: 'N 70 jog', ink: 's1' })), null);
+  assert.equal(validateOp(logged({ from: null, start: [3, 4], legs: 'N 70 jog', ink: 's1' })), null);
+  assert.match(validateOp(logged({ from: 'start', start: [0], legs: 'N 70 jog', ink: 's1' })), /log start/);
+  assert.match(validateOp(logged({ from: 'start', start: [0, 0], legs: '', ink: 's1' })), /log legs/);
+  assert.match(validateOp(logged({ from: 'start', start: [0, 0], legs: 'x'.repeat(1001), ink: 's1' })), /log legs/);
+  assert.match(validateOp(logged({ from: 'start', start: [0, 0], legs: 'N 70 jog', ink: 's1', extra: 1 })), /log key/);
+  assert.match(validateOp(logged({ from: 'start', start: [0, 0], legs: 'N 70 jog' })), /log ink/);
+  assert.match(validateOp(logged('nope')), /bad log/);
   assert.match(validateOp({ type: 'pin.update', id: 'start', patch: { x: 5 } }), /start/);
   assert.match(validateOp({ type: 'pin.remove', id: 'start' }), /start/);
   assert.match(validateOp({ type: 'pin.update', id: 'p1', patch: { name: 'x'.repeat(41) } }), /name/);
