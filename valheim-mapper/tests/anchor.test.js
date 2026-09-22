@@ -20,6 +20,8 @@ test('chainFor follows log.from back to the first log; chainRoute joins the stro
   const orphan = { ...p2, log: { ...p2.log, from: 'missing' } };
   assert.deepEqual(chainFor([start, orphan], orphan).map(p => p.id), ['p2']);
   assert.equal(chainError([p1, p2]), 20);
+  assert.deepEqual(chainFor([start, { ...p1, checked: true }, p2], p2).map(p => p.id), ['p2']);   // a checked pin is verified: the chain stops there
+  assert.deepEqual(chainFor([start, p1, { ...p2, checked: true }], { ...p2, checked: true }).map(p => p.id), ['p1', 'p2']);
 });
 
 test('createField: start fixed, end moves by the full correction, fades to nothing beyond 2R', () => {

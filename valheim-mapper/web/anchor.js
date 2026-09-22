@@ -2,11 +2,14 @@ import { nearestPin, pinOps } from './pins.js';
 import { combine, createStrokeRecorder } from './history.js';
 import { ZONE_M } from './world.js';
 
-/** The chain of logs ending at `end`, oldest first, by following log.from. Empty when `end` has no log. */
+/**
+ * The chain of logs ending at `end`, oldest first, by following log.from. Empty when `end` has no log.
+ * A checked pin is a verified location: the walk stops there, so correcting a later chain never moves it.
+ */
 export function chainFor(pins, end) {
   const byId = new Map(pins.map(p => [p.id, p]));
   const chain = [], seen = new Set();
-  for (let p = end; p?.log && !seen.has(p.id); p = p.log.from ? byId.get(p.log.from) : null) { seen.add(p.id); chain.unshift(p); }
+  for (let p = end; p?.log && !seen.has(p.id) && (p === end || !p.checked); p = p.log.from ? byId.get(p.log.from) : null) { seen.add(p.id); chain.unshift(p); }
   return chain;
 }
 
