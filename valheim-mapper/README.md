@@ -41,3 +41,7 @@ Terrain (parchment, biomes, textures) and fog are drawn by a small WebGL rendere
 
 ## Development
 `npm test` (pure modules, node:test) and `npm run test:do` (Durable Object, workers pool). Game assets under `out/`, `web/assets/` are gitignored and must not be redistributed.
+
+## To do
+
+- Rotate a selection on copy/paste: while the paste ghost is shown, `R` turns it 90° (terrain and fog cells transposed, ink points and pin positions rotated about the centre), and the placed copy is the rotated one.
