@@ -32,7 +32,7 @@ test('painting also reveals fog under the brush, as one undoable command', () =>
   const terrain = createRaster({ cells: 20, cellM: 1 }), fog = createRaster({ cells: 20, cellM: 1 });
   let dirty = 0;
   const app = { history: createHistory(), tools: { options: { brush: 2 } }, markDirty: () => dirty++ };
-  const tool = rasterBrushTool(app, terrain, 'terrain', () => () => 3, () => () => 0, { raster: fog, fn: revealFn, layerName: 'fog' });
+  const tool = rasterBrushTool(app, terrain, 'terrain', () => () => 3, { raster: fog, fn: revealFn, layerName: 'fog' });
   const ev = { button: 0, altKey: false };
   let last = null; app.history.onApply = ops => (last = ops);
   tool.down(ev, 0.5, 0.5); tool.move(ev, 3.5, 0.5); tool.up(ev);
@@ -44,21 +44,18 @@ test('painting also reveals fog under the brush, as one undoable command', () =>
   assert.equal(terrain.get(0.5, 0.5), 0); assert.equal(fog.get(0.5, 0.5), 0);
   app.history.redo();
   assert.equal(terrain.get(0.5, 0.5), 3); assert.equal(fog.get(0.5, 0.5), 255);
-  // erasing terrain (right button) does not re-fog
-  tool.down({ button: 2, altKey: false }, 0.5, 0.5); tool.up(ev);
-  assert.equal(terrain.get(0.5, 0.5), 0); assert.equal(fog.get(0.5, 0.5), 255);
 });
 
 import { paintTool } from '../web/tools.js';
 import { refogFn } from '../web/fog.js';
 
-test('paint tool: the Fog swatch re-fogs without touching terrain; right drag with it reveals', () => {
+test('paint tool: the Fog swatch re-fogs without touching terrain; None erases terrain', () => {
   const terrain = createRaster({ cells: 20, cellM: 1 }), fog = createRaster({ cells: 20, cellM: 1 });
   const app = { history: createHistory(), tools: { options: { brush: 2, biome: 1 } }, markDirty: () => {} };
-  const terrainBrush = rasterBrushTool(app, terrain, 'terrain', () => () => app.tools.options.biome, () => () => 0, { raster: fog, fn: revealFn, layerName: 'fog' });
-  const fogBrush = rasterBrushTool(app, fog, 'fog', () => refogFn, () => revealFn);
+  const terrainBrush = rasterBrushTool(app, terrain, 'terrain', () => () => app.tools.options.biome, { raster: fog, fn: revealFn, layerName: 'fog' });
+  const fogBrush = rasterBrushTool(app, fog, 'fog', () => refogFn);
   const tool = paintTool(app, terrainBrush, fogBrush);
-  const left = { button: 0, altKey: false }, right = { button: 2, altKey: false };
+  const left = { button: 0 };
   tool.down(left, 0.5, 0.5); tool.up(left);                       // meadows: paints + reveals
   assert.equal(terrain.get(0.5, 0.5), 1); assert.equal(fog.get(0.5, 0.5), 255);
   app.tools.options.biome = 'fog';
@@ -66,6 +63,7 @@ test('paint tool: the Fog swatch re-fogs without touching terrain; right drag wi
   assert.equal(fog.get(0.5, 0.5), 0); assert.equal(terrain.get(0.5, 0.5), 1);
   app.history.undo(); assert.equal(fog.get(0.5, 0.5), 255);
   app.history.redo(); assert.equal(fog.get(0.5, 0.5), 0);
-  tool.down(right, 0.5, 0.5); tool.up(right);                     // right drag with fog swatch reveals again
-  assert.equal(fog.get(0.5, 0.5), 255);
+  app.tools.options.biome = 0;
+  tool.down(left, 0.5, 0.5); tool.up(left);                       // None: erases terrain and reveals
+  assert.equal(terrain.get(0.5, 0.5), 0); assert.equal(fog.get(0.5, 0.5), 255);
 });

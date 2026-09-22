@@ -30,3 +30,19 @@ test('strokes get ids, including ones loaded without', () => {
   const ink = createInk(strokes); assert.match(strokes[0].id, /^[0-9a-f-]{36}$/);
   ink.begin('#000000', 4); ink.add(0, 0); ink.add(10, 0); const s = ink.end(); assert.match(s.id, /^[0-9a-f-]{36}$/);
 });
+
+import { inkTool } from '../web/ink.js';
+import { createHistory } from '../web/history.js';
+
+test('ink tool: a drag draws, and erases strokes it crosses while options.inkErase is on', () => {
+  const strokes = [], ink = createInk(strokes);
+  const app = { history: createHistory(), tools: { options: { inkColor: '#000', inkWidth: 2, inkErase: false } }, view: { scale: 1 }, markDirty: () => {} };
+  const tool = inkTool(app, ink), ev = { button: 0 };
+  tool.down(ev, 0, 0); tool.move(ev, 10, 0); tool.up(ev);
+  assert.equal(strokes.length, 1);
+  app.tools.options.inkErase = true;
+  tool.down(ev, 5, 0.5); tool.up(ev);
+  assert.equal(strokes.length, 0);
+  app.history.undo(); assert.equal(strokes.length, 1);
+  app.history.redo(); assert.equal(strokes.length, 0);
+});

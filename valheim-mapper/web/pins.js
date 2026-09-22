@@ -91,7 +91,6 @@ export function pinTool(app, pins, openEditor) {
     down(e, wx, wz, sx, sy) {
       const hit = pins.hitTest(sx, sy, app.view, ...app.size());
       if (hit) { if (!hit.fixed) drag.begin(hit, wx, wz); return; }   // fixed pins (start) are not draggable and block placement
-      if (e.button === 2) return;
       const pin = pins.add({ x: wx, z: wz, type: app.tools.options.pinType });
       pins.selected = pin.id;
       app.history.push({ label: 'add pin', ...pinOps.add(pin), undo: () => pins.remove(pin.id), redo: () => { app.state.pins.push(pin); } });

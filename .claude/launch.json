@@ -15,12 +15,13 @@
     },
     {
       "name": "mapper",
-      "runtimeExecutable": "npx",
+      "runtimeExecutable": "npm",
       "runtimeArgs": [
-        "wrangler",
+        "--prefix",
+        "valheim-mapper",
+        "run",
         "dev",
-        "--config",
-        "valheim-mapper/wrangler.jsonc",
+        "--",
         "--port",
         "8787"
       ],

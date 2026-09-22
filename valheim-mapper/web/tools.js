@@ -24,7 +24,7 @@ export function interpolate(ax, az, bx, bz, step) {
 
 export function createTools(app) {
   const handlers = {};
-  const tools = { current: 'pan', options: { biome: 1, brush: DEFAULT_BRUSH, fill: false, inkColor: '#2b1d0e', inkWidth: DEFAULT_INK_WIDTH, pinType: 'pin' }, onChange: null };
+  const tools = { current: 'pan', options: { biome: 1, brush: DEFAULT_BRUSH, fill: false, inkColor: '#2b1d0e', inkWidth: DEFAULT_INK_WIDTH, inkErase: false, pinType: 'pin' }, onChange: null };
   tools.register = (name, handler) => { handlers[name] = handler; };
   tools.set = name => { if (!handlers[name] && name !== 'pan') return; tools.current = name; app.tool = name; tools.onChange?.(); app.requestRender(); };
   tools.setOption = (k, v) => { tools.options[k] = v; tools.onChange?.(); app.requestRender(); };
@@ -100,22 +100,21 @@ export function drawBrushCursor(ctx, view, w, h, tools) {
 }
 
 /**
- * Shared raster brush tool: left = fnPrimary, right/alt = fnSecondary.
+ * Shared raster brush tool: a drag stamps makeFn() along the stroke.
  * `reveal` = { raster, fn }: when given, every stamp also clears fog under the brush (exploring by drawing),
- * recorded into the same undo command. Erasing (secondary) leaves the fog as it is.
+ * recorded into the same undo command.
  */
-export function rasterBrushTool(app, raster, layerName, fnPrimary, fnSecondary, reveal = null) {
+export function rasterBrushTool(app, raster, layerName, makeFn, reveal = null) {
   const rec = createStrokeRecorder(raster, layerName), revealRec = reveal && createStrokeRecorder(reveal.raster, reveal.layerName ?? 'fog');
-  let fn = null, revealing = false;
+  let fn = null;
   let last = null;
   const stamp = (wx, wz) => {
     raster.stamp(wx, wz, app.tools.options.brush, fn);
-    if (revealing) reveal.raster.stamp(wx, wz, app.tools.options.brush, reveal.fn);
+    if (reveal) reveal.raster.stamp(wx, wz, app.tools.options.brush, reveal.fn);
   };
   return {
     down(e, wx, wz) {
-      const secondary = e.button === 2 || e.altKey;
-      fn = secondary ? fnSecondary() : fnPrimary(); revealing = !!reveal && !secondary;
+      fn = makeFn();
       rec.begin(); revealRec?.begin(); stamp(wx, wz); last = [wx, wz];
     },
     move(e, wx, wz) {

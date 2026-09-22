@@ -81,7 +81,7 @@ function cameraControls() {
   const pos = e => [e.offsetX * dpr(), e.offsetY * dpr()];
   canvas.addEventListener('wheel', e => { e.preventDefault(); const [sx, sy] = pos(e); view.zoomAt(sx, sy, Math.exp(-e.deltaY * 0.0015), ...size()); requestRender(); }, { passive: false });
   let panning = null;
-  app.isPanGesture = e => e.button === 1 || app.spaceDown || app.tool === 'pan';
+  app.isPanGesture = e => e.button === 1 || e.button === 2 || app.spaceDown || app.tool === 'pan';
   canvas.addEventListener('pointerdown', e => { if (app.isPanGesture(e)) { panning = pos(e); canvas.setPointerCapture(e.pointerId); canvas.style.cursor = 'grabbing'; } });
   canvas.addEventListener('pointermove', e => { if (!panning) return; const p = pos(e); view.panBy(p[0] - panning[0], p[1] - panning[1]); panning = p; requestRender(); });
   canvas.addEventListener('pointerup', () => { if (panning) canvas.style.cursor = app.tool === 'pan' ? 'grab' : 'crosshair'; panning = null; });
@@ -122,8 +122,8 @@ app.rebuild = function rebuild(state) {
   Object.assign(app, { fogLayer: fog, inkLayer: ink, pinsLayer: pins });
 
   const revealFog = { raster: state.fog, fn: revealFn, layerName: 'fog' };   // drawing explores: paint and ink clear fog where they land
-  const terrainBrush = rasterBrushTool(app, state.terrain, 'terrain', () => { const id = app.tools.options.biome; return () => id; }, () => () => 0, revealFog);
-  const fogBrush = rasterBrushTool(app, state.fog, 'fog', () => refogFn, () => revealFn);   // the palette's Fog swatch
+  const terrainBrush = rasterBrushTool(app, state.terrain, 'terrain', () => { const id = app.tools.options.biome; return () => id; }, revealFog);
+  const fogBrush = rasterBrushTool(app, state.fog, 'fog', () => refogFn);   // the palette's Fog swatch
   const fill = (wx, wz) => {
     const cmd = fillAt(state, wx, wz, app.tools.options.biome);
     if (cmd.error) { app.toast(cmd.error); return; }

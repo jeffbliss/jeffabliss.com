@@ -52,14 +52,14 @@ import { interpolate } from './tools.js';
 
 export const INK_REVEAL_MIN_M = 24;   // fog cleared along an ink stroke: at least this radius, or the stroke width
 
-/** Ink tool: left drag draws, right/alt drag erases strokes. `reveal` = { raster, fn } clears fog along new strokes. */
+/** Ink tool: a drag draws, or erases strokes under the cursor while options.inkErase is on. `reveal` = { raster, fn } clears fog along new strokes. */
 export function inkTool(app, ink, reveal = null) {
   const revealRec = reveal && createStrokeRecorder(reveal.raster, reveal.layerName ?? 'fog');
   let erasing = false, erased = null;
   const tolPx = 6;
   return {
     down(e, wx, wz) {
-      erasing = e.button === 2 || e.altKey;
+      erasing = !!app.tools.options.inkErase;
       if (erasing) { erased = []; this.move(e, wx, wz); }
       else ink.begin(app.tools.options.inkColor, app.tools.options.inkWidth);
     },
@@ -98,7 +98,9 @@ export function inkTool(app, ink, reveal = null) {
     },
     cursor(ctx, view, w, h, tools) {
       if (!tools.pointer) return; const [sx, sy] = tools.pointer;
-      ctx.beginPath(); ctx.arc(sx, sy, Math.max(2, tools.options.inkWidth * view.scale / 2), 0, Math.PI * 2); ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.stroke();
+      ctx.strokeStyle = 'rgba(255,255,255,0.8)';
+      if (tools.options.inkErase) { ctx.strokeRect(sx - 6, sy - 6, 12, 12); return; }
+      ctx.beginPath(); ctx.arc(sx, sy, Math.max(2, tools.options.inkWidth * view.scale / 2), 0, Math.PI * 2); ctx.stroke();
     },
   };
 }
