@@ -69,7 +69,7 @@ function applyLocalSettings() {
 }
 
 function render() {
-  const [w, h] = size();
+  const [w, h] = size(); if (!w || !h) return;   // a hidden or not-yet-laid-out tab: nothing to draw, and 0-size layer canvases would throw
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, w, h);
   app.layers.draw(ctx, app.view, w, h);
   app.updatePinPopup?.();

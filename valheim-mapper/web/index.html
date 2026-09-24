@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Valheim Mapper</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <canvas id="map"></canvas>
-<div id="toolbar">
+<div id="vignette"></div>
+<div id="toolbar" class="wood">
   <button id="edit" title="Edit the map (E) · Esc when done">Edit</button>
   <span class="sep" data-edit hidden></span>
   <button data-tool="paint" data-edit hidden title="Paint terrain (B)">Paint</button>
@@ -21,30 +23,25 @@
   <span class="sep"></span>
   <button data-tool="measure" title="Measure a route (M)">Measure</button>
   <button id="fit" title="Fit world (0)">Fit</button>
-  <span class="sep"></span>
-  <button id="export">Export</button>
+  <button id="export" title="Download the map as JSON">Export</button>
   <span id="status">connecting…</span>
 </div>
 <div id="zoom" aria-label="Zoom">
   <button id="zoom-in" title="Zoom in (+)">+</button>
   <button id="zoom-out" title="Zoom out (−)">−</button>
 </div>
-<div id="scale" tabindex="0" aria-label="Scale and travel times">
+<div id="scale" class="wood" tabindex="0" aria-label="Scale and travel times">
   <div class="bar"></div>
   <div class="text"><span class="dist"></span><span class="jog"></span></div>
   <table class="pop"><thead><tr><th>Gait</th><th>Speed</th><th>Time for bar</th></tr></thead><tbody></tbody></table>
 </div>
-<aside id="sidebar">
+<aside id="sidebar" class="wood">
   <div id="presence" class="palette"></div>
   <section id="paint-opts" class="tool-group">
     <h3>Brush <span id="brush-label" class="sub">32 m radius</span></h3>
     <div id="brush" class="palette"></div>
     <h3>Biome</h3>
     <div id="biomes" class="palette"></div>
-  </section>
-  <section id="pin-opts" class="tool-group">
-    <h3>Pin type</h3>
-    <div id="pin-types" class="palette"></div>
   </section>
   <section id="measure-opts" class="tool-group">
     <h3>Measure <span id="measure-label" class="sub"></span></h3>
@@ -54,7 +51,7 @@
   </section>
   <section id="log-opts" class="tool-group">
     <h3>Leg log <span id="log-start" class="sub">—</span></h3>
-    <textarea id="log-text" rows="6" spellcheck="false" placeholder="NE 40 jog&#10;E 25&#10;120 1m30 sprint"></textarea>
+    <textarea id="log-text" class="inset" rows="6" spellcheck="false" placeholder="NE 40 jog&#10;E 25&#10;120 1m30 sprint"></textarea>
     <pre id="log-summary" class="hint"></pre>
     <div class="row"><button id="log-place" disabled>Place</button><button id="log-clear">Clear</button></div>
     <p class="hint">Bearing (N, NE, ENE… or degrees), seconds (or 2m, 1m30), gait (walk 1.6 · jog 4 · sprint 7 · swim 2 m/s, or a number). Path and end pin use the ink colour.</p>
@@ -65,10 +62,19 @@
     <h3>Colour</h3>
     <div id="ink-colors" class="palette"><label class="custom" title="Custom colour"><input id="ink-color" type="color" value="#2b1d0e"></label></div>
   </section>
-  <details id="legend" open><summary><h3>Layers</h3></summary><div id="layers"></div></details>
+  <details id="legend" open><summary><h3>Layers</h3></summary><div id="layers" class="inset"></div></details>
 </aside>
+<div id="pinbar" class="inset" hidden><div id="pin-types" class="palette"></div></div>
+<div id="hotkeys" aria-label="Controls">
+  <ul class="view">
+    <li><b>Drag</b> pan</li><li><b>Wheel</b> zoom</li><li><b>Double-click</b> recentre</li><li><b>Click a pin</b> read it</li><li><b>M</b> measure</li><li><b>E</b> edit the map</li>
+  </ul>
+  <ul class="edit">
+    <li><b>Right-drag</b> pan</li><li><b>B</b> paint · <b>G</b> fill · <b>I</b> ink · <b>P</b> pin · <b>V</b> select · <b>L</b> log</li><li><b>[ ]</b> brush or ink size</li><li><b>Cmd/Ctrl+Z</b> undo</li><li><b>Esc</b> done</li>
+  </ul>
+</div>
 <div id="toast" hidden></div>
-<div id="pin-popup" hidden>
+<div id="pin-popup" class="wood" hidden>
   <button id="pin-close" title="Deselect">&times;</button>
   <input id="pin-name" type="text" maxlength="40" placeholder="Pin name" autocomplete="off">
   <div class="row">

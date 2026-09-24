@@ -165,7 +165,7 @@ export function wireTools(app) {
     document.getElementById('paint-opts').hidden = app.tools.current !== 'paint';
     app.restCursor?.();
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
-    document.getElementById('pin-opts').hidden = app.tools.current !== 'pin';
+    document.getElementById('pinbar').hidden = app.tools.current !== 'pin';
     document.getElementById('log-opts').hidden = app.tools.current !== 'log';
     document.getElementById('measure-opts').hidden = app.tools.current !== 'measure';
     if (app.tools.current === 'log') app.logTool?.update();   // refresh the start/summary when the tool is picked
