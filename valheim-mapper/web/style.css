@@ -15,9 +15,9 @@ button:hover { border-image-source: url('assets/gui/button_highlight.png'); colo
 button:active, button.active { border-image-source: url('assets/gui/button_pressed.png'); color: #fff; }
 button:disabled { opacity: .45; cursor: var(--cursor); }
 button:disabled:hover { border-image-source: url('assets/gui/button.png'); color: var(--ink); }
-#toolbar [data-tool] { border-image-source: url('assets/gui/button_tab.png'); }
-#toolbar [data-tool]:hover { border-image-source: url('assets/gui/button_tab_hover.png'); }
-#toolbar [data-tool].active { border-image-source: url('assets/gui/button_tab_selected.png'); }
+#toolbar [data-tool][data-edit] { border-image-source: url('assets/gui/button_tab.png'); }
+#toolbar [data-tool][data-edit]:hover { border-image-source: url('assets/gui/button_tab_hover.png'); }
+#toolbar [data-tool][data-edit].active { border-image-source: url('assets/gui/button_tab_selected.png'); }
 
 #toolbar { position: fixed; top: 6px; left: 6px; max-width: calc(100vw - 352px); display: flex; flex-wrap: wrap; gap: 2px 4px; align-items: center; padding: 0 2px; }
 #toolbar .sep { width: 2px; height: 22px; background: linear-gradient(#0000, #0008, #0000); margin: 0 4px; }

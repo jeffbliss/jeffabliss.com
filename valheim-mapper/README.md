@@ -18,7 +18,7 @@ operations (logs, allow-list rotation, backup, storage reset): see
 `docs/superpowers/runbook-cloudflare.md`.
 
 ## Controls
-- The map opens in View. Drag to pan, wheel or the + / − buttons (also `+` `-` keys) to zoom, `0` fits the world. Pins are live in View (see below); everything else is read-only.
+- The map opens in View. Drag to pan, wheel or the + / − buttons (also `+` `-` keys) to zoom. Pins are live in View (see below); everything else is read-only.
 - **Edit** (`E`) reveals the drawing tools and Undo / Redo; Done or `Esc` returns to read-only. While editing, right-drag, middle-drag or Space+drag pan.
 - Tools: `B` paint, `I` ink, `V` select, `L` log, `M` measure (Measure also works without Edit) · `[` `]` step the paint brush through 8 / 16 / 32 / 64 / 128 m, or the ink width through 2 / 4 / 8 / 16 / 32 m while inking
 - Paint: drag to paint the chosen biome; the **None** swatch erases. Painting and inking clear the fog where you draw. The **Fog** swatch in the palette re-fogs an area.
