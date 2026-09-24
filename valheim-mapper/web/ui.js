@@ -100,12 +100,32 @@ export function wirePinPopup(app) {
   pinKeys(app, pinsProxy, app.openEditor);
 }
 
+/** Instant tooltips: any element with a title shows it in a styled tip after a short hover instead of the OS delay. */
+export function wireTooltips(delay = 120) {
+  const tip = document.getElementById('tooltip'); let timer = 0, target = null;
+  const hide = () => { clearTimeout(timer); tip.hidden = true; target = null; };
+  addEventListener('mouseover', e => {
+    const el = e.target.closest?.('[title], [data-tip]'); if (!el || el === target) return;
+    if (el.title) { el.dataset.tip = el.title; el.removeAttribute('title'); }
+    hide(); target = el;
+    timer = setTimeout(() => {
+      const r = el.getBoundingClientRect(); tip.textContent = el.dataset.tip; tip.hidden = false;
+      const w = tip.offsetWidth, h = tip.offsetHeight, above = r.top > h + 12;
+      tip.style.left = `${Math.max(6, Math.min(innerWidth - w - 6, r.left + r.width / 2 - w / 2))}px`;
+      tip.style.top = `${above ? r.top - h - 8 : r.bottom + 8}px`;
+    }, delay);
+  });
+  addEventListener('mouseout', e => { if (target && !target.contains(e.relatedTarget)) hide(); });
+  addEventListener('mousedown', hide, true);
+}
+
 /** Wires the toolbar, biome/pin-type palettes and tool option UI. Reads layer objects via app.* so it stays valid across app.rebuild. */
 export function wireTools(app) {
 
   const typesEl = document.getElementById('pin-types');
   // The start pin is fixed at spawn and never placed by hand, so it is not offered in the palette.
-  for (const t of PIN_TYPES.filter(t => t !== 'start')) { const b = document.createElement('button'); b.title = t; b.dataset.type = t; const img = document.createElement('img'); img.src = `assets/map/mapicon_${t}.png`; b.append(img); b.onclick = () => app.tools.setOption('pinType', t); typesEl.append(b); }
+  const PIN_LABELS = { pin: 'Pin', fire: 'Camp', house: 'House', hammer: 'Crafting', portal: 'Portal', bed: 'Bed', boss: 'Boss', trader: 'Trader', death: 'Death', memorialplace: 'Memorial', ping: 'Ping', shout: 'Shout', randevent: 'Event' };
+  for (const t of PIN_TYPES.filter(t => t !== 'start')) { const b = document.createElement('button'); b.title = PIN_LABELS[t] ?? t; b.dataset.type = t; const img = document.createElement('img'); img.src = `assets/map/mapicon_${t}.png`; b.append(img); b.onclick = () => app.tools.setOption('pinType', t); typesEl.append(b); }
 
   app.canvas.addEventListener('pointermove', e => {
     const hit = app.pinsLayer.hitTest(e.offsetX * app.dpr(), e.offsetY * app.dpr(), app.view, ...app.size());

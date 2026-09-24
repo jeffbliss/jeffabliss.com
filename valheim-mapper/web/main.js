@@ -9,7 +9,7 @@ import { createInk, inkTool, INK_REVEAL_MIN_M } from './ink.js';
 import { createTools, rasterBrushTool, paintTool, isTypingTarget, interpolate, panGesture } from './tools.js';
 import { createPins, selectTool, pinActions } from './pins.js';
 import { PIN_TYPES } from './world.js';
-import { createUI, wireTools, wirePinPopup, wireLogPanel, wireMeasurePanel } from './ui.js';
+import { createUI, wireTools, wirePinPopup, wireLogPanel, wireMeasurePanel, wireTooltips } from './ui.js';
 import { createScaleBar } from './scale.js';
 import { fillAt } from './fill.js';
 import { createClipboard } from './clipboard.js';
@@ -172,6 +172,7 @@ async function boot() {
   app.tools = createTools(app);
   wirePinPopup(app);                        // sets app.openEditor before pin/select tools are registered by rebuild()
   app.logPanel = wireLogPanel(app);         // likewise for the Log tool
+  wireTooltips();
   app.measurePanel = wireMeasurePanel(app);
   app.rebuild(await createState(emptyDoc()));   // an empty map to draw until the server's snapshot arrives
   cameraControls();

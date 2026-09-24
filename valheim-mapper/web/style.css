@@ -81,6 +81,7 @@ input[type=range] { accent-color: #b58a4a; }
 #hotkeys b { font: bold 15px 'Norse', serif; color: var(--ink); margin-right: 4px; }
 body.editing #hotkeys .view, body:not(.editing) #hotkeys .edit { display: none; }
 
+#tooltip { position: fixed; z-index: 10; pointer-events: none; padding: 4px 8px; font: bold 14px 'Norse', serif; color: var(--ink); background: #14100bf0; border: 1px solid #5a4630; border-radius: 3px; text-shadow: var(--shadow); white-space: nowrap; max-width: 260px; }
 #toast { position: fixed; left: 50%; top: 64px; transform: translateX(-50%); pointer-events: none; font: bold 24px 'Norse', serif; color: #fff; text-shadow: 0 2px 2px #000, 0 0 12px #000; white-space: nowrap; }
 
 #pin-popup { position: fixed; transform: translate(-50%, calc(-100% - 26px)); padding: 0 2px 2px; display: grid; gap: 4px; min-width: 200px; }
