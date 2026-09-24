@@ -14,6 +14,9 @@ OUT = Path(sys.argv[1] if len(sys.argv) > 1 else "out/assets")
 # Asset path prefixes / exact paths to pull.
 TARGET_PREFIXES = [
     "Assets/UI/map/",
+    "Assets/UI/textures/small/",
+    "Assets/UI/textures/large/gui_blur.png",
+    "Assets/UI/textures/cursor.png",
     "Assets/UI/prefabs/IngameGui/IngameGui_HUD_Minimap.prefab",
     "Assets/UI/animations/minimap_",
     "Assets/3rd party/TextMesh Pro/Resources/Fonts/Norse/",
