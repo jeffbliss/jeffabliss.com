@@ -105,7 +105,7 @@ function cameraControls() {
     const [wx, wz] = view.screenToWorld(sx, sy, ...size());
     app.openEditor(app.pinActions.place(wx, wz));
   });
-  addEventListener('keydown', e => { if (e.code === 'Space' && !isTypingTarget(e)) { app.spaceDown = true; e.preventDefault(); } if (e.key === '0' && !isTypingTarget(e)) { view.fitWorld(...size()); requestRender(); } });
+  addEventListener('keydown', e => { if (e.code === 'Space' && !isTypingTarget(e)) { app.spaceDown = true; e.preventDefault(); } });
   addEventListener('keyup', e => { if (e.code === 'Space') app.spaceDown = false; });
   // On-map zoom buttons (and +/- keys): zoom about the centre of the view, one step = ×1.5.
   const zoomStep = factor => { const [w, h] = size(); view.zoomAt(w / 2, h / 2, factor, w, h); app.markDirty(); };
