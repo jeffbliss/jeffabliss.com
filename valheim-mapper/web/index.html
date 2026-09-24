@@ -14,7 +14,6 @@
   <span class="sep" data-edit hidden></span>
   <button data-tool="paint" data-edit hidden title="Paint terrain (B)">Paint</button>
   <button data-tool="ink" data-edit hidden title="Ink (I)">Ink</button>
-  <button data-tool="pin" data-edit hidden title="Pin (P)">Pin</button>
   <button data-tool="select" data-edit hidden title="Select (V)">Select</button>
   <button data-tool="log" data-edit hidden title="Leg log: dead reckoning from a known point (L)">Log</button>
   <span class="sep" data-edit hidden></span>
@@ -64,13 +63,13 @@
   </section>
   <details id="legend" open><summary><h3>Layers</h3></summary><div id="layers" class="inset"></div></details>
 </aside>
-<div id="pinbar" class="inset" hidden><div id="pin-types" class="palette"></div></div>
+<div id="pinbar" class="inset" title="Pin type for double-click"><div id="pin-types" class="palette"></div></div>
 <div id="hotkeys" aria-label="Controls">
   <ul class="view">
-    <li><b>Drag</b> pan</li><li><b>Wheel</b> zoom</li><li><b>Double-click</b> recentre</li><li><b>Click a pin</b> read it</li><li><b>M</b> measure</li><li><b>E</b> edit the map</li>
+    <li><b>Drag</b> pan · <b>Wheel</b> zoom</li><li><b>Double-click</b> place a pin</li><li><b>Click a pin</b> cross it off</li><li><b>Right-click a pin</b> remove it</li><li><b>Double-click a pin</b> rename it</li><li><b>M</b> measure · <b>E</b> edit the map</li>
   </ul>
   <ul class="edit">
-    <li><b>Right-drag</b> pan</li><li><b>B</b> paint · <b>G</b> fill · <b>I</b> ink · <b>P</b> pin · <b>V</b> select · <b>L</b> log</li><li><b>[ ]</b> brush or ink size</li><li><b>Cmd/Ctrl+Z</b> undo</li><li><b>Esc</b> done</li>
+    <li><b>Right-drag</b> pan</li><li><b>B</b> paint · <b>G</b> fill · <b>I</b> ink · <b>V</b> select · <b>L</b> log</li><li><b>Right-click a pin</b> remove it</li><li><b>[ ]</b> brush or ink size</li><li><b>Cmd/Ctrl+Z</b> undo</li><li><b>Esc</b> done</li>
   </ul>
 </div>
 <div id="toast" hidden></div>

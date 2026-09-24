@@ -10,8 +10,8 @@ export const DEFAULT_INK_WIDTH = 4;
 /** Quick ink colours: dark ink, white, then the six colour-wheel primaries and secondaries. */
 export const INK_COLORS = ['#2b1d0e', '#f4ecd8', '#d62828', '#f77f00', '#f2c014', '#2a9d3f', '#1d6fd6', '#7b3fbf'];
 
-const HOTKEYS = { b: 'paint', i: 'ink', p: 'pin', v: 'select', l: 'log', m: 'measure' };
-const EDIT_TOOLS = ['paint', 'ink', 'pin', 'select', 'log'];
+const HOTKEYS = { b: 'paint', i: 'ink', v: 'select', l: 'log', m: 'measure' };
+const EDIT_TOOLS = ['paint', 'ink', 'select', 'log'];
 
 /** True when this press should pan the camera: any button in View (except while measuring), right/middle/Space+drag in Edit. */
 export const panGesture = (e, { editing, tool, spaceDown }) => e.button === 1 || e.button === 2 || !!spaceDown || (!editing && tool !== 'measure');

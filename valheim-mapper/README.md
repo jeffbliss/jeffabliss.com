@@ -18,9 +18,9 @@ operations (logs, allow-list rotation, backup, storage reset): see
 `docs/superpowers/runbook-cloudflare.md`.
 
 ## Controls
-- The map opens read-only. Drag to pan, wheel or the + / − buttons (also `+` `-` keys) to zoom, double-click to recentre, `0` fits the world. Click a pin to read it; Check (or `X`) still works here.
+- The map opens in View. Drag to pan, wheel or the + / − buttons (also `+` `-` keys) to zoom, `0` fits the world. Pins are live in View (see below); everything else is read-only.
 - **Edit** (`E`) reveals the drawing tools and Undo / Redo; Done or `Esc` returns to read-only. While editing, right-drag, middle-drag or Space+drag pan.
-- Tools: `B` paint, `I` ink, `P` pin, `V` select, `L` log, `M` measure (Measure also works without Edit) · `[` `]` step the paint brush through 8 / 16 / 32 / 64 / 128 m, or the ink width through 2 / 4 / 8 / 16 / 32 m while inking
+- Tools: `B` paint, `I` ink, `V` select, `L` log, `M` measure (Measure also works without Edit) · `[` `]` step the paint brush through 8 / 16 / 32 / 64 / 128 m, or the ink width through 2 / 4 / 8 / 16 / 32 m while inking
 - Paint: drag to paint the chosen biome; the **None** swatch erases. Painting and inking clear the fog where you draw. The **Fog** swatch in the palette re-fogs an area.
 - Fill (`G`, or the Fill button in the brush row): click inside an enclosed area to fill it with the chosen biome. Painted biome boundaries and ink strokes both contain the fill; it is refused, and nothing changes, if the area reaches the edge of the world or is bigger than 4 km × 4 km.
 - Copy and paste: in Select mode drag a box, `Cmd/Ctrl+C` copies the terrain, fog, ink and pins inside it, `Cmd/Ctrl+V` then click places the copy centred on the click (blank cells are transparent; `Esc` cancels). The copy goes through the system clipboard as text, so it can be pasted into a friend's tab.
@@ -29,7 +29,7 @@ operations (logs, allow-list rotation, backup, storage reset): see
 - Measure (`M`): click points along a route (pins snap) to read its length in metres and zones and the time at each gait; the last segment follows the cursor. Esc or Clear resets. Nothing is saved.
 - Ink: the **Erase** button turns the drag into an eraser that removes any stroke it crosses; picking a colour turns it off. Eight quick colours plus a colour-wheel button for anything else.
 - Scale bar (bottom-left) spans whole grid squares (zones) at the current zoom, with the jog time for that distance; hover it for walk, sprint and swim times. Zoomed right in, one 64 m zone fills the view.
-- Pins: click to place. A selected pin shows a popup to rename, check or delete it, and can be dragged; `X` and Delete also work as shortcuts
+- Pins work like the game's map, in any mode: double-click the map to place one of the type picked in the bottom bar and name it, click a pin to cross it off, right-click a pin to remove it (Cmd/Ctrl+Z brings it back), double-click a pin to rename it. In Edit the Select tool can also drag pins; `X` and Delete work on the selected pin
 - Undo/redo: Cmd/Ctrl+Z, Shift+Cmd/Ctrl+Z
 
 Export downloads a portable JSON copy.

@@ -7,7 +7,7 @@ import { createTerrainLayer, createFogLayer } from './gl.js';
 import { revealFn, refogFn } from './fog.js';
 import { createInk, inkTool, INK_REVEAL_MIN_M } from './ink.js';
 import { createTools, rasterBrushTool, paintTool, isTypingTarget, interpolate, panGesture } from './tools.js';
-import { createPins, pinTool, selectTool } from './pins.js';
+import { createPins, selectTool, pinActions } from './pins.js';
 import { PIN_TYPES } from './world.js';
 import { createUI, wireTools, wirePinPopup, wireLogPanel, wireMeasurePanel } from './ui.js';
 import { createScaleBar } from './scale.js';
@@ -48,6 +48,7 @@ export function requestRender() {
 }
 
 const app = { canvas, ctx, view: createView(), layers: createLayers(), history: createHistory(), requestRender, size, setStatus, toast, dpr };
+app.pinActions = pinActions(app);
 app.presence = createPresence(() => app.you);
 const scaleBar = createScaleBar(document.getElementById('scale'), () => [app.view.scale / dpr(), app.view.scale]);   // CSS px/m, device px/m
 
@@ -85,16 +86,24 @@ function cameraControls() {
   app.restCursor = () => { canvas.style.cursor = app.tools.editing || app.tools.current === 'measure' ? 'crosshair' : 'grab'; };
   canvas.addEventListener('pointerdown', e => { if (app.isPanGesture(e)) { panning = pressed = pos(e); canvas.setPointerCapture(e.pointerId); canvas.style.cursor = 'grabbing'; } });
   canvas.addEventListener('pointermove', e => { if (!panning) return; const p = pos(e); view.panBy(p[0] - panning[0], p[1] - panning[1]); panning = p; requestRender(); });
+  const pinAt = (sx, sy) => app.pinsLayer?.hitTest(sx, sy, view, ...size());
+  // Pins follow the game's map: click a pin to cross it off, right-click a pin to remove it, double-click to place or open one.
   canvas.addEventListener('pointerup', e => {
     if (!panning) return; panning = null; app.restCursor();
     const [sx, sy] = pos(e), moved = Math.hypot(sx - pressed[0], sy - pressed[1]) > 4 * dpr();
-    // A click (no drag) in View selects the pin under it, or clears the selection.
-    if (!moved && e.button === 0 && !app.tools.editing && app.pinsLayer) { app.pinsLayer.selected = app.pinsLayer.hitTest(sx, sy, view, ...size())?.id ?? null; requestRender(); }
+    if (moved) return;
+    const hit = pinAt(sx, sy);
+    if (e.button === 2 && hit && app.pinActions.remove(hit)) app.toast(`Removed ${hit.name || hit.type} · Cmd/Ctrl+Z to undo`);
+    if (e.button === 0 && app.tools.current === 'view') { if (hit) app.pinActions.toggleChecked(hit); else app.pinsLayer.selected = null; }
+    requestRender();
   });
   canvas.addEventListener('dblclick', e => {
-    const [sx, sy] = pos(e);
-    if (app.pinsLayer?.hitTest(sx, sy, view, ...size())) return;
-    const [wx, wz] = view.screenToWorld(sx, sy, ...size()); view.x = wx; view.z = wz; requestRender();
+    if (e.button !== 0) return;
+    const [sx, sy] = pos(e), hit = pinAt(sx, sy);
+    if (hit) { app.openEditor(hit); return; }
+    if (!['view', 'select'].includes(app.tools.current)) return;
+    const [wx, wz] = view.screenToWorld(sx, sy, ...size());
+    app.openEditor(app.pinActions.place(wx, wz));
   });
   addEventListener('keydown', e => { if (e.code === 'Space' && !isTypingTarget(e)) { app.spaceDown = true; e.preventDefault(); } if (e.key === '0' && !isTypingTarget(e)) { view.fitWorld(...size()); requestRender(); } });
   addEventListener('keyup', e => { if (e.code === 'Space') app.spaceDown = false; });
@@ -137,7 +146,6 @@ app.rebuild = function rebuild(state) {
   };
   app.tools.register('paint', paintTool(app, terrainBrush, fogBrush, fill));
   app.tools.register('ink', inkTool(app, ink, revealFog));
-  app.tools.register('pin', pinTool(app, pins, app.openEditor));
   app.tools.register('select', selectTool(app, pins, app.openEditor));
   // Walking a logged path explores it: reveal fog along the stroke, as the ink tool does.
   const revealInk = stroke => {

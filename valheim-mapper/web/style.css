@@ -73,7 +73,7 @@ input[type=range] { accent-color: #b58a4a; }
 #measure-opts .row, #log-opts .row { display: flex; gap: 6px; }
 #log-summary { white-space: pre-wrap; margin: 0; }
 
-#pinbar { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); padding: 2px 4px; }
+#pinbar { position: fixed; left: 50%; bottom: 14px; transform: translateX(max(-50%, calc(290px - 50vw))); padding: 2px 4px; }
 #pinbar .palette { gap: 2px; flex-wrap: nowrap; }
 #pinbar button { width: 42px; height: 42px; min-height: 0; padding: 0; border: 8px solid transparent; border-image: none; background: none; }
 #pinbar button img { width: 26px; height: 26px; filter: drop-shadow(0 1px 1px #000); }

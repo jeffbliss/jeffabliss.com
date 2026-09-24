@@ -81,27 +81,23 @@ export function wirePinPopup(app) {
     const [sx, sy] = app.view.worldToScreen(pin.x, pin.z, ...app.size());
     popup.style.left = `${sx / app.dpr()}px`; popup.style.top = `${sy / app.dpr()}px`;
     check.textContent = pin.checked ? 'Uncheck' : 'Check'; check.classList.toggle('active', pin.checked);
-    name.readOnly = !app.tools.editing; del.hidden = !app.tools.editing; correct.hidden = !app.tools.editing || !pin.log;
+    correct.hidden = !app.tools.editing || !pin.log;
     if (shownFor !== pin.id) { shownFor = pin.id; before = pin.name; name.value = pin.name; }
     popup.hidden = false;
   };
 
-  const commitName = () => { const pin = selectedPin(); if (!pin || !app.tools.editing) return;
+  const commitName = () => { const pin = selectedPin(); if (!pin) return;
     const cmd = renameCommand(pin, before, name.value); before = name.value;
     if (cmd) { app.history.push(cmd); app.markDirty(); } };
   name.onkeydown = e => { e.stopPropagation(); if (e.key === 'Enter') { commitName(); name.blur(); } if (e.key === 'Escape') { name.value = before; name.blur(); } };
   name.onblur = commitName;
-  check.onclick = () => { const pin = selectedPin(); if (!pin) return;
-    pin.checked = !pin.checked;
-    app.history.push({ label: 'check', ...pinOps.update(pin, { checked: pin.checked }, { checked: !pin.checked }), undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } }); app.markDirty(); };
-  del.onclick = () => { const pin = selectedPin(); if (!pin || !app.tools.editing) return;
-    const idx = app.state.pins.indexOf(pin); app.pinsLayer.remove(pin.id);
-    app.history.push({ label: 'remove pin', ...pinOps.remove(pin), undo: () => app.state.pins.splice(idx, 0, pin), redo: () => app.pinsLayer.remove(pin.id) }); app.markDirty(); };
+  check.onclick = () => { const pin = selectedPin(); if (pin) app.pinActions.toggleChecked(pin); };
+  del.onclick = () => { const pin = selectedPin(); if (pin) app.pinActions.remove(pin); };
   close.onclick = () => { app.pinsLayer.selected = null; app.requestRender(); };
   wireCorrection(app, correct);
 
   /** Selects a pin and focuses the name field (used right after placing a pin, on double-click, and on Enter). */
-  app.openEditor = pin => { app.pinsLayer.selected = pin.id; app.updatePinPopup(); if (app.tools.editing) { name.focus(); name.select(); } };
+  app.openEditor = pin => { app.pinsLayer.selected = pin.id; app.updatePinPopup(); name.focus(); name.select(); };
   const pinsProxy = { get selected() { return app.pinsLayer?.selected; }, remove(id) { app.pinsLayer.remove(id); } };
   pinKeys(app, pinsProxy, app.openEditor);
 }
@@ -165,7 +161,6 @@ export function wireTools(app) {
     document.getElementById('paint-opts').hidden = app.tools.current !== 'paint';
     app.restCursor?.();
     document.getElementById('ink-opts').hidden = app.tools.current !== 'ink';
-    document.getElementById('pinbar').hidden = app.tools.current !== 'pin';
     document.getElementById('log-opts').hidden = app.tools.current !== 'log';
     document.getElementById('measure-opts').hidden = app.tools.current !== 'measure';
     if (app.tools.current === 'log') app.logTool?.update();   // refresh the start/summary when the tool is picked

@@ -85,19 +85,27 @@ export function selectTool(app, pins, openEditor) {
   };
 }
 
-export function pinTool(app, pins, openEditor) {
-  const drag = dragHandler(app, pins);
+/** Pin edits shared by the popup, the keyboard and the map gestures. Each is one synced, undoable command. */
+export function pinActions(app) {
+  const layer = () => app.pinsLayer;
   return {
-    down(e, wx, wz, sx, sy) {
-      const hit = pins.hitTest(sx, sy, app.view, ...app.size());
-      if (hit) { if (!hit.fixed) drag.begin(hit, wx, wz); return; }   // fixed pins (start) are not draggable and block placement
-      const pin = pins.add({ x: wx, z: wz, type: app.tools.options.pinType });
-      pins.selected = pin.id;
-      app.history.push({ label: 'add pin', ...pinOps.add(pin), undo: () => pins.remove(pin.id), redo: () => { app.state.pins.push(pin); } });
-      app.markDirty(); openEditor(pin);
+    place(x, z, type = app.tools.options.pinType) {
+      const pin = layer().add({ x: +x.toFixed(1), z: +z.toFixed(1), type });
+      layer().selected = pin.id;
+      app.history.push({ label: 'add pin', ...pinOps.add(pin), undo: () => layer().remove(pin.id), redo: () => { app.state.pins.push(pin); } });
+      app.markDirty(); return pin;
     },
-    move(e, wx, wz) { drag.move(wx, wz); },
-    up() { drag.end(); },
+    toggleChecked(pin) {
+      pin.checked = !pin.checked;
+      app.history.push({ label: 'check', ...pinOps.update(pin, { checked: pin.checked }, { checked: !pin.checked }), undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } });
+      app.markDirty();
+    },
+    remove(pin) {
+      if (pin.fixed) return false;
+      const idx = app.state.pins.indexOf(pin); layer().remove(pin.id);
+      app.history.push({ label: 'remove pin', ...pinOps.remove(pin), undo: () => app.state.pins.splice(idx, 0, pin), redo: () => layer().remove(pin.id) });
+      app.markDirty(); return true;
+    },
   };
 }
 
@@ -106,17 +114,10 @@ export function pinKeys(app, pins, openEditor) {
   addEventListener('keydown', e => {
     if (isTypingTarget(e) || !pins.selected) return;
     const pin = app.state.pins.find(p => p.id === pins.selected); if (!pin) return;
-    if (e.key === 'Enter') { if (!app.tools.editing) return; openEditor(pin); }
-    else if (e.key.toLowerCase() === 'x') {
-      pin.checked = !pin.checked;
-      app.history.push({ label: 'check', ...pinOps.update(pin, { checked: pin.checked }, { checked: !pin.checked }), undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } });
-      app.markDirty();
-    }
-    else if (e.key === 'Delete' || e.key === 'Backspace') {
-      if (pin.fixed || !app.tools.editing) return;              // the start pin cannot be removed; don't record an undo step for a no-op
-      const idx = app.state.pins.indexOf(pin); pins.remove(pin.id);
-      app.history.push({ label: 'remove pin', ...pinOps.remove(pin), undo: () => app.state.pins.splice(idx, 0, pin), redo: () => pins.remove(pin.id) }); app.markDirty();
-    } else return;
+    if (e.key === 'Enter') openEditor(pin);
+    else if (e.key.toLowerCase() === 'x') app.pinActions.toggleChecked(pin);
+    else if (e.key === 'Delete' || e.key === 'Backspace') { if (!app.pinActions.remove(pin)) return; }   // the start pin cannot be removed
+    else return;
     e.preventDefault();
   });
 }
