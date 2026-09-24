@@ -142,8 +142,8 @@ export function wireTools(app) {
   for (const m of INK_WIDTHS) { const b = document.createElement('button'); b.textContent = `${m} m`; b.dataset.width = m; b.onclick = () => { app.tools.setOption('inkWidth', m); b.blur(); }; inkWidth.append(b); }
 
   const biomesEl = document.getElementById('biomes');
-  // Palette: None, Fog (re-fogs an area, keeping the terrain under it), then the biomes.
-  const swatches = [BIOMES[0], { id: 'fog', name: 'Fog' }, ...BIOMES.slice(1)];
+  // Palette: Fog (re-fogs an area, keeping the terrain under it), then the biomes.
+  const swatches = [{ id: 'fog', name: 'Fog' }, ...BIOMES.slice(1)];
   for (const b of swatches) { const btn = document.createElement('button'); btn.textContent = b.name; btn.dataset.biome = b.id; btn.onclick = () => { app.tools.setOption('biome', b.id); btn.blur(); }; biomesEl.append(btn); }
 
   const brush = document.getElementById('brush'), brushLabel = document.getElementById('brush-label');

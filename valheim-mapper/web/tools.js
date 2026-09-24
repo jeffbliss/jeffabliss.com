@@ -2,7 +2,7 @@ import { createStrokeRecorder, combine } from './history.js';
 import { CELL_M } from './world.js';
 
 /** Brush radii in metres. 8 m is one raster cell; 128 m is a whole biome patch. */
-export const BRUSH_SIZES = [8, 16, 32, 64, 128];
+export const BRUSH_SIZES = [32, 64, 128];
 export const DEFAULT_BRUSH = 32;
 /** Ink stroke widths in metres. 2 m is a hairline for cliffs and inlets; 4 m (half a raster cell) suits coastlines; 32 m is a bold region border. */
 export const INK_WIDTHS = [2, 4, 8, 16, 32];

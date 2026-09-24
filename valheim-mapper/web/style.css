@@ -2,7 +2,7 @@
 @font-face { font-family: 'Norse'; font-weight: bold; src: url('assets/fonts/Norsebold.otf'); }
 @font-face { font-family: 'Averia Serif'; src: url('assets/fonts/AveriaSerifLibre-Regular.ttf'); }
 @font-face { font-family: 'Averia Serif'; font-weight: bold; src: url('assets/fonts/AveriaSerifLibre-Bold.ttf'); }
-:root { --ink: #e8dcc4; --ink-dim: #b9a98a; --shadow: 0 1px 1px #000, 0 0 6px #000a; --cursor: url('assets/gui/cursor.png') 3 2, auto; }
+:root { --ink: #e8dcc4; --ink-dim: #d8c9a8; --shadow: 0 1px 1px #000, 0 0 6px #000a; --cursor: url('assets/gui/cursor.png') 3 2, auto; }
 html, body { margin: 0; height: 100%; overflow: hidden; background: #111; font: 13px/1.4 'Averia Serif', serif; color: var(--ink); cursor: var(--cursor); }
 #map { position: fixed; inset: 0; width: 100%; height: 100%; touch-action: none; cursor: crosshair; }
 #vignette { position: fixed; inset: 0; pointer-events: none; background: radial-gradient(ellipse at center, transparent 55%, #0006 85%, #000c 100%); }
@@ -50,21 +50,21 @@ button:disabled:hover { border-image-source: url('assets/gui/button.png'); color
 #presence { display: inline-flex; gap: 4px; margin-left: 8px; }
 #presence .chip { padding: 2px 8px; border-radius: 10px; font-size: 12px; color: #111; }
 
-input[type=text], textarea { color: #fff; background: none; border: 10px solid transparent; border-image: url('assets/gui/text_field.png') 10 fill / 10px stretch; padding: 0 2px; box-sizing: border-box; font: inherit; outline: none; }
+input[type=text], textarea { color: #fff; background: #17110bf2; border: 10px solid transparent; border-image: url('assets/gui/text_field.png') 10 fill / 10px stretch; padding: 0 2px; box-sizing: border-box; font: inherit; outline: none; }
 input[type=text]:focus, textarea:focus { border-image-source: url('assets/gui/text_field_highlight.png'); }
-#log-text { width: 100%; font: 13px/1.4 ui-monospace, Menlo, monospace; padding: 4px 6px; resize: vertical; color: var(--ink); }
-#log-text::placeholder { color: #6f6250; }
+#log-text { width: 100%; font: 14px/1.4 ui-monospace, Menlo, monospace; padding: 4px 6px; resize: vertical; color: #fff; }
+#log-text::placeholder { color: #9a8a6e; }
 input[type=checkbox] { appearance: none; width: 22px; height: 22px; margin: 0; background: url('assets/gui/checkbox.png') center / contain no-repeat; cursor: var(--cursor); }
 input[type=checkbox]:checked { background: url('assets/gui/checkbox_marker.png') center / contain no-repeat, url('assets/gui/checkbox.png') center / contain no-repeat; }
 input[type=range] { accent-color: #b58a4a; }
 
 
-.hint { margin: 2px 0 0; font-size: 12px; color: var(--ink-dim); line-height: 1.35; text-shadow: var(--shadow); }
+.hint { margin: 2px 0 0; font-size: 13px; color: var(--ink-dim); line-height: 1.35; text-shadow: var(--shadow); }
 #measure-table { border-spacing: 0; font-size: 13px; text-shadow: var(--shadow); }
 #measure-table th { text-align: left; font-weight: normal; color: var(--ink-dim); padding: 0 12px 4px 0; }
 #measure-table td { padding: 2px 12px 2px 0; }
 #measure-opts .row, #log-opts .row { display: flex; gap: 6px; }
-#log-summary { white-space: pre-wrap; margin: 0; }
+#log-summary { white-space: pre-wrap; margin: 0; font: 14px/1.4 'Averia Serif', serif; color: var(--ink); }
 
 #pinbar { position: fixed; left: 50%; bottom: 14px; transform: translateX(max(-50%, calc(290px - 50vw))); padding: 2px 4px; }
 #pinbar .palette { gap: 2px; flex-wrap: nowrap; }
