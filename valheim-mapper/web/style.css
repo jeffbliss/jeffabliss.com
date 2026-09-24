@@ -47,6 +47,7 @@ button:disabled:hover { border-image-source: url('assets/gui/button.png'); color
 #ink-colors .custom { overflow: hidden; cursor: var(--cursor); box-sizing: border-box; background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red); }
 #ink-colors .custom input { opacity: 0; width: 100%; height: 100%; cursor: var(--cursor); }
 #ink-erase { margin-right: 4px; }
+#presence { display: inline-flex; gap: 4px; margin-left: 8px; }
 #presence .chip { padding: 2px 8px; border-radius: 10px; font-size: 12px; color: #111; }
 
 input[type=text], textarea { color: #fff; background: none; border: 10px solid transparent; border-image: url('assets/gui/text_field.png') 10 fill / 10px stretch; padding: 0 2px; box-sizing: border-box; font: inherit; outline: none; }
@@ -57,14 +58,6 @@ input[type=checkbox] { appearance: none; width: 22px; height: 22px; margin: 0; b
 input[type=checkbox]:checked { background: url('assets/gui/checkbox_marker.png') center / contain no-repeat, url('assets/gui/checkbox.png') center / contain no-repeat; }
 input[type=range] { accent-color: #b58a4a; }
 
-#legend summary { list-style: none; cursor: var(--cursor); display: flex; align-items: center; gap: 8px; user-select: none; }
-#legend summary::-webkit-details-marker { display: none; }
-#legend summary::before { content: ''; width: 8px; height: 8px; border: solid var(--ink); border-width: 0 2px 2px 0; transform: rotate(45deg); margin: 0 4px 10px 2px; transition: transform .15s; filter: drop-shadow(0 1px 1px #000); }
-#legend:not([open]) summary::before { transform: rotate(-45deg); margin-bottom: 8px; }
-#legend summary h3 { flex: 1; }
-#layers { display: grid; gap: 4px; padding: 2px 4px; }
-#layers .layer { display: grid; grid-template-columns: 22px 1fr 110px; gap: 10px; align-items: center; min-height: 28px; text-shadow: var(--shadow); }
-#layers .layer input[type=range] { width: 100%; min-width: 0; margin: 0; }
 
 .hint { margin: 2px 0 0; font-size: 12px; color: var(--ink-dim); line-height: 1.35; text-shadow: var(--shadow); }
 #measure-table { border-spacing: 0; font-size: 13px; text-shadow: var(--shadow); }
@@ -80,7 +73,9 @@ input[type=range] { accent-color: #b58a4a; }
 #pinbar button:hover img { filter: drop-shadow(0 1px 1px #000) brightness(1.2); }
 #pinbar button.active { border-image: url('assets/gui/selection_frame.png') 10 / 8px stretch; }
 
-#hotkeys { position: fixed; right: 12px; bottom: 12px; font-size: 13px; text-shadow: var(--shadow); color: var(--ink-dim); pointer-events: none; text-align: right; }
+#layerbar { position: fixed; right: 12px; bottom: 12px; display: flex; gap: 14px; text-shadow: var(--shadow); }
+#layerbar label { display: flex; align-items: center; gap: 6px; font: bold 15px 'Norse', serif; cursor: var(--cursor); }
+#hotkeys { position: fixed; right: 12px; bottom: 48px; font-size: 13px; text-shadow: var(--shadow); color: var(--ink-dim); pointer-events: none; text-align: right; }
 #hotkeys ul { list-style: none; margin: 0; padding: 0; }
 #hotkeys li { line-height: 1.5; }
 #hotkeys b { font: bold 15px 'Norse', serif; color: var(--ink); margin-right: 4px; }
@@ -101,5 +96,7 @@ body.editing #hotkeys .view, body:not(.editing) #hotkeys .edit { display: none; 
   #toolbar { max-width: calc(100vw - 12px); }
   #sidebar { top: auto; bottom: 96px; right: 6px; left: 6px; width: auto; max-height: 42vh; }
   #hotkeys, #vignette { display: none; }
+  #layerbar { bottom: 62px; right: 8px; gap: 10px; }
+  #layerbar label { font-size: 13px; }
   #scale { left: 60px; }
 }

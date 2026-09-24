@@ -13,7 +13,7 @@ export function createLayers() {
       ctx.restore();
     }
   };
-  L.settings = () => Object.fromEntries(list.map(l => [l.id, { visible: l.visible, opacity: l.opacity }]));
-  L.applySettings = s => { for (const l of list) if (s?.[l.id]) Object.assign(l, s[l.id]); };
+  L.settings = () => Object.fromEntries(list.map(l => [l.id, { visible: l.visible }]));
+  L.applySettings = s => { for (const l of list) if (s?.[l.id]) { Object.assign(l, s[l.id]); l.opacity = 1; } };
   return L;
 }

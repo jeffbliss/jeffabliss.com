@@ -13,18 +13,16 @@ export const statusText = (status, you) => ({
 }[status] ?? status);
 
 export function createUI(app, sync) {
-  const layersEl = document.getElementById('layers');
+  const layerBar = document.getElementById('layerbar'), TOGGLABLE = ['fog', 'ink', 'pins', 'presence'];   // terrain and grid are always on
+  /** Game-style show/hide checkboxes for the layers worth hiding: fog to peek under it, ink and pins for clutter, friends' cursors. */
   function refreshLayers() {
-    layersEl.replaceChildren();
-    for (const l of app.layers.list) {
-      if (l.id === 'cursor' || l.id === 'grid') continue;   // the grid is always on
-      const row = document.createElement('div'); row.className = 'layer';
-      const eye = Object.assign(document.createElement('input'), { type: 'checkbox', checked: l.visible, title: 'visible' });
-      eye.onchange = () => { l.visible = eye.checked; app.markDirty(); };
-      const name = document.createElement('span'); name.textContent = l.name;
-      const op = Object.assign(document.createElement('input'), { type: 'range', min: 0, max: 1, step: 0.05, value: l.opacity, title: 'opacity' });
-      op.oninput = () => { l.opacity = Number(op.value); app.markDirty(); };
-      row.append(eye, name, op); layersEl.append(row);
+    layerBar.replaceChildren();
+    for (const id of TOGGLABLE) {
+      const l = app.layers.list.find(x => x.id === id); if (!l) continue;
+      const label = document.createElement('label');
+      const box = Object.assign(document.createElement('input'), { type: 'checkbox', checked: l.visible });
+      box.onchange = () => { l.visible = box.checked; app.markDirty(); };
+      label.append(box, l.name); layerBar.append(label);
     }
   }
 
@@ -104,10 +102,6 @@ export function wirePinPopup(app) {
 
 /** Wires the toolbar, biome/pin-type palettes and tool option UI. Reads layer objects via app.* so it stays valid across app.rebuild. */
 export function wireTools(app) {
-  // The Layers legend collapses with its caret; the open/closed state is a per-browser preference.
-  const legend = document.getElementById('legend'), LEGEND_KEY = 'valheim-mapper:legend';
-  try { if (localStorage.getItem(LEGEND_KEY) === 'closed') legend.open = false; } catch { /* preference only */ }
-  legend.ontoggle = () => { try { localStorage.setItem(LEGEND_KEY, legend.open ? 'open' : 'closed'); } catch { /* preference only */ } };
 
   const typesEl = document.getElementById('pin-types');
   // The start pin is fixed at spawn and never placed by hand, so it is not offered in the palette.
@@ -164,6 +158,7 @@ export function wireTools(app) {
     document.getElementById('log-opts').hidden = app.tools.current !== 'log';
     document.getElementById('measure-opts').hidden = app.tools.current !== 'measure';
     if (app.tools.current === 'log') app.logTool?.update();   // refresh the start/summary when the tool is picked
+    document.getElementById('sidebar').hidden = !document.querySelector('#sidebar .tool-group:not([hidden])');
     for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);
   };
   app.tools.setEditing(false);   // open read-only: editing is a deliberate step

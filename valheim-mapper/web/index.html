@@ -24,6 +24,7 @@
   <button id="fit" title="Fit world (0)">Fit</button>
   <button id="export" title="Download the map as JSON">Export</button>
   <span id="status">connecting…</span>
+  <span id="presence"></span>
 </div>
 <div id="zoom" aria-label="Zoom">
   <button id="zoom-in" title="Zoom in (+)">+</button>
@@ -35,7 +36,6 @@
   <table class="pop"><thead><tr><th>Gait</th><th>Speed</th><th>Time for bar</th></tr></thead><tbody></tbody></table>
 </div>
 <aside id="sidebar" class="wood">
-  <div id="presence" class="palette"></div>
   <section id="paint-opts" class="tool-group">
     <h3>Brush <span id="brush-label" class="sub">32 m radius</span></h3>
     <div id="brush" class="palette"></div>
@@ -61,9 +61,9 @@
     <h3>Colour</h3>
     <div id="ink-colors" class="palette"><label class="custom" title="Custom colour"><input id="ink-color" type="color" value="#2b1d0e"></label></div>
   </section>
-  <details id="legend" open><summary><h3>Layers</h3></summary><div id="layers" class="inset"></div></details>
 </aside>
 <div id="pinbar" class="inset" title="Pin type for double-click"><div id="pin-types" class="palette"></div></div>
+<div id="layerbar" aria-label="Layers"></div>
 <div id="hotkeys" aria-label="Controls">
   <ul class="view">
     <li><b>Drag</b> pan · <b>Wheel</b> zoom</li><li><b>Double-click</b> place a pin</li><li><b>Click a pin</b> cross it off</li><li><b>Right-click a pin</b> remove it</li><li><b>Double-click a pin</b> rename it</li><li><b>M</b> measure · <b>E</b> edit the map</li>
