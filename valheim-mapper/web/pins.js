@@ -1,4 +1,5 @@
 import { isTypingTarget } from './tools.js';
+import { region, estimate, contributing } from './sight.js';
 
 export function nearestPin(pins, x, z, maxDist) {
   let best = null, bd = maxDist;
@@ -14,6 +15,13 @@ export const pinOps = {
   remove: pin => ({ ops: [{ type: 'pin.remove', id: pin.id }], inverseOps: [{ type: 'pin.add', pin: plainPin(pin) }] }),
   update: (pin, patch, before) => ({ ops: [{ type: 'pin.update', id: pin.id, patch }], inverseOps: [{ type: 'pin.update', id: pin.id, patch: before }] }),
 };
+
+/** Everything the map draws for a pin's sightings: contributing wedges, the overlap polygon, and the estimate (or null). */
+export function sightingGeometry(pin, pins) {
+  const wedges = contributing(pin.sightings, pins).map(s => ({ observer: s.observer, bearing: s.bearing }));
+  const r = region(pin.sightings, pins);
+  return { wedges, polygon: r.polygon, estimate: estimate(r) };
+}
 
 export function createPins(state, icons) {
   const ICON = 32, HIT = 14;
@@ -32,6 +40,8 @@ export function createPins(state, icons) {
       const dpr = window.devicePixelRatio || 1, s = ICON * dpr;
       ctx.font = `bold ${Math.round(17 * dpr)}px Norse`; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
       ctx.lineWidth = 3 * dpr; ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.fillStyle = '#f3e9d2';
+      const sel = layer.selected ? state.pins.find(p => p.id === layer.selected) : null;
+      if (sel?.sightings?.length) drawSightings(ctx, view, w, h, sel, state.pins, dpr);
       for (const p of state.pins) {
         const [sx, sy] = view.worldToScreen(p.x, p.z, w, h);
         if (sx < -s || sy < -s || sx > w + s || sy > h + s) continue;
@@ -47,6 +57,30 @@ export function createPins(state, icons) {
     },
   };
   return layer;
+}
+
+// Draws the selected pin's contributing wedges, overlap polygon and estimate. Bearing 0 = +z;
+// each fan's far edge is 2.5 km, past the 4 km region square's reach from any observer in practice, and clipped by the canvas.
+function drawSightings(ctx, view, w, h, pin, pins, dpr) {
+  const { wedges, polygon, estimate: est } = sightingGeometry(pin, pins);
+  const P = (x, z) => view.worldToScreen(x, z, w, h), rad = d => d * Math.PI / 180, FAR = 2500;
+  ctx.save();
+  ctx.fillStyle = 'rgba(255, 215, 122, 0.12)'; ctx.strokeStyle = 'rgba(255, 215, 122, 0.6)'; ctx.lineWidth = 1 * dpr;
+  for (const { observer, bearing } of wedges) {
+    const l = [observer.x + FAR * Math.sin(rad(bearing - 11.25)), observer.z + FAR * Math.cos(rad(bearing - 11.25))];
+    const r = [observer.x + FAR * Math.sin(rad(bearing + 11.25)), observer.z + FAR * Math.cos(rad(bearing + 11.25))];
+    ctx.beginPath(); ctx.moveTo(...P(observer.x, observer.z)); ctx.lineTo(...P(...l)); ctx.lineTo(...P(...r)); ctx.closePath(); ctx.fill(); ctx.stroke();
+  }
+  if (polygon.length >= 3) {
+    ctx.fillStyle = 'rgba(255, 215, 122, 0.35)'; ctx.strokeStyle = '#ffd77a'; ctx.lineWidth = 2 * dpr;
+    ctx.beginPath(); polygon.forEach(([x, z], i) => { const [sx, sy] = P(x, z); i ? ctx.lineTo(sx, sy) : ctx.moveTo(sx, sy); }); ctx.closePath(); ctx.fill(); ctx.stroke();
+  }
+  if (est) {
+    const [sx, sy] = P(est.x, est.z), s = 6 * dpr;
+    ctx.strokeStyle = '#fff'; ctx.lineWidth = 2 * dpr;
+    ctx.beginPath(); ctx.moveTo(sx - s, sy); ctx.lineTo(sx + s, sy); ctx.moveTo(sx, sy - s); ctx.lineTo(sx, sy + s); ctx.stroke();
+  }
+  ctx.restore();
 }
 
 function dragHandler(app, pins) {
