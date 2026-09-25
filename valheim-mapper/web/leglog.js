@@ -8,8 +8,8 @@ import { nearestPin } from './pins.js';
 const POINTS = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
 const GAITS = Object.fromEntries(SPEEDS.map(s => [s.name.toLowerCase(), s.mps]));
 
-/** Per-leg position error: a slice of the distance for speed/heading slop plus a flat start/stop allowance. */
-export const legError = metres => 0.08 * metres + 8;
+/** Per-leg position error: a slice of the distance for speed/heading slop (half a compass point, no minimap) plus a flat start/stop allowance. */
+export const legError = metres => 0.2 * metres + 8;
 
 export function parseBearing(tok) {
   const t = tok.toUpperCase(), i = POINTS.indexOf(t);
