@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { wedge, clip, region, estimate, contributing, HALF } from '../web/sight.js';
 
 const near = (a, b, eps = 1e-6) => assert.ok(Math.abs(a - b) < eps, `${a} ≈ ${b}`);
+const insidePolygon = (poly, x, z) => { const s = poly.map(([ax, az], i) => { const [bx, bz] = poly[(i + 1) % poly.length]; return Math.sign((bx - ax) * (z - az) - (bz - az) * (x - ax)); }); return s.every(v => v === s[0]); };
 const inside = (planes, x, z) => planes.every(h => (x - h.px) * h.nx + (z - h.pz) * h.nz >= -1e-9);
 const A = { id: 'a', x: 0, z: 0, checked: true }, B = { id: 'b', x: 200, z: 0, checked: true }, C = { id: 'c', x: 0, z: 200, checked: false };
 
@@ -31,8 +32,9 @@ test('two perpendicular sightings give a diamond whose centroid is the true poin
   const r = region(s, [A, B]);
   assert.ok(r.polygon.length >= 4);
   const est = estimate(r);
-  near(est.x, target[0], 1e-6); near(est.z, target[1], 1e-6);
-  assert.ok(est.error > 20 && est.error < 40, `error ${est.error}`);   // ±11.25° at ~141 m
+  assert.ok(insidePolygon(r.polygon, ...target));                            // the true point lies in the overlap
+  near(est.x, target[0], 5); near(est.z, target[1], 5);                       // the kite is longer on the far side, so the centroid sits just past it
+  assert.ok(est.error > 20 && est.error < 60, `error ${est.error}`);   // ±11.25° at ~141 m: the far vertex is ~50 m out
 });
 
 test('sightings one compass point apart are unbounded: no estimate', () => {
