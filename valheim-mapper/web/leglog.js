@@ -17,11 +17,11 @@ export function parseBearing(tok) {
   const deg = Number(t.replace(/°$/, ''));
   return t !== '' && Number.isFinite(deg) ? ((deg % 360) + 360) % 360 : null;
 }
-/** "40", "40s", "2m", "1m30", "1m30s", "1:30" → seconds. */
+/** "40", "40.5", "40s", "2m", "1m30", "1m30s", "1:30", "2:25.38" → seconds. */
 export function parseDuration(tok) {
   const t = tok.toLowerCase();
   let m = t.match(/^(\d+(?:\.\d+)?)s?$/); if (m) return Number(m[1]);
-  m = t.match(/^(\d+)m(?:(\d+)s?)?$/) ?? t.match(/^(\d+):(\d{1,2})$/); if (m) return Number(m[1]) * 60 + Number(m[2] ?? 0);
+  m = t.match(/^(\d+)m(?:(\d+(?:\.\d+)?)s?)?$/) ?? t.match(/^(\d+):(\d{1,2}(?:\.\d+)?)$/); if (m) return Number(m[1]) * 60 + Number(m[2] ?? 0);
   return null;
 }
 /** "jog" | "sprint" | "walk" | "swim" | "6" | "6m/s" → m/s. */
@@ -42,7 +42,7 @@ export function parseLegs(text) {
     const [b, d, g = 'jog', ...rest] = line.split(/\s+/);
     const bearing = parseBearing(b), seconds = d === undefined ? null : parseDuration(d), mps = parseGait(g);
     if (bearing === null) errors.push(`line ${n + 1}: bearing "${b}" (use N, NE, ENE… or degrees)`);
-    else if (seconds === null) errors.push(`line ${n + 1}: duration "${d ?? ''}" (seconds, 2m, 1m30)`);
+    else if (seconds === null) errors.push(`line ${n + 1}: duration "${d ?? ''}" (seconds, 2m, 1m30, 2:25.38)`);
     else if (mps === null) errors.push(`line ${n + 1}: gait "${g}" (walk, jog, sprint, swim or m/s)`);
     else if (rest.length) errors.push(`line ${n + 1}: unexpected "${rest.join(' ')}"`);
     else legs.push({ bearing, seconds, mps, metres: seconds * mps });

@@ -10,7 +10,7 @@ test('parses compass points, degrees, durations and gaits', () => {
   assert.equal(parseBearing('N'), 0); assert.equal(parseBearing('ne'), 45); assert.equal(parseBearing('WNW'), 292.5);
   assert.equal(parseBearing('120'), 120); assert.equal(parseBearing('-90'), 270); assert.equal(parseBearing('x'), null);
   assert.equal(parseDuration('40'), 40); assert.equal(parseDuration('40s'), 40); assert.equal(parseDuration('2m'), 120);
-  assert.equal(parseDuration('1m30'), 90); assert.equal(parseDuration('1:30'), 90); assert.equal(parseDuration('abc'), null);
+  assert.equal(parseDuration('1m30'), 90); assert.equal(parseDuration('1:30'), 90); assert.equal(parseDuration('2:25.38'), 145.38); assert.equal(parseDuration('1m30.5'), 90.5); assert.equal(parseDuration('40.25'), 40.25); assert.equal(parseDuration('abc'), null);
   assert.equal(parseGait('jog'), 4); assert.equal(parseGait('Sprint'), 7); assert.equal(parseGait('6'), 6); assert.equal(parseGait('9m/s'), 9); assert.equal(parseGait('fly'), null);
 });
 
