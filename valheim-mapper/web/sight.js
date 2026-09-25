@@ -61,3 +61,27 @@ export function estimate({ polygon, square, count }) {
   const error = Math.round(Math.max(...polygon.map(([px, pz]) => Math.hypot(px - x, pz - z))));
   return { x, z, error };
 }
+
+/** Replaces `pin.sightings` with `list`, dropping the key when empty (matches the sync applier and the worker). */
+const setSightings = (pin, list) => { if (list?.length) pin.sightings = list; else delete pin.sightings; };
+
+/** Undoable, synced edits to a target pin's sightings. Each returns a history command or null when nothing changes. */
+export const sightOps = {
+  sight(pin, from, bearing) {
+    const before = pin.sightings ? pin.sightings.map(s => ({ ...s })) : undefined;
+    const i = before?.findIndex(s => s.from === from) ?? -1;
+    if (i >= 0 && before[i].bearing === bearing) return null;
+    const after = before ? before.map(s => ({ ...s })) : [];
+    if (i >= 0) after[i] = { from, bearing }; else after.push({ from, bearing });
+    const inverse = i >= 0 ? { type: 'pin.sight', id: pin.id, from, bearing: before[i].bearing } : { type: 'pin.unsight', id: pin.id, from };
+    setSightings(pin, after);
+    return { label: 'sight', ops: [{ type: 'pin.sight', id: pin.id, from, bearing }], inverseOps: [inverse], undo: () => setSightings(pin, before), redo: () => setSightings(pin, after) };
+  },
+  unsight(pin, from) {
+    const before = pin.sightings ? pin.sightings.map(s => ({ ...s })) : undefined;
+    const old = before?.find(s => s.from === from); if (!old) return null;
+    const after = before.filter(s => s.from !== from);
+    setSightings(pin, after);
+    return { label: 'unsight', ops: [{ type: 'pin.unsight', id: pin.id, from }], inverseOps: [{ type: 'pin.sight', id: pin.id, from, bearing: old.bearing }], undo: () => setSightings(pin, before), redo: () => setSightings(pin, after) };
+  },
+};

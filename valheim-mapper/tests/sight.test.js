@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { wedge, clip, region, estimate, contributing, HALF } from '../web/sight.js';
+import { wedge, clip, region, estimate, contributing, HALF, sightOps } from '../web/sight.js';
+import { createHistory } from '../web/history.js';
 
 const near = (a, b, eps = 1e-6) => assert.ok(Math.abs(a - b) < eps, `${a} ≈ ${b}`);
 const insidePolygon = (poly, x, z) => { const s = poly.map(([ax, az], i) => { const [bx, bz] = poly[(i + 1) % poly.length]; return Math.sign((bx - ax) * (z - az) - (bz - az) * (x - ax)); }); return s.every(v => v === s[0]); };
@@ -54,4 +55,22 @@ test('contributing skips missing and unchecked observers', () => {
   const c = contributing(s, [A, B, C]);
   assert.deepEqual(c.map(x => x.from), ['a']);
   assert.equal(c[0].observer, A);
+});
+
+test('sightOps: sight upserts, unsight removes, both undo', () => {
+  const pin = { id: 'p1', x: 0, z: 0, type: 'pin', name: '', checked: false };
+  const h = createHistory();
+  h.push(sightOps.sight(pin, 'a', 45));
+  assert.deepEqual(pin.sightings, [{ from: 'a', bearing: 45 }]);
+  h.push(sightOps.sight(pin, 'a', 90));
+  assert.deepEqual(pin.sightings, [{ from: 'a', bearing: 90 }]);
+  h.undo(); assert.deepEqual(pin.sightings, [{ from: 'a', bearing: 45 }]);
+  h.redo(); h.push(sightOps.sight(pin, 'b', 0));
+  const cmd = sightOps.unsight(pin, 'a');
+  assert.deepEqual(cmd.ops, [{ type: 'pin.unsight', id: 'p1', from: 'a' }]);
+  assert.deepEqual(cmd.inverseOps, [{ type: 'pin.sight', id: 'p1', from: 'a', bearing: 90 }]);
+  h.push(cmd); assert.deepEqual(pin.sightings, [{ from: 'b', bearing: 0 }]);
+  h.undo(); assert.deepEqual(pin.sightings, [{ from: 'a', bearing: 90 }, { from: 'b', bearing: 0 }]);
+  h.undo(); h.undo(); h.undo(); assert.equal('sightings' in pin, false);
+  assert.equal(sightOps.unsight(pin, 'zzz'), null);
 });
