@@ -77,6 +77,7 @@ test('pin.sight / pin.unsight validation and apply', () => {
   assert.match(validateOp({ type: 'pin.unsight', id: 'p1', from: '' }), /from/);
   assert.equal(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false, sightings: [{ from: 'start', bearing: 45 }] } }), null);
   assert.match(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false, sightings: [{ from: 'p1', bearing: 45 }] } }), /sighting/);
+  assert.match(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false, sightings: [{ from: 'a', bearing: 0 }, { from: 'a', bearing: 90 }] } }), /duplicate/);
 
   const s = makeState();
   applyOp(s, { type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false } });

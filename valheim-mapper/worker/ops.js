@@ -55,6 +55,7 @@ function validateSightings(list, id) {
     if (!s || typeof s !== 'object' || !isId(s.from) || s.from === id || !isBearing(s.bearing)) return 'bad sighting';
     for (const k of Object.keys(s)) if (!['from', 'bearing'].includes(k)) return 'bad sighting key';
   }
+  if (new Set(list.map(s => s.from)).size !== list.length) return 'duplicate sighting from';
   return null;
 }
 /** A pin's sightings with `from` upserted (bearing given, replacing in place) or removed (bearing undefined); undefined when empty. */
