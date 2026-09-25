@@ -11,6 +11,10 @@ export function applyRemoteOp(state, op) {
     case 'pin.add': upsert(state.pins, op.pin); break;
     case 'pin.update': { const p = state.pins.find(p => p.id === op.id); if (p) Object.assign(p, op.patch); break; }
     case 'pin.remove': { const i = state.pins.findIndex(p => p.id === op.id); if (i >= 0) state.pins.splice(i, 1); break; }
+    case 'pin.sight': case 'pin.unsight': { const p = state.pins.find(p => p.id === op.id); if (!p) break;
+      const next = (p.sightings ?? []).filter(s => s.from !== op.from);
+      if (op.type === 'pin.sight') { const i = (p.sightings ?? []).findIndex(s => s.from === op.from); if (i >= 0) next.splice(i, 0, { from: op.from, bearing: op.bearing }); else next.push({ from: op.from, bearing: op.bearing }); }
+      if (next.length) p.sightings = next; else delete p.sightings; break; }
   }
 }
 

@@ -111,3 +111,12 @@ test('applyRemoteOp on arrays', () => {
   applyRemoteOp(state, { type: 'pin.remove', id: 'p' }); applyRemoteOp(state, { type: 'ink.remove', id: 's' });
   assert.deepEqual([state.ink.length, state.pins.length], [0, 0]);
 });
+
+test('remote pin.sight and pin.unsight update the pin', () => {
+  const state = { ink: [], pins: [{ id: 'p1', x: 0, z: 0, type: 'pin', name: '', checked: false }] };
+  applyRemoteOp(state, { type: 'pin.sight', id: 'p1', from: 'start', bearing: 45 });
+  applyRemoteOp(state, { type: 'pin.sight', id: 'p1', from: 'start', bearing: 90 });
+  assert.deepEqual(state.pins[0].sightings, [{ from: 'start', bearing: 90 }]);
+  applyRemoteOp(state, { type: 'pin.unsight', id: 'p1', from: 'start' });
+  assert.equal('sightings' in state.pins[0], false);
+});

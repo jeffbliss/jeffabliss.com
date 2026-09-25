@@ -66,6 +66,31 @@ test('snapshotDoc round-trips through the client state factory', async () => {
   const c = await createState(JSON.parse(JSON.stringify(doc)));
   assert.equal(c.terrain.get(-10240 + 5 * 8 + 4, -10240 + 5 * 8 + 4), 3); assert.equal(c.ink[0].id, 's1');
 });
+test('pin.sight / pin.unsight validation and apply', () => {
+  assert.equal(validateOp({ type: 'pin.sight', id: 'p1', from: 'start', bearing: 45 }), null);
+  assert.equal(validateOp({ type: 'pin.sight', id: 'p1', from: 'start', bearing: 337.5 }), null);
+  assert.match(validateOp({ type: 'pin.sight', id: 'p1', from: 'p1', bearing: 45 }), /from/);
+  assert.match(validateOp({ type: 'pin.sight', id: 'p1', from: 'start', bearing: 30 }), /bearing/);
+  assert.match(validateOp({ type: 'pin.sight', id: 'p1', from: 'start', bearing: 360 }), /bearing/);
+  assert.match(validateOp({ type: 'pin.sight', id: '', from: 'start', bearing: 45 }), /id/);
+  assert.equal(validateOp({ type: 'pin.unsight', id: 'p1', from: 'start' }), null);
+  assert.match(validateOp({ type: 'pin.unsight', id: 'p1', from: '' }), /from/);
+  assert.equal(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false, sightings: [{ from: 'start', bearing: 45 }] } }), null);
+  assert.match(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false, sightings: [{ from: 'p1', bearing: 45 }] } }), /sighting/);
+
+  const s = makeState();
+  applyOp(s, { type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false } });
+  applyOp(s, { type: 'pin.sight', id: 'p1', from: 'start', bearing: 45 });
+  applyOp(s, { type: 'pin.sight', id: 'p1', from: 'p2', bearing: 90 });
+  applyOp(s, { type: 'pin.sight', id: 'p1', from: 'start', bearing: 67.5 });          // replaces the first
+  assert.deepEqual(s.pins.get('p1').sightings, [{ from: 'start', bearing: 67.5 }, { from: 'p2', bearing: 90 }]);
+  const { persist } = planOp(s, { type: 'pin.unsight', id: 'p1', from: 'p2' });
+  assert.deepEqual(JSON.parse(persist[0].json).sightings, [{ from: 'start', bearing: 67.5 }]);
+  applyOp(s, { type: 'pin.unsight', id: 'p1', from: 'p2' });
+  applyOp(s, { type: 'pin.unsight', id: 'p1', from: 'start' });
+  assert.equal('sightings' in s.pins.get('p1'), false);                               // empty array is dropped
+  assert.equal(applyOp(s, { type: 'pin.sight', id: 'nope', from: 'start', bearing: 0 }).persist.length, 0);
+});
 test('planOp returns applyOp\'s rows without mutating the state', () => {
   const base = makeState();
   applyOp(base, { type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: 'Camp', checked: false } });

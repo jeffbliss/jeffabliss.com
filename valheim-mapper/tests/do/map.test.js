@@ -39,15 +39,18 @@ describe('MapRoom', () => {
     expect([...decodeRasterOp(payload).bytes]).toEqual([2, 2]);
     a.ws.send(JSON.stringify({ t: 'op', op: { type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: 'Camp', checked: false, log: { from: 'start', start: [0, 0], legs: 'N 70 jog', ink: 's1' } } } }));
     const op = await b.until(m => m.t === 'op'); expect(op.op.pin.name).toBe('Camp'); expect(op.by.name).toBe('alice');
+    a.ws.send(JSON.stringify({ t: 'op', op: { type: 'pin.sight', id: 'p1', from: 'start', bearing: 45 } }));
+    const sight = await b.until(m => m.t === 'op' && m.op.type === 'pin.sight');
 
     expect(await runDurableObjectAlarm(stub)).toBe(true);                 // the flush alarm was scheduled and ran
     expect(await tiles(stub)).toEqual([{ layer: 0, tx: 0, tz: 0, n: 128 * 128 }]);
-    expect(await metaSeq(stub)).toBe(String(op.seq));
+    expect(await metaSeq(stub)).toBe(String(sight.seq));
 
     const c = await connect(stub, 'carol@example.com'); const hello = await c.until(m => m.t === 'hello');
-    expect(hello.seq).toBe(op.seq);
+    expect(hello.seq).toBe(sight.seq);
     expect(hello.doc.pins.find(p => p.id === 'p1').name).toBe('Camp');
     expect(hello.doc.pins.find(p => p.id === 'p1').log).toEqual({ from: 'start', start: [0, 0], legs: 'N 70 jog', ink: 's1' });
+    expect(hello.doc.pins.find(p => p.id === 'p1').sightings).toEqual([{ from: 'start', bearing: 45 }]);
     expect(hello.doc.terrain).not.toBe(null);
     a.ws.close(); b.ws.close(); c.ws.close();
   });
