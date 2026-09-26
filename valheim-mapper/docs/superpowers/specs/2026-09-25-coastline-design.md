@@ -12,7 +12,7 @@ A surveyed stretch of coast becomes one smooth ink line drawn through the verifi
 ## Coast
 
 - In Edit the toolbar gets **Coast**, enabled when at least two checked shore pins exist.
-- Pressing it takes the checked shore pins, orders them by bearing from spawn clockwise from north (bearing 0 = +z, 90 = +x, `atan2(x, z)`), samples a Catmull-Rom curve through them every 8 m (uniform parameterisation, end segments extrapolated by duplicating the end points), and adds one ink stroke: colour `#3b7dbf`, width 4, the sampled points rounded to 0.1 m. One undo step; ordinary ink afterwards (erasable, copyable). Pressing again adds another stroke.
+- Pressing it takes the checked shore pins, orders them by bearing from spawn (bearing 0 = +z, 90 = +x, `atan2(x, z)`), starting just after the largest angular gap between neighbouring pins so a stretch that straddles north is not split, samples a Catmull-Rom curve through them every 8 m (uniform parameterisation, end segments extrapolated by duplicating the end points), and adds one ink stroke: colour `#3b7dbf`, width 4, the sampled points rounded to 0.1 m. One undo step; ordinary ink afterwards (erasable, copyable). Pressing again adds another stroke.
 - Untagged, unchecked, fixed and missing pins are ignored.
 - Assumption stated in the README: one survey's shore pins run along the coast without doubling back; survey a fjord in two batches.
 
