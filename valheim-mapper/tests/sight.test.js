@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { wedge, clip, region, estimate, contributing, HALF, sightOps } from '../web/sight.js';
+import { wedge, clip, region, estimate, contributing, HALF, sightOps, applySighting } from '../web/sight.js';
 import { createHistory, combine } from '../web/history.js';
 import { withError } from '../web/sighting.js';
 
@@ -71,9 +71,26 @@ test('sightOps: sight upserts, unsight removes, both undo', () => {
   assert.deepEqual(cmd.ops, [{ type: 'pin.unsight', id: 'p1', from: 'a' }]);
   assert.deepEqual(cmd.inverseOps, [{ type: 'pin.sight', id: 'p1', from: 'a', bearing: 90 }]);
   h.push(cmd); assert.deepEqual(pin.sightings, [{ from: 'b', bearing: 0 }]);
-  h.undo(); assert.deepEqual(pin.sightings, [{ from: 'a', bearing: 90 }, { from: 'b', bearing: 0 }]);
+  h.undo(); assert.deepEqual(pin.sightings, [{ from: 'b', bearing: 0 }, { from: 'a', bearing: 90 }]);   // re-added by appending, as the server does
   h.undo(); h.undo(); h.undo(); assert.equal('sightings' in pin, false);
   assert.equal(sightOps.unsight(pin, 'zzz'), null);
+});
+
+test('sightOps: undo keeps a sighting a friend added meanwhile', () => {
+  const pin = { id: 'p1', x: 0, z: 0, type: 'pin', name: '', checked: false };
+  const h = createHistory();
+  h.push(sightOps.sight(pin, 'a', 45));
+  applySighting(pin, 'b', 90);
+  h.undo(); assert.deepEqual(pin.sightings, [{ from: 'b', bearing: 90 }]);
+  h.redo(); assert.deepEqual(pin.sightings, [{ from: 'b', bearing: 90 }, { from: 'a', bearing: 45 }]);
+  applySighting(pin, 'b', undefined); applySighting(pin, 'a', undefined);
+  assert.equal('sightings' in pin, false);
+});
+
+test('withError keeps the name within 40 characters', () => {
+  const r = withError('x'.repeat(38), 123);
+  assert.equal(r.length, 40); assert.ok(r.endsWith(' ±123 m'));
+  assert.equal(withError(r, 5), 'x'.repeat(33) + ' ±5 m');
 });
 
 test('combine merges two commands and undoes them in reverse order', () => {

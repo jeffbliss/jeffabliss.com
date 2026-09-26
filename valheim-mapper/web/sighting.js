@@ -9,7 +9,11 @@ const POINTS = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'S
 const nameOf = (pins, id) => { const p = pins.find(p => p.id === id); return p ? (p.name || (p.fixed ? 'Start' : p.type)) : 'missing pin'; };
 
 /** Appends " ±E m" to a pin name, replacing an existing ±N m. */
-export function withError(name, error) { return `${name.replace(/\s*±\s*\d+\s*m$/, '').trim()} ±${error} m`.trim(); }
+export function withError(name, error) {
+  const suffix = ` ±${error} m`;
+  const base = name.replace(/\s*±\s*\d+\s*m$/, '').trim();
+  return `${base.slice(0, Math.max(0, 40 - suffix.length)).trimEnd()}${suffix}`.trim();   // the worker caps names at 40
+}
 
 export function wireSighting(app, { sight, bar, list, correctSight, status }) {
   let observer = null, bearing = null, prevOverlay = null;
@@ -21,7 +25,7 @@ export function wireSighting(app, { sight, bar, list, correctSight, status }) {
 
   const place = (e, wx, wz) => {
     if (!observer || bearing === null || e.button !== 0) return false;
-    const hit = nearestPin(pins().filter(p => p !== observer), wx, wz, 14 * app.dpr() / app.view.scale);
+    const hit = nearestPin(pins().filter(p => p !== observer && !p.fixed), wx, wz, 14 * app.dpr() / app.view.scale);
     if (!hit) { app.toast('Click a pin', 1500); return true; }
     const cmd = sightOps.sight(hit, observer.id, bearing);
     if (cmd) { app.history.push(cmd); app.markDirty(); }
@@ -54,7 +58,7 @@ export function wireSighting(app, { sight, bar, list, correctSight, status }) {
   };
 
   correctSight.onclick = () => {
-    const pin = selected(); if (!pin) return;
+    const pin = selected(); if (!pin || pin.fixed) return;
     const { estimate } = sightingGeometry(pin, pins()); if (!estimate) return;
     const target = [+estimate.x.toFixed(1), +estimate.z.toFixed(1)];
     let cmd = correctionCommand(app, pin, target);

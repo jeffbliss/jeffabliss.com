@@ -49,8 +49,9 @@ function validateLog(l) {
 }
 const isBearing = b => isNum(b) && b >= 0 && b < 360 && Number.isInteger(b / 22.5);
 /** Sightings stored on a target pin: compass-point bearings from other pins. */
+const MAX_SIGHTINGS = 32;
 function validateSightings(list, id) {
-  if (!Array.isArray(list) || list.length > 32) return 'bad sightings';
+  if (!Array.isArray(list) || list.length > MAX_SIGHTINGS) return 'bad sightings';
   for (const s of list) {
     if (!s || typeof s !== 'object' || !isId(s.from) || s.from === id || !isBearing(s.bearing)) return 'bad sighting';
     for (const k of Object.keys(s)) if (!['from', 'bearing'].includes(k)) return 'bad sighting key';
@@ -63,8 +64,8 @@ function withSighting(pin, from, bearing) {
   const list = pin.sightings ?? [];
   if (bearing === undefined) { const next = list.filter(s => s.from !== from); return next.length ? next : undefined; }
   const i = list.findIndex(s => s.from === from);
-  const next = i >= 0 ? list.map((s, idx) => idx === i ? { from, bearing } : s) : [...list, { from, bearing }];
-  return next;
+  if (i < 0 && list.length >= MAX_SIGHTINGS) return list;                  // full: a new observer is a no-op
+  return i >= 0 ? list.map((s, idx) => idx === i ? { from, bearing } : s) : [...list, { from, bearing }];
 }
 
 export function validateOp(op) {
@@ -91,8 +92,8 @@ export function validateOp(op) {
       if ('checked' in p && typeof p.checked !== 'boolean') return 'bad checked';
       if (('x' in p && !isNum(p.x)) || ('z' in p && !isNum(p.z))) return 'bad position'; return null; }
     case 'pin.remove': if (!isId(op.id)) return 'bad id'; return op.id === 'start' ? 'start pin is fixed' : null;
-    case 'pin.sight': if (!isId(op.id)) return 'bad id'; if (!isId(op.from) || op.from === op.id) return 'bad from'; return isBearing(op.bearing) ? null : 'bad bearing';
-    case 'pin.unsight': if (!isId(op.id)) return 'bad id'; return isId(op.from) ? null : 'bad from';
+    case 'pin.sight': if (!isId(op.id)) return 'bad id'; if (op.id === 'start') return 'start pin is fixed'; if (!isId(op.from) || op.from === op.id) return 'bad from'; return isBearing(op.bearing) ? null : 'bad bearing';
+    case 'pin.unsight': if (!isId(op.id)) return 'bad id'; if (op.id === 'start') return 'start pin is fixed'; return isId(op.from) ? null : 'bad from';
     default: return 'bad type';
   }
 }
@@ -112,6 +113,7 @@ export function planOp(state, op) {
     case 'pin.update': { const p = state.pins.get(op.id); if (p) persist.push({ table: 'pins', id: p.id, json: JSON.stringify({ ...p, ...op.patch }) }); break; }
     case 'pin.remove': if (state.pins.has(op.id)) persist.push({ table: 'pins', id: op.id, json: null }); break;
     case 'pin.sight': case 'pin.unsight': { const p = state.pins.get(op.id); if (!p) break;
+      if (op.type === 'pin.sight' && withSighting(p, op.from, op.bearing) === p.sightings) break;
       const { sightings: _, ...rest } = p, next = withSighting(p, op.from, op.type === 'pin.sight' ? op.bearing : undefined);
       persist.push({ table: 'pins', id: p.id, json: JSON.stringify(next ? { ...rest, sightings: next } : rest) }); break; }
   }
@@ -127,6 +129,7 @@ export function applyOp(state, op) {
     case 'pin.remove': state.pins.delete(op.id); break;
     case 'pin.sight': case 'pin.unsight': { const p = state.pins.get(op.id); if (!p) break;
       const next = withSighting(p, op.from, op.type === 'pin.sight' ? op.bearing : undefined);
+      if (next === p.sightings) break;
       if (next) p.sightings = next; else delete p.sightings; break; }
   }
   return { persist };

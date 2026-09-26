@@ -1,4 +1,5 @@
 // Live sync with the MapRoom Durable Object: sends local ops, applies remote ones, tracks presence, reconnects.
+import { applySighting } from './sight.js';
 import { encodeRasterOp, decodeRasterOp, unwrapServerRaster, splitRasterOp, LAYER_NAME } from './proto.js';
 
 /** Replaces an entry with the same id rather than appending: a re-sent add must not duplicate. */
@@ -11,10 +12,7 @@ export function applyRemoteOp(state, op) {
     case 'pin.add': upsert(state.pins, op.pin); break;
     case 'pin.update': { const p = state.pins.find(p => p.id === op.id); if (p) Object.assign(p, op.patch); break; }
     case 'pin.remove': { const i = state.pins.findIndex(p => p.id === op.id); if (i >= 0) state.pins.splice(i, 1); break; }
-    case 'pin.sight': case 'pin.unsight': { const p = state.pins.find(p => p.id === op.id); if (!p) break;
-      const next = (p.sightings ?? []).filter(s => s.from !== op.from);
-      if (op.type === 'pin.sight') { const i = (p.sightings ?? []).findIndex(s => s.from === op.from); if (i >= 0) next.splice(i, 0, { from: op.from, bearing: op.bearing }); else next.push({ from: op.from, bearing: op.bearing }); }
-      if (next.length) p.sightings = next; else delete p.sightings; break; }
+    case 'pin.sight': case 'pin.unsight': { const p = state.pins.find(p => p.id === op.id); if (p) applySighting(p, op.from, op.type === 'pin.sight' ? op.bearing : undefined); break; }
   }
 }
 

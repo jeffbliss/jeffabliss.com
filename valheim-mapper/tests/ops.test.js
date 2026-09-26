@@ -75,6 +75,8 @@ test('pin.sight / pin.unsight validation and apply', () => {
   assert.match(validateOp({ type: 'pin.sight', id: '', from: 'start', bearing: 45 }), /id/);
   assert.equal(validateOp({ type: 'pin.unsight', id: 'p1', from: 'start' }), null);
   assert.match(validateOp({ type: 'pin.unsight', id: 'p1', from: '' }), /from/);
+  assert.equal(validateOp({ type: 'pin.sight', id: 'start', from: 'p1', bearing: 45 }), 'start pin is fixed');
+  assert.equal(validateOp({ type: 'pin.unsight', id: 'start', from: 'p1' }), 'start pin is fixed');
   assert.equal(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false, sightings: [{ from: 'start', bearing: 45 }] } }), null);
   assert.match(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false, sightings: [{ from: 'p1', bearing: 45 }] } }), /sighting/);
   assert.match(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'pin', name: '', checked: false, sightings: [{ from: 'a', bearing: 0 }, { from: 'a', bearing: 90 }] } }), /duplicate/);
@@ -91,6 +93,14 @@ test('pin.sight / pin.unsight validation and apply', () => {
   applyOp(s, { type: 'pin.unsight', id: 'p1', from: 'start' });
   assert.equal('sightings' in s.pins.get('p1'), false);                               // empty array is dropped
   assert.equal(applyOp(s, { type: 'pin.sight', id: 'nope', from: 'start', bearing: 0 }).persist.length, 0);
+  for (let i = 0; i < 32; i++) applyOp(s, { type: 'pin.sight', id: 'p1', from: `o${i}`, bearing: 0 });
+  assert.equal(s.pins.get('p1').sightings.length, 32);
+  assert.equal(planOp(s, { type: 'pin.sight', id: 'p1', from: 'o32', bearing: 0 }).persist.length, 0);   // cap: a new observer is a no-op
+  applyOp(s, { type: 'pin.sight', id: 'p1', from: 'o32', bearing: 0 });
+  assert.equal(s.pins.get('p1').sightings.length, 32);
+  assert.equal(s.pins.get('p1').sightings.some(x => x.from === 'o32'), false);
+  applyOp(s, { type: 'pin.sight', id: 'p1', from: 'o5', bearing: 90 });                  // replacing an existing observer still applies
+  assert.deepEqual(s.pins.get('p1').sightings[5], { from: 'o5', bearing: 90 });
 });
 test('planOp returns applyOp\'s rows without mutating the state', () => {
   const base = makeState();
