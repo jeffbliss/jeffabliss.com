@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { nearestPin, pinOps } from '../web/pins.js';
+import { nearestPin, pinOps, pinActions } from '../web/pins.js';
 import { sightingGeometry } from '../web/pins.js';
+import { createHistory } from '../web/history.js';
 
 test('nearestPin returns closest within range, else null', () => {
   const pins = [{ id: 'a', x: 0, z: 0 }, { id: 'b', x: 10, z: 0 }];
@@ -25,4 +26,14 @@ test('sightingGeometry gathers contributing wedges, the region and the estimate'
   assert.ok(g.polygon.length >= 4);
   assert.ok(Math.abs(g.estimate.x - 100) < 1e-6 && Math.abs(g.estimate.z - 100) < 5);   // kite sits past the true point, as in sight.test.js
   assert.equal(sightingGeometry({ id: 'u', x: 0, z: 0 }, [a]).estimate, null);
+});
+test('toggleShore flips the tag as one synced undoable command', () => {
+  const pin = { id: 'p1', x: 0, z: 0, type: 'fire', name: '', checked: false };
+  const app = { state: { pins: [pin], ink: [] }, history: createHistory(), markDirty() {}, tools: { options: { pinType: 'pin' } }, pinsLayer: { selected: null, add() {}, remove() {} } };
+  const actions = pinActions(app);
+  actions.toggleShore(pin);
+  assert.equal(pin.shore, true);
+  app.history.undo(); assert.equal(pin.shore, false);
+  app.history.redo(); assert.equal(pin.shore, true);
+  assert.deepEqual(pinOps.add(pin).ops[0].pin.shore, true);
 });

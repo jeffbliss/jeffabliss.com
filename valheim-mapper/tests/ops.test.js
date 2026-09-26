@@ -126,3 +126,16 @@ test('planOp returns applyOp\'s rows without mutating the state', () => {
     assert.deepEqual(planned.persist, applyOp(s, op).persist, op.type);
   }
 });
+test('shore tag: accepted on add and update, must be boolean, survives apply', () => {
+  assert.equal(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: '', checked: false, shore: true } }), null);
+  assert.match(validateOp({ type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: '', checked: false, shore: 'yes' } }), /shore/);
+  assert.equal(validateOp({ type: 'pin.update', id: 'p1', patch: { shore: true } }), null);
+  assert.match(validateOp({ type: 'pin.update', id: 'p1', patch: { shore: 1 } }), /shore/);
+  const s = makeState();
+  applyOp(s, { type: 'pin.add', pin: { id: 'p1', x: 1, z: 2, type: 'fire', name: '', checked: false, shore: true } });
+  assert.equal(s.pins.get('p1').shore, true);
+  applyOp(s, { type: 'pin.update', id: 'p1', patch: { shore: false } });
+  assert.equal(s.pins.get('p1').shore, false);
+  const { persist } = planOp(s, { type: 'pin.update', id: 'p1', patch: { shore: true } });
+  assert.equal(JSON.parse(persist[0].json).shore, true);
+});

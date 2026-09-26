@@ -71,6 +71,7 @@ export function renameCommand(pin, before, after) {
 export function wirePinPopup(app) {
   const popup = document.getElementById('pin-popup'), name = document.getElementById('pin-name');
   const check = document.getElementById('pin-check'), del = document.getElementById('pin-delete'), close = document.getElementById('pin-close'), correct = document.getElementById('pin-correct');
+  const shore = document.getElementById('pin-shore');
   const sighting = wireSighting(app, { sight: document.getElementById('pin-sight'), bar: document.getElementById('sight-bar'), list: document.getElementById('sight-list'),
     correctSight: document.getElementById('pin-correct-sight'), status: document.getElementById('sight-status') });
   const selectedPin = () => { const id = app.pinsLayer?.selected; return id ? app.state.pins.find(p => p.id === id) : null; };
@@ -82,6 +83,7 @@ export function wirePinPopup(app) {
     const [sx, sy] = app.view.worldToScreen(pin.x, pin.z, ...app.size());
     popup.style.left = `${sx / app.dpr()}px`; popup.style.top = `${sy / app.dpr()}px`;
     check.textContent = pin.checked ? 'Uncheck' : 'Check'; check.classList.toggle('active', pin.checked);
+    shore.classList.toggle('active', !!pin.shore); shore.hidden = !!pin.fixed;
     correct.hidden = !app.tools.editing || !pin.log;
     sighting.refresh(pin);
     if (shownFor !== pin.id) { shownFor = pin.id; before = pin.name; name.value = pin.name; }
@@ -95,6 +97,7 @@ export function wirePinPopup(app) {
   name.onkeydown = e => { e.stopPropagation(); if (e.key === 'Enter') { commitName(); name.blur(); } if (e.key === 'Escape') { name.value = before; name.blur(); } };
   name.onblur = commitName;
   check.onclick = () => { const pin = selectedPin(); if (pin) app.pinActions.toggleChecked(pin); };
+  shore.onclick = () => { const pin = selectedPin(); if (pin && !pin.fixed) app.pinActions.toggleShore(pin); };
   del.onclick = () => { const pin = selectedPin(); if (pin) app.pinActions.remove(pin); };
   close.onclick = () => { app.pinsLayer.selected = null; app.requestRender(); };
   wireCorrection(app, correct);

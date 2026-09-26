@@ -8,7 +8,7 @@ export function nearestPin(pins, x, z, maxDist) {
 }
 
 /** Plain copy of a pin without transient/local-only fields (e.g. `fixed`), for sync ops. */
-function plainPin(p) { return { id: p.id, x: p.x, z: p.z, type: p.type, name: p.name, checked: p.checked, ...(p.log ? { log: p.log } : {}), ...(p.sightings?.length ? { sightings: p.sightings } : {}) }; }
+function plainPin(p) { return { id: p.id, x: p.x, z: p.z, type: p.type, name: p.name, checked: p.checked, ...(p.shore ? { shore: true } : {}), ...(p.log ? { log: p.log } : {}), ...(p.sightings?.length ? { sightings: p.sightings } : {}) }; }
 
 export const pinOps = {
   add: pin => ({ ops: [{ type: 'pin.add', pin: plainPin(pin) }], inverseOps: [{ type: 'pin.remove', id: pin.id }] }),
@@ -49,6 +49,7 @@ export function createPins(state, icons) {
         const icon = icons[p.type] ?? icons.pin;
         ctx.globalAlpha = base * (p.checked ? 0.6 : 1);
         ctx.drawImage(icon, sx - s / 2, sy - s / 2, s, s);
+        if (p.shore) { ctx.beginPath(); ctx.arc(sx, sy + s * 0.42, 3.5 * dpr, 0, Math.PI * 2); ctx.fillStyle = '#3b7dbf'; ctx.fill(); ctx.fillStyle = '#f3e9d2'; }
         if (p.checked) ctx.drawImage(icons.checked, sx - s / 2, sy - s / 2, s, s);
         if (p.id === layer.selected) { ctx.beginPath(); ctx.arc(sx, sy, s * 0.6, 0, Math.PI * 2); ctx.strokeStyle = '#ffd77a'; ctx.lineWidth = 2 * dpr; ctx.stroke(); ctx.strokeStyle = 'rgba(0,0,0,0.85)'; ctx.lineWidth = 3 * dpr; }
         const label = p.name || (p.fixed ? 'Start' : '');
@@ -133,6 +134,11 @@ export function pinActions(app) {
     toggleChecked(pin) {
       pin.checked = !pin.checked;
       app.history.push({ label: 'check', ...pinOps.update(pin, { checked: pin.checked }, { checked: !pin.checked }), undo: () => { pin.checked = !pin.checked; }, redo: () => { pin.checked = !pin.checked; } });
+      app.markDirty();
+    },
+    toggleShore(pin) {
+      const after = !pin.shore; pin.shore = after;
+      app.history.push({ label: 'shore', ...pinOps.update(pin, { shore: after }, { shore: !after }), undo: () => { pin.shore = !after; }, redo: () => { pin.shore = after; } });
       app.markDirty();
     },
     remove(pin) {
