@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { wedge, clip, region, estimate, contributing, HALF, sightOps } from '../web/sight.js';
-import { createHistory } from '../web/history.js';
+import { createHistory, combine } from '../web/history.js';
 import { withError } from '../web/sighting.js';
 
 const near = (a, b, eps = 1e-6) => assert.ok(Math.abs(a - b) < eps, `${a} ≈ ${b}`);
@@ -74,6 +74,21 @@ test('sightOps: sight upserts, unsight removes, both undo', () => {
   h.undo(); assert.deepEqual(pin.sightings, [{ from: 'a', bearing: 90 }, { from: 'b', bearing: 0 }]);
   h.undo(); h.undo(); h.undo(); assert.equal('sightings' in pin, false);
   assert.equal(sightOps.unsight(pin, 'zzz'), null);
+});
+
+test('combine merges two commands and undoes them in reverse order', () => {
+  const calls = [];
+  const a = { label: 'a', ops: [{ type: 'a.op' }], inverseOps: [{ type: 'a.inv' }], undo: () => calls.push('a.undo'), redo: () => calls.push('a.redo') };
+  const b = { label: 'b', ops: [{ type: 'b.op' }], inverseOps: [{ type: 'b.inv' }], undo: () => calls.push('b.undo'), redo: () => calls.push('b.redo') };
+  const cmd = combine('x', a, b);
+  assert.deepEqual(cmd.ops, [...a.ops, ...b.ops]);
+  assert.deepEqual(cmd.inverseOps, [...b.inverseOps, ...a.inverseOps]);
+  const h = createHistory();
+  h.push(cmd);
+  h.undo();
+  assert.deepEqual(calls, ['b.undo', 'a.undo']);
+  h.redo();
+  assert.deepEqual(calls, ['b.undo', 'a.undo', 'a.redo', 'b.redo']);
 });
 
 test('withError appends or replaces the ±N m suffix', () => {

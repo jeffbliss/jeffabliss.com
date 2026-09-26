@@ -3,6 +3,7 @@
 import { sightOps } from './sight.js';
 import { sightingGeometry, nearestPin, pinOps } from './pins.js';
 import { correctionCommand } from './anchor.js';
+import { combine } from './history.js';
 
 const POINTS = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
 const nameOf = (pins, id) => { const p = pins.find(p => p.id === id); return p ? (p.name || (p.fixed ? 'Start' : p.type)) : 'missing pin'; };
@@ -37,6 +38,7 @@ export function wireSighting(app, { sight, bar, list, correctSight, status }) {
   };
 
   sight.onclick = () => {
+    if (observer) return;
     const pin = selected(); if (!pin?.checked) return;
     observer = pin; bearing = null; bar.hidden = false; prevOverlay = app.tools.overlay;
     app.toast('Pick the compass point, then click the target pin · Esc cancels', 0);
@@ -64,27 +66,34 @@ export function wireSighting(app, { sight, bar, list, correctSight, status }) {
     const nameBefore = pin.name, nameAfter = withError(pin.name, estimate.error);
     pin.name = nameAfter;
     const rename = { ...pinOps.update(pin, { name: nameAfter }, { name: nameBefore }), undo: () => { pin.name = nameBefore; }, redo: () => { pin.name = nameAfter; } };
-    const { undo, redo } = cmd;
-    app.history.push({ label: 'correct to sightings', ops: [...cmd.ops, ...rename.ops], inverseOps: [...rename.inverseOps, ...cmd.inverseOps], undo: () => { rename.undo(); undo(); }, redo: () => { redo(); rename.redo(); } });
+    app.history.push(combine('correct to sightings', cmd, rename));
     app.markDirty(); app.requestRender();
   };
 
   addEventListener('keydown', e => { if (e.key === 'Escape' && observer) stop(); });
 
   /** Called by the popup every frame with the selected pin (or null). */
+  let lastKey = null;
   const refresh = pin => {
-    if (!pin) { if (observer) stop(); return; }
+    if (!pin) { if (observer) stop(); lastKey = null; return; }
     if (observer && pin !== observer) stop();
     sight.hidden = !pin.checked;
     const s = pin.sightings ?? [];
     list.hidden = !s.length;
-    if (s.length) list.replaceChildren(...s.map(({ from, bearing: b }) => {
-      const row = document.createElement('div'), txt = document.createElement('span'), x = document.createElement('button');
+    const key = pin.id + '|' + s.map(({ from, bearing: b }) => {
       const o = pins().find(p => p.id === from);
-      txt.textContent = `from ${nameOf(pins(), from)}, ${POINTS[b / 22.5]}${o && !o.checked ? ' (unchecked)' : ''}`;
-      x.textContent = '×'; x.title = 'Remove this sighting'; x.onclick = () => { const cmd = sightOps.unsight(pin, from); if (cmd) { app.history.push(cmd); app.markDirty(); app.requestRender(); } };
-      row.append(txt, x); return row;
-    }));
+      return `${from}:${b}:${o ? (o.checked ? 'checked' : 'unchecked') : 'missing'}:${nameOf(pins(), from)}`;
+    }).join(',');
+    if (key !== lastKey) {
+      lastKey = key;
+      if (s.length) list.replaceChildren(...s.map(({ from, bearing: b }) => {
+        const row = document.createElement('div'), txt = document.createElement('span'), x = document.createElement('button');
+        const o = pins().find(p => p.id === from);
+        txt.textContent = `from ${nameOf(pins(), from)}, ${POINTS[b / 22.5]}${o && !o.checked ? ' (unchecked)' : ''}`;
+        x.textContent = '×'; x.title = 'Remove this sighting'; x.onclick = () => { const cmd = sightOps.unsight(pin, from); if (cmd) { app.history.push(cmd); app.markDirty(); app.requestRender(); } };
+        row.append(txt, x); return row;
+      }));
+    }
     const g = s.length ? sightingGeometry(pin, pins()) : null;
     const est = g?.estimate ?? null;
     status.hidden = !s.length;
