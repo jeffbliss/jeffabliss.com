@@ -44,7 +44,7 @@ test('removing a logged pin removes its path too, and undo restores both', () =>
   const state = { pins: [pin], ink: [other, stroke] };
   const app = { state, history: createHistory(), markDirty() {}, tools: { options: { pinType: 'pin' } }, pinsLayer: { selected: null, add() {}, remove(id) { const i = state.pins.findIndex(p => p.id === id); if (i >= 0) state.pins.splice(i, 1); } } };
   const actions = pinActions(app);
-  assert.equal(actions.remove(pin), true);
+  assert.equal(actions.remove(pin), 'path');
   assert.deepEqual(state.ink.map(s => s.id), ['s2']); assert.equal(state.pins.length, 0);
   app.history.undo();
   assert.deepEqual(state.ink.map(s => s.id), ['s2', 's1']); assert.equal(state.pins[0], pin);

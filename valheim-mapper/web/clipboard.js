@@ -24,7 +24,7 @@ export function copyRegion(state, rect) {
     type: CLIP_TYPE, cellM: terrain.cellM, w, h,
     terrain: toBase64(terrain.snapshot(rect)), fog: toBase64(fog.snapshot(rect)),
     ink: state.ink.filter(s => s.points.every(([x, z]) => inside(x, z))).map(s => ({ color: s.color, width: s.width, points: s.points.map(([x, z]) => [x - ox, z - oz]) })),
-    pins: state.pins.filter(p => !p.fixed && p.type !== 'start' && inside(p.x, p.z)).map(p => ({ type: p.type, name: p.name, checked: !!p.checked, x: p.x - ox, z: p.z - oz })),
+    pins: state.pins.filter(p => !p.fixed && p.type !== 'start' && inside(p.x, p.z)).map(p => ({ type: p.type, name: p.name, checked: !!p.checked, shore: !!p.shore, x: p.x - ox, z: p.z - oz })),
   };
 }
 
@@ -66,7 +66,7 @@ export function pasteCommand(state, clip, x, z) {
   if (strokes.length) cmds.push({
     ops: strokes.map(s => ({ type: 'ink.add', stroke: s })), inverseOps: strokes.map(s => ({ type: 'ink.remove', id: s.id })),
     undo: () => { for (const s of strokes) { const i = state.ink.indexOf(s); if (i >= 0) state.ink.splice(i, 1); } }, redo: () => state.ink.push(...strokes) });
-  const pins = clip.pins.map(p => ({ id: crypto.randomUUID(), x: p.x + ox, z: p.z + oz, type: p.type, name: p.name ?? '', checked: !!p.checked }));
+  const pins = clip.pins.map(p => ({ id: crypto.randomUUID(), x: p.x + ox, z: p.z + oz, type: p.type, name: p.name ?? '', checked: !!p.checked, shore: !!p.shore }));
   if (pins.length) cmds.push({
     ops: pins.map(p => ({ type: 'pin.add', pin: p })), inverseOps: pins.map(p => ({ type: 'pin.remove', id: p.id })),
     undo: () => { for (const p of pins) { const i = state.pins.indexOf(p); if (i >= 0) state.pins.splice(i, 1); } }, redo: () => state.pins.push(...pins) });

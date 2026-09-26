@@ -74,6 +74,7 @@ function render() {
   ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, w, h);
   app.layers.draw(ctx, app.view, w, h);
   app.updatePinPopup?.();
+  app.refreshCoast?.();
   scaleBar.update();
 }
 
@@ -96,7 +97,7 @@ function cameraControls() {
     const [sx, sy] = pos(e), moved = Math.hypot(sx - pressed[0], sy - pressed[1]) > 4 * dpr();
     if (moved) return;
     const hit = pinAt(sx, sy);
-    if (e.button === 2 && hit && app.pinActions.remove(hit)) app.toast(`Removed ${hit.name || hit.type} · Cmd/Ctrl+Z to undo`);
+    if (e.button === 2 && hit) { const removed = app.pinActions.remove(hit); if (removed) app.toast(`Removed ${hit.name || hit.type}${removed === 'path' ? ' and its path' : ''} · Cmd/Ctrl+Z to undo`); }
     if (e.button === 0 && app.tools.current === 'view') { if (hit) app.pinActions.toggleChecked(hit); else app.pinsLayer.selected = null; }
     requestRender();
   });

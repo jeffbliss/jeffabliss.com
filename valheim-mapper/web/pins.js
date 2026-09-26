@@ -151,7 +151,7 @@ export function pinActions(app) {
         inverseOps: [...pinCmd.inverseOps, ...(stroke ? [{ type: 'ink.add', stroke }] : [])],
         undo: () => { app.state.pins.splice(idx, 0, pin); if (stroke) ink.splice(Math.min(si, ink.length), 0, stroke); },
         redo: () => { layer().remove(pin.id); if (stroke) { const i = ink.indexOf(stroke); if (i >= 0) ink.splice(i, 1); } } });
-      app.markDirty(); return true;
+      app.markDirty(); return stroke ? 'path' : true;
     },
   };
 }

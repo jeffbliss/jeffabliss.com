@@ -20,14 +20,22 @@ test('copy takes terrain, fog, wholly-inside ink and non-start pins, relative to
   const w = world();
   w.terrain.data[2 * 20 + 2] = 3; w.fog.data[2 * 20 + 2] = 255;
   w.ink.push({ id: 'in', color: '#f00', width: 1, points: [[-7.5, -7.5], [-7, -7]] }, { id: 'out', color: '#0f0', width: 1, points: [[-7.5, -7.5], [5, 5]] });
-  w.pins.push({ id: 'start', x: -7.5, z: -7.5, type: 'start', fixed: true }, { id: 'p', x: -7.5, z: -7.5, type: 'fire', name: 'camp', checked: true }, { id: 'far', x: 5, z: 5, type: 'pin', name: '' });
+  w.pins.push({ id: 'start', x: -7.5, z: -7.5, type: 'start', fixed: true }, { id: 'p', x: -7.5, z: -7.5, type: 'fire', name: 'camp', checked: true, shore: true }, { id: 'far', x: 5, z: 5, type: 'pin', name: '' });
   const rect = { x0: 1, z0: 1, x1: 4, z1: 4 };                    // world [-9, -5)
   const clip = parseClip(JSON.stringify(copyRegion(w, rect)));
   assert.equal(clip.w, 4); assert.equal(clip.h, 4);
   assert.equal(clip.terrain[1 * 4 + 1], 3); assert.equal(clip.fog[1 * 4 + 1], 255); assert.equal(clip.terrain[0], 0);
   assert.deepEqual(clip.ink.map(s => s.color), ['#f00']); assert.deepEqual(clip.ink[0].points[0], [1.5, 1.5]);
-  assert.deepEqual(clip.pins, [{ type: 'fire', name: 'camp', checked: true, x: 1.5, z: 1.5 }]);
+  assert.deepEqual(clip.pins, [{ type: 'fire', name: 'camp', checked: true, shore: true, x: 1.5, z: 1.5 }]);
   assert.equal(parseClip('{"hello":1}'), null); assert.equal(parseClip('nope'), null);
+});
+
+test('paste coerces shore to a real boolean, even from untrusted clipboard text', () => {
+  const dst = world();
+  const clip = { type: 'valheim-mapper/clip', cellM: 1, w: 1, h: 1, terrain: new Uint8Array(1), fog: new Uint8Array(1), ink: [],
+    pins: [{ type: 'fire', name: 'a', checked: true, shore: 'yes', x: 0, z: 0 }, { type: 'fire', name: 'b', checked: true, x: 0, z: 0 }] };
+  pasteCommand(dst, clip, 0, 0);
+  assert.equal(dst.pins[0].shore, true); assert.equal(dst.pins[1].shore, false);
 });
 
 test('paste is transparent for blank terrain, merges fog reveal, offsets ink and pins with fresh ids, and undoes as one step', () => {
