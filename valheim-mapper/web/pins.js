@@ -25,8 +25,9 @@ export function sightingGeometry(pin, pins) {
 
 export function createPins(state, icons) {
   const ICON = 32, HIT = 14;
+  let selected = null;                                      // an accessor, so the registry's wrapped copy of this layer shares it
   const layer = {
-    id: 'pins', name: 'Pins', selected: null,
+    id: 'pins', name: 'Pins', get selected() { return selected; }, set selected(v) { selected = v; },
     add({ x, z, type, name = '' }) { const pin = { id: crypto.randomUUID(), x, z, type, name, checked: false }; state.pins.push(pin); return pin; },
     remove(id) { const i = state.pins.findIndex(p => p.id === id && !p.fixed); if (i >= 0) state.pins.splice(i, 1); if (layer.selected === id) layer.selected = null; },
     update(id, patch) { const p = state.pins.find(p => p.id === id); if (p) Object.assign(p, patch); return p; },

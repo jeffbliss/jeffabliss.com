@@ -91,6 +91,7 @@ body.editing #hotkeys .view, body:not(.editing) #hotkeys .edit { display: none; 
 #pin-popup .row { display: flex; gap: 4px; }
 #pin-popup .row button { flex: 1; }
 #pin-popup #pin-close { position: absolute; top: -20px; right: -20px; width: 28px; height: 28px; min-height: 0; padding: 0; font-size: 16px; }
+#pin-popup.targeting { pointer-events: none; opacity: .55; }
 #sight-bar { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; }
 #sight-bar button { min-height: 24px; font-size: 12px; padding: 0; }
 #sight-list { display: grid; gap: 2px; font: 14px 'Averia Serif', serif; }

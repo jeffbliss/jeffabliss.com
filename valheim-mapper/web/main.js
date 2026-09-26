@@ -84,10 +84,11 @@ function cameraControls() {
   let panning = null, pressed = null;
   app.isPanGesture = e => panGesture(e, { editing: app.tools.editing, tool: app.tools.current, spaceDown: app.spaceDown });
   app.restCursor = () => { canvas.style.cursor = app.tools.editing || app.tools.current === 'measure' ? 'crosshair' : 'grab'; };
-  canvas.addEventListener('pointerdown', e => { if (app.isPanGesture(e)) { panning = pressed = pos(e); canvas.setPointerCapture(e.pointerId); canvas.style.cursor = 'grabbing'; } });
+  canvas.addEventListener('pointerdown', e => { if (app.tools.intercept && e.button === 0) return; if (app.isPanGesture(e)) { panning = pressed = pos(e); canvas.setPointerCapture(e.pointerId); canvas.style.cursor = 'grabbing'; } });
   canvas.addEventListener('pointermove', e => { if (!panning) return; const p = pos(e); view.panBy(p[0] - panning[0], p[1] - panning[1]); panning = p; requestRender(); });
   const pinAt = (sx, sy) => app.pinsLayer?.hitTest(sx, sy, view, ...size());
   // Pins follow the game's map: click a pin to cross it off, right-click a pin to remove it, double-click to place or open one.
+  // A left click while a placement intercept is active (paste, sighting) belongs to that intercept, not to these gestures.
   canvas.addEventListener('pointerup', e => {
     if (!panning) return; panning = null; app.restCursor();
     const [sx, sy] = pos(e), moved = Math.hypot(sx - pressed[0], sy - pressed[1]) > 4 * dpr();

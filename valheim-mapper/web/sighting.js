@@ -15,7 +15,8 @@ export function wireSighting(app, { sight, bar, list, correctSight, status }) {
   const pins = () => app.state.pins;
   const selected = () => { const id = app.pinsLayer?.selected; return id ? pins().find(p => p.id === id) : null; };
 
-  const stop = () => { observer = null; bearing = null; bar.hidden = true; app.tools.intercept = null; app.tools.overlay = prevOverlay; app.toast(''); app.requestRender(); };
+  const popup = bar.closest('#pin-popup');
+  const stop = () => { observer = null; bearing = null; bar.hidden = true; popup?.classList.remove('targeting'); app.tools.intercept = null; app.tools.overlay = prevOverlay; app.toast(''); app.requestRender(); };
 
   const place = (e, wx, wz) => {
     if (!observer || bearing === null || e.button !== 0) return false;
@@ -31,6 +32,7 @@ export function wireSighting(app, { sight, bar, list, correctSight, status }) {
   const choose = b => {
     bearing = b; for (const [i, el] of [...bar.children].entries()) el.classList.toggle('active', i * 22.5 === b);
     app.toast(`Click the pin that lies ${POINTS[b / 22.5]} of ${nameOf(pins(), observer.id)} · Esc cancels`, 0);
+    popup?.classList.add('targeting');                        // let the click reach a target pin under the popup
     app.tools.intercept = place; app.requestRender();
   };
 

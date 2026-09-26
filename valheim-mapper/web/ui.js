@@ -85,6 +85,7 @@ export function wirePinPopup(app) {
     correct.hidden = !app.tools.editing || !pin.log;
     sighting.refresh(pin);
     if (shownFor !== pin.id) { shownFor = pin.id; before = pin.name; name.value = pin.name; }
+    else if (document.activeElement !== name && pin.name !== before) { before = pin.name; name.value = pin.name; }   // renamed by a correction, undo or a friend
     popup.hidden = false;
   };
 
