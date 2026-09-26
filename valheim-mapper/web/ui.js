@@ -2,6 +2,7 @@ import { BRUSH_SIZES, INK_WIDTHS, INK_COLORS } from './tools.js';
 import { serialize } from './store.js';
 import { pinKeys, pinOps } from './pins.js';
 import { wireCorrection } from './anchor.js';
+import { wireSighting } from './sighting.js';
 import { PIN_TYPES, BIOMES } from './world.js';
 
 /** Connection status line, in the words the toolbar shows. */
@@ -70,16 +71,19 @@ export function renameCommand(pin, before, after) {
 export function wirePinPopup(app) {
   const popup = document.getElementById('pin-popup'), name = document.getElementById('pin-name');
   const check = document.getElementById('pin-check'), del = document.getElementById('pin-delete'), close = document.getElementById('pin-close'), correct = document.getElementById('pin-correct');
+  const sighting = wireSighting(app, { sight: document.getElementById('pin-sight'), bar: document.getElementById('sight-bar'), list: document.getElementById('sight-list'),
+    correctSight: document.getElementById('pin-correct-sight'), status: document.getElementById('sight-status') });
   const selectedPin = () => { const id = app.pinsLayer?.selected; return id ? app.state.pins.find(p => p.id === id) : null; };
   let shownFor = null, before = '';
 
   app.updatePinPopup = () => {
     const pin = selectedPin();
-    if (!pin) { if (!popup.hidden) { popup.hidden = true; shownFor = null; } return; }
+    if (!pin) { if (!popup.hidden) { popup.hidden = true; shownFor = null; } sighting.refresh(null); return; }
     const [sx, sy] = app.view.worldToScreen(pin.x, pin.z, ...app.size());
     popup.style.left = `${sx / app.dpr()}px`; popup.style.top = `${sy / app.dpr()}px`;
     check.textContent = pin.checked ? 'Uncheck' : 'Check'; check.classList.toggle('active', pin.checked);
     correct.hidden = !app.tools.editing || !pin.log;
+    sighting.refresh(pin);
     if (shownFor !== pin.id) { shownFor = pin.id; before = pin.name; name.value = pin.name; }
     popup.hidden = false;
   };

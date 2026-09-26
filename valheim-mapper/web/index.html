@@ -79,8 +79,13 @@
   <div class="row">
     <button id="pin-check" title="Toggle checked (X)">Check</button>
     <button id="pin-correct" title="Move this log's whole chain so this pin lands where it really is">Correct</button>
+    <button id="pin-sight" title="From this verified pin, record the compass point another pin lies on">Sight</button>
     <button id="pin-delete" title="Delete pin (Delete)">Delete</button>
   </div>
+  <div id="sight-bar" hidden></div>
+  <div id="sight-list" hidden></div>
+  <div id="sight-status" hidden></div>
+  <button id="pin-correct-sight" title="Move this pin (and its log chain) onto the sightings' estimate" hidden>Correct to sightings</button>
 </div>
 <script type="module" src="main.js"></script>
 </body>

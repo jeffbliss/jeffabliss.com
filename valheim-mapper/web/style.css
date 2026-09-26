@@ -91,6 +91,12 @@ body.editing #hotkeys .view, body:not(.editing) #hotkeys .edit { display: none; 
 #pin-popup .row { display: flex; gap: 4px; }
 #pin-popup .row button { flex: 1; }
 #pin-popup #pin-close { position: absolute; top: -20px; right: -20px; width: 28px; height: 28px; min-height: 0; padding: 0; font-size: 16px; }
+#sight-bar { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; }
+#sight-bar button { min-height: 24px; font-size: 12px; padding: 0; }
+#sight-list { display: grid; gap: 2px; font: 14px 'Averia Serif', serif; }
+#sight-list div { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+#sight-list button { min-height: 22px; width: 26px; padding: 0; font-size: 14px; }
+#sight-status { font: 13px 'Averia Serif', serif; opacity: .85; text-align: center; }
 [hidden] { display: none !important; }
 
 @media (max-width: 720px) {

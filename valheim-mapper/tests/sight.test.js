@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { wedge, clip, region, estimate, contributing, HALF, sightOps } from '../web/sight.js';
 import { createHistory } from '../web/history.js';
+import { withError } from '../web/sighting.js';
 
 const near = (a, b, eps = 1e-6) => assert.ok(Math.abs(a - b) < eps, `${a} ≈ ${b}`);
 const insidePolygon = (poly, x, z) => { const s = poly.map(([ax, az], i) => { const [bx, bz] = poly[(i + 1) % poly.length]; return Math.sign((bx - ax) * (z - az) - (bz - az) * (x - ax)); }); return s.every(v => v === s[0]); };
@@ -73,4 +74,10 @@ test('sightOps: sight upserts, unsight removes, both undo', () => {
   h.undo(); assert.deepEqual(pin.sightings, [{ from: 'a', bearing: 90 }, { from: 'b', bearing: 0 }]);
   h.undo(); h.undo(); h.undo(); assert.equal('sightings' in pin, false);
   assert.equal(sightOps.unsight(pin, 'zzz'), null);
+});
+
+test('withError appends or replaces the ±N m suffix', () => {
+  assert.equal(withError('north tower', 35), 'north tower ±35 m');
+  assert.equal(withError('log end ±120 m', 35), 'log end ±35 m');
+  assert.equal(withError('', 12), '±12 m');
 });
