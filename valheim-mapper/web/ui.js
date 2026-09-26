@@ -4,6 +4,7 @@ import { pinKeys, pinOps } from './pins.js';
 import { wireCorrection } from './anchor.js';
 import { wireSighting } from './sighting.js';
 import { PIN_TYPES, BIOMES } from './world.js';
+import { coastCommand, shorePins } from './coast.js';
 
 /** Connection status line, in the words the toolbar shows. */
 export const statusText = (status, you) => ({
@@ -86,6 +87,7 @@ export function wirePinPopup(app) {
     shore.classList.toggle('active', !!pin.shore); shore.hidden = !!pin.fixed;
     correct.hidden = !app.tools.editing || !pin.log;
     sighting.refresh(pin);
+    app.refreshCoast?.();
     if (shownFor !== pin.id) { shownFor = pin.id; before = pin.name; name.value = pin.name; }
     else if (document.activeElement !== name && pin.name !== before) { before = pin.name; name.value = pin.name; }   // renamed by a correction, undo or a friend
     popup.hidden = false;
@@ -163,6 +165,9 @@ export function wireTools(app) {
   editBtn.onclick = () => { app.tools.setEditing(!app.tools.editing); editBtn.blur(); };
   document.getElementById('undo').onclick = () => { if (app.history.undo()) app.markDirty(); };
   document.getElementById('redo').onclick = () => { if (app.history.redo()) app.markDirty(); };
+  const coast = document.getElementById('coast');
+  coast.onclick = () => { const cmd = coastCommand(app); if (cmd) { app.history.push(cmd); app.markDirty(); app.requestRender(); } coast.blur(); };
+  app.refreshCoast = () => { coast.disabled = shorePins(app.state?.pins ?? []).length < 2; };
 
   app.tools.onChange = () => {
     const { editing } = app.tools;
@@ -188,6 +193,7 @@ export function wireTools(app) {
     if (app.tools.current === 'log') app.logTool?.update();   // refresh the start/summary when the tool is picked
     document.getElementById('sidebar').hidden = !document.querySelector('#sidebar .tool-group:not([hidden])');
     for (const b of typesEl.children) b.classList.toggle('active', b.dataset.type === app.tools.options.pinType);
+    app.refreshCoast?.();
   };
   app.tools.setEditing(false);   // open read-only: editing is a deliberate step
 }
