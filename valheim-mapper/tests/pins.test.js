@@ -37,3 +37,19 @@ test('toggleShore flips the tag as one synced undoable command', () => {
   app.history.redo(); assert.equal(pin.shore, true);
   assert.deepEqual(pinOps.add(pin).ops[0].pin.shore, true);
 });
+
+test('removing a logged pin removes its path too, and undo restores both', () => {
+  const stroke = { id: 's1', color: '#000', width: 4, points: [[0, 0], [0, 100]] }, other = { id: 's2', color: '#000', width: 4, points: [[5, 5]] };
+  const pin = { id: 'p1', x: 0, z: 100, type: 'pin', name: 'log end', checked: false, log: { from: 'start', start: [0, 0], legs: 'N 25', ink: 's1' } };
+  const state = { pins: [pin], ink: [other, stroke] };
+  const app = { state, history: createHistory(), markDirty() {}, tools: { options: { pinType: 'pin' } }, pinsLayer: { selected: null, add() {}, remove(id) { const i = state.pins.findIndex(p => p.id === id); if (i >= 0) state.pins.splice(i, 1); } } };
+  const actions = pinActions(app);
+  assert.equal(actions.remove(pin), true);
+  assert.deepEqual(state.ink.map(s => s.id), ['s2']); assert.equal(state.pins.length, 0);
+  app.history.undo();
+  assert.deepEqual(state.ink.map(s => s.id), ['s2', 's1']); assert.equal(state.pins[0], pin);
+  app.history.redo();
+  assert.deepEqual(state.ink.map(s => s.id), ['s2']);
+  const gone = { ...pin, id: 'p2', log: { ...pin.log, ink: 'missing' } }; state.pins.push(gone);
+  assert.equal(actions.remove(gone), true); assert.deepEqual(state.ink.map(s => s.id), ['s2']);
+});

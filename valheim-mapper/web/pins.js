@@ -143,8 +143,14 @@ export function pinActions(app) {
     },
     remove(pin) {
       if (pin.fixed) return false;
-      const idx = app.state.pins.indexOf(pin); layer().remove(pin.id);
-      app.history.push({ label: 'remove pin', ...pinOps.remove(pin), undo: () => app.state.pins.splice(idx, 0, pin), redo: () => layer().remove(pin.id) });
+      const ink = app.state.ink, si = pin.log?.ink ? ink.findIndex(s => s.id === pin.log.ink) : -1, stroke = si >= 0 ? ink[si] : null;
+      const idx = app.state.pins.indexOf(pin); layer().remove(pin.id); if (stroke) ink.splice(si, 1);
+      const pinCmd = pinOps.remove(pin);
+      app.history.push({ label: 'remove pin',
+        ops: [...(stroke ? [{ type: 'ink.remove', id: stroke.id }] : []), ...pinCmd.ops],
+        inverseOps: [...pinCmd.inverseOps, ...(stroke ? [{ type: 'ink.add', stroke }] : [])],
+        undo: () => { app.state.pins.splice(idx, 0, pin); if (stroke) ink.splice(Math.min(si, ink.length), 0, stroke); },
+        redo: () => { layer().remove(pin.id); if (stroke) { const i = ink.indexOf(stroke); if (i >= 0) ink.splice(i, 1); } } });
       app.markDirty(); return true;
     },
   };
