@@ -5,7 +5,7 @@
     "gold": 271,
     "platinum": 28
   },
-  "gameCount": 420,
+  "gameCount": 421,
   "averageCompletion": 18.4,
   "recentTrophies": [
     {
@@ -5540,6 +5540,17 @@
       "progressPercent": 0,
       "earnedCount": 0,
       "totalCount": 14,
+      "lastEarnedAt": null
+    },
+    {
+      "name": "Terraria",
+      "gameId": "NPWR04270_00",
+      "slug": "psn-terraria",
+      "platform": "psn",
+      "titlePlatform": "PS3,PSVITA,PS4",
+      "progressPercent": 0,
+      "earnedCount": 0,
+      "totalCount": 51,
       "lastEarnedAt": null
     },
     {
