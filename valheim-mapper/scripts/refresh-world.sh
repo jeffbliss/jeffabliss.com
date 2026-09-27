@@ -25,13 +25,13 @@ if [ "${1:-}" != "--offline" ]; then
       log_user 0
       spawn sftp -o StrictHostKeyChecking=accept-new -P $env(SFTP_PORT) $env(SFTP_USER)@$env(SFTP_HOST)
       expect {
-        -re "(?i)password" { send "$env(SFTP_PASS)\r" }
+        -nocase "password" { send "$env(SFTP_PASS)\r" }
         "sftp>" {}
         timeout { puts stderr "sftp: no prompt"; exit 1 }
       }
       expect {
         "sftp>" {}
-        -re "(?i)permission denied|(?i)password" { puts stderr "sftp: login failed"; exit 1 }
+        -nocase -re "permission denied|password" { puts stderr "sftp: login failed"; exit 1 }
         timeout { puts stderr "sftp: no prompt after login"; exit 1 }
       }
       log_user 1
