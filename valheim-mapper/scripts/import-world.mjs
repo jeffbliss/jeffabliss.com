@@ -12,17 +12,24 @@ import { CELLS } from '../web/world.js';
 const saveDir = process.argv[2] ?? 'import/savegame', out = process.argv[3] ?? 'import/world.json';
 const TABLE = stableHash('piece_cartographytable'), DATA = stableHash('data');
 const LOCATION_PROXY = stableHash('LocationProxy'), LOCATION_KEY = stableHash('location'), START_TEMPLE = stableHash('StartTemple');
+// Placed locations worth a pin once their zone has been generated (a player came within a couple of zones).
+const LOCATION_PINS = { Vendor_BlackForest: { type: 'trader', name: 'Haldor' } };
+const LOCATION_HASHES = new Map(Object.entries(LOCATION_PINS).map(([k, v]) => [stableHash(k), { key: k, ...v }]));
 
 const indexes = readdirSync(saveDir).filter(f => /^_main\.\d+\.chunks$/.test(f)).sort((a, b) => Number(a.split('.')[1]) - Number(b.split('.')[1]));
 if (!indexes.length) { console.error(`no _main.N.chunks index in ${saveDir}`); process.exit(1); }
 const index = indexes[indexes.length - 1], names = chunkNames(readFileSync(join(saveDir, index)));
 
-let records = 0, temple = null; const tables = [];
+let records = 0, temple = null; const tables = [], located = [];
 for (const name of names) {
   for (const r of readChunk(new Uint8Array(readFileSync(join(saveDir, name))))) {
     records++;
     if (r.prefab === TABLE && r.bytes.has(DATA)) tables.push(r);
-    if (r.prefab === LOCATION_PROXY && (r.ints.get(LOCATION_KEY) >>> 0) === START_TEMPLE) temple = r;
+    if (r.prefab === LOCATION_PROXY) {
+      const loc = r.ints.get(LOCATION_KEY) >>> 0;
+      if (loc === START_TEMPLE) temple = r;
+      const known = LOCATION_HASHES.get(loc); if (known) located.push({ ...known, x: r.x, z: r.z });
+    }
   }
 }
 const dx = temple ? -temple.x : 0, dz = temple ? -temple.z : 0;
@@ -35,6 +42,7 @@ for (const t of tables) {
   ({ fog, marked } = exploredToFog(m.explored, m.texture, { dx, dz, fog }));
   for (const p of m.pins) { const mp = toMapperPin(p, { dx, dz }); pins.set(mp.id, mp); }
 }
+for (const l of located) { const x = +(l.x + dx).toFixed(1), z = +(l.z + dz).toFixed(1); pins.set(`loc-${l.key}-${x}-${z}`, { id: `loc-${l.key}-${x}-${z}`, x, z, type: l.type, name: l.name, checked: false }); }
 const pinList = [...pins.values()].sort((a, b) => a.id.localeCompare(b.id));
 const doc = {
   version: SAVE_VERSION,
