@@ -9,3 +9,4 @@ web/assets/
 .wrangler/
 node_modules/
 .dev.vars
+import/
