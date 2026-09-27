@@ -27,7 +27,7 @@ export function readVarint(view, p) {
 /**
  * Decodes the ZDO record at byte offset p. Returns { next, flags, x, y, z, prefab, ints, bytes, longs } where
  * ints/longs/bytes are Maps from field hash to value (ints as int32, longs as BigInt, bytes as Uint8Array).
- * Strings, floats, vec3s and quats are skipped, since nothing here needs them.
+ * Strings are kept as text; floats, vec3s and quats are skipped, since nothing here needs them.
  */
 export function readRecord(u8, p) {
   const view = new DataView(u8.buffer, u8.byteOffset, u8.byteLength);
@@ -38,18 +38,18 @@ export function readRecord(u8, p) {
   const prefab = view.getUint32(p, true); p += 4;
   if (flags & FLAG.rotation) { p += 2; if (!(view.getUint8(p - 1) & 0x80)) p += 2; }
   if (flags & FLAG.conn) p += 5;
-  const ints = new Map(), longs = new Map(), bytes = new Map();
+  const ints = new Map(), longs = new Map(), bytes = new Map(), strings = new Map();
   for (const [name, bit, size] of SEGMENTS) {
     if (!(flags & bit)) continue;
     let count; [count, p] = readVarint(view, p);
     for (let i = 0; i < count; i++) {
       const key = view.getUint32(p, true); p += 4;
-      if (name === 'strings') { let len; [len, p] = readVarint(view, p); p += len; }
+      if (name === 'strings') { let len; [len, p] = readVarint(view, p); strings.set(key, new TextDecoder().decode(u8.subarray(p, p + len))); p += len; }
       else if (name === 'bytes') { const len = view.getInt32(p, true); p += 4; bytes.set(key, u8.subarray(p, p + len)); p += len; }
       else { if (name === 'ints') ints.set(key, view.getInt32(p, true)); if (name === 'longs') longs.set(key, view.getBigInt64(p, true)); p += size; }
     }
   }
-  return { next: p, flags, x, y, z, prefab, ints, longs, bytes };
+  return { next: p, flags, x, y, z, prefab, ints, longs, bytes, strings };
 }
 
 /** Every record of one chunk file: `[u16 version][u32 count]` then the records. Throws if the count does not use the whole file. */

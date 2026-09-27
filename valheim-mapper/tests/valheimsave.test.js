@@ -29,6 +29,7 @@ test('readRecord: float and short positions, rotation of both widths, connection
   assert.deepEqual([recs[1].x, recs[1].z], [1, 3]);
   assert.deepEqual([recs[2].x, recs[2].z, recs[2].prefab, recs[2].longs.get(0x11223344)], [-2112, -2816, 0x65835e28, 7n]);
   assert.equal(recs[3].ints.get(0x1111), 42);
+  assert.equal(recs[3].strings.get(0x2222), 'abc');
   assert.deepEqual([...recs[3].bytes.get(0x0027f92e)], [0xde, 0xad]);
   assert.throws(() => readChunk(new Uint8Array([...u16(41), ...u32(1), ...rec1, 0])), /bytes left/);
 });

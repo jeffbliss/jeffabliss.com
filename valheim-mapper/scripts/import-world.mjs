@@ -14,17 +14,19 @@ const TABLE = stableHash('piece_cartographytable'), DATA = stableHash('data');
 const LOCATION_PROXY = stableHash('LocationProxy'), LOCATION_KEY = stableHash('location'), START_TEMPLE = stableHash('StartTemple');
 // Placed locations worth a pin once their zone has been generated (a player came within a couple of zones).
 const LOCATION_PINS = { Vendor_BlackForest: { type: 'trader', name: 'Haldor' } };
+const TOMBSTONE = stableHash('Player_tombstone'), OWNER_NAME = stableHash('ownerName');
 const LOCATION_HASHES = new Map(Object.entries(LOCATION_PINS).map(([k, v]) => [stableHash(k), { key: k, ...v }]));
 
 const indexes = readdirSync(saveDir).filter(f => /^_main\.\d+\.chunks$/.test(f)).sort((a, b) => Number(a.split('.')[1]) - Number(b.split('.')[1]));
 if (!indexes.length) { console.error(`no _main.N.chunks index in ${saveDir}`); process.exit(1); }
 const index = indexes[indexes.length - 1], names = chunkNames(readFileSync(join(saveDir, index)));
 
-let records = 0, temple = null; const tables = [], located = [];
+let records = 0, temple = null; const tables = [], located = [], tombstones = [];
 for (const name of names) {
   for (const r of readChunk(new Uint8Array(readFileSync(join(saveDir, name))))) {
     records++;
     if (r.prefab === TABLE && r.bytes.has(DATA)) tables.push(r);
+    if (r.prefab === TOMBSTONE) tombstones.push({ x: r.x, z: r.z, name: r.strings.get(OWNER_NAME) ?? 'unknown' });
     if (r.prefab === LOCATION_PROXY) {
       const loc = r.ints.get(LOCATION_KEY) >>> 0;
       if (loc === START_TEMPLE) temple = r;
@@ -43,6 +45,7 @@ for (const t of tables) {
   for (const p of m.pins) { const mp = toMapperPin(p, { dx, dz }); pins.set(mp.id, mp); }
 }
 for (const l of located) { const x = +(l.x + dx).toFixed(1), z = +(l.z + dz).toFixed(1); pins.set(`loc-${l.key}-${x}-${z}`, { id: `loc-${l.key}-${x}-${z}`, x, z, type: l.type, name: l.name, checked: false }); }
+for (const t of tombstones) { const x = +(t.x + dx).toFixed(1), z = +(t.z + dz).toFixed(1), id = `tomb-${x}-${z}`; pins.set(id, { id, x, z, type: 'death', name: t.name.slice(0, 40), checked: false }); }
 const pinList = [...pins.values()].sort((a, b) => a.id.localeCompare(b.id));
 const doc = {
   version: SAVE_VERSION,
@@ -52,5 +55,5 @@ const doc = {
 };
 writeFileSync(out, JSON.stringify(doc, null, 0) + '\n');
 writeFileSync(out.replace(/\.json$/, '') + '.meta.json', JSON.stringify({ shift: { dx: +dx.toFixed(2), dz: +dz.toFixed(2) }, index, records, tables: tables.length, exploredPixels, fogCells: marked }) + '\n');
-console.log(`${exploredPixels} explored pixels → ${marked} fog cells revealed; ${pinList.length} pins: ${pinList.map(p => `${p.name} (${p.x}, ${p.z})`).join(', ') || 'none'}`);
+console.log(`${exploredPixels} explored pixels → ${marked} fog cells revealed; ${pinList.length} pins (${tombstones.length} tombstones): ${pinList.filter(p => p.type !== 'death').map(p => `${p.name} (${p.x}, ${p.z})`).join(', ') || 'none'}`);
 console.log(`wrote ${out}`);
