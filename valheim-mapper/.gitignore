@@ -10,3 +10,4 @@ web/assets/
 node_modules/
 .dev.vars
 import/
+.env
