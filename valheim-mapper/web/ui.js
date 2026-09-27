@@ -5,6 +5,7 @@ import { wireCorrection } from './anchor.js';
 import { wireSighting } from './sighting.js';
 import { PIN_TYPES, BIOMES } from './world.js';
 import { coastCommand, shorePins } from './coast.js';
+import { wireImport } from './importmap.js';
 
 /** Connection status line, in the words the toolbar shows. */
 export const statusText = (status, you) => ({
@@ -32,6 +33,7 @@ export function createUI(app, sync) {
   app.history.onChange = () => { undo.disabled = !app.history.canUndo(); redo.disabled = !app.history.canRedo(); };
   app.history.onChange();
 
+  wireImport(app, sync, document.getElementById('import'));
   document.getElementById('export').onclick = async () => {
     const blob = new Blob([JSON.stringify(await serialize(app.state))], { type: 'application/json' });
     const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: `valheim-map-${new Date().toISOString().slice(0, 10)}.json` });

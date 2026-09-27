@@ -34,7 +34,7 @@ operations (logs, allow-list rotation, backup, storage reset): see
 - Pins work like the game's map, in any mode: double-click the map to place one of the type picked in the bottom bar and name it, click a pin to cross it off, right-click a pin to remove it (Cmd/Ctrl+Z brings it back), double-click a pin to rename it. In Edit the Select tool can also drag pins; `X` and Delete work on the selected pin
 - Undo/redo: Cmd/Ctrl+Z, Shift+Cmd/Ctrl+Z
 
-Export downloads a portable JSON copy.
+Export downloads a portable JSON copy. **Import** (Edit) replaces the whole map from such a file, for everyone, with no undo; `node scripts/import-world.mjs` builds one from a Valheim 1.0 world folder copied into `import/savegame/`, drawing the cartography table's explored area as cleared fog and its pins as pins, shifted so the start temple sits on START.
 
 ## Scale reference
 Speeds from the game's Player character: jog (default movement) 4 m/s, sprint 7 m/s, walk 1.6 m/s, swim 2 m/s.
