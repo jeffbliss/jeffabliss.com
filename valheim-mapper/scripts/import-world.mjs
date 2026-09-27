@@ -43,5 +43,6 @@ const doc = {
   ink: [], pins: pinList, settings: { layers: {}, camera: { x: 0, z: 0, scale: 0.04 } },
 };
 writeFileSync(out, JSON.stringify(doc, null, 0) + '\n');
+writeFileSync(out.replace(/\.json$/, '') + '.meta.json', JSON.stringify({ shift: { dx: +dx.toFixed(2), dz: +dz.toFixed(2) }, index, records, tables: tables.length, exploredPixels, fogCells: marked }) + '\n');
 console.log(`${exploredPixels} explored pixels → ${marked} fog cells revealed; ${pinList.length} pins: ${pinList.map(p => `${p.name} (${p.x}, ${p.z})`).join(', ') || 'none'}`);
 console.log(`wrote ${out}`);

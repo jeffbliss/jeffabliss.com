@@ -31,3 +31,7 @@ In Edit, **Import** (next to Export) opens a file picker for a mapper document. 
 ## Verification
 
 Unit: StableHashCode of `piece_cartographytable` is `0xf631b195`; a synthetic chunk with float-position, short-position, rotated and segmented records decodes with the right positions and byteArray; a synthetic map package decodes explored pixels and pins; explored pixel to fog cells covers all overlapped cells after the shift; `replaceOps` emits only differing tiles and the right pin/ink ops. Real data: the script on `import/savegame` reports one table, 4 pins, about 47 k explored pixels. Dev server: Import the file, see fog cleared and the four boss pins, a second tab sees the same, reload keeps it.
+
+## Biomes (added 2026-09-27)
+
+The world save holds no biomes, but a whole-world render of the seed from valheim-map.world (layer Biomes Only, flat palette, 6144 px over the 24 576 m minimap extent, 4 m/px, north up, centred on the world origin) does. `scripts/lib/biomeimage.mjs` decodes the PNG, classifies pixels to the nearest palette colour, and `scripts/paint-biomes.mjs` paints the biome id onto every fog-revealed cell of `import/world.json` (shallows count as ocean, out-of-disc pixels are skipped). The geometry is assumed rather than fitted, since it reproduces the known biomes at the start temple and every boss altar; `--fit` runs the coastline fit instead for a render that does not follow the convention.
