@@ -126,7 +126,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR37524_00/5b481e4d-631c-43b9-aed8-8b062000d336.png",
       "earned": true,
       "earnedAt": "2025-05-30T21:54:43Z",
-      "rarityPercent": 22.9
+      "rarityPercent": 23
     },
     {
       "id": 11,
@@ -412,7 +412,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR37524_00/148307e0-ed84-4bd0-9f0b-0d1b9836f39a.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 16.4
+      "rarityPercent": 16.5
     },
     {
       "id": 37,

@@ -5,8 +5,8 @@
     "gold": 271,
     "platinum": 28
   },
-  "gameCount": 421,
-  "averageCompletion": 18.4,
+  "gameCount": 422,
+  "averageCompletion": 18.3,
   "recentTrophies": [
     {
       "platform": "psn",
@@ -3691,7 +3691,7 @@
       "titlePlatform": "PS4",
       "progressPercent": 13,
       "earnedCount": 16,
-      "totalCount": 112,
+      "totalCount": 118,
       "lastEarnedAt": "2018-09-02T03:51:53Z"
     },
     {
@@ -5100,6 +5100,17 @@
       "progressPercent": 0,
       "earnedCount": 0,
       "totalCount": 17,
+      "lastEarnedAt": null
+    },
+    {
+      "name": "ARK: Survival Ascended",
+      "gameId": "NPWR39005_00",
+      "slug": "psn-ark-survival-ascended",
+      "platform": "psn",
+      "titlePlatform": "PS5",
+      "progressPercent": 0,
+      "earnedCount": 0,
+      "totalCount": 32,
       "lastEarnedAt": null
     },
     {

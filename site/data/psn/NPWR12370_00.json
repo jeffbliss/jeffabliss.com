@@ -1238,6 +1238,72 @@
       "earned": false,
       "earnedAt": null,
       "rarityPercent": 0.1
+    },
+    {
+      "id": 112,
+      "name": "Test Complete",
+      "description": "Complete \"Test Chamber\"",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12370_00_00CC2A33F0B7088B2E1BAD7AD022D128CFFEED7168/BFD7B2D313A072A5423C4B5ADA896185C045E27B.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.1
+    },
+    {
+      "id": 113,
+      "name": "Half-baked puzzle",
+      "description": "Find the cake in \"Test Chamber\"",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12370_00_00CC2A33F0B7088B2E1BAD7AD022D128CFFEED7168/08340C253E9BECFF81C2D18356ED3579E829E365.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.1
+    },
+    {
+      "id": 114,
+      "name": "Need to vent",
+      "description": "Go through all the ventilation shafts in \"Test Chamber\"",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12370_00_00CC2A33F0B7088B2E1BAD7AD022D128CFFEED7168/01EFBAA17D073A08E994F9E787DFA43CE0C18D64.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.1
+    },
+    {
+      "id": 115,
+      "name": "Full steam ahead",
+      "description": "Complete \"Steampunk Party\"",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12370_00_00CC2A33F0B7088B2E1BAD7AD022D128CFFEED7168/56CFED6CC699F50400358BD095A6B91597529788.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.1
+    },
+    {
+      "id": 116,
+      "name": "Party Animal",
+      "description": "Start the party in \"Steampunk Party\"",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12370_00_00CC2A33F0B7088B2E1BAD7AD022D128CFFEED7168/AEEA6D89461B23E254A9CC9BD53DDFC658CDBDB5.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.1
+    },
+    {
+      "id": 117,
+      "name": "Let off some steam",
+      "description": "Find and turn the hidden valves in \"Steampunk Party\"",
+      "type": "bronze",
+      "hidden": false,
+      "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR12370_00_00CC2A33F0B7088B2E1BAD7AD022D128CFFEED7168/B9BF40B685023E89C98BDC047505A609806D2486.PNG",
+      "earned": false,
+      "earnedAt": null,
+      "rarityPercent": 0.1
     }
   ]
 }
