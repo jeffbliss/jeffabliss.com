@@ -49,7 +49,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR30270_00/fb4526bd-ceee-4c9b-b165-7dd611a99cff.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 19.8
+      "rarityPercent": 19.7
     },
     {
       "id": 4,
@@ -71,7 +71,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR30270_00/d4f61dc0-f179-416c-b118-3f6aed6aa76d.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 13.6
+      "rarityPercent": 13.5
     },
     {
       "id": 6,
@@ -104,7 +104,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR30270_00/1a907d79-fec6-4a4d-8f13-d03773562c3b.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 12.5
+      "rarityPercent": 12.4
     },
     {
       "id": 9,
@@ -126,7 +126,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR30270_00/7cbaf77a-0d4e-40ff-bd83-bc97aa5a24f0.png",
       "earned": true,
       "earnedAt": "2022-08-03T01:12:22Z",
-      "rarityPercent": 76.8
+      "rarityPercent": 76.9
     },
     {
       "id": 11,
@@ -181,7 +181,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR30270_00/13230ea4-212b-4f4f-af27-0674922aa896.png",
       "earned": true,
       "earnedAt": "2022-08-03T01:12:22Z",
-      "rarityPercent": 41.9
+      "rarityPercent": 42
     },
     {
       "id": 16,
@@ -346,7 +346,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR30270_00/8c714b37-e749-4879-85be-c1592e128e9b.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 29.5
+      "rarityPercent": 29.4
     }
   ]
 }

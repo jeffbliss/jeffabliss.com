@@ -38,7 +38,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR47000_00/c009a1b7-b02f-4c91-b095-43ed7989a595.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 36
+      "rarityPercent": 36.1
     },
     {
       "id": 3,
@@ -104,7 +104,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR47000_00/e2fce091-21c3-4ac3-8791-d6c84f98fe3b.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 18.2
+      "rarityPercent": 18.3
     },
     {
       "id": 9,
@@ -214,7 +214,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR47000_00/6efa03ea-569c-430d-aea7-3fd32054de0b.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 8.5
+      "rarityPercent": 8.6
     },
     {
       "id": 19,
@@ -280,7 +280,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR47000_00/b843d04d-21e1-43ef-9971-30015422b4fa.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 5.1
+      "rarityPercent": 5.2
     },
     {
       "id": 25,
@@ -335,7 +335,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR47000_00/b656b02a-130b-499a-9063-01f243206677.png",
       "earned": true,
       "earnedAt": "2025-05-27T15:21:37Z",
-      "rarityPercent": 86.3
+      "rarityPercent": 86.4
     },
     {
       "id": 30,
@@ -401,7 +401,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR47000_00/c58b4edc-962d-4696-b2aa-e84866f1ce28.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 80.1
+      "rarityPercent": 80.2
     },
     {
       "id": 36,
@@ -478,7 +478,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR47000_00/2d4e0442-26a2-4062-8247-19e3bad27e42.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 20.6
+      "rarityPercent": 20.7
     },
     {
       "id": 43,
@@ -522,7 +522,7 @@
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR47000_00/0b13f4c8-78f6-4125-abd2-46832b8ae709.png",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 73.7
+      "rarityPercent": 73.8
     },
     {
       "id": 47,
