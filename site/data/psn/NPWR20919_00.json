@@ -87,7 +87,7 @@
     {
       "id": 7,
       "name": "No Assistance Required!",
-      "description": "Completed a race without any assist settings.",
+      "description": "Completed a race without any driving assistance settings.",
       "type": "bronze",
       "hidden": false,
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20919_00/7477d65c-1c7b-4a93-ab56-833827652e6e.png",
@@ -340,7 +340,7 @@
     {
       "id": 30,
       "name": "Snap-Happy",
-      "description": "Took 100 photos in Scapes or Race Photos.",
+      "description": "Took a total of 100 Scapes, Garage, or Race Photos.",
       "type": "bronze",
       "hidden": false,
       "iconUrl": "https://psnobj.prod.dl.playstation.net/psnobj/NPWR20919_00/7b399fe4-f75d-4938-941c-b258633c0441.png",

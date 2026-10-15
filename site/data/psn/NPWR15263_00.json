@@ -324,7 +324,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15263_00_00B4EA3E7C0D6AA1C6F6987FC3416CC0E6AD9562EC/F52D1917BBCA310E932B37E97AAA17631BEDADB4.PNG",
       "earned": true,
       "earnedAt": "2020-06-16T22:25:53Z",
-      "rarityPercent": 20.6
+      "rarityPercent": 20.7
     },
     {
       "id": 29,
@@ -434,7 +434,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15263_00_00B4EA3E7C0D6AA1C6F6987FC3416CC0E6AD9562EC/258FB8B1AB010C65913B405B5A34CA4C756E9F10.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 3.8
+      "rarityPercent": 3.9
     },
     {
       "id": 39,
@@ -445,7 +445,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15263_00_00B4EA3E7C0D6AA1C6F6987FC3416CC0E6AD9562EC/1E9AB4D936CAFD07C9B94823111D3D09F9C3EFBE.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 3.7
+      "rarityPercent": 3.8
     },
     {
       "id": 40,
@@ -885,7 +885,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15263_00_00B4EA3E7C0D6AA1C6F6987FC3416CC0E6AD9562EC/3FDFE1B238C3DB4FB8340C0667C1578B483CE17E.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 2.8
+      "rarityPercent": 2.9
     },
     {
       "id": 80,
@@ -1094,7 +1094,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15263_00_00B4EA3E7C0D6AA1C6F6987FC3416CC0E6AD9562EC/D4713F67B4F5512A76CEF5B03E975E135ABFA1E7.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 5.4
+      "rarityPercent": 5.5
     },
     {
       "id": 99,
@@ -1292,7 +1292,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15263_00_00B4EA3E7C0D6AA1C6F6987FC3416CC0E6AD9562EC/012E64271367EE46B0313E2D3B10BF4DB5DDF2AC.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 1.6
+      "rarityPercent": 1.7
     },
     {
       "id": 117,
@@ -1402,7 +1402,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR15263_00_00B4EA3E7C0D6AA1C6F6987FC3416CC0E6AD9562EC/B1D2E78A0A92DBF8BA75F4EAB19B818624276D4E.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 1.4
+      "rarityPercent": 1.5
     },
     {
       "id": 127,
