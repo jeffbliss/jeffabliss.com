@@ -16,7 +16,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/5FAF8E4086CC26CEFF8F8693FD3A9415B126A129.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 9.8
+      "rarityPercent": 9.9
     },
     {
       "id": 1,
@@ -93,7 +93,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/88364C57FB12946202524E26897CFB2D6A2A7497.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 9.8
+      "rarityPercent": 9.9
     },
     {
       "id": 8,
@@ -115,7 +115,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/5EA87883873CD3F3647D78D0EEBD5555672411CE.PNG",
       "earned": true,
       "earnedAt": "2019-09-28T19:49:16Z",
-      "rarityPercent": 28
+      "rarityPercent": 28.1
     },
     {
       "id": 10,
@@ -126,7 +126,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/6D7811EE349AF2F41FA96EF0CBC5BFF67B9F9B9A.PNG",
       "earned": true,
       "earnedAt": "2019-09-28T18:06:49Z",
-      "rarityPercent": 34.5
+      "rarityPercent": 34.6
     },
     {
       "id": 11,
@@ -148,7 +148,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/EEF8FF5BDDB0FF6846B991C6842663666B47CBF5.PNG",
       "earned": true,
       "earnedAt": "2019-09-29T13:26:40Z",
-      "rarityPercent": 22.2
+      "rarityPercent": 22.3
     },
     {
       "id": 13,
@@ -159,7 +159,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/53DD4D830882CBD43DC6B9E39ACFDBAD8A825C5A.PNG",
       "earned": false,
       "earnedAt": null,
-      "rarityPercent": 11.8
+      "rarityPercent": 11.9
     },
     {
       "id": 14,
@@ -170,7 +170,7 @@
       "iconUrl": "https://image.api.playstation.com/trophy/np/NPWR16155_00_00241CB127C1FC2C3C023963DDE11288044F7A7D49/7531FFE6F424C716FC7A79AB9EC6667BB1A7B313.PNG",
       "earned": true,
       "earnedAt": "2019-09-29T13:26:39Z",
-      "rarityPercent": 22.7
+      "rarityPercent": 22.8
     },
     {
       "id": 15,
