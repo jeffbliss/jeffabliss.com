@@ -81,6 +81,7 @@ canvas card color each one gets:
 | idea     | nothing exists but the basic scaffolding     | yellow |
 | planning | working out the details                      | orange |
 | decided  | ready to implement                           | cyan   |
+| draft    | on the site, but still being worked on       | purple |
 | built    | it has been built                            | green  |
 | bug      | built but something is wrong                 | red    |
 

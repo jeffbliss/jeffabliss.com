@@ -23,6 +23,7 @@ const statusColors = {
   idea: "3",
   planning: "2",
   decided: "5",
+  draft: "6",
   built: "4",
   bug: "1",
 };
