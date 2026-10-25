@@ -95,10 +95,10 @@ Any other value makes the hook print a warning and leave the card alone.
 
 ## Workflow
 
-- Normal workflow: feature branch, open a PR, tests must pass on the PR,
-  merge into master, then tag the version.
-- While getting things up and running, work directly on master. Jeff will
-  say when to switch to the normal workflow.
+- Feature branch, open a PR, checks must pass on the PR, merge into
+  master, then tag the version. This has been the workflow since
+  2026-10-25; nothing goes directly onto master.
+- Tagging waits until Jeff picks a version scheme (see Open decisions).
 
 ## Open decisions
 
