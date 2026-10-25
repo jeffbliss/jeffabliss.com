@@ -55,17 +55,15 @@ if (warnings.length > 0) {
 
 function updateSiteMapCards(canvas) {
   const warnings = [];
-  const nodes = byId(canvas.nodes);
 
-  for (const edge of canvas.edges ?? []) {
-    if (edge.label !== "content") continue;
-    const card = nodes.get(edge.fromNode);
-    const noteCard = nodes.get(edge.toNode);
-    if (card?.type !== "text" || noteCard?.type !== "file") continue;
+  for (const card of canvas.nodes ?? []) {
+    if (card.type !== "text") continue;
+    const link = wikilinkIn(card.text);
+    if (!link) continue;
 
-    const notePath = join(vaultDir, noteCard.file);
+    const notePath = join(vaultDir, `${link}.md`);
     if (!existsSync(notePath)) {
-      warnings.push(`Note not found: ${noteCard.file}`);
+      warnings.push(`Card "${labelOf(card)}" links to a note that does not exist: [[${link}]]`);
       continue;
     }
     const note = readFileSync(notePath, "utf8");
@@ -76,16 +74,21 @@ function updateSiteMapCards(canvas) {
 
     if (!(status in statusColors)) {
       warnings.push(
-        `${noteCard.file} has status "${status}". Allowed: ${Object.keys(statusColors).join(", ")}. Card left unchanged.`,
+        `${link}.md has status "${status}". Allowed: ${Object.keys(statusColors).join(", ")}. Card left unchanged.`,
       );
       continue;
     }
 
-    card.text = `**${name}**\n${url}\nstatus: ${status}`;
+    card.text = `**${name}**\n${url}\nstatus: ${status}\n[[${link}]]`;
     card.color = statusColors[status];
   }
 
   return warnings;
+}
+
+function wikilinkIn(text) {
+  const match = (text ?? "").match(/\[\[([^\]|#]+)/);
+  return match ? match[1].trim().replace(/\.md$/, "") : null;
 }
 
 function parseFrontmatter(note) {
@@ -101,7 +104,7 @@ function parseFrontmatter(note) {
 }
 
 function firstHeading(note) {
-  const match = note.match(/^# (.+)$/m);
+  const match = note.match(/^#{1,6} (.+)$/m);
   return match ? match[1].trim() : null;
 }
 

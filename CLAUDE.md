@@ -53,15 +53,18 @@ GitHub: jeffbliss/jeffabliss.com. Default branch: master.
   truth for what pages exist, how they connect, and what the site looks
   like. Page copy lives in vault notes the canvas cards point to.
 - The canvas has three regions. Site map: one small card per page, arrows
-  are the nav. Content: one file card per page pointing at its note.
-  Design: site-wide decisions such as colors, fonts, and layout rules.
+  are the nav. Content: one file card per page showing its note. Design:
+  site-wide decisions such as colors, fonts, and layout rules.
+- A site map card is linked to its note by a wikilink on the card, such
+  as [[jeffabliss.com about page]]. No arrows between regions.
 - A SessionStart hook runs scripts/sync-canvas.mjs once per session. It
-  first rewrites each site map card from the frontmatter of the note its
-  "content" arrow points to (name from the note's H1, url and status from
-  frontmatter, color from status). Then, if the canvas differs from the
+  first rewrites each site map card that has a wikilink from that note
+  (name from the note's first heading, url and status from frontmatter,
+  color from status, wikilink kept). Then, if the canvas differs from the
   repo copy, it copies it to design/, commits with the message "updated
   obsidian canvas", and prints what changed.
-- Site map cards are generated. Edit the note's frontmatter, not the card.
+- Site map cards with a wikilink are generated. Edit the note, not the
+  card. A card without a wikilink is left alone.
 - When the hook prints changes: tell Jeff what changed, then stop. Do not
   implement anything from the canvas until Jeff says to. If a card is
   missing something needed to build it, ask.
