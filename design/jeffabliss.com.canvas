@@ -4,7 +4,7 @@
 		{"id":"g2content00000000","type":"group","x":-40,"y":500,"width":560,"height":520,"label":"Content"},
 		{"id":"g1sitemap00000000","type":"group","x":-40,"y":-40,"width":560,"height":480,"label":"Site map"},
 		{"id":"s0home00000000000","type":"text","text":"**Home**\n/\nstatus: idea","x":140,"y":20,"width":200,"height":100,"color":"3"},
-		{"id":"s1about0000000000","type":"text","text":"**About**\n/about\nstatus: idea","x":0,"y":180,"width":200,"height":100,"color":"3"},
+		{"id":"s1about0000000000","type":"text","text":"**About**\n/about\nstatus: planning","x":0,"y":180,"width":200,"height":100,"color":"2"},
 		{"id":"s2games0000000000","type":"text","text":"**Games**\n/games\nstatus: idea","x":280,"y":180,"width":200,"height":100,"color":"3"},
 		{"id":"d1palette00000000","type":"text","text":"**Colors**\n\nUndecided","x":640,"y":20,"width":480,"height":120},
 		{"id":"d2fonts0000000000","type":"text","text":"**Fonts**\n\nUndecided","x":640,"y":160,"width":480,"height":120},
