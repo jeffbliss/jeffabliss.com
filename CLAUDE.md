@@ -55,12 +55,31 @@ GitHub: jeffbliss/jeffabliss.com. Default branch: master.
 - The canvas has three regions. Site map: one small card per page, arrows
   are the nav. Content: one file card per page pointing at its note.
   Design: site-wide decisions such as colors, fonts, and layout rules.
-- A UserPromptSubmit hook runs scripts/sync-canvas.mjs on every message.
-  If the canvas changed, the script copies it to design/, commits it with
-  the message "updated obsidian canvas", and prints what changed.
-- When that output appears: tell Jeff what changed, then stop. Do not
+- A SessionStart hook runs scripts/sync-canvas.mjs once per session. It
+  first rewrites each site map card from the frontmatter of the note its
+  "content" arrow points to (name from the note's H1, url and status from
+  frontmatter, color from status). Then, if the canvas differs from the
+  repo copy, it copies it to design/, commits with the message "updated
+  obsidian canvas", and prints what changed.
+- Site map cards are generated. Edit the note's frontmatter, not the card.
+- When the hook prints changes: tell Jeff what changed, then stop. Do not
   implement anything from the canvas until Jeff says to. If a card is
   missing something needed to build it, ask.
+
+## Page status
+
+Every page note has a status in its frontmatter. Allowed values and the
+canvas card color each one gets:
+
+| status   | meaning                                      | color  |
+|----------|----------------------------------------------|--------|
+| idea     | nothing exists but the basic scaffolding     | yellow |
+| planning | working out the details                      | orange |
+| decided  | ready to implement                           | cyan   |
+| built    | it has been built                            | green  |
+| bug      | built but something is wrong                 | red    |
+
+Any other value makes the hook print a warning and leave the card alone.
 
 ## Testing
 

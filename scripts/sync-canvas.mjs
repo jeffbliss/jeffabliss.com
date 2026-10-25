@@ -1,33 +1,115 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { execSync } from "node:child_process";
-import { dirname } from "node:path";
+import { dirname, join } from "node:path";
 
-const vaultCanvas = "C:/Obsidian/Jeff's Vault/jeffabliss.com.canvas";
+const vaultDir = process.argv[2] ?? "C:/Obsidian/Jeff's Vault";
+const vaultCanvas = join(vaultDir, "jeffabliss.com.canvas");
 const repoCanvas = "design/jeffabliss.com.canvas";
+
+const statusColors = {
+  idea: "3",
+  planning: "2",
+  decided: "5",
+  built: "4",
+  bug: "1",
+};
 
 if (!existsSync(vaultCanvas)) process.exit(0);
 
-const vaultText = readFileSync(vaultCanvas, "utf8");
+const canvas = JSON.parse(readFileSync(vaultCanvas, "utf8"));
+const warnings = updateSiteMapCards(canvas);
+const vaultText = formatCanvas(canvas);
+if (vaultText !== readFileSync(vaultCanvas, "utf8")) {
+  writeFileSync(vaultCanvas, vaultText);
+}
+
 const repoText = existsSync(repoCanvas)
   ? readFileSync(repoCanvas, "utf8")
   : '{"nodes":[],"edges":[]}';
+const changes = describeChanges(JSON.parse(repoText), canvas);
 
-const changes = describeChanges(JSON.parse(repoText), JSON.parse(vaultText));
-if (changes.length === 0) process.exit(0);
+if (changes.length > 0) {
+  mkdirSync(dirname(repoCanvas), { recursive: true });
+  writeFileSync(repoCanvas, vaultText);
+  execSync(`git add "${repoCanvas}"`);
+  execSync('git commit -q -m "updated obsidian canvas"');
+}
 
-mkdirSync(dirname(repoCanvas), { recursive: true });
-writeFileSync(repoCanvas, vaultText);
-execSync(`git add "${repoCanvas}"`);
-execSync('git commit -q -m "updated obsidian canvas"');
+if (changes.length === 0 && warnings.length === 0) process.exit(0);
 
-console.log(
-  "The Obsidian canvas changed and was committed to design/jeffabliss.com.canvas.",
-);
-console.log(
-  "Tell Jeff exactly what changed, then pause and wait for him before implementing anything.",
-);
-console.log("");
-for (const change of changes) console.log(`- ${change}`);
+if (changes.length > 0) {
+  console.log(
+    "The Obsidian canvas changed and was committed to design/jeffabliss.com.canvas.",
+  );
+  console.log(
+    "Tell Jeff exactly what changed, then pause and wait for him before implementing anything.",
+  );
+  console.log("");
+  for (const change of changes) console.log(`- ${change}`);
+}
+if (warnings.length > 0) {
+  console.log("");
+  console.log("Canvas warnings to pass on to Jeff:");
+  for (const warning of warnings) console.log(`- ${warning}`);
+}
+
+function updateSiteMapCards(canvas) {
+  const warnings = [];
+  const nodes = byId(canvas.nodes);
+
+  for (const edge of canvas.edges ?? []) {
+    if (edge.label !== "content") continue;
+    const card = nodes.get(edge.fromNode);
+    const noteCard = nodes.get(edge.toNode);
+    if (card?.type !== "text" || noteCard?.type !== "file") continue;
+
+    const notePath = join(vaultDir, noteCard.file);
+    if (!existsSync(notePath)) {
+      warnings.push(`Note not found: ${noteCard.file}`);
+      continue;
+    }
+    const note = readFileSync(notePath, "utf8");
+    const frontmatter = parseFrontmatter(note);
+    const name = firstHeading(note) ?? labelOf(card);
+    const url = frontmatter.url ?? "";
+    const status = frontmatter.status ?? "";
+
+    if (!(status in statusColors)) {
+      warnings.push(
+        `${noteCard.file} has status "${status}". Allowed: ${Object.keys(statusColors).join(", ")}. Card left unchanged.`,
+      );
+      continue;
+    }
+
+    card.text = `**${name}**\n${url}\nstatus: ${status}`;
+    card.color = statusColors[status];
+  }
+
+  return warnings;
+}
+
+function parseFrontmatter(note) {
+  const match = note.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!match) return {};
+  const result = {};
+  for (const line of match[1].split(/\r?\n/)) {
+    const separator = line.indexOf(":");
+    if (separator === -1) continue;
+    result[line.slice(0, separator).trim()] = line.slice(separator + 1).trim();
+  }
+  return result;
+}
+
+function firstHeading(note) {
+  const match = note.match(/^# (.+)$/m);
+  return match ? match[1].trim() : null;
+}
+
+function formatCanvas(canvas) {
+  const list = (items) =>
+    (items ?? []).map((item) => `\t\t${JSON.stringify(item)}`).join(",\n");
+  return `{\n\t"nodes":[\n${list(canvas.nodes)}\n\t],\n\t"edges":[\n${list(canvas.edges)}\n\t]\n}`;
+}
 
 function describeChanges(before, after) {
   const changes = [];
