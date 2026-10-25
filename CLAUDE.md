@@ -60,9 +60,11 @@ GitHub: jeffbliss/jeffabliss.com. Default branch: master.
 - A SessionStart hook runs scripts/sync-canvas.mjs once per session. It
   first rewrites each site map card that has a wikilink from that note
   (name from the note's first heading, url and status from frontmatter,
-  color from status, wikilink kept). Then, if the canvas differs from the
-  repo copy, it copies it to design/, commits with the message "updated
-  obsidian canvas", and prints what changed.
+  color from status, wikilink kept). Then it compares the canvas and
+  every note it links to against a private copy in .vault-snapshot/
+  (gitignored, never committed), prints what changed since the last
+  session as one line per card and per note, and refreshes the copy.
+  Design documents stay in Obsidian; nothing from the vault is committed.
 - Site map cards with a wikilink are generated. Edit the note, not the
   card. A card without a wikilink is left alone.
 - When the hook prints changes: tell Jeff what changed, then stop. Do not
