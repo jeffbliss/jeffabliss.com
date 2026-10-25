@@ -46,6 +46,22 @@ GitHub: jeffbliss/jeffabliss.com. Default branch: master.
   touched.
 - Prefer explicit code over clever code. Nothing hidden behind magic.
 
+## Obsidian canvas
+
+- The site is designed on an Obsidian canvas at
+  C:\Obsidian\Jeff's Vault\jeffabliss.com.canvas. It is the source of
+  truth for what pages exist, how they connect, and what the site looks
+  like. Page copy lives in vault notes the canvas cards point to.
+- The canvas has three regions. Site map: one small card per page, arrows
+  are the nav. Content: one file card per page pointing at its note.
+  Design: site-wide decisions such as colors, fonts, and layout rules.
+- A UserPromptSubmit hook runs scripts/sync-canvas.mjs on every message.
+  If the canvas changed, the script copies it to design/, commits it with
+  the message "updated obsidian canvas", and prints what changed.
+- When that output appears: tell Jeff what changed, then stop. Do not
+  implement anything from the canvas until Jeff says to. If a card is
+  missing something needed to build it, ask.
+
 ## Testing
 
 - Jeff is explicit about every test that gets written. Claude does not add
