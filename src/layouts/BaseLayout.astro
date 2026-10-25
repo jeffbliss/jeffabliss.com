@@ -1,0 +1,24 @@
+---
+// The shell every page shares: the HTML document, the <title>, and the
+// site-wide nav. Pages pass a title and put their content in the slot.
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
